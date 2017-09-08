@@ -1,4 +1,4 @@
-# Pencil2D Development Document
+# Pencil2D Development Docs
 
 Please go to <https://pencil2d.github.io/pencil-docs/docs/>
 
