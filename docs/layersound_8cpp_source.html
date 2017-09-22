@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -220,15 +220,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    return <a class="code" href="class_status.html">Status</a>::OK;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<a class="code" href="class_sound_clip.html">SoundClip</a>* <a class="code" href="class_layer_sound.html">LayerSound</a>::getSoundClipWhichCovers( <span class="keywordtype">int</span> frameNumber )</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = getKeyFrameWhichCovers( frameNumber );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span> <a class="code" href="class_sound_clip.html">SoundClip</a>* <span class="keyword">&gt;</span>( key );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
 <div class="ttc" id="class_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00027">soundclip.h:27</a></div></div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00071">object.h:71</a></div></div>
+<div class="ttc" id="class_layer_sound_html"><div class="ttname"><a href="class_layer_sound.html">LayerSound</a></div><div class="ttdef"><b>Definition:</b> <a href="layersound_8h_source.html#l00025">layersound.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:20 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

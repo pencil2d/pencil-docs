@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -137,13 +137,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> getLayerY(<span class="keywordtype">int</span> layerNumber);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> getFrameNumber(<span class="keywordtype">int</span> x);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> getFrameX(<span class="keywordtype">int</span> frameNumber);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> getMouseMoveY() { <span class="keywordflow">return</span> mouseMoveY; }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> getOffsetX() { <span class="keywordflow">return</span> m_offsetX; }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> getOffsetY() { <span class="keywordflow">return</span> m_offsetY; }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> getLayerHeight() { <span class="keywordflow">return</span> layerHeight; }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> getFrameLength() {<span class="keywordflow">return</span> frameLength;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> getFrameSize() { <span class="keywordflow">return</span> frameSize; }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> clearCache() { <span class="keywordflow">if</span> ( m_pCache ) <span class="keyword">delete</span> m_pCache; m_pCache = <span class="keyword">new</span> QPixmap( size() ); }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> getMouseMoveY() { <span class="keywordflow">return</span> mMouseMoveY; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> getOffsetX() { <span class="keywordflow">return</span> mOffsetX; }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> getOffsetY() { <span class="keywordflow">return</span> mOffsetY; }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> getLayerHeight() { <span class="keywordflow">return</span> mLayerHeight; }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> getFrameLength() {<span class="keywordflow">return</span> mFrameLength;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> getFrameSize() { <span class="keywordflow">return</span> mFrameSize; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> clearCache() { <span class="keywordflow">if</span> ( mCache ) <span class="keyword">delete</span> mCache; mCache = <span class="keyword">new</span> QPixmap( size() ); }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;Q_SIGNALS:</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> mouseMovedY(<span class="keywordtype">int</span>);</div>
@@ -175,36 +175,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_editor.html">Editor</a>* mEditor; <span class="comment">// the editor for which this timeLine operates</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_preference_manager.html">PreferenceManager</a>* mPrefs;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    TIMELINE_CELL_TYPE m_eType;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    TIMELINE_CELL_TYPE mType;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    QPixmap* m_pCache;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> drawFrameNumber;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> shortScrub;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> frameLength;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> frameSize;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> fontSize;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> scrubbing;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> layerHeight;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> m_offsetX = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> m_offsetY = 20;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">int</span> startY, endY, startLayerNumber;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> startFrameNumber;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> lastFrameNumber = -1;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> mouseMoveY, mouseMoveX;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> frameOffset, layerOffset;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    Qt::MouseButton primaryButton = Qt::NoButton;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">bool</span> canMoveFrame   = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">bool</span> movingFrames   = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    QPixmap* mCache = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> mDrawFrameNumber = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> mbShortScrub = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> mFrameLength = 1;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> mFrameSize = 0;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> mFontSize = 10;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> mScrubbing = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> mLayerHeight = 20;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">int</span> mStartY = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> mEndY   = 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> mStartLayerNumber = -1;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> mStartFrameNumber = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> mLastFrameNumber = -1;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> mMouseMoveY = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> mMouseMoveX = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> mFrameOffset = 0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span> mLayerOffset = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    Qt::MouseButton primaryButton = Qt::NoButton;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">bool</span> canBoxSelect   = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> boxSelecting   = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">bool</span> mCanMoveFrame   = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> mMovingFrames   = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">bool</span> clickSelecting = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif // TIMELINECELLS_H</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">bool</span> mCanBoxSelect   = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">bool</span> mBoxSelecting   = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">bool</span> mClickSelecting = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> mOffsetX = 0;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> mOffsetY = 20;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif // TIMELINECELLS_H</span></div>
 <div class="ttc" id="class_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00028">timeline.h:28</a></div></div>
 <div class="ttc" id="class_time_line_cells_html"><div class="ttname"><a href="class_time_line_cells.html">TimeLineCells</a></div><div class="ttdef"><b>Definition:</b> <a href="timelinecells_8h_source.html#l00039">timelinecells.h:39</a></div></div>
 <div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00066">preferencemanager.h:66</a></div></div>
@@ -212,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:19 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

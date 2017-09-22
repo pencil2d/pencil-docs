@@ -3,6 +3,7 @@ var searchData=
   ['backgroundwidget',['BackgroundWidget',['../class_background_widget.html',1,'']]],
   ['backupbitmapelement',['BackupBitmapElement',['../class_backup_bitmap_element.html',1,'']]],
   ['backupelement',['BackupElement',['../class_backup_element.html',1,'']]],
+  ['backupsoundelement',['BackupSoundElement',['../class_backup_sound_element.html',1,'']]],
   ['backupvectorelement',['BackupVectorElement',['../class_backup_vector_element.html',1,'']]],
   ['basedockwidget',['BaseDockWidget',['../class_base_dock_widget.html',1,'']]],
   ['basemanager',['BaseManager',['../class_base_manager.html',1,'']]],

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -220,6 +220,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>importImage</b> (QStr
 <tr class="memitem:a42ff0078b761c089d74f3949fe7a14c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42ff0078b761c089d74f3949fe7a14c2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrame</b> (int frameNumber)</td></tr>
 <tr class="separator:a42ff0078b761c089d74f3949fe7a14c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352121d4b71e82f9769537ad2844fbdb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a352121d4b71e82f9769537ad2844fbdb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>restoreKey</b> ()</td></tr>
+<tr class="separator:a352121d4b71e82f9769537ad2844fbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a58da8ed4210db4a03db824a831e1d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a58da8ed4210db4a03db824a831e1d9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameAndVector</b> (int frameNumber)</td></tr>
 <tr class="separator:a3a58da8ed4210db4a03db824a831e1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -355,9 +358,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>importVectorImage</b>
 <tr class="memitem:a2c049a831e5911b52ef609c727c890cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c049a831e5911b52ef609c727c890cf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>makeConnections</b> ()</td></tr>
 <tr class="separator:a2c049a831e5911b52ef609c727c890cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3499df3e4c967f8d3cc62af473d9422b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3499df3e4c967f8d3cc62af473d9422b"></a>
-<a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>addKeyFame</b> (int layerNumber, int frameNumber)</td></tr>
-<tr class="separator:a3499df3e4c967f8d3cc62af473d9422b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82fe46b5ce6f95aaeca6cf8c27ebbc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac82fe46b5ce6f95aaeca6cf8c27ebbc1"></a>
+<a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>addKeyFrame</b> (int layerNumber, int frameNumber)</td></tr>
+<tr class="separator:ac82fe46b5ce6f95aaeca6cf8c27ebbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86b92235683c317ade6fb0543721feaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86b92235683c317ade6fb0543721feaa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearUndoStack</b> ()</td></tr>
 <tr class="separator:a86b92235683c317ade6fb0543721feaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -421,6 +424,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardBitmapOk</b>
 <tr class="memitem:a2b52fe7ef33acb3ede29a4ad4a516c00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b52fe7ef33acb3ede29a4ad4a516c00"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardVectorOk</b></td></tr>
 <tr class="separator:a2b52fe7ef33acb3ede29a4ad4a516c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511dadba40391490c06d69e792379152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a511dadba40391490c06d69e792379152"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardSoundClipOk</b></td></tr>
+<tr class="separator:a511dadba40391490c06d69e792379152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -435,7 +441,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardVectorOk</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:20 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

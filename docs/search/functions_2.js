@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quicksizecursor',['quickSizeCursor',['../class_base_tool.html#ae0ade4107e42113457ae40dc6caf46b1',1,'BaseTool']]]
+  ['projectlength',['projectLength',['../class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6',1,'LayerManager']]]
 ];

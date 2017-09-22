@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_export_movie_dialog-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -115,9 +116,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCamerasInfo</b> (s
 <tr class="memitem:a695d2e2559a2962d705bd956a3be85a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a695d2e2559a2962d705bd956a3be85a3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateResolutionCombo</b> (int index)</td></tr>
 <tr class="separator:a695d2e2559a2962d705bd956a3be85a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf43af3073575352af65d7c15f80f46f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf43af3073575352af65d7c15f80f46f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDefaultRange</b> (int startFrame, int endFrame)</td></tr>
-<tr class="separator:acf43af3073575352af65d7c15f80f46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c3fd30a92fa0525be5e1b26e0b3345"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9c3fd30a92fa0525be5e1b26e0b3345"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDefaultRange</b> (int startFrame, int endFrame, int endFrameWithSounds)</td></tr>
+<tr class="separator:ac9c3fd30a92fa0525be5e1b26e0b3345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a347c1d5cc02454d435f698c0a955671f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a347c1d5cc02454d435f698c0a955671f"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>getSelectedCameraName</b> ()</td></tr>
 <tr class="separator:a347c1d5cc02454d435f698c0a955671f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,12 +144,12 @@ QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>getFilePaths</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a20243d8dd726bc34c7e255765dc081f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20243d8dd726bc34c7e255765dc081f6"></a>
-Mode&#160;</td><td class="memItemRight" valign="bottom"><b>getMode</b> ()</td></tr>
-<tr class="separator:a20243d8dd726bc34c7e255765dc081f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a740e849d52d8dfafb7b10d0d9f7dd000"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a740e849d52d8dfafb7b10d0d9f7dd000"></a>
-FileType&#160;</td><td class="memItemRight" valign="bottom"><b>getFileType</b> ()</td></tr>
-<tr class="separator:a740e849d52d8dfafb7b10d0d9f7dd000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f69f968ba4cbfb8149862fc9752db4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f69f968ba4cbfb8149862fc9752db4d"></a>
+Mode&#160;</td><td class="memItemRight" valign="bottom"><b>getMode</b> () override</td></tr>
+<tr class="separator:a8f69f968ba4cbfb8149862fc9752db4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af542359367b3530903b890ae2f8fe7b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af542359367b3530903b890ae2f8fe7b4"></a>
+FileType&#160;</td><td class="memItemRight" valign="bottom"><b>getFileType</b> () override</td></tr>
+<tr class="separator:af542359367b3530903b890ae2f8fe7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_import_export_dialog"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_import_export_dialog')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_import_export_dialog.html">ImportExportDialog</a></td></tr>
 <tr class="memitem:a8d386b53f4ceff564dfe162075ddf6ac inherit pro_methods_class_import_export_dialog"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d386b53f4ceff564dfe162075ddf6ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
@@ -160,8 +161,20 @@ QGroupBox *&#160;</td><td class="memItemRight" valign="bottom"><b>getOptionsGrou
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFileExtension</b> (QString extension)</td></tr>
 <tr class="separator:ad7ca70818f062553f266168a67f30c77 inherit pro_methods_class_import_export_dialog"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a0b224d09a5c8841f956aa45ce08902c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b224d09a5c8841f956aa45ce08902c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>frameCheckboxClicked</b> (bool checked)</td></tr>
+<tr class="separator:a0b224d09a5c8841f956aa45ce08902c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:afa1a9e659911b6e065af139699943e51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa1a9e659911b6e065af139699943e51"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mEndFrameWithSounds</b> = 0</td></tr>
+<tr class="separator:afa1a9e659911b6e065af139699943e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8389ce46da071adec22b28169d16adf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8389ce46da071adec22b28169d16adf5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mEndFrame</b> = 0</td></tr>
+<tr class="separator:a8389ce46da071adec22b28169d16adf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88df14bf893c7667b3ae3818f39ee9e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88df14bf893c7667b3ae3818f39ee9e8"></a>
 Ui::ExportMovieOptions *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> = nullptr</td></tr>
 <tr class="separator:a88df14bf893c7667b3ae3818f39ee9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +189,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="exportmoviedialog_8h_source.html#l00027">27</a> of file <a class="el" href="exportmoviedialog_8h_source.html">exportmoviedialog.h</a>.</p>
+<p>Definition at line <a class="el" href="exportmoviedialog_8h_source.html#l00028">28</a> of file <a class="el" href="exportmoviedialog_8h_source.html">exportmoviedialog.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="exportmoviedialog_8h_source.html">exportmoviedialog.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="exportmoviedialog_8cpp_source.html">exportmoviedialog.cpp</a></li>
@@ -184,7 +197,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:20 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

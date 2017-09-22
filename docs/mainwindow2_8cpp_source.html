@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -836,7 +836,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="comment">//    view = mScribbleArea-&gt;getView() * view;</span></div>
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    <span class="keywordtype">int</span> projectLength = mEditor-&gt;layers()-&gt;projectLength();</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    <span class="keywordtype">int</span> projectLength = mEditor-&gt;layers()-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>();</div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;</div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    <span class="comment">// Show a progress dialog, as this can take a while if you have lots of frames.</span></div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    QProgressDialog progress( tr( <span class="stringliteral">&quot;Exporting image sequence...&quot;</span> ), tr( <span class="stringliteral">&quot;Abort&quot;</span> ), 0, 100, <span class="keyword">this</span> );</div>
@@ -900,7 +900,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    QTransform view = RectMapTransform( mScribbleArea-&gt;getViewRect(), QRectF( QPointF( 0, 0 ), exportSize ) );</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="comment">//    view = mScribbleArea-&gt;getView() * view;</span></div>
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordtype">int</span> projectLength = mEditor-&gt;layers()-&gt;projectLength();</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keywordtype">int</span> projectLength = mEditor-&gt;layers()-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>();</div>
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    <span class="keywordflow">if</span> ( !mEditor-&gt;object()-&gt;exportIm( mEditor-&gt;currentFrame(),</div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                                       projectLength,</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                                       view,</div>
@@ -1296,7 +1296,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_tool_option_widget_html"><div class="ttname"><a href="class_tool_option_widget.html">ToolOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="tooloptionwidget_8h_source.html#l00033">tooloptionwidget.h:33</a></div></div>
 <div class="ttc" id="class_export_image_dialog_html"><div class="ttname"><a href="class_export_image_dialog.html">ExportImageDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="exportimagedialog_8h_source.html#l00027">exportimagedialog.h:27</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
-<div class="ttc" id="class_action_commands_html"><div class="ttname"><a href="class_action_commands.html">ActionCommands</a></div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8h_source.html#l00026">actioncommands.h:26</a></div></div>
+<div class="ttc" id="class_action_commands_html"><div class="ttname"><a href="class_action_commands.html">ActionCommands</a></div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8h_source.html#l00027">actioncommands.h:27</a></div></div>
 <div class="ttc" id="class_playback_manager_html"><div class="ttname"><a href="class_playback_manager.html">PlaybackManager</a></div><div class="ttdef"><b>Definition:</b> <a href="playbackmanager_8h_source.html#l00026">playbackmanager.h:26</a></div></div>
 <div class="ttc" id="class_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00028">timeline.h:28</a></div></div>
 <div class="ttc" id="class_color_manager_html"><div class="ttname"><a href="class_color_manager.html">ColorManager</a></div><div class="ttdef"><b>Definition:</b> <a href="colormanager_8h_source.html#l00026">colormanager.h:26</a></div></div>
@@ -1307,6 +1307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_background_widget_html"><div class="ttname"><a href="class_background_widget.html">BackgroundWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="backgroundwidget_8h_source.html#l00024">backgroundwidget.h:24</a></div></div>
 <div class="ttc" id="class_import_image_seq_dialog_html"><div class="ttname"><a href="class_import_image_seq_dialog.html">ImportImageSeqDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="importimageseqdialog_8h_source.html#l00027">importimageseqdialog.h:27</a></div></div>
 <div class="ttc" id="class_shortcut_filter_html"><div class="ttname"><a href="class_shortcut_filter.html">ShortcutFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="shortcutfilter_8h_source.html#l00023">shortcutfilter.h:23</a></div></div>
+<div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">LayerManager::projectLength. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00268">layermanager.cpp:268</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00066">preferencemanager.h:66</a></div></div>
 <div class="ttc" id="class_recent_file_menu_html"><div class="ttname"><a href="class_recent_file_menu.html">RecentFileMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="recentfilemenu_8h_source.html#l00030">recentfilemenu.h:30</a></div></div>
@@ -1322,7 +1323,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:19 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

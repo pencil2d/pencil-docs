@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -111,42 +111,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;keyframe.h&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;layer.h&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_layer_sound.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_layer_sound.html">LayerSound</a> : <span class="keyword">public</span> <a class="code" href="class_layer.html">Layer</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_layer_sound.html">LayerSound</a>( <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span> );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ~<a class="code" href="class_layer_sound.html">LayerSound</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QDomElement createDomElement(QDomDocument&amp; doc) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> loadDomElement(QDomElement element, QString dataDirPath) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_status.html">Status</a> loadSoundClipAtFrame( <span class="keyword">const</span> QString&amp; sSoundClipName, <span class="keyword">const</span> QString&amp; filePathString, <span class="keywordtype">int</span> frame );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> updateFrameLengths(<span class="keywordtype">int</span> fps);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// These functions will be removed later.</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Don&#39;t use them!!</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> getSoundSize() { <span class="keywordflow">return</span> 0; }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> soundIsNotNull( <span class="keywordtype">int</span> ) { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QString getSoundFilepathAt( <span class="keywordtype">int</span> ) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> isEmpty() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// These functions will be removed.</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_status.html">Status</a> saveKeyFrame( <a class="code" href="class_key_frame.html">KeyFrame</a>*, QString path ) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="class_sound_clip.html">SoundClip</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_layer_sound.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_layer_sound.html">LayerSound</a> : <span class="keyword">public</span> <a class="code" href="class_layer.html">Layer</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_layer_sound.html">LayerSound</a>( <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span> );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ~<a class="code" href="class_layer_sound.html">LayerSound</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    QDomElement createDomElement(QDomDocument&amp; doc) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> loadDomElement(QDomElement element, QString dataDirPath) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_status.html">Status</a> loadSoundClipAtFrame( <span class="keyword">const</span> QString&amp; sSoundClipName, <span class="keyword">const</span> QString&amp; filePathString, <span class="keywordtype">int</span> frame );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> updateFrameLengths(<span class="keywordtype">int</span> fps);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// These functions will be removed later.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// Don&#39;t use them!!</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> getSoundSize() { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> soundIsNotNull( <span class="keywordtype">int</span> ) { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    QString getSoundFilepathAt( <span class="keywordtype">int</span> ) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> isEmpty() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// These functions will be removed.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_sound_clip.html">SoundClip</a>* getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_status.html">Status</a> saveKeyFrame( <a class="code" href="class_key_frame.html">KeyFrame</a>*, QString path ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00027">soundclip.h:27</a></div></div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00071">object.h:71</a></div></div>
-<div class="ttc" id="class_layer_sound_html"><div class="ttname"><a href="class_layer_sound.html">LayerSound</a></div><div class="ttdef"><b>Definition:</b> <a href="layersound_8h_source.html#l00024">layersound.h:24</a></div></div>
+<div class="ttc" id="class_layer_sound_html"><div class="ttname"><a href="class_layer_sound.html">LayerSound</a></div><div class="ttdef"><b>Definition:</b> <a href="layersound_8h_source.html#l00025">layersound.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:20 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resetselectionproperties',['resetSelectionProperties',['../class_scribble_area.html#a0940d37bc14126a129380b69b2c9aac7',1,'ScribbleArea']]]
+  ['quicksizecursor',['quickSizeCursor',['../class_base_tool.html#ae0ade4107e42113457ae40dc6caf46b1',1,'BaseTool']]]
 ];

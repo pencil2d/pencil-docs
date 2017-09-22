@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -224,6 +224,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>areLayersSane</b> () 
 <tr class="memitem:a03626fb684c5d13a736f7928b68b9bd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03626fb684c5d13a736f7928b68b9bd2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLayerPaintable</b> () const </td></tr>
 <tr class="separator:a03626fb684c5d13a736f7928b68b9bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e18bf98b4fcff9498d1edda0800e88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52e18bf98b4fcff9498d1edda0800e88"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>allowSmudging</b> ()</td></tr>
+<tr class="separator:a52e18bf98b4fcff9498d1edda0800e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dbeeb69589589abdb3273c031e056f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dbeeb69589589abdb3273c031e056f1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1">flipSelection</a> (bool flipVertical)</td></tr>
 <tr class="memdesc:a0dbeeb69589589abdb3273c031e056f1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1" title="ScribbleArea::flipSelection flip selection along the X or Y axis. ">ScribbleArea::flipSelection</a> flip selection along the X or Y axis. <br/></td></tr>
@@ -390,6 +393,9 @@ qreal&#160;</td><td class="memItemRight" valign="bottom"><b>myRotatedAngle</b></
 <tr class="memitem:a3530b5097016d0d8fa3bf365f5a16353"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3530b5097016d0d8fa3bf365f5a16353"></a>
 QPixmap&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorImg</b></td></tr>
 <tr class="separator:a3530b5097016d0d8fa3bf365f5a16353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a231c6b4734b002e68e3d35e614329"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18a231c6b4734b002e68e3d35e614329"></a>
+QPixmap&#160;</td><td class="memItemRight" valign="bottom"><b>mTransCursImg</b></td></tr>
+<tr class="separator:a18a231c6b4734b002e68e3d35e614329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -522,6 +528,15 @@ qreal&#160;</td><td class="memItemRight" valign="bottom"><b>tol</b></td></tr>
 <tr class="memitem:a62f87981d09b5dd2faf90f5c2039483a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62f87981d09b5dd2faf90f5c2039483a"></a>
 QPointF&#160;</td><td class="memItemRight" valign="bottom"><b>mOffset</b></td></tr>
 <tr class="separator:a62f87981d09b5dd2faf90f5c2039483a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6441b67c06cc91d2c456a64f3a6c8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d6441b67c06cc91d2c456a64f3a6c8f"></a>
+QPoint&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorCenterPos</b></td></tr>
+<tr class="separator:a8d6441b67c06cc91d2c456a64f3a6c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e3a20c690c71ce4a313cd49587f1878"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e3a20c690c71ce4a313cd49587f1878"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorWidth</b></td></tr>
+<tr class="separator:a1e3a20c690c71ce4a313cd49587f1878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada25549e52cba21e609c3169ac860bcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada25549e52cba21e609c3169ac860bcc"></a>
+QPointF&#160;</td><td class="memItemRight" valign="bottom"><b>transformedCursorPos</b></td></tr>
+<tr class="separator:ada25549e52cba21e609c3169ac860bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fe84fdf6c7fa176bcc10b619e7bd65d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fe84fdf6c7fa176bcc10b619e7bd65d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>instantTool</b> = false</td></tr>
 <tr class="separator:a8fe84fdf6c7fa176bcc10b619e7bd65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -585,7 +600,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SmudgeTool</b></td><
 <p>ScribbleArea::calculateSelectionCenter. </p>
 <dl class="section return"><dt>Returns</dt><dd>QPoint of tempTransformSelection center at [0] and selection center at [1] </dd></dl>
 
-<p>Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01351">1351</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p>Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01372">1372</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -596,7 +611,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SmudgeTool</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:20 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8e5f5396f772f3657d59607775ffea01d5b790c9</span>
+   &#160;<span id="projectnumber">e031656a199f6079697abed3387cc2e17368e54a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -429,7 +429,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        QColor col;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">if</span> ( type() == BITMAP ) col = QColor( 151, 176, 244 );</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">if</span> ( type() == VECTOR ) col = QColor( 150, 242, 150 );</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> ( type() == SOUND ) col = QColor( 237, 147, 147 );</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> ( type() == SOUND ) col = QColor( 237, 147, 147, 100 );</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordflow">if</span> ( type() == CAMERA ) col = QColor( 239, 232, 148 );</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        painter.setBrush( col );</div>
@@ -794,49 +794,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;}</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="keywordtype">bool</span> isLayerPaintable( <a class="code" href="class_layer.html">Layer</a>* layer )</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="keywordtype">bool</span> Layer::isPaintable()</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;{</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    Q_ASSERT( layer != <span class="keyword">nullptr</span> );</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <span class="keywordflow">switch</span> ( layer-&gt;type() )</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    {</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keywordflow">case</span> Layer::BITMAP:</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keywordflow">case</span> Layer::VECTOR:</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    }</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;}</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="keywordtype">bool</span> Layer::keyExistsWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;{</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    <span class="keywordflow">return</span> getKeyFrameWhichCovers(frameNumber) != <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;}</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<a class="code" href="class_key_frame.html">KeyFrame</a> *Layer::getKeyFrameWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;{</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keyword">auto</span> keyFrame = getLastKeyFrameAtPosition(frameNumber);</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keywordflow">if</span>( keyFrame != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    {</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keywordflow">if</span>(keyFrame-&gt;pos() + keyFrame-&gt;length() &gt; frameNumber)</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        {</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;            <span class="keywordflow">return</span> keyFrame;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        }</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    }</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;}</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keywordflow">switch</span> ( type() )</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    {</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keywordflow">case</span> Layer::BITMAP:</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        <span class="keywordflow">case</span> Layer::VECTOR:</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;}</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="keywordtype">bool</span> Layer::keyExistsWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;{</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordflow">return</span> getKeyFrameWhichCovers(frameNumber) != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;}</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<a class="code" href="class_key_frame.html">KeyFrame</a> *Layer::getKeyFrameWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;{</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;    <span class="keyword">auto</span> keyFrame = getLastKeyFrameAtPosition(frameNumber);</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keywordflow">if</span>( keyFrame != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    {</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        <span class="keywordflow">if</span>(keyFrame-&gt;pos() + keyFrame-&gt;length() &gt; frameNumber)</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <span class="keywordflow">return</span> keyFrame;</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        }</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    }</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;}</div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
-<div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_time_line_cells_html"><div class="ttname"><a href="class_time_line_cells.html">TimeLineCells</a></div><div class="ttdef"><b>Definition:</b> <a href="timelinecells_8h_source.html#l00039">timelinecells.h:39</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00071">object.h:71</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 11 2017 00:19:20 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 22 2017 12:06:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
