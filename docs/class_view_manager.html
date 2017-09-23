@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c03eca4ef4fcb9dc1ba5967696361a3a1dd407c5</span>
+   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -85,7 +85,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_view_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -184,9 +183,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFlipVertical</b> ()
 <tr class="memitem:a1bea01fbcc15108e296532735eb8006d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bea01fbcc15108e296532735eb8006d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setCanvasSize</b> (QSize size)</td></tr>
 <tr class="separator:a1bea01fbcc15108e296532735eb8006d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1f178c34a0e400b03cb32cc6c6d3ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf1f178c34a0e400b03cb32cc6c6d3ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setCameraLayer</b> (<a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
+<tr class="separator:abf1f178c34a0e400b03cb32cc6c6d3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42705fbff47093de1b4f7551dec8a838"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42705fbff47093de1b4f7551dec8a838"></a>
 Q_SIGNAL void&#160;</td><td class="memItemRight" valign="bottom"><b>viewChanged</b> ()</td></tr>
 <tr class="separator:a42705fbff47093de1b4f7551dec8a838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a51aaeffd71d4246d7a30ccb7f3cc82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a51aaeffd71d4246d7a30ccb7f3cc82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onCurrentFrameChanged</b> ()</td></tr>
+<tr class="separator:a1a51aaeffd71d4246d7a30ccb7f3cc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad4de6f584b24a0a40ee4a61fd84f43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaad4de6f584b24a0a40ee4a61fd84f43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateViewTransforms</b> ()</td></tr>
+<tr class="separator:aaad4de6f584b24a0a40ee4a61fd84f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_base_manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_base_manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_base_manager.html">BaseManager</a></td></tr>
 <tr class="memitem:a1723cc2f860d97378a3bb589aa4a6b5b inherit pub_methods_class_base_manager"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1723cc2f860d97378a3bb589aa4a6b5b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BaseManager</b> (QObject *parent=0)</td></tr>
@@ -200,12 +208,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setEditor</b> (<a cla
 <tr class="memitem:a5c54c4ef67ea84dbf2090f3b0f3e6484 inherit pub_methods_class_base_manager"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c54c4ef67ea84dbf2090f3b0f3e6484"></a>
 <a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>object</b> ()</td></tr>
 <tr class="separator:a5c54c4ef67ea84dbf2090f3b0f3e6484 inherit pub_methods_class_base_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:aaad4de6f584b24a0a40ee4a61fd84f43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaad4de6f584b24a0a40ee4a61fd84f43"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateViewTransforms</b> ()</td></tr>
-<tr class="separator:aaad4de6f584b24a0a40ee4a61fd84f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -224,15 +226,12 @@ QTransform&#160;</td><td class="memItemRight" valign="bottom"><b>mViewCanvasInve
 <tr class="memitem:a525db6fd9874be81b68aad16abe6f2df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a525db6fd9874be81b68aad16abe6f2df"></a>
 QTransform&#160;</td><td class="memItemRight" valign="bottom"><b>mCentre</b></td></tr>
 <tr class="separator:a525db6fd9874be81b68aad16abe6f2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18d2b1f69c36623fd57480caa47a2c58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18d2b1f69c36623fd57480caa47a2c58"></a>
-QPointF&#160;</td><td class="memItemRight" valign="bottom"><b>mTranslate</b></td></tr>
-<tr class="separator:a18d2b1f69c36623fd57480caa47a2c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7de458f20b9616b92649e51fc023503d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7de458f20b9616b92649e51fc023503d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>mRotate</b> = 0.f</td></tr>
-<tr class="separator:a7de458f20b9616b92649e51fc023503d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a4d1e03a32f6696006a0072eea9d910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a4d1e03a32f6696006a0072eea9d910"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>mScale</b> = 1.f</td></tr>
-<tr class="separator:a9a4d1e03a32f6696006a0072eea9d910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b32f3a035678a59452e261cad1a2351"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b32f3a035678a59452e261cad1a2351"></a>
+<a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mDefaultEditorCamera</b> = nullptr</td></tr>
+<tr class="separator:a1b32f3a035678a59452e261cad1a2351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0120d88a753d28a2ad45aff97b45e5ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0120d88a753d28a2ad45aff97b45e5ac"></a>
+<a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentCamera</b> = nullptr</td></tr>
+<tr class="separator:a0120d88a753d28a2ad45aff97b45e5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4652a315870a7c60cee68b9219ca2741"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4652a315870a7c60cee68b9219ca2741"></a>
 QSize&#160;</td><td class="memItemRight" valign="bottom"><b>mCanvasSize</b> = { 1, 1 }</td></tr>
 <tr class="separator:a4652a315870a7c60cee68b9219ca2741"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,10 +241,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipHorizontal</b>
 <tr class="memitem:aa5d90cdd95aafebbb445fee56555994a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5d90cdd95aafebbb445fee56555994a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipVertical</b> = false</td></tr>
 <tr class="separator:aa5d90cdd95aafebbb445fee56555994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4d289b2ec0e515c361e609cea671fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad4d289b2ec0e515c361e609cea671fc"></a>
+<a class="el" href="class_layer_camera.html">LayerCamera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mCameraLayer</b> = nullptr</td></tr>
+<tr class="separator:aad4d289b2ec0e515c361e609cea671fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="viewmanager_8h_source.html#l00025">25</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p>Definition at line <a class="el" href="viewmanager_8h_source.html#l00029">29</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/managers/<a class="el" href="viewmanager_8h_source.html">viewmanager.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/managers/<a class="el" href="viewmanager_8cpp_source.html">viewmanager.cpp</a></li>
@@ -253,7 +255,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipVertical</b> =
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 22 2017 12:55:43 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

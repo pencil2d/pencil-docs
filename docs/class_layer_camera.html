@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c03eca4ef4fcb9dc1ba5967696361a3a1dd407c5</span>
+   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -109,9 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ec3ccc4de562e5c93d7835482a22653"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ec3ccc4de562e5c93d7835482a22653"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LayerCamera</b> (<a class="el" href="class_object.html">Object</a> *object)</td></tr>
 <tr class="separator:a3ec3ccc4de562e5c93d7835482a22653"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec429969fece5636095933642b0fe0d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec429969fece5636095933642b0fe0d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadImageAtFrame</b> (int, QTransform)</td></tr>
-<tr class="separator:aec429969fece5636095933642b0fe0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99d68f70ff3d850846b787142ac99ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab99d68f70ff3d850846b787142ac99ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadImageAtFrame</b> (int frame, float dx, float dy, float rotate, float scale)</td></tr>
+<tr class="separator:ab99d68f70ff3d850846b787142ac99ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2dab649c8c25189f0c1033c037f4df3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2dab649c8c25189f0c1033c037f4df3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>editProperties</b> () override</td></tr>
 <tr class="separator:aa2dab649c8c25189f0c1033c037f4df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +130,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDomElement</b> (Q
 <tr class="memitem:a1b2a76a49b41110f6c014e3279538358"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b2a76a49b41110f6c014e3279538358"></a>
 QTransform&#160;</td><td class="memItemRight" valign="bottom"><b>getViewAtFrame</b> (int frameNumber)</td></tr>
 <tr class="separator:a1b2a76a49b41110f6c014e3279538358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67dc3e1ea84e70294817ee8c29b592b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67dc3e1ea84e70294817ee8c29b592b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LinearInterpolateTransform</b> (<a class="el" href="class_camera.html">Camera</a> *)</td></tr>
+<tr class="separator:a67dc3e1ea84e70294817ee8c29b592b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fe20305c1cce192ede1aff165de39f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50fe20305c1cce192ede1aff165de39f"></a>
 QRect&#160;</td><td class="memItemRight" valign="bottom"><b>getViewRect</b> ()</td></tr>
 <tr class="separator:a50fe20305c1cce192ede1aff165de39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,7 +298,7 @@ Protected Attributes</h2></td></tr>
 QRect&#160;</td><td class="memItemRight" valign="bottom"><b>viewRect</b></td></tr>
 <tr class="separator:a2647bbcd861800ff50dc529a17dcc7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0e016bc656b26bfc05e539a5d961e1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0e016bc656b26bfc05e539a5d961e1d"></a>
-<a class="el" href="class_camera_properties_dialog.html">CameraPropertiesDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dialog</b></td></tr>
+<a class="el" href="class_camera_properties_dialog.html">CameraPropertiesDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dialog</b> = nullptr</td></tr>
 <tr class="separator:ab0e016bc656b26bfc05e539a5d961e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -330,7 +333,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mVisible</b> = true</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 22 2017 12:55:42 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
