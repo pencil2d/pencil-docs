@@ -5,5 +5,6 @@ var searchData=
   ['layercamera',['LayerCamera',['../class_layer_camera.html',1,'']]],
   ['layermanager',['LayerManager',['../class_layer_manager.html',1,'']]],
   ['layersound',['LayerSound',['../class_layer_sound.html',1,'']]],
-  ['layervector',['LayerVector',['../class_layer_vector.html',1,'']]]
+  ['layervector',['LayerVector',['../class_layer_vector.html',1,'']]],
+  ['loaddomelement',['loadDomElement',['../class_vector_image.html#a38d6f5c216c96377ce0e76642b604d81',1,'VectorImage']]]
 ];

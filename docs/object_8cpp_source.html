@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
+   &#160;<span id="projectnumber">7ebfaf6e692a0a93979793b1c23557719a9decb5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -570,7 +570,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;            <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR )</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            {</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                <a class="code" href="class_layer_vector.html">LayerVector</a>* layerVector = ( <a class="code" href="class_layer_vector.html">LayerVector</a>* )layer;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                layerVector-&gt;getLastVectorImageAtFrame( frameNumber, 0 )-&gt;paintImage( painter,</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                layerVector-&gt;getLastVectorImageAtFrame( frameNumber, 0 )-&gt;<a class="code" href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">paintImage</a>( painter,</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                                                                                      <span class="keyword">false</span>,</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                                                                                      <span class="keyword">false</span>,</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                                                                                      antialiasing );</div>
@@ -802,6 +802,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;{</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    emit layerChanged(layerId);</div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
+<div class="ttc" id="class_vector_image_html_a87fd953e506cecad346c4d5e069d6788"><div class="ttname"><a href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">VectorImage::paintImage</a></div><div class="ttdeci">void paintImage(QPainter &amp;painter, bool simplified, bool showThinCurves, bool antialiasing)</div><div class="ttdoc">VectorImage::paintImage. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01141">vectorimage.cpp:1141</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
 <div class="ttc" id="class_object_data_html"><div class="ttname"><a href="class_object_data.html">ObjectData</a></div><div class="ttdef"><b>Definition:</b> <a href="objectdata_8h_source.html#l00025">objectdata.h:25</a></div></div>
 <div class="ttc" id="class_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00024">layerbitmap.h:24</a></div></div>
@@ -812,7 +813,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 23 2017 05:53:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

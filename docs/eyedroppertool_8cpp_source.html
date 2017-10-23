@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
+   &#160;<span id="projectnumber">7ebfaf6e692a0a93979793b1c23557719a9decb5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="class_vector_image.html">VectorImage</a> *vectorImage = ((<a class="code" href="class_layer_vector.html">LayerVector</a> *)layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordtype">int</span> colourNumber = vectorImage-&gt;getColourNumber(getLastPoint());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordtype">int</span> colourNumber = vectorImage-&gt;<a class="code" href="class_vector_image.html#af88e5c6c475db507be0369cdcdd33bd7">getColourNumber</a>(getLastPoint());</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">if</span> (colourNumber != -1)</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                mEditor-&gt;color()-&gt;setColorNumber(colourNumber);</div>
@@ -238,7 +238,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="class_vector_image.html">VectorImage</a> *vectorImage = ((<a class="code" href="class_layer_vector.html">LayerVector</a> *)layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">int</span> colourNumber = vectorImage-&gt;getColourNumber(getCurrentPoint());</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">int</span> colourNumber = vectorImage-&gt;<a class="code" href="class_vector_image.html#af88e5c6c475db507be0369cdcdd33bd7">getColourNumber</a>(getCurrentPoint());</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">if</span> (colourNumber != -1)</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            mScribbleArea-&gt;setCursor(cursor(mEditor-&gt;object()-&gt;getColour(colourNumber).colour));</div>
@@ -252,13 +252,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00057">basetool.h:57</a></div></div>
 <div class="ttc" id="class_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00024">layerbitmap.h:24</a></div></div>
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
+<div class="ttc" id="class_vector_image_html_af88e5c6c475db507be0369cdcdd33bd7"><div class="ttname"><a href="class_vector_image.html#af88e5c6c475db507be0369cdcdd33bd7">VectorImage::getColourNumber</a></div><div class="ttdeci">int getColourNumber(QPointF point)</div><div class="ttdoc">VectorImage::getColourNumber. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01089">vectorimage.cpp:1089</a></div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00035">vectorimage.h:35</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00026">bitmapimage.h:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 23 2017 05:53:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

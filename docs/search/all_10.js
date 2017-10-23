@@ -2,7 +2,15 @@ var searchData=
 [
   ['scopeguard',['ScopeGuard',['../class_scope_guard.html',1,'']]],
   ['scribblearea',['ScribbleArea',['../class_scribble_area.html',1,'']]],
+  ['select',['select',['../class_vector_image.html#a4aa33b67102185962d14031322b49843',1,'VectorImage']]],
+  ['selectall',['selectAll',['../class_vector_image.html#ab00261dbf44cfe8bf50622222b52950b',1,'VectorImage']]],
   ['selecttool',['SelectTool',['../class_select_tool.html',1,'']]],
+  ['setareaselected',['setAreaSelected',['../class_vector_image.html#ad6160d7d60c5b239890004bb39688d99',1,'VectorImage']]],
+  ['setfilled',['setFilled',['../class_bezier_curve.html#a6c929c4aaacd0d12165fe71f859d4b7d',1,'BezierCurve']]],
+  ['setselected',['setSelected',['../class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c',1,'VectorImage::setSelected(int curveNumber, bool YesOrNo)'],['../class_vector_image.html#a232a6a0346e3b812a91c036a35bdb8a1',1,'VectorImage::setSelected(int curveNumber, int vertexNumber, bool YesOrNo)'],['../class_vector_image.html#ad2048b2cd5403a6b7e189fc7823bb5cd',1,'VectorImage::setSelected(VertexRef vertexRef, bool YesOrNo)'],['../class_vector_image.html#a840f2feede4bfbbd04ff73a32c4125a7',1,'VectorImage::setSelected(QList&lt; int &gt; curveList, bool YesOrNo)'],['../class_vector_image.html#a8942262ecb0e57c1edde1507d57c2c7b',1,'VectorImage::setSelected(QList&lt; VertexRef &gt; vertexList, bool YesOrNo)']]],
+  ['setselectionrect',['setSelectionRect',['../class_vector_image.html#ada7904f8824df767de68284a9e6fde25',1,'VectorImage']]],
+  ['setselectiontransformation',['setSelectionTransformation',['../class_vector_image.html#ada2a3aff947a90cfc53e95ed3e391b5a',1,'VectorImage']]],
+  ['setwidth',['setWidth',['../class_bucket_tool.html#a73dd15022326729eb46ccec330e57406',1,'BucketTool']]],
   ['shortcutfilter',['ShortcutFilter',['../class_shortcut_filter.html',1,'']]],
   ['shortcutspage',['ShortcutsPage',['../class_shortcuts_page.html',1,'']]],
   ['signalblocker',['SignalBlocker',['../class_signal_blocker.html',1,'']]],
@@ -12,6 +20,7 @@ var searchData=
   ['soundplayer',['SoundPlayer',['../class_sound_player.html',1,'']]],
   ['spinslider',['SpinSlider',['../class_spin_slider.html',1,'']]],
   ['status',['Status',['../class_status.html',1,'']]],
+  ['storeclosestvectorcurve',['storeClosestVectorCurve',['../class_move_tool.html#a61410411e9d5d5b66f4a88bd10730c16',1,'MoveTool']]],
   ['strokemanager',['StrokeManager',['../class_stroke_manager.html',1,'']]],
   ['stroketool',['StrokeTool',['../class_stroke_tool.html',1,'']]]
 ];

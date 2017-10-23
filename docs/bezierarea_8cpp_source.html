@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
+   &#160;<span id="projectnumber">7ebfaf6e692a0a93979793b1c23557719a9decb5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -143,61 +143,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    xmlStream.writeStartElement( <span class="stringliteral">&quot;area&quot;</span> );</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    xmlStream.writeAttribute( <span class="stringliteral">&quot;colourNumber&quot;</span>, QString::number( mColourNumber ) );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> errorLocation = -1;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; mVertex.size(); i++ )</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        xmlStream.writeEmptyElement( <span class="stringliteral">&quot;vertex&quot;</span> );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        xmlStream.writeAttribute( <span class="stringliteral">&quot;curve&quot;</span>, QString::number( mVertex.at( i ).curveNumber ) );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        xmlStream.writeAttribute( <span class="stringliteral">&quot;vertex&quot;</span>, QString::number( mVertex.at( i ).vertexNumber ) );</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> ( errorLocation &lt; 0 &amp;&amp; xmlStream.hasError() )</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            errorLocation = i;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    xmlStream.writeEndElement(); <span class="comment">// Close area element</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> ( xmlStream.hasError() &amp;&amp; errorLocation &gt;= 0 )</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        QStringList debugInfo = QStringList() &lt;&lt; <span class="stringliteral">&quot;BezierArea::createDomElement&quot;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;colourNumber = %1&quot;</span> ).arg( mColourNumber )</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;- mVertex[%1] has failed to write&quot;</span> ).arg( errorLocation )</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;curve = %1&quot;</span> ).arg( mVertex.at( errorLocation ).curveNumber )</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;vertex = %1 &quot;</span> ).arg( mVertex.at( errorLocation ).vertexNumber );</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>( Status::FAIL, debugInfo );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> BezierArea::loadDomElement(QDomElement element)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    mColourNumber = element.attribute(<span class="stringliteral">&quot;colourNumber&quot;</span>).toInt();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    QDomNode vertexTag = element.firstChild();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">while</span> (!vertexTag.isNull())</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        QDomElement vertexElement = vertexTag.toElement();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (!vertexElement.isNull())</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (vertexElement.tagName() == <span class="stringliteral">&quot;vertex&quot;</span>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                mVertex.append( <a class="code" href="class_vertex_ref.html">VertexRef</a>(vertexElement.attribute(<span class="stringliteral">&quot;curve&quot;</span>).toInt() , vertexElement.attribute(<span class="stringliteral">&quot;vertex&quot;</span>).toInt() )  );</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        vertexTag = vertexTag.nextSibling();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    xmlStream.writeAttribute(<span class="stringliteral">&quot;filled&quot;</span>, QString::number( mIsFilled ) );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> errorLocation = -1;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; mVertex.size(); i++ )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        xmlStream.writeEmptyElement( <span class="stringliteral">&quot;vertex&quot;</span> );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        xmlStream.writeAttribute( <span class="stringliteral">&quot;curve&quot;</span>, QString::number( mVertex.at( i ).curveNumber ) );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        xmlStream.writeAttribute( <span class="stringliteral">&quot;vertex&quot;</span>, QString::number( mVertex.at( i ).vertexNumber ) );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span> ( errorLocation &lt; 0 &amp;&amp; xmlStream.hasError() )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            errorLocation = i;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    xmlStream.writeEndElement(); <span class="comment">// Close area element</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> ( xmlStream.hasError() &amp;&amp; errorLocation &gt;= 0 )</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        QStringList debugInfo = QStringList() &lt;&lt; <span class="stringliteral">&quot;BezierArea::createDomElement&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;colourNumber = %1&quot;</span> ).arg( mColourNumber )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;- mVertex[%1] has failed to write&quot;</span> ).arg( errorLocation )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;curve = %1&quot;</span> ).arg( mVertex.at( errorLocation ).curveNumber )</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                              &lt;&lt; QString( <span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;vertex = %1 &quot;</span> ).arg( mVertex.at( errorLocation ).vertexNumber );</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>( Status::FAIL, debugInfo );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> BezierArea::loadDomElement(QDomElement element)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    mColourNumber = element.attribute(<span class="stringliteral">&quot;colourNumber&quot;</span>).toInt();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    QDomNode vertexTag = element.firstChild();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">while</span> (!vertexTag.isNull())</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        QDomElement vertexElement = vertexTag.toElement();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (!vertexElement.isNull())</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span> (vertexElement.tagName() == <span class="stringliteral">&quot;vertex&quot;</span>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                mVertex.append( <a class="code" href="class_vertex_ref.html">VertexRef</a>(vertexElement.attribute(<span class="stringliteral">&quot;curve&quot;</span>).toInt() , vertexElement.attribute(<span class="stringliteral">&quot;vertex&quot;</span>).toInt() )  );</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        vertexTag = vertexTag.nextSibling();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 <div class="ttc" id="class_vertex_ref_html"><div class="ttname"><a href="class_vertex_ref.html">VertexRef</a></div><div class="ttdef"><b>Definition:</b> <a href="vertexref_8h_source.html#l00021">vertexref.h:21</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; VertexRef &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 23 2017 04:31:59 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 23 2017 05:53:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

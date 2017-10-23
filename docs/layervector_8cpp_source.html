@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
+   &#160;<span id="projectnumber">7ebfaf6e692a0a93979793b1c23557719a9decb5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">auto</span> pVecImage = <span class="keyword">static_cast&lt;</span> <a class="code" href="class_vector_image.html">VectorImage</a>* <span class="keyword">&gt;</span>( pKeyFrame );</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        bUseColor = bUseColor || pVecImage-&gt;usesColour( colorIndex );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        bUseColor = bUseColor || pVecImage-&gt;<a class="code" href="class_vector_image.html#a60dce13db73c83396f2fbde8dd5429ff">usesColour</a>( colorIndex );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    } );</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> bUseColor;</div>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    foreachKeyFrame( [=]( <a class="code" href="class_key_frame.html">KeyFrame</a>* pKeyFrame )</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">auto</span> pVecImage = <span class="keyword">static_cast&lt;</span> <a class="code" href="class_vector_image.html">VectorImage</a>* <span class="keyword">&gt;</span>( pKeyFrame );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        pVecImage-&gt;removeColour( colorIndex );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        pVecImage-&gt;<a class="code" href="class_vector_image.html#a2af7de421c2fbe8384399ba78d96dc3c">removeColour</a>( colorIndex );</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    } );</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
@@ -181,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="class_vector_image.html">VectorImage</a>* vecImg = <span class="keyword">new</span> <a class="code" href="class_vector_image.html">VectorImage</a>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    vecImg-&gt;setPos( frameNumber );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    vecImg-&gt;setObject( <span class="keywordtype">object</span>() );</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    vecImg-&gt;read( path );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    vecImg-&gt;<a class="code" href="class_vector_image.html#a859888c209313febb5c818f61d8c4a30">read</a>( path );</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    addKeyFrame( frameNumber, vecImg );</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    QString theFileName = fileName( pKeyFrame-&gt;pos() );</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    QString strFilePath = QDir( path ).filePath( theFileName );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    debugInfo &lt;&lt; QString( <span class="stringliteral">&quot;strFilePath = &quot;</span> ).append( strFilePath );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_status.html">Status</a> st = pVecImage-&gt;write( strFilePath, <span class="stringliteral">&quot;VEC&quot;</span> );</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_status.html">Status</a> st = pVecImage-&gt;<a class="code" href="class_vector_image.html#a92a90471586832af4ce7dd3f0097813f">write</a>( strFilePath, <span class="stringliteral">&quot;VEC&quot;</span> );</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> ( !st.ok() )</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        QStringList vecImageDetails = st.detailsList();</div>
@@ -268,7 +268,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    <span class="keywordtype">int</span> frame = imageElement.attribute(<span class="stringliteral">&quot;frame&quot;</span>).toInt();</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                    addNewEmptyKeyAt( frame );</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    getVectorImageAtFrame( frame )-&gt;loadDomElement(imageElement);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    getVectorImageAtFrame( frame )-&gt;<a class="code" href="class_vector_image.html#a38d6f5c216c96377ce0e76642b604d81">loadDomElement</a>(imageElement);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            }</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
@@ -286,15 +286,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span> <a class="code" href="class_vector_image.html">VectorImage</a>* <span class="keyword">&gt;</span>( getLastKeyFrameAtPosition( frameNumber + increment ) );</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="ttc" id="class_vector_image_html_a2af7de421c2fbe8384399ba78d96dc3c"><div class="ttname"><a href="class_vector_image.html#a2af7de421c2fbe8384399ba78d96dc3c">VectorImage::removeColour</a></div><div class="ttdeci">void removeColour(int index)</div><div class="ttdoc">VectorImage::removeColour. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01122">vectorimage.cpp:1122</a></div></div>
+<div class="ttc" id="class_vector_image_html_a859888c209313febb5c818f61d8c4a30"><div class="ttname"><a href="class_vector_image.html#a859888c209313febb5c818f61d8c4a30">VectorImage::read</a></div><div class="ttdeci">bool read(QString filePath)</div><div class="ttdoc">VectorImage::read. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00036">vectorimage.cpp:36</a></div></div>
+<div class="ttc" id="class_vector_image_html_a38d6f5c216c96377ce0e76642b604d81"><div class="ttname"><a href="class_vector_image.html#a38d6f5c216c96377ce0e76642b604d81">VectorImage::loadDomElement</a></div><div class="ttdeci">void loadDomElement(QDomElement element)</div><div class="ttdoc">VectorImage::loadDomElement. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00159">vectorimage.cpp:159</a></div></div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00035">vectorimage.h:35</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
+<div class="ttc" id="class_vector_image_html_a92a90471586832af4ce7dd3f0097813f"><div class="ttname"><a href="class_vector_image.html#a92a90471586832af4ce7dd3f0097813f">VectorImage::write</a></div><div class="ttdeci">Status write(QString filePath, QString format)</div><div class="ttdoc">VectorImage::write. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00074">vectorimage.cpp:74</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00054">object.h:54</a></div></div>
+<div class="ttc" id="class_vector_image_html_a60dce13db73c83396f2fbde8dd5429ff"><div class="ttname"><a href="class_vector_image.html#a60dce13db73c83396f2fbde8dd5429ff">VectorImage::usesColour</a></div><div class="ttdeci">bool usesColour(int index)</div><div class="ttdoc">VectorImage::usesColour. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01105">vectorimage.cpp:1105</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 23 2017 05:53:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

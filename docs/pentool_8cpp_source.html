@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
+   &#160;<span id="projectnumber">7ebfaf6e692a0a93979793b1c23557719a9decb5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -400,28 +400,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="class_bezier_curve.html">BezierCurve</a> curve( mStrokePoints, mStrokePressures, tol );</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                curve.setWidth( properties.width );</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                curve.setFeather( properties.feather );</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                curve.setInvisibility( properties.invisibility );</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                curve.setVariableWidth( properties.pressure );</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                curve.setColourNumber( mEditor-&gt;color()-&gt;frontColorNumber() );</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">auto</span> pLayerVector = <span class="keyword">static_cast&lt;</span> <a class="code" href="class_layer_vector.html">LayerVector</a>* <span class="keyword">&gt;</span>( layer );</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="class_vector_image.html">VectorImage</a>* vectorImage = pLayerVector-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 );</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    vectorImage-&gt;insertCurve( 0, curve, mEditor-&gt;view()-&gt;scaling(), false );</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    mScribbleArea-&gt;setModified( mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame() );</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    mScribbleArea-&gt;setAllDirty();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                curve.setFilled( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                curve.setInvisibility( properties.invisibility );</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                curve.setVariableWidth( properties.pressure );</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                curve.setColourNumber( mEditor-&gt;color()-&gt;frontColorNumber() );</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">auto</span> pLayerVector = <span class="keyword">static_cast&lt;</span> <a class="code" href="class_layer_vector.html">LayerVector</a>* <span class="keyword">&gt;</span>( layer );</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="class_vector_image.html">VectorImage</a>* vectorImage = pLayerVector-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 );</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    vectorImage-&gt;<a class="code" href="class_vector_image.html#a65867c7b1ea809e91743605e90ae8bdb">addCurve</a>( curve, mEditor-&gt;view()-&gt;scaling(), false );</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">if</span> (vectorImage-&gt;<a class="code" href="class_vector_image.html#ae62ed331515d5593692dfd42f8195c56">isAnyCurveSelected</a>() || mScribbleArea-&gt;somethingSelected) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        mScribbleArea-&gt;deselectAll();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    vectorImage-&gt;<a class="code" href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">setSelected</a>(vectorImage-&gt;<a class="code" href="class_vector_image.html#a5aee0a9d94025f7a5382fa25684f036a">getLastCurveNumber</a>(), <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    mScribbleArea-&gt;somethingSelected = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    mScribbleArea-&gt;setModified( mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame() );</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    mScribbleArea-&gt;setAllDirty();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div>
 <div class="ttc" id="class_bezier_curve_html"><div class="ttname"><a href="class_bezier_curve.html">BezierCurve</a></div><div class="ttdef"><b>Definition:</b> <a href="beziercurve_8h_source.html#l00032">beziercurve.h:32</a></div></div>
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
 <div class="ttc" id="class_blit_rect_html"><div class="ttname"><a href="class_blit_rect.html">BlitRect</a></div><div class="ttdef"><b>Definition:</b> <a href="blitrect_8h_source.html#l00024">blitrect.h:24</a></div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00035">vectorimage.h:35</a></div></div>
+<div class="ttc" id="class_vector_image_html_ae62ed331515d5593692dfd42f8195c56"><div class="ttname"><a href="class_vector_image.html#ae62ed331515d5593692dfd42f8195c56">VectorImage::isAnyCurveSelected</a></div><div class="ttdeci">bool isAnyCurveSelected()</div><div class="ttdoc">VectorImage::isAnyCurveSelected. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00813">vectorimage.cpp:813</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
+<div class="ttc" id="class_vector_image_html_a65867c7b1ea809e91743605e90ae8bdb"><div class="ttname"><a href="class_vector_image.html#a65867c7b1ea809e91743605e90ae8bdb">VectorImage::addCurve</a></div><div class="ttdeci">void addCurve(BezierCurve &amp;newCurve, qreal factor, bool interacts=true)</div><div class="ttdoc">VectorImage::addCurve. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00308">vectorimage.cpp:308</a></div></div>
 <div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; QPointF &gt;</a></div></div>
+<div class="ttc" id="class_vector_image_html_a5aee0a9d94025f7a5382fa25684f036a"><div class="ttname"><a href="class_vector_image.html#a5aee0a9d94025f7a5382fa25684f036a">VectorImage::getLastCurveNumber</a></div><div class="ttdeci">int getLastCurveNumber()</div><div class="ttdoc">VectorImage::getLastCurveNumber. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l02226">vectorimage.cpp:2226</a></div></div>
+<div class="ttc" id="class_vector_image_html_a5046ddaeae625dd40dab3d4dc861b09c"><div class="ttname"><a href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">VectorImage::setSelected</a></div><div class="ttdeci">void setSelected(int curveNumber, bool YesOrNo)</div><div class="ttdoc">VectorImage::setSelected. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00604">vectorimage.cpp:604</a></div></div>
 <div class="ttc" id="class_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00029">stroketool.h:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 23 2017 05:53:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8fd508104389c097a83e7bc9d9a1ed32a85f9f9a</span>
+   &#160;<span id="projectnumber">7ebfaf6e692a0a93979793b1c23557719a9decb5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -370,7 +370,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateCanvasCursor</b
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a12f1cd8e723005ff52a2a326601b5eba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12f1cd8e723005ff52a2a326601b5eba"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>somethingSelected</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>somethingSelected</b> = false</td></tr>
 <tr class="separator:a12f1cd8e723005ff52a2a326601b5eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc11a667ad509a1d5e63c2939e7ceeea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc11a667ad509a1d5e63c2939e7ceeea"></a>
 QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>mySelection</b></td></tr>
@@ -384,6 +384,9 @@ QRectF&#160;</td><td class="memItemRight" valign="bottom"><b>myTempTransformedSe
 <tr class="memitem:ad20499bb893da5b97cd688644ad3805a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad20499bb893da5b97cd688644ad3805a"></a>
 qreal&#160;</td><td class="memItemRight" valign="bottom"><b>myRotatedAngle</b></td></tr>
 <tr class="separator:ad20499bb893da5b97cd688644ad3805a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80d9eaaf96308689b542394d6b624c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af80d9eaaf96308689b542394d6b624c3"></a>
+<a class="el" href="class_q_list.html">QList</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mClosestCurves</b></td></tr>
+<tr class="separator:af80d9eaaf96308689b542394d6b624c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74abfcedfb4b69c8c2b6665790a6d4bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74abfcedfb4b69c8c2b6665790a6d4bd"></a>
 <a class="el" href="class_bitmap_image.html">BitmapImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mBufferImg</b> = nullptr</td></tr>
 <tr class="separator:a74abfcedfb4b69c8c2b6665790a6d4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -516,12 +519,9 @@ QPointF&#160;</td><td class="memItemRight" valign="bottom"><b>mLastPoint</b></td
 <tr class="memitem:a0293713109771dea0a7f5570203a61d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0293713109771dea0a7f5570203a61d7"></a>
 QPointF&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentPoint</b></td></tr>
 <tr class="separator:a0293713109771dea0a7f5570203a61d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b6c47c100fdddf4769848d4a78f0a53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b6c47c100fdddf4769848d4a78f0a53"></a>
-qreal&#160;</td><td class="memItemRight" valign="bottom"><b>tol</b></td></tr>
-<tr class="separator:a3b6c47c100fdddf4769848d4a78f0a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af80d9eaaf96308689b542394d6b624c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af80d9eaaf96308689b542394d6b624c3"></a>
-<a class="el" href="class_q_list.html">QList</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mClosestCurves</b></td></tr>
-<tr class="separator:af80d9eaaf96308689b542394d6b624c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab43ab0798126567bbc87aff7f0160b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abab43ab0798126567bbc87aff7f0160b"></a>
+qreal&#160;</td><td class="memItemRight" valign="bottom"><b>selectionTolerance</b></td></tr>
+<tr class="separator:abab43ab0798126567bbc87aff7f0160b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78098b9d0df0d2db44a0ed8039879b93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78098b9d0df0d2db44a0ed8039879b93"></a>
 <a class="el" href="class_q_list.html">QList</a>&lt; <a class="el" href="class_vertex_ref.html">VertexRef</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mClosestVertices</b></td></tr>
 <tr class="separator:a78098b9d0df0d2db44a0ed8039879b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -579,6 +579,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>EditTool</b></td></t
 <tr class="memitem:a05b6d7b3bb9148f53c98b2b98d47d5ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05b6d7b3bb9148f53c98b2b98d47d5ff"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>SmudgeTool</b></td></tr>
 <tr class="separator:a05b6d7b3bb9148f53c98b2b98d47d5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8751f0e86bd7989094cb7d389dbc61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a8751f0e86bd7989094cb7d389dbc61"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>BucketTool</b></td></tr>
+<tr class="separator:a7a8751f0e86bd7989094cb7d389dbc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -600,7 +603,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SmudgeTool</b></td><
 <p>ScribbleArea::calculateSelectionCenter. </p>
 <dl class="section return"><dt>Returns</dt><dd>QPoint of tempTransformSelection center at [0] and selection center at [1] </dd></dl>
 
-<p>Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01366">1366</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p>Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01329">1329</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -611,7 +614,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>SmudgeTool</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 23 2017 04:32:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 23 2017 05:53:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
