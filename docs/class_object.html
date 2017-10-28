@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">dd8daf7e41fd9e2fc3787e80ac28e44412eb7343</span>
+   &#160;<span id="projectnumber">b5c3d28f519c30a5f356c8547bebd4dcb883f5a6</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -224,15 +224,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteLayer</b> (<a c
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a59a8efbd07a776edf409e81ac7116fee"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getLayersByType</b> () const </td></tr>
 <tr class="separator:a59a8efbd07a776edf409e81ac7116fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a28c27dff3ba645e4892a0b5bb68806"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a28c27dff3ba645e4892a0b5bb68806"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>exportFrames</b> (int frameStart, int frameEnd, <a class="el" href="class_layer.html">Layer</a> *currentLayer, QSize exportSize, QString filePath, const char *format, int quality, bool transparency, bool antialiasing, QProgressDialog *progress, int progressMax)</td></tr>
-<tr class="separator:a9a28c27dff3ba645e4892a0b5bb68806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23a4160c5d4345243e6b9ac530e36b3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23a4160c5d4345243e6b9ac530e36b3f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exportFrames</b> (int frameStart, int frameEnd, <a class="el" href="class_layer_camera.html">LayerCamera</a> *cameraLayer, QSize exportSize, QString filePath, QString format, bool transparency, bool antialiasing, QProgressDialog *progress, int progressMax)</td></tr>
+<tr class="separator:a23a4160c5d4345243e6b9ac530e36b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a067f7ea951487d3adbf653c87079ba9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a067f7ea951487d3adbf653c87079ba9e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>exportX</b> (int frameStart, int frameEnd, QTransform view, QSize exportSize, QString filePath, bool antialiasing)</td></tr>
 <tr class="separator:a067f7ea951487d3adbf653c87079ba9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6558b7fd3eb1bfa1514b15202b42db99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6558b7fd3eb1bfa1514b15202b42db99"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>exportIm</b> (int frameStart, int frameEnd, QTransform view, QSize exportSize, QString filePath, QString format, bool antialiasing, bool transparency)</td></tr>
-<tr class="separator:a6558b7fd3eb1bfa1514b15202b42db99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cc4f6a1f3832dd06edd8fc4bb6c0d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2cc4f6a1f3832dd06edd8fc4bb6c0d6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exportIm</b> (int frameStart, QTransform view, QSize cameraSize, QSize exportSize, QString filePath, QString format, bool antialiasing, bool transparency)</td></tr>
+<tr class="separator:ac2cc4f6a1f3832dd06edd8fc4bb6c0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb04c30ba83d508e600d5dc84470933d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb04c30ba83d508e600d5dc84470933d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>modification</b> ()</td></tr>
 <tr class="separator:aeb04c30ba83d508e600d5dc84470933d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,7 +298,7 @@ std::unique_ptr&lt; <a class="el" href="class_object_data.html">ObjectData</a> &
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 28 2017 01:29:26 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 09:32:36 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

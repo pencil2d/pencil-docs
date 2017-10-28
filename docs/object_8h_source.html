@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">dd8daf7e41fd9e2fc3787e80ac28e44412eb7343</span>
+   &#160;<span id="projectnumber">b5c3d28f519c30a5f356c8547bebd4dcb883f5a6</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -218,9 +218,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// these functions need to be moved to somewhere...</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> exportFrames( <span class="keywordtype">int</span> frameStart, <span class="keywordtype">int</span> frameEnd, <a class="code" href="class_layer.html">Layer</a>* currentLayer, QSize exportSize, QString filePath, <span class="keyword">const</span> <span class="keywordtype">char</span>* format, <span class="keywordtype">int</span> quality, <span class="keywordtype">bool</span> transparency, <span class="keywordtype">bool</span> antialiasing, QProgressDialog* progress, <span class="keywordtype">int</span> progressMax );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">bool</span> exportFrames( <span class="keywordtype">int</span> frameStart, <span class="keywordtype">int</span> frameEnd, <a class="code" href="class_layer_camera.html">LayerCamera</a>* cameraLayer, QSize exportSize, QString filePath, QString format, <span class="keywordtype">bool</span> transparency, <span class="keywordtype">bool</span> antialiasing, QProgressDialog* progress, <span class="keywordtype">int</span> progressMax );</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">bool</span> exportX( <span class="keywordtype">int</span> frameStart, <span class="keywordtype">int</span> frameEnd, QTransform view, QSize exportSize, QString filePath, <span class="keywordtype">bool</span> antialiasing );</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">bool</span> exportIm(<span class="keywordtype">int</span> frameStart, <span class="keywordtype">int</span> frameEnd, QTransform view, QSize exportSize, QString filePath, QString format, <span class="keywordtype">bool</span> antialiasing , <span class="keywordtype">bool</span> transparency);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">bool</span> exportIm(<span class="keywordtype">int</span> frameStart, QTransform view, QSize cameraSize, QSize exportSize, QString filePath, QString format, <span class="keywordtype">bool</span> antialiasing , <span class="keywordtype">bool</span> transparency);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> modification() { modified = <span class="keyword">true</span>; }</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">bool</span> isModified() { <span class="keywordflow">return</span> modified; }</div>
@@ -267,7 +267,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 28 2017 01:29:25 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Oct 28 2017 09:32:35 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
