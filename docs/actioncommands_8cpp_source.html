@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">b5c3d28f519c30a5f356c8547bebd4dcb883f5a6</span>
+   &#160;<span id="projectnumber">33f202d86039e84d4764a574eb356cda23543fd5</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -392,7 +392,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    QString sCameraLayerName = dialog-&gt;getCameraLayerName();</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* cameraLayer = (<a class="code" href="class_layer_camera.html">LayerCamera</a>*)mEditor-&gt;layers()-&gt;getLayerByName(sCameraLayerName);</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    QTransform view = cameraLayer-&gt;getCameraAtFrame(mEditor-&gt;currentFrame())-&gt;getView();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    QTransform view = cameraLayer-&gt;getViewAtFrame(mEditor-&gt;currentFrame());</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">if</span> (!mEditor-&gt;object()-&gt;exportIm(mEditor-&gt;currentFrame(),</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        view,</div>
@@ -612,7 +612,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 28 2017 09:32:35 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 29 2017 11:21:29 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
