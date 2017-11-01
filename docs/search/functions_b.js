@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['select',['select',['../class_vector_image.html#a4aa33b67102185962d14031322b49843',1,'VectorImage']]],
   ['selectall',['selectAll',['../class_vector_image.html#ab00261dbf44cfe8bf50622222b52950b',1,'VectorImage']]],
   ['setareaselected',['setAreaSelected',['../class_vector_image.html#ad6160d7d60c5b239890004bb39688d99',1,'VectorImage']]],
   ['setfilled',['setFilled',['../class_bezier_curve.html#a6c929c4aaacd0d12165fe71f859d4b7d',1,'BezierCurve']]],

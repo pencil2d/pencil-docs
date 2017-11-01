@@ -2,7 +2,6 @@ var searchData=
 [
   ['scopeguard',['ScopeGuard',['../class_scope_guard.html',1,'']]],
   ['scribblearea',['ScribbleArea',['../class_scribble_area.html',1,'']]],
-  ['select',['select',['../class_vector_image.html#a4aa33b67102185962d14031322b49843',1,'VectorImage']]],
   ['selectall',['selectAll',['../class_vector_image.html#ab00261dbf44cfe8bf50622222b52950b',1,'VectorImage']]],
   ['selecttool',['SelectTool',['../class_select_tool.html',1,'']]],
   ['setareaselected',['setAreaSelected',['../class_vector_image.html#ad6160d7d60c5b239890004bb39688d99',1,'VectorImage']]],

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">befec218b35222473b75c322dc0ddd09eee94daa</span>
+   &#160;<span id="projectnumber">da990cc5126488ac29d3f971bd05b9164b79fa2e</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -106,9 +106,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a8df8ccb3b68167359e53f89d7029dc92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8df8ccb3b68167359e53f89d7029dc92"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>colorChanged</b> (QColor)</td></tr>
-<tr class="separator:a8df8ccb3b68167359e53f89d7029dc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fab963f1bafe24914557d5aec9eec58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fab963f1bafe24914557d5aec9eec58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>colorChanged</b> (QColor, int)</td></tr>
+<tr class="separator:a7fab963f1bafe24914557d5aec9eec58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe9b96aeef0d41e4ea66e47bf329d8bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe9b96aeef0d41e4ea66e47bf329d8bf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>colorNumberChanged</b> (int)</td></tr>
 <tr class="separator:abe9b96aeef0d41e4ea66e47bf329d8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +127,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () override<
 <tr class="memitem:a789fce73318125640da9dfa5f6e27e05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a789fce73318125640da9dfa5f6e27e05"></a>
 <a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (<a class="el" href="class_object.html">Object</a> *) override</td></tr>
 <tr class="separator:a789fce73318125640da9dfa5f6e27e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affa66382ccbee21670938fb1e94b2aa1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affa66382ccbee21670938fb1e94b2aa1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>currentLayerChanged</b> (<a class="el" href="class_layer.html">Layer</a> *) override</td></tr>
+<tr class="separator:affa66382ccbee21670938fb1e94b2aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ffd175b1bc45fa252606aaf00a9b4f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ffd175b1bc45fa252606aaf00a9b4f9"></a>
 QColor&#160;</td><td class="memItemRight" valign="bottom"><b>frontColor</b> ()</td></tr>
 <tr class="separator:a9ffd175b1bc45fa252606aaf00a9b4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,6 +164,9 @@ QColor&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentFrontColor<
 <tr class="memitem:ac40b420e8d17754b4b5fa4f254088b9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac40b420e8d17754b4b5fa4f254088b9f"></a>
 QColor int&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentColorIndex</b> = 0</td></tr>
 <tr class="separator:ac40b420e8d17754b4b5fa4f254088b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87f3b6552e559a9aa716fb2dd9467d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac87f3b6552e559a9aa716fb2dd9467d1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsWorkingOnVectorLayer</b> = false</td></tr>
+<tr class="separator:ac87f3b6552e559a9aa716fb2dd9467d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -172,7 +178,7 @@ QColor int&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentColorIn
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 30 2017 11:18:55 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 1 2017 02:24:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
