@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">da990cc5126488ac29d3f971bd05b9164b79fa2e</span>
+   &#160;<span id="projectnumber">50f9420d265a2353da289cd3e24cd5972b490e02</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -1748,35 +1748,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;    {</div>
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;        <span class="keywordflow">if</span> ( layer == NULL ) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;        mEditor-&gt;backup( tr( <span class="stringliteral">&quot;Delete Selection&quot;</span> ) );</div>
+<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;        </div>
 <div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;        mClosestCurves.clear();</div>
 <div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR ) { ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;deleteSelection(); }</div>
 <div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP ) { ( ( <a class="code" href="class_layer_bitmap.html">LayerBitmap</a> * )layer )-&gt;getLastBitmapImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear( mySelection ); }</div>
 <div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;        updateAllFrames();</div>
-<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;    }</div>
-<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;}</div>
-<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;</div>
-<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;<span class="keywordtype">void</span> ScribbleArea::clearImage()</div>
-<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;{</div>
-<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;    <span class="keywordflow">if</span> ( layer == NULL ) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR )</div>
-<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;    {</div>
-<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;        mEditor-&gt;backup( tr( <span class="stringliteral">&quot;Clear Image&quot;</span> ) ); <span class="comment">// undo: only before change (just before)</span></div>
-<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;        ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear();</div>
-<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;        mClosestCurves.clear();</div>
-<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160;        mClosestVertices.clear();</div>
-<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;    }</div>
-<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP )</div>
-<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;    {</div>
-<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;        mEditor-&gt;backup( tr( <span class="stringliteral">&quot;Clear Image&quot;</span> ) );</div>
-<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;        ( ( <a class="code" href="class_layer_bitmap.html">LayerBitmap</a> * )layer )-&gt;getLastBitmapImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear();</div>
+<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;</div>
+<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Delete Selection&quot;</span>));</div>
+<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;    }</div>
+<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;}</div>
+<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;</div>
+<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;<span class="keywordtype">void</span> ScribbleArea::clearImage()</div>
+<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;{</div>
+<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;    <span class="keywordflow">if</span> ( layer == NULL ) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;    <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR )</div>
+<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;    {</div>
+<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;        ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear();</div>
+<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160;        mClosestCurves.clear();</div>
+<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;        mClosestVertices.clear();</div>
+<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;    }</div>
+<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP )</div>
+<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;    {</div>
+<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;        ((<a class="code" href="class_layer_bitmap.html">LayerBitmap</a> *)layer)-&gt;getLastBitmapImageAtFrame(mEditor-&gt;currentFrame(), 0)-&gt;clear();</div>
 <div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160;    }</div>
 <div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;    {</div>
 <div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;        <span class="keywordflow">return</span>; <span class="comment">// skip updates when nothing changes</span></div>
 <div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;    }</div>
-<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;</div>
+<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;    mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
 <div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;    setModified( mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame() );</div>
 <div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;}</div>
 <div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;</div>
@@ -1835,7 +1835,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 02:24:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 3 2017 01:37:43 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

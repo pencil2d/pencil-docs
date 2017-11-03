@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">da990cc5126488ac29d3f971bd05b9164b79fa2e</span>
+   &#160;<span id="projectnumber">50f9420d265a2353da289cd3e24cd5972b490e02</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -448,156 +448,168 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    mEditor-&gt;view()-&gt;rotate(currentRotation - 15.f);</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keywordtype">void</span> ActionCommands::showGrid(<span class="keywordtype">bool</span> bShow)</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keywordtype">void</span> ActionCommands::toggleMirror()</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;{</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keyword">auto</span> prefs = mEditor-&gt;preference();</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">if</span> (bShow)</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        prefs-&gt;turnOn(SETTING::GRID);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        prefs-&gt;turnOff(SETTING::GRID);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="keywordtype">void</span> ActionCommands::PlayStop()</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;{</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <a class="code" href="class_playback_manager.html">PlaybackManager</a>* playback = mEditor-&gt;playback();</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (playback-&gt;isPlaying())</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        playback-&gt;stop();</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    }</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    {</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        playback-&gt;play();</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoNextFrame()</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;{</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    mEditor-&gt;scrubForward();</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoPrevFrame()</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;{</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    mEditor-&gt;scrubBackward();</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;}</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoNextKeyFrame()</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;{</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    mEditor-&gt;scrubNextKeyFrame();</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;}</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoPrevKeyFrame()</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;{</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    mEditor-&gt;scrubPreviousKeyFrame();</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="keywordtype">void</span> ActionCommands::addNewKey()</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;{</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = mEditor-&gt;addNewKey();</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <a class="code" href="class_sound_clip.html">SoundClip</a>* clip = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(key);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keywordflow">if</span> (clip)</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <a class="code" href="class_file_dialog.html">FileDialog</a> fileDialog(mParent);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        QString strSoundFile = fileDialog.openFile(FileType::SOUND);</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        <span class="keywordflow">if</span> (strSoundFile.isEmpty())</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            mEditor-&gt;removeKey();</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        }</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <a class="code" href="class_status.html">Status</a> st = mEditor-&gt;sound()-&gt;loadSound(clip, strSoundFile);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        Q_ASSERT(st.ok());</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <a class="code" href="class_camera.html">Camera</a>* cam = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_camera.html">Camera</a>*<span class="keyword">&gt;</span>(key);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">if</span> (cam)</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    {</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keyword">auto</span> camLayer = <span class="keyword">static_cast&lt;</span><a class="code" href="class_layer_camera.html">LayerCamera</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        Q_ASSERT(camLayer);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        camLayer-&gt;LinearInterpolateTransform(cam);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        mEditor-&gt;view()-&gt;updateViewTransforms();</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;}</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;<span class="keywordtype">void</span> ActionCommands::removeKey()</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    mEditor-&gt;removeKey();</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">if</span> (layer-&gt;keyFrameCount() == 0)</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">switch</span> (layer-&gt;type())</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        {</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">case</span> Layer::BITMAP:</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        <span class="keywordflow">case</span> Layer::VECTOR:</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">case</span> Layer::SOUND:</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        <span class="keywordflow">case</span> Layer::CAMERA:</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            layer-&gt;addNewEmptyKeyAt(1);</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        }</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    }</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewBitmapLayer()</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;{</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        tr(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>), &amp;ok);</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        mEditor-&gt;layers()-&gt;createBitmapLayer(text);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">bool</span> flipX = mEditor-&gt;view()-&gt;isFlipHorizontal();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    mEditor-&gt;view()-&gt;flipHorizontal(!flipX);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keywordtype">void</span> ActionCommands::toggleMirrorV()</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;{</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">bool</span> flipY = mEditor-&gt;view()-&gt;isFlipVertical();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    mEditor-&gt;view()-&gt;flipVertical(!flipY);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keywordtype">void</span> ActionCommands::showGrid(<span class="keywordtype">bool</span> bShow)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;{</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keyword">auto</span> prefs = mEditor-&gt;preference();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">if</span> (bShow)</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        prefs-&gt;turnOn(SETTING::GRID);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        prefs-&gt;turnOff(SETTING::GRID);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="keywordtype">void</span> ActionCommands::PlayStop()</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;{</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <a class="code" href="class_playback_manager.html">PlaybackManager</a>* playback = mEditor-&gt;playback();</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keywordflow">if</span> (playback-&gt;isPlaying())</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        playback-&gt;stop();</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        playback-&gt;play();</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoNextFrame()</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;{</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    mEditor-&gt;scrubForward();</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoPrevFrame()</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    mEditor-&gt;scrubBackward();</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;}</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoNextKeyFrame()</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;{</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    mEditor-&gt;scrubNextKeyFrame();</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="keywordtype">void</span> ActionCommands::GotoPrevKeyFrame()</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;{</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    mEditor-&gt;scrubPreviousKeyFrame();</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="keywordtype">void</span> ActionCommands::addNewKey()</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;{</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = mEditor-&gt;addNewKey();</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <a class="code" href="class_sound_clip.html">SoundClip</a>* clip = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(key);</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    <span class="keywordflow">if</span> (clip)</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    {</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <a class="code" href="class_file_dialog.html">FileDialog</a> fileDialog(mParent);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        QString strSoundFile = fileDialog.openFile(FileType::SOUND);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keywordflow">if</span> (strSoundFile.isEmpty())</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            mEditor-&gt;removeKey();</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <a class="code" href="class_status.html">Status</a> st = mEditor-&gt;sound()-&gt;loadSound(clip, strSoundFile);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        Q_ASSERT(st.ok());</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <a class="code" href="class_camera.html">Camera</a>* cam = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="class_camera.html">Camera</a>*<span class="keyword">&gt;</span>(key);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keywordflow">if</span> (cam)</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        <span class="keyword">auto</span> camLayer = <span class="keyword">static_cast&lt;</span><a class="code" href="class_layer_camera.html">LayerCamera</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        Q_ASSERT(camLayer);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        camLayer-&gt;LinearInterpolateTransform(cam);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        mEditor-&gt;view()-&gt;updateViewTransforms();</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;<span class="keywordtype">void</span> ActionCommands::removeKey()</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;{</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    mEditor-&gt;removeKey();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keywordflow">if</span> (layer-&gt;keyFrameCount() == 0)</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="keywordflow">switch</span> (layer-&gt;type())</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">case</span> Layer::BITMAP:</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        <span class="keywordflow">case</span> Layer::VECTOR:</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        <span class="keywordflow">case</span> Layer::SOUND:</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        <span class="keywordflow">case</span> Layer::CAMERA:</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            layer-&gt;addNewEmptyKeyAt(1);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        }</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    }</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;}</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewVectorLayer()</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;{</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        tr(<span class="stringliteral">&quot;Vector Layer&quot;</span>), &amp;ok);</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    {</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        mEditor-&gt;layers()-&gt;createVectorLayer(text);</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    }</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;}</div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewCameraLayer()</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;{</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        tr(<span class="stringliteral">&quot;Camera Layer&quot;</span>), &amp;ok);</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    {</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        mEditor-&gt;layers()-&gt;createCameraLayer(text);</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    }</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;}</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewSoundLayer()</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;{</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    QString strLayerName = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        tr(<span class="stringliteral">&quot;Sound Layer&quot;</span>), &amp;ok);</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !strLayerName.isEmpty())</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    {</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;createSoundLayer(strLayerName);</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        mEditor-&gt;layers()-&gt;setCurrentLayer(layer);</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    }</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">return</span> Status::FAIL;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;}</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewBitmapLayer()</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;{</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        tr(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        mEditor-&gt;layers()-&gt;createBitmapLayer(text);</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    }</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;}</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewVectorLayer()</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;{</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        tr(<span class="stringliteral">&quot;Vector Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    {</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        mEditor-&gt;layers()-&gt;createVectorLayer(text);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    }</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;}</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewCameraLayer()</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;{</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        tr(<span class="stringliteral">&quot;Camera Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    {</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        mEditor-&gt;layers()-&gt;createCameraLayer(text);</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    }</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;}</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewSoundLayer()</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;{</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    QString strLayerName = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        tr(<span class="stringliteral">&quot;Sound Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !strLayerName.isEmpty())</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    {</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;createSoundLayer(strLayerName);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        mEditor-&gt;layers()-&gt;setCurrentLayer(layer);</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    }</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">return</span> Status::FAIL;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;}</div>
 <div class="ttc" id="class_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00027">soundclip.h:27</a></div></div>
 <div class="ttc" id="class_file_dialog_html"><div class="ttname"><a href="class_file_dialog.html">FileDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="filedialogex_8h_source.html#l00033">filedialogex.h:33</a></div></div>
 <div class="ttc" id="class_export_image_dialog_html"><div class="ttname"><a href="class_export_image_dialog.html">ExportImageDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="exportimagedialog_8h_source.html#l00027">exportimagedialog.h:27</a></div></div>
@@ -614,7 +626,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 02:24:49 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 3 2017 01:37:42 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

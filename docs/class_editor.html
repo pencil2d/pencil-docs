@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">da990cc5126488ac29d3f971bd05b9164b79fa2e</span>
+   &#160;<span id="projectnumber">50f9420d265a2353da289cd3e24cd5972b490e02</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -292,12 +292,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>paste</b> ()</td></tr
 <tr class="memitem:ac7c4e893c59c2a3948a8567dd9d8e189"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7c4e893c59c2a3948a8567dd9d8e189"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardChanged</b> ()</td></tr>
 <tr class="separator:ac7c4e893c59c2a3948a8567dd9d8e189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b1e237e677886927fbda0eb72c5f20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7b1e237e677886927fbda0eb72c5f20"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleMirror</b> ()</td></tr>
-<tr class="separator:ad7b1e237e677886927fbda0eb72c5f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad538a289891798e4069db4d9ba64b43a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad538a289891798e4069db4d9ba64b43a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleMirrorV</b> ()</td></tr>
-<tr class="separator:ad538a289891798e4069db4d9ba64b43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fdcb9bdef52a9f99cd1adbbc140df3b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fdcb9bdef52a9f99cd1adbbc140df3b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleShowAllLayers</b> ()</td></tr>
 <tr class="separator:a6fdcb9bdef52a9f99cd1adbbc140df3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,12 +316,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mBackupIndex</b></td><
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab636611baf9bd96f8cb5773410adfb7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab636611baf9bd96f8cb5773410adfb7d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dragEnterEvent</b> (QDragEnterEvent *event)</td></tr>
-<tr class="separator:ab636611baf9bd96f8cb5773410adfb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e773446b7f348b1394adcf81e023f57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e773446b7f348b1394adcf81e023f57"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dropEvent</b> (QDropEvent *event)</td></tr>
-<tr class="separator:a1e773446b7f348b1394adcf81e023f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8606981a576b9e32b8ca5c428b57af8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8606981a576b9e32b8ca5c428b57af8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dragEnterEvent</b> (QDragEnterEvent *)</td></tr>
+<tr class="separator:ad8606981a576b9e32b8ca5c428b57af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f07d165b72c7649bc941ab9764e48a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f07d165b72c7649bc941ab9764e48a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dropEvent</b> (QDropEvent *)</td></tr>
+<tr class="separator:a0f07d165b72c7649bc941ab9764e48a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -421,6 +415,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsAutosave</b> = tru
 <tr class="memitem:a174d7fa40ee5892e4b99d6b2921b18fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a174d7fa40ee5892e4b99d6b2921b18fa"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveNumber</b> = 12</td></tr>
 <tr class="separator:a174d7fa40ee5892e4b99d6b2921b18fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f75906c47039ad9a64db3a3dccad4e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f75906c47039ad9a64db3a3dccad4e7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveCounter</b> = 0</td></tr>
+<tr class="separator:a9f75906c47039ad9a64db3a3dccad4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1651fee212687b0774e24dfff9090e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1651fee212687b0774e24dfff9090e4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>lastModifiedFrame</b></td></tr>
 <tr class="separator:ae1651fee212687b0774e24dfff9090e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -450,7 +447,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardSoundClipOk<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 02:24:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 3 2017 01:37:43 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

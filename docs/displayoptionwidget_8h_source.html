@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">da990cc5126488ac29d3f971bd05b9164b79fa2e</span>
+   &#160;<span id="projectnumber">50f9420d265a2353da289cd3e24cd5972b490e02</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_display_option_widget.html">DisplayOptionWidget</a>( QWidget* parent );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_display_option_widget.html">DisplayOptionWidget</a>(QWidget* parent);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_display_option_widget.html">DisplayOptionWidget</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> initUI() <span class="keyword">override</span>;</div>
@@ -129,15 +129,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> makeConnectionToEditor(<a class="code" href="class_editor.html">Editor</a>* editor);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> onionPrevButtonClicked( <span class="keywordtype">bool</span> );</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> onionNextButtonClicked( <span class="keywordtype">bool</span> );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> onionBlueButtonClicked( <span class="keywordtype">bool</span> );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> onionRedButtonClicked( <span class="keywordtype">bool</span> );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    Ui::DisplayOption* ui = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // DISPLAYOPTIONDOCKWIDGET_H</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> onionPrevButtonClicked(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> onionNextButtonClicked(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> onionBlueButtonClicked(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> onionRedButtonClicked(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> toggleMirror(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> toggleMirrorV(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Ui::DisplayOption* ui = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // DISPLAYOPTIONDOCKWIDGET_H</span></div>
 <div class="ttc" id="class_view_manager_html"><div class="ttname"><a href="class_view_manager.html">ViewManager</a></div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8h_source.html#l00029">viewmanager.h:29</a></div></div>
 <div class="ttc" id="class_display_option_widget_html"><div class="ttname"><a href="class_display_option_widget.html">DisplayOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="displayoptionwidget_8h_source.html#l00030">displayoptionwidget.h:30</a></div></div>
 <div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00045">editor.h:45</a></div></div>
@@ -145,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 1 2017 02:24:49 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 3 2017 01:37:42 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
