@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">948b446f4861016b032d188be605b2f83381a4f9</span>
+   &#160;<span id="projectnumber">aeb319f6d8b51b7129c1f0e2111176e5d6e7ec9b</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -305,26 +305,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> ( event-&gt;button() == Qt::LeftButton )</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span> ( mScribbleArea-&gt;isLayerPaintable() )</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            qreal distance = QLineF( getCurrentPoint(), mMouseDownPoint ).length();</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">if</span> (distance &lt; 1)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                paintAt(mMouseDownPoint);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                drawStroke();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP )</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            paintBitmapStroke();</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR )</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            paintVectorStroke();</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        mEditor-&gt;backup(typeName());</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        mEditor-&gt;backup(typeName());</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">if</span> ( mScribbleArea-&gt;isLayerPaintable() )</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            qreal distance = QLineF( getCurrentPoint(), mMouseDownPoint ).length();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordflow">if</span> (distance &lt; 1)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                paintAt(mMouseDownPoint);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                drawStroke();</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP ) </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            paintBitmapStroke();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR )</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            paintVectorStroke();</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    endStroke();</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
@@ -529,7 +529,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 3 2017 10:21:25 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 6 2017 06:13:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">948b446f4861016b032d188be605b2f83381a4f9</span>
+   &#160;<span id="projectnumber">aeb319f6d8b51b7129c1f0e2111176e5d6e7ec9b</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -182,7 +182,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> SoundPlayer::makeConnections()</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{   </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">auto</span> errorSignal = <span class="keyword">static_cast&lt;</span> <span class="keywordtype">void</span> ( QMediaPlayer::* )( QMediaPlayer::Error ) <span class="keyword">&gt;</span>( &amp;QMediaPlayer::error );</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    connect( mMediaPlayer, errorSignal, <span class="keyword">this</span>, [ <span class="keyword">this</span> ]( QMediaPlayer::Error err )</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    connect( mMediaPlayer, errorSignal, <span class="keyword">this</span>, []( QMediaPlayer::Error err )</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;MediaPlayer Error: &quot;</span> &lt;&lt; err;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    } );</div>
@@ -198,7 +198,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 3 2017 10:21:24 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 6 2017 06:13:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

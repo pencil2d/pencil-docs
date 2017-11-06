@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">948b446f4861016b032d188be605b2f83381a4f9</span>
+   &#160;<span id="projectnumber">aeb319f6d8b51b7129c1f0e2111176e5d6e7ec9b</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -122,45 +122,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_layer_manager.html">LayerManager</a>( QObject* pParant );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_layer_manager.html">LayerManager</a>(QObject* pParant);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ~<a class="code" href="class_layer_manager.html">LayerManager</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> init() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_status.html">Status</a> load( <a class="code" href="class_object.html">Object</a>* ) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_status.html">Status</a> save( <a class="code" href="class_object.html">Object</a>* ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_status.html">Status</a> load(<a class="code" href="class_object.html">Object</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_status.html">Status</a> save(<a class="code" href="class_object.html">Object</a>*) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Layer Management</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* currentLayer();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* currentLayer( <span class="keywordtype">int</span> offset );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* getLayer( <span class="keywordtype">int</span> index );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* currentLayer(<span class="keywordtype">int</span> offset);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* getLayer(<span class="keywordtype">int</span> index);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* getLayerByName(QString sName);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span>    getLastCameraLayer();</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span>    currentLayerIndex();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span>   setCurrentLayer( <span class="keywordtype">int</span> nIndex );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span>   setCurrentLayer( <a class="code" href="class_layer.html">Layer</a>* layer );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span>   setCurrentLayer(<span class="keywordtype">int</span> nIndex);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span>   setCurrentLayer(<a class="code" href="class_layer.html">Layer</a>* layer);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span>    count();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span>   deleteCurrentLayer();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> gotoNextLayer();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> gotoPreviouslayer();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_layer_bitmap.html">LayerBitmap</a>* createBitmapLayer( <span class="keyword">const</span> QString&amp; strLayerName );</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_layer_vector.html">LayerVector</a>* createVectorLayer( <span class="keyword">const</span> QString&amp; strLayerName );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* createCameraLayer( <span class="keyword">const</span> QString&amp; strLayerName );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_layer_sound.html">LayerSound</a>*  createSoundLayer( <span class="keyword">const</span> QString&amp; strLayerName );</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_layer_bitmap.html">LayerBitmap</a>* createBitmapLayer(<span class="keyword">const</span> QString&amp; strLayerName);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_layer_vector.html">LayerVector</a>* createVectorLayer(<span class="keyword">const</span> QString&amp; strLayerName);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* createCameraLayer(<span class="keyword">const</span> QString&amp; strLayerName);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_layer_sound.html">LayerSound</a>*  createSoundLayer(<span class="keyword">const</span> QString&amp; strLayerName);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// KeyFrame Management</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> LastFrameAtFrame( <span class="keywordtype">int</span> frameIndex );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> LastFrameAtFrame(<span class="keywordtype">int</span> frameIndex);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> firstKeyFrameIndex();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> lastKeyFrameIndex();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>(<span class="keywordtype">bool</span> includeSounds = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> layerUpdated( <span class="keywordtype">int</span> layerId );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> layerUpdated(<span class="keywordtype">int</span> layerId);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;Q_SIGNALS:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> currentLayerChanged( <span class="keywordtype">int</span> n );</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> layerCountChanged( <span class="keywordtype">int</span> count );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> currentLayerChanged(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> layerCountChanged(<span class="keywordtype">int</span> count);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> mLastCameraLayer = 0;</div>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 3 2017 10:21:24 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 6 2017 06:13:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
