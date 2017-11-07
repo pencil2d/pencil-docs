@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">83e0e6c11487bc48c006e341360125c52333b4dc</span>
+   &#160;<span id="projectnumber">7e7aff796a3289778551a2e8fbc9e5136c3872c0</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -191,7 +191,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;LayerCamera::LayerCamera( <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span> ) : <a class="code" href="class_layer.html">Layer</a>( object, <a class="code" href="class_layer.html">Layer</a>::CAMERA )</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    mName = QString(tr(<span class="stringliteral">&quot;Camera Layer&quot;</span>));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    setName(tr(<span class="stringliteral">&quot;Camera Layer&quot;</span>));</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    viewRect = QRect(QPoint(-400, -300), QSize(800, 600));</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    dialog = NULL;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
@@ -344,15 +344,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;{</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> ( dialog == NULL )</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        dialog = <span class="keyword">new</span> <a class="code" href="class_camera_properties_dialog.html">CameraPropertiesDialog</a>( mName, viewRect.width(), viewRect.height() );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        dialog = <span class="keyword">new</span> <a class="code" href="class_camera_properties_dialog.html">CameraPropertiesDialog</a>( name(), viewRect.width(), viewRect.height() );</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    dialog-&gt;setName(mName);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    dialog-&gt;setName( name() );</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    dialog-&gt;setWidth(viewRect.width());</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    dialog-&gt;setHeight(viewRect.height());</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">int</span> result = dialog-&gt;exec();</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">if</span> (result == QDialog::Accepted)</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        mName = dialog-&gt;getName();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        setName( dialog-&gt;getName() );</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        viewRect = QRect(-dialog-&gt;getWidth()/2, -dialog-&gt;getHeight()/2, dialog-&gt;getWidth(), dialog-&gt;getHeight());</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        setUpdated();</div>
@@ -363,8 +363,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;{</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    QDomElement layerTag = doc.createElement(<span class="stringliteral">&quot;layer&quot;</span>);</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;name&quot;</span>, mName);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;visibility&quot;</span>, mVisible);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;name&quot;</span>, name());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;visibility&quot;</span>, visible());</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;type&quot;</span>, type());</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;width&quot;</span>, viewRect.width());</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    layerTag.setAttribute(<span class="stringliteral">&quot;height&quot;</span>, viewRect.height());</div>
@@ -389,8 +389,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    Q_UNUSED(dataDirPath);</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    mName = element.attribute(<span class="stringliteral">&quot;name&quot;</span>);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    mVisible = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    setName( element.attribute(<span class="stringliteral">&quot;name&quot;</span>) );</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    setVisible( <span class="keyword">true</span> );</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">int</span> width = element.attribute( <span class="stringliteral">&quot;width&quot;</span> ).toInt();</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">int</span> height = element.attribute( <span class="stringliteral">&quot;height&quot;</span> ).toInt();</div>
@@ -426,7 +426,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 7 2017 00:34:11 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 7 2017 03:45:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

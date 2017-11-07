@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">83e0e6c11487bc48c006e341360125c52333b4dc</span>
+   &#160;<span id="projectnumber">7e7aff796a3289778551a2e8fbc9e5136c3872c0</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -155,8 +155,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">bool</span> Layer::keyExists( <span class="keywordtype">int</span> position )</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">bool</span> Layer::keyExists( <span class="keywordtype">int</span> position )<span class="keyword"> const</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> ( mKeyFrames.find( position ) != mKeyFrames.end() );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
@@ -260,8 +260,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">int</span> Layer::getMaxKeyFramePosition()</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">int</span> Layer::getMaxKeyFramePosition()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> ( !mKeyFrames.empty() )</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">return</span> mKeyFrames.begin()-&gt;first; <span class="comment">// begin is the highest key frame position</span></div>
@@ -802,31 +802,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        <span class="keywordflow">case</span> Layer::BITMAP:</div>
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keywordflow">case</span> Layer::VECTOR:</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    }</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;}</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="keywordtype">bool</span> Layer::keyExistsWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;{</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    <span class="keywordflow">return</span> getKeyFrameWhichCovers(frameNumber) != <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;}</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<a class="code" href="class_key_frame.html">KeyFrame</a> *Layer::getKeyFrameWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;{</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="keyword">auto</span> keyFrame = getLastKeyFrameAtPosition(frameNumber);</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <span class="keywordflow">if</span>( keyFrame != <span class="keyword">nullptr</span> )</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    {</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        <span class="keywordflow">if</span>(keyFrame-&gt;pos() + keyFrame-&gt;length() &gt; frameNumber)</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        {</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            <span class="keywordflow">return</span> keyFrame;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        }</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    }</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;}</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keywordflow">case</span> Layer::CAMERA:</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="keywordflow">case</span> Layer::SOUND:</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    }</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;}</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="keywordtype">bool</span> Layer::keyExistsWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;{</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordflow">return</span> getKeyFrameWhichCovers(frameNumber) != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;}</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<a class="code" href="class_key_frame.html">KeyFrame</a> *Layer::getKeyFrameWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;{</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    <span class="keyword">auto</span> keyFrame = getLastKeyFrameAtPosition(frameNumber);</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <span class="keywordflow">if</span>( keyFrame != <span class="keyword">nullptr</span> )</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    {</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <span class="keywordflow">if</span>(keyFrame-&gt;pos() + keyFrame-&gt;length() &gt; frameNumber)</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        {</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;            <span class="keywordflow">return</span> keyFrame;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        }</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    }</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;}</div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_time_line_cells_html"><div class="ttname"><a href="class_time_line_cells.html">TimeLineCells</a></div><div class="ttdef"><b>Definition:</b> <a href="timelinecells_8h_source.html#l00039">timelinecells.h:39</a></div></div>
@@ -834,7 +837,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 7 2017 00:34:11 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 7 2017 03:45:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
