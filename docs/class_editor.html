@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">7e7aff796a3289778551a2e8fbc9e5136c3872c0</span>
+   &#160;<span id="projectnumber">5bafbb1791808cfc03b4a8e10c90934ebeb0ae77</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -364,6 +364,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>makeConnections</b> (
 <tr class="memitem:a86b92235683c317ade6fb0543721feaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86b92235683c317ade6fb0543721feaa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearUndoStack</b> ()</td></tr>
 <tr class="separator:a86b92235683c317ade6fb0543721feaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a069ca1de72575393405c9bfce64c8703"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a069ca1de72575393405c9bfce64c8703"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateAutoSaveCounter</b> ()</td></tr>
+<tr class="separator:a069ca1de72575393405c9bfce64c8703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -403,35 +406,32 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentLayerIndex</b>
 <tr class="memitem:ae5800309e0704962f58bb67cf8d31f59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5800309e0704962f58bb67cf8d31f59"></a>
 std::vector&lt; <a class="el" href="class_base_manager.html">BaseManager</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mAllManagers</b></td></tr>
 <tr class="separator:ae5800309e0704962f58bb67cf8d31f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7baca3497db7c2fe88b047891028b03e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7baca3497db7c2fe88b047891028b03e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_isAltPressed</b> = false</td></tr>
-<tr class="separator:a7baca3497db7c2fe88b047891028b03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62cdef7ac82b8e3659755863b77793c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62cdef7ac82b8e3659755863b77793c8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numberOfModifications</b> = 0</td></tr>
-<tr class="separator:a62cdef7ac82b8e3659755863b77793c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd534376f907f3e93e54baf27300ffc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabd534376f907f3e93e54baf27300ffc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsAltPressed</b> = false</td></tr>
+<tr class="separator:aabd534376f907f3e93e54baf27300ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab031e5ffe6719bb635e8b1e72cba4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adab031e5ffe6719bb635e8b1e72cba4a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsAutosave</b> = true</td></tr>
 <tr class="separator:adab031e5ffe6719bb635e8b1e72cba4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a174d7fa40ee5892e4b99d6b2921b18fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a174d7fa40ee5892e4b99d6b2921b18fa"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveNumber</b> = 12</td></tr>
-<tr class="separator:a174d7fa40ee5892e4b99d6b2921b18fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f75906c47039ad9a64db3a3dccad4e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f75906c47039ad9a64db3a3dccad4e7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveCounter</b> = 0</td></tr>
-<tr class="separator:a9f75906c47039ad9a64db3a3dccad4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1651fee212687b0774e24dfff9090e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1651fee212687b0774e24dfff9090e4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>lastModifiedFrame</b></td></tr>
-<tr class="separator:ae1651fee212687b0774e24dfff9090e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ecb9cbe4ac73e4f53f7c11ee76e5618"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ecb9cbe4ac73e4f53f7c11ee76e5618"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>lastModifiedLayer</b></td></tr>
-<tr class="separator:a9ecb9cbe4ac73e4f53f7c11ee76e5618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e860e1d9aa6d16c54af84ff1d075e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13e860e1d9aa6d16c54af84ff1d075e8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mAutosaveNumber</b> = 12</td></tr>
+<tr class="separator:a13e860e1d9aa6d16c54af84ff1d075e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588ee5b79c987a7b5ec0cd19f1ad0ae8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a588ee5b79c987a7b5ec0cd19f1ad0ae8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mAutosaveCounter</b> = 0</td></tr>
+<tr class="separator:a588ee5b79c987a7b5ec0cd19f1ad0ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c84a01b6e1fe1e7c70f0cfbda713b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4c84a01b6e1fe1e7c70f0cfbda713b4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastModifiedFrame</b> = -1</td></tr>
+<tr class="separator:af4c84a01b6e1fe1e7c70f0cfbda713b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8960979689b545de663cc91e78e5f51f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8960979689b545de663cc91e78e5f51f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastModifiedLayer</b> = -1</td></tr>
+<tr class="separator:a8960979689b545de663cc91e78e5f51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42768a4121bbba1a5fcb71695021a94b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42768a4121bbba1a5fcb71695021a94b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardBitmapOk</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardBitmapOk</b> = true</td></tr>
 <tr class="separator:a42768a4121bbba1a5fcb71695021a94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b52fe7ef33acb3ede29a4ad4a516c00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b52fe7ef33acb3ede29a4ad4a516c00"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardVectorOk</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardVectorOk</b> = true</td></tr>
 <tr class="separator:a2b52fe7ef33acb3ede29a4ad4a516c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511dadba40391490c06d69e792379152"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a511dadba40391490c06d69e792379152"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardSoundClipOk</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardSoundClipOk</b> = true</td></tr>
 <tr class="separator:a511dadba40391490c06d69e792379152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -447,7 +447,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>clipboardSoundClipOk<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 7 2017 03:45:54 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 8 2017 03:40:01 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

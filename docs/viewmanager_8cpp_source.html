@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">7e7aff796a3289778551a2e8fbc9e5136c3872c0</span>
+   &#160;<span id="projectnumber">5bafbb1791808cfc03b4a8e10c90934ebeb0ae77</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -128,8 +128,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="class_status.html">Status</a> ViewManager::load( <a class="code" href="class_object.html">Object</a>* )</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    mCameraLayer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    resetView();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    mCurrentCamera = mDefaultEditorCamera;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    mCurrentCamera-&gt;reset();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    updateViewTransforms();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    connect(editor(), &amp;Editor::currentFrameChanged, <span class="keyword">this</span>, &amp;ViewManager::onCurrentFrameChanged);</div>
@@ -391,7 +391,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 7 2017 03:45:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 8 2017 03:40:01 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

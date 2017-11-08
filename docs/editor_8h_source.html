@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">7e7aff796a3289778551a2e8fbc9e5136c3872c0</span>
+   &#160;<span id="projectnumber">5bafbb1791808cfc03b4a8e10c90934ebeb0ae77</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -274,26 +274,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    std::vector&lt; BaseManager* &gt; mAllManagers;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">bool</span> m_isAltPressed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">int</span> numberOfModifications = 0;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">bool</span> mIsAutosave = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">int</span> autosaveNumber = 12;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">int</span> autosaveCounter = 0;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> makeConnections();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* addKeyFrame(<span class="keywordtype">int</span> layerNumber, <span class="keywordtype">int</span> frameNumber);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// backup</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> clearUndoStack();</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">int</span> lastModifiedFrame;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">int</span> lastModifiedLayer;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">bool</span> mIsAltPressed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">bool</span> mIsAutosave = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">int</span> mAutosaveNumber = 12;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">int</span> mAutosaveCounter = 0;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">void</span> makeConnections();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* addKeyFrame(<span class="keywordtype">int</span> layerNumber, <span class="keywordtype">int</span> frameNumber);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">// backup</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> clearUndoStack();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">void</span> updateAutoSaveCounter();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">int</span> mLastModifiedFrame = -1;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">int</span> mLastModifiedLayer = -1;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="comment">// clipboard</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">bool</span> clipboardBitmapOk, clipboardVectorOk, clipboardSoundClipOk;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;};</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">bool</span> clipboardBitmapOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">bool</span> clipboardVectorOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">bool</span> clipboardSoundClipOk = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;};</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_view_manager_html"><div class="ttname"><a href="class_view_manager.html">ViewManager</a></div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8h_source.html#l00029">viewmanager.h:29</a></div></div>
 <div class="ttc" id="class_sound_manager_html"><div class="ttname"><a href="class_sound_manager.html">SoundManager</a></div><div class="ttdef"><b>Definition:</b> <a href="soundmanager_8h_source.html#l00029">soundmanager.h:29</a></div></div>
 <div class="ttc" id="class_layer_manager_html"><div class="ttname"><a href="class_layer_manager.html">LayerManager</a></div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8h_source.html#l00030">layermanager.h:30</a></div></div>
@@ -314,7 +316,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 7 2017 03:45:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 8 2017 03:40:00 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

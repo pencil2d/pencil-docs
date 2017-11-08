@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">7e7aff796a3289778551a2e8fbc9e5136c3872c0</span>
+   &#160;<span id="projectnumber">5bafbb1791808cfc03b4a8e10c90934ebeb0ae77</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -1749,12 +1749,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;        <span class="keywordflow">if</span> ( layer == NULL ) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;        </div>
-<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;        mClosestCurves.clear();</div>
-<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR ) { ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;deleteSelection(); }</div>
-<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP ) { ( ( <a class="code" href="class_layer_bitmap.html">LayerBitmap</a> * )layer )-&gt;getLastBitmapImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear( mySelection ); }</div>
-<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;        updateAllFrames();</div>
-<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;</div>
-<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Delete Selection&quot;</span>));</div>
+<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Delete Selection&quot;</span>));</div>
+<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;</div>
+<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;        mClosestCurves.clear();</div>
+<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR ) { ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;deleteSelection(); }</div>
+<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;        <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP ) { ( ( <a class="code" href="class_layer_bitmap.html">LayerBitmap</a> * )layer )-&gt;getLastBitmapImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear( mySelection ); }</div>
+<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;        updateAllFrames();</div>
 <div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;    }</div>
 <div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;}</div>
 <div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160;</div>
@@ -1762,51 +1762,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;{</div>
 <div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;    <span class="keywordflow">if</span> ( layer == NULL ) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;    <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR )</div>
-<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;    {</div>
-<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;        ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear();</div>
-<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160;        mClosestCurves.clear();</div>
-<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;        mClosestVertices.clear();</div>
-<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;    }</div>
-<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP )</div>
-<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;    {</div>
-<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;        ((<a class="code" href="class_layer_bitmap.html">LayerBitmap</a> *)layer)-&gt;getLastBitmapImageAtFrame(mEditor-&gt;currentFrame(), 0)-&gt;clear();</div>
-<div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160;    }</div>
-<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;    {</div>
-<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;        <span class="keywordflow">return</span>; <span class="comment">// skip updates when nothing changes</span></div>
-<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;    }</div>
-<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;    mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
-<div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;    setModified( mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame() );</div>
-<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;}</div>
-<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;</div>
-<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;<span class="keywordtype">void</span> ScribbleArea::setPrevTool()</div>
-<div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;{</div>
-<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;    editor()-&gt;tools()-&gt;setCurrentTool( mPrevTemporalToolType );</div>
-<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;    instantTool = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;}</div>
-<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;</div>
-<div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160;<span class="keywordtype">void</span> ScribbleArea::paletteColorChanged(QColor color)</div>
-<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;{</div>
-<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160;    Q_UNUSED(color);</div>
-<div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;    updateAllVectorLayersAtCurrentFrame();</div>
-<div class="line"><a name="l01716"></a><span class="lineno"> 1716</span>&#160;}</div>
-<div class="line"><a name="l01717"></a><span class="lineno"> 1717</span>&#160;</div>
-<div class="line"><a name="l01718"></a><span class="lineno"> 1718</span>&#160;</div>
-<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;<span class="keywordtype">void</span> ScribbleArea::floodFillError( <span class="keywordtype">int</span> errorType )</div>
-<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;{</div>
-<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;    QString message, error;</div>
-<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;    <span class="keywordflow">if</span> ( errorType == 1 ) { message = tr( <span class="stringliteral">&quot;There is a gap in your drawing (or maybe you have zoomed too much).&quot;</span> ); }</div>
-<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;    <span class="keywordflow">if</span> ( errorType == 2 || errorType == 3 ) message = tr( <span class="stringliteral">&quot;Sorry! This doesn&#39;t always work.&quot;</span></div>
-<div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;            <span class="stringliteral">&quot;Please try again (zoom a bit, click at another location... )&lt;br&gt;&quot;</span></div>
-<div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;            <span class="stringliteral">&quot;if it doesn&#39;t work, zoom a bit and check that your paths are connected by pressing F1.).&quot;</span> );</div>
-<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;</div>
-<div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160;    <span class="keywordflow">if</span> ( errorType == 1 ) { error = tr( <span class="stringliteral">&quot;Out of bound.&quot;</span> ); }</div>
-<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;    <span class="keywordflow">if</span> ( errorType == 2 ) { error = tr( <span class="stringliteral">&quot;Could not find a closed path.&quot;</span> ); }</div>
-<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;    <span class="keywordflow">if</span> ( errorType == 3 ) { error = tr( <span class="stringliteral">&quot;Could not find the root index.&quot;</span> ); }</div>
-<div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;    QMessageBox::warning( <span class="keyword">this</span>, tr( <span class="stringliteral">&quot;Flood fill error&quot;</span> ), tr(<span class="stringliteral">&quot;%1&lt;br&gt;&lt;br&gt;Error: %2&quot;</span>).arg(message).arg(error), QMessageBox::Ok, QMessageBox::Ok );</div>
-<div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;    deselectAll();</div>
-<div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;}</div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;</div>
+<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;    <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::VECTOR )</div>
+<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;    {</div>
+<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
+<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;</div>
+<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;        ( ( <a class="code" href="class_layer_vector.html">LayerVector</a> * )layer )-&gt;getLastVectorImageAtFrame( mEditor-&gt;currentFrame(), 0 )-&gt;clear();</div>
+<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;        mClosestCurves.clear();</div>
+<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;        mClosestVertices.clear();</div>
+<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;    }</div>
+<div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( layer-&gt;type() == Layer::BITMAP )</div>
+<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;    {</div>
+<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
+<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;</div>
+<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;        ((<a class="code" href="class_layer_bitmap.html">LayerBitmap</a> *)layer)-&gt;getLastBitmapImageAtFrame(mEditor-&gt;currentFrame(), 0)-&gt;clear();</div>
+<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;    }</div>
+<div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;    {</div>
+<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;        <span class="keywordflow">return</span>; <span class="comment">// skip updates when nothing changes</span></div>
+<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;    }</div>
+<div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;    setModified( mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame() );</div>
+<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;}</div>
+<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;</div>
+<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;<span class="keywordtype">void</span> ScribbleArea::setPrevTool()</div>
+<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;{</div>
+<div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160;    editor()-&gt;tools()-&gt;setCurrentTool( mPrevTemporalToolType );</div>
+<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;    instantTool = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160;}</div>
+<div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;</div>
+<div class="line"><a name="l01716"></a><span class="lineno"> 1716</span>&#160;<span class="keywordtype">void</span> ScribbleArea::paletteColorChanged(QColor color)</div>
+<div class="line"><a name="l01717"></a><span class="lineno"> 1717</span>&#160;{</div>
+<div class="line"><a name="l01718"></a><span class="lineno"> 1718</span>&#160;    Q_UNUSED(color);</div>
+<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;    updateAllVectorLayersAtCurrentFrame();</div>
+<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;}</div>
+<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;</div>
+<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;</div>
+<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;<span class="keywordtype">void</span> ScribbleArea::floodFillError( <span class="keywordtype">int</span> errorType )</div>
+<div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;{</div>
+<div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;    QString message, error;</div>
+<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;    <span class="keywordflow">if</span> ( errorType == 1 ) { message = tr( <span class="stringliteral">&quot;There is a gap in your drawing (or maybe you have zoomed too much).&quot;</span> ); }</div>
+<div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160;    <span class="keywordflow">if</span> ( errorType == 2 || errorType == 3 ) message = tr( <span class="stringliteral">&quot;Sorry! This doesn&#39;t always work.&quot;</span></div>
+<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;            <span class="stringliteral">&quot;Please try again (zoom a bit, click at another location... )&lt;br&gt;&quot;</span></div>
+<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;            <span class="stringliteral">&quot;if it doesn&#39;t work, zoom a bit and check that your paths are connected by pressing F1.).&quot;</span> );</div>
+<div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;</div>
+<div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;    <span class="keywordflow">if</span> ( errorType == 1 ) { error = tr( <span class="stringliteral">&quot;Out of bound.&quot;</span> ); }</div>
+<div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;    <span class="keywordflow">if</span> ( errorType == 2 ) { error = tr( <span class="stringliteral">&quot;Could not find a closed path.&quot;</span> ); }</div>
+<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;    <span class="keywordflow">if</span> ( errorType == 3 ) { error = tr( <span class="stringliteral">&quot;Could not find the root index.&quot;</span> ); }</div>
+<div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160;    QMessageBox::warning( <span class="keyword">this</span>, tr( <span class="stringliteral">&quot;Flood fill error&quot;</span> ), tr(<span class="stringliteral">&quot;%1&lt;br&gt;&lt;br&gt;Error: %2&quot;</span>).arg(message).arg(error), QMessageBox::Ok, QMessageBox::Ok );</div>
+<div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;    deselectAll();</div>
+<div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;}</div>
 <div class="ttc" id="class_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00057">basetool.h:57</a></div></div>
 <div class="ttc" id="class_vector_image_html_abe83d747ae21921b9b0fe844679788dd"><div class="ttname"><a href="class_vector_image.html#abe83d747ae21921b9b0fe844679788dd">VectorImage::getFirstSelectedCurve</a></div><div class="ttdeci">int getFirstSelectedCurve()</div><div class="ttdoc">VectorImage::getFirstSelectedCurve. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00754">vectorimage.cpp:754</a></div></div>
 <div class="ttc" id="class_vector_image_html_af58e44290b046f828acac513006d9978"><div class="ttname"><a href="class_vector_image.html#af58e44290b046f828acac513006d9978">VectorImage::getCurveSize</a></div><div class="ttdeci">int getCurveSize(int curveNumber)</div><div class="ttdoc">VectorImage::getCurveSize. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01646">vectorimage.cpp:1646</a></div></div>
@@ -1835,7 +1839,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 7 2017 03:45:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 8 2017 03:40:01 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
