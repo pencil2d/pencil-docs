@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">5bafbb1791808cfc03b4a8e10c90934ebeb0ae77</span>
+   &#160;<span id="projectnumber">75a257e2e3747087fc0048277d396ecd95bb6950</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -104,23 +104,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">GNU General Public License for more details.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QMouseEvent&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;layer.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;layervector.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;layerbitmap.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;layermanager.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;colormanager.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;strokemanager.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;pencilsettings.h&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;editor.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;scribblearea.h&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;buckettool.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;buckettool.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QPixmap&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QMouseEvent&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;layer.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;layervector.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;layerbitmap.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;layermanager.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;colormanager.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;strokemanager.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;pencilsettings.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;editor.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;scribblearea.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;BucketTool::BucketTool( QObject *parent ) :</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="class_stroke_tool.html">StrokeTool</a>( parent )</div>
@@ -308,20 +308,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_bucket_tool_html_a73dd15022326729eb46ccec330e57406"><div class="ttname"><a href="class_bucket_tool.html#a73dd15022326729eb46ccec330e57406">BucketTool::setWidth</a></div><div class="ttdeci">void setWidth(const qreal width) override</div><div class="ttdoc">BrushTool::setWidth. </div><div class="ttdef"><b>Definition:</b> <a href="buckettool_8cpp_source.html#l00076">buckettool.cpp:76</a></div></div>
 <div class="ttc" id="class_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00024">layerbitmap.h:24</a></div></div>
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
-<div class="ttc" id="class_vector_image_html_a5feff6a8dc9178be02b149575a222471"><div class="ttname"><a href="class_vector_image.html#a5feff6a8dc9178be02b149575a222471">VectorImage::isPathFilled</a></div><div class="ttdeci">bool isPathFilled()</div><div class="ttdoc">VectorImage::isPathFilled. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00669">vectorimage.cpp:669</a></div></div>
-<div class="ttc" id="class_vector_image_html_a99be9ff401262c69b7f872b8a1e0e8f6"><div class="ttname"><a href="class_vector_image.html#a99be9ff401262c69b7f872b8a1e0e8f6">VectorImage::applyColourToSelectedCurve</a></div><div class="ttdeci">void applyColourToSelectedCurve(int colourNumber)</div><div class="ttdoc">VectorImage::applyColourToSelectedCurve. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01249">vectorimage.cpp:1249</a></div></div>
+<div class="ttc" id="class_vector_image_html_a5feff6a8dc9178be02b149575a222471"><div class="ttname"><a href="class_vector_image.html#a5feff6a8dc9178be02b149575a222471">VectorImage::isPathFilled</a></div><div class="ttdeci">bool isPathFilled()</div><div class="ttdoc">VectorImage::isPathFilled. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00670">vectorimage.cpp:670</a></div></div>
+<div class="ttc" id="class_vector_image_html_a99be9ff401262c69b7f872b8a1e0e8f6"><div class="ttname"><a href="class_vector_image.html#a99be9ff401262c69b7f872b8a1e0e8f6">VectorImage::applyColourToSelectedCurve</a></div><div class="ttdeci">void applyColourToSelectedCurve(int colourNumber)</div><div class="ttdoc">VectorImage::applyColourToSelectedCurve. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01250">vectorimage.cpp:1250</a></div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00035">vectorimage.h:35</a></div></div>
-<div class="ttc" id="class_vector_image_html_a2b301c5aa0ccff84953ba137828fabba"><div class="ttname"><a href="class_vector_image.html#a2b301c5aa0ccff84953ba137828fabba">VectorImage::applyColourToSelectedArea</a></div><div class="ttdeci">void applyColourToSelectedArea(int colourNumber)</div><div class="ttdoc">VectorImage::applyColourToSelectedArea. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01262">vectorimage.cpp:1262</a></div></div>
+<div class="ttc" id="class_vector_image_html_a2b301c5aa0ccff84953ba137828fabba"><div class="ttname"><a href="class_vector_image.html#a2b301c5aa0ccff84953ba137828fabba">VectorImage::applyColourToSelectedArea</a></div><div class="ttdeci">void applyColourToSelectedArea(int colourNumber)</div><div class="ttdoc">VectorImage::applyColourToSelectedArea. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01263">vectorimage.cpp:1263</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
-<div class="ttc" id="class_vector_image_html_aa6d32b8d1549462c0d15e1bc2e16705a"><div class="ttname"><a href="class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a">VectorImage::applyWidthToSelection</a></div><div class="ttdeci">void applyWidthToSelection(qreal width)</div><div class="ttdoc">VectorImage::applyWidthToSelection. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01275">vectorimage.cpp:1275</a></div></div>
+<div class="ttc" id="class_vector_image_html_aa6d32b8d1549462c0d15e1bc2e16705a"><div class="ttname"><a href="class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a">VectorImage::applyWidthToSelection</a></div><div class="ttdeci">void applyWidthToSelection(qreal width)</div><div class="ttdoc">VectorImage::applyWidthToSelection. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01276">vectorimage.cpp:1276</a></div></div>
 <div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; QPointF &gt;</a></div></div>
-<div class="ttc" id="class_vector_image_html_a53592841a3bf44b991847467860131c8"><div class="ttname"><a href="class_vector_image.html#a53592841a3bf44b991847467860131c8">VectorImage::fillSelectedPath</a></div><div class="ttdeci">void fillSelectedPath(int colour)</div><div class="ttdoc">VectorImage::fillSelectedPath. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01732">vectorimage.cpp:1732</a></div></div>
+<div class="ttc" id="class_vector_image_html_a53592841a3bf44b991847467860131c8"><div class="ttname"><a href="class_vector_image.html#a53592841a3bf44b991847467860131c8">VectorImage::fillSelectedPath</a></div><div class="ttdeci">void fillSelectedPath(int colour)</div><div class="ttdoc">VectorImage::fillSelectedPath. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01733">vectorimage.cpp:1733</a></div></div>
 <div class="ttc" id="class_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00029">stroketool.h:29</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00026">bitmapimage.h:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 8 2017 03:40:01 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 9 2017 22:43:47 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
