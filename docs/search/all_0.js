@@ -12,5 +12,9 @@ var searchData=
   ['applyopacitytoselection',['applyOpacityToSelection',['../class_vector_image.html#abe310dd51c170b5bfccb827fd235d895',1,'VectorImage']]],
   ['applyselectiontransformation',['applySelectionTransformation',['../class_vector_image.html#ad7eb4ae4ebae009d56666e0bf07ffa24',1,'VectorImage::applySelectionTransformation()'],['../class_vector_image.html#a2e7685083e380198b89fe1263c1d6e44',1,'VectorImage::applySelectionTransformation(QTransform transform)']]],
   ['applyvariablewidthtoselection',['applyVariableWidthToSelection',['../class_vector_image.html#a48187f21556633e9de362030fd37ad4c',1,'VectorImage']]],
-  ['applywidthtoselection',['applyWidthToSelection',['../class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a',1,'VectorImage']]]
+  ['applywidthtoselection',['applyWidthToSelection',['../class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a',1,'VectorImage']]],
+  ['approx',['Approx',['../class_catch_1_1_detail_1_1_approx.html',1,'Catch::Detail']]],
+  ['assertionhandler',['AssertionHandler',['../class_catch_1_1_assertion_handler.html',1,'Catch']]],
+  ['assertioninfo',['AssertionInfo',['../struct_catch_1_1_assertion_info.html',1,'Catch']]],
+  ['autoreg',['AutoReg',['../struct_catch_1_1_auto_reg.html',1,'Catch']]]
 ];

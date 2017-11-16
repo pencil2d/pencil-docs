@@ -6,6 +6,8 @@ var searchData=
   ['camerapropertiesdialog',['CameraPropertiesDialog',['../class_camera_properties_dialog.html',1,'']]],
   ['canvascursor',['canvasCursor',['../class_base_tool.html#a0b02a98370c114734e1a46089a7b0c4d',1,'BaseTool']]],
   ['canvasrenderer',['CanvasRenderer',['../class_canvas_renderer.html',1,'']]],
+  ['casedstring',['CasedString',['../struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string.html',1,'Catch::Matchers::StdString']]],
+  ['casesensitive',['CaseSensitive',['../struct_catch_1_1_case_sensitive.html',1,'Catch']]],
   ['checkcurveextremity',['checkCurveExtremity',['../class_vector_image.html#a8e3cc565dbb31e5813acbea381021d16',1,'VectorImage']]],
   ['checkcurveintersections',['checkCurveIntersections',['../class_vector_image.html#abfa56d1f3b11064fad023524af520c93',1,'VectorImage']]],
   ['clean',['clean',['../class_vector_image.html#ad413c36b260a8e78aa8567666d696f0e',1,'VectorImage']]],
@@ -18,6 +20,10 @@ var searchData=
   ['colorpalettewidget',['ColorPaletteWidget',['../class_color_palette_widget.html',1,'']]],
   ['colorwheel',['ColorWheel',['../class_color_wheel.html',1,'']]],
   ['colourref',['ColourRef',['../class_colour_ref.html',1,'']]],
+  ['containselementmatcher',['ContainsElementMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_contains_element_matcher.html',1,'Catch::Matchers::Vector']]],
+  ['containsmatcher',['ContainsMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_contains_matcher.html',1,'Catch::Matchers::StdString']]],
+  ['containsmatcher',['ContainsMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_contains_matcher.html',1,'Catch::Matchers::Vector']]],
+  ['counts',['Counts',['../struct_catch_1_1_counts.html',1,'Catch']]],
   ['createdomelement',['createDomElement',['../class_vector_image.html#a29f0320902701c12a58bd6b5104b3bd6',1,'VectorImage']]],
   ['createmenus',['createMenus',['../class_main_window2.html#a515da25eb2a59ea6fa5e5254938a54a3',1,'MainWindow2']]]
 ];
