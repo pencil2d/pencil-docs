@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">52e3e69928c90ff03e70adbf46f5aee41bdd326f</span>
+   &#160;<span id="projectnumber">5269b44b59c7360cb2e842478f1b7e658ebf3cbf</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -88,41 +88,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">test_bitmapimage.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//#include &quot;test_bitmapimage.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;bitmapimage.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;catch.hpp&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;bitmapimage.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;catch.hpp&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;TEST_CASE(<span class="stringliteral">&quot;BitmapImage&quot;</span>)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    SECTION(<span class="stringliteral">&quot;Init an Bitmap Image&quot;</span>)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::shared_ptr&lt;BitmapImage&gt; b = std::make_shared&lt;BitmapImage&gt;();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        REQUIRE(b-&gt;image()-&gt;isNull());</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        REQUIRE(b-&gt;width() == 0);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        REQUIRE(b-&gt;height() == 0);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        REQUIRE(b-&gt;top() == 0);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        REQUIRE(b-&gt;left() == 0);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    SECTION(<span class="stringliteral">&quot;Init with color and boundary&quot;</span>)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::shared_ptr&lt;BitmapImage&gt; b = std::make_shared&lt;BitmapImage&gt;(QRect(10, 20, 30, 40), Qt::red);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        REQUIRE(b-&gt;left() == 10);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        REQUIRE(b-&gt;top() == 20);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        REQUIRE(b-&gt;width() == 30);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        REQUIRE(b-&gt;height() == 40);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        QRgb rgb = b-&gt;image()-&gt;pixel(0, 0);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        REQUIRE(rgb == qRgb(255, 0, 0));</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;TEST_CASE(<span class="stringliteral">&quot;BitmapImage&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    SECTION(<span class="stringliteral">&quot;Init an Bitmap Image&quot;</span>)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::shared_ptr&lt;BitmapImage&gt; b = std::make_shared&lt;BitmapImage&gt;();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        REQUIRE(b-&gt;image()-&gt;isNull());</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        REQUIRE(b-&gt;width() == 0);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        REQUIRE(b-&gt;height() == 0);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        REQUIRE(b-&gt;top() == 0);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        REQUIRE(b-&gt;left() == 0);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    SECTION(<span class="stringliteral">&quot;Init with color and boundary&quot;</span>)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::shared_ptr&lt;BitmapImage&gt; b = std::make_shared&lt;BitmapImage&gt;(QRect(10, 20, 30, 40), Qt::red);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        REQUIRE(b-&gt;left() == 10);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        REQUIRE(b-&gt;top() == 20);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        REQUIRE(b-&gt;width() == 30);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        REQUIRE(b-&gt;height() == 40);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        QRgb rgb = b-&gt;image()-&gt;pixel(0, 0);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        REQUIRE(rgb == qRgb(255, 0, 0));</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 16 2017 03:37:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 19 2017 04:20:33 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

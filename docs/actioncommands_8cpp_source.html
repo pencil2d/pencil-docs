@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">52e3e69928c90ff03e70adbf46f5aee41bdd326f</span>
+   &#160;<span id="projectnumber">5269b44b59c7360cb2e842478f1b7e658ebf3cbf</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -557,8 +557,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;{</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        tr(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                                         tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                                         tr(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>), &amp;ok);</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    {</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        mEditor-&gt;layers()-&gt;createBitmapLayer(text);</div>
@@ -570,8 +570,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;{</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        tr(<span class="stringliteral">&quot;Vector Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                                         tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                                         tr(<span class="stringliteral">&quot;Vector Layer&quot;</span>), &amp;ok);</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    {</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        mEditor-&gt;layers()-&gt;createVectorLayer(text);</div>
@@ -584,49 +584,71 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;{</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordtype">bool</span> ok;</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    QString text = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        tr(<span class="stringliteral">&quot;Camera Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                                         tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                                         tr(<span class="stringliteral">&quot;Camera Layer&quot;</span>), &amp;ok);</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !text.isEmpty())</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    {</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        mEditor-&gt;layers()-&gt;createCameraLayer(text);</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    }</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;}</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewSoundLayer()</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;{</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    QString strLayerName = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        tr(<span class="stringliteral">&quot;Sound Layer&quot;</span>), &amp;ok);</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !strLayerName.isEmpty())</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    {</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;createSoundLayer(strLayerName);</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        mEditor-&gt;layers()-&gt;setCurrentLayer(layer);</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    }</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">return</span> Status::FAIL;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;}</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;}</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::addNewSoundLayer()</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;{</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    QString strLayerName = QInputDialog::getText(<span class="keyword">nullptr</span>, tr(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                                                 tr(<span class="stringliteral">&quot;Layer name:&quot;</span>), QLineEdit::Normal,</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                                                 tr(<span class="stringliteral">&quot;Sound Layer&quot;</span>), &amp;ok);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordflow">if</span> (ok &amp;&amp; !strLayerName.isEmpty())</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    {</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;createSoundLayer(strLayerName);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        mEditor-&gt;layers()-&gt;setCurrentLayer(layer);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="keywordflow">return</span> Status::FAIL;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;}</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;<a class="code" href="class_status.html">Status</a> ActionCommands::deleteCurrentLayer()</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;{</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <a class="code" href="class_layer_manager.html">LayerManager</a>* layerMgr = mEditor-&gt;layers();</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    QString strLayerName = layerMgr-&gt;currentLayer()-&gt;name();</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordtype">int</span> ret = QMessageBox::warning(mParent,</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                                   tr(<span class="stringliteral">&quot;Delete Layer&quot;</span>, <span class="stringliteral">&quot;Windows title of Delete current layer pop-up.&quot;</span>),</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                                   tr(<span class="stringliteral">&quot;Are you sure you want to delete layer: &quot;</span>) + strLayerName + <span class="stringliteral">&quot; ?&quot;</span>,</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                                   QMessageBox::Ok | QMessageBox::Cancel,</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                                   QMessageBox::Ok);</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">if</span> (ret == QMessageBox::Ok)</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    {</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <a class="code" href="class_status.html">Status</a> st = layerMgr-&gt;deleteLayer(mEditor-&gt;currentLayerIndex());</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        <span class="keywordflow">if</span> (st == Status::ERROR_NEED_AT_LEAST_ONE_CAMERA_LAYER)</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;            QMessageBox::information(mParent, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                                     tr(<span class="stringliteral">&quot;Please keep at least one camera layer in project&quot;</span>, <span class="stringliteral">&quot;text when failed to delete camera layer&quot;</span>));</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        }</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    }</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;}</div>
 <div class="ttc" id="class_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00027">soundclip.h:27</a></div></div>
 <div class="ttc" id="class_file_dialog_html"><div class="ttname"><a href="class_file_dialog.html">FileDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="filedialogex_8h_source.html#l00033">filedialogex.h:33</a></div></div>
 <div class="ttc" id="class_export_image_dialog_html"><div class="ttname"><a href="class_export_image_dialog.html">ExportImageDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="exportimagedialog_8h_source.html#l00027">exportimagedialog.h:27</a></div></div>
 <div class="ttc" id="class_movie_exporter_html"><div class="ttname"><a href="class_movie_exporter.html">MovieExporter</a></div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8h_source.html#l00039">movieexporter.h:39</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
+<div class="ttc" id="class_layer_manager_html"><div class="ttname"><a href="class_layer_manager.html">LayerManager</a></div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8h_source.html#l00030">layermanager.h:30</a></div></div>
 <div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00024">camera.h:24</a></div></div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_playback_manager_html"><div class="ttname"><a href="class_playback_manager.html">PlaybackManager</a></div><div class="ttdef"><b>Definition:</b> <a href="playbackmanager_8h_source.html#l00026">playbackmanager.h:26</a></div></div>
 <div class="ttc" id="struct_export_movie_desc_html"><div class="ttname"><a href="struct_export_movie_desc.html">ExportMovieDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8h_source.html#l00028">movieexporter.h:28</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
-<div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">LayerManager::projectLength. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00276">layermanager.cpp:276</a></div></div>
+<div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">LayerManager::projectLength. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00281">layermanager.cpp:281</a></div></div>
 <div class="ttc" id="class_export_movie_dialog_html"><div class="ttname"><a href="class_export_movie_dialog.html">ExportMovieDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="exportmoviedialog_8h_source.html#l00028">exportmoviedialog.h:28</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 16 2017 03:37:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 19 2017 04:20:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
