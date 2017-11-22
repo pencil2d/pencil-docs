@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">4e3453407e5542ed59c78a41656374b140fbb427</span>
+   &#160;<span id="projectnumber">d7ead9e8ee9c9be007fca3d46ec5d192c3fe4d21</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -1082,100 +1082,97 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;    <a class="code" href="class_playback_manager.html">PlaybackManager</a>* pPlaybackManager = pEditor-&gt;playback();</div>
 <div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;    connect(pTimeline, &amp;TimeLine::duplicateKeyClick, pEditor, &amp;Editor::duplicateKey);</div>
 <div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;</div>
-<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    connect(pTimeline, &amp;TimeLine::loopStartClick, pPlaybackManager, &amp;PlaybackManager::setRangedStartFrame);</div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;    connect(pTimeline, &amp;TimeLine::loopEndClick, pPlaybackManager, &amp;PlaybackManager::setRangedEndFrame);</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    connect(pTimeline, &amp;TimeLine::soundClick, pPlaybackManager, &amp;PlaybackManager::enableSound);</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;    connect(pTimeline, &amp;TimeLine::fpsClick, pPlaybackManager, &amp;PlaybackManager::setFps);</div>
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;</div>
-<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;    connect(pTimeline, &amp;TimeLine::soundClick, pPlaybackManager, &amp;PlaybackManager::enableSound);</div>
-<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    connect(pTimeline, &amp;TimeLine::fpsClick, pPlaybackManager, &amp;PlaybackManager::setFps);</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;    connect(pTimeline, &amp;TimeLine::addKeyClick, mCommands, &amp;ActionCommands::addNewKey);</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    connect(pTimeline, &amp;TimeLine::removeKeyClick, mCommands, &amp;ActionCommands::removeKey);</div>
 <div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;</div>
-<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;    connect(pTimeline, &amp;TimeLine::addKeyClick, mCommands, &amp;ActionCommands::addNewKey);</div>
-<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    connect(pTimeline, &amp;TimeLine::removeKeyClick, mCommands, &amp;ActionCommands::removeKey);</div>
-<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;</div>
-<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    connect(pTimeline, &amp;TimeLine::newBitmapLayer, mCommands, &amp;ActionCommands::addNewBitmapLayer);</div>
-<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    connect(pTimeline, &amp;TimeLine::newVectorLayer, mCommands, &amp;ActionCommands::addNewVectorLayer);</div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    connect(pTimeline, &amp;TimeLine::newSoundLayer, mCommands, &amp;ActionCommands::addNewSoundLayer);</div>
-<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;    connect(pTimeline, &amp;TimeLine::newCameraLayer, mCommands, &amp;ActionCommands::addNewCameraLayer);</div>
-<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;</div>
-<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    connect(pTimeline, &amp;TimeLine::toogleAbsoluteOnionClick, pEditor, &amp;Editor::toogleOnionSkinType);</div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;</div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;    connect(pEditor-&gt;layers(), &amp;LayerManager::currentLayerChanged, pTimeline, &amp;TimeLine::updateUI);</div>
-<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;    connect(pEditor-&gt;layers(), &amp;LayerManager::layerCountChanged, pTimeline, &amp;TimeLine::updateUI);</div>
-<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    connect(pEditor-&gt;sound(), &amp;SoundManager::soundClipDurationChanged, pTimeline, &amp;TimeLine::updateUI);</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;    connect(pTimeline, &amp;TimeLine::newBitmapLayer, mCommands, &amp;ActionCommands::addNewBitmapLayer);</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;    connect(pTimeline, &amp;TimeLine::newVectorLayer, mCommands, &amp;ActionCommands::addNewVectorLayer);</div>
+<div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;    connect(pTimeline, &amp;TimeLine::newSoundLayer, mCommands, &amp;ActionCommands::addNewSoundLayer);</div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;    connect(pTimeline, &amp;TimeLine::newCameraLayer, mCommands, &amp;ActionCommands::addNewCameraLayer);</div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    connect(pTimeline, &amp;TimeLine::toogleAbsoluteOnionClick, pEditor, &amp;Editor::toogleOnionSkinType);</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    connect(pEditor-&gt;layers(), &amp;LayerManager::currentLayerChanged, pTimeline, &amp;TimeLine::updateUI);</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    connect(pEditor-&gt;layers(), &amp;LayerManager::layerCountChanged, pTimeline, &amp;TimeLine::updateUI);</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;    connect(pEditor-&gt;sound(), &amp;SoundManager::soundClipDurationChanged, pTimeline, &amp;TimeLine::updateUI);</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;    connect(pEditor, &amp;Editor::objectLoaded, pTimeline, &amp;TimeLine::onObjectLoaded);</div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    connect(pEditor, &amp;Editor::updateTimeLine, pTimeline, &amp;TimeLine::updateUI);</div>
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;</div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;    connect(pEditor, &amp;Editor::objectLoaded, pTimeline, &amp;TimeLine::onObjectLoaded);</div>
-<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;    connect(pEditor, &amp;Editor::updateTimeLine, pTimeline, &amp;TimeLine::updateUI);</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;    connect(pEditor-&gt;layers(), &amp;LayerManager::currentLayerChanged, mToolOptions, &amp;ToolOptionWidget::updateUI);</div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;}</div>
 <div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;</div>
-<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    connect(pEditor-&gt;layers(), &amp;LayerManager::currentLayerChanged, mToolOptions, &amp;ToolOptionWidget::updateUI);</div>
-<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;}</div>
-<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;</div>
-<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* editor, <a class="code" href="class_display_option_widget.html">DisplayOptionWidget</a>* display)</div>
-<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;{</div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;    display-&gt;makeConnectionToEditor(editor);</div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;}</div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;</div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* editor, <a class="code" href="class_tool_option_widget.html">ToolOptionWidget</a>* toolOptions)</div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;{</div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;    toolOptions-&gt;makeConnectionToEditor(editor);</div>
-<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;}</div>
-<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;</div>
-<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* pEditor, <a class="code" href="class_color_palette_widget.html">ColorPaletteWidget</a>* pColorPalette)</div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;{</div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    connect(pEditor, &amp;Editor::objectLoaded, pColorPalette, &amp;ColorPaletteWidget::updateUI);</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* editor, <a class="code" href="class_display_option_widget.html">DisplayOptionWidget</a>* display)</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;{</div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160;    display-&gt;makeConnectionToEditor(editor);</div>
+<div class="line"><a name="l01029"></a><span class="lineno"> 1029</span>&#160;}</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;</div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* editor, <a class="code" href="class_tool_option_widget.html">ToolOptionWidget</a>* toolOptions)</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;{</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;    toolOptions-&gt;makeConnectionToEditor(editor);</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;}</div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* pEditor, <a class="code" href="class_color_palette_widget.html">ColorPaletteWidget</a>* pColorPalette)</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;{</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;    connect(pEditor, &amp;Editor::objectLoaded, pColorPalette, &amp;ColorPaletteWidget::updateUI);</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;</div>
+<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;    <a class="code" href="class_color_manager.html">ColorManager</a>* pColorManager = pEditor-&gt;color();</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;    <a class="code" href="class_scribble_area.html">ScribbleArea</a>* pScribbleArea = pEditor-&gt;getScribbleArea();</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;</div>
-<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    <a class="code" href="class_color_manager.html">ColorManager</a>* pColorManager = pEditor-&gt;color();</div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    <a class="code" href="class_scribble_area.html">ScribbleArea</a>* pScribbleArea = pEditor-&gt;getScribbleArea();</div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    connect(pColorPalette, &amp;ColorPaletteWidget::colorChanged, pColorManager, &amp;ColorManager::setColor);</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;    connect(pColorPalette, &amp;ColorPaletteWidget::colorNumberChanged, pColorManager, &amp;ColorManager::setColorNumber);</div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;</div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    connect(pColorPalette, &amp;ColorPaletteWidget::colorChanged, pColorManager, &amp;ColorManager::setColor);</div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;    connect(pColorPalette, &amp;ColorPaletteWidget::colorNumberChanged, pColorManager, &amp;ColorManager::setColorNumber);</div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;</div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    connect(pColorPalette, &amp;ColorPaletteWidget::colorChanged, pScribbleArea, &amp;ScribbleArea::paletteColorChanged);</div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;</div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;    connect(pColorManager, &amp;ColorManager::colorChanged, pColorPalette, &amp;ColorPaletteWidget::setColor);</div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;    connect(pColorManager, &amp;ColorManager::colorNumberChanged, pColorPalette, &amp;ColorPaletteWidget::selectColorNumber);</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;}</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;<span class="keywordtype">void</span> MainWindow2::bindActionWithSetting(QAction* action, SETTING setting)</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;{</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;    <a class="code" href="class_preference_manager.html">PreferenceManager</a>* prefs = mEditor-&gt;preference();</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    connect(pColorPalette, &amp;ColorPaletteWidget::colorChanged, pScribbleArea, &amp;ScribbleArea::paletteColorChanged);</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;    connect(pColorManager, &amp;ColorManager::colorChanged, pColorPalette, &amp;ColorPaletteWidget::setColor);</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    connect(pColorManager, &amp;ColorManager::colorNumberChanged, pColorPalette, &amp;ColorPaletteWidget::selectColorNumber);</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;}</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;</div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;<span class="keywordtype">void</span> MainWindow2::bindActionWithSetting(QAction* action, SETTING setting)</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;{</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;    <a class="code" href="class_preference_manager.html">PreferenceManager</a>* prefs = mEditor-&gt;preference();</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;    <span class="comment">// set initial state</span></div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;    action-&gt;setChecked(prefs-&gt;isOn(setting));</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;</div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    <span class="comment">// set initial state</span></div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    action-&gt;setChecked(prefs-&gt;isOn(setting));</div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;</div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;    <span class="comment">// 2-way binding</span></div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    connect(action, &amp;QAction::triggered, prefs, [=](<span class="keywordtype">bool</span> b)</div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    {</div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;        prefs-&gt;set(setting, b);</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;    });</div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;</div>
-<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;    connect(prefs, &amp;PreferenceManager::optionChanged, action, [=](SETTING s)</div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;    {</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;        <span class="keywordflow">if</span> (s == setting)</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;        {</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;            action-&gt;setChecked(prefs-&gt;isOn(setting));</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;        }</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    });</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;}</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;<span class="keywordtype">void</span> MainWindow2::updateZoomLabel()</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;{</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    <span class="keywordtype">float</span> zoom = mEditor-&gt;view()-&gt;scaling() * 100.f;</div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    statusBar()-&gt;showMessage(QString(<span class="stringliteral">&quot;Zoom: %0%1&quot;</span>).arg(zoom, 0, <span class="charliteral">&#39;f&#39;</span>, 1).arg(<span class="stringliteral">&quot;%&quot;</span>));</div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;}</div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;</div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;<span class="keywordtype">void</span> MainWindow2::changePlayState(<span class="keywordtype">bool</span> isPlaying)</div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;{</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    <span class="keywordflow">if</span> (isPlaying)</div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    {</div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;        ui-&gt;actionPlay-&gt;setText(tr(<span class="stringliteral">&quot;Stop&quot;</span>));</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;        ui-&gt;actionPlay-&gt;setIcon(mStopIcon);</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    }</div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;    {</div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;        ui-&gt;actionPlay-&gt;setText(tr(<span class="stringliteral">&quot;Play&quot;</span>));</div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;        ui-&gt;actionPlay-&gt;setIcon(mStartIcon);</div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    }</div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    update();</div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;}</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;    <span class="comment">// 2-way binding</span></div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    connect(action, &amp;QAction::triggered, prefs, [=](<span class="keywordtype">bool</span> b)</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    {</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;        prefs-&gt;set(setting, b);</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    });</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;</div>
+<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;    connect(prefs, &amp;PreferenceManager::optionChanged, action, [=](SETTING s)</div>
+<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;    {</div>
+<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;        <span class="keywordflow">if</span> (s == setting)</div>
+<div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;        {</div>
+<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;            action-&gt;setChecked(prefs-&gt;isOn(setting));</div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;        }</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;    });</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;}</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;<span class="keywordtype">void</span> MainWindow2::updateZoomLabel()</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;{</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    <span class="keywordtype">float</span> zoom = mEditor-&gt;view()-&gt;scaling() * 100.f;</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    statusBar()-&gt;showMessage(QString(<span class="stringliteral">&quot;Zoom: %0%1&quot;</span>).arg(zoom, 0, <span class="charliteral">&#39;f&#39;</span>, 1).arg(<span class="stringliteral">&quot;%&quot;</span>));</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;}</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;<span class="keywordtype">void</span> MainWindow2::changePlayState(<span class="keywordtype">bool</span> isPlaying)</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;{</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    <span class="keywordflow">if</span> (isPlaying)</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    {</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;        ui-&gt;actionPlay-&gt;setText(tr(<span class="stringliteral">&quot;Stop&quot;</span>));</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        ui-&gt;actionPlay-&gt;setIcon(mStopIcon);</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    }</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    {</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;        ui-&gt;actionPlay-&gt;setText(tr(<span class="stringliteral">&quot;Play&quot;</span>));</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;        ui-&gt;actionPlay-&gt;setIcon(mStartIcon);</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;    }</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    update();</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;}</div>
 <div class="ttc" id="class_signal_blocker_html"><div class="ttname"><a href="class_signal_blocker.html">SignalBlocker</a></div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00050">util.h:50</a></div></div>
 <div class="ttc" id="class_display_option_widget_html"><div class="ttname"><a href="class_display_option_widget.html">DisplayOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="displayoptionwidget_8h_source.html#l00030">displayoptionwidget.h:30</a></div></div>
 <div class="ttc" id="class_file_dialog_html"><div class="ttname"><a href="class_file_dialog.html">FileDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="filedialogex_8h_source.html#l00033">filedialogex.h:33</a></div></div>
@@ -1206,7 +1203,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 21 2017 05:20:06 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 22 2017 11:04:22 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

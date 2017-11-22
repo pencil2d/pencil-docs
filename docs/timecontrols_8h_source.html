@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">4e3453407e5542ed59c78a41656374b140fbb427</span>
+   &#160;<span id="projectnumber">d7ead9e8ee9c9be007fca3d46ec5d192c3fe4d21</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -123,64 +123,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_time_controls.html">TimeControls</a>(<a class="code" href="class_time_line.html">TimeLine</a>* parent = 0 );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_time_controls.html">TimeControls</a>(<a class="code" href="class_time_line.html">TimeLine</a>* parent = 0);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> initUI();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> updateUI();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> setFps( <span class="keywordtype">int</span> value );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> setCore( <a class="code" href="class_editor.html">Editor</a>* editor );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> setFps(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> setEditor(<a class="code" href="class_editor.html">Editor</a>* editor);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> updateLength(<span class="keywordtype">int</span> frameLength);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> updatePlayState();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> getRangeLower() { <span class="keywordflow">return</span> mPlaybackRangeCheckBox-&gt;isChecked() ? mLoopStartSpinBox-&gt;value() : -1; }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> getRangeUpper() { <span class="keywordflow">return</span> mPlaybackRangeCheckBox-&gt;isChecked() ? mLoopEndSpinBox-&gt;value() : -1; }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;Q_SIGNALS:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> soundClick( <span class="keywordtype">bool</span> );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> soundClick(<span class="keywordtype">bool</span>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> fpsClick(<span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> loopStartClick(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> loopEndClick(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> rangeStateChange();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> toggleLoop(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> toggleLoopControl(<span class="keywordtype">bool</span>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> toggleLoop(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> toggleLoopControl(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> makeConnections();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> playButtonClicked();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> jumpToStartButtonClicked();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> jumpToEndButtonClicked();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> loopButtonClicked( <span class="keywordtype">bool</span> bChecked );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> playbackRangeClicked( <span class="keywordtype">bool</span> bChecked );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> preLoopStartClick(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> updateSoundIcon( <span class="keywordtype">bool</span> soundEnabled );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QPushButton* mPlayButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QPushButton* mJumpToEndButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    QPushButton* mJumpToStartButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QPushButton* mLoopButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QPushButton* mSoundButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QSpinBox*    mFpsBox = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    QCheckBox*   mPlaybackRangeCheckBox = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QSpinBox*    mLoopStartSpinBox = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QSpinBox*    mLoopEndSpinBox = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QIcon mStartIcon;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QIcon mStopIcon;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QIcon mLoopIcon;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    QIcon mSoundIcon;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QIcon mJumpToEndIcon;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QIcon mJumpToStartIcon;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> makeConnections();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> playButtonClicked();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> jumpToStartButtonClicked();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> jumpToEndButtonClicked();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> loopButtonClicked(<span class="keywordtype">bool</span> bChecked);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> playbackRangeClicked(<span class="keywordtype">bool</span> bChecked);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> loopStartValueChanged(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> loopEndValueChanged(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> updateSoundIcon(<span class="keywordtype">bool</span> soundEnabled);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    QPushButton* mPlayButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    QPushButton* mJumpToEndButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    QPushButton* mJumpToStartButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QPushButton* mLoopButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QPushButton* mSoundButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QSpinBox*    mFpsBox = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    QCheckBox*   mPlaybackRangeCheckBox = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QSpinBox*    mLoopStartSpinBox = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QSpinBox*    mLoopEndSpinBox = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    QIcon mStartIcon;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QIcon mStopIcon;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QIcon mLoopIcon;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QIcon mSoundIcon;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QIcon mJumpToEndIcon;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QIcon mJumpToStartIcon;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_time_line.html">TimeLine</a>* mTimeline = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_editor.html">Editor</a>* mEditor = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_editor.html">Editor</a>* mEditor = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00028">timeline.h:28</a></div></div>
 <div class="ttc" id="class_time_controls_html"><div class="ttname"><a href="class_time_controls.html">TimeControls</a></div><div class="ttdef"><b>Definition:</b> <a href="timecontrols_8h_source.html#l00031">timecontrols.h:31</a></div></div>
 <div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00064">preferencemanager.h:64</a></div></div>
@@ -188,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 21 2017 05:20:06 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 22 2017 11:04:22 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
