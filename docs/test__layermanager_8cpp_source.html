@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">d7ead9e8ee9c9be007fca3d46ec5d192c3fe4d21</span>
+   &#160;<span id="projectnumber">2abec87577affdea9c96327c2a023ef2e60bf3a9</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -108,8 +108,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        layerMgr-&gt;setEditor(editor);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        layerMgr-&gt;init();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">object</span>-&gt;init(); <span class="comment">// create default 3 layers</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">object</span>-&gt;init(); </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">object</span>-&gt;createDefaultLayers(); <span class="comment">// create default 3 layers</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        REQUIRE(layerMgr-&gt;count() == 3);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        REQUIRE(layerMgr-&gt;currentLayerIndex() == 0);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        REQUIRE(layerMgr-&gt;getLayer(0)-&gt;type() == Layer::CAMERA);</div>
@@ -131,39 +131,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        layerMgr-&gt;setEditor(editor);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        layerMgr-&gt;init();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">object</span>-&gt;init(); <span class="comment">// create 3 default layers</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">object</span>-&gt;init();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        REQUIRE(layerMgr-&gt;count() == 3);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        layerMgr-&gt;deleteLayer(2);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        REQUIRE(layerMgr-&gt;count() == 2);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        layerMgr-&gt;deleteLayer(1);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    SECTION(<span class="stringliteral">&quot;delete camera layers&quot;</span>)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_layer_manager.html">LayerManager</a>* layerMgr = <span class="keyword">new</span> <a class="code" href="class_layer_manager.html">LayerManager</a>(editor);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        layerMgr-&gt;setEditor(editor);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        layerMgr-&gt;init();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        REQUIRE(layerMgr-&gt;count() == 0);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        layerMgr-&gt;createCameraLayer(<span class="stringliteral">&quot;Camera1&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        layerMgr-&gt;createVectorLayer(<span class="stringliteral">&quot;Vector2&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        REQUIRE(layerMgr-&gt;count() == 2);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        layerMgr-&gt;createBitmapLayer(<span class="stringliteral">&quot;Bitmap3&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        REQUIRE(layerMgr-&gt;count() == 3);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        layerMgr-&gt;deleteLayer(2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        REQUIRE(layerMgr-&gt;count() == 2);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        layerMgr-&gt;deleteLayer(1);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// create 2 camera layers</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        REQUIRE(layerMgr-&gt;count() == 0);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        layerMgr-&gt;createCameraLayer(<span class="stringliteral">&quot;Camera1&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        layerMgr-&gt;createCameraLayer(<span class="stringliteral">&quot;Camera2&quot;</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        REQUIRE(layerMgr-&gt;count() == 2);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// delete one of them, ok.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        layerMgr-&gt;deleteLayer(1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    SECTION(<span class="stringliteral">&quot;delete camera layers&quot;</span>)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_layer_manager.html">LayerManager</a>* layerMgr = <span class="keyword">new</span> <a class="code" href="class_layer_manager.html">LayerManager</a>(editor);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        layerMgr-&gt;setEditor(editor);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        layerMgr-&gt;init();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// create 2 camera layers</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        REQUIRE(layerMgr-&gt;count() == 0);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        layerMgr-&gt;createCameraLayer(<span class="stringliteral">&quot;Camera1&quot;</span>);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// delete the second, no, cant do it.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_status.html">Status</a> st = layerMgr-&gt;deleteLayer(0);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        REQUIRE((st == Status::ERROR_NEED_AT_LEAST_ONE_CAMERA_LAYER));</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">delete</span> editor;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        layerMgr-&gt;createCameraLayer(<span class="stringliteral">&quot;Camera2&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        REQUIRE(layerMgr-&gt;count() == 2);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// delete one of them, ok.</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        layerMgr-&gt;deleteLayer(1);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// delete the second, no, cant do it.</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_status.html">Status</a> st = layerMgr-&gt;deleteLayer(0);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        REQUIRE(layerMgr-&gt;count() == 1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        REQUIRE((st == Status::ERROR_NEED_AT_LEAST_ONE_CAMERA_LAYER));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">delete</span> editor;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="ttc" id="class_layer_manager_html"><div class="ttname"><a href="class_layer_manager.html">LayerManager</a></div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8h_source.html#l00030">layermanager.h:30</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00054">object.h:54</a></div></div>
@@ -171,7 +177,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 22 2017 11:04:24 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 23 2017 05:38:25 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
