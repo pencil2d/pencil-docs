@@ -7,7 +7,6 @@ var searchData=
   ['testfilemanager',['TestFileManager',['../class_test_file_manager.html',1,'']]],
   ['testinvokerasmethod',['TestInvokerAsMethod',['../class_catch_1_1_test_invoker_as_method.html',1,'Catch']]],
   ['testobject',['TestObject',['../class_test_object.html',1,'']]],
-  ['testviewmanager',['TestViewManager',['../class_test_view_manager.html',1,'']]],
   ['timecontrols',['TimeControls',['../class_time_controls.html',1,'']]],
   ['timeline',['TimeLine',['../class_time_line.html',1,'']]],
   ['timeline2',['Timeline2',['../class_timeline2.html',1,'']]],
