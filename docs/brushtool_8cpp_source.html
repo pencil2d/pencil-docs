@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">f265ddac2b991d408ed60e4ba1a0056dff8358c5</span>
+   &#160;<span id="projectnumber">2226afd16406f0d9d50df6390e29c22e89392dd9</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -360,7 +360,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="class_blit_rect.html">BlitRect</a> rect;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        rect.extend( point.toPoint() );</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        mScribbleArea-&gt;drawBrush( QPoint( qRound(point.x() ), qRound(point.y() )),</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        mScribbleArea-&gt;drawBrush( point,</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                                  brushWidth,</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                  properties.feather,</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                                  mEditor-&gt;color()-&gt;frontColor(),</div>
@@ -411,7 +411,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            QPointF point = mLastBrushPoint + ( i + 1 ) * brushStep * ( getCurrentPoint() - mLastBrushPoint ) / distance;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            rect.extend( point.toPoint() );</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            mScribbleArea-&gt;drawBrush( QPoint( qRound(point.x() ),qRound(point.y() )),</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            mScribbleArea-&gt;drawBrush( point,</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                      brushWidth,</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                                      properties.feather,</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                                      mEditor-&gt;color()-&gt;frontColor(),</div>
@@ -533,7 +533,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 26 2017 11:52:42 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 27 2017 12:25:41 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
