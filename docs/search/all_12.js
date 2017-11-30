@@ -4,7 +4,6 @@ var searchData=
   ['testcase',['TestCase',['../class_catch_1_1_test_case.html',1,'Catch']]],
   ['testcaseinfo',['TestCaseInfo',['../struct_catch_1_1_test_case_info.html',1,'Catch']]],
   ['testfailureexception',['TestFailureException',['../struct_catch_1_1_test_failure_exception.html',1,'Catch']]],
-  ['testfilemanager',['TestFileManager',['../class_test_file_manager.html',1,'']]],
   ['testinvokerasmethod',['TestInvokerAsMethod',['../class_catch_1_1_test_invoker_as_method.html',1,'Catch']]],
   ['testobject',['TestObject',['../class_test_object.html',1,'']]],
   ['timecontrols',['TimeControls',['../class_time_controls.html',1,'']]],
