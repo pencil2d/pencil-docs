@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">efb1bce41b199a09f0fe68f359af2982e7f845b5</span>
+   &#160;<span id="projectnumber">e1dc1b349adc328743cf680f263ec402df83b9a2</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -146,18 +146,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_TIMESTAMP__ TOSTRING(GIT_TIMESTAMP)</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_COMMIT_HASH__ TOSTRING(GIT_CURRENT_SHA1)</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QLabel* devInfoText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    devInfoText-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color: #ffffff;&quot;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                        <span class="stringliteral">&quot;border-style: solid; border-width: 1px; border-color: gray;}&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    devInfoText-&gt;setTextInteractionFlags(Qt::TextSelectableByMouse);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    devInfoText-&gt;setFixedHeight(60);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    devInfoText-&gt;setAlignment(Qt::AlignCenter);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QString devText = QString(<span class="stringliteral">&quot;Version: %1&quot;</span>).arg(APP_VERSION);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifdef GIT_EXISTS</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span>    devText += <span class="stringliteral">&quot;&lt;br&gt;commit: &quot;</span> S__GIT_COMMIT_HASH__ <span class="stringliteral">&quot;&lt;br&gt; date: &quot;</span> S__GIT_TIMESTAMP__ <span class="stringliteral">&quot;&lt;br&gt;&quot;</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor"></span>    devInfoText-&gt;setText(devText);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    QLabel* devInfoText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    devInfoText-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color: #ffffff;&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                        <span class="stringliteral">&quot;border-style: solid; border-width: 1px; border-color: gray;}&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    devInfoText-&gt;setTextInteractionFlags(Qt::TextSelectableByMouse);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    devInfoText-&gt;setFixedHeight(60);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    devInfoText-&gt;setAlignment(Qt::AlignCenter);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QString devText = QString(<span class="stringliteral">&quot;Version: %1&quot;</span>).arg(APP_VERSION);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#if defined(GIT_EXISTS) &amp;&amp; defined(NIGHTLY_BUILD)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span>    devText += <span class="stringliteral">&quot;&lt;br&gt;commit: &quot;</span> S__GIT_COMMIT_HASH__ <span class="stringliteral">&quot;&lt;br&gt; date: &quot;</span> S__GIT_TIMESTAMP__ <span class="stringliteral">&quot;&lt;br&gt;&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    devInfoText-&gt;setText(devText);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    lay-&gt;addWidget(devInfoText);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
@@ -173,7 +173,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 30 2017 13:09:38 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 3 2017 11:11:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">efb1bce41b199a09f0fe68f359af2982e7f845b5</span>
+   &#160;<span id="projectnumber">e1dc1b349adc328743cf680f263ec402df83b9a2</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -138,38 +138,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> changeColor(<span class="keyword">const</span> QColor &amp;color);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> hueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> svChanged(<span class="keyword">const</span> QColor &amp;newcolor);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> alphaChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;alpha);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QColor pickColor(<span class="keyword">const</span> QPoint &amp;point);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> drawHueIndicator(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> drawPicker(<span class="keyword">const</span> QColor &amp;color);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> drawWheelImage(<span class="keyword">const</span> QSize &amp;newSize);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> drawSquareImage(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> composeWheel(QPixmap&amp; pixmap);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QSize m_initSize;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    QImage m_wheelImage;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QImage m_squareImage;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QPixmap m_wheelPixmap;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> m_wheelThickness;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    QRegion m_wheelRegion;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    QRegion m_squareRegion;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QColor m_currentColor;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> m_isInWheel;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">bool</span> m_isInSquare;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif // COLORWHEEL_H</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> saturationChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;sat);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> valueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;value);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> redChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;red);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> greenChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;green);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> blueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;blue);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> alphaChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;alpha);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> changeRgbColors(<span class="keyword">const</span> QColor &amp;color);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> changeHsvColors(<span class="keyword">const</span> QColor &amp;color);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QColor pickColor(<span class="keyword">const</span> QPoint &amp;point);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> drawHueIndicator(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> drawPicker(<span class="keyword">const</span> QColor &amp;color);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> drawWheelImage(<span class="keyword">const</span> QSize &amp;newSize);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> drawSquareImage(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> composeWheel(QPixmap&amp; pixmap);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    QSize m_initSize;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QImage m_wheelImage;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QImage m_squareImage;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QPixmap m_wheelPixmap;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> m_wheelThickness;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    QRegion m_wheelRegion;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    QRegion m_squareRegion;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    QColor m_currentColor;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">bool</span> m_isInWheel;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> m_isInSquare;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // COLORWHEEL_H</span></div>
 <div class="ttc" id="class_color_wheel_html"><div class="ttname"><a href="class_color_wheel.html">ColorWheel</a></div><div class="ttdef"><b>Definition:</b> <a href="colorwheel_8h_source.html#l00023">colorwheel.h:23</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 30 2017 13:09:38 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 3 2017 11:11:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
