@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1ea6db036ef1ea3f43b5d6ffa85d9c3e8615c2d4</span>
+   &#160;<span id="projectnumber">71995ee955bc0ad86679603dc8754cefed28f979</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -440,12 +440,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keywordtype">void</span> ActionCommands::ZoomIn()</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    mEditor-&gt;view()-&gt;scaleUp();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    mEditor-&gt;view()-&gt;snapScale(1);</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keywordtype">void</span> ActionCommands::ZoomOut()</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;{</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    mEditor-&gt;view()-&gt;scaleDown();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    mEditor-&gt;view()-&gt;snapScale(-1);</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keywordtype">void</span> ActionCommands::flipSelectionX()</div>
@@ -705,7 +705,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 3 2017 12:09:54 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 4 2017 02:08:32 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

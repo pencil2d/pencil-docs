@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1ea6db036ef1ea3f43b5d6ffa85d9c3e8615c2d4</span>
+   &#160;<span id="projectnumber">71995ee955bc0ad86679603dc8754cefed28f979</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -166,6 +166,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>scaling</b> ()</td><
 <tr class="memitem:af40eaaacefc65b7f61a05aac879172fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40eaaacefc65b7f61a05aac879172fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> (float scaleValue)</td></tr>
 <tr class="separator:af40eaaacefc65b7f61a05aac879172fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c8e7ae03a09783163e97470e5444cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3c8e7ae03a09783163e97470e5444cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>snapScale</b> (int direction)</td></tr>
+<tr class="separator:aa3c8e7ae03a09783163e97470e5444cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6738abd1f4c170e552884ce76661555b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6738abd1f4c170e552884ce76661555b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>scaleUp</b> ()</td></tr>
 <tr class="separator:a6738abd1f4c170e552884ce76661555b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,6 +251,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipHorizontal</b>
 <tr class="memitem:aa5d90cdd95aafebbb445fee56555994a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5d90cdd95aafebbb445fee56555994a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipVertical</b> = false</td></tr>
 <tr class="separator:aa5d90cdd95aafebbb445fee56555994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14ae20ccb3fc1ab3522598ce6fb9071a"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevels</b> [8]</td></tr>
+<tr class="separator:a14ae20ccb3fc1ab3522598ce6fb9071a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6ac21ed7cd0481001fe04a36eff6b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc6ac21ed7cd0481001fe04a36eff6b2"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevelCount</b> = 8</td></tr>
+<tr class="separator:afc6ac21ed7cd0481001fe04a36eff6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4d289b2ec0e515c361e609cea671fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad4d289b2ec0e515c361e609cea671fc"></a>
 <a class="el" href="class_layer_camera.html">LayerCamera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mCameraLayer</b> = nullptr</td></tr>
 <tr class="separator:aad4d289b2ec0e515c361e609cea671fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,14 +263,39 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipVertical</b> =
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="viewmanager_8h_source.html#l00029">29</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a14ae20ccb3fc1ab3522598ce6fb9071a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float ViewManager::mZoomLevels[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= { 0.25, 0.5, 0.75, 1.0,</div>
+<div class="line">                                   1.25, 1.5, 1.75, 2.0 }</div>
+</div><!-- fragment -->
+<p>Definition at line <a class="el" href="viewmanager_8h_source.html#l00098">98</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/managers/<a class="el" href="viewmanager_8h_source.html">viewmanager.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/managers/<a class="el" href="viewmanager_8cpp_source.html">viewmanager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 3 2017 12:09:56 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 4 2017 02:08:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
