@@ -6,8 +6,6 @@ var searchData=
   ['casedstring',['CasedString',['../struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string.html',1,'Catch::Matchers::StdString']]],
   ['casesensitive',['CaseSensitive',['../struct_catch_1_1_case_sensitive.html',1,'Catch']]],
   ['colorbox',['ColorBox',['../class_color_box.html',1,'']]],
-  ['colorgrid',['ColorGrid',['../class_color_grid.html',1,'']]],
-  ['colorgriditem',['ColorGridItem',['../class_color_grid_item.html',1,'']]],
   ['colorinspector',['ColorInspector',['../class_color_inspector.html',1,'']]],
   ['colormanager',['ColorManager',['../class_color_manager.html',1,'']]],
   ['colorpalettewidget',['ColorPaletteWidget',['../class_color_palette_widget.html',1,'']]],
