@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">71995ee955bc0ad86679603dc8754cefed28f979</span>
+   &#160;<span id="projectnumber">07fd791ccca232ea4d1621ebe5b1409305699c7c</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -251,11 +251,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipHorizontal</b>
 <tr class="memitem:aa5d90cdd95aafebbb445fee56555994a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5d90cdd95aafebbb445fee56555994a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>mIsFlipVertical</b> = false</td></tr>
 <tr class="separator:aa5d90cdd95aafebbb445fee56555994a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14ae20ccb3fc1ab3522598ce6fb9071a"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevels</b> [8]</td></tr>
-<tr class="separator:a14ae20ccb3fc1ab3522598ce6fb9071a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6ac21ed7cd0481001fe04a36eff6b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc6ac21ed7cd0481001fe04a36eff6b2"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevelCount</b> = 8</td></tr>
-<tr class="separator:afc6ac21ed7cd0481001fe04a36eff6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad357ff88cd1edb89d50cc8050bcd2599"><td class="memItemLeft" align="right" valign="top">const QVector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevels</b></td></tr>
+<tr class="separator:ad357ff88cd1edb89d50cc8050bcd2599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4d289b2ec0e515c361e609cea671fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad4d289b2ec0e515c361e609cea671fc"></a>
 <a class="el" href="class_layer_camera.html">LayerCamera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mCameraLayer</b> = nullptr</td></tr>
 <tr class="separator:aad4d289b2ec0e515c361e609cea671fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,7 +261,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevelCount<
 <div class="textblock">
 <p>Definition at line <a class="el" href="viewmanager_8h_source.html#l00029">29</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a14ae20ccb3fc1ab3522598ce6fb9071a"></a>
+<a class="anchor" id="ad357ff88cd1edb89d50cc8050bcd2599"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -272,7 +269,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevelCount<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const float ViewManager::mZoomLevels[8]</td>
+          <td class="memname">const QVector&lt;float&gt; ViewManager::mZoomLevels</td>
         </tr>
       </table>
   </td>
@@ -281,8 +278,14 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevelCount<
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= { 0.25, 0.5, 0.75, 1.0,</div>
-<div class="line">                                   1.25, 1.5, 1.75, 2.0 }</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= QVector&lt;float&gt;() &lt;&lt; .01f &lt;&lt; .02f &lt;&lt; .04f</div>
+<div class="line">                                                        &lt;&lt; .06f &lt;&lt; .08f &lt;&lt; .12f</div>
+<div class="line">                                                        &lt;&lt; .16f &lt;&lt; .25f &lt;&lt; .33f</div>
+<div class="line">                                                        &lt;&lt; .5f &lt;&lt; .75f &lt;&lt; 1.f</div>
+<div class="line">                                                        &lt;&lt; 1.5f &lt;&lt; 2.f &lt;&lt; 3.f</div>
+<div class="line">                                                        &lt;&lt; 4.f &lt;&lt; 5.f &lt;&lt; 6.f</div>
+<div class="line">                                                        &lt;&lt; 8.f &lt;&lt; 16.f &lt;&lt; 32.f</div>
+<div class="line">                                                        &lt;&lt; 48.f &lt;&lt; 64.f &lt;&lt; 96.f</div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="viewmanager_8h_source.html#l00098">98</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
@@ -295,7 +298,7 @@ const int&#160;</td><td class="memItemRight" valign="bottom"><b>mZoomLevelCount<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 4 2017 02:08:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 5 2017 00:30:27 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

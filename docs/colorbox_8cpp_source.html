@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">71995ee955bc0ad86679603dc8754cefed28f979</span>
+   &#160;<span id="projectnumber">07fd791ccca232ea4d1621ebe5b1409305699c7c</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -131,11 +131,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    connect( mColorInspector, &amp;ColorInspector::colorChanged, <span class="keyword">this</span>, &amp;ColorBox::onSpinboxChange );</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    connect( mColorWheel, &amp;ColorWheel::colorSelected, <span class="keyword">this</span>, &amp;ColorBox::onWheelRelease );</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    mColorWheel-&gt;setColor(Qt::black);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    mColorInspector-&gt;setColor(Qt::black);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mColorWheel-&gt;setMinimumSize(100,100);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QColor defaultColor;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    defaultColor.setHsv(0, 0, 0);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mColorWheel-&gt;setColor(defaultColor);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    mColorInspector-&gt;setColor(defaultColor);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mColorWheel-&gt;setMinimumSize(100,100);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;ColorBox::~ColorBox()</div>
@@ -196,7 +196,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 4 2017 02:08:32 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 5 2017 00:30:25 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

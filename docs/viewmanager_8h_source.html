@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">71995ee955bc0ad86679603dc8754cefed28f979</span>
+   &#160;<span id="projectnumber">07fd791ccca232ea4d1621ebe5b1409305699c7c</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -185,14 +185,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> mIsFlipHorizontal = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> mIsFlipVertical = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> mZoomLevels[8] = { 0.25, 0.5, 0.75, 1.0,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                   1.25, 1.5, 1.75, 2.0 };</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> mZoomLevelCount = 8;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* mCameraLayer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif // VIEWMANAGER_H</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> QVector&lt;float&gt; mZoomLevels = QVector&lt;float&gt;() &lt;&lt; .01f &lt;&lt; .02f &lt;&lt; .04f</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                                        &lt;&lt; .06f &lt;&lt; .08f &lt;&lt; .12f</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                                        &lt;&lt; .16f &lt;&lt; .25f &lt;&lt; .33f</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                        &lt;&lt; .5f &lt;&lt; .75f &lt;&lt; 1.f</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                        &lt;&lt; 1.5f &lt;&lt; 2.f &lt;&lt; 3.f</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                                        &lt;&lt; 4.f &lt;&lt; 5.f &lt;&lt; 6.f</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                                        &lt;&lt; 8.f &lt;&lt; 16.f &lt;&lt; 32.f</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                                        &lt;&lt; 48.f &lt;&lt; 64.f &lt;&lt; 96.f;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* mCameraLayer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif // VIEWMANAGER_H</span></div>
 <div class="ttc" id="class_view_manager_html"><div class="ttname"><a href="class_view_manager.html">ViewManager</a></div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8h_source.html#l00029">viewmanager.h:29</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
 <div class="ttc" id="class_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00027">basemanager.h:27</a></div></div>
@@ -204,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 4 2017 02:08:33 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 5 2017 00:30:25 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
