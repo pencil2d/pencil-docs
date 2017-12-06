@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c9dfc344e510cf74beff7d0dd8cc34bbaf6c0ffd</span>
+   &#160;<span id="projectnumber">9ebc52df622a3544e22ea41fe3b8bf2117d770d3</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -90,7 +90,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_base_tool-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BaseTool Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -172,12 +171,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>adjustPressur
 <tr class="memitem:a9987d70aafd483936e855899aa5eaea1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9987d70aafd483936e855899aa5eaea1"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="separator:a9987d70aafd483936e855899aa5eaea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b02a98370c114734e1a46089a7b0c4d"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0b02a98370c114734e1a46089a7b0c4d">canvasCursor</a> ()</td></tr>
-<tr class="memdesc:a0b02a98370c114734e1a46089a7b0c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing a cursor within scribble area.  <a href="#a0b02a98370c114734e1a46089a7b0c4d">More...</a><br/></td></tr>
-<tr class="separator:a0b02a98370c114734e1a46089a7b0c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0ade4107e42113457ae40dc6caf46b1"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ae0ade4107e42113457ae40dc6caf46b1">quickSizeCursor</a> ()</td></tr>
-<tr class="memdesc:ae0ade4107e42113457ae40dc6caf46b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing stroke size while adjusting  <a href="#ae0ade4107e42113457ae40dc6caf46b1">More...</a><br/></td></tr>
-<tr class="separator:ae0ade4107e42113457ae40dc6caf46b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41674db30a44ca3c446b6414913691ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41674db30a44ca3c446b6414913691ee"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setWidth</b> (const qreal width)</td></tr>
 <tr class="separator:a41674db30a44ca3c446b6414913691ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +240,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adb33b66e50cb1a7e6fe546b4c8a28ffe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb33b66e50cb1a7e6fe546b4c8a28ffe"></a>
 static QString&#160;</td><td class="memItemRight" valign="bottom"><b>TypeName</b> (ToolType)</td></tr>
 <tr class="separator:adb33b66e50cb1a7e6fe546b4c8a28ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3255c19d934bad5922b957bd1326dce3"><td class="memItemLeft" align="right" valign="top">static QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3255c19d934bad5922b957bd1326dce3">canvasCursor</a> (float brushWidth, float brushFeather, bool useFeather, float scalingFac, int windowWidth)</td></tr>
+<tr class="memdesc:a3255c19d934bad5922b957bd1326dce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing a cursor within scribble area.  <a href="#a3255c19d934bad5922b957bd1326dce3">More...</a><br/></td></tr>
+<tr class="separator:a3255c19d934bad5922b957bd1326dce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57d771e2dd7fb28063afc6a466e2b6a"><td class="memItemLeft" align="right" valign="top">static QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ab57d771e2dd7fb28063afc6a466e2b6a">quickSizeCursor</a> (float brushWidth, float brushFeather, float scalingFac)</td></tr>
+<tr class="memdesc:ab57d771e2dd7fb28063afc6a466e2b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing stroke size while adjusting  <a href="#ab57d771e2dd7fb28063afc6a466e2b6a">More...</a><br/></td></tr>
+<tr class="separator:ab57d771e2dd7fb28063afc6a466e2b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -289,58 +288,59 @@ QHash&lt; ToolPropertyType, bool &gt;&#160;</td><td class="memItemRight" valign=
 <tr class="memitem:ac2da42773c1225a995abc83db37919d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2da42773c1225a995abc83db37919d3"></a>
 qreal&#160;</td><td class="memItemRight" valign="bottom"><b>mAdjustmentStep</b> = 0.0f</td></tr>
 <tr class="separator:ac2da42773c1225a995abc83db37919d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a4db6f057eb74d411afa62680e951f6e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4db6f057eb74d411afa62680e951f6e1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>propWidth</b></td></tr>
-<tr class="separator:a4db6f057eb74d411afa62680e951f6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed840c35b906d0dddf4dfbd0685e787c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed840c35b906d0dddf4dfbd0685e787c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>propFeather</b></td></tr>
-<tr class="separator:aed840c35b906d0dddf4dfbd0685e787c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462247476b350fa9ed187b5fb76e8055"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a462247476b350fa9ed187b5fb76e8055"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
-<tr class="separator:a462247476b350fa9ed187b5fb76e8055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed5f19deee4a3f5e1ffc3a1b4cc2b302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed5f19deee4a3f5e1ffc3a1b4cc2b302"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cursorWidth</b></td></tr>
-<tr class="separator:aed5f19deee4a3f5e1ffc3a1b4cc2b302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5c756192ce937a2bdf6536e82e486b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5c756192ce937a2bdf6536e82e486b5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr>
-<tr class="separator:ad5c756192ce937a2bdf6536e82e486b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c2ce90b1a3a5c1325d3e6bc2da3bd70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c2ce90b1a3a5c1325d3e6bc2da3bd70"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>xyA</b></td></tr>
-<tr class="separator:a3c2ce90b1a3a5c1325d3e6bc2da3bd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbe81dfad26c6133448c440c7842e6a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbe81dfad26c6133448c440c7842e6a3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>xyB</b></td></tr>
-<tr class="separator:afbe81dfad26c6133448c440c7842e6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cad2d90aacf15255c25197c52a73a2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cad2d90aacf15255c25197c52a73a2b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>whA</b></td></tr>
-<tr class="separator:a9cad2d90aacf15255c25197c52a73a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e2488a0487b981ac51b1a283cb9af7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39e2488a0487b981ac51b1a283cb9af7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>whB</b></td></tr>
-<tr class="separator:a39e2488a0487b981ac51b1a283cb9af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b11556a54f750639db8da4df93ba3cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b11556a54f750639db8da4df93ba3cb"></a>
-QPixmap&#160;</td><td class="memItemRight" valign="bottom"><b>cursorPixmap</b></td></tr>
-<tr class="separator:a8b11556a54f750639db8da4df93ba3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe55d065db5b3eb76fa8037feaf8581a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe55d065db5b3eb76fa8037feaf8581a"></a>
-QPen&#160;</td><td class="memItemRight" valign="bottom"><b>cursorPen</b></td></tr>
-<tr class="separator:afe55d065db5b3eb76fa8037feaf8581a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="basetool_8h_source.html#l00057">57</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0b02a98370c114734e1a46089a7b0c4d"></a>
+<a class="anchor" id="a3255c19d934bad5922b957bd1326dce3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QPixmap BaseTool::canvasCursor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>feather</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFeather</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalingFac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>windowWidth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>precision circular cursor: used for drawing a cursor within scribble area. </p>
@@ -350,23 +350,48 @@ QPen&#160;</td><td class="memItemRight" valign="bottom"><b>cursorPen</b></td></t
 
 </div>
 </div>
-<a class="anchor" id="ae0ade4107e42113457ae40dc6caf46b1"></a>
+<a class="anchor" id="ab57d771e2dd7fb28063afc6a466e2b6a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QPixmap BaseTool::quickSizeCursor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>brushWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>brushFeather</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scalingFac</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>precision circular cursor: used for drawing stroke size while adjusting </p>
 <dl class="section return"><dt>Returns</dt><dd>QPixmap </dd></dl>
 
-<p>Definition at line <a class="el" href="basetool_8cpp_source.html#l00166">166</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p>Definition at line <a class="el" href="basetool_8cpp_source.html#l00187">187</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -377,7 +402,7 @@ QPen&#160;</td><td class="memItemRight" valign="bottom"><b>cursorPen</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 5 2017 04:27:16 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 6 2017 22:22:41 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

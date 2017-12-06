@@ -4,7 +4,7 @@ var searchData=
   ['calculateselectionrect',['calculateSelectionRect',['../class_vector_image.html#a59f677bcef135d1f964b5c0827f32c88',1,'VectorImage']]],
   ['camera',['Camera',['../class_camera.html',1,'']]],
   ['camerapropertiesdialog',['CameraPropertiesDialog',['../class_camera_properties_dialog.html',1,'']]],
-  ['canvascursor',['canvasCursor',['../class_base_tool.html#a0b02a98370c114734e1a46089a7b0c4d',1,'BaseTool']]],
+  ['canvascursor',['canvasCursor',['../class_base_tool.html#a3255c19d934bad5922b957bd1326dce3',1,'BaseTool']]],
   ['canvasrenderer',['CanvasRenderer',['../class_canvas_renderer.html',1,'']]],
   ['casedstring',['CasedString',['../struct_catch_1_1_matchers_1_1_std_string_1_1_cased_string.html',1,'Catch::Matchers::StdString']]],
   ['casesensitive',['CaseSensitive',['../struct_catch_1_1_case_sensitive.html',1,'Catch']]],

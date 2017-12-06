@@ -14,5 +14,5 @@ var searchData=
   ['qlist_3c_20qpointf_20_3e',['QList&lt; QPointF &gt;',['../class_q_list.html',1,'']]],
   ['qlist_3c_20qreal_20_3e',['QList&lt; qreal &gt;',['../class_q_list.html',1,'']]],
   ['qlist_3c_20vertexref_20_3e',['QList&lt; VertexRef &gt;',['../class_q_list.html',1,'']]],
-  ['quicksizecursor',['quickSizeCursor',['../class_base_tool.html#ae0ade4107e42113457ae40dc6caf46b1',1,'BaseTool']]]
+  ['quicksizecursor',['quickSizeCursor',['../class_base_tool.html#ab57d771e2dd7fb28063afc6a466e2b6a',1,'BaseTool']]]
 ];
