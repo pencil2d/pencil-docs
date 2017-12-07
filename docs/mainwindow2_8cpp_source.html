@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">4d6ffb04a189b74b48bb27a74eb34c240592ec7f</span>
+   &#160;<span id="projectnumber">601355332910042cba0145c3d37564af429a9f4f</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -403,7 +403,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    connect(ui-&gt;actionPrevious_Frame, &amp;QAction::triggered, mCommands, &amp;ActionCommands::GotoPrevFrame);</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    connect(ui-&gt;actionNext_KeyFrame, &amp;QAction::triggered, mCommands, &amp;ActionCommands::GotoNextKeyFrame);</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    connect(ui-&gt;actionPrev_KeyFrame, &amp;QAction::triggered, mCommands, &amp;ActionCommands::GotoPrevKeyFrame);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    connect(ui-&gt;actionDuplicate_Frame, &amp;QAction::triggered, mEditor, &amp;Editor::duplicateKey);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    connect(ui-&gt;actionDuplicate_Frame, &amp;QAction::triggered, mCommands, &amp;ActionCommands::duplicateKey);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    connect(ui-&gt;actionMove_Frame_Forward, &amp;QAction::triggered, mEditor, &amp;Editor::moveFrameForward);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    connect(ui-&gt;actionMove_Frame_Backward, &amp;QAction::triggered, mEditor, &amp;Editor::moveFrameBackward);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
@@ -1087,13 +1087,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;    connect(editor, &amp;Editor::selectAll, scribbleArea, &amp;ScribbleArea::selectAll);</div>
 <div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;</div>
 <div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;    connect(editor-&gt;view(), &amp;ViewManager::viewChanged, scribbleArea, &amp;ScribbleArea::updateAllFrames);</div>
-<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    <span class="comment">//    connect( editor-&gt;preference(), &amp;PreferenceManager::preferenceChanged, scribbleArea, &amp;ScribbleArea::onPreferencedChanged );</span></div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;    <span class="comment">//connect( editor-&gt;preference(), &amp;PreferenceManager::preferenceChanged, scribbleArea, &amp;ScribbleArea::onPreferencedChanged );</span></div>
 <div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;}</div>
 <div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;</div>
 <div class="line"><a name="l01011"></a><span class="lineno"> 1011</span>&#160;<span class="keywordtype">void</span> MainWindow2::makeConnections(<a class="code" href="class_editor.html">Editor</a>* pEditor, <a class="code" href="class_time_line.html">TimeLine</a>* pTimeline)</div>
 <div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;{</div>
 <div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;    <a class="code" href="class_playback_manager.html">PlaybackManager</a>* pPlaybackManager = pEditor-&gt;playback();</div>
-<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    connect(pTimeline, &amp;TimeLine::duplicateKeyClick, pEditor, &amp;Editor::duplicateKey);</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;    connect(pTimeline, &amp;TimeLine::duplicateKeyClick, mCommands, &amp;ActionCommands::duplicateKey);</div>
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;</div>
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;    connect(pTimeline, &amp;TimeLine::soundClick, pPlaybackManager, &amp;PlaybackManager::enableSound);</div>
 <div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;    connect(pTimeline, &amp;TimeLine::fpsClick, pPlaybackManager, &amp;PlaybackManager::setFps);</div>
@@ -1215,7 +1215,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 7 2017 05:46:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 7 2017 11:22:28 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
