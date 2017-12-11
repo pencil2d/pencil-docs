@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">601355332910042cba0145c3d37564af429a9f4f</span>
+   &#160;<span id="projectnumber">739f3fbc6a47538cdbbd1f79b42685cc5533ff1f</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -110,11 +110,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;ImportImageSeqDialog::ImportImageSeqDialog(QWidget* parent) :</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_import_export_dialog.html">ImportExportDialog</a>(parent),</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    ui(new Ui::ImportImageSeqOptions)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_import_export_dialog.html">ImportExportDialog</a>(parent, <a class="code" href="class_import_export_dialog.html">ImportExportDialog</a>::Import, FileType::IMAGE_SEQUENCE)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ui = <span class="keyword">new</span> Ui::ImportImageSeqOptions;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ui-&gt;setupUi(getOptionsGroupBox());</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    init();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    setWindowTitle(tr(<span class="stringliteral">&quot;Import image sequence&quot;</span>));</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    connect(ui-&gt;spaceSpinBox, static_cast&lt;<span class="keywordtype">void</span>(QSpinBox::*)(<span class="keywordtype">int</span>)&gt;(&amp;QSpinBox::valueChanged), <span class="keyword">this</span>, &amp;ImportImageSeqDialog::setSpace);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
@@ -149,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 7 2017 11:22:28 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 11 2017 12:11:15 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

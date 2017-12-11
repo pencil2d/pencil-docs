@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">601355332910042cba0145c3d37564af429a9f4f</span>
+   &#160;<span id="projectnumber">739f3fbc6a47538cdbbd1f79b42685cc5533ff1f</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -1749,7 +1749,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;        <span class="keywordflow">if</span> (layer == NULL) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;</div>
-<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Delete Selection&quot;</span>));</div>
+<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;        mEditor-&gt;backup(tr(<span class="stringliteral">&quot;Delete Selection&quot;</span>, <span class="stringliteral">&quot;Undo Step: clear the selection area.&quot;</span>));</div>
 <div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;</div>
 <div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;        mClosestCurves.clear();</div>
 <div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR) { ((<a class="code" href="class_layer_vector.html">LayerVector</a> *)layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0)-&gt;deleteSelection(); }</div>
@@ -1839,7 +1839,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 7 2017 11:22:29 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 11 2017 12:11:16 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
