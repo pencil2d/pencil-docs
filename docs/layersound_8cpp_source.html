@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">d7b8c0350d9953663c6020fb98483c526ab1aa40</span>
+   &#160;<span id="projectnumber">9320bdb41d0d4b616c795fa19aec4c43e621b1c3</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -234,19 +234,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">bool</span> bOK = QFile::copy(key-&gt;fileName(), sDestFileLocation);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        Q_ASSERT(bOK);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> (!bOK)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">return</span> Status::FAIL;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<a class="code" href="class_sound_clip.html">SoundClip</a>* LayerSound::getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = getKeyFrameWhichCovers(frameNumber);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(key);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (bOK)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            key-&gt;setFileName(sDestFileLocation);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">return</span> Status::FAIL;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<a class="code" href="class_sound_clip.html">SoundClip</a>* LayerSound::getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = getKeyFrameWhichCovers(frameNumber);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(key);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
 <div class="ttc" id="class_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00027">soundclip.h:27</a></div></div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
@@ -255,7 +256,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 11 2017 12:39:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 05:32:42 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

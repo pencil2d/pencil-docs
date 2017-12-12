@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">d7b8c0350d9953663c6020fb98483c526ab1aa40</span>
+   &#160;<span id="projectnumber">9320bdb41d0d4b616c795fa19aec4c43e621b1c3</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -137,12 +137,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () override<
 <tr class="memitem:ae0f57683a5c0c345cb3976c520bf4af7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0f57683a5c0c345cb3976c520bf4af7"></a>
 <a class="el" href="class_layer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getLayer</b> (int index)</td></tr>
 <tr class="separator:ae0f57683a5c0c345cb3976c520bf4af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65f33beab97fd2178fc2e3d3de31d29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae65f33beab97fd2178fc2e3d3de31d29"></a>
-<a class="el" href="class_layer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getLayerByName</b> (QString sName)</td></tr>
-<tr class="separator:ae65f33beab97fd2178fc2e3d3de31d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4e55ef8e47d95f8a347041e2ed5586a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4e55ef8e47d95f8a347041e2ed5586a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getLastCameraLayer</b> ()</td></tr>
-<tr class="separator:aa4e55ef8e47d95f8a347041e2ed5586a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f54cf019d8b0f083e2bbeea085d989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88f54cf019d8b0f083e2bbeea085d989"></a>
+<a class="el" href="class_layer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>findLayerByName</b> (QString sName, Layer::LAYER_TYPE type=Layer::UNDEFINED)</td></tr>
+<tr class="separator:a88f54cf019d8b0f083e2bbeea085d989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5932054ef1f6ad6bf9111f3e42888f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5932054ef1f6ad6bf9111f3e42888f2"></a>
+<a class="el" href="class_layer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getLastCameraLayer</b> ()</td></tr>
+<tr class="separator:ab5932054ef1f6ad6bf9111f3e42888f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fa6c37013377da3da3ec2083d646503"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fa6c37013377da3da3ec2083d646503"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>currentLayerIndex</b> ()</td></tr>
 <tr class="separator:a0fa6c37013377da3da3ec2083d646503"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,9 +216,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getIndex</b> (<a class
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab4bdc2bfc68cd048235d7f18d3fba6ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4bdc2bfc68cd048235d7f18d3fba6ee"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastCameraLayer</b> = 0</td></tr>
-<tr class="separator:ab4bdc2bfc68cd048235d7f18d3fba6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7cd961bfbdb5074ea17401498f7b80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb7cd961bfbdb5074ea17401498f7b80"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastCameraLayerIdx</b> = 0</td></tr>
+<tr class="separator:acb7cd961bfbdb5074ea17401498f7b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -241,7 +241,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastCameraLayer</b> =
 <p>Get the length of current project. </p>
 <dl class="section return"><dt>Returns</dt><dd>int: the position of the last key frame in the timeline + its length </dd></dl>
 
-<p>Definition at line <a class="el" href="layermanager_8cpp_source.html#l00283">283</a> of file <a class="el" href="layermanager_8cpp_source.html">layermanager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="layermanager_8cpp_source.html#l00287">287</a> of file <a class="el" href="layermanager_8cpp_source.html">layermanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastCameraLayer</b> =
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 11 2017 12:39:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 05:32:43 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

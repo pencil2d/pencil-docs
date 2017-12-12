@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">d7b8c0350d9953663c6020fb98483c526ab1aa40</span>
+   &#160;<span id="projectnumber">9320bdb41d0d4b616c795fa19aec4c43e621b1c3</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -102,11 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr bgcolor="#f0f0f0"><td class="entry"><b>currentLayerIndex</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>deleteLayer</b>(int index) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>editor</b>() const  (defined in <a class="el" href="class_base_manager.html">BaseManager</a>)</td><td class="entry"><a class="el" href="class_base_manager.html">BaseManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>firstKeyFrameIndex</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getIndex</b>(Layer *) const  (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getLastCameraLayer</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getLayer</b>(int index) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getLayerByName</b>(QString sName) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>findLayerByName</b>(QString sName, Layer::LAYER_TYPE type=Layer::UNDEFINED) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>firstKeyFrameIndex</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getIndex</b>(Layer *) const  (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getLastCameraLayer</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getLayer</b>(int index) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>gotoNextLayer</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>gotoPreviouslayer</b>() (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>init</b>() override (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -115,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>layerCountChanged</b>(int count) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>LayerManager</b>(Editor *editor) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>load</b>(Object *) override (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>mLastCameraLayer</b> (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>mLastCameraLayerIdx</b> (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>notifyLayerChanged</b>(Layer *) (defined in <a class="el" href="class_layer_manager.html">LayerManager</a>)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>object</b>() const  (defined in <a class="el" href="class_base_manager.html">BaseManager</a>)</td><td class="entry"><a class="el" href="class_base_manager.html">BaseManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>(bool includeSounds=true)</td><td class="entry"><a class="el" href="class_layer_manager.html">LayerManager</a></td><td class="entry"></td></tr>
@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 11 2017 12:39:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 05:32:43 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

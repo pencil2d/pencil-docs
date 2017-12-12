@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">d7b8c0350d9953663c6020fb98483c526ab1aa40</span>
+   &#160;<span id="projectnumber">9320bdb41d0d4b616c795fa19aec4c43e621b1c3</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -349,7 +349,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">int</span> projectLength = mEditor-&gt;layers()-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>();</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    QString sCameraLayerName = dialog-&gt;getCameraLayerName();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* cameraLayer = (<a class="code" href="class_layer_camera.html">LayerCamera</a>*)mEditor-&gt;layers()-&gt;getLayerByName(sCameraLayerName);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* cameraLayer = (<a class="code" href="class_layer_camera.html">LayerCamera</a>*)mEditor-&gt;layers()-&gt;findLayerByName(sCameraLayerName, Layer::CAMERA);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// Show a progress dialog, as this can take a while if you have lots of frames.</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    QProgressDialog progress(tr(<span class="stringliteral">&quot;Exporting image sequence...&quot;</span>), tr(<span class="stringliteral">&quot;Abort&quot;</span>), 0, 100, mParent);</div>
@@ -416,7 +416,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="comment">// Export</span></div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    QString sCameraLayerName = dialog-&gt;getCameraLayerName();</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* cameraLayer = (<a class="code" href="class_layer_camera.html">LayerCamera</a>*)mEditor-&gt;layers()-&gt;getLayerByName(sCameraLayerName);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* cameraLayer = (<a class="code" href="class_layer_camera.html">LayerCamera</a>*)mEditor-&gt;layers()-&gt;findLayerByName(sCameraLayerName, Layer::CAMERA);</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    QTransform view = cameraLayer-&gt;getViewAtFrame(mEditor-&gt;currentFrame());</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
@@ -726,13 +726,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="struct_export_movie_desc_html"><div class="ttname"><a href="struct_export_movie_desc.html">ExportMovieDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8h_source.html#l00028">movieexporter.h:28</a></div></div>
 <div class="ttc" id="class_about_dialog_html"><div class="ttname"><a href="class_about_dialog.html">AboutDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="aboutdialog_8h_source.html#l00027">aboutdialog.h:27</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
-<div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00283">layermanager.cpp:283</a></div></div>
+<div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00287">layermanager.cpp:287</a></div></div>
 <div class="ttc" id="class_export_movie_dialog_html"><div class="ttname"><a href="class_export_movie_dialog.html">ExportMovieDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="exportmoviedialog_8h_source.html#l00028">exportmoviedialog.h:28</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 11 2017 12:39:33 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 12 2017 05:32:41 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
