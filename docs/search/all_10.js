@@ -8,7 +8,6 @@ var searchData=
   ['removecolour',['removeColour',['../class_vector_image.html#a2af7de421c2fbe8384399ba78d96dc3c',1,'VectorImage']]],
   ['removecurveat',['removeCurveAt',['../class_vector_image.html#a497115ba5de110d61cc459dfdce8cd5a',1,'VectorImage']]],
   ['removevertex',['removeVertex',['../class_vector_image.html#a7b001fb09513881f2a53920fd023d7fb',1,'VectorImage']]],
-  ['renderoptions',['RenderOptions',['../struct_render_options.html',1,'']]],
   ['resetselectionproperties',['resetSelectionProperties',['../class_scribble_area.html#a0940d37bc14126a129380b69b2c9aac7',1,'ScribbleArea']]],
   ['resultdisposition',['ResultDisposition',['../struct_catch_1_1_result_disposition.html',1,'Catch']]],
   ['resultwas',['ResultWas',['../struct_catch_1_1_result_was.html',1,'Catch']]]

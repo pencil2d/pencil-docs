@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8d915729aa0414c88f64bf257000d51b313a4ec9</span>
+   &#160;<span id="projectnumber">7f1ee04aad6043784447cd81b66da5f67c4b1ffb</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -344,63 +344,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        extensionMapping[ <span class="stringliteral">&quot;mp4&quot;</span> ] = <span class="stringliteral">&quot;MP4&quot;</span>;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        extensionMapping[ <span class="stringliteral">&quot;avi&quot;</span> ] = <span class="stringliteral">&quot;AVI&quot;</span>;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        extensionMapping[ <span class="stringliteral">&quot;gif&quot;</span> ] = <span class="stringliteral">&quot;GIF&quot;</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        QString extension = outputPaths[i].mid( outputPaths[i].lastIndexOf( <span class="stringliteral">&quot;.&quot;</span> ) + 1 ).toLower();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">if</span> ( inputPath.contains(<span class="stringliteral">&quot;.&quot;</span>) &amp;&amp; extensionMapping.contains( extension ) )</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            format = extensionMapping[extension];</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            err &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Warning: Output format is not specified or unsupported. Using PNG.&quot;</span> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            format = <span class="stringliteral">&quot;PNG&quot;</span>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordtype">bool</span> asMovie;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        QMap&lt;QString, bool&gt; formatMapping;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        formatMapping[ <span class="stringliteral">&quot;PNG&quot;</span> ] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        formatMapping[ <span class="stringliteral">&quot;JPG&quot;</span> ] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        formatMapping[ <span class="stringliteral">&quot;TIF&quot;</span> ] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        formatMapping[ <span class="stringliteral">&quot;BMP&quot;</span> ] = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        formatMapping[ <span class="stringliteral">&quot;MP4&quot;</span> ] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        formatMapping[ <span class="stringliteral">&quot;AVI&quot;</span> ] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        formatMapping[ <span class="stringliteral">&quot;GIF&quot;</span> ] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        asMovie = formatMapping[format];</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span> ( asMovie )</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">if</span> ( transparency )</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                err &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Warning: Transparency is not currenty supported in movie files&quot;</span> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            }</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Exporting movie...&quot;</span> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            mainWindow.mEditor-&gt;exportMovieCLI( outputPaths[i], cameraLayer, width, height, startFrame, endFrame );</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Done.&quot;</span> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Exporting image sequence...&quot;</span> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        mainWindow.mEditor-&gt;exportSeqCLI( outputPaths[i], cameraLayer, format, width, height, startFrame, endFrame, transparency );</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Done.&quot;</span> ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="class_pencil_application.html">PencilApplication</a> app( argc, argv );</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    installTranslator( app );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        extensionMapping[ <span class="stringliteral">&quot;webm&quot;</span> ] = <span class="stringliteral">&quot;WEBM&quot;</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        QString extension = outputPaths[i].mid( outputPaths[i].lastIndexOf( <span class="stringliteral">&quot;.&quot;</span> ) + 1 ).toLower();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span> ( inputPath.contains(<span class="stringliteral">&quot;.&quot;</span>) &amp;&amp; extensionMapping.contains( extension ) )</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            format = extensionMapping[extension];</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            err &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Warning: Output format is not specified or unsupported. Using PNG.&quot;</span> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            format = <span class="stringliteral">&quot;PNG&quot;</span>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordtype">bool</span> asMovie;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        QMap&lt;QString, bool&gt; formatMapping;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        formatMapping[ <span class="stringliteral">&quot;PNG&quot;</span> ] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        formatMapping[ <span class="stringliteral">&quot;JPG&quot;</span> ] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        formatMapping[ <span class="stringliteral">&quot;TIF&quot;</span> ] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        formatMapping[ <span class="stringliteral">&quot;BMP&quot;</span> ] = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        formatMapping[ <span class="stringliteral">&quot;MP4&quot;</span> ] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        formatMapping[ <span class="stringliteral">&quot;AVI&quot;</span> ] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        formatMapping[ <span class="stringliteral">&quot;GIF&quot;</span> ] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        formatMapping[ <span class="stringliteral">&quot;WEBM&quot;</span> ] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        asMovie = formatMapping[format];</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">if</span> ( asMovie )</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">if</span> ( transparency )</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                err &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Warning: Transparency is not currenty supported in movie files&quot;</span> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Exporting movie...&quot;</span> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            mainWindow.mEditor-&gt;exportMovieCLI( outputPaths[i], cameraLayer, width, height, startFrame, endFrame );</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Done.&quot;</span> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Exporting image sequence...&quot;</span> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            mainWindow.mEditor-&gt;exportSeqCLI( outputPaths[i], cameraLayer, format, width, height, startFrame, endFrame, transparency );</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            out &lt;&lt; PencilApplication::tr( <span class="stringliteral">&quot;Done.&quot;</span> ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="class_pencil_application.html">PencilApplication</a> app( argc, argv );</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">return</span> handleArguments( app );</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    installTranslator( app );</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> handleArguments( app );</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
 <div class="ttc" id="class_pencil_application_html"><div class="ttname"><a href="class_pencil_application.html">PencilApplication</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilapplication_8h_source.html#l00023">pencilapplication.h:23</a></div></div>
 <div class="ttc" id="class_main_window2_html"><div class="ttname"><a href="class_main_window2.html">MainWindow2</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00051">mainwindow2.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 15:17:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 18 2017 04:09:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

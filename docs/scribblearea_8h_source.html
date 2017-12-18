@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8d915729aa0414c88f64bf257000d51b313a4ec9</span>
+   &#160;<span id="projectnumber">7f1ee04aad6043784447cd81b66da5f67c4b1ffb</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;vectorselection.h&quot;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;colormanager.h&quot;</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;viewmanager.h&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;canvasrenderer.h&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;canvaspainter.h&quot;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;preferencemanager.h&quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
@@ -332,7 +332,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="class_preference_manager.html">PreferenceManager</a> *mPrefs = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    QPixmap mCanvas;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="class_canvas_renderer.html">CanvasRenderer</a> mCanvasRenderer;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="class_canvas_painter.html">CanvasPainter</a> mCanvasPainter;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// Pixmap Cache keys</span></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    std::vector&lt;QPixmapCache::Key&gt; mPixmapCacheKeys;</div>
@@ -352,19 +352,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a0940d37bc14126a129380b69b2c9aac7"><div class="ttname"><a href="class_scribble_area.html#a0940d37bc14126a129380b69b2c9aac7">ScribbleArea::resetSelectionProperties</a></div><div class="ttdeci">void resetSelectionProperties()</div><div class="ttdoc">ScribbleArea::resetSelectionProperties should be used whenever translate, rotate, transform...</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01554">scribblearea.cpp:1554</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a08485c0b955dfb9afb3e620f4c0d5895"><div class="ttname"><a href="class_scribble_area.html#a08485c0b955dfb9afb3e620f4c0d5895">ScribbleArea::calcSelectionCenterPoints</a></div><div class="ttdeci">QVector&lt; QPoint &gt; calcSelectionCenterPoints()</div><div class="ttdoc">ScribbleArea::calculateSelectionCenter. </div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01332">scribblearea.cpp:1332</a></div></div>
-<div class="ttc" id="class_canvas_renderer_html"><div class="ttname"><a href="class_canvas_renderer.html">CanvasRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="canvasrenderer_8h_source.html#l00053">canvasrenderer.h:53</a></div></div>
 <div class="ttc" id="class_vector_selection_html"><div class="ttname"><a href="class_vector_selection.html">VectorSelection</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorselection_8h_source.html#l00025">vectorselection.h:25</a></div></div>
 <div class="ttc" id="class_stroke_manager_html"><div class="ttname"><a href="class_stroke_manager.html">StrokeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="strokemanager_8h_source.html#l00032">strokemanager.h:32</a></div></div>
 <div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00064">preferencemanager.h:64</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a0dbeeb69589589abdb3273c031e056f1"><div class="ttname"><a href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1">ScribbleArea::flipSelection</a></div><div class="ttdeci">void flipSelection(bool flipVertical)</div><div class="ttdoc">ScribbleArea::flipSelection flip selection along the X or Y axis. </div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01160">scribblearea.cpp:1160</a></div></div>
 <div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; int &gt;</a></div></div>
 <div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00046">editor.h:46</a></div></div>
+<div class="ttc" id="class_canvas_painter_html"><div class="ttname"><a href="class_canvas_painter.html">CanvasPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8h_source.html#l00055">canvaspainter.h:55</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00025">bitmapimage.h:25</a></div></div>
 <div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00052">scribblearea.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 15:17:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 18 2017 04:09:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

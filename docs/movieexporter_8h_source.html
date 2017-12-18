@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8d915729aa0414c88f64bf257000d51b313a4ec9</span>
+   &#160;<span id="projectnumber">7f1ee04aad6043784447cd81b66da5f67c4b1ffb</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -143,22 +143,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_status.html">Status</a> assembleAudio(<span class="keyword">const</span> <a class="code" href="class_object.html">Object</a>* obj, QString ffmpegPath, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">float</span>)&gt; progress);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_status.html">Status</a> generateImageSequence(<span class="keyword">const</span> <a class="code" href="class_object.html">Object</a>* obj, std::function&lt;<span class="keywordtype">void</span>(<span class="keywordtype">float</span>)&gt; progress);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_status.html">Status</a> combineVideoAndAudio(QString ffmpegPath, QString strOutputFile);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_status.html">Status</a> twoPassEncoding(QString ffmpeg, QString strOutputFile);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_status.html">Status</a> convertVideoAgain(QString ffmpeg, QString strIn, QString strOut);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_status.html">Status</a> convertToGif(QString ffmpeg, QString strIn, QString strOut);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_status.html">Status</a> convertToGif(QString ffmpeg, QString strOut);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_status.html">Status</a> executeFFMpegCommand(QString strCmd);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_status.html">Status</a> checkInputParameters(<span class="keyword">const</span> <a class="code" href="struct_export_movie_desc.html">ExportMovieDesc</a>&amp;);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_status.html">Status</a> executeFFMpegCommand(QString strCmd);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_status.html">Status</a> checkInputParameters(<span class="keyword">const</span> <a class="code" href="struct_export_movie_desc.html">ExportMovieDesc</a>&amp;);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QTemporaryDir mTempDir;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    QString mTempWorkDir;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="struct_export_movie_desc.html">ExportMovieDesc</a> mDesc;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> mCanceled = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // MOVIEEXPORTER_H</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    QTemporaryDir mTempDir;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QString mTempWorkDir;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="struct_export_movie_desc.html">ExportMovieDesc</a> mDesc;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> mCanceled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif // MOVIEEXPORTER_H</span></div>
 <div class="ttc" id="class_movie_exporter_html"><div class="ttname"><a href="class_movie_exporter.html">MovieExporter</a></div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8h_source.html#l00039">movieexporter.h:39</a></div></div>
 <div class="ttc" id="struct_export_movie_desc_html"><div class="ttname"><a href="struct_export_movie_desc.html">ExportMovieDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8h_source.html#l00028">movieexporter.h:28</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
@@ -166,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 15:17:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 18 2017 04:09:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

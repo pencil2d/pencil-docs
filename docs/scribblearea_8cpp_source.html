@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8d915729aa0414c88f64bf257000d51b313a4ec9</span>
+   &#160;<span id="projectnumber">7f1ee04aad6043784447cd81b66da5f67c4b1ffb</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -1106,7 +1106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;            paintCanvasCursor(painter);</div>
 <div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;        }</div>
 <div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;</div>
-<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;        mCanvasRenderer.renderGrid(painter);</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;        mCanvasPainter.renderGrid(painter);</div>
 <div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;</div>
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;        <span class="comment">// paints the selection outline</span></div>
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;        <span class="keywordflow">if</span> (somethingSelected &amp;&amp; (myTempTransformedSelection.isValid() || mMoveMode == ROTATION)) <span class="comment">// @revise</span></div>
@@ -1159,32 +1159,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;{</div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;    <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span> = mEditor-&gt;object();</div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    <a class="code" href="struct_render_options.html">RenderOptions</a> options;</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    options.bPrevOnionSkin = mPrefs-&gt;isOn(SETTING::PREV_ONION);</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    options.bNextOnionSkin = mPrefs-&gt;isOn(SETTING::NEXT_ONION);</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    options.bColorizePrevOnion = mPrefs-&gt;isOn(SETTING::ONION_RED);</div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    options.bColorizeNextOnion = mPrefs-&gt;isOn(SETTING::ONION_BLUE);</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    options.nPrevOnionSkinCount = mPrefs-&gt;getInt(SETTING::ONION_PREV_FRAMES_NUM);</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    options.nNextOnionSkinCount = mPrefs-&gt;getInt(SETTING::ONION_NEXT_FRAMES_NUM);</div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    options.fOnionSkinMaxOpacity = mPrefs-&gt;getInt(SETTING::ONION_MAX_OPACITY);</div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    options.fOnionSkinMinOpacity = mPrefs-&gt;getInt(SETTING::ONION_MIN_OPACITY);</div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;    options.bAntiAlias = mPrefs-&gt;isOn(SETTING::ANTIALIAS);</div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    options.bGrid = mPrefs-&gt;isOn(SETTING::GRID);</div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    options.nGridSize = mPrefs-&gt;getInt(SETTING::GRID_SIZE);</div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;    options.bAxis = mPrefs-&gt;isOn(SETTING::AXIS);</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    options.bThinLines = mPrefs-&gt;isOn(SETTING::INVISIBLE_LINES);</div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    options.bOutlines = mPrefs-&gt;isOn(SETTING::OUTLINES);</div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    options.nShowAllLayers = mShowAllLayers;</div>
-<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    options.bIsOnionAbsolute = (mPrefs-&gt;getString(SETTING::ONION_TYPE) == <span class="stringliteral">&quot;absolute&quot;</span>);</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;</div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    mCanvasRenderer.setOptions(options);</div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;    <a class="code" href="struct_canvas_painter_options.html">CanvasPainterOptions</a> o;</div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    o.bPrevOnionSkin       = mPrefs-&gt;isOn(SETTING::PREV_ONION);</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    o.bNextOnionSkin       = mPrefs-&gt;isOn(SETTING::NEXT_ONION);</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    o.bColorizePrevOnion   = mPrefs-&gt;isOn(SETTING::ONION_RED);</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;    o.bColorizeNextOnion   = mPrefs-&gt;isOn(SETTING::ONION_BLUE);</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;    o.nPrevOnionSkinCount  = mPrefs-&gt;getInt(SETTING::ONION_PREV_FRAMES_NUM);</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;    o.nNextOnionSkinCount  = mPrefs-&gt;getInt(SETTING::ONION_NEXT_FRAMES_NUM);</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;    o.fOnionSkinMaxOpacity = mPrefs-&gt;getInt(SETTING::ONION_MAX_OPACITY);</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;    o.fOnionSkinMinOpacity = mPrefs-&gt;getInt(SETTING::ONION_MIN_OPACITY);</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;    o.bAntiAlias           = mPrefs-&gt;isOn(SETTING::ANTIALIAS);</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;    o.bGrid                = mPrefs-&gt;isOn(SETTING::GRID);</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;    o.nGridSize            = mPrefs-&gt;getInt(SETTING::GRID_SIZE);</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;    o.bAxis                = mPrefs-&gt;isOn(SETTING::AXIS);</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;    o.bThinLines           = mPrefs-&gt;isOn(SETTING::INVISIBLE_LINES);</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;    o.bOutlines            = mPrefs-&gt;isOn(SETTING::OUTLINES);</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;    o.nShowAllLayers       = mShowAllLayers;</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;    o.bIsOnionAbsolute     = (mPrefs-&gt;getString(SETTING::ONION_TYPE) == <span class="stringliteral">&quot;absolute&quot;</span>);</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;    o.scaling              = mEditor-&gt;view()-&gt;scaling();</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;    mCanvasPainter.setOptions(o);</div>
 <div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;</div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    <span class="comment">//qDebug() &lt;&lt; &quot;Antialias=&quot; &lt;&lt; options.bAntiAlias;</span></div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;    mCanvasPainter.setCanvas(&amp;mCanvas);</div>
 <div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;</div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    mCanvasRenderer.setCanvas(&amp;mCanvas);</div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    mCanvasRenderer.setViewTransform(mEditor-&gt;view()-&gt;getView());</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;    <a class="code" href="class_view_manager.html">ViewManager</a>* vm = mEditor-&gt;view();</div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    mCanvasPainter.setViewTransform(vm-&gt;getView(), vm-&gt;getViewInverse());</div>
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;</div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;    mCanvasRenderer.paint(<span class="keywordtype">object</span>, mEditor-&gt;layers()-&gt;currentLayerIndex(), frame, rect);</div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;    mCanvasPainter.paint(<span class="keywordtype">object</span>, mEditor-&gt;layers()-&gt;currentLayerIndex(), frame, rect);</div>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;</div>
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;}</div>
@@ -1387,7 +1387,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;</div>
 <div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;QRectF ScribbleArea::getCameraRect()</div>
 <div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;{</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;    <span class="keywordflow">return</span> mCanvasRenderer.getCameraRect();</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;    <span class="keywordflow">return</span> mCanvasPainter.getCameraRect();</div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;}</div>
 <div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;</div>
 <div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;QPointF ScribbleArea::getCentralPoint()</div>
@@ -1474,7 +1474,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;    {</div>
 <div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
 <div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;        {</div>
-<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;            mCanvasRenderer.setTransformedSelection(mySelection.toRect(), selectionTransformation);</div>
+<div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;            mCanvasPainter.setTransformedSelection(mySelection.toRect(), selectionTransformation);</div>
 <div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;        }</div>
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;        {</div>
@@ -1491,7 +1491,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;</div>
 <div class="line"><a name="l01410"></a><span class="lineno"> 1410</span>&#160;<span class="keywordtype">void</span> ScribbleArea::applyTransformedSelection()</div>
 <div class="line"><a name="l01411"></a><span class="lineno"> 1411</span>&#160;{</div>
-<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;    mCanvasRenderer.ignoreTransformedSelection();</div>
+<div class="line"><a name="l01412"></a><span class="lineno"> 1412</span>&#160;    mCanvasPainter.ignoreTransformedSelection();</div>
 <div class="line"><a name="l01413"></a><span class="lineno"> 1413</span>&#160;</div>
 <div class="line"><a name="l01414"></a><span class="lineno"> 1414</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a name="l01415"></a><span class="lineno"> 1415</span>&#160;    <span class="keywordflow">if</span> (layer == NULL)</div>
@@ -1526,7 +1526,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;</div>
 <div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;<span class="keywordtype">void</span> ScribbleArea::cancelTransformedSelection()</div>
 <div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;{</div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;    mCanvasRenderer.ignoreTransformedSelection();</div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;    mCanvasPainter.ignoreTransformedSelection();</div>
 <div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;</div>
 <div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    <span class="keywordflow">if</span> (somethingSelected) {</div>
 <div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;</div>
@@ -1813,17 +1813,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;}</div>
 <div class="ttc" id="class_base_tool_html_a3255c19d934bad5922b957bd1326dce3"><div class="ttname"><a href="class_base_tool.html#a3255c19d934bad5922b957bd1326dce3">BaseTool::canvasCursor</a></div><div class="ttdeci">static QPixmap canvasCursor(float brushWidth, float brushFeather, bool useFeather, float scalingFac, int windowWidth)</div><div class="ttdoc">precision circular cursor: used for drawing a cursor within scribble area. </div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00107">basetool.cpp:107</a></div></div>
 <div class="ttc" id="class_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00057">basetool.h:57</a></div></div>
+<div class="ttc" id="class_view_manager_html"><div class="ttname"><a href="class_view_manager.html">ViewManager</a></div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8h_source.html#l00029">viewmanager.h:29</a></div></div>
 <div class="ttc" id="class_vector_image_html_abe83d747ae21921b9b0fe844679788dd"><div class="ttname"><a href="class_vector_image.html#abe83d747ae21921b9b0fe844679788dd">VectorImage::getFirstSelectedCurve</a></div><div class="ttdeci">int getFirstSelectedCurve()</div><div class="ttdoc">VectorImage::getFirstSelectedCurve. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00768">vectorimage.cpp:768</a></div></div>
 <div class="ttc" id="class_vector_image_html_af58e44290b046f828acac513006d9978"><div class="ttname"><a href="class_vector_image.html#af58e44290b046f828acac513006d9978">VectorImage::getCurveSize</a></div><div class="ttdeci">int getCurveSize(int curveNumber)</div><div class="ttdoc">VectorImage::getCurveSize. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01667">vectorimage.cpp:1667</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
 <div class="ttc" id="class_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00024">layerbitmap.h:24</a></div></div>
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
 <div class="ttc" id="class_vector_image_html_a59f677bcef135d1f964b5c0827f32c88"><div class="ttname"><a href="class_vector_image.html#a59f677bcef135d1f964b5c0827f32c88">VectorImage::calculateSelectionRect</a></div><div class="ttdeci">void calculateSelectionRect()</div><div class="ttdoc">VectorImage::calculateSelectionRect. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00850">vectorimage.cpp:850</a></div></div>
+<div class="ttc" id="struct_canvas_painter_options_html"><div class="ttname"><a href="struct_canvas_painter_options.html">CanvasPainterOptions</a></div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8h_source.html#l00033">canvaspainter.h:33</a></div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00035">vectorimage.h:35</a></div></div>
 <div class="ttc" id="class_vector_image_html_ab00261dbf44cfe8bf50622222b52950b"><div class="ttname"><a href="class_vector_image.html#ab00261dbf44cfe8bf50622222b52950b">VectorImage::selectAll</a></div><div class="ttdeci">void selectAll()</div><div class="ttdoc">VectorImage::selectAll. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00795">vectorimage.cpp:795</a></div></div>
 <div class="ttc" id="class_vector_image_html_aae8ec307a6f42aa02e263a432d5eb795"><div class="ttname"><a href="class_vector_image.html#aae8ec307a6f42aa02e263a432d5eb795">VectorImage::getFirstSelectedArea</a></div><div class="ttdeci">int getFirstSelectedArea()</div><div class="ttdoc">VectorImage::getFirstSelectedArea. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00782">vectorimage.cpp:782</a></div></div>
 <div class="ttc" id="class_vector_image_html_ac0847a6551b63feb2cc80ae770e00f2c"><div class="ttname"><a href="class_vector_image.html#ac0847a6551b63feb2cc80ae770e00f2c">VectorImage::getVertex</a></div><div class="ttdeci">QPointF getVertex(int curveNumber, int vertexNumber)</div><div class="ttdoc">VectorImage::getVertex. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01529">vectorimage.cpp:1529</a></div></div>
-<div class="ttc" id="struct_render_options_html"><div class="ttname"><a href="struct_render_options.html">RenderOptions</a></div><div class="ttdef"><b>Definition:</b> <a href="canvasrenderer_8h_source.html#l00032">canvasrenderer.h:32</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00287">layermanager.cpp:287</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a0940d37bc14126a129380b69b2c9aac7"><div class="ttname"><a href="class_scribble_area.html#a0940d37bc14126a129380b69b2c9aac7">ScribbleArea::resetSelectionProperties</a></div><div class="ttdeci">void resetSelectionProperties()</div><div class="ttdoc">ScribbleArea::resetSelectionProperties should be used whenever translate, rotate, transform...</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01554">scribblearea.cpp:1554</a></div></div>
@@ -1839,7 +1840,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 15:17:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 18 2017 04:09:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">8d915729aa0414c88f64bf257000d51b313a4ec9</span>
+   &#160;<span id="projectnumber">7f1ee04aad6043784447cd81b66da5f67c4b1ffb</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -124,32 +124,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_view_manager.html">ViewManager</a>(<a class="code" href="class_editor.html">Editor</a>* editor);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> init() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_status.html">Status</a> load( <a class="code" href="class_object.html">Object</a>* ) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_status.html">Status</a> save( <a class="code" href="class_object.html">Object</a>* ) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_status.html">Status</a> load(<a class="code" href="class_object.html">Object</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_status.html">Status</a> save(<a class="code" href="class_object.html">Object</a>*) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> workingLayerChanged(<a class="code" href="class_layer.html">Layer</a>* layer) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QTransform getView();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> resetView();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QPointF mapCanvasToScreen( QPointF p );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QPointF mapScreenToCanvas( QPointF p );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    QRectF mapCanvasToScreen( <span class="keyword">const</span> QRectF&amp; rect );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QRectF mapScreenToCanvas( <span class="keyword">const</span> QRectF&amp; rect );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    QPainterPath mapCanvasToScreen( <span class="keyword">const</span> QPainterPath&amp; path );</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QPainterPath mapScreenToCanvas( <span class="keyword">const</span> QPainterPath&amp; path );</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QPointF translation();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> translate( <span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy );</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> translate( QPointF offset );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span> rotation();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> rotate( <span class="keywordtype">float</span> degree );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span> scaling();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> scale( <span class="keywordtype">float</span> scaleValue );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> snapScale( <span class="keywordtype">int</span> direction );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QTransform getViewInverse();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> resetView();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QPointF mapCanvasToScreen(QPointF p);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QPointF mapScreenToCanvas(QPointF p);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QRectF mapCanvasToScreen(<span class="keyword">const</span> QRectF&amp; rect);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QRectF mapScreenToCanvas(<span class="keyword">const</span> QRectF&amp; rect);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QPainterPath mapCanvasToScreen(<span class="keyword">const</span> QPainterPath&amp; path);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QPainterPath mapScreenToCanvas(<span class="keyword">const</span> QPainterPath&amp; path);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QPointF translation();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> translate(<span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> translate(QPointF offset);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">float</span> rotation();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> rotate(<span class="keywordtype">float</span> degree);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> scaling();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> scale(<span class="keywordtype">float</span> scaleValue);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> scaleUp();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> scaleDown();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
@@ -185,19 +185,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> mIsFlipHorizontal = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> mIsFlipVertical = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> QVector&lt;float&gt; mZoomLevels = QVector&lt;float&gt;() &lt;&lt; .01f &lt;&lt; .02f &lt;&lt; .04f</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                                        &lt;&lt; .06f &lt;&lt; .08f &lt;&lt; .12f</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                                        &lt;&lt; .16f &lt;&lt; .25f &lt;&lt; .33f</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                        &lt;&lt; .5f &lt;&lt; .75f &lt;&lt; 1.f</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                        &lt;&lt; 1.5f &lt;&lt; 2.f &lt;&lt; 3.f</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                                        &lt;&lt; 4.f &lt;&lt; 5.f &lt;&lt; 6.f</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                                        &lt;&lt; 8.f &lt;&lt; 16.f &lt;&lt; 32.f</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                                        &lt;&lt; 48.f &lt;&lt; 64.f &lt;&lt; 96.f;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* mCameraLayer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif // VIEWMANAGER_H</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">const</span> std::vector&lt;float&gt; mZoomLevels{ 0.01f, 0.02f, 0.04f, 0.06f,  0.08f, 0.12f,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                          0.16f, 0.25f, 0.33f,  0.5f,  0.75f,  1.0f,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                          1.5f,   2.0f,  3.0f,  4.0f,   5.0f,  6.0f,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                          8.0f,  16.0f,  32.f,  48.f,   64.f, 96.0f };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="class_layer_camera.html">LayerCamera</a>* mCameraLayer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // VIEWMANAGER_H</span></div>
 <div class="ttc" id="class_view_manager_html"><div class="ttname"><a href="class_view_manager.html">ViewManager</a></div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8h_source.html#l00029">viewmanager.h:29</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00045">layercamera.h:45</a></div></div>
 <div class="ttc" id="class_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00027">basemanager.h:27</a></div></div>
@@ -209,7 +205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 12 2017 15:17:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 18 2017 04:09:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
