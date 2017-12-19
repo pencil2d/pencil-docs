@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">36cd7bb9de9979d96c6540beb535dbf6104f764c</span>
+   &#160;<span id="projectnumber">98776dc128380ff7b625aea5da6a737e5b9fd077</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -167,7 +167,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    mCurrentLayerIndex = layer;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    mFrameNumber = frame;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QRectF mappedInvCanvas = mViewInverse.mapRect(mCanvas-&gt;rect());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QRectF mappedInvCanvas = mViewInverse.mapRect(QRectF(mCanvas-&gt;rect()));</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QSizeF croppedPainter = QSizeF(mappedInvCanvas.size());</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QRectF aligned = QRectF(QPointF(mappedInvCanvas.topLeft()), croppedPainter);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QPainter painter(mCanvas);</div>
@@ -347,14 +347,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="comment">// to our (not yet) scaled bitmap</span></div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    mScaledBitmap = origImage.copy();</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// map to correct matrix</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    QRectF mappedOrigImage = mViewInverse.mapRect(QRectF(origImage.rect()));</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">if</span> (mOptions.scaling &gt;= 1.0) {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">// TODO: Qt doesn&#39;t handle huge upscaled qimages well...</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">// possible solution, myPaintLib canvas renderer splits its canvas up in chunks.</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">if</span> (mOptions.scaling &gt;= 1.0) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="comment">// TODO: Qt doesn&#39;t handle huge upscaled qimages well...</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="comment">// possible solution, myPaintLib canvas renderer splits its canvas up in chunks.</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">// map to correct matrix</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        QRectF mappedOrigImage = mViewTransform.mapRect(QRectF(origImage.rect()));</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        mScaledBitmap = mScaledBitmap.scaled(mappedOrigImage.size().toSize(),</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                             Qt::KeepAspectRatio, Qt::SmoothTransformation);</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
@@ -622,7 +622,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 19 2017 00:09:56 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 19 2017 22:29:55 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
