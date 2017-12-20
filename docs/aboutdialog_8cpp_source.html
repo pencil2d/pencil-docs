@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">98776dc128380ff7b625aea5da6a737e5b9fd077</span>
+   &#160;<span id="projectnumber">6e843b7dce4152cc66c1bb104d386f25196cb5cf</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -110,77 +110,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QSpinBox&gt;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QGridLayout&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QGroupBox&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;AboutDialog::AboutDialog(QWidget* parent ) : QDialog(parent)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    setWindowTitle(tr(<span class="stringliteral">&quot;About&quot;</span>));</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    setFixedSize(450,450);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    setWindowFlags(Qt::Dialog | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> AboutDialog::init()</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QLabel* logo = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    logo-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    logo-&gt;setPixmap(QPixmap(<span class="stringliteral">&quot;:icons/logo.png&quot;</span>));</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    logo-&gt;setAlignment(Qt::AlignCenter);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QLabel* logoText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    logoText-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    logoText-&gt;setAlignment(Qt::AlignCenter);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    logoText-&gt;setText(tr(<span class="stringliteral">&quot;&lt;b&gt;Pencil2D&lt;/b&gt;&quot;</span>));</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QLabel* aboutText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    aboutText-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    aboutText-&gt;setTextInteractionFlags(Qt::TextBrowserInteraction);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    aboutText-&gt;setWordWrap(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    aboutText-&gt;setOpenExternalLinks(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    aboutText-&gt;setText(tr(<span class="stringliteral">&quot;Official site: &lt;a href=\&quot;http://pencil2d.github.io\&quot;&gt;pencil2d.github.io&lt;/a&gt;&quot;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                          <span class="stringliteral">&quot;&lt;br&gt;Developed by: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang&lt;/b&gt;&quot;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                          <span class="stringliteral">&quot;&lt;br&gt;Thanks to Qt Framework &lt;a href=\&quot;https://www.qt.io/\&quot;&gt;https://www.qt.io/&lt;/a&gt;&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                          <span class="stringliteral">&quot;&lt;br&gt;Distributed under the &lt;a href=\&quot;http://www.gnu.org/licenses/gpl-2.0.html\&quot;&gt;GNU General Public License, version 2&lt;/a&gt;&quot;</span>));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QVBoxLayout* lay = <span class="keyword">new</span> QVBoxLayout;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    lay-&gt;addWidget(logo);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    lay-&gt;addWidget(logoText);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    lay-&gt;addWidget(aboutText);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#define STRINGIFY(x) #x</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOSTRING(x) STRINGIFY(x)</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_TIMESTAMP__ TOSTRING(GIT_TIMESTAMP)</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_COMMIT_HASH__ TOSTRING(GIT_CURRENT_SHA1)</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QLabel* devInfoText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    devInfoText-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    devInfoText-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color: #ffffff;&quot;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                        <span class="stringliteral">&quot;border-style: solid; border-width: 1px; border-color: gray;}&quot;</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    devInfoText-&gt;setTextInteractionFlags(Qt::TextSelectableByMouse);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    devInfoText-&gt;setFixedHeight(60);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    devInfoText-&gt;setAlignment(Qt::AlignCenter);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    QString devText = QString(<span class="stringliteral">&quot;Version: %1&quot;</span>).arg(APP_VERSION);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#if defined(GIT_EXISTS) &amp;&amp; defined(NIGHTLY_BUILD)</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span>    devText += <span class="stringliteral">&quot;&lt;br&gt;commit: &quot;</span> S__GIT_COMMIT_HASH__ <span class="stringliteral">&quot;&lt;br&gt; date: &quot;</span> S__GIT_TIMESTAMP__ <span class="stringliteral">&quot;&lt;br&gt;&quot;</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if !defined(PENCIL2D_RELEASE)</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span>    devText += <span class="stringliteral">&quot; Development build&quot;</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor"></span>    devInfoText-&gt;setText(devText);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    lay-&gt;addWidget(devInfoText);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QPushButton* okButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;OK&quot;</span>));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    connect(okButton, &amp;QAbstractButton::clicked, <span class="keyword">this</span>, &amp;QDialog::accept);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QHBoxLayout* buttonsLayout = <span class="keyword">new</span> QHBoxLayout;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    buttonsLayout-&gt;addWidget(okButton);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    lay-&gt;addLayout(buttonsLayout);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    setLayout(lay);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QSysInfo&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QClipboard&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;AboutDialog::AboutDialog(QWidget* parent ) : QDialog(parent)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    setWindowTitle(tr(<span class="stringliteral">&quot;About&quot;</span>));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    setFixedSize(450,450);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    setWindowFlags(Qt::Dialog | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> AboutDialog::init()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    QLabel* logo = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    logo-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    logo-&gt;setPixmap(QPixmap(<span class="stringliteral">&quot;:icons/logo.png&quot;</span>));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    logo-&gt;setAlignment(Qt::AlignCenter);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    QLabel* logoText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    logoText-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    logoText-&gt;setAlignment(Qt::AlignCenter);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    logoText-&gt;setText(tr(<span class="stringliteral">&quot;&lt;b&gt;Pencil2D&lt;/b&gt;&quot;</span>));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QLabel* aboutText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    aboutText-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    aboutText-&gt;setTextInteractionFlags(Qt::TextBrowserInteraction);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    aboutText-&gt;setWordWrap(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    aboutText-&gt;setOpenExternalLinks(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    aboutText-&gt;setText(tr(<span class="stringliteral">&quot;Official site: &lt;a href=\&quot;http://pencil2d.github.io\&quot;&gt;pencil2d.github.io&lt;/a&gt;&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                          <span class="stringliteral">&quot;&lt;br&gt;Developed by: &lt;b&gt;Pascal Naidon, Patrick Corrieri, Matt Chang&lt;/b&gt;&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                          <span class="stringliteral">&quot;&lt;br&gt;Thanks to Qt Framework &lt;a href=\&quot;https://www.qt.io/\&quot;&gt;https://www.qt.io/&lt;/a&gt;&quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                          <span class="stringliteral">&quot;&lt;br&gt;Distributed under the &lt;a href=\&quot;http://www.gnu.org/licenses/gpl-2.0.html\&quot;&gt;GNU General Public License, version 2&lt;/a&gt;&quot;</span>));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QVBoxLayout* lay = <span class="keyword">new</span> QVBoxLayout;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    lay-&gt;addWidget(logo);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    lay-&gt;addWidget(logoText);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    lay-&gt;addWidget(aboutText);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define STRINGIFY(x) #x</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TOSTRING(x) STRINGIFY(x)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_TIMESTAMP__ TOSTRING(GIT_TIMESTAMP)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_COMMIT_HASH__ TOSTRING(GIT_CURRENT_SHA1)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    QLabel* devInfoText = <span class="keyword">new</span> QLabel(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    devInfoText-&gt;setFont(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>, 10));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    devInfoText-&gt;setStyleSheet(<span class="stringliteral">&quot;QLabel { background-color: #ffffff;&quot;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                        <span class="stringliteral">&quot;border-style: solid; border-width: 1px; border-color: gray;}&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    devInfoText-&gt;setTextInteractionFlags(Qt::TextSelectableByMouse);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    devInfoText-&gt;setAlignment(Qt::AlignCenter);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    QStringList devText;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    devText &lt;&lt; QString(<span class="stringliteral">&quot;Version: %1&quot;</span>).arg(APP_VERSION);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#if defined(GIT_EXISTS) &amp;&amp; defined(NIGHTLY_BUILD)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; <span class="stringliteral">&quot;commit: &quot;</span> S__GIT_COMMIT_HASH__ ;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    devText &lt;&lt; <span class="stringliteral">&quot;date: &quot;</span> S__GIT_TIMESTAMP__ ;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if !defined(PENCIL2D_RELEASE)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; <span class="stringliteral">&quot;Development build&quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; QString(<span class="stringliteral">&quot;Operating System: %1&quot;</span>).arg(QSysInfo::prettyProductName());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    devText &lt;&lt; QString(<span class="stringliteral">&quot;Cpu Architecture: %1&quot;</span>).arg(QSysInfo::buildCpuArchitecture());</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    devInfoText-&gt;setText(devText.join(<span class="stringliteral">&quot;&lt;br&gt;&quot;</span>));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    lay-&gt;addWidget(devInfoText);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QPushButton* copyToClipboardButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;Copy to clipboard&quot;</span>));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    connect(copyToClipboardButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, [devText] </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        QApplication::clipboard()-&gt;setText(devText.join(<span class="stringliteral">&quot;\n&quot;</span>));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    });</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    QPushButton* okButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;OK&quot;</span>));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    connect(okButton, &amp;QAbstractButton::clicked, <span class="keyword">this</span>, &amp;QDialog::accept);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    QHBoxLayout* buttonsLayout = <span class="keyword">new</span> QHBoxLayout;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    buttonsLayout-&gt;addWidget(copyToClipboardButton);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    buttonsLayout-&gt;addWidget(okButton);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    lay-&gt;addLayout(buttonsLayout);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    setLayout(lay);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 19 2017 22:29:55 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 20 2017 05:59:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
