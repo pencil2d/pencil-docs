@@ -17,6 +17,7 @@ var searchData=
   ['shortcutfilter',['ShortcutFilter',['../class_shortcut_filter.html',1,'']]],
   ['shortcutspage',['ShortcutsPage',['../class_shortcuts_page.html',1,'']]],
   ['signalblocker',['SignalBlocker',['../class_signal_blocker.html',1,'']]],
+  ['skipframe',['skipFrame',['../class_playback_manager.html#a1e23fb14114d31c9f56aed100551dc2c',1,'PlaybackManager']]],
   ['smudgetool',['SmudgeTool',['../class_smudge_tool.html',1,'']]],
   ['soundclip',['SoundClip',['../class_sound_clip.html',1,'']]],
   ['soundmanager',['SoundManager',['../class_sound_manager.html',1,'']]],

@@ -7,5 +7,6 @@ var searchData=
   ['setselectionrect',['setSelectionRect',['../class_vector_image.html#ada7904f8824df767de68284a9e6fde25',1,'VectorImage']]],
   ['setselectiontransformation',['setSelectionTransformation',['../class_vector_image.html#ada2a3aff947a90cfc53e95ed3e391b5a',1,'VectorImage']]],
   ['setwidth',['setWidth',['../class_bucket_tool.html#a73dd15022326729eb46ccec330e57406',1,'BucketTool']]],
+  ['skipframe',['skipFrame',['../class_playback_manager.html#a1e23fb14114d31c9f56aed100551dc2c',1,'PlaybackManager']]],
   ['storeclosestvectorcurve',['storeClosestVectorCurve',['../class_move_tool.html#a61410411e9d5d5b66f4a88bd10730c16',1,'MoveTool']]]
 ];
