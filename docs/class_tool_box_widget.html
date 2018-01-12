@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">94a68a4eafa9972e7bd03b3fffbbc6fdb1a05ba9</span>
+   &#160;<span id="projectnumber">93bffc52548cfc551fa82f5e5276da14c0587d6c</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_tool_box_widget-members.html">List of all members</a>  </div>
@@ -170,6 +171,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateUI</b> () overr
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setEditor</b> (<a class="el" href="class_editor.html">Editor</a> *e)</td></tr>
 <tr class="separator:a9007b65bd3b12b5dc937b50dc13dd060 inherit pub_methods_class_base_dock_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a50366d382a3e1e8406f33d43e1144820"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50366d382a3e1e8406f33d43e1144820"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeEvent</b> (QResizeEvent *event) override</td></tr>
+<tr class="separator:a50366d382a3e1e8406f33d43e1144820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a1cf69c3533bc748003d2fceaf01798b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cf69c3533bc748003d2fceaf01798b7"></a>
@@ -181,46 +188,49 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deselectAllTools</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aab38aefad6bd77cfdd5ac07d33ff2d90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab38aefad6bd77cfdd5ac07d33ff2d90"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>pencilButton</b> = nullptr</td></tr>
-<tr class="separator:aab38aefad6bd77cfdd5ac07d33ff2d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c3df113c3d48b29d0ec3a119c1d786"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88c3df113c3d48b29d0ec3a119c1d786"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>selectButton</b> = nullptr</td></tr>
-<tr class="separator:a88c3df113c3d48b29d0ec3a119c1d786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad483b927b5b051a29682de0d162d67d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad483b927b5b051a29682de0d162d67d2"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>moveButton</b> = nullptr</td></tr>
-<tr class="separator:ad483b927b5b051a29682de0d162d67d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2966a38a1c70abacef5a14a4b14eed62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2966a38a1c70abacef5a14a4b14eed62"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>handButton</b> = nullptr</td></tr>
-<tr class="separator:a2966a38a1c70abacef5a14a4b14eed62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c63a61172abebed611c9cd4c8d5a7b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c63a61172abebed611c9cd4c8d5a7b9"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>eraserButton</b> = nullptr</td></tr>
-<tr class="separator:a8c63a61172abebed611c9cd4c8d5a7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1153e670f5e7818561605bdca755bb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1153e670f5e7818561605bdca755bb4"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>penButton</b> = nullptr</td></tr>
-<tr class="separator:aa1153e670f5e7818561605bdca755bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66a3b293df98a9bc7198e341e5baec3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66a3b293df98a9bc7198e341e5baec3c"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>polylineButton</b> = nullptr</td></tr>
-<tr class="separator:a66a3b293df98a9bc7198e341e5baec3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a979b9da2b5d7995c98502944629620"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a979b9da2b5d7995c98502944629620"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>bucketButton</b> = nullptr</td></tr>
-<tr class="separator:a2a979b9da2b5d7995c98502944629620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada2dc26f3702eb7717d7ba0f8347c600"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2dc26f3702eb7717d7ba0f8347c600"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>colouringButton</b> = nullptr</td></tr>
-<tr class="separator:ada2dc26f3702eb7717d7ba0f8347c600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2846461c8a3789b56d1416b4426a5a6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2846461c8a3789b56d1416b4426a5a6f"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>eyedropperButton</b> = nullptr</td></tr>
-<tr class="separator:a2846461c8a3789b56d1416b4426a5a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52cd44368f0a183f80a8d07890b15c5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52cd44368f0a183f80a8d07890b15c5f"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>smudgeButton</b> = nullptr</td></tr>
-<tr class="separator:a52cd44368f0a183f80a8d07890b15c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef35b496246ff5a1d7cabb0a3dcb3550"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef35b496246ff5a1d7cabb0a3dcb3550"></a>
-QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>clearButton</b> = nullptr</td></tr>
-<tr class="separator:aef35b496246ff5a1d7cabb0a3dcb3550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e7ab6c3658474682beb90fd3d4a319"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50e7ab6c3658474682beb90fd3d4a319"></a>
+QGridLayout *&#160;</td><td class="memItemRight" valign="bottom"><b>mGridLayout</b></td></tr>
+<tr class="separator:a50e7ab6c3658474682beb90fd3d4a319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36f4eb7000a246630578be08335e3e70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36f4eb7000a246630578be08335e3e70"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mPencilButton</b> = nullptr</td></tr>
+<tr class="separator:a36f4eb7000a246630578be08335e3e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a453dd42044a1e6ae5882bc8e909b8184"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a453dd42044a1e6ae5882bc8e909b8184"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mSelectButton</b> = nullptr</td></tr>
+<tr class="separator:a453dd42044a1e6ae5882bc8e909b8184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e5f18563d9e08c25ef8a330ac7af5fb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e5f18563d9e08c25ef8a330ac7af5fb"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mMoveButton</b> = nullptr</td></tr>
+<tr class="separator:a4e5f18563d9e08c25ef8a330ac7af5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2153cbacfa6be25adaaef6b71e1340fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2153cbacfa6be25adaaef6b71e1340fd"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mHandButton</b> = nullptr</td></tr>
+<tr class="separator:a2153cbacfa6be25adaaef6b71e1340fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a384fdbb3fae078f495312e9c9d8fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77a384fdbb3fae078f495312e9c9d8fa"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mEraserButton</b> = nullptr</td></tr>
+<tr class="separator:a77a384fdbb3fae078f495312e9c9d8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ff21ba50ab911d29ffda1955ce2377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58ff21ba50ab911d29ffda1955ce2377"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mPenButton</b> = nullptr</td></tr>
+<tr class="separator:a58ff21ba50ab911d29ffda1955ce2377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f44a89841b545c0f8568ea441d4c1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7f44a89841b545c0f8568ea441d4c1d"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mPolylineButton</b> = nullptr</td></tr>
+<tr class="separator:ab7f44a89841b545c0f8568ea441d4c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e7794264ed8c0b32d0faa9f443ab9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1e7794264ed8c0b32d0faa9f443ab9b"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mBucketButton</b> = nullptr</td></tr>
+<tr class="separator:af1e7794264ed8c0b32d0faa9f443ab9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6772e77e87384d290fb1f1766adbe8d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6772e77e87384d290fb1f1766adbe8d3"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mBrushButton</b> = nullptr</td></tr>
+<tr class="separator:a6772e77e87384d290fb1f1766adbe8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5f3031a329e3a6c37d7551ced644bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada5f3031a329e3a6c37d7551ced644bd"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mEyedropperButton</b> = nullptr</td></tr>
+<tr class="separator:ada5f3031a329e3a6c37d7551ced644bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b4718848f0906b8388f22de9e5a22f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39b4718848f0906b8388f22de9e5a22f"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mSmudgeButton</b> = nullptr</td></tr>
+<tr class="separator:a39b4718848f0906b8388f22de9e5a22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6837ef895de22e8b704449f64df71c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6837ef895de22e8b704449f64df71c3"></a>
+QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mClearButton</b> = nullptr</td></tr>
+<tr class="separator:ab6837ef895de22e8b704449f64df71c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="toolbox_8h_source.html#l00031">31</a> of file <a class="el" href="toolbox_8h_source.html">toolbox.h</a>.</p>
+<p>Definition at line <a class="el" href="toolbox_8h_source.html#l00032">32</a> of file <a class="el" href="toolbox_8h_source.html">toolbox.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="toolbox_8h_source.html">toolbox.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="toolbox_8cpp_source.html">toolbox.cpp</a></li>
@@ -228,7 +238,7 @@ QToolButton *&#160;</td><td class="memItemRight" valign="bottom"><b>clearButton<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 11 2018 11:55:32 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 12 2018 12:53:15 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
