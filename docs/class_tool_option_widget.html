@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">93bffc52548cfc551fa82f5e5276da14c0587d6c</span>
+   &#160;<span id="projectnumber">ec5a977bd72a8a3d82f8557cab848e71839cbd91</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -113,9 +113,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>onToolPropertyChanged
 <tr class="memitem:a90b8931461fb9362ac34b5382dda70fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90b8931461fb9362ac34b5382dda70fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onToolChanged</b> (ToolType)</td></tr>
 <tr class="separator:a90b8931461fb9362ac34b5382dda70fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b1452c1ed851336acc6f67a81896d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76b1452c1ed851336acc6f67a81896d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visibilityOnLayer</b> ()</td></tr>
-<tr class="separator:a76b1452c1ed851336acc6f67a81896d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551e0c0df6b9eed03990fdaf597314b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a551e0c0df6b9eed03990fdaf597314b9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setVisibility</b> (<a class="el" href="class_base_tool.html">BaseTool</a> *)</td></tr>
+<tr class="separator:a551e0c0df6b9eed03990fdaf597314b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -186,58 +186,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>createUI</b> ()</td><
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a4c3af43a248e08e7d89ba7f632a2b714"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c3af43a248e08e7d89ba7f632a2b714"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mUseBezierBox</b> = nullptr</td></tr>
-<tr class="separator:a4c3af43a248e08e7d89ba7f632a2b714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39fbdfb9999c880191e886805aefe2a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39fbdfb9999c880191e886805aefe2a9"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mUsePressureBox</b> = nullptr</td></tr>
-<tr class="separator:a39fbdfb9999c880191e886805aefe2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22c70cd3e783464895769cf06d8f729c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22c70cd3e783464895769cf06d8f729c"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mUseFeatherBox</b> = nullptr</td></tr>
-<tr class="separator:a22c70cd3e783464895769cf06d8f729c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4457a23556f1c4df38158e7099b271b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4457a23556f1c4df38158e7099b271b5"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mMakeInvisibleBox</b> = nullptr</td></tr>
-<tr class="separator:a4457a23556f1c4df38158e7099b271b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6806da054723d25b26b393531cab47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b6806da054723d25b26b393531cab47"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mPreserveAlphaBox</b> = nullptr</td></tr>
-<tr class="separator:a7b6806da054723d25b26b393531cab47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfa9ce797bded28f442b8c00a0e60d35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfa9ce797bded28f442b8c00a0e60d35"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mVectorMergeBox</b> = nullptr</td></tr>
-<tr class="separator:acfa9ce797bded28f442b8c00a0e60d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3384f3b17ba05375a49b7fbf90757c1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3384f3b17ba05375a49b7fbf90757c1a"></a>
-QDoubleSpinBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mBrushSpinBox</b> = nullptr</td></tr>
-<tr class="separator:a3384f3b17ba05375a49b7fbf90757c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd43811b476e5e69e39365ad9296392"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cd43811b476e5e69e39365ad9296392"></a>
-QDoubleSpinBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mFeatherSpinBox</b> = nullptr</td></tr>
-<tr class="separator:a6cd43811b476e5e69e39365ad9296392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b474ff528299a1e30d2233605bafe3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b474ff528299a1e30d2233605bafe3c"></a>
-<a class="el" href="class_spin_slider.html">SpinSlider</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mSizeSlider</b> = nullptr</td></tr>
-<tr class="separator:a0b474ff528299a1e30d2233605bafe3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af483d94976530b1adafb00ee18e08bbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af483d94976530b1adafb00ee18e08bbd"></a>
-<a class="el" href="class_spin_slider.html">SpinSlider</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mFeatherSlider</b> = nullptr</td></tr>
-<tr class="separator:af483d94976530b1adafb00ee18e08bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a396f6637c2d9b6d290e65169a437c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a396f6637c2d9b6d290e65169a437c3"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mUseAABox</b> = nullptr</td></tr>
-<tr class="separator:a3a396f6637c2d9b6d290e65169a437c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17b0380e4bb67c87c8bd123934b2f9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa17b0380e4bb67c87c8bd123934b2f9d"></a>
-QComboBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mInpol</b> = nullptr</td></tr>
-<tr class="separator:aa17b0380e4bb67c87c8bd123934b2f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0be7aff51dc6035033303307f08202a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0be7aff51dc6035033303307f08202a8"></a>
-QGroupBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mInpolLevelsBox</b> = nullptr</td></tr>
-<tr class="separator:a0be7aff51dc6035033303307f08202a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a6a75810c0ab8c10a0f7823ea95181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a6a75810c0ab8c10a0f7823ea95181"></a>
-<a class="el" href="class_spin_slider.html">SpinSlider</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mToleranceSlider</b> = nullptr</td></tr>
-<tr class="separator:a95a6a75810c0ab8c10a0f7823ea95181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa25401b569761aa4fc77ab9c7626c12b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa25401b569761aa4fc77ab9c7626c12b"></a>
-QSpinBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mToleranceSpinBox</b> = nullptr</td></tr>
-<tr class="separator:aa25401b569761aa4fc77ab9c7626c12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa0dd17765e4506c4446409b4d727714"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa0dd17765e4506c4446409b4d727714"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mFillContour</b> = nullptr</td></tr>
-<tr class="separator:afa0dd17765e4506c4446409b4d727714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcbf1d81d417091a2a79a5e341bf3b48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcbf1d81d417091a2a79a5e341bf3b48"></a>
+Ui::ToolOptions *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> = nullptr</td></tr>
+<tr class="separator:abcbf1d81d417091a2a79a5e341bf3b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="tooloptionwidget_8h_source.html#l00034">34</a> of file <a class="el" href="tooloptionwidget_8h_source.html">tooloptionwidget.h</a>.</p>
+<p>Definition at line <a class="el" href="tooloptionwidget_8h_source.html#l00038">38</a> of file <a class="el" href="tooloptionwidget_8h_source.html">tooloptionwidget.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="tooloptionwidget_8h_source.html">tooloptionwidget.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="tooloptionwidget_8cpp_source.html">tooloptionwidget.cpp</a></li>
@@ -245,7 +200,7 @@ QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mFillContour</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 12 2018 12:53:15 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 15 2018 04:51:32 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

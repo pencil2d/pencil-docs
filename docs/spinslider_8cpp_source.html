@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/interface/spinslider.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/spinslider.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">93bffc52548cfc551fa82f5e5276da14c0587d6c</span>
+   &#160;<span id="projectnumber">ec5a977bd72a8a3d82f8557cab848e71839cbd91</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_5c2491a6f6c41ff5438142a747f3be50.html">interface</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,106 +116,104 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QStyle&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;SpinSlider::SpinSlider( QString text, GROWTH_TYPE type, VALUE_TYPE dataType, qreal min, qreal max, QWidget* parent ) : QWidget( parent )</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> ( type == LOG )</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// important! dividing by zero is not acceptable.</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Q_ASSERT_X( min &gt; 0.f , <span class="stringliteral">&quot;SpinSlider&quot;</span> , <span class="stringliteral">&quot;Real type value must larger than 0!!&quot;</span> );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    mValue = 1.0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    mGrowthType = type;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    mValueType = dataType;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    mMin = min;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    mMax = max;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    mLabel = <span class="keyword">new</span> QLabel(text+<span class="stringliteral">&quot;: &quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    mLabel-&gt;setFont( QFont( <span class="stringliteral">&quot;Helvetica&quot;</span>, 10 ) );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;SpinSlider::SpinSlider(QWidget* parent) : QWidget(parent)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> SpinSlider::init(QString text, GROWTH_TYPE type, VALUE_TYPE dataType, qreal min, qreal max)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (type == LOG)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">// important! dividing by zero is not acceptable.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        Q_ASSERT_X(min &gt; 0.f, <span class="stringliteral">&quot;SpinSlider&quot;</span>, <span class="stringliteral">&quot;Real type value must larger than 0!!&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    mValue = 1.0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    mGrowthType = type;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    mValueType = dataType;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    mMin = min;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    mMax = max;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mSlider = <span class="keyword">new</span> QSlider(Qt::Horizontal, <span class="keyword">this</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    mSlider-&gt;setMinimum( 0 );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mSlider-&gt;setMaximum( 100 );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    mSlider-&gt;setMaximumWidth( 500 );</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QGridLayout* layout = <span class="keyword">new</span> QGridLayout();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    layout-&gt;setMargin( 2 );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    layout-&gt;setSpacing( 2 );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    layout-&gt;addWidget( mLabel, 0, 0, 1, 1 );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    layout-&gt;addWidget( mSlider, 1, 0, 1, 2 );</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    setLayout( layout );</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    setSizePolicy( QSizePolicy::Preferred, QSizePolicy::Fixed );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    connect( mSlider, &amp;QSlider::valueChanged,   <span class="keyword">this</span>, &amp;SpinSlider::onSliderValueChanged );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> SpinSlider::changeValue(qreal value)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    mValue = value;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    emit valueChanged( value );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> SpinSlider::onSliderValueChanged( <span class="keywordtype">int</span> v )</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//qDebug() &lt;&lt; &quot;Value changed!! &quot; &lt;&lt; v;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    qreal value2 = 0.0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> ( mGrowthType == LINEAR )</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        value2 = mMin + v * ( mMax - mMin ) / mSlider-&gt;maximum();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mGrowthType == LOG )</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        value2 = mMin * std::exp( v * std::log( mMax / mMin ) / mSlider-&gt;maximum() );</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mGrowthType == EXPONENT ) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        value2 = mMin + std::pow( v, mExp ) * ( mMax - mMin ) / std::pow( mSlider-&gt;maximum(), mExp );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    changeValue( value2 );</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> SpinSlider::setLabel( QString newText )</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    mLabel-&gt;setText(newText);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mLabel = <span class="keyword">new</span> QLabel(text + <span class="stringliteral">&quot;: &quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mSlider = <span class="keyword">new</span> QSlider(Qt::Horizontal, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    mSlider-&gt;setMinimum(0);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    mSlider-&gt;setMaximum(100);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    mSlider-&gt;setMaximumWidth(500);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    QGridLayout* layout = <span class="keyword">new</span> QGridLayout();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    layout-&gt;setMargin(2);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    layout-&gt;setSpacing(2);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    layout-&gt;addWidget(mLabel, 0, 0, 1, 1);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    layout-&gt;addWidget(mSlider, 1, 0, 1, 2);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    setLayout(layout);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    connect(mSlider, &amp;QSlider::valueChanged, <span class="keyword">this</span>, &amp;SpinSlider::onSliderValueChanged);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> SpinSlider::changeValue(qreal value)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    mValue = value;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    emit valueChanged(value);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> SpinSlider::onSliderValueChanged(<span class="keywordtype">int</span> v)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    qreal value2 = 0.0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (mGrowthType == LINEAR)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        value2 = mMin + v * (mMax - mMin) / mSlider-&gt;maximum();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == LOG)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        value2 = mMin * std::exp(v * std::log(mMax / mMin) / mSlider-&gt;maximum());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == EXPONENT) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        value2 = mMin + std::pow(v, mExp) * (mMax - mMin) / std::pow(mSlider-&gt;maximum(), mExp);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    changeValue(value2);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> SpinSlider::setLabel(QString newText)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    mLabel-&gt;setText(newText);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> SpinSlider::setValue( qreal v )</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> SpinSlider::setValue(qreal v)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//qDebug() &lt;&lt; &quot;setValue!!&quot; &lt;&lt; v;</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">int</span> value2 = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> ( mGrowthType == LINEAR )</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        value2 = std::round( mSlider-&gt;maximum() * ( v - mMin ) / ( mMax - mMin ) );</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mGrowthType == LOG )</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        value2 = std::round( std::log( v / mMin ) * mSlider-&gt;maximum() / std::log( mMax / mMin ) );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( mGrowthType == EXPONENT )</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        value2 = std::round( std::pow( ( v - mMin ) * std::pow( mSlider-&gt;maximum(), mExp ) / ( mMax - mMin ), 1 / mExp ));</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//qDebug() &lt;&lt; &quot;Position! &quot; &lt;&lt; value2;</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    changeValue( v );</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    mSlider-&gt;setSliderPosition( value2 );</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keywordtype">void</span> SpinSlider::setPixelPos(qreal min, qreal max, <span class="keywordtype">int</span> val, <span class="keywordtype">int</span> space, <span class="keywordtype">bool</span> upsideDown)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    mSlider-&gt;setSliderPosition(QStyle::sliderValueFromPosition(min, max, val,space, upsideDown));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">void</span> SpinSlider::setExponent( <span class="keyword">const</span> qreal exp )</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    mExp = exp;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> value2 = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (mGrowthType == LINEAR)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        value2 = std::round(mSlider-&gt;maximum() * (v - mMin) / (mMax - mMin));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == LOG)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        value2 = std::round(std::log(v / mMin) * mSlider-&gt;maximum() / std::log(mMax / mMin));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == EXPONENT)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        value2 = std::round(std::pow((v - mMin) * std::pow(mSlider-&gt;maximum(), mExp) / (mMax - mMin), 1 / mExp));</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    changeValue(v);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    mSlider-&gt;setSliderPosition(value2);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">void</span> SpinSlider::setPixelPos(qreal min, qreal max, <span class="keywordtype">int</span> val, <span class="keywordtype">int</span> space, <span class="keywordtype">bool</span> upsideDown)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    mSlider-&gt;setSliderPosition(QStyle::sliderValueFromPosition(min, max, val, space, upsideDown));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">void</span> SpinSlider::setExponent(<span class="keyword">const</span> qreal exp)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    mExp = exp;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 12 2018 12:53:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 15 2018 04:51:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
