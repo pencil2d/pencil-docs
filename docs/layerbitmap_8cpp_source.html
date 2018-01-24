@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">80ab03c43348969347832f649e341f7dd30d8fea</span>
+   &#160;<span id="projectnumber">4076b91a408f1f05ef4e39727e5d7dfa479af5f4</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">Pencil - Traditional Animation Software</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Copyright (C) 2005-2007 Patrick Corrieri &amp; Pascal Naidon</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">Copyright (C) 2012-2017 Matthew Chiawen Chang</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">Copyright (C) 2012-2018 Matthew Chiawen Chang</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">modify it under the terms of the GNU General Public License</span></div>
@@ -211,18 +211,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (imageElement.tagName() == <span class="stringliteral">&quot;image&quot;</span>)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                QString path = dataDirPath + <span class="stringliteral">&quot;/&quot;</span> + imageElement.attribute(<span class="stringliteral">&quot;src&quot;</span>); <span class="comment">// the file is supposed to be in the data directory</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="comment">//qDebug() &lt;&lt; &quot;LAY_BITMAP  dataDirPath=&quot; &lt;&lt; dataDirPath &lt;&lt; &quot;   ;path=&quot; &lt;&lt; path;  //added for debugging puproses</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                QFileInfo fi(path);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordflow">if</span> (!fi.exists()) path = imageElement.attribute(<span class="stringliteral">&quot;src&quot;</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordtype">int</span> position = imageElement.attribute(<span class="stringliteral">&quot;frame&quot;</span>).toInt();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordtype">int</span> x = imageElement.attribute(<span class="stringliteral">&quot;topLeftX&quot;</span>).toInt();</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordtype">int</span> y = imageElement.attribute(<span class="stringliteral">&quot;topLeftY&quot;</span>).toInt();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                loadImageAtFrame(path, QPoint(x, y), position);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        imageTag = imageTag.nextSibling();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                QFileInfo fi(path);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="keywordflow">if</span> (!fi.exists()) path = imageElement.attribute(<span class="stringliteral">&quot;src&quot;</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordtype">int</span> position = imageElement.attribute(<span class="stringliteral">&quot;frame&quot;</span>).toInt();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordtype">int</span> x = imageElement.attribute(<span class="stringliteral">&quot;topLeftX&quot;</span>).toInt();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordtype">int</span> y = imageElement.attribute(<span class="stringliteral">&quot;topLeftY&quot;</span>).toInt();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                loadImageAtFrame(path, QPoint(x, y), position);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        imageTag = imageTag.nextSibling();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
@@ -231,7 +230,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 06:25:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 24 2018 04:45:30 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

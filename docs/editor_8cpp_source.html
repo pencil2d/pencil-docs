@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">80ab03c43348969347832f649e341f7dd30d8fea</span>
+   &#160;<span id="projectnumber">4076b91a408f1f05ef4e39727e5d7dfa479af5f4</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">Pencil - Traditional Animation Software</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Copyright (C) 2005-2007 Patrick Corrieri &amp; Pascal Naidon</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">Copyright (C) 2012-2017 Matthew Chiawen Chang</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">Copyright (C) 2012-2018 Matthew Chiawen Chang</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">This program is free software; you can redistribute it and/or</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">modify it under the terms of the GNU General Public License</span></div>
@@ -774,11 +774,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    }</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    <span class="keywordflow">if</span> (endFrame &lt; -1)</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    {</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>();</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a>();</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    }</div>
 <div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keywordflow">if</span> (endFrame &lt; 0)</div>
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    {</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a>(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    }</div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    QSize exportSize = QSize(width, height);</div>
@@ -811,11 +811,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    }</div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordflow">if</span> (endFrame &lt; -1)</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    {</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>();</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a>();</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    }</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordflow">if</span> (endFrame &lt; 0)</div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;    {</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        endFrame = mLayerManager-&gt;<a class="code" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a>(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    }</div>
 <div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;</div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    QSize exportSize = QSize(width, height);</div>
@@ -1143,7 +1143,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="struct_export_movie_desc_html"><div class="ttname"><a href="struct_export_movie_desc.html">ExportMovieDesc</a></div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8h_source.html#l00028">movieexporter.h:28</a></div></div>
 <div class="ttc" id="class_backup_sound_element_html"><div class="ttname"><a href="class_backup_sound_element.html">BackupSoundElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00066">backupelement.h:66</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:32</a></div></div>
-<div class="ttc" id="class_layer_manager_html_a9dbee1ef1ad9d0ab9333f684bc3e04d6"><div class="ttname"><a href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">LayerManager::projectLength</a></div><div class="ttdeci">int projectLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00287">layermanager.cpp:287</a></div></div>
 <div class="ttc" id="class_backup_bitmap_element_html"><div class="ttname"><a href="class_backup_bitmap_element.html">BackupBitmapElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00042">backupelement.h:42</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_vector_image_html_a42cf025ff76cd7756b0c327e41a8624c"><div class="ttname"><a href="class_vector_image.html#a42cf025ff76cd7756b0c327e41a8624c">VectorImage::paste</a></div><div class="ttdeci">void paste(VectorImage &amp;)</div><div class="ttdoc">VectorImage::paste. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01025">vectorimage.cpp:1025</a></div></div>
@@ -1151,12 +1150,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_scribble_area_html_a0dbeeb69589589abdb3273c031e056f1"><div class="ttname"><a href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1">ScribbleArea::flipSelection</a></div><div class="ttdeci">void flipSelection(bool flipVertical)</div><div class="ttdoc">ScribbleArea::flipSelection flip selection along the X or Y axis. </div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01160">scribblearea.cpp:1160</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00054">object.h:54</a></div></div>
 <div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00046">editor.h:46</a></div></div>
+<div class="ttc" id="class_layer_manager_html_a321c9a8ed55ce6d150b748164f29e605"><div class="ttname"><a href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">LayerManager::animationLength</a></div><div class="ttdeci">int animationLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00287">layermanager.cpp:287</a></div></div>
 <div class="ttc" id="class_tool_manager_html"><div class="ttname"><a href="class_tool_manager.html">ToolManager</a></div><div class="ttdef"><b>Definition:</b> <a href="toolmanager_8h_source.html#l00028">toolmanager.h:28</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00025">bitmapimage.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 06:25:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 24 2018 04:45:29 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

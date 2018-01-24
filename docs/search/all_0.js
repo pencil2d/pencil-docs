@@ -5,6 +5,7 @@ var searchData=
   ['addarea',['addArea',['../class_vector_image.html#a0ed5a32f2cc0df42ab06924d3f7545ad',1,'VectorImage']]],
   ['addcurve',['addCurve',['../class_vector_image.html#a65867c7b1ea809e91743605e90ae8bdb',1,'VectorImage']]],
   ['addpoint',['addPoint',['../class_vector_image.html#a751e04f2363cf484ce071d8df5cbad54',1,'VectorImage']]],
+  ['animationlength',['animationLength',['../class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605',1,'LayerManager']]],
   ['applycolourtoselectedarea',['applyColourToSelectedArea',['../class_vector_image.html#a2b301c5aa0ccff84953ba137828fabba',1,'VectorImage']]],
   ['applycolourtoselectedcurve',['applyColourToSelectedCurve',['../class_vector_image.html#a99be9ff401262c69b7f872b8a1e0e8f6',1,'VectorImage']]],
   ['applyfeathertoselection',['applyFeatherToSelection',['../class_vector_image.html#a1ec1926e974fd8116adbdc2d79677b9f',1,'VectorImage']]],

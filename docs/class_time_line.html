@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">80ab03c43348969347832f649e341f7dd30d8fea</span>
+   &#160;<span id="projectnumber">4076b91a408f1f05ef4e39727e5d7dfa479af5f4</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -112,21 +112,6 @@ Signals</h2></td></tr>
 <tr class="memitem:a539d8a731a2e47be27137d106d9f612e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a539d8a731a2e47be27137d106d9f612e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>modification</b> ()</td></tr>
 <tr class="separator:a539d8a731a2e47be27137d106d9f612e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c82a9fd28c5164965084602dd112320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c82a9fd28c5164965084602dd112320"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>lengthChange</b> (QString)</td></tr>
-<tr class="separator:a7c82a9fd28c5164965084602dd112320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56c8fab4b4a12145f0514a5b7709b943"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56c8fab4b4a12145f0514a5b7709b943"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>frameSizeChange</b> (int)</td></tr>
-<tr class="separator:a56c8fab4b4a12145f0514a5b7709b943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaa6e51619b9b15ee3fe309d88c8ddb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaa6e51619b9b15ee3fe309d88c8ddb7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fontSizeChange</b> (int)</td></tr>
-<tr class="separator:abaa6e51619b9b15ee3fe309d88c8ddb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac891c1e431ac8586a119856c8ec5749d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac891c1e431ac8586a119856c8ec5749d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>labelChange</b> (int)</td></tr>
-<tr class="separator:ac891c1e431ac8586a119856c8ec5749d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a2bec3cfa4f0ead0a2684c5c0ec2f03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a2bec3cfa4f0ead0a2684c5c0ec2f03"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>scrubChange</b> (int)</td></tr>
-<tr class="separator:a9a2bec3cfa4f0ead0a2684c5c0ec2f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7457616237e93c024d161bfe763cc8e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7457616237e93c024d161bfe763cc8e1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addKeyClick</b> ()</td></tr>
 <tr class="separator:a7457616237e93c024d161bfe763cc8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,9 +184,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setRangeState</b> (bo
 <tr class="memitem:a08362b90c5fa5b79938d7d0cf5a7a6b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08362b90c5fa5b79938d7d0cf5a7a6b3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlaying</b> (bool isPlaying)</td></tr>
 <tr class="separator:a08362b90c5fa5b79938d7d0cf5a7a6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f9560cde3ce56be8f484f3ea323da6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25f9560cde3ce56be8f484f3ea323da6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getFrameLength</b> ()</td></tr>
-<tr class="separator:a25f9560cde3ce56be8f484f3ea323da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63614972d0f1944a0939780c740149e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63614972d0f1944a0939780c740149e5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b> ()</td></tr>
+<tr class="separator:a63614972d0f1944a0939780c740149e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff5a1b6a1b85425cc5eb897da7ac9ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ff5a1b6a1b85425cc5eb897da7ac9ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLength</b> (int frame)</td></tr>
+<tr class="separator:a2ff5a1b6a1b85425cc5eb897da7ac9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302a57106840bf8e44a60f1816e92810"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a302a57106840bf8e44a60f1816e92810"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>extendLength</b> (int frame)</td></tr>
+<tr class="separator:a302a57106840bf8e44a60f1816e92810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac18676d218af2a425b862dc1cb77e38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac18676d218af2a425b862dc1cb77e38"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getRangeLower</b> ()</td></tr>
 <tr class="separator:aac18676d218af2a425b862dc1cb77e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,7 +268,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastUpdatedFrame</b> 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 06:25:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 24 2018 04:45:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

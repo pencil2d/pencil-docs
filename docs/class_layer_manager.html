@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">80ab03c43348969347832f649e341f7dd30d8fea</span>
+   &#160;<span id="projectnumber">4076b91a408f1f05ef4e39727e5d7dfa479af5f4</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -113,6 +113,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>currentLayerChanged</
 <tr class="memitem:ad919459601e3ee135f3a8c47aa8cd7fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad919459601e3ee135f3a8c47aa8cd7fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>layerCountChanged</b> (int count)</td></tr>
 <tr class="separator:ad919459601e3ee135f3a8c47aa8cd7fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842ac54b92233e6e3b61ac46716421bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a842ac54b92233e6e3b61ac46716421bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>animationLengthChanged</b> (int length)</td></tr>
+<tr class="separator:a842ac54b92233e6e3b61ac46716421bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -191,9 +194,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>firstKeyFrameIndex</b>
 <tr class="memitem:a39d30addd34bac2b7942f797f764f050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39d30addd34bac2b7942f797f764f050"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>lastKeyFrameIndex</b> ()</td></tr>
 <tr class="separator:a39d30addd34bac2b7942f797f764f050"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dbee1ef1ad9d0ab9333f684bc3e04d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6">projectLength</a> (bool includeSounds=true)</td></tr>
-<tr class="memdesc:a9dbee1ef1ad9d0ab9333f684bc3e04d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of current project.  <a href="#a9dbee1ef1ad9d0ab9333f684bc3e04d6">More...</a><br/></td></tr>
-<tr class="separator:a9dbee1ef1ad9d0ab9333f684bc3e04d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a321c9a8ed55ce6d150b748164f29e605"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a> (bool includeSounds=true)</td></tr>
+<tr class="memdesc:a321c9a8ed55ce6d150b748164f29e605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of current project.  <a href="#a321c9a8ed55ce6d150b748164f29e605">More...</a><br/></td></tr>
+<tr class="separator:a321c9a8ed55ce6d150b748164f29e605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae648788f4b7559ad43f499381f158659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae648788f4b7559ad43f499381f158659"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyAnimationLengthChanged</b> ()</td></tr>
+<tr class="separator:ae648788f4b7559ad43f499381f158659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_base_manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_base_manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_base_manager.html">BaseManager</a></td></tr>
 <tr class="memitem:aee9c5311483138da5d19e8b623adc670 inherit pub_methods_class_base_manager"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee9c5311483138da5d19e8b623adc670"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BaseManager</b> (<a class="el" href="class_editor.html">Editor</a> *editor=0)</td></tr>
@@ -224,12 +230,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastCameraLayerIdx</b
 <div class="textblock">
 <p>Definition at line <a class="el" href="layermanager_8h_source.html#l00030">30</a> of file <a class="el" href="layermanager_8h_source.html">layermanager.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9dbee1ef1ad9d0ab9333f684bc3e04d6"></a>
+<a class="anchor" id="a321c9a8ed55ce6d150b748164f29e605"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int LayerManager::projectLength </td>
+          <td class="memname">int LayerManager::animationLength </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>includeSounds</em> = <code>true</code></td><td>)</td>
@@ -252,7 +258,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>mLastCameraLayerIdx</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 15 2018 06:25:53 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 24 2018 04:45:31 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

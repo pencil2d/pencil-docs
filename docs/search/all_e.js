@@ -13,6 +13,5 @@ var searchData=
   ['preferencesdialog',['PreferencesDialog',['../class_preferences_dialog.html',1,'']]],
   ['previewcanvas',['PreviewCanvas',['../class_preview_canvas.html',1,'']]],
   ['previewwidget',['PreviewWidget',['../class_preview_widget.html',1,'']]],
-  ['projectlength',['projectLength',['../class_layer_manager.html#a9dbee1ef1ad9d0ab9333f684bc3e04d6',1,'LayerManager']]],
   ['properties',['Properties',['../class_properties.html',1,'']]]
 ];
