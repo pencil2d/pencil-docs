@@ -13,5 +13,6 @@ var searchData=
   ['preferencesdialog',['PreferencesDialog',['../class_preferences_dialog.html',1,'']]],
   ['previewcanvas',['PreviewCanvas',['../class_preview_canvas.html',1,'']]],
   ['previewwidget',['PreviewWidget',['../class_preview_widget.html',1,'']]],
+  ['progressbarcontrol',['ProgressBarControl',['../class_double_progress_dialog_1_1_progress_bar_control.html',1,'DoubleProgressDialog']]],
   ['properties',['Properties',['../class_properties.html',1,'']]]
 ];

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">20ca59038605c6425813e31b68dfe8136ae76b82</span>
+   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -110,13 +110,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr bgcolor="#f0f0f0"><td class="entry"><b>paint</b>(const Object *object, int layer, int frame, QRect rect) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintAxis</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>paintBackground</b>() (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintBitmapFrame</b>(QPainter &amp;, int layerId, int nFrame, bool colorize=false, bool useLastKeyFrame=true) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintBitmapFrame</b>(QPainter &amp;, Layer *layer, int nFrame, bool colorize, bool useLastKeyFrame) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>paintCameraBorder</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintCurrentFrame</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>paintGrid</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintOnionSkin</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>paintTransformedSelection</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintVectorFrame</b>(QPainter &amp;, int layerId, int nFrame, bool colorize=false, bool useLastKeyFrame=true) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>paintVectorFrame</b>(QPainter &amp;, Layer *layer, int nFrame, bool colorize, bool useLastKeyFrame) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>prescale</b>(BitmapImage *bitmapImage) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>renderGrid</b>(QPainter &amp;painter) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>setCanvas</b>(QPixmap *canvas) (defined in <a class="el" href="class_canvas_painter.html">CanvasPainter</a>)</td><td class="entry"><a class="el" href="class_canvas_painter.html">CanvasPainter</a></td><td class="entry"></td></tr>
@@ -127,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 24 2018 04:57:17 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 30 2018 00:57:56 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

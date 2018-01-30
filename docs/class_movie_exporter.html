@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">20ca59038605c6425813e31b68dfe8136ae76b82</span>
+   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -95,9 +95,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4dca49c56de5dcba8c96d6666f47e5e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dca49c56de5dcba8c96d6666f47e5e2"></a>
-<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (const <a class="el" href="class_object.html">Object</a> *obj, const <a class="el" href="struct_export_movie_desc.html">ExportMovieDesc</a> &amp;desc, std::function&lt; void(float)&gt; progress)</td></tr>
-<tr class="separator:a4dca49c56de5dcba8c96d6666f47e5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086ba54d4615420bde8a5a8886c40d5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a086ba54d4615420bde8a5a8886c40d5b"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (const <a class="el" href="class_object.html">Object</a> *obj, const <a class="el" href="struct_export_movie_desc.html">ExportMovieDesc</a> &amp;desc, std::function&lt; void(float, float)&gt; majorProgress, std::function&lt; void(float)&gt; minorProgress, std::function&lt; void(QString)&gt; progressMessage)</td></tr>
+<tr class="separator:a086ba54d4615420bde8a5a8886c40d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a301f3a95c6287294c4b8d0605d934f06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a301f3a95c6287294c4b8d0605d934f06"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> ()</td></tr>
 <tr class="separator:a301f3a95c6287294c4b8d0605d934f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,15 +113,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a9f509dc7c3e0e2775b3bd0b97f83647e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f509dc7c3e0e2775b3bd0b97f83647e"></a>
 <a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>generateImageSequence</b> (const <a class="el" href="class_object.html">Object</a> *obj, std::function&lt; void(float)&gt; progress)</td></tr>
 <tr class="separator:a9f509dc7c3e0e2775b3bd0b97f83647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada554c8d8aafdc461ffa8c4155c6f71f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada554c8d8aafdc461ffa8c4155c6f71f"></a>
-<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>combineVideoAndAudio</b> (QString ffmpegPath, QString strOutputFile)</td></tr>
-<tr class="separator:ada554c8d8aafdc461ffa8c4155c6f71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc07b2f850d69f7ad23b6b57b4793bed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc07b2f850d69f7ad23b6b57b4793bed"></a>
-<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>convertToGif</b> (QString ffmpeg, QString strOut)</td></tr>
-<tr class="separator:afc07b2f850d69f7ad23b6b57b4793bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c5eec4dc30e9229ee629ad85f487ffe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c5eec4dc30e9229ee629ad85f487ffe"></a>
-<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>executeFFMpegCommand</b> (QString strCmd)</td></tr>
-<tr class="separator:a6c5eec4dc30e9229ee629ad85f487ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b8faa415705c1d68aac1b1c74bcfd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23b8faa415705c1d68aac1b1c74bcfd7"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>combineVideoAndAudio</b> (QString ffmpegPath, QString strOutputFile, std::function&lt; void(float)&gt; progress)</td></tr>
+<tr class="separator:a23b8faa415705c1d68aac1b1c74bcfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33551414e6a26ff95b8f43c215a795ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33551414e6a26ff95b8f43c215a795ec"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>generatePalette</b> (QString ffmpeg, std::function&lt; void(float)&gt; progress)</td></tr>
+<tr class="separator:a33551414e6a26ff95b8f43c215a795ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aaf7107a6c1dccd4d85cfc0e8a88278"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9aaf7107a6c1dccd4d85cfc0e8a88278"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>convertToGif</b> (QString ffmpeg, QString strOut, std::function&lt; void(float)&gt; progress)</td></tr>
+<tr class="separator:a9aaf7107a6c1dccd4d85cfc0e8a88278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49043def4e3592c2825aa2e0fd0ee6a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49043def4e3592c2825aa2e0fd0ee6a7"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>executeFFMpegCommand</b> (QString strCmd, std::function&lt; void(float)&gt; progress)</td></tr>
+<tr class="separator:a49043def4e3592c2825aa2e0fd0ee6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895a0224f35b2d7d1771d4e6a1cb7068"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a895a0224f35b2d7d1771d4e6a1cb7068"></a>
 <a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>checkInputParameters</b> (const <a class="el" href="struct_export_movie_desc.html">ExportMovieDesc</a> &amp;)</td></tr>
 <tr class="separator:a895a0224f35b2d7d1771d4e6a1cb7068"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +154,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>mCanceled</b> = false
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 24 2018 04:57:17 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 30 2018 00:57:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
