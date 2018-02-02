@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
+   &#160;<span id="projectnumber">fe44447d39329094360a34d7cc883841e33cacfd</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -160,9 +160,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>firstKeyFramePosition<
 <tr class="memitem:a7fedd39e1092f545c361d4b66f50dcf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fedd39e1092f545c361d4b66f50dcf5"></a>
 virtual <a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>saveKeyFrame</b> (<a class="el" href="class_key_frame.html">KeyFrame</a> *, QString path)=0</td></tr>
 <tr class="separator:a7fedd39e1092f545c361d4b66f50dcf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a32074a35c4219dd172f260c23374fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a32074a35c4219dd172f260c23374fc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDomElement</b> (QDomElement element, QString dataDirPath)=0</td></tr>
-<tr class="separator:a0a32074a35c4219dd172f260c23374fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f273a857cf7eec80db46f58db398cae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f273a857cf7eec80db46f58db398cae"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDomElement</b> (QDomElement element, QString dataDirPath, ProgressCallback progressForward)=0</td></tr>
+<tr class="separator:a5f273a857cf7eec80db46f58db398cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a045075e7b9943a21762a4b0dd4546e4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a045075e7b9943a21762a4b0dd4546e4a"></a>
 virtual QDomElement&#160;</td><td class="memItemRight" valign="bottom"><b>createDomElement</b> (QDomDocument &amp;doc)=0</td></tr>
 <tr class="separator:a045075e7b9943a21762a4b0dd4546e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,9 +247,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deselectAll</b> ()</t
 <tr class="memitem:a7a9994e8475be3af9d82263ba8c2d302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a9994e8475be3af9d82263ba8c2d302"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>moveSelectedFrames</b> (int offset)</td></tr>
 <tr class="separator:a7a9994e8475be3af9d82263ba8c2d302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b2eefdeb459de5cb18591258739bcba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b2eefdeb459de5cb18591258739bcba"></a>
-<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (QString dataFolder)</td></tr>
-<tr class="separator:a5b2eefdeb459de5cb18591258739bcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f03752a1bf995a925e7c396548c620f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f03752a1bf995a925e7c396548c620f"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (QString dataFolder, ProgressCallback progressStep)</td></tr>
+<tr class="separator:a1f03752a1bf995a925e7c396548c620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650ba5adb659656b8f45ce3401f839f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a650ba5adb659656b8f45ce3401f839f7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>paintTrack</b> (QPainter &amp;painter, <a class="el" href="class_time_line_cells.html">TimeLineCells</a> *cells, int x, int y, int width, int height, bool selected, int frameSize)</td></tr>
 <tr class="separator:a650ba5adb659656b8f45ce3401f839f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,7 +317,7 @@ std::map&lt; int, <a class="el" href="class_key_frame.html">KeyFrame</a> <br cla
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="layer_8h_source.html#l00032">32</a> of file <a class="el" href="layer_8h_source.html">layer.h</a>.</p>
+<p>Definition at line <a class="el" href="layer_8h_source.html#l00035">35</a> of file <a class="el" href="layer_8h_source.html">layer.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/structure/<a class="el" href="layer_8h_source.html">layer.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/structure/<a class="el" href="layer_8cpp_source.html">layer.cpp</a></li>
@@ -325,7 +325,7 @@ std::map&lt; int, <a class="el" href="class_key_frame.html">KeyFrame</a> <br cla
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 30 2018 00:57:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 2 2018 03:44:39 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

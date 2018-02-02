@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
+   &#160;<span id="projectnumber">fe44447d39329094360a34d7cc883841e33cacfd</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -101,10 +101,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>loadPalette</b>(Object *) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>loadPaletteFile</b>(QString strFilename) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>loadProjectData</b>(const QDomElement &amp;element) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>mError</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mLog</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>mCurrentProgress</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mError</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>mLog</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mMaxProgressValue</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>mstrLastTempFolder</b> (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>progressUpdated</b>(float) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>progressChanged</b>(int progress) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>progressForward</b>() (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>progressRangeChanged</b>(int maxValue) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>save</b>(Object *, QString strFileName) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>saveProjectData</b>(ObjectData *, QDomDocument &amp;xmlDoc) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>unzip</b>(const QString &amp;strZipFile, const QString &amp;strUnzipTarget) (defined in <a class="el" href="class_file_manager.html">FileManager</a>)</td><td class="entry"><a class="el" href="class_file_manager.html">FileManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -112,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 30 2018 00:57:56 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 2 2018 03:44:39 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

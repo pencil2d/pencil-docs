@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
+   &#160;<span id="projectnumber">fe44447d39329094360a34d7cc883841e33cacfd</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -111,9 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7ed24daaab7f08f4582b80e189c23ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7ed24daaab7f08f4582b80e189c23ae"></a>
 QDomElement&#160;</td><td class="memItemRight" valign="bottom"><b>createDomElement</b> (QDomDocument &amp;doc) override</td></tr>
 <tr class="separator:aa7ed24daaab7f08f4582b80e189c23ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae65ec6df80fa9b69165ef1ce82420f56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae65ec6df80fa9b69165ef1ce82420f56"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDomElement</b> (QDomElement element, QString dataDirPath) override</td></tr>
-<tr class="separator:ae65ec6df80fa9b69165ef1ce82420f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6500717a3ccae7785d8430f9c52f7a85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6500717a3ccae7785d8430f9c52f7a85"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDomElement</b> (QDomElement element, QString dataDirPath, ProgressCallback progressStep) override</td></tr>
+<tr class="separator:a6500717a3ccae7785d8430f9c52f7a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f24bb9a2a5b0f9b02fbf15d3bd58c7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f24bb9a2a5b0f9b02fbf15d3bd58c7e"></a>
 <a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loadSoundClipAtFrame</b> (const QString &amp;sSoundClipName, const QString &amp;filePathString, int frame)</td></tr>
 <tr class="separator:a1f24bb9a2a5b0f9b02fbf15d3bd58c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,9 +250,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>deselectAll</b> ()</t
 <tr class="memitem:a7a9994e8475be3af9d82263ba8c2d302 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a9994e8475be3af9d82263ba8c2d302"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>moveSelectedFrames</b> (int offset)</td></tr>
 <tr class="separator:a7a9994e8475be3af9d82263ba8c2d302 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b2eefdeb459de5cb18591258739bcba inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b2eefdeb459de5cb18591258739bcba"></a>
-<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (QString dataFolder)</td></tr>
-<tr class="separator:a5b2eefdeb459de5cb18591258739bcba inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f03752a1bf995a925e7c396548c620f inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f03752a1bf995a925e7c396548c620f"></a>
+<a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>save</b> (QString dataFolder, ProgressCallback progressStep)</td></tr>
+<tr class="separator:a1f03752a1bf995a925e7c396548c620f inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650ba5adb659656b8f45ce3401f839f7 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a650ba5adb659656b8f45ce3401f839f7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>paintTrack</b> (QPainter &amp;painter, <a class="el" href="class_time_line_cells.html">TimeLineCells</a> *cells, int x, int y, int width, int height, bool selected, int frameSize)</td></tr>
 <tr class="separator:a650ba5adb659656b8f45ce3401f839f7 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -319,7 +319,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 30 2018 00:57:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 2 2018 03:44:39 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

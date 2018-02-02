@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
+   &#160;<span id="projectnumber">fe44447d39329094360a34d7cc883841e33cacfd</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -144,9 +144,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setMainXMLFile</b> (Q
 <tr class="memitem:a246dad21a681caaec1f066c4af90dc18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a246dad21a681caaec1f066c4af90dc18"></a>
 QDomElement&#160;</td><td class="memItemRight" valign="bottom"><b>saveXML</b> (QDomDocument &amp;doc)</td></tr>
 <tr class="separator:a246dad21a681caaec1f066c4af90dc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dc98f051d255236ede161fd5c300891"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dc98f051d255236ede161fd5c300891"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadXML</b> (QDomElement element, ProgressCallback progress=[](float){})</td></tr>
-<tr class="separator:a1dc98f051d255236ede161fd5c300891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389b493bbdead0cc8e0f5082ea77271d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a389b493bbdead0cc8e0f5082ea77271d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadXML</b> (QDomElement element, ProgressCallback progressForward)</td></tr>
+<tr class="separator:a389b493bbdead0cc8e0f5082ea77271d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5dd56000d120f907d610abd0ec64b60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5dd56000d120f907d610abd0ec64b60"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>paintImage</b> (QPainter &amp;painter, int frameNumber, bool background, bool antialiasing) const </td></tr>
 <tr class="separator:ac5dd56000d120f907d610abd0ec64b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +247,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getUniqueLayerID</b> (
 <tr class="memitem:ab3acf37821457f90470e36a5a9fd5abf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3acf37821457f90470e36a5a9fd5abf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (<a class="el" href="class_object_data.html">ObjectData</a> *)</td></tr>
 <tr class="separator:ab3acf37821457f90470e36a5a9fd5abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab927f6550f52f82d9d562249278c7a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab927f6550f52f82d9d562249278c7a8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>totalKeyFrameCount</b> ()</td></tr>
+<tr class="separator:aab927f6550f52f82d9d562249278c7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -283,7 +286,7 @@ std::unique_ptr&lt; <a class="el" href="class_object_data.html">ObjectData</a> &
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="object_8h_source.html#l00054">54</a> of file <a class="el" href="object_8h_source.html">object.h</a>.</p>
+<p>Definition at line <a class="el" href="object_8h_source.html#l00052">52</a> of file <a class="el" href="object_8h_source.html">object.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/structure/<a class="el" href="object_8h_source.html">object.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/core_lib/structure/<a class="el" href="object_8cpp_source.html">object.cpp</a></li>
@@ -291,7 +294,7 @@ std::unique_ptr&lt; <a class="el" href="class_object_data.html">ObjectData</a> &
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 30 2018 00:57:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 2 2018 03:44:39 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

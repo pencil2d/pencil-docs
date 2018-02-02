@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">1722e36c1d546d60608938673c45b07b106f0ad9</span>
+   &#160;<span id="projectnumber">fe44447d39329094360a34d7cc883841e33cacfd</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -106,9 +106,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a78e8bb43f92cd0854559f24d4f8c370c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78e8bb43f92cd0854559f24d4f8c370c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>progressUpdated</b> (float)</td></tr>
-<tr class="separator:a78e8bb43f92cd0854559f24d4f8c370c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b47dae0efccee128900d0c24b78d6ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b47dae0efccee128900d0c24b78d6ab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>progressChanged</b> (int progress)</td></tr>
+<tr class="separator:a3b47dae0efccee128900d0c24b78d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d0cc5dc226b96f3eff9ac8e5ea4f41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91d0cc5dc226b96f3eff9ac8e5ea4f41"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>progressRangeChanged</b> (int maxValue)</td></tr>
+<tr class="separator:a91d0cc5dc226b96f3eff9ac8e5ea4f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -160,6 +163,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>extractProjectData</b
 <tr class="memitem:a4e398ceb5f54ad3fb40a5a807d7f0099"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e398ceb5f54ad3fb40a5a807d7f0099"></a>
 <a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cleanUpWithErrorCode</b> (<a class="el" href="class_status.html">Status</a>)</td></tr>
 <tr class="separator:a4e398ceb5f54ad3fb40a5a807d7f0099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf7437341a12f6931bce23b1cd5794d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacf7437341a12f6931bce23b1cd5794d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>progressForward</b> ()</td></tr>
+<tr class="separator:aacf7437341a12f6931bce23b1cd5794d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -169,6 +175,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:afa338d03a7f9433225e83c31ce66537c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa338d03a7f9433225e83c31ce66537c"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><b>mstrLastTempFolder</b></td></tr>
 <tr class="separator:afa338d03a7f9433225e83c31ce66537c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a545610a67932b735904c5d7f7c1950eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a545610a67932b735904c5d7f7c1950eb"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrentProgress</b> = 0</td></tr>
+<tr class="separator:a545610a67932b735904c5d7f7c1950eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d884a18ab79a6e5113ceb983444724"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92d884a18ab79a6e5113ceb983444724"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxProgressValue</b> = 100</td></tr>
+<tr class="separator:a92d884a18ab79a6e5113ceb983444724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7d0734b2cf9acb2f4efe3abbdeeff39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7d0734b2cf9acb2f4efe3abbdeeff39"></a>
 QLoggingCategory&#160;</td><td class="memItemRight" valign="bottom"><b>mLog</b></td></tr>
 <tr class="separator:ab7d0734b2cf9acb2f4efe3abbdeeff39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +195,7 @@ QLoggingCategory&#160;</td><td class="memItemRight" valign="bottom"><b>mLog</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 30 2018 00:57:56 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 2 2018 03:44:39 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
