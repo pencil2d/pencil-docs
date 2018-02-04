@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">902024d5ecc357f3bc6e9504a16ba21576d6812e</span>
+   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -84,10 +84,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_preferences_dialog-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -105,6 +105,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a7176db7d2707ea6fc0cd4177e4d37427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7176db7d2707ea6fc0cd4177e4d37427"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>changePage</b> (QListWidgetItem *current, QListWidgetItem *previous)</td></tr>
+<tr class="separator:a7176db7d2707ea6fc0cd4177e4d37427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a2579028d0ee08a72362c413c971917d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2579028d0ee08a72362c413c971917d8"></a>
@@ -128,9 +134,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a727471e85dc2ee0fe7c1bab837217629"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a727471e85dc2ee0fe7c1bab837217629"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="class_preference_manager.html">PreferenceManager</a> *m)</td></tr>
 <tr class="separator:a727471e85dc2ee0fe7c1bab837217629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7176db7d2707ea6fc0cd4177e4d37427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7176db7d2707ea6fc0cd4177e4d37427"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>changePage</b> (QListWidgetItem *current, QListWidgetItem *previous)</td></tr>
-<tr class="separator:a7176db7d2707ea6fc0cd4177e4d37427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9033700a7cd69f37b274cd4e778167b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9033700a7cd69f37b274cd4e778167b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateRecentListBtn</b> (bool isEmpty)</td></tr>
 <tr class="separator:a9033700a7cd69f37b274cd4e778167b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,33 +144,18 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>closeEvent</b> (QCloseEvent *) override</td></tr>
 <tr class="separator:ad33234ba872f8d81143ccbb3bef8ec85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a146fa73c685e3ba45a54fc105e4d14d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a146fa73c685e3ba45a54fc105e4d14d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>createIcons</b> ()</td></tr>
-<tr class="separator:a146fa73c685e3ba45a54fc105e4d14d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:af293d4950ab631e57d478e7209448efc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af293d4950ab631e57d478e7209448efc"></a>
-QListWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>contentsWidget</b> = nullptr</td></tr>
-<tr class="separator:af293d4950ab631e57d478e7209448efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2845d817d9e6ae4b7a6a46a80e19f39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2845d817d9e6ae4b7a6a46a80e19f39"></a>
-QStackedWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>pagesWidget</b> = nullptr</td></tr>
-<tr class="separator:ac2845d817d9e6ae4b7a6a46a80e19f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b3487e087e84f336d19fb00c40db39d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b3487e087e84f336d19fb00c40db39d"></a>
-QScrollArea *&#160;</td><td class="memItemRight" valign="bottom"><b>scrollArea</b> = nullptr</td></tr>
-<tr class="separator:a4b3487e087e84f336d19fb00c40db39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52f597455505495a5b51c4a516e38eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad52f597455505495a5b51c4a516e38eb"></a>
+Ui::PreferencesDialog *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> = nullptr</td></tr>
+<tr class="separator:ad52f597455505495a5b51c4a516e38eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fa39b7df887f7f1b766fb2867b67180"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fa39b7df887f7f1b766fb2867b67180"></a>
 <a class="el" href="class_preference_manager.html">PreferenceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mPrefManager</b> = nullptr</td></tr>
 <tr class="separator:a0fa39b7df887f7f1b766fb2867b67180"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34f6cf4f301b779ae77960428467afed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34f6cf4f301b779ae77960428467afed"></a>
-<a class="el" href="class_files_page.html">FilesPage</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mFilesPage</b> = nullptr</td></tr>
-<tr class="separator:a34f6cf4f301b779ae77960428467afed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="preferencesdialog_8h_source.html#l00048">48</a> of file <a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a>.</p>
+<p>Definition at line <a class="el" href="preferencesdialog_8h_source.html#l00055">55</a> of file <a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="preferencesdialog_8cpp_source.html">preferencesdialog.cpp</a></li>
@@ -175,7 +163,7 @@ QScrollArea *&#160;</td><td class="memItemRight" valign="bottom"><b>scrollArea</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 2 2018 04:23:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 4 2018 05:59:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

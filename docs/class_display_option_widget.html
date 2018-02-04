@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">902024d5ecc357f3bc6e9504a16ba21576d6812e</span>
+   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_display_option_widget-members.html">List of all members</a>  </div>
@@ -115,9 +116,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>initUI</b> () overrid
 <tr class="memitem:ad7f5313064853bcadb5bd409332f4f34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7f5313064853bcadb5bd409332f4f34"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateUI</b> () override</td></tr>
 <tr class="separator:ad7f5313064853bcadb5bd409332f4f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f1c9608318781712dcc77982f13443"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80f1c9608318781712dcc77982f13443"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>makeConnectionToEditor</b> (<a class="el" href="class_editor.html">Editor</a> *editor)</td></tr>
-<tr class="separator:a80f1c9608318781712dcc77982f13443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_base_dock_widget"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_base_dock_widget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_base_dock_widget.html">BaseDockWidget</a></td></tr>
 <tr class="memitem:a86cc3c644c25eb40324799c9bc3c4a42 inherit pub_methods_class_base_dock_widget"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86cc3c644c25eb40324799c9bc3c4a42"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BaseDockWidget</b> (QWidget *pParent)</td></tr>
@@ -129,8 +127,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>makeConnectionToEdito
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setEditor</b> (<a class="el" href="class_editor.html">Editor</a> *e)</td></tr>
 <tr class="separator:a9007b65bd3b12b5dc937b50dc13dd060 inherit pub_methods_class_base_dock_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Private Slots</h2></td></tr>
 <tr class="memitem:ae045d3834c3aabcbf14d90af8c081ea2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae045d3834c3aabcbf14d90af8c081ea2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onionPrevButtonClicked</b> (bool)</td></tr>
 <tr class="separator:ae045d3834c3aabcbf14d90af8c081ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +148,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleMirror</b> (boo
 void&#160;</td><td class="memItemRight" valign="bottom"><b>toggleMirrorV</b> (bool)</td></tr>
 <tr class="separator:a101a329e9f6659404259e4f228b5da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a515e3b2d366cfbc4b3c25dff93e4e549"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a515e3b2d366cfbc4b3c25dff93e4e549"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>makeConnections</b> ()</td></tr>
+<tr class="separator:a515e3b2d366cfbc4b3c25dff93e4e549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a553f1d65d78599b4c2ef144aba9c0448"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a553f1d65d78599b4c2ef144aba9c0448"></a>
@@ -166,7 +170,7 @@ Ui::DisplayOption *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 2 2018 04:23:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 4 2018 05:59:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

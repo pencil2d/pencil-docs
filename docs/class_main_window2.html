@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">902024d5ecc357f3bc6e9504a16ba21576d6812e</span>
+   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_main_window2-members.html">List of all members</a>  </div>
@@ -191,6 +192,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>tabletEvent</b> (QTab
 void&#160;</td><td class="memItemRight" valign="bottom"><b>closeEvent</b> (QCloseEvent *) override</td></tr>
 <tr class="separator:acf197912933d0cba7cb7f481633ef03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Private Slots</h2></td></tr>
+<tr class="memitem:ae98cb2f09aba9c67a0e11db38c9b0682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae98cb2f09aba9c67a0e11db38c9b0682"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dockAllSubWidgets</b> ()</td></tr>
+<tr class="separator:ae98cb2f09aba9c67a0e11db38c9b0682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a0662ee542d410211de07028138b14bea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0662ee542d410211de07028138b14bea"></a>
@@ -199,9 +206,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>openObject</b> (QStri
 <tr class="memitem:a57c073af706576620c6091814ab925c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57c073af706576620c6091814ab925c1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveObject</b> (QString strFileName)</td></tr>
 <tr class="separator:a57c073af706576620c6091814ab925c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae98cb2f09aba9c67a0e11db38c9b0682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae98cb2f09aba9c67a0e11db38c9b0682"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dockAllSubWidgets</b> ()</td></tr>
-<tr class="separator:ae98cb2f09aba9c67a0e11db38c9b0682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dbd9a1dc0b0e40b15100d7193c039d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dbd9a1dc0b0e40b15100d7193c039d1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>createDockWidgets</b> ()</td></tr>
 <tr class="separator:a8dbd9a1dc0b0e40b15100d7193c039d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,9 +265,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>bindActionWithSetting
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a3bcd9c2eda4cd7c809476df7dea627e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bcd9c2eda4cd7c809476df7dea627e7"></a>
-<a class="el" href="class_scribble_area.html">ScribbleArea</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mScribbleArea</b> = nullptr</td></tr>
-<tr class="separator:a3bcd9c2eda4cd7c809476df7dea627e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1313b56c1f677a0137b2d15b0964d1ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1313b56c1f677a0137b2d15b0964d1ae"></a>
 <a class="el" href="class_color_box.html">ColorBox</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mColorWheel</b> = nullptr</td></tr>
 <tr class="separator:a1313b56c1f677a0137b2d15b0964d1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,9 +301,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a57ce963d9f6be8b5f220dc73759378dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57ce963d9f6be8b5f220dc73759378dc"></a>
 <a class="el" href="class_q_list.html">QList</a>&lt; <a class="el" href="class_base_dock_widget.html">BaseDockWidget</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mDockWidgets</b></td></tr>
 <tr class="separator:a57ce963d9f6be8b5f220dc73759378dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ac779440308746fe817f57164028c7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ac779440308746fe817f57164028c7c"></a>
-<a class="el" href="class_background_widget.html">BackgroundWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mBackground</b> = nullptr</td></tr>
-<tr class="separator:a1ac779440308746fe817f57164028c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a0bbdfa839f39f55aa73ed08737a0ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a0bbdfa839f39f55aa73ed08737a0ea"></a>
 QIcon&#160;</td><td class="memItemRight" valign="bottom"><b>mStartIcon</b></td></tr>
 <tr class="separator:a5a0bbdfa839f39f55aa73ed08737a0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,7 +347,7 @@ Ui::MainWindow2 *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> =
 <p>&mdash; Tool Menu &mdash;</p>
 <p>&mdash; Window Menu &mdash; </p>
 
-<p>Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l00235">235</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
+<p>Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l00214">214</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
 
 </div>
 </div>
@@ -360,7 +358,7 @@ Ui::MainWindow2 *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> =
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 2 2018 04:23:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 4 2018 05:59:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

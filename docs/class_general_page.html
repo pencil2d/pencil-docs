@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">902024d5ecc357f3bc6e9504a16ba21576d6812e</span>
+   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -85,9 +85,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_general_page-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -114,6 +114,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateValues</b> ()</
 void&#160;</td><td class="memItemRight" valign="bottom"><b>gridSizeChange</b> (int value)</td></tr>
 <tr class="separator:a8d7bb518ef6bd9d6eacb8cb2d888b383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a98562d532c9afaa20d9c115119564794"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98562d532c9afaa20d9c115119564794"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>windowOpacityChange</b> (int value)</td></tr>
+<tr class="separator:a98562d532c9afaa20d9c115119564794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d2abb902fc12f274375e955bf6c99e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d2abb902fc12f274375e955bf6c99e5"></a>
@@ -123,35 +129,29 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setManager</b> (<a class="el" href="class_preference_manager.html">PreferenceManager</a> *p)</td></tr>
 <tr class="separator:ab5d072464a28cf67df2c35e0f7c6cf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ade10424572acc163b3408af635b45864"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade10424572acc163b3408af635b45864"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeEvent</b> (QResizeEvent *event) override</td></tr>
-<tr class="separator:ade10424572acc163b3408af635b45864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
+Private Slots</h2></td></tr>
 <tr class="memitem:a9886d0ea349f6a8eda4d63c747e7e0fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9886d0ea349f6a8eda4d63c747e7e0fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>languageChanged</b> (int i)</td></tr>
 <tr class="separator:a9886d0ea349f6a8eda4d63c747e7e0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a79614310b3e175e92c7b574cc4d606"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a79614310b3e175e92c7b574cc4d606"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>shadowsCheckboxStateChanged</b> (bool b)</td></tr>
-<tr class="separator:a7a79614310b3e175e92c7b574cc4d606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4b9170a6b9d2716880eaa8cbbbe2257"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4b9170a6b9d2716880eaa8cbbbe2257"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>antiAliasCheckboxStateChanged</b> (bool b)</td></tr>
-<tr class="separator:af4b9170a6b9d2716880eaa8cbbbe2257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc36591bd718c1d5784e31648a628827"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc36591bd718c1d5784e31648a628827"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>toolCursorsCheckboxStateChanged</b> (bool b)</td></tr>
-<tr class="separator:afc36591bd718c1d5784e31648a628827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93f471883429d0ee88dba1bd16534eed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93f471883429d0ee88dba1bd16534eed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dottedCursorCheckboxStateChanged</b> (bool b)</td></tr>
-<tr class="separator:a93f471883429d0ee88dba1bd16534eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65018284889f49ba4983762d5eb5e7cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65018284889f49ba4983762d5eb5e7cf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>highResCheckboxStateChanged</b> (bool b)</td></tr>
-<tr class="separator:a65018284889f49ba4983762d5eb5e7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865174ab70b08b421b89bfa43e278f9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a865174ab70b08b421b89bfa43e278f9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>gridCheckBoxStateChanged</b> (bool b)</td></tr>
-<tr class="separator:a865174ab70b08b421b89bfa43e278f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402ecdc5ace632e7cdbe75a76f143c08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a402ecdc5ace632e7cdbe75a76f143c08"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>shadowsCheckboxStateChanged</b> (int b)</td></tr>
+<tr class="separator:a402ecdc5ace632e7cdbe75a76f143c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b16659224991e16033c15110e37dd8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1b16659224991e16033c15110e37dd8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>antiAliasCheckboxStateChanged</b> (int b)</td></tr>
+<tr class="separator:ab1b16659224991e16033c15110e37dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56946645a821c7bbb7441b7c3afee4b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56946645a821c7bbb7441b7c3afee4b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>toolCursorsCheckboxStateChanged</b> (int b)</td></tr>
+<tr class="separator:a56946645a821c7bbb7441b7c3afee4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa202e13f198dc8098619bfaf635a7b38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa202e13f198dc8098619bfaf635a7b38"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dottedCursorCheckboxStateChanged</b> (int b)</td></tr>
+<tr class="separator:aa202e13f198dc8098619bfaf635a7b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36171434358071d0f9ebfc0d83d38815"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36171434358071d0f9ebfc0d83d38815"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>highResCheckboxStateChanged</b> (int b)</td></tr>
+<tr class="separator:a36171434358071d0f9ebfc0d83d38815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98422bd8fd3edc4eb5e96428ff9b7d48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98422bd8fd3edc4eb5e96428ff9b7d48"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>gridCheckBoxStateChanged</b> (int b)</td></tr>
+<tr class="separator:a98422bd8fd3edc4eb5e96428ff9b7d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c1769e226fb2b8878803cf4ff5c8b0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c1769e226fb2b8878803cf4ff5c8b0d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>curveSmoothingChange</b> (int value)</td></tr>
 <tr class="separator:a4c1769e226fb2b8878803cf4ff5c8b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,55 +161,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>backgroundChange</b> 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a13fb3d7e309e483fccd77e09c19129ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13fb3d7e309e483fccd77e09c19129ca"></a>
+Ui::GeneralPage *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> = nullptr</td></tr>
+<tr class="separator:a13fb3d7e309e483fccd77e09c19129ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e026e78ebef52a9ee6146cf59df9a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00e026e78ebef52a9ee6146cf59df9a0"></a>
 <a class="el" href="class_preference_manager.html">PreferenceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mManager</b> = nullptr</td></tr>
 <tr class="separator:a00e026e78ebef52a9ee6146cf59df9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae256b23dafa55b58505f30791d0022c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae256b23dafa55b58505f30791d0022c"></a>
-QScrollArea *&#160;</td><td class="memItemRight" valign="bottom"><b>scrollArea</b></td></tr>
-<tr class="separator:aae256b23dafa55b58505f30791d0022c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80d518ef377033165605adcab19407c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac80d518ef377033165605adcab19407c"></a>
-QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>contents</b></td></tr>
-<tr class="separator:ac80d518ef377033165605adcab19407c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2bb2673a0ec2543b724c86ddd8b77f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f2bb2673a0ec2543b724c86ddd8b77f"></a>
-QComboBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mLanguageCombo</b> = nullptr</td></tr>
-<tr class="separator:a6f2bb2673a0ec2543b724c86ddd8b77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f26b9412af22d482beacf57a8d9e884"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f26b9412af22d482beacf57a8d9e884"></a>
-QSlider *&#160;</td><td class="memItemRight" valign="bottom"><b>mWindowOpacityLevel</b></td></tr>
-<tr class="separator:a6f26b9412af22d482beacf57a8d9e884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a2d750f34f74581b88c85089bcbc06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7a2d750f34f74581b88c85089bcbc06"></a>
-QSlider *&#160;</td><td class="memItemRight" valign="bottom"><b>mCurveSmoothingLevel</b></td></tr>
-<tr class="separator:ab7a2d750f34f74581b88c85089bcbc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f2e25c2877b90e2235c1dce79298359"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f2e25c2877b90e2235c1dce79298359"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mShadowsBox</b></td></tr>
-<tr class="separator:a4f2e25c2877b90e2235c1dce79298359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9771945da877f6aa6bafdea468d4f1c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9771945da877f6aa6bafdea468d4f1c9"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mToolCursorsBox</b></td></tr>
-<tr class="separator:a9771945da877f6aa6bafdea468d4f1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15693aa0911d7a411a21b4960b22dbe7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15693aa0911d7a411a21b4960b22dbe7"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mAntialiasingBox</b></td></tr>
-<tr class="separator:a15693aa0911d7a411a21b4960b22dbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6be7eb0422bb99051b8fd6978e1ed55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6be7eb0422bb99051b8fd6978e1ed55"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mHighResBox</b></td></tr>
-<tr class="separator:af6be7eb0422bb99051b8fd6978e1ed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56e1343002b220a0fded96c224ebac7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56e1343002b220a0fded96c224ebac7e"></a>
-QButtonGroup *&#160;</td><td class="memItemRight" valign="bottom"><b>mBackgroundButtons</b></td></tr>
-<tr class="separator:a56e1343002b220a0fded96c224ebac7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4a3cfb06f91fc8661135d9fd85fda02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4a3cfb06f91fc8661135d9fd85fda02"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mDottedCursorBox</b></td></tr>
-<tr class="separator:aa4a3cfb06f91fc8661135d9fd85fda02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33ed8631e5b30a67c8d8e1237b791f1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33ed8631e5b30a67c8d8e1237b791f1d"></a>
-QSpinBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mGridSizeInput</b></td></tr>
-<tr class="separator:a33ed8631e5b30a67c8d8e1237b791f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7be493205b747c7b9977a0bdef776130"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7be493205b747c7b9977a0bdef776130"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mGridCheckBox</b></td></tr>
-<tr class="separator:a7be493205b747c7b9977a0bdef776130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2cdc06702295cf6957bb8b7596b7f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2cdc06702295cf6957bb8b7596b7f1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>gridSize</b></td></tr>
 <tr class="separator:ada2cdc06702295cf6957bb8b7596b7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="preferencesdialog_8h_source.html#l00082">82</a> of file <a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a>.</p>
+<p>Definition at line <a class="el" href="preferencesdialog_8h_source.html#l00086">86</a> of file <a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="preferencesdialog_8cpp_source.html">preferencesdialog.cpp</a></li>
@@ -217,7 +181,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>gridSize</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 2 2018 04:23:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 4 2018 05:59:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

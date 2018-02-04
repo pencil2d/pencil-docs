@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">902024d5ecc357f3bc6e9504a16ba21576d6812e</span>
+   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -109,21 +109,12 @@ Public Slots</h2></td></tr>
 <tr class="memitem:affcd58b52096cac8d419b0f5ed8c6c95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affcd58b52096cac8d419b0f5ed8c6c95"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateValues</b> ()</td></tr>
 <tr class="separator:affcd58b52096cac8d419b0f5ed8c6c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94db8c3d7b01fffa87936f0966b8d9c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94db8c3d7b01fffa87936f0966b8d9c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveChange</b> (bool b)</td></tr>
-<tr class="separator:a94db8c3d7b01fffa87936f0966b8d9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20d15dd5f0a823e54a5df295705a2d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab20d15dd5f0a823e54a5df295705a2d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveChange</b> (int b)</td></tr>
+<tr class="separator:ab20d15dd5f0a823e54a5df295705a2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504be0f0b2e496aef3b20947d65c9d31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a504be0f0b2e496aef3b20947d65c9d31"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>autosaveNumberChange</b> (int number)</td></tr>
 <tr class="separator:a504be0f0b2e496aef3b20947d65c9d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6cd480f4a023b65d2bd725da6f9a5a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6cd480f4a023b65d2bd725da6f9a5a0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clearRecentFilesList</b> ()</td></tr>
-<tr class="separator:ad6cd480f4a023b65d2bd725da6f9a5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cf8f908db025d5d10263e51e2c4e317"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cf8f908db025d5d10263e51e2c4e317"></a>
-QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>getClearRecentFilesBtn</b> ()</td></tr>
-<tr class="separator:a6cf8f908db025d5d10263e51e2c4e317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb2d533d91cc93af807367b9a9c0167d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb2d533d91cc93af807367b9a9c0167d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateClearRecentListButton</b> ()</td></tr>
-<tr class="separator:acb2d533d91cc93af807367b9a9c0167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -142,22 +133,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setManager</b> (<a cl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:a8db63a9eb900f1694b07b641520cfdb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8db63a9eb900f1694b07b641520cfdb7"></a>
+Ui::FilesPage *&#160;</td><td class="memItemRight" valign="bottom"><b>ui</b> = nullptr</td></tr>
+<tr class="separator:a8db63a9eb900f1694b07b641520cfdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace845526adf6b846b3a32ea3258477f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace845526adf6b846b3a32ea3258477f6"></a>
 <a class="el" href="class_preference_manager.html">PreferenceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mManager</b> = nullptr</td></tr>
 <tr class="separator:ace845526adf6b846b3a32ea3258477f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81cf031fa996549a0ebd53a87e0a1c72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81cf031fa996549a0ebd53a87e0a1c72"></a>
-QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mAutosaveCheckBox</b></td></tr>
-<tr class="separator:a81cf031fa996549a0ebd53a87e0a1c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636ec25c59698a85a55217a884999910"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a636ec25c59698a85a55217a884999910"></a>
-QSpinBox *&#160;</td><td class="memItemRight" valign="bottom"><b>mAutosaveNumberBox</b></td></tr>
-<tr class="separator:a636ec25c59698a85a55217a884999910"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd31a655b90180631286b507463efc39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd31a655b90180631286b507463efc39"></a>
-QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mClearRecentFilesBtn</b></td></tr>
-<tr class="separator:afd31a655b90180631286b507463efc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="preferencesdialog_8h_source.html#l00153">153</a> of file <a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a>.</p>
+<p>Definition at line <a class="el" href="preferencesdialog_8h_source.html#l00145">145</a> of file <a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="preferencesdialog_8h_source.html">preferencesdialog.h</a></li>
 <li>/home/travis/build/chchwy/pencil2d/app/<a class="el" href="preferencesdialog_8cpp_source.html">preferencesdialog.cpp</a></li>
@@ -165,7 +150,7 @@ QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>mClearRecent
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 2 2018 04:23:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 4 2018 05:59:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
