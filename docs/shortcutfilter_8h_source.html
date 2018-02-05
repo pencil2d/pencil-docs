@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
+   &#160;<span id="projectnumber">8500f30d222f415adae2629eaff4b21f7e126a54</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -113,20 +113,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_shortcut_filter.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_shortcut_filter.html">ShortcutFilter</a> : <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="class_shortcut_filter.html">ShortcutFilter</a>( <a class="code" href="class_scribble_area.html">ScribbleArea</a>* _mScribbleArea, QObject* parent = 0 );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">bool</span> eventFilter(QObject* obj, QEvent* event);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="class_scribble_area.html">ScribbleArea</a>* mScribbleArea;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_shortcut_filter.html">ShortcutFilter</a>(<a class="code" href="class_scribble_area.html">ScribbleArea</a>* scribbleArea, QObject* parent);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> eventFilter(QObject* obj, QEvent* event);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_scribble_area.html">ScribbleArea</a>* mScribbleArea = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_shortcut_filter_html"><div class="ttname"><a href="class_shortcut_filter.html">ShortcutFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="shortcutfilter_8h_source.html#l00023">shortcutfilter.h:23</a></div></div>
-<div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00052">scribblearea.h:52</a></div></div>
+<div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00051">scribblearea.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2018 05:59:11 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 5 2018 03:04:44 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

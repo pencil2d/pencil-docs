@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">000ba9b66bc7158b4fefc5984a540c204c9d964a</span>
+   &#160;<span id="projectnumber">8500f30d222f415adae2629eaff4b21f7e126a54</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -120,38 +120,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;QProgressDialog&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;QFileIconProvider&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;pencildef.h&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;pencilsettings.h&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;object.h&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;filemanager.h&quot;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;editor.h&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;colormanager.h&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;layermanager.h&quot;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;layercamera.h&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;toolmanager.h&quot;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;playbackmanager.h&quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;soundmanager.h&quot;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;actioncommands.h&quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;scribblearea.h&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;colorbox.h&quot;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;colorpalettewidget.h&quot;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#include &quot;displayoptionwidget.h&quot;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#include &quot;tooloptionwidget.h&quot;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;preferencesdialog.h&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;timeline.h&quot;</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;toolbox.h&quot;</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;preview.h&quot;</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;timeline2.h&quot;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &quot;errordialog.h&quot;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;importimageseqdialog.h&quot;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;fileformat.h&quot;</span>     <span class="comment">//contains constants used by Pencil File Format</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &quot;recentfilemenu.h&quot;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;shortcutfilter.h&quot;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &quot;movieexporter.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// core_lib headers</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;pencildef.h&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;pencilsettings.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;object.h&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;filemanager.h&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;editor.h&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;colormanager.h&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;layermanager.h&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;layercamera.h&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;toolmanager.h&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;playbackmanager.h&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &quot;soundmanager.h&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &quot;actioncommands.h&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &quot;fileformat.h&quot;</span>     <span class="comment">//contains constants used by Pencil File Format</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &quot;backupelement.h&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// app headers</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;scribblearea.h&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &quot;colorbox.h&quot;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &quot;colorpalettewidget.h&quot;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;displayoptionwidget.h&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;tooloptionwidget.h&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &quot;preferencesdialog.h&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;timeline.h&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#include &quot;toolbox.h&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//#include &quot;preview.h&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#include &quot;timeline2.h&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#include &quot;errordialog.h&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &quot;importimageseqdialog.h&quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;recentfilemenu.h&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &quot;shortcutfilter.h&quot;</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &quot;app_util.h&quot;</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#define STRINGIFY(x) #x</span></div>
@@ -998,7 +998,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;</div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;<span class="keywordtype">void</span> MainWindow2::clearKeyboardShortcuts()</div>
 <div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;{</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;QAction*&gt;</a> actionList = this-&gt;findChildren&lt;QAction*&gt;();</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;QAction*&gt;</a> actionList = findChildren&lt;QAction*&gt;();</div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;    <span class="keywordflow">for</span> (QAction* action : actionList)</div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;    {</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        action-&gt;setShortcut(QKeySequence(0));</div>
@@ -1007,7 +1007,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;<span class="keywordtype">void</span> MainWindow2::undoActSetText(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;{</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keywordflow">if</span> (this-&gt;mEditor-&gt;mBackupIndex &lt; 0)</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keywordflow">if</span> (mEditor-&gt;mBackupIndex &lt; 0)</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    {</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        ui-&gt;actionUndo-&gt;setText(tr(<span class="stringliteral">&quot;Undo&quot;</span>));</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;        ui-&gt;actionUndo-&gt;setEnabled(<span class="keyword">false</span>);</div>
@@ -1015,16 +1015,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    {</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;        ui-&gt;actionUndo-&gt;setText(tr(<span class="stringliteral">&quot;Undo   %1 %2&quot;</span>)</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                                .arg(QString::number(this-&gt;mEditor-&gt;mBackupIndex + 1))</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                                .arg(this-&gt;mEditor-&gt;mBackupList.at(this-&gt;mEditor-&gt;mBackupIndex)-&gt;undoText));</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                                .arg(QString::number(mEditor-&gt;mBackupIndex + 1))</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                                .arg(mEditor-&gt;mBackupList.at(mEditor-&gt;mBackupIndex)-&gt;undoText));</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;        ui-&gt;actionUndo-&gt;setEnabled(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;    }</div>
 <div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    <span class="keywordflow">if</span> (this-&gt;mEditor-&gt;mBackupIndex + 2 &lt; this-&gt;mEditor-&gt;mBackupList.size())</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;    <span class="keywordflow">if</span> (mEditor-&gt;mBackupIndex + 2 &lt; mEditor-&gt;mBackupList.size())</div>
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;    {</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        ui-&gt;actionRedo-&gt;setText(tr(<span class="stringliteral">&quot;Redo   %1 %2&quot;</span>)</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                                .arg(QString::number(this-&gt;mEditor-&gt;mBackupIndex + 2))</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                                .arg(this-&gt;mEditor-&gt;mBackupList.at(this-&gt;mEditor-&gt;mBackupIndex + 1)-&gt;undoText));</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                                .arg(QString::number(mEditor-&gt;mBackupIndex + 2))</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                                .arg(mEditor-&gt;mBackupList.at(mEditor-&gt;mBackupIndex + 1)-&gt;undoText));</div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        ui-&gt;actionRedo-&gt;setEnabled(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;    }</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;    <span class="keywordflow">else</span></div>
@@ -1187,7 +1187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_file_dialog_html"><div class="ttname"><a href="class_file_dialog.html">FileDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="filedialogex_8h_source.html#l00033">filedialogex.h:33</a></div></div>
 <div class="ttc" id="class_tool_option_widget_html"><div class="ttname"><a href="class_tool_option_widget.html">ToolOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="tooloptionwidget_8h_source.html#l00038">tooloptionwidget.h:38</a></div></div>
 <div class="ttc" id="class_action_commands_html"><div class="ttname"><a href="class_action_commands.html">ActionCommands</a></div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8h_source.html#l00027">actioncommands.h:27</a></div></div>
-<div class="ttc" id="class_playback_manager_html"><div class="ttname"><a href="class_playback_manager.html">PlaybackManager</a></div><div class="ttdef"><b>Definition:</b> <a href="playbackmanager_8h_source.html#l00026">playbackmanager.h:26</a></div></div>
+<div class="ttc" id="class_playback_manager_html"><div class="ttname"><a href="class_playback_manager.html">PlaybackManager</a></div><div class="ttdef"><b>Definition:</b> <a href="playbackmanager_8h_source.html#l00027">playbackmanager.h:27</a></div></div>
 <div class="ttc" id="class_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00028">timeline.h:28</a></div></div>
 <div class="ttc" id="class_color_manager_html"><div class="ttname"><a href="class_color_manager.html">ColorManager</a></div><div class="ttdef"><b>Definition:</b> <a href="colormanager_8h_source.html#l00026">colormanager.h:26</a></div></div>
 <div class="ttc" id="class_tool_box_widget_html"><div class="ttname"><a href="class_tool_box_widget.html">ToolBoxWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="toolbox_8h_source.html#l00035">toolbox.h:35</a></div></div>
@@ -1195,23 +1195,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_color_palette_widget_html"><div class="ttname"><a href="class_color_palette_widget.html">ColorPaletteWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="colorpalettewidget_8h_source.html#l00039">colorpalettewidget.h:39</a></div></div>
 <div class="ttc" id="class_import_image_seq_dialog_html"><div class="ttname"><a href="class_import_image_seq_dialog.html">ImportImageSeqDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="importimageseqdialog_8h_source.html#l00027">importimageseqdialog.h:27</a></div></div>
 <div class="ttc" id="class_shortcut_filter_html"><div class="ttname"><a href="class_shortcut_filter.html">ShortcutFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="shortcutfilter_8h_source.html#l00023">shortcutfilter.h:23</a></div></div>
-<div class="ttc" id="class_main_window2_html"><div class="ttname"><a href="class_main_window2.html">MainWindow2</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00051">mainwindow2.h:51</a></div></div>
+<div class="ttc" id="class_main_window2_html"><div class="ttname"><a href="class_main_window2.html">MainWindow2</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00052">mainwindow2.h:52</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
-<div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00064">preferencemanager.h:64</a></div></div>
+<div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00065">preferencemanager.h:65</a></div></div>
 <div class="ttc" id="class_recent_file_menu_html"><div class="ttname"><a href="class_recent_file_menu.html">RecentFileMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="recentfilemenu_8h_source.html#l00030">recentfilemenu.h:30</a></div></div>
 <div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00025">mainwindow2.h:25</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00052">object.h:52</a></div></div>
 <div class="ttc" id="class_preferences_dialog_html"><div class="ttname"><a href="class_preferences_dialog.html">PreferencesDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00055">preferencesdialog.h:55</a></div></div>
-<div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00046">editor.h:46</a></div></div>
+<div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00047">editor.h:47</a></div></div>
 <div class="ttc" id="class_error_dialog_html"><div class="ttname"><a href="class_error_dialog.html">ErrorDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="errordialog_8h_source.html#l00027">errordialog.h:27</a></div></div>
 <div class="ttc" id="class_file_manager_html"><div class="ttname"><a href="class_file_manager.html">FileManager</a></div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8h_source.html#l00034">filemanager.h:34</a></div></div>
 <div class="ttc" id="class_base_dock_widget_html"><div class="ttname"><a href="class_base_dock_widget.html">BaseDockWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="basedockwidget_8h_source.html#l00026">basedockwidget.h:26</a></div></div>
 <div class="ttc" id="class_main_window2_html_a515da25eb2a59ea6fa5e5254938a54a3"><div class="ttname"><a href="class_main_window2.html#a515da25eb2a59ea6fa5e5254938a54a3">MainWindow2::createMenus</a></div><div class="ttdeci">void createMenus()</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8cpp_source.html#l00214">mainwindow2.cpp:214</a></div></div>
-<div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00052">scribblearea.h:52</a></div></div>
+<div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00051">scribblearea.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2018 05:59:11 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 5 2018 03:04:44 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
