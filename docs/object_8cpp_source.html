@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">96adeb9ae86df32d8742f2cdb598918d2173d7dc</span>
+   &#160;<span id="projectnumber">22c1df124cf37a52cb8e1272fc52579617785e39</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -674,72 +674,71 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;            xPainter.resetMatrix();</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;            xPainter.setClipping(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;            xPainter.setPen(Qt::black);</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;            xPainter.setFont(QFont(<span class="stringliteral">&quot;helvetica&quot;</span>, 50));</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            xPainter.drawRect(target);</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;            xPainter.drawText(QPoint((y % 3) * 800 + 35, (y / 3) * 680 + 65 - page * 3400), QString::number(i));</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;            y++;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        }</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        <span class="keywordflow">if</span> (filePath.endsWith(<span class="stringliteral">&quot;.jpg&quot;</span>, Qt::CaseInsensitive))</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        {</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            filePath.chop(4);</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        }</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="keywordflow">if</span> (!xImg.save(filePath + QString::number(page) + <span class="stringliteral">&quot;.jpg&quot;</span>, <span class="stringliteral">&quot;JPG&quot;</span>, 60)) {</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        }</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        page++;</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;    }</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;}</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;<span class="keywordtype">bool</span> Object::exportIm(<span class="keywordtype">int</span> frame, QTransform view, QSize cameraSize, QSize exportSize, QString filePath, QString format, <span class="keywordtype">bool</span> antialiasing, <span class="keywordtype">bool</span> transparency)</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;{</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    QImage imageToExport(exportSize, QImage::Format_ARGB32_Premultiplied);</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    QColor bgColor = Qt::white;</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    <span class="keywordflow">if</span> (transparency)</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        bgColor.setAlpha(0);</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;    imageToExport.fill(bgColor);</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    QTransform centralizeCamera;</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    centralizeCamera.translate(cameraSize.width() / 2, cameraSize.height() / 2);</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    QPainter painter(&amp;imageToExport);</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    painter.setWorldTransform(view * centralizeCamera);</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    painter.setWindow(QRect(0, 0, cameraSize.width(), cameraSize.height()));</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    paintImage(painter, frame, <span class="keyword">false</span>, antialiasing);</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="keywordflow">return</span> imageToExport.save(filePath, format.toStdString().c_str());</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;}</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="keywordtype">int</span> Object::getLayerCount()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <span class="keywordflow">return</span> mLayers.size();</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;}</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<a class="code" href="class_object_data.html">ObjectData</a>* Object::data()</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;{</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    Q_ASSERT(mData != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordflow">return</span> mData.get();</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;}</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="keywordtype">void</span> Object::setData(<a class="code" href="class_object_data.html">ObjectData</a>* d)</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;{</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    Q_ASSERT(d != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    mData.reset(d);</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;}</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="keywordtype">int</span> Object::totalKeyFrameCount()</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;{</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="class_layer.html">Layer</a>* layer : mLayers)</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    {</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        sum += layer-&gt;keyFrameCount();</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    }</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;}</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;            xPainter.drawRect(target);</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            xPainter.drawText(QPoint((y % 3) * 800 + 35, (y / 3) * 680 + 65 - page * 3400), QString::number(i));</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;            y++;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        }</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keywordflow">if</span> (filePath.endsWith(<span class="stringliteral">&quot;.jpg&quot;</span>, Qt::CaseInsensitive))</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        {</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            filePath.chop(4);</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        }</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <span class="keywordflow">if</span> (!xImg.save(filePath + QString::number(page) + <span class="stringliteral">&quot;.jpg&quot;</span>, <span class="stringliteral">&quot;JPG&quot;</span>, 60)) {</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        }</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        page++;</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;}</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;<span class="keywordtype">bool</span> Object::exportIm(<span class="keywordtype">int</span> frame, QTransform view, QSize cameraSize, QSize exportSize, QString filePath, QString format, <span class="keywordtype">bool</span> antialiasing, <span class="keywordtype">bool</span> transparency)</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;{</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;    QImage imageToExport(exportSize, QImage::Format_ARGB32_Premultiplied);</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    QColor bgColor = Qt::white;</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="keywordflow">if</span> (transparency)</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        bgColor.setAlpha(0);</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    imageToExport.fill(bgColor);</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    QTransform centralizeCamera;</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    centralizeCamera.translate(cameraSize.width() / 2, cameraSize.height() / 2);</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    QPainter painter(&amp;imageToExport);</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    painter.setWorldTransform(view * centralizeCamera);</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    painter.setWindow(QRect(0, 0, cameraSize.width(), cameraSize.height()));</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    paintImage(painter, frame, <span class="keyword">false</span>, antialiasing);</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="keywordflow">return</span> imageToExport.save(filePath, format.toStdString().c_str());</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;}</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="keywordtype">int</span> Object::getLayerCount()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    <span class="keywordflow">return</span> mLayers.size();</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;}</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;<a class="code" href="class_object_data.html">ObjectData</a>* Object::data()</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;{</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    Q_ASSERT(mData != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="keywordflow">return</span> mData.get();</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;}</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="keywordtype">void</span> Object::setData(<a class="code" href="class_object_data.html">ObjectData</a>* d)</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;{</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    Q_ASSERT(d != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    mData.reset(d);</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;}</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<span class="keywordtype">int</span> Object::totalKeyFrameCount()</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;{</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="class_layer.html">Layer</a>* layer : mLayers)</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    {</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        sum += layer-&gt;keyFrameCount();</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    }</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;}</div>
 <div class="ttc" id="class_vector_image_html_a87fd953e506cecad346c4d5e069d6788"><div class="ttname"><a href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">VectorImage::paintImage</a></div><div class="ttdeci">void paintImage(QPainter &amp;painter, bool simplified, bool showThinCurves, bool antialiasing)</div><div class="ttdoc">VectorImage::paintImage. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01136">vectorimage.cpp:1136</a></div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00048">layercamera.h:48</a></div></div>
 <div class="ttc" id="class_object_data_html"><div class="ttname"><a href="class_object_data.html">ObjectData</a></div><div class="ttdef"><b>Definition:</b> <a href="objectdata_8h_source.html#l00025">objectdata.h:25</a></div></div>
@@ -751,7 +750,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 5 2018 23:34:03 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 8 2018 13:25:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
