@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">22c1df124cf37a52cb8e1272fc52579617785e39</span>
+   &#160;<span id="projectnumber">b24f9ce6f93a081539dbd567bb026900656cc217</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -297,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; mScribbleArea-&gt;vectorSelection.curve.size(); k++)</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            {</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                <span class="keywordtype">int</span> curveNumber = mScribbleArea-&gt;vectorSelection.curve.at(k);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                vectorImage-&gt;mCurves[curveNumber].smoothCurve();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                vectorImage-&gt;curve(curveNumber).smoothCurve();</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            mScribbleArea-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
@@ -429,17 +429,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
 <div class="ttc" id="class_blit_rect_html"><div class="ttname"><a href="class_blit_rect.html">BlitRect</a></div><div class="ttdef"><b>Definition:</b> <a href="blitrect_8h_source.html#l00024">blitrect.h:24</a></div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00034">vectorimage.h:34</a></div></div>
-<div class="ttc" id="class_vector_image_html_ae9c74e9fda199bc0a8e459961321bf62"><div class="ttname"><a href="class_vector_image.html#ae9c74e9fda199bc0a8e459961321bf62">VectorImage::isSelected</a></div><div class="ttdeci">bool isSelected(int curveNumber)</div><div class="ttdoc">VectorImage::isSelected. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00708">vectorimage.cpp:708</a></div></div>
+<div class="ttc" id="class_vector_image_html_ae9c74e9fda199bc0a8e459961321bf62"><div class="ttname"><a href="class_vector_image.html#ae9c74e9fda199bc0a8e459961321bf62">VectorImage::isSelected</a></div><div class="ttdeci">bool isSelected(int curveNumber)</div><div class="ttdoc">VectorImage::isSelected. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00695">vectorimage.cpp:695</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
 <div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; QPointF &gt;</a></div></div>
-<div class="ttc" id="class_vector_image_html_ad7eb4ae4ebae009d56666e0bf07ffa24"><div class="ttname"><a href="class_vector_image.html#ad7eb4ae4ebae009d56666e0bf07ffa24">VectorImage::applySelectionTransformation</a></div><div class="ttdeci">void applySelectionTransformation()</div><div class="ttdoc">VectorImage::applySelectionTransformation. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01241">vectorimage.cpp:1241</a></div></div>
-<div class="ttc" id="class_vector_image_html_a5046ddaeae625dd40dab3d4dc861b09c"><div class="ttname"><a href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">VectorImage::setSelected</a></div><div class="ttdeci">void setSelected(int curveNumber, bool YesOrNo)</div><div class="ttdoc">VectorImage::setSelected. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00598">vectorimage.cpp:598</a></div></div>
+<div class="ttc" id="class_vector_image_html_ad7eb4ae4ebae009d56666e0bf07ffa24"><div class="ttname"><a href="class_vector_image.html#ad7eb4ae4ebae009d56666e0bf07ffa24">VectorImage::applySelectionTransformation</a></div><div class="ttdeci">void applySelectionTransformation()</div><div class="ttdoc">VectorImage::applySelectionTransformation. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01214">vectorimage.cpp:1214</a></div></div>
+<div class="ttc" id="class_vector_image_html_a5046ddaeae625dd40dab3d4dc861b09c"><div class="ttname"><a href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">VectorImage::setSelected</a></div><div class="ttdeci">void setSelected(int curveNumber, bool YesOrNo)</div><div class="ttdoc">VectorImage::setSelected. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00585">vectorimage.cpp:585</a></div></div>
 <div class="ttc" id="class_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00027">stroketool.h:27</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00025">bitmapimage.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 8 2018 13:25:57 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 11 2018 13:03:13 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
