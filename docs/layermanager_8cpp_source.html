@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">b24f9ce6f93a081539dbd567bb026900656cc217</span>
+   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -136,9 +136,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="class_status.html">Status</a> LayerManager::save(<a class="code" href="class_object.html">Object</a>*)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="class_status.html">Status</a> LayerManager::save(<a class="code" href="class_object.html">Object</a>* o)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//o-&gt;data()-&gt;setCurrentLayer( mCurrentLayerIndex );</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    o-&gt;data()-&gt;setCurrentLayer(editor()-&gt;currentLayerIndex());</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
@@ -191,13 +191,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    Q_ASSERT(layerIndex &gt;= 0);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="class_object.html">Object</a>* o = object();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> ( layerIndex &gt;= o-&gt;getLayerCount() )</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (layerIndex &gt;= o-&gt;getLayerCount())</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        Q_ASSERT( <span class="keyword">false</span> );</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (editor()-&gt;currentLayerIndex() != layerIndex )</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (editor()-&gt;currentLayerIndex() != layerIndex)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        editor()-&gt;setCurrentLayerIndex(layerIndex);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        Q_EMIT currentLayerChanged(layerIndex);</div>
@@ -427,13 +427,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00052">object.h:52</a></div></div>
-<div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00047">editor.h:47</a></div></div>
+<div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00048">editor.h:48</a></div></div>
 <div class="ttc" id="class_layer_manager_html_a321c9a8ed55ce6d150b748164f29e605"><div class="ttname"><a href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">LayerManager::animationLength</a></div><div class="ttdeci">int animationLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project. </div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00287">layermanager.cpp:287</a></div></div>
 <div class="ttc" id="class_layer_sound_html"><div class="ttname"><a href="class_layer_sound.html">LayerSound</a></div><div class="ttdef"><b>Definition:</b> <a href="layersound_8h_source.html#l00025">layersound.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 11 2018 13:03:12 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
