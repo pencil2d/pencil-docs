@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/managers/viewmanager.h Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/managers/viewmanager.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_3e27e76b295b20e2fd68da9a34b73e43.html">managers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_ff02fa132a5d9156bfd3adf3def0437d.html">managers</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -132,18 +132,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    QTransform getViewInverse();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> resetView();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QPointF mapCanvasToScreen(QPointF p);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QPointF mapScreenToCanvas(QPointF p);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mapCanvasToScreen(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> p);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mapScreenToCanvas(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> p);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QRectF mapCanvasToScreen(<span class="keyword">const</span> QRectF&amp; rect);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    QRectF mapScreenToCanvas(<span class="keyword">const</span> QRectF&amp; rect);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mapCanvasToScreen(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; rect);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mapScreenToCanvas(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; rect);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    QPainterPath mapCanvasToScreen(<span class="keyword">const</span> QPainterPath&amp; path);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QPainterPath mapScreenToCanvas(<span class="keyword">const</span> QPainterPath&amp; path);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QPointF translation();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> translation();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> translate(<span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> translate(QPointF offset);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> translate(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> offset);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">float</span> rotation();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> rotate(<span class="keywordtype">float</span> degree);</div>
@@ -159,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> isFlipHorizontal() { <span class="keywordflow">return</span> mIsFlipHorizontal; }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> isFlipVertical() { <span class="keywordflow">return</span> mIsFlipVertical; }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setCanvasSize(QSize size);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setCanvasSize(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html">QSize</a> size);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setCameraLayer(<a class="code" href="class_layer.html">Layer</a>* layer);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> updateViewTransforms();</div>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_camera.html">Camera</a>* mDefaultEditorCamera = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="class_camera.html">Camera</a>* mCurrentCamera = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    QSize mCanvasSize = { 1, 1 };</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html">QSize</a> mCanvasSize = { 1, 1 };</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> mIsFlipHorizontal = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">bool</span> mIsFlipVertical = <span class="keyword">false</span>;</div>
@@ -198,14 +198,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00048">layercamera.h:48</a></div></div>
 <div class="ttc" id="class_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:28</a></div></div>
 <div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00024">camera.h:24</a></div></div>
+<div class="ttc" id="qpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
+<div class="ttc" id="qsize_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html">QSize</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
+<div class="ttc" id="qrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00052">object.h:52</a></div></div>
 <div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00048">editor.h:48</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

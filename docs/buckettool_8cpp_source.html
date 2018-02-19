@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/tool/buckettool.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/tool/buckettool.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_7b1938b5ff4064cdebaff0e97f518fe9.html">tool</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_dcff8fc9db607d20dd899b87fd4725e1.html">tool</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;scribblearea.h&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;BucketTool::BucketTool( QObject *parent ) :</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;BucketTool::BucketTool( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html">QObject</a> *parent ) :</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="class_stroke_tool.html">StrokeTool</a>( parent )</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
@@ -163,9 +163,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    properties.width = width;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Update settings</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QSettings settings( PENCIL2D, PENCIL2D );</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    settings.setValue(<span class="stringliteral">&quot;fillThickness&quot;</span>, width);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    settings.sync();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#setValue">setValue</a>(<span class="stringliteral">&quot;fillThickness&quot;</span>, width);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#sync">sync</a>();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> BucketTool::setTolerance(<span class="keyword">const</span> <span class="keywordtype">int</span> tolerance)</div>
@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    properties.tolerance = tolerance;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// Update settings</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    QSettings settings( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings( PENCIL2D, PENCIL2D );</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    settings.setValue(<span class="stringliteral">&quot;tolerance&quot;</span>, tolerance );</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    settings.sync();</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
@@ -227,9 +227,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="class_bitmap_image.html">BitmapImage</a>* targetImage = ((<a class="code" href="class_layer_bitmap.html">LayerBitmap</a>*)targetLayer)-&gt;getLastBitmapImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    QPoint point = getLastPoint().toPoint();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a> point = getLastPoint().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    QRect cameraRect = mScribbleArea-&gt;getCameraRect().toRect();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> cameraRect = mScribbleArea-&gt;getCameraRect().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#toRect">toRect</a>();</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    BitmapImage::floodFill( targetImage,</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                            cameraRect,</div>
@@ -276,7 +276,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        m_pStrokeManager-&gt;setInpolLevel(properties.inpolLevel);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> p = m_pStrokeManager-&gt;interpolateStroke();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> p = m_pStrokeManager-&gt;interpolateStroke();</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
@@ -294,7 +294,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                  Qt::RoundCap,</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                  Qt::RoundJoin );</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">if</span>( p.size() == 4 ) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">if</span>( p.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>() == 4 ) {</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            QPainterPath path( p[ 0 ] );</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            path.cubicTo( p[ 1 ],</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                          p[ 2 ],</div>
@@ -305,22 +305,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;}</div>
 <div class="ttc" id="class_bucket_tool_html_a73dd15022326729eb46ccec330e57406"><div class="ttname"><a href="class_bucket_tool.html#a73dd15022326729eb46ccec330e57406">BucketTool::setWidth</a></div><div class="ttdeci">void setWidth(const qreal width) override</div><div class="ttdoc">BrushTool::setWidth. </div><div class="ttdef"><b>Definition:</b> <a href="buckettool_8cpp_source.html#l00075">buckettool.cpp:75</a></div></div>
+<div class="ttc" id="qsettings_html_sync"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#sync">QSettings::sync</a></div><div class="ttdeci">void sync()</div></div>
+<div class="ttc" id="qrectf_html_toRect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#toRect">QRectF::toRect</a></div><div class="ttdeci">QRect toRect() const</div></div>
 <div class="ttc" id="class_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00024">layerbitmap.h:24</a></div></div>
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
 <div class="ttc" id="class_vector_image_html_a5feff6a8dc9178be02b149575a222471"><div class="ttname"><a href="class_vector_image.html#a5feff6a8dc9178be02b149575a222471">VectorImage::isPathFilled</a></div><div class="ttdeci">bool isPathFilled()</div><div class="ttdoc">VectorImage::isPathFilled. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00674">vectorimage.cpp:674</a></div></div>
 <div class="ttc" id="class_vector_image_html_a99be9ff401262c69b7f872b8a1e0e8f6"><div class="ttname"><a href="class_vector_image.html#a99be9ff401262c69b7f872b8a1e0e8f6">VectorImage::applyColourToSelectedCurve</a></div><div class="ttdeci">void applyColourToSelectedCurve(int colourNumber)</div><div class="ttdoc">VectorImage::applyColourToSelectedCurve. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01242">vectorimage.cpp:1242</a></div></div>
+<div class="ttc" id="qpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
+<div class="ttc" id="qlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const</div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00034">vectorimage.h:34</a></div></div>
 <div class="ttc" id="class_vector_image_html_a2b301c5aa0ccff84953ba137828fabba"><div class="ttname"><a href="class_vector_image.html#a2b301c5aa0ccff84953ba137828fabba">VectorImage::applyColourToSelectedArea</a></div><div class="ttdeci">void applyColourToSelectedArea(int colourNumber)</div><div class="ttdoc">VectorImage::applyColourToSelectedArea. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01255">vectorimage.cpp:1255</a></div></div>
+<div class="ttc" id="qsettings_html_setValue"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#setValue">QSettings::setValue</a></div><div class="ttdeci">void setValue(const QString &amp;key, const QVariant &amp;value)</div></div>
+<div class="ttc" id="qrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
+<div class="ttc" id="qobject_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
+<div class="ttc" id="qlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList&lt; QPointF &gt;</a></div></div>
 <div class="ttc" id="class_vector_image_html_aa6d32b8d1549462c0d15e1bc2e16705a"><div class="ttname"><a href="class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a">VectorImage::applyWidthToSelection</a></div><div class="ttdeci">void applyWidthToSelection(qreal width)</div><div class="ttdoc">VectorImage::applyWidthToSelection. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01268">vectorimage.cpp:1268</a></div></div>
-<div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; QPointF &gt;</a></div></div>
+<div class="ttc" id="qsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
+<div class="ttc" id="qpointf_html_toPoint"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#toPoint">QPointF::toPoint</a></div><div class="ttdeci">QPoint toPoint() const</div></div>
 <div class="ttc" id="class_vector_image_html_a53592841a3bf44b991847467860131c8"><div class="ttname"><a href="class_vector_image.html#a53592841a3bf44b991847467860131c8">VectorImage::fillSelectedPath</a></div><div class="ttdeci">void fillSelectedPath(int colour)</div><div class="ttdoc">VectorImage::fillSelectedPath. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01727">vectorimage.cpp:1727</a></div></div>
 <div class="ttc" id="class_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00027">stroketool.h:27</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00025">bitmapimage.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

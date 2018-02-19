@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/structure/camera.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/structure/camera.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_37d2dc142bae53c07227f6d1e65a171a.html">structure</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_f4a24cce322570410a5bf0612e037363.html">structure</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;Camera::Camera(QPointF translation, <span class="keywordtype">float</span> rotation, <span class="keywordtype">float</span> scaling)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;Camera::Camera(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> translation, <span class="keywordtype">float</span> rotation, <span class="keywordtype">float</span> scaling)</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Q_ASSERT(scaling &gt; 0);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    mTranslate = translation;</div>
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> Camera::reset()</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    mTranslate = QPointF(0, 0);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    mTranslate = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(0, 0);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    mRotate = 0.f;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    mScale = 1.f;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    mNeedUpdateView = <span class="keyword">true</span>;</div>
@@ -166,7 +166,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (mNeedUpdateView)</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        QTransform t;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        t.translate(mTranslate.x(), mTranslate.y());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        t.translate(mTranslate.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), mTranslate.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        QTransform r;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        r.rotate(mRotate);</div>
@@ -181,16 +181,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> Camera::translate(<span class="keywordtype">float</span> dx, <span class="keywordtype">float</span> dy)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    mTranslate.setX(dx);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    mTranslate.setY(dy);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    mTranslate.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#setX">setX</a>(dx);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    mTranslate.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#setY">setY</a>(dy);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    mNeedUpdateView = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    modification();</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> Camera::translate(<span class="keyword">const</span> QPointF pt)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keywordtype">void</span> Camera::translate(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> pt)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    translate(pt.x(), pt.y());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    translate(pt.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), pt.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordtype">void</span> Camera::rotate(<span class="keywordtype">float</span> degree)</div>
@@ -228,10 +228,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
 <div class="ttc" id="class_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00024">camera.h:24</a></div></div>
 <div class="ttc" id="class_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:29</a></div></div>
+<div class="ttc" id="qpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
+<div class="ttc" id="qpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const</div></div>
+<div class="ttc" id="qpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const</div></div>
+<div class="ttc" id="qpointf_html_setX"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#setX">QPointF::setX</a></div><div class="ttdeci">void setX(qreal x)</div></div>
+<div class="ttc" id="qpointf_html_setY"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#setY">QPointF::setY</a></div><div class="ttdeci">void setY(qreal y)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

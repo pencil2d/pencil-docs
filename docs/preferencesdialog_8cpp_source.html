@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/preferencesdialog.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/src/preferencesdialog.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_a8f641299cfea9f7461c2df1141b7786.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    ui-&gt;setupUi(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    QSettings settings( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings( PENCIL2D, PENCIL2D );</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ui-&gt;languageCombo-&gt;addItem(tr(<span class="stringliteral">&quot;Czech&quot;</span>) + <span class="stringliteral">&quot; (Czech)&quot;</span>, <span class="stringliteral">&quot;cs&quot;</span>);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    ui-&gt;languageCombo-&gt;addItem(tr(<span class="stringliteral">&quot;Danish&quot;</span>) + <span class="stringliteral">&quot; (Danish)&quot;</span>, <span class="stringliteral">&quot;da&quot;</span>);</div>
@@ -273,7 +273,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    ui-&gt;highResBox-&gt;setChecked(mManager-&gt;isOn(SETTING::HIGH_RESOLUTION));</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="class_signal_blocker.html">SignalBlocker</a> b10(ui-&gt;backgroundButtons);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QString bgName = mManager-&gt;getString(SETTING::BACKGROUND_STYLE);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> bgName = mManager-&gt;getString(SETTING::BACKGROUND_STYLE);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">int</span> buttonIdx = 1;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (bgName == <span class="stringliteral">&quot;checkerboard&quot;</span>) buttonIdx = 1;</div>
@@ -288,7 +288,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> GeneralPage::languageChanged( <span class="keywordtype">int</span> i )</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    QString strLocale = ui-&gt;languageCombo-&gt;itemData(i).toString();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strLocale = ui-&gt;languageCombo-&gt;itemData(i).toString();</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    mManager-&gt;set(SETTING::LANGUAGE, strLocale);</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    QMessageBox::warning(<span class="keyword">this</span>,</div>
@@ -298,7 +298,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">void</span> GeneralPage::backgroundChange(<span class="keywordtype">int</span> value)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    QString brushName = <span class="stringliteral">&quot;white&quot;</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> brushName = <span class="stringliteral">&quot;white&quot;</span>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">switch</span> (value)</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">case</span> 1: brushName = <span class="stringliteral">&quot;checkerboard&quot;</span>; <span class="keywordflow">break</span>;</div>
@@ -383,7 +383,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    </div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="class_signal_blocker.html">SignalBlocker</a> b3(ui-&gt;timelineLength);</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    ui-&gt;timelineLength-&gt;setValue(mManager-&gt;getInt(SETTING::TIMELINE_SIZE));</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">if</span> (mManager-&gt;getString(SETTING::TIMELINE_SIZE).toInt() &lt;= 0)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">if</span> (mManager-&gt;getString(SETTING::TIMELINE_SIZE).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toInt">toInt</a>() &lt;= 0)</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        ui-&gt;timelineLength-&gt;setValue(240);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
@@ -499,14 +499,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_signal_blocker_html"><div class="ttname"><a href="class_signal_blocker.html">SignalBlocker</a></div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00047">util.h:47</a></div></div>
 <div class="ttc" id="class_timeline_page_html"><div class="ttname"><a href="class_timeline_page.html">TimelinePage</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00121">preferencesdialog.h:121</a></div></div>
 <div class="ttc" id="class_files_page_html"><div class="ttname"><a href="class_files_page.html">FilesPage</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00144">preferencesdialog.h:144</a></div></div>
+<div class="ttc" id="qstring_html_toInt"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#toInt">QString::toInt</a></div><div class="ttdeci">int toInt(bool *ok, int base) const</div></div>
 <div class="ttc" id="class_general_page_html"><div class="ttname"><a href="class_general_page.html">GeneralPage</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00086">preferencesdialog.h:86</a></div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
 <div class="ttc" id="class_tools_page_html"><div class="ttname"><a href="class_tools_page.html">ToolsPage</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00168">preferencesdialog.h:168</a></div></div>
 <div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00065">preferencemanager.h:65</a></div></div>
 <div class="ttc" id="class_preferences_dialog_html"><div class="ttname"><a href="class_preferences_dialog.html">PreferencesDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00055">preferencesdialog.h:55</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -13,6 +13,7 @@ var searchData=
   ['timelinecells',['TimeLineCells',['../class_time_line_cells.html',1,'']]],
   ['timelinepage',['TimelinePage',['../class_timeline_page.html',1,'']]],
   ['timer',['Timer',['../class_catch_1_1_timer.html',1,'Catch']]],
+  ['timerinfo',['TimerInfo',['https://doc.qt.io/qt-5/qabstracteventdispatcher-timerinfo.html',1,'QAbstractEventDispatcher']]],
   ['tinfl_5fdecompressor_5ftag',['tinfl_decompressor_tag',['../structtinfl__decompressor__tag.html',1,'']]],
   ['tinfl_5fhuff_5ftable',['tinfl_huff_table',['../structtinfl__huff__table.html',1,'']]],
   ['toolboxwidget',['ToolBoxWidget',['../class_tool_box_widget.html',1,'']]],

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/util/util.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/util/util.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_ffb27f95503981b6ea2ee5241bafe739.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_9d923c11026a4163129e78ef8a57744e.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -107,16 +107,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;QTransform RectMapTransform( QRectF source, QRectF target )</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;QTransform RectMapTransform( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> source, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> target )</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    qreal x1 = source.left();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    qreal y1 = source.top();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    qreal x2 = source.right();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    qreal y2 = source.bottom();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    qreal x1P = target.left();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    qreal y1P = target.top();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    qreal x2P = target.right();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    qreal y2P = target.bottom();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    qreal x1 = source.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#left">left</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    qreal y1 = source.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#top">top</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    qreal x2 = source.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#right">right</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    qreal y2 = source.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#bottom">bottom</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    qreal x1P = target.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#left">left</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    qreal y1P = target.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#top">top</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    qreal x2P = target.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#right">right</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    qreal y2P = target.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#bottom">bottom</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QTransform matrix;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">if</span> ( ( x1 != x2 ) &amp;&amp; ( y1 != y2 ) )</div>
@@ -135,7 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> matrix;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;SignalBlocker::SignalBlocker( QObject* o )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;SignalBlocker::SignalBlocker( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* o )</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    : mObject( o ),</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    mBlocked( o &amp;&amp; o-&gt;blockSignals( true ) )</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{}</div>
@@ -143,12 +143,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;SignalBlocker::~SignalBlocker()</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> ( mObject )</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        mObject-&gt;blockSignals( mBlocked );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        mObject-&gt;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#blockSignals">blockSignals</a>( mBlocked );</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="qrectf_html_top"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#top">QRectF::top</a></div><div class="ttdeci">qreal top() const</div></div>
+<div class="ttc" id="qrectf_html_left"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#left">QRectF::left</a></div><div class="ttdeci">qreal left() const</div></div>
+<div class="ttc" id="qrectf_html_bottom"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#bottom">QRectF::bottom</a></div><div class="ttdeci">qreal bottom() const</div></div>
+<div class="ttc" id="qobject_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div></div>
+<div class="ttc" id="qobject_html_blockSignals"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#blockSignals">QObject::blockSignals</a></div><div class="ttdeci">bool blockSignals(bool block)</div></div>
+<div class="ttc" id="qrectf_html_right"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#right">QRectF::right</a></div><div class="ttdeci">qreal right() const</div></div>
+<div class="ttc" id="qrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

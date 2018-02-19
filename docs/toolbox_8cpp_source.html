@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/toolbox.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/src/toolbox.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_a8f641299cfea9f7461c2df1141b7786.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -119,11 +119,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;pencilsettings.h&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// ----------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;QString GetToolTips(QString strCommandName)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> GetToolTips(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCommandName)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    strCommandName = QString(<span class="stringliteral">&quot;shortcuts/&quot;</span>) + strCommandName;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    strCommandName = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;shortcuts/&quot;</span>) + strCommandName;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    QKeySequence keySequence(pencilSettings().value(strCommandName).toString());</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;&lt;b&gt;%1&lt;/b&gt;&quot;</span>).arg(keySequence.toString()); <span class="comment">// don&#39;t tr() this string.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;&lt;b&gt;%1&lt;/b&gt;&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(keySequence.toString()); <span class="comment">// don&#39;t tr() this string.</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;ToolBoxWidget::ToolBoxWidget(QWidget* parent) :</div>
@@ -135,7 +135,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;ToolBoxWidget::~ToolBoxWidget()</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    QSettings settings(PENCIL2D, PENCIL2D);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    settings.setValue(<span class="stringliteral">&quot;ToolBoxGeom&quot;</span>, this-&gt;saveGeometry());</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    settings.setValue(<span class="stringliteral">&quot;toolBoxDockLocation&quot;</span>, (<span class="keywordtype">int</span>)mAreaLocation);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    settings.setValue(<span class="stringliteral">&quot;isToolBoxFloating&quot;</span>, isFloating());</div>
@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#ifdef __APPLE__</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span>    <span class="comment">// Only Mac needs this. ToolButton is naturally borderless on Win/Linux.</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    QString sStyle =</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sStyle =</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="stringliteral">&quot;QToolButton { border: 0px; }&quot;</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="stringliteral">&quot;QToolButton:pressed { border: 1px solid #ADADAD; border-radius: 2px; background-color: #D5D5D5; }&quot;</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="stringliteral">&quot;QToolButton:checked { border: 1px solid #ADADAD; border-radius: 2px; background-color: #D5D5D5; }&quot;</span>;</div>
@@ -231,7 +231,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    connect(<span class="keyword">this</span>, &amp;QDockWidget::dockLocationChanged, <span class="keyword">this</span>, &amp;ToolBoxWidget::getDockLocation);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    QSettings settings(PENCIL2D, PENCIL2D);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    this-&gt;restoreGeometry(settings.value(<span class="stringliteral">&quot;ToolBoxGeom&quot;</span>).toByteArray());</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    mAreaLocation = (Qt::DockWidgetArea)settings.value(<span class="stringliteral">&quot;toolBoxDockLocation&quot;</span>).toInt();</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    mIsFloating = settings.value(<span class="stringliteral">&quot;isToolBoxFloating&quot;</span>).toBool();</div>
@@ -245,8 +245,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    QWidget::resizeEvent(event);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    QRect geom = geometry();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    QSize buttonSize = ui-&gt;clearButton-&gt;size(); <span class="comment">// all buttons share same size</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> geom = geometry();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html">QSize</a> buttonSize = ui-&gt;clearButton-&gt;size(); <span class="comment">// all buttons share same size</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (mIsFloating)</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
@@ -255,7 +255,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// disable certain areas when width is &gt;= number of buttons.</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> NUMOFBUTTONS = 12;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (geometry().width() &gt;= buttonSize.width()*NUMOFBUTTONS)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (geometry().width() &gt;= buttonSize.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>()*NUMOFBUTTONS)</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        setAllowedAreas(Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
@@ -266,9 +266,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">// Horizontal Layout</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (geom.width() &lt; geom.height())</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (geom.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() &lt; geom.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>())</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> (geom.width() &gt; buttonSize.width() * 5)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span> (geom.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() &gt; buttonSize.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>() * 5)</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        {</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;clearButton, 0, 0);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;moveButton, 0, 1);</div>
@@ -288,7 +288,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;eyedropperButton, 3, 1);</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;eraserButton, 3, 2);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (geom.width() &gt; buttonSize.width() * 3</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (geom.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() &gt; buttonSize.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>() * 3</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                 || mAreaLocation &amp; (Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea))</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        {</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;clearButton, 0, 0);</div>
@@ -328,7 +328,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    { <span class="comment">// Vertical</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span> (geom.height() &gt; buttonSize.height() * 5)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span> (geom.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>() &gt; buttonSize.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>() * 5)</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        {</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;clearButton, 0, 0);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;moveButton, 1, 0);</div>
@@ -348,7 +348,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;eyedropperButton, 1, 3);</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;eraserButton, 2, 3);</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (geom.height() &gt; buttonSize.height() * 3 ||</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (geom.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>() &gt; buttonSize.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>() * 3 ||</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                 mAreaLocation &amp; (Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea))</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            ui-&gt;gridLayout-&gt;addWidget(ui-&gt;clearButton, 0, 0);</div>
@@ -503,12 +503,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    ui-&gt;brushButton-&gt;setChecked(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    ui-&gt;smudgeButton-&gt;setChecked(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div>
+<div class="ttc" id="qsize_html_width"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html#width">QSize::width</a></div><div class="ttdeci">int width() const</div></div>
+<div class="ttc" id="qrect_html_height"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#height">QRect::height</a></div><div class="ttdeci">int height() const</div></div>
+<div class="ttc" id="qrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
 <div class="ttc" id="class_tool_box_widget_html"><div class="ttname"><a href="class_tool_box_widget.html">ToolBoxWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="toolbox_8h_source.html#l00035">toolbox.h:35</a></div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
+<div class="ttc" id="qsize_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html">QSize</a></div></div>
+<div class="ttc" id="qrect_html_width"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#width">QRect::width</a></div><div class="ttdeci">int width() const</div></div>
+<div class="ttc" id="qsize_html_height"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html#height">QSize::height</a></div><div class="ttdeci">int height() const</div></div>
+<div class="ttc" id="qstring_html_arg-11"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#arg-11">QString::arg</a></div><div class="ttdeci">QString arg(qlonglong a, int fieldWidth, int base, QChar fillChar) const</div></div>
 <div class="ttc" id="class_base_dock_widget_html"><div class="ttname"><a href="class_base_dock_widget.html">BaseDockWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="basedockwidget_8h_source.html#l00026">basedockwidget.h:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

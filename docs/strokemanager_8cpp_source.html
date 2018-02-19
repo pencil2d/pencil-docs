@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/tool/strokemanager.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/tool/strokemanager.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_7b1938b5ff4064cdebaff0e97f518fe9.html">tool</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_dcff8fc9db607d20dd899b87fd4725e1.html">tool</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -127,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    mMeanPressure = 0;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    reset();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    connect(&amp;timer, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;StrokeManager::interpolatePollAndPaint);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(&amp;timer, &amp;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtimer.html#timeout">QTimer::timeout</a>, <span class="keyword">this</span>, &amp;StrokeManager::interpolatePollAndPaint);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> StrokeManager::reset()</div>
@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    strokeQueue.clear();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    pressure = 0.0f;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    hasTangent = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    timer.stop();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    timer.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtimer.html#stop">stop</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    mInpolLevel = -1;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
@@ -146,9 +146,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    mTabletPressure = pressure;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;QPointF StrokeManager::getEventPosition(QMouseEvent* event)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeManager::getEventPosition(QMouseEvent* event)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    QPointF pos;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> pos;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> ( mTabletInUse )</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
@@ -157,7 +157,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// Solved: Qt bug in Wacom coding -&gt; a lot of patches but no real solutions.</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// QPointF pos2 = event-&gt;pos() + mTabletPosition - event-&gt;globalPos();</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// Patch: next line skips the coordinate problem and it seems safe .</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        pos = <span class="keyword">event</span>-&gt;pos() + mTabletPosition - mTabletPosition.toPoint();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        pos = <span class="keyword">event</span>-&gt;pos() + mTabletPosition - mTabletPosition.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">//pos = event-&gt;pos();</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//qDebug() &lt;&lt; &quot;New pos&quot; &lt;&lt; pos &lt;&lt; &quot;, Old pos&quot; &lt;&lt; pos2;</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
@@ -210,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">void</span> StrokeManager::mouseMoveEvent(QMouseEvent* event)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    QPointF pos = getEventPosition(event);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> pos = getEventPosition(event);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// only applied to drawing tools.</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (mInpolLevel != -1){</div>
@@ -224,11 +224,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> StrokeManager::smoothMousePos(QPointF pos)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> StrokeManager::smoothMousePos(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> pos)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">// Smooth mouse position before drawing</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    QPointF smoothPos;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> smoothPos;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (mInpolLevel == 0) {</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mInpolLevel == 1) {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">// simple interpolation</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        smoothPos = QPointF( ( pos.x() + mCurrentPixel.x() ) / 2.0, ( pos.y() + mCurrentPixel.y() ) / 2.0 );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        smoothPos = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>( ( pos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() + mCurrentPixel.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() ) / 2.0, ( pos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() + mCurrentPixel.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() ) / 2.0 );</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        mLastPixel = mCurrentPixel;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        mCurrentPixel = smoothPos;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        mLastInterpolated = mCurrentPixel;</div>
@@ -253,7 +253,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        strokeQueue.push_back( smoothPos );</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mInpolLevel == 2 ) {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        smoothPos = QPointF( ( pos.x() + mLastInterpolated.x() ) / 2.0, ( pos.y() + mLastInterpolated.y() ) / 2.0 );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        smoothPos = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>( ( pos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() + mLastInterpolated.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() ) / 2.0, ( pos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() + mLastInterpolated.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() ) / 2.0 );</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        mLastInterpolated = mCurrentPixel;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        mCurrentPixel = smoothPos;</div>
@@ -274,22 +274,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;QPointF StrokeManager::interpolateStart(QPointF firstPoint)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeManager::interpolateStart(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> firstPoint)</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span> (mInpolLevel == 1) {</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">// Clear queue</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            strokeQueue.clear();</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            pressureQueue.clear();</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            mSingleshotTime.start();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            previousTime = mSingleshotTime.elapsed();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            mSingleshotTime.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtime.html#start">start</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            previousTime = mSingleshotTime.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtime.html#elapsed">elapsed</a>();</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            mLastPixel = firstPoint;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mInpolLevel == 2){</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            mSingleshotTime.start();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            previousTime = mSingleshotTime.elapsed();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            mSingleshotTime.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtime.html#start">start</a>();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            previousTime = mSingleshotTime.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtime.html#elapsed">elapsed</a>();</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keywordtype">int</span> sampleSize = 5;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
@@ -301,15 +301,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="comment">// fill strokeQueue with firstPoint x times</span></div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = sampleSize; i &gt; 0; i--) {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                strokeQueue.enqueue(firstPoint);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                strokeQueue.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qqueue.html#enqueue">enqueue</a>(firstPoint);</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="comment">// last interpolated stroke should always be firstPoint</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            mLastInterpolated = firstPoint;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="comment">// draw and poll each millisecond</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            timer.setInterval(sampleSize);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            timer.start();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            timer.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtimer.html#interval-prop">setInterval</a>(sampleSize);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            timer.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtimer.html#start">start</a>();</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mInpolLevel == 0) {</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="comment">// Clear queue</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            strokeQueue.clear();</div>
@@ -323,10 +323,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="keywordtype">void</span> StrokeManager::interpolatePoll()</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">// remove oldest stroke</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    strokeQueue.dequeue();</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    strokeQueue.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qqueue.html#dequeue">dequeue</a>();</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">// add new stroke with the last interpolated pixel position</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    strokeQueue.enqueue(mLastInterpolated);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    strokeQueue.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qqueue.html#enqueue">enqueue</a>(mLastInterpolated);</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keywordtype">void</span> StrokeManager::interpolatePollAndPaint()</div>
@@ -339,10 +339,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> StrokeManager::interpolateStroke()</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> StrokeManager::interpolateStroke()</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;{</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">// is nan initially</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> result;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> result;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    qreal x = 0,</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;          y = 0,</div>
@@ -365,7 +365,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> StrokeManager::noInpolOp(<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> points)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> StrokeManager::noInpolOp(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points)</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    setPressure(getPressure());</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
@@ -378,11 +378,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> points;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> StrokeManager::tangentInpolOp(<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> points)</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> StrokeManager::tangentInpolOp(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points)</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;{</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">int</span> time = mSingleshotTime.elapsed();</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordtype">int</span> time = mSingleshotTime.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtime.html#elapsed">elapsed</a>();</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> qreal smoothness = 1.f;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    QLineF line( mLastPixel, mCurrentPixel);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a> line( mLastPixel, mCurrentPixel);</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    qreal scaleFactor = line.length() * 3.f;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
@@ -396,21 +396,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment">         */</span></div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        m_previousTangent = (mCurrentPixel - mLastPixel) * smoothness / (3.0 * scaleFactor);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">//qDebug() &lt;&lt; &quot;previous tangent&quot; &lt;&lt; m_previousTangent;</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        QLineF _line(QPointF(0,0), m_previousTangent);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a> _line(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(0,0), m_previousTangent);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="comment">// don&#39;t bother for small tangents, as they can induce single pixel wobbliness</span></div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">if</span> (_line.length() &lt; 2)</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_previousTangent = QPointF(0,0);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_previousTangent = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(0,0);</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        QPointF c1 = mLastPixel + m_previousTangent * scaleFactor;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        QPointF newTangent = (mCurrentPixel - c1) * smoothness / (3.0 * scaleFactor);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> c1 = mLastPixel + m_previousTangent * scaleFactor;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> newTangent = (mCurrentPixel - c1) * smoothness / (3.0 * scaleFactor);</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="comment">//qDebug() &lt;&lt; &quot;scalefactor1=&quot; &lt;&lt; scaleFactor &lt;&lt; m_previousTangent &lt;&lt; newTangent;</span></div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordflow">if</span> (scaleFactor == 0)</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            newTangent = QPointF(0,0);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            newTangent = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(0,0);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        }</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        {</div>
@@ -420,7 +420,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="comment">//    newTangent = QPointF(0,0);</span></div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <span class="comment">//}</span></div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        QPointF c2 = mCurrentPixel - newTangent * scaleFactor;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> c2 = mCurrentPixel - newTangent * scaleFactor;</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="comment">//c1 = mLastPixel;</span></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="comment">//c2 = mCurrentPixel;</span></div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        points &lt;&lt; mLastPixel &lt;&lt; c1 &lt;&lt; c2 &lt;&lt; mCurrentPixel;</div>
@@ -439,7 +439,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">// Mean sampling interpolation operation</span></div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> StrokeManager::meanInpolOp(<a class="code" href="class_q_list.html">QList&lt;QPointF&gt;</a> points, qreal x, qreal y, qreal pressure)</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> StrokeManager::meanInpolOp(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points, qreal x, qreal y, qreal pressure)</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;{</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; strokeQueue.size(); i++) {</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;           x += strokeQueue[i].x();</div>
@@ -453,8 +453,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    pressure /= strokeQueue.size();</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="comment">// Use our interpolated points</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    QPointF mNewInterpolated = mLastInterpolated;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    mNewInterpolated = QPointF(x,y);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mNewInterpolated = mLastInterpolated;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    mNewInterpolated = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(x,y);</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    points &lt;&lt; mLastPixel &lt;&lt; mLastInterpolated &lt;&lt; mNewInterpolated &lt;&lt; mCurrentPixel;</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;</div>
@@ -468,7 +468,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keywordtype">void</span> StrokeManager::interpolateEnd()</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;{</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">// Stop timer</span></div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    timer.stop();</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    timer.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtimer.html#stop">stop</a>();</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">if</span> (mInpolLevel == 2) {</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">if</span> (!strokeQueue.isEmpty())</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        {</div>
@@ -488,11 +488,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        }</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;}</div>
-<div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; QPointF &gt;</a></div></div>
+<div class="ttc" id="qtimer_html_interval-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtimer.html#interval-prop">QTimer::setInterval</a></div><div class="ttdeci">void setInterval(int msec)</div></div>
+<div class="ttc" id="qqueue_html_enqueue"><div class="ttname"><a href="https://doc.qt.io/qt-5/qqueue.html#enqueue">QQueue::enqueue</a></div><div class="ttdeci">void enqueue(const T &amp;t)</div></div>
+<div class="ttc" id="qqueue_html_dequeue"><div class="ttname"><a href="https://doc.qt.io/qt-5/qqueue.html#dequeue">QQueue::dequeue</a></div><div class="ttdeci">T dequeue()</div></div>
+<div class="ttc" id="qpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
+<div class="ttc" id="qtimer_html_timeout"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtimer.html#timeout">QTimer::timeout</a></div><div class="ttdeci">void timeout()</div></div>
+<div class="ttc" id="qtime_html_elapsed"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtime.html#elapsed">QTime::elapsed</a></div><div class="ttdeci">int elapsed() const</div></div>
+<div class="ttc" id="qpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const</div></div>
+<div class="ttc" id="qpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const</div></div>
+<div class="ttc" id="qlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList&lt; QPointF &gt;</a></div></div>
+<div class="ttc" id="qlinef_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a></div></div>
+<div class="ttc" id="qtimer_html_stop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtimer.html#stop">QTimer::stop</a></div><div class="ttdeci">void stop()</div></div>
+<div class="ttc" id="qpointf_html_toPoint"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#toPoint">QPointF::toPoint</a></div><div class="ttdeci">QPoint toPoint() const</div></div>
+<div class="ttc" id="qtimer_html_start"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtimer.html#start">QTimer::start</a></div><div class="ttdeci">void start(int msec)</div></div>
+<div class="ttc" id="qtime_html_start"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtime.html#start">QTime::start</a></div><div class="ttdeci">void start()</div></div>
+<div class="ttc" id="qobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

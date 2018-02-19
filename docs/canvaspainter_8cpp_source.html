@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/canvaspainter.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/canvaspainter.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;CanvasPainter::CanvasPainter(QObject* parent) : QObject(parent)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;CanvasPainter::CanvasPainter(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* parent) : <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>(parent)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;, mLog(<span class="stringliteral">&quot;CanvasRenderer&quot;</span>)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ENABLE_DEBUG_LOG(mLog, <span class="keyword">false</span>);</div>
@@ -138,10 +138,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mViewInverse = viewInverse;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> CanvasPainter::setTransformedSelection(QRect selection, QTransform transform)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> CanvasPainter::setTransformedSelection(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> selection, QTransform transform)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Make sure that the selection is not empty</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (selection.width() &gt; 0 &amp;&amp; selection.height() &gt; 0)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (selection.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() &gt; 0 &amp;&amp; selection.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>() &gt; 0)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        mSelection = selection;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        mSelectionTransform = transform;</div>
@@ -159,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    mRenderTransform = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> CanvasPainter::paint(<span class="keyword">const</span> <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">int</span> layer, <span class="keywordtype">int</span> frame, QRect rect)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> CanvasPainter::paint(<span class="keyword">const</span> <a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">int</span> layer, <span class="keywordtype">int</span> frame, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> rect)</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    Q_ASSERT(<span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    mObject = object;</div>
@@ -167,9 +167,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    mCurrentLayerIndex = layer;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    mFrameNumber = frame;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QRectF mappedInvCanvas = mViewInverse.mapRect(QRectF(mCanvas-&gt;rect()));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QSizeF croppedPainter = QSizeF(mappedInvCanvas.size());</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    QRectF aligned = QRectF(QPointF(mappedInvCanvas.topLeft()), croppedPainter);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mappedInvCanvas = mViewInverse.mapRect(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(mCanvas-&gt;rect()));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsizef.html">QSizeF</a> croppedPainter = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsizef.html">QSizeF</a>(mappedInvCanvas.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#size">size</a>());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> aligned = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(mappedInvCanvas.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#topLeft">topLeft</a>()), croppedPainter);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QPainter painter(mCanvas);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    painter.setWorldMatrixEnabled(<span class="keyword">true</span>);</div>
@@ -352,8 +352,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">// map to correct matrix</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        QRectF mappedOrigImage = mViewTransform.mapRect(QRectF(origImage.rect()));</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        mScaledBitmap = mScaledBitmap.scaled(mappedOrigImage.size().toSize(),</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mappedOrigImage = mViewTransform.mapRect(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(origImage.rect()));</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        mScaledBitmap = mScaledBitmap.scaled(mappedOrigImage.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#size">size</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsizef.html#toSize">toSize</a>(),</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                             Qt::KeepAspectRatio, Qt::SmoothTransformation);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
@@ -422,7 +422,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="keywordtype">void</span> CanvasPainter::paintTransformedSelection(QPainter&amp; painter)</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;{</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="comment">// Make sure there is something selected</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (mSelection.width() == 0 || mSelection.height() == 0)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">if</span> (mSelection.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() == 0 || mSelection.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>() == 0)</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <a class="code" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(mCurrentLayerIndex);</div>
@@ -466,10 +466,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keywordtype">void</span> CanvasPainter::paintAxis(QPainter&amp; painter)</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;{</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    painter.setPen(Qt::green);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    painter.drawLine(QLineF(0, -500, 0, 500));</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    painter.drawLine(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(0, -500, 0, 500));</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    painter.setPen(Qt::red);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    painter.drawLine(QLineF(-500, 0, 500, 0));</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    painter.drawLine(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(-500, 0, 500, 0));</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="keywordtype">int</span> round100(<span class="keywordtype">double</span> f, <span class="keywordtype">int</span> gridSize)</div>
@@ -481,13 +481,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;{</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">int</span> gridSize = mOptions.nGridSize;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    QRectF rect = painter.viewport();</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    QRectF boundingRect = mViewTransform.inverted().mapRect(rect);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> rect = painter.viewport();</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> boundingRect = mViewTransform.inverted().mapRect(rect);</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">int</span> left = round100(boundingRect.left(), gridSize) - gridSize;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">int</span> right = round100(boundingRect.right(), gridSize) + gridSize;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">int</span> top = round100(boundingRect.top(), gridSize) - gridSize;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">int</span> bottom = round100(boundingRect.bottom(), gridSize) + gridSize;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">int</span> left = round100(boundingRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#left">left</a>(), gridSize) - gridSize;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">int</span> right = round100(boundingRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#right">right</a>(), gridSize) + gridSize;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">int</span> top = round100(boundingRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#top">top</a>(), gridSize) - gridSize;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="keywordtype">int</span> bottom = round100(boundingRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#bottom">bottom</a>(), gridSize) + gridSize;</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    QPen pen(Qt::lightGray);</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    pen.setCosmetic(<span class="keyword">true</span>);</div>
@@ -536,15 +536,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keywordflow">if</span> (cameraLayer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    QRectF viewRect = painter.viewport();</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    QRect boundingRect;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> viewRect = painter.viewport();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> boundingRect;</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    mCameraRect = cameraLayer-&gt;getViewRect();</div>
 <div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;</div>
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordflow">if</span> (isCameraMode)</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    {</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        painter.setWorldMatrixEnabled(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        QTransform center = QTransform::fromTranslate(viewRect.width() / 2.0, viewRect.height() / 2.0);</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        boundingRect = viewRect.toRect();</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        QTransform center = QTransform::fromTranslate(viewRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#width">width</a>() / 2.0, viewRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#height">height</a>() / 2.0);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        boundingRect = viewRect.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html#toRect">toRect</a>();</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        mCameraRect = center.mapRect(mCameraRect);</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    }</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">else</span></div>
@@ -583,22 +583,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;}</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;QRect CanvasPainter::getCameraRect()</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> CanvasPainter::getCameraRect()</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;{</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <span class="keywordflow">return</span> mCameraRect;</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;}</div>
+<div class="ttc" id="qrectf_html_toRect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#toRect">QRectF::toRect</a></div><div class="ttdeci">QRect toRect() const</div></div>
 <div class="ttc" id="class_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00048">layercamera.h:48</a></div></div>
 <div class="ttc" id="class_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00024">layerbitmap.h:24</a></div></div>
 <div class="ttc" id="class_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:25</a></div></div>
+<div class="ttc" id="qrectf_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#size">QRectF::size</a></div><div class="ttdeci">QSizeF size() const</div></div>
+<div class="ttc" id="qrectf_html_top"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#top">QRectF::top</a></div><div class="ttdeci">qreal top() const</div></div>
+<div class="ttc" id="qrect_html_height"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#height">QRect::height</a></div><div class="ttdeci">int height() const</div></div>
+<div class="ttc" id="qrectf_html_left"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#left">QRectF::left</a></div><div class="ttdeci">qreal left() const</div></div>
 <div class="ttc" id="class_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00034">vectorimage.h:34</a></div></div>
+<div class="ttc" id="qpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
+<div class="ttc" id="qrectf_html_bottom"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#bottom">QRectF::bottom</a></div><div class="ttdeci">qreal bottom() const</div></div>
+<div class="ttc" id="qrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
+<div class="ttc" id="qobject_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div></div>
+<div class="ttc" id="qsizef_html_toSize"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsizef.html#toSize">QSizeF::toSize</a></div><div class="ttdeci">QSize toSize() const</div></div>
+<div class="ttc" id="qrectf_html_topLeft"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#topLeft">QRectF::topLeft</a></div><div class="ttdeci">QPointF topLeft() const</div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
+<div class="ttc" id="qlinef_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a></div></div>
+<div class="ttc" id="qrectf_html_right"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#right">QRectF::right</a></div><div class="ttdeci">qreal right() const</div></div>
+<div class="ttc" id="qrect_html_width"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#width">QRect::width</a></div><div class="ttdeci">int width() const</div></div>
+<div class="ttc" id="qrectf_html_width"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#width">QRectF::width</a></div><div class="ttdeci">qreal width() const</div></div>
+<div class="ttc" id="qsizef_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsizef.html">QSizeF</a></div></div>
+<div class="ttc" id="qrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
+<div class="ttc" id="qrectf_html_height"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#height">QRectF::height</a></div><div class="ttdeci">qreal height() const</div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00052">object.h:52</a></div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00025">bitmapimage.h:25</a></div></div>
 <div class="ttc" id="class_vector_image_html_a929a1425c17539b1231627dc730378f0"><div class="ttname"><a href="class_vector_image.html#a929a1425c17539b1231627dc730378f0">VectorImage::outputImage</a></div><div class="ttdeci">void outputImage(QImage *image, QTransform myView, bool simplified, bool showThinCurves, bool antialiasing)</div><div class="ttdoc">VectorImage::outputImage. </div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01174">vectorimage.cpp:1174</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

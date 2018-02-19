@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/external/win32/win32.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/external/win32/win32.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f2070a2d39209ef27d0c7c358d1884ed.html">external</a></li><li class="navelem"><a class="el" href="dir_95aa6a2f54b3fcbe5fd24dd97b583134.html">win32</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_072a89d2b816247c9968af64bc7e3182.html">external</a></li><li class="navelem"><a class="el" href="dir_04a6937c447ffbc8b23af71abdb5e2d3.html">win32</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -138,48 +138,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//qDebug() &lt;&lt; &quot;Initialize win32: &lt;nothing, for now&gt;&quot;;</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// QImageReader capabilities</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;QByteArray&gt;</a> formats = QImageReader::supportedImageFormats();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">foreach</span>( QString format, formats )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QByteArray&gt;</a> formats = QImageReader::supportedImageFormats();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">foreach</span>( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> format, formats )</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">//qDebug() &lt;&lt; &quot;QImageReader capability: &quot; &lt;&lt; format;</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// QImageWriter capabilities</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    formats = QImageWriter::supportedImageFormats();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">foreach</span>( QString format, formats )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">foreach</span>( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> format, formats )</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//qDebug() &lt;&lt; &quot;QImageWriter capability: &quot; &lt;&lt; format;</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> Editor::importMovie( QString filePath, <span class="keywordtype">int</span> fps )</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> Editor::importMovie( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> filePath, <span class="keywordtype">int</span> fps )</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    QSettings settings( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings( PENCIL2D, PENCIL2D );</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    qDebug() &lt;&lt; <span class="stringliteral">&quot;-------IMPORT VIDEO------&quot;</span> &lt;&lt; filePath;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// --------- Import all the temporary frames ----------</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    QDir::temp().mkdir( <span class="stringliteral">&quot;pencil&quot;</span> );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    QString tempPath = QDir::temp().absolutePath() + <span class="stringliteral">&quot;/pencil/&quot;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#mkdir">mkdir</a>( <span class="stringliteral">&quot;pencil&quot;</span> );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> tempPath = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#absolutePath">absolutePath</a>() + <span class="stringliteral">&quot;/pencil/&quot;</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> ( QFile::exists( QDir::current().currentPath() + <span class="stringliteral">&quot;/plugins/ffmpeg.exe&quot;</span> ) == <span class="keyword">true</span> )</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> ( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#current">QDir::current</a>().currentPath() + <span class="stringliteral">&quot;/plugins/ffmpeg.exe&quot;</span> ) == <span class="keyword">true</span> )</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        QProgressDialog progress( <span class="stringliteral">&quot;Importing movie...&quot;</span>, <span class="stringliteral">&quot;Abort&quot;</span>, 0, 100, NULL );</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        progress.setWindowModality( Qt::WindowModal );</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        progress.show();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        progress.setValue( 10 );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        QProcess ffmpeg;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;./plugins/ffmpeg.exe -i \&quot;&quot;</span> &lt;&lt; filePath &lt;&lt; <span class="stringliteral">&quot;\&quot; -r &quot;</span> &lt;&lt; QString::number( fps ) &lt;&lt; <span class="stringliteral">&quot; -f image2 \&quot;&quot;</span> &lt;&lt; tempPath &lt;&lt; <span class="stringliteral">&quot;tmp_import%4d.png\&quot;&quot;</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ffmpeg.start( <span class="stringliteral">&quot;./plugins/ffmpeg.exe -i \&quot;&quot;</span> + filePath + <span class="stringliteral">&quot;\&quot; -r &quot;</span> + QString::number( fps ) + <span class="stringliteral">&quot; -f image2 \&quot;&quot;</span> + tempPath + <span class="stringliteral">&quot;tmp_import%4d.png\&quot;&quot;</span> );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qprocess.html">QProcess</a> ffmpeg;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;./plugins/ffmpeg.exe -i \&quot;&quot;</span> &lt;&lt; filePath &lt;&lt; <span class="stringliteral">&quot;\&quot; -r &quot;</span> &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#number-2">QString::number</a>( fps ) &lt;&lt; <span class="stringliteral">&quot; -f image2 \&quot;&quot;</span> &lt;&lt; tempPath &lt;&lt; <span class="stringliteral">&quot;tmp_import%4d.png\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ffmpeg.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qprocess.html#start">start</a>( <span class="stringliteral">&quot;./plugins/ffmpeg.exe -i \&quot;&quot;</span> + filePath + <span class="stringliteral">&quot;\&quot; -r &quot;</span> + <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#number-2">QString::number</a>( fps ) + <span class="stringliteral">&quot; -f image2 \&quot;&quot;</span> + tempPath + <span class="stringliteral">&quot;tmp_import%4d.png\&quot;&quot;</span> );</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        progress.setValue( 20 );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> ( ffmpeg.waitForStarted() == true )</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> ( ffmpeg.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qprocess.html#waitForStarted">waitForStarted</a>() == true )</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> ( ffmpeg.waitForFinished() == true )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> ( ffmpeg.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qprocess.html#waitForFinished">waitForFinished</a>() == true )</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                qDebug() &lt;&lt; <span class="stringliteral">&quot;stdout: &quot;</span> + ffmpeg.readAllStandardOutput();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                qDebug() &lt;&lt; <span class="stringliteral">&quot;stderr: &quot;</span> + ffmpeg.readAllStandardError();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                qDebug() &lt;&lt; <span class="stringliteral">&quot;stdout: &quot;</span> + ffmpeg.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qprocess.html#readAllStandardOutput">readAllStandardOutput</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                qDebug() &lt;&lt; <span class="stringliteral">&quot;stderr: &quot;</span> + ffmpeg.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qprocess.html#readAllStandardError">readAllStandardError</a>();</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            {</div>
@@ -191,26 +191,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            qDebug() &lt;&lt; <span class="stringliteral">&quot;ERROR: Could not execute FFmpeg.&quot;</span>;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        progress.setValue( 50 );</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        QDir dir1( tempPath );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dir1( tempPath );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">int</span> nFiles = dir1.entryList().count();</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        i = 1;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        QString frameNumberString = QString::number( i );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">while</span> ( frameNumberString.length() &lt; 4 ) frameNumberString.prepend( <span class="stringliteral">&quot;0&quot;</span> );</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">while</span> ( QFile::exists( tempPath + <span class="stringliteral">&quot;tmp_import&quot;</span> + frameNumberString + <span class="stringliteral">&quot;.png&quot;</span> ) )</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> frameNumberString = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#number-2">QString::number</a>( i );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">while</span> ( frameNumberString.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#length">length</a>() &lt; 4 ) frameNumberString.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#prepend-2">prepend</a>( <span class="stringliteral">&quot;0&quot;</span> );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">while</span> ( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>( tempPath + <span class="stringliteral">&quot;tmp_import&quot;</span> + frameNumberString + <span class="stringliteral">&quot;.png&quot;</span> ) )</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            progress.setValue( 50 + i * 50 / nFiles );</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> ( i&gt;1 ) scrubForward();</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            importImage( tempPath + <span class="stringliteral">&quot;tmp_import&quot;</span> + frameNumberString + <span class="stringliteral">&quot;.png&quot;</span> );</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            i++;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            frameNumberString = QString::number( i );</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">while</span> ( frameNumberString.length() &lt; 4 ) frameNumberString.prepend( <span class="stringliteral">&quot;0&quot;</span> );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            frameNumberString = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#number-2">QString::number</a>( i );</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">while</span> ( frameNumberString.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#length">length</a>() &lt; 4 ) frameNumberString.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#prepend-2">prepend</a>( <span class="stringliteral">&quot;0&quot;</span> );</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        progress.setValue( 100 );</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// --------- Clean up temp directory ---------</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        QDir dir( tempPath );</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        QStringList filtername( <span class="stringliteral">&quot;*.*&quot;</span> );</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        QStringList entries = dir.entryList( filtername, QDir::Files, QDir::Type );</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; entries.size(); i++ )</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dir( tempPath );</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> filtername( <span class="stringliteral">&quot;*.*&quot;</span> );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = dir.entryList( filtername, QDir::Files, QDir::Type );</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> i = 0; i &lt; entries.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>(); i++ )</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            dir.remove( entries[ i ] );</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">else</span></div>
@@ -218,11 +218,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;Please place ffmpeg.exe in plugins directory&quot;</span>;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
-<div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00025">mainwindow2.h:25</a></div></div>
+<div class="ttc" id="qstring_html_prepend-2"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#prepend-2">QString::prepend</a></div><div class="ttdeci">QString &amp; prepend(QChar ch)</div></div>
+<div class="ttc" id="qfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const</div></div>
+<div class="ttc" id="qlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const</div></div>
+<div class="ttc" id="qstring_html_number-2"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#number-2">QString::number</a></div><div class="ttdeci">QString number(int n, int base)</div></div>
+<div class="ttc" id="qprocess_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprocess.html">QProcess</a></div></div>
+<div class="ttc" id="qdir_html_temp"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a></div><div class="ttdeci">QDir temp()</div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00025">mainwindow2.h:25</a></div></div>
+<div class="ttc" id="qstringlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a></div></div>
+<div class="ttc" id="qsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
+<div class="ttc" id="qprocess_html_waitForStarted"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprocess.html#waitForStarted">QProcess::waitForStarted</a></div><div class="ttdeci">bool waitForStarted(int msecs)</div></div>
+<div class="ttc" id="qdir_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html">QDir</a></div></div>
+<div class="ttc" id="qdir_html_absolutePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#absolutePath">QDir::absolutePath</a></div><div class="ttdeci">QString absolutePath() const</div></div>
+<div class="ttc" id="qdir_html_mkdir"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#mkdir">QDir::mkdir</a></div><div class="ttdeci">bool mkdir(const QString &amp;dirName) const</div></div>
+<div class="ttc" id="qstring_html_length"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#length">QString::length</a></div><div class="ttdeci">int length() const</div></div>
+<div class="ttc" id="qdir_html_current"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#current">QDir::current</a></div><div class="ttdeci">QDir current()</div></div>
+<div class="ttc" id="qprocess_html_readAllStandardOutput"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprocess.html#readAllStandardOutput">QProcess::readAllStandardOutput</a></div><div class="ttdeci">QByteArray readAllStandardOutput()</div></div>
+<div class="ttc" id="qprocess_html_start"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprocess.html#start">QProcess::start</a></div><div class="ttdeci">void start(const QString &amp;program, const QStringList &amp;arguments, OpenMode mode)</div></div>
+<div class="ttc" id="qprocess_html_readAllStandardError"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprocess.html#readAllStandardError">QProcess::readAllStandardError</a></div><div class="ttdeci">QByteArray readAllStandardError()</div></div>
+<div class="ttc" id="qprocess_html_waitForFinished"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprocess.html#waitForFinished">QProcess::waitForFinished</a></div><div class="ttdeci">bool waitForFinished(int msecs)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

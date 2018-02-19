@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/shortcutspage.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/src/shortcutspage.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_a8f641299cfea9f7461c2df1141b7786.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -133,15 +133,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    ui-&gt;treeView-&gt;setModel(m_treeModel);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ui-&gt;treeView-&gt;resizeColumnToContents(0);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    connect( ui-&gt;treeView, &amp;QTreeView::clicked, <span class="keyword">this</span>, &amp;ShortcutsPage::tableItemClicked );</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    connect( ui-&gt;keySequenceEdit, &amp;QKeySequenceEdit::editingFinished, <span class="keyword">this</span>, &amp;ShortcutsPage::keyCapLineEditTextChanged );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    connect( ui-&gt;restoreShortcutsButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;ShortcutsPage::restoreShortcutsButtonClicked );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    connect( ui-&gt;clearButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;ShortcutsPage::clearButtonClicked );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>( ui-&gt;treeView, &amp;QTreeView::clicked, <span class="keyword">this</span>, &amp;ShortcutsPage::tableItemClicked );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>( ui-&gt;keySequenceEdit, &amp;QKeySequenceEdit::editingFinished, <span class="keyword">this</span>, &amp;ShortcutsPage::keyCapLineEditTextChanged );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>( ui-&gt;restoreShortcutsButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;ShortcutsPage::restoreShortcutsButtonClicked );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>( ui-&gt;clearButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;ShortcutsPage::clearButtonClicked );</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::tableItemClicked( <span class="keyword">const</span> QModelIndex&amp; modelIndex )</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::tableItemClicked( <span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmodelindex.html">QModelIndex</a>&amp; modelIndex )</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> row = modelIndex.row();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> row = modelIndex.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmodelindex.html#row">row</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// extract action name</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QStandardItem* actionItem = m_treeModel-&gt;item(row, ACT_NAME_COLUMN);</div>
@@ -161,19 +161,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::keyCapLineEditTextChanged()</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QKeySequence keySeqence = ui-&gt;keySequenceEdit-&gt;keySequence();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (!m_currentItemIndex.isValid())</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (!m_currentItemIndex.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmodelindex.html#isValid">isValid</a>())</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> row = m_currentItemIndex.row();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> row = m_currentItemIndex.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmodelindex.html#row">row</a>();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QStandardItem* actionItem = m_treeModel-&gt;item(row, ACT_NAME_COLUMN);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QStandardItem* keyseqItem = m_treeModel-&gt;item(row, KEY_SEQ_COLUMN);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QString strCmdName = QString(<span class="stringliteral">&quot;Cmd%1&quot;</span>).arg( actionItem-&gt;text() );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    QString strKeySeq  = keySeqence.toString( QKeySequence::PortableText );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdName = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Cmd%1&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>( actionItem-&gt;text() );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strKeySeq  = keySeqence.toString( QKeySequence::PortableText );</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    QSettings setting( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> setting( PENCIL2D, PENCIL2D );</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    setting.beginGroup(<span class="stringliteral">&quot;shortcuts&quot;</span>);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (isKeySequenceExist(setting, strCmdName, keySeqence))</div>
@@ -210,16 +210,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    treeModelLoadShortcutsSetting();</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">bool</span> ShortcutsPage::isKeySequenceExist(<span class="keyword">const</span> QSettings&amp; settings, QString strTargetCmdName, QKeySequence targetkeySeq)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">bool</span> ShortcutsPage::isKeySequenceExist(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a>&amp; settings, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strTargetCmdName, QKeySequence targetkeySeq)</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">foreach</span> (QString strCmdName, settings.allKeys())</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">foreach</span> (<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdName, settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>())</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (strTargetCmdName == strCmdName)</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        QString strCmdKeySeq = settings.value(strCmdName).toString();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdKeySeq = settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#value">value</a>(strCmdName).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qvariant.html#toString">toString</a>();</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (QKeySequence(strCmdKeySeq) == targetkeySeq)</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -228,15 +228,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::removeDuplicateKeySequence(QSettings* settings, QKeySequence keySeq)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::removeDuplicateKeySequence(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a>* settings, QKeySequence keySeq)</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">foreach</span>(QString strCmdName, settings-&gt;allKeys())</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">foreach</span>(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdName, settings-&gt;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>())</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        QString strCmdKeySeq = settings-&gt;value(strCmdName).toString();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdKeySeq = settings-&gt;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#value">value</a>(strCmdName).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qvariant.html#toString">toString</a>();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">if</span> ( strCmdKeySeq == keySeq.toString(QKeySequence::PortableText))</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            settings-&gt;setValue(strCmdName, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            settings-&gt;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#setValue">setValue</a>(strCmdName, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
@@ -244,22 +244,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::treeModelLoadShortcutsSetting()</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// Load shortcuts from settings</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    QSettings settings( PENCIL2D, PENCIL2D );</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    settings.beginGroup(<span class="stringliteral">&quot;shortcuts&quot;</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#beginGroup">beginGroup</a>(<span class="stringliteral">&quot;shortcuts&quot;</span>);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    m_treeModel-&gt;setRowCount(settings.allKeys().size());</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    m_treeModel-&gt;setRowCount(settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>());</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    Q_ASSERT(m_treeModel-&gt;columnCount() == 2);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">int</span> row = 0;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">foreach</span> (QString strCmdName, settings.allKeys())</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">foreach</span> (<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdName, settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>())</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        QString strKeySequence = settings.value(strCmdName).toString();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strKeySequence = settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#value">value</a>(strCmdName).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qvariant.html#toString">toString</a>();</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="comment">//convert to native format</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        strKeySequence = QKeySequence(strKeySequence).toString(QKeySequence::NativeText);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="comment">// strip the first 3 chars &quot;Cmd&quot;</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        QStringRef strHumanReadCmdName (&amp;strCmdName, 3, strCmdName.size() - 3);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringref.html">QStringRef</a> strHumanReadCmdName (&amp;strCmdName, 3, strCmdName.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#size">size</a>() - 3);</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (m_treeModel-&gt;item(row , ACT_NAME_COLUMN) == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            m_treeModel-&gt;setItem(row, ACT_NAME_COLUMN, <span class="keyword">new</span> QStandardItem());</div>
@@ -273,24 +273,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        row++;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    settings.endGroup();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    settings.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html#endGroup">endGroup</a>();</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    ui-&gt;treeView-&gt;resizeColumnToContents( 0 );</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keywordtype">void</span> ShortcutsPage::clearButtonClicked()</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> ( !m_currentItemIndex.isValid() )</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> ( !m_currentItemIndex.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmodelindex.html#isValid">isValid</a>() )</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    {</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">int</span> row = m_currentItemIndex.row();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">int</span> row = m_currentItemIndex.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmodelindex.html#row">row</a>();</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    QStandardItem* actionItem = m_treeModel-&gt;item(row, ACT_NAME_COLUMN);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    QString strCmdName = QString(<span class="stringliteral">&quot;shortcuts/Cmd%1&quot;</span>).arg( actionItem-&gt;text() );</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strCmdName = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;shortcuts/Cmd%1&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>( actionItem-&gt;text() );</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    QSettings setting( PENCIL2D, PENCIL2D );</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> setting( PENCIL2D, PENCIL2D );</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    setting.setValue( strCmdName, <span class="stringliteral">&quot;&quot;</span> );</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    setting.sync();</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
@@ -298,11 +298,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    treeModelLoadShortcutsSetting();</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="ttc" id="qmodelindex_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmodelindex.html">QModelIndex</a></div></div>
+<div class="ttc" id="qsettings_html_endGroup"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#endGroup">QSettings::endGroup</a></div><div class="ttdeci">void endGroup()</div></div>
+<div class="ttc" id="qstring_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#size">QString::size</a></div><div class="ttdeci">int size() const</div></div>
+<div class="ttc" id="qlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const</div></div>
+<div class="ttc" id="qstringref_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringref.html">QStringRef</a></div></div>
+<div class="ttc" id="qsettings_html_setValue"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#setValue">QSettings::setValue</a></div><div class="ttdeci">void setValue(const QString &amp;key, const QVariant &amp;value)</div></div>
+<div class="ttc" id="qmodelindex_html_isValid"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmodelindex.html#isValid">QModelIndex::isValid</a></div><div class="ttdeci">bool isValid() const</div></div>
+<div class="ttc" id="qmodelindex_html_row"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmodelindex.html#row">QModelIndex::row</a></div><div class="ttdeci">int row() const</div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
+<div class="ttc" id="qsettings_html_value"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#value">QSettings::value</a></div><div class="ttdeci">QVariant value(const QString &amp;key, const QVariant &amp;defaultValue) const</div></div>
+<div class="ttc" id="qsettings_html_allKeys"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#allKeys">QSettings::allKeys</a></div><div class="ttdeci">QStringList allKeys() const</div></div>
+<div class="ttc" id="qobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="class_shortcuts_page_html"><div class="ttname"><a href="class_shortcuts_page.html">ShortcutsPage</a></div><div class="ttdef"><b>Definition:</b> <a href="shortcutspage_8h_source.html#l00037">shortcutspage.h:37</a></div></div>
+<div class="ttc" id="qstring_html_arg-11"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#arg-11">QString::arg</a></div><div class="ttdeci">QString arg(qlonglong a, int fieldWidth, int base, QChar fillChar) const</div></div>
+<div class="ttc" id="qvariant_html_toString"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvariant.html#toString">QVariant::toString</a></div><div class="ttdeci">QString toString() const</div></div>
+<div class="ttc" id="qsettings_html_beginGroup"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html#beginGroup">QSettings::beginGroup</a></div><div class="ttdeci">void beginGroup(const QString &amp;prefix)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

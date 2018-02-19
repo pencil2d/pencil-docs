@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/aboutdialog.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/src/aboutdialog.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_a8f641299cfea9f7461c2df1141b7786.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -132,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_TIMESTAMP__ TOSTRING(GIT_TIMESTAMP)</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define S__GIT_COMMIT_HASH__ TOSTRING(GIT_CURRENT_SHA1)</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    QStringList devText;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> devText;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    devText &lt;&lt; tr(<span class="stringliteral">&quot;Version: %1&quot;</span>, <span class="stringliteral">&quot;Version Number in About Dialog&quot;</span>).arg(APP_VERSION);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#if defined(GIT_EXISTS) &amp;&amp; defined(NIGHTLY_BUILD)</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; <span class="stringliteral">&quot;commit: &quot;</span> S__GIT_COMMIT_HASH__ ;</div>
@@ -141,22 +141,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#if !defined(PENCIL2D_RELEASE)</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; <span class="stringliteral">&quot;Development build&quot;</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; QString(<span class="stringliteral">&quot;Operating System: %1&quot;</span>).arg(QSysInfo::prettyProductName());</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    devText &lt;&lt; QString(<span class="stringliteral">&quot;CPU Architecture: %1&quot;</span>).arg(QSysInfo::buildCpuArchitecture());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ui-&gt;devInfoText-&gt;setText(devText.join(<span class="stringliteral">&quot;&lt;br&gt;&quot;</span>));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span>    devText &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Operating System: %1&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsysinfo.html#prettyProductName">QSysInfo::prettyProductName</a>());</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    devText &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;CPU Architecture: %1&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsysinfo.html#buildCpuArchitecture">QSysInfo::buildCpuArchitecture</a>());</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ui-&gt;devInfoText-&gt;setText(devText.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html#join">join</a>(<span class="stringliteral">&quot;&lt;br&gt;&quot;</span>));</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    QPushButton* copyToClipboardButton = <span class="keyword">new</span> QPushButton(tr(<span class="stringliteral">&quot;Copy to clipboard&quot;</span>, <span class="stringliteral">&quot;Copy system info from About Dialog&quot;</span>));</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    connect(copyToClipboardButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, [devText] </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        QApplication::clipboard()-&gt;setText(devText.join(<span class="stringliteral">&quot;\n&quot;</span>));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        QApplication::clipboard()-&gt;setText(devText.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html#join">join</a>(<span class="stringliteral">&quot;\n&quot;</span>));</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    });</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ui-&gt;buttonBox-&gt;addButton(copyToClipboardButton, QDialogButtonBox::ActionRole);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="ttc" id="qstringlist_html_join"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html#join">QStringList::join</a></div><div class="ttdeci">QString join(const QString &amp;separator) const</div></div>
 <div class="ttc" id="class_about_dialog_html"><div class="ttname"><a href="class_about_dialog.html">AboutDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="aboutdialog_8h_source.html#l00026">aboutdialog.h:26</a></div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qsysinfo_html_buildCpuArchitecture"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsysinfo.html#buildCpuArchitecture">QSysInfo::buildCpuArchitecture</a></div><div class="ttdeci">QString buildCpuArchitecture()</div></div>
+<div class="ttc" id="qstringlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a></div></div>
+<div class="ttc" id="qsysinfo_html_prettyProductName"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsysinfo.html#prettyProductName">QSysInfo::prettyProductName</a></div><div class="ttdeci">QString prettyProductName()</div></div>
+<div class="ttc" id="qstring_html_arg-11"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#arg-11">QString::arg</a></div><div class="ttdeci">QString arg(qlonglong a, int fieldWidth, int base, QChar fillChar) const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:06 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:49 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

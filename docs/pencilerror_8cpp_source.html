@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/util/pencilerror.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/util/pencilerror.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_ffb27f95503981b6ea2ee5241bafe739.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_9d923c11026a4163129e78ef8a57744e.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QSysInfo&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;pencildef.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;Status::Status(Status::ErrorCode eCode, QStringList detailsList, QString title, QString description)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;Status::Status(Status::ErrorCode eCode, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> detailsList, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> title, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> description)</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    : mCode( eCode )</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    , mTitle( title )</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    , mDescription( description )</div>
@@ -103,17 +103,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;QString Status::msg()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> Status::msg()</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> std::map&lt;ErrorCode, QString&gt; msgMap =</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment">// error messages.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        { OK,                    QObject::tr( <span class="stringliteral">&quot;Everything ok.&quot;</span> ) },</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        { FAIL,                  QObject::tr( <span class="stringliteral">&quot;Ooops, Something went wrong.&quot;</span> ) },</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        { FILE_NOT_FOUND,        QObject::tr( <span class="stringliteral">&quot;File doesn&#39;t exist.&quot;</span> ) },</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        { ERROR_FILE_CANNOT_OPEN,    QObject::tr( <span class="stringliteral">&quot;Cannot open file.&quot;</span> ) },</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        { ERROR_INVALID_XML_FILE,    QObject::tr( <span class="stringliteral">&quot;The file is not a valid xml document.&quot;</span> ) },</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        { ERROR_INVALID_PENCIL_FILE, QObject::tr( <span class="stringliteral">&quot;The file is not valid pencil document.&quot;</span> ) },</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        { OK,                    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a>( <span class="stringliteral">&quot;Everything ok.&quot;</span> ) },</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        { FAIL,                  <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a>( <span class="stringliteral">&quot;Ooops, Something went wrong.&quot;</span> ) },</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        { FILE_NOT_FOUND,        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a>( <span class="stringliteral">&quot;File doesn&#39;t exist.&quot;</span> ) },</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        { ERROR_FILE_CANNOT_OPEN,    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a>( <span class="stringliteral">&quot;Cannot open file.&quot;</span> ) },</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        { ERROR_INVALID_XML_FILE,    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a>( <span class="stringliteral">&quot;The file is not a valid xml document.&quot;</span> ) },</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        { ERROR_INVALID_PENCIL_FILE, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a>( <span class="stringliteral">&quot;The file is not valid pencil document.&quot;</span> ) },</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">auto</span> it = msgMap.find( mCode );</div>
@@ -124,30 +124,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> msgMap[ mCode ];</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;QString Status::details()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> Status::details()</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    QString details = mDetails.join(<span class="stringliteral">&quot;&lt;br&gt;&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    details.append(<span class="stringliteral">&quot;&lt;br&gt;&lt;br&gt;&quot;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    details.append( QString(</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> details = mDetails.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html#join">join</a>(<span class="stringliteral">&quot;&lt;br&gt;&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    details.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>(<span class="stringliteral">&quot;&lt;br&gt;&lt;br&gt;&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    details.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        <span class="stringliteral">&quot;Error Display&lt;br&gt;&quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        <span class="stringliteral">&quot;Title: %1&lt;br&gt;&quot;</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        <span class="stringliteral">&quot;Description: %2&quot;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        ).arg( mTitle,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                               mDescription )</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    );</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    details.append(<span class="stringliteral">&quot;&lt;br&gt;&lt;br&gt;&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    details.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>(<span class="stringliteral">&quot;&lt;br&gt;&lt;br&gt;&quot;</span>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#if QT_VERSION &gt;= 0x050400</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span>    details.append( QString(</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span>    details.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        <span class="stringliteral">&quot;System Info&lt;br&gt;&quot;</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        <span class="stringliteral">&quot;Pencil version: %1&lt;br&gt;&quot;</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        <span class="stringliteral">&quot;Build ABI: %2&lt;br&gt;&quot;</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="stringliteral">&quot;Kernel: %3 %4&lt;br&gt;&quot;</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        <span class="stringliteral">&quot;Product name: %5&quot;</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        ).arg( APP_VERSION,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                               QSysInfo::buildAbi(),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                               QSysInfo::kernelType(),</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                               QSysInfo::kernelVersion(),</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                               QSysInfo::prettyProductName() )</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                               <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsysinfo.html#buildAbi">QSysInfo::buildAbi</a>(),</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                               <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsysinfo.html#kernelType">QSysInfo::kernelType</a>(),</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                               <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsysinfo.html#kernelVersion">QSysInfo::kernelVersion</a>(),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                               <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsysinfo.html#prettyProductName">QSysInfo::prettyProductName</a>() )</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span>    <span class="keywordflow">return</span> details;</div>
@@ -157,10 +157,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> ( mCode == code );</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="qstring_html_append-2"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#append-2">QString::append</a></div><div class="ttdeci">QString &amp; append(QChar ch)</div></div>
+<div class="ttc" id="qstringlist_html_join"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html#join">QStringList::join</a></div><div class="ttdeci">QString join(const QString &amp;separator) const</div></div>
+<div class="ttc" id="qobject_html_tr"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a></div><div class="ttdeci">QString tr(const char *sourceText, const char *disambiguation, int n)</div></div>
+<div class="ttc" id="qsysinfo_html_buildAbi"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsysinfo.html#buildAbi">QSysInfo::buildAbi</a></div><div class="ttdeci">QString buildAbi()</div></div>
+<div class="ttc" id="qsysinfo_html_kernelType"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsysinfo.html#kernelType">QSysInfo::kernelType</a></div><div class="ttdeci">QString kernelType()</div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qstringlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a></div></div>
+<div class="ttc" id="qsysinfo_html_prettyProductName"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsysinfo.html#prettyProductName">QSysInfo::prettyProductName</a></div><div class="ttdeci">QString prettyProductName()</div></div>
+<div class="ttc" id="qsysinfo_html_kernelVersion"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsysinfo.html#kernelVersion">QSysInfo::kernelVersion</a></div><div class="ttdeci">QString kernelVersion()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

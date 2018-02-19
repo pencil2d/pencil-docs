@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/qminiz.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/qminiz.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -113,13 +113,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;util.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> MiniZ::isZip(<span class="keyword">const</span> QString&amp; sZipFilePath)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> MiniZ::isZip(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; sZipFilePath)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="structmz__zip__archive.html">mz_zip_archive</a>* mz = <span class="keyword">new</span> <a class="code" href="structmz__zip__archive.html">mz_zip_archive</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    OnScopeExit(<span class="keyword">delete</span> mz);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    mz_zip_zero_struct(mz);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    mz_bool ok = mz_zip_reader_init_file(mz, sZipFilePath.toUtf8().data(), 0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    mz_bool ok = mz_zip_reader_init_file(mz, sZipFilePath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toUtf8">toUtf8</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qbytearray.html#data">data</a>(), 0);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (!ok) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> num = mz_zip_reader_get_num_files(mz);</div>
@@ -128,35 +128,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> (num &gt; 0);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">bool</span> MiniZ::compressFolder(QString sZipFilePath, QString sSrcPath)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">bool</span> MiniZ::compressFolder(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sZipFilePath, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sSrcPath)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (!sSrcPath.endsWith(<span class="stringliteral">&quot;/&quot;</span>))</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span> (!sSrcPath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#endsWith">endsWith</a>(<span class="stringliteral">&quot;/&quot;</span>))</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        sSrcPath.append(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        sSrcPath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>(<span class="stringliteral">&quot;/&quot;</span>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="structmz__zip__archive.html">mz_zip_archive</a>* mz = <span class="keyword">new</span> <a class="code" href="structmz__zip__archive.html">mz_zip_archive</a>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    OnScopeExit(<span class="keyword">delete</span> mz);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    mz_zip_zero_struct(mz);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mz_bool ok = mz_zip_writer_init_file(mz, sZipFilePath.toUtf8().data(), 0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mz_bool ok = mz_zip_writer_init_file(mz, sZipFilePath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toUtf8">toUtf8</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qbytearray.html#data">data</a>(), 0);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    QDirIterator it(sSrcPath, QDirIterator::Subdirectories);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdiriterator.html">QDirIterator</a> it(sSrcPath, QDirIterator::Subdirectories);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">while</span> (it.hasNext())</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        QString sFullPath = it.next();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sFullPath = it.next();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (it.fileInfo().isDir())</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        QString sRelativePath = sFullPath;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        sRelativePath.replace(sSrcPath, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sRelativePath = sFullPath;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        sRelativePath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#replace-2">replace</a>(sSrcPath, <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        ok = mz_zip_writer_add_file(mz,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                    sRelativePath.toUtf8().data(),</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                    sFullPath.toUtf8().data(),</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                    sRelativePath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toUtf8">toUtf8</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qbytearray.html#data">data</a>(),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                    sFullPath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toUtf8">toUtf8</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qbytearray.html#data">data</a>(),</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                    <span class="stringliteral">&quot;&quot;</span>, 0, MZ_DEFAULT_COMPRESSION);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (!ok)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">break</span>;</div>
@@ -167,15 +167,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> ok;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">bool</span> MiniZ::uncompressFolder(QString sZipFilePath, QString sDestPath)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">bool</span> MiniZ::uncompressFolder(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sZipFilePath, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sDestPath)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (!QFile::exists(sZipFilePath))</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (!<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(sZipFilePath))</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    QString sBaseDir = QFileInfo(sDestPath).absolutePath();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    QDir baseDir(sBaseDir);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sBaseDir = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a>(sDestPath).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html#absolutePath">absolutePath</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> baseDir(sBaseDir);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (!baseDir.exists())</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">bool</span> ok = baseDir.mkpath(<span class="stringliteral">&quot;.&quot;</span>);</div>
@@ -188,7 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    OnScopeExit(<span class="keyword">delete</span> mz);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    mz_zip_zero_struct(mz);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    mz_bool ok = mz_zip_reader_init_file(mz, sZipFilePath.toUtf8().data(), 0);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    mz_bool ok = mz_zip_reader_init_file(mz, sZipFilePath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toUtf8">toUtf8</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qbytearray.html#data">data</a>(), 0);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (!ok) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> num = mz_zip_reader_get_num_files(mz);</div>
@@ -202,7 +202,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> (stat-&gt;m_is_directory)</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            QString sFolderPath = QString::fromUtf8(stat-&gt;m_filename);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sFolderPath = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#fromUtf8">QString::fromUtf8</a>(stat-&gt;m_filename);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordtype">bool</span> b = baseDir.mkpath(sFolderPath);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            Q_ASSERT(b);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
@@ -214,11 +214,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">if</span> (!stat-&gt;m_is_directory)</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            QString sFullPath = baseDir.filePath(QString::fromUtf8(stat-&gt;m_filename));</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordtype">bool</span> b = QFileInfo(sFullPath).absoluteDir().mkpath(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sFullPath = baseDir.filePath(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#fromUtf8">QString::fromUtf8</a>(stat-&gt;m_filename));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordtype">bool</span> b = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a>(sFullPath).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html#absoluteDir">absoluteDir</a>().<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#mkpath">mkpath</a>(<span class="stringliteral">&quot;.&quot;</span>);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            Q_ASSERT(b);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            ok &amp;= mz_zip_reader_extract_to_file(mz, i, sFullPath.toUtf8(), 0);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            ok &amp;= mz_zip_reader_extract_to_file(mz, i, sFullPath.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#toUtf8">toUtf8</a>(), 0);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
@@ -231,11 +231,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> ok;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
 <div class="ttc" id="structmz__zip__archive__file__stat_html"><div class="ttname"><a href="structmz__zip__archive__file__stat.html">mz_zip_archive_file_stat</a></div><div class="ttdef"><b>Definition:</b> <a href="miniz_8h_source.html#l00912">miniz.h:912</a></div></div>
+<div class="ttc" id="qstring_html_append-2"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#append-2">QString::append</a></div><div class="ttdeci">QString &amp; append(QChar ch)</div></div>
+<div class="ttc" id="qfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const</div></div>
+<div class="ttc" id="qstring_html_fromUtf8"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#fromUtf8">QString::fromUtf8</a></div><div class="ttdeci">QString fromUtf8(const char *str, int size)</div></div>
+<div class="ttc" id="qfileinfo_html_absoluteDir"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#absoluteDir">QFileInfo::absoluteDir</a></div><div class="ttdeci">QDir absoluteDir() const</div></div>
+<div class="ttc" id="qstring_html_endsWith"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#endsWith">QString::endsWith</a></div><div class="ttdeci">bool endsWith(const QString &amp;s, Qt::CaseSensitivity cs) const</div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
+<div class="ttc" id="qdiriterator_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdiriterator.html">QDirIterator</a></div></div>
+<div class="ttc" id="qdir_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html">QDir</a></div></div>
+<div class="ttc" id="qstring_html_replace-2"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#replace-2">QString::replace</a></div><div class="ttdeci">QString &amp; replace(int position, int n, QChar after)</div></div>
+<div class="ttc" id="qbytearray_html_data"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbytearray.html#data">QByteArray::data</a></div><div class="ttdeci">char * data()</div></div>
 <div class="ttc" id="structmz__zip__archive_html"><div class="ttname"><a href="structmz__zip__archive.html">mz_zip_archive</a></div><div class="ttdef"><b>Definition:</b> <a href="miniz_8h_source.html#l01041">miniz.h:1041</a></div></div>
+<div class="ttc" id="qfileinfo_html_absolutePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#absolutePath">QFileInfo::absolutePath</a></div><div class="ttdeci">QString absolutePath() const</div></div>
+<div class="ttc" id="qdir_html_mkpath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#mkpath">QDir::mkpath</a></div><div class="ttdeci">bool mkpath(const QString &amp;dirPath) const</div></div>
+<div class="ttc" id="qstring_html_toUtf8"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#toUtf8">QString::toUtf8</a></div><div class="ttdeci">QByteArray toUtf8() const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

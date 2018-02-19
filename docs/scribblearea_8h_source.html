@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/interface/scribblearea.h Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/interface/scribblearea.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_5c2491a6f6c41ff5438142a747f3be50.html">interface</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_cdf89e01542ad1ccbe7c892dc4914f69.html">interface</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -148,21 +148,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_bucket_tool.html">BucketTool</a>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_scribble_area.html">ScribbleArea</a>( QWidget *parent );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_scribble_area.html">ScribbleArea</a>( QWidget *<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a> );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ~<a class="code" href="class_scribble_area.html">ScribbleArea</a>();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">bool</span> init();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setCore( <a class="code" href="class_editor.html">Editor</a>* pCore ) { mEditor = pCore; }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> deleteSelection();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setSelection( QRectF rect, <span class="keywordtype">bool</span> );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> setSelection( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> rect, <span class="keywordtype">bool</span> );</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> displaySelectionProperties();</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scribble_area.html#a0940d37bc14126a129380b69b2c9aac7">resetSelectionProperties</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QRectF getSelection()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mySelection; }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> getSelection()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mySelection; }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">bool</span> somethingSelected = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    QRectF mySelection, myTransformedSelection, myTempTransformedSelection;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mySelection, myTransformedSelection, myTempTransformedSelection;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    qreal myRotatedAngle;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;int&gt;</a> mClosestCurves;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;int&gt;</a> mClosestCurves;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> areLayersSane() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> isLayerPaintable() <span class="keyword">const</span>;</div>
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1">flipSelection</a>(<span class="keywordtype">bool</span> flipVertical);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    QVector&lt;QPoint&gt; <a class="code" href="class_scribble_area.html#a08485c0b955dfb9afb3e620f4c0d5895">calcSelectionCenterPoints</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qvector.html">QVector&lt;QPoint&gt;</a> <a class="code" href="class_scribble_area.html#a08485c0b955dfb9afb3e620f4c0d5895">calcSelectionCenterPoints</a>();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> setEffect( SETTING e, <span class="keywordtype">bool</span> isOn );</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
@@ -184,9 +184,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> setMoveMode( MoveMode moveMode ) { mMoveMode = moveMode; }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    QTransform getView();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    QRectF getViewRect();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    QRectF getCameraRect();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    QPointF getCentralPoint();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> getViewRect();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> getCameraRect();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getCentralPoint();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> updateCurrentFrame();</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> updateFrame( <span class="keywordtype">int</span> frame );</div>
@@ -251,20 +251,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">void</span> drawPolyline(QPainterPath path, QPen pen, <span class="keywordtype">bool</span> useAA );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> drawLine( QPointF P1, QPointF P2, QPen pen, QPainter::CompositionMode cm );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> drawLine( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> P1, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> P2, QPen pen, QPainter::CompositionMode cm );</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> drawPath( QPainterPath path, QPen pen, QBrush brush, QPainter::CompositionMode cm );</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> drawPen( QPointF thePoint, qreal brushWidth, QColor fillColour, <span class="keywordtype">bool</span> useAA = <span class="keyword">true</span> );</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> drawPencil( QPointF thePoint, qreal brushWidth, qreal fixedBrushFeather, QColor fillColour, qreal opacity );</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> drawBrush( QPointF thePoint, qreal brushWidth, qreal offset, QColor fillColour, qreal opacity, <span class="keywordtype">bool</span> usingFeather = <span class="keyword">true</span>, <span class="keywordtype">int</span> useAA = 0 );</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> blurBrush( <a class="code" href="class_bitmap_image.html">BitmapImage</a> *bmiSource_, QPointF srcPoint_, QPointF thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_ );</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span> liquifyBrush( <a class="code" href="class_bitmap_image.html">BitmapImage</a> *bmiSource_, QPointF srcPoint_, QPointF thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_ );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> drawPen( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, QColor fillColour, <span class="keywordtype">bool</span> useAA = <span class="keyword">true</span> );</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> drawPencil( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, qreal fixedBrushFeather, QColor fillColour, qreal opacity );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> drawBrush( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, qreal offset, QColor fillColour, qreal opacity, <span class="keywordtype">bool</span> usingFeather = <span class="keyword">true</span>, <span class="keywordtype">int</span> useAA = 0 );</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">void</span> blurBrush( <a class="code" href="class_bitmap_image.html">BitmapImage</a> *bmiSource_, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> srcPoint_, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_ );</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">void</span> liquifyBrush( <a class="code" href="class_bitmap_image.html">BitmapImage</a> *bmiSource_, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> srcPoint_, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_ );</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">void</span> paintBitmapBuffer();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> paintBitmapBufferRect( QRect rect );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">void</span> paintBitmapBufferRect( <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> rect );</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">void</span> paintCanvasCursor(QPainter&amp; painter);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordtype">void</span> clearBitmapBuffer();</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> refreshBitmap( <span class="keyword">const</span> QRectF&amp; rect, <span class="keywordtype">int</span> rad );</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> refreshVector( <span class="keyword">const</span> QRectF&amp; rect, <span class="keywordtype">int</span> rad );</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> refreshBitmap( <span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; rect, <span class="keywordtype">int</span> rad );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> refreshVector( <span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; rect, <span class="keywordtype">int</span> rad );</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> setGaussianGradient( QGradient &amp;gradient, QColor colour, qreal opacity, qreal offset );</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">void</span> updateCanvasCursor();</div>
@@ -276,7 +276,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QPixmap mTransCursImg;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> drawCanvas( <span class="keywordtype">int</span> frame, QRect rect );</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> drawCanvas( <span class="keywordtype">int</span> frame, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> rect );</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> settingUpdated(SETTING setting);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    MoveMode mMoveMode = MIDDLE;</div>
@@ -308,17 +308,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">bool</span> mKeyboardInUse = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">bool</span> mMouseInUse    = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">bool</span> mMouseRightButtonInUse = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    QPointF mLastPixel;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    QPointF mCurrentPixel;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    QPointF mLastPoint;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    QPointF mCurrentPoint;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mLastPixel;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mCurrentPixel;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mLastPoint;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mCurrentPoint;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    qreal selectionTolerance;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="class_q_list.html">QList&lt;VertexRef&gt;</a> mClosestVertices;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    QPointF mOffset;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    QPoint mCursorCenterPos;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;VertexRef&gt;</a> mClosestVertices;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mOffset;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a> mCursorCenterPos;</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span> mCursorWidth;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    QPointF transformedCursorPos;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> transformedCursorPos;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">//instant tool (temporal eg. eraser)</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">bool</span> instantTool = <span class="keyword">false</span>; <span class="comment">//whether or not using temporal tool</span></div>
@@ -335,8 +335,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    std::vector&lt;QPixmapCache::Key&gt; mPixmapCacheKeys;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="comment">// debug</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    QRectF mDebugRect;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    QLoggingCategory mLog;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mDebugRect;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qloggingcategory.html">QLoggingCategory</a> mLog;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    std::deque&lt; clock_t &gt; mDebugTimeQue;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;};</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
@@ -344,24 +344,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00056">basetool.h:56</a></div></div>
 <div class="ttc" id="class_move_tool_html"><div class="ttname"><a href="class_move_tool.html">MoveTool</a></div><div class="ttdef"><b>Definition:</b> <a href="movetool_8h_source.html#l00025">movetool.h:25</a></div></div>
 <div class="ttc" id="class_smudge_tool_html"><div class="ttname"><a href="class_smudge_tool.html">SmudgeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="smudgetool_8h_source.html#l00023">smudgetool.h:23</a></div></div>
+<div class="ttc" id="qpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
 <div class="ttc" id="class_bucket_tool_html"><div class="ttname"><a href="class_bucket_tool.html">BucketTool</a></div><div class="ttdef"><b>Definition:</b> <a href="buckettool_8h_source.html#l00026">buckettool.h:26</a></div></div>
+<div class="ttc" id="qpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="class_color_manager_html"><div class="ttname"><a href="class_color_manager.html">ColorManager</a></div><div class="ttdef"><b>Definition:</b> <a href="colormanager_8h_source.html#l00026">colormanager.h:26</a></div></div>
+<div class="ttc" id="qrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
+<div class="ttc" id="qlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList&lt; int &gt;</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a0940d37bc14126a129380b69b2c9aac7"><div class="ttname"><a href="class_scribble_area.html#a0940d37bc14126a129380b69b2c9aac7">ScribbleArea::resetSelectionProperties</a></div><div class="ttdeci">void resetSelectionProperties()</div><div class="ttdoc">ScribbleArea::resetSelectionProperties should be used whenever translate, rotate, transform...</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01515">scribblearea.cpp:1515</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a08485c0b955dfb9afb3e620f4c0d5895"><div class="ttname"><a href="class_scribble_area.html#a08485c0b955dfb9afb3e620f4c0d5895">ScribbleArea::calcSelectionCenterPoints</a></div><div class="ttdeci">QVector&lt; QPoint &gt; calcSelectionCenterPoints()</div><div class="ttdoc">ScribbleArea::calculateSelectionCenter. </div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01294">scribblearea.cpp:1294</a></div></div>
 <div class="ttc" id="class_vector_selection_html"><div class="ttname"><a href="class_vector_selection.html">VectorSelection</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorselection_8h_source.html#l00025">vectorselection.h:25</a></div></div>
+<div class="ttc" id="qvector_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvector.html">QVector</a></div></div>
+<div class="ttc" id="qrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
 <div class="ttc" id="class_stroke_manager_html"><div class="ttname"><a href="class_stroke_manager.html">StrokeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="strokemanager_8h_source.html#l00032">strokemanager.h:32</a></div></div>
 <div class="ttc" id="class_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00065">preferencemanager.h:65</a></div></div>
 <div class="ttc" id="class_scribble_area_html_a0dbeeb69589589abdb3273c031e056f1"><div class="ttname"><a href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1">ScribbleArea::flipSelection</a></div><div class="ttdeci">void flipSelection(bool flipVertical)</div><div class="ttdoc">ScribbleArea::flipSelection flip selection along the X or Y axis. </div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l01122">scribblearea.cpp:1122</a></div></div>
-<div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; int &gt;</a></div></div>
+<div class="ttc" id="qloggingcategory_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qloggingcategory.html">QLoggingCategory</a></div></div>
 <div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00048">editor.h:48</a></div></div>
 <div class="ttc" id="class_canvas_painter_html"><div class="ttname"><a href="class_canvas_painter.html">CanvasPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8h_source.html#l00055">canvaspainter.h:55</a></div></div>
+<div class="ttc" id="qobject_html_parent"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#parent">QObject::parent</a></div><div class="ttdeci">QObject * parent() const</div></div>
 <div class="ttc" id="class_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00025">bitmapimage.h:25</a></div></div>
 <div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00051">scribblearea.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

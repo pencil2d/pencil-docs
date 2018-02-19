@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/popupcolorpalettewidget.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/app/src/popupcolorpalettewidget.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d422163b96683743ed3963d4aac17747.html">app</a></li><li class="navelem"><a class="el" href="dir_a8f641299cfea9f7461c2df1141b7786.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -150,11 +150,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    mColorBox-&gt;setColor( mContainer-&gt;editor()-&gt;color()-&gt;frontColor() );</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    mColorBox-&gt;setFocus();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QPoint cPos = QCursor::pos();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a> cPos = QCursor::pos();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> radius = width() / 2;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    cPos.setX(cPos.x()-radius); <span class="comment">// adjust cPos to center widget</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    cPos.setY(cPos.y()-radius);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    cPos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html#setX">setX</a>(cPos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>()-radius); <span class="comment">// adjust cPos to center widget</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    cPos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html#setY">setY</a>(cPos.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>()-radius);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    move( cPos );</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    show();</div>
@@ -177,7 +177,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">event</span>-&gt;ignore();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;sent event.ignore()&quot;</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        QCoreApplication::sendEvent(mContainer, event);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qcoreapplication.html#sendEvent">QCoreApplication::sendEvent</a>(mContainer, event);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
@@ -187,12 +187,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    mContainer-&gt;editor()-&gt;color()-&gt;setColor( color );</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="ttc" id="qpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
+<div class="ttc" id="qpoint_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#x">QPoint::x</a></div><div class="ttdeci">int x() const</div></div>
+<div class="ttc" id="qpoint_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#y">QPoint::y</a></div><div class="ttdeci">int y() const</div></div>
 <div class="ttc" id="class_color_box_html"><div class="ttname"><a href="class_color_box.html">ColorBox</a></div><div class="ttdef"><b>Definition:</b> <a href="colorbox_8h_source.html#l00025">colorbox.h:25</a></div></div>
+<div class="ttc" id="qcoreapplication_html_sendEvent"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcoreapplication.html#sendEvent">QCoreApplication::sendEvent</a></div><div class="ttdeci">bool sendEvent(QObject *receiver, QEvent *event)</div></div>
+<div class="ttc" id="qpoint_html_setX"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#setX">QPoint::setX</a></div><div class="ttdeci">void setX(int x)</div></div>
+<div class="ttc" id="qpoint_html_setY"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#setY">QPoint::setY</a></div><div class="ttdeci">void setY(int y)</div></div>
 <div class="ttc" id="class_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00051">scribblearea.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:49 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/structure/filemanager.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/structure/filemanager.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_37d2dc142bae53c07227f6d1e65a171a.html">structure</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_f4a24cce322570410a5bf0612e037363.html">structure</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -113,15 +113,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;object.h&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;FileManager::FileManager(QObject *parent) : QObject(parent),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;FileManager::FileManager(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html">QObject</a> *parent) : <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>(parent),</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;mLog(<span class="stringliteral">&quot;FileManager&quot;</span>)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ENABLE_DEBUG_LOG(mLog, <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="class_object.html">Object</a>* FileManager::load(QString strFileName)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="class_object.html">Object</a>* FileManager::load(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strFileName)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (!QFile::exists(strFileName))</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (!<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(strFileName))</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;ERROR - File doesn&#39;t exist.&quot;</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> cleanUpWithErrorCode(Status::FILE_NOT_FOUND);</div>
@@ -133,8 +133,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    obj-&gt;setFilePath(strFileName);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    obj-&gt;createWorkingDir();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    QString strMainXMLFile;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    QString strDataFolder;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strMainXMLFile;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strDataFolder;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Test file format: new zipped .pclx or old .pcl?</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> oldFormat = isOldForamt(strFileName);</div>
@@ -152,8 +152,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        unzip(strFileName, obj-&gt;workingDir());</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        strMainXMLFile = QDir(obj-&gt;workingDir()).filePath(PFF_XML_FILE_NAME);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        strDataFolder = QDir(obj-&gt;workingDir()).filePath(PFF_DATA_DIR);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        strMainXMLFile = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(obj-&gt;workingDir()).filePath(PFF_XML_FILE_NAME);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        strDataFolder = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(obj-&gt;workingDir()).filePath(PFF_DATA_DIR);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;  XML=&quot;</span> &lt;&lt; strMainXMLFile;</div>
@@ -163,11 +163,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    obj-&gt;setDataDir(strDataFolder);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    obj-&gt;setMainXMLFile(strMainXMLFile);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> totalFileCount = QDir(strDataFolder).entryList(QDir::Files).size();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> totalFileCount = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(strDataFolder).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#entryList-1">entryList</a>(QDir::Files).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    mMaxProgressValue = totalFileCount;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    emit progressRangeChanged(mMaxProgressValue);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QFile file(strMainXMLFile);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(strMainXMLFile);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (!file.open(QFile::ReadOnly))</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> cleanUpWithErrorCode(Status::ERROR_FILE_CANNOT_OPEN);</div>
@@ -259,16 +259,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> <span class="keywordtype">object</span>-&gt;loadXML(root, [<span class="keyword">this</span>] { progressForward(); });</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keywordtype">bool</span> FileManager::isOldForamt(<span class="keyword">const</span> QString&amp; fileName)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keywordtype">bool</span> FileManager::isOldForamt(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; fileName)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> (MiniZ::isZip(fileName) == <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<a class="code" href="class_status.html">Status</a> FileManager::save(<a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, QString strFileName)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<a class="code" href="class_status.html">Status</a> FileManager::save(<a class="code" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strFileName)</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    QStringList debugDetails;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> debugDetails;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    debugDetails &lt;&lt; <span class="stringliteral">&quot;FileManager::save&quot;</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;strFileName = &quot;</span>).append(strFileName);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;strFileName = &quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>(strFileName);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (<span class="keywordtype">object</span> == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
@@ -281,38 +281,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    progressForward();</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    QFileInfo fileInfo(strFileName);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> fileInfo(strFileName);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">if</span> (fileInfo.isDir())</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        debugDetails &lt;&lt; <span class="stringliteral">&quot;FileName points to a directory&quot;</span>;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::INVALID_ARGUMENT,</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                      debugDetails,</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                      tr(<span class="stringliteral">&quot;Invalid Save Path&quot;</span>),</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                      tr(<span class="stringliteral">&quot;The path (\&quot;%1\&quot;) points to a directory.&quot;</span>).arg(fileInfo.absoluteFilePath()));</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Invalid Save Path&quot;</span>),</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;The path (\&quot;%1\&quot;) points to a directory.&quot;</span>).arg(fileInfo.absoluteFilePath()));</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    QFileInfo parentDirInfo(fileInfo.dir().absolutePath());</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> parentDirInfo(fileInfo.dir().absolutePath());</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">if</span> (!parentDirInfo.exists())</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        debugDetails &lt;&lt; <span class="stringliteral">&quot;The parent directory of strFileName does not exist&quot;</span>;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::INVALID_ARGUMENT,</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                      debugDetails,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                      tr(<span class="stringliteral">&quot;Invalid Save Path&quot;</span>),</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                      tr(<span class="stringliteral">&quot;The directory (\&quot;%1\&quot;) does not exist.&quot;</span>).arg(parentDirInfo.absoluteFilePath()));</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Invalid Save Path&quot;</span>),</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;The directory (\&quot;%1\&quot;) does not exist.&quot;</span>).arg(parentDirInfo.absoluteFilePath()));</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">if</span> ((fileInfo.exists() &amp;&amp; !fileInfo.isWritable()) || !parentDirInfo.isWritable())</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    {</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        debugDetails &lt;&lt; <span class="stringliteral">&quot;Filename points to a location that is not writable&quot;</span>;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::INVALID_ARGUMENT,</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                      debugDetails,</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                      tr(<span class="stringliteral">&quot;Invalid Save Path&quot;</span>),</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                      tr(<span class="stringliteral">&quot;The path (\&quot;%1\&quot;) is not writable.&quot;</span>).arg(fileInfo.absoluteFilePath()));</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Invalid Save Path&quot;</span>),</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;The path (\&quot;%1\&quot;) is not writable.&quot;</span>).arg(fileInfo.absoluteFilePath()));</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    QString strTempWorkingFolder;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    QString strMainXMLFile;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    QString strDataFolder;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strTempWorkingFolder;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strMainXMLFile;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strDataFolder;</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">bool</span> isOldFile = strFileName.endsWith(PFF_OLD_EXTENSION);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordtype">bool</span> isOldFile = strFileName.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#endsWith">endsWith</a>(PFF_OLD_EXTENSION);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (isOldFile)</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    {</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;Old Pencil File Format (*.pcl) !&quot;</span>;</div>
@@ -325,57 +325,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;New zipped Pencil File Format (*.pclx) !&quot;</span>;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        strTempWorkingFolder = <span class="keywordtype">object</span>-&gt;workingDir();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        Q_ASSERT(QDir(strTempWorkingFolder).exists());</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;strTempWorkingFolder = &quot;</span>).append(strTempWorkingFolder);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        Q_ASSERT(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(strTempWorkingFolder).exists());</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;strTempWorkingFolder = &quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>(strTempWorkingFolder);</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;Temp Folder=&quot;</span> &lt;&lt; strTempWorkingFolder;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        strMainXMLFile = QDir(strTempWorkingFolder).filePath(PFF_XML_FILE_NAME);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        strDataFolder = QDir(strTempWorkingFolder).filePath(PFF_OLD_DATA_DIR);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        strMainXMLFile = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(strTempWorkingFolder).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(PFF_XML_FILE_NAME);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        strDataFolder = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(strTempWorkingFolder).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(PFF_OLD_DATA_DIR);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    QFileInfo dataInfo(strDataFolder);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> dataInfo(strDataFolder);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span> (!dataInfo.exists())</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        QDir dir(strDataFolder); <span class="comment">// the directory where all key frames will be saved</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dir(strDataFolder); <span class="comment">// the directory where all key frames will be saved</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">if</span> (!dir.mkpath(strDataFolder))</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;dir.absolutePath() = %1&quot;</span>).arg(dir.absolutePath());</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;dir.absolutePath() = %1&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(dir.absolutePath());</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::FAIL, debugDetails,</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                          tr(<span class="stringliteral">&quot;Cannot Create Data Directory&quot;</span>),</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                          tr(<span class="stringliteral">&quot;Failed to create directory \&quot;%1\&quot;. Please make sure you have sufficient permissions.&quot;</span>).arg(strDataFolder));</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                          <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Cannot Create Data Directory&quot;</span>),</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                          <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Failed to create directory \&quot;%1\&quot;. Please make sure you have sufficient permissions.&quot;</span>).arg(strDataFolder));</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">if</span> (!dataInfo.isDir())</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;dataInfo.absoluteFilePath() = &quot;</span>).append(dataInfo.absoluteFilePath());</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;dataInfo.absoluteFilePath() = &quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#append-2">append</a>(dataInfo.absoluteFilePath());</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::FAIL,</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                      debugDetails,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                      tr(<span class="stringliteral">&quot;Cannot Create Data Directory&quot;</span>),</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                      tr(<span class="stringliteral">&quot;\&quot;%1\&quot; is a file. Please delete the file and try again.&quot;</span>).arg(dataInfo.absoluteFilePath()));</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Cannot Create Data Directory&quot;</span>),</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;\&quot;%1\&quot; is a file. Please delete the file and try again.&quot;</span>).arg(dataInfo.absoluteFilePath()));</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">// save data</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordtype">int</span> layerCount = <span class="keywordtype">object</span>-&gt;getLayerCount();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;layerCount = %1&quot;</span>).arg(layerCount);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;layerCount = %1&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(layerCount);</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">bool</span> saveLayerOK = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; layerCount; ++i)</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <a class="code" href="class_layer.html">Layer</a>* layer = <span class="keywordtype">object</span>-&gt;getLayer(i);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;layer[%1] = Layer[id=%2, name=%3, type=%4]&quot;</span>).arg(i).arg(layer-&gt;id()).arg(layer-&gt;name()).arg(layer-&gt;type());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;layer[%1] = Layer[id=%2, name=%3, type=%4]&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(i).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(layer-&gt;id()).arg(layer-&gt;name()).arg(layer-&gt;type());</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <a class="code" href="class_status.html">Status</a> st = layer-&gt;save(strDataFolder, [<span class="keyword">this</span>] { progressForward(); });</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> (!st.ok())</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        {</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            saveLayerOK = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            QStringList layerDetails = st.detailsList();</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">for</span> (QString&amp; detail : layerDetails)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> layerDetails = st.detailsList();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">for</span> (<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; detail : layerDetails)</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                detail.prepend(<span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;&quot;</span>);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                detail.<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html#prepend">prepend</a>(<span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;&quot;</span>);</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            debugDetails &lt;&lt; QString(<span class="stringliteral">&quot;- Layer[%1] failed to save&quot;</span>).arg(i) &lt;&lt; layerDetails;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            debugDetails &lt;&lt; <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;- Layer[%1] failed to save&quot;</span>).<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html#arg-11">arg</a>(i) &lt;&lt; layerDetails;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
@@ -385,7 +385,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    progressForward();</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// -------- save main XML file -----------</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    QFile file(strMainXMLFile);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(strMainXMLFile);</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (!file.open(QFile::WriteOnly | QFile::Text))</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> Status::ERROR_FILE_CANNOT_OPEN;</div>
@@ -409,7 +409,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> IndentSize = 2;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    QTextStream out(&amp;file);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qtextstream.html">QTextStream</a> out(&amp;file);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    xmlDoc.save(out, IndentSize);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    out.flush();</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    file.close();</div>
@@ -422,8 +422,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">if</span> (!ok)</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        {</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::ERROR_MINIZ_FAIL, debugDetails, </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                          tr(<span class="stringliteral">&quot;Internal Error&quot;</span>),</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                          tr(<span class="stringliteral">&quot;An internal error occurred. Your file may not be saved successfully.&quot;</span>));</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                          <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Internal Error&quot;</span>),</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                          <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;An internal error occurred. Your file may not be saved successfully.&quot;</span>));</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        }</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;Compressed. File saved.&quot;</span>;</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
@@ -437,8 +437,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    {</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_status.html">Status</a>(Status::FAIL,</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                      debugDetails,</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                      tr(<span class="stringliteral">&quot;Internal Error&quot;</span>),</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                      tr(<span class="stringliteral">&quot;An internal error occurred. Your file may not be saved successfully.&quot;</span>));</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Internal Error&quot;</span>),</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                      <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;An internal error occurred. Your file may not be saved successfully.&quot;</span>));</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
@@ -533,7 +533,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;{</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    Q_ASSERT(data);</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    QString strName = element.tagName();</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strName = element.tagName();</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keywordflow">if</span> (strName == <span class="stringliteral">&quot;currentFrame&quot;</span>)</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    {</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        data-&gt;setCurrentFrame(element.attribute(<span class="stringliteral">&quot;value&quot;</span>).toInt());</div>
@@ -601,7 +601,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;{</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    qCDebug(mLog) &lt;&lt; <span class="stringliteral">&quot;Load Palette..&quot;</span>;</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    QString paletteFilePath = obj-&gt;dataDir() + <span class="stringliteral">&quot;/&quot;</span> + PFF_PALETTE_FILE;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> paletteFilePath = obj-&gt;dataDir() + <span class="stringliteral">&quot;/&quot;</span> + PFF_PALETTE_FILE;</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">if</span> (!obj-&gt;importPalette(paletteFilePath))</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    {</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        obj-&gt;loadDefaultPalette();</div>
@@ -609,7 +609,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;}</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="keywordtype">void</span> FileManager::unzip(<span class="keyword">const</span> QString&amp; strZipFile, <span class="keyword">const</span> QString&amp; strUnzipTarget)</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="keywordtype">void</span> FileManager::unzip(<span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; strZipFile, <span class="keyword">const</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; strUnzipTarget)</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;{</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="comment">// removes the previous directory first  - better approach</span></div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    removePFFTmpDirectory(strUnzipTarget);</div>
@@ -620,16 +620,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    mstrLastTempFolder = strUnzipTarget;</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;}</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<a class="code" href="class_q_list.html">QList&lt;ColourRef&gt;</a> FileManager::loadPaletteFile(QString strFilename)</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;ColourRef&gt;</a> FileManager::loadPaletteFile(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strFilename)</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;{</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    QFileInfo fileInfo(strFilename);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> fileInfo(strFilename);</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keywordflow">if</span> (!fileInfo.exists())</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    {</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_q_list.html">QList&lt;ColourRef&gt;</a>();</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keywordflow">return</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;ColourRef&gt;</a>();</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    }</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="comment">// TODO: Load Palette.</span></div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_q_list.html">QList&lt;ColourRef&gt;</a>();</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    <span class="keywordflow">return</span> <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;ColourRef&gt;</a>();</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;}</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<a class="code" href="class_status.html">Status</a> FileManager::verifyObject(<a class="code" href="class_object.html">Object</a>* obj)</div>
@@ -644,15 +644,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;}</div>
+<div class="ttc" id="qstring_html_append-2"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#append-2">QString::append</a></div><div class="ttdeci">QString &amp; append(QChar ch)</div></div>
 <div class="ttc" id="class_object_data_html"><div class="ttname"><a href="class_object_data.html">ObjectData</a></div><div class="ttdef"><b>Definition:</b> <a href="objectdata_8h_source.html#l00025">objectdata.h:25</a></div></div>
+<div class="ttc" id="qdir_html_filePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#filePath">QDir::filePath</a></div><div class="ttdeci">QString filePath(const QString &amp;fileName) const</div></div>
+<div class="ttc" id="qfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const</div></div>
+<div class="ttc" id="qobject_html_tr"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a></div><div class="ttdeci">QString tr(const char *sourceText, const char *disambiguation, int n)</div></div>
+<div class="ttc" id="qfile_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html">QFile</a></div></div>
+<div class="ttc" id="qtextstream_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtextstream.html">QTextStream</a></div></div>
+<div class="ttc" id="qlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const</div></div>
+<div class="ttc" id="qobject_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div></div>
 <div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00035">layer.h:35</a></div></div>
+<div class="ttc" id="qstring_html_endsWith"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#endsWith">QString::endsWith</a></div><div class="ttdeci">bool endsWith(const QString &amp;s, Qt::CaseSensitivity cs) const</div></div>
+<div class="ttc" id="qstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
+<div class="ttc" id="qlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList&lt; ColourRef &gt;</a></div></div>
+<div class="ttc" id="qstringlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a></div></div>
+<div class="ttc" id="qfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
+<div class="ttc" id="qdir_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html">QDir</a></div></div>
 <div class="ttc" id="class_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:24</a></div></div>
-<div class="ttc" id="class_q_list_html"><div class="ttname"><a href="class_q_list.html">QList&lt; ColourRef &gt;</a></div></div>
+<div class="ttc" id="qdir_html_entryList-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#entryList-1">QDir::entryList</a></div><div class="ttdeci">QStringList entryList(Filters filters, SortFlags sort) const</div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00052">object.h:52</a></div></div>
+<div class="ttc" id="qlist_html_prepend"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#prepend">QList::prepend</a></div><div class="ttdeci">void prepend(const T &amp;value)</div></div>
+<div class="ttc" id="qstring_html_arg-11"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#arg-11">QString::arg</a></div><div class="ttdeci">QString arg(qlonglong a, int fieldWidth, int base, QChar fillChar) const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:08 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/interface/timecontrols.cpp Source File</title>
+<title>Pencil2D: /home/travis/build/chchwy/pencil2d/core_lib/src/interface/timecontrols.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">c944898290415207f0ce1b1c8ce68a50549e97ea</span>
+   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Properties</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_5c2491a6f6c41ff5438142a747f3be50.html">interface</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_cdf89e01542ad1ccbe7c892dc4914f69.html">interface</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -120,14 +120,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">static</span> <span class="keyword">auto</span> spinBoxValueChanged = <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span> (QSpinBox::*)(<span class="keywordtype">int</span>)<span class="keyword">&gt;</span>(&amp;QSpinBox::valueChanged);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;TimeControls::TimeControls(<a class="code" href="class_time_line.html">TimeLine</a>* parent) : QToolBar(parent)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;TimeControls::TimeControls(<a class="code" href="class_time_line.html">TimeLine</a>* <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>) : QToolBar(parent)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    mTimeline = parent;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    mTimeline = <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> TimeControls::initUI()</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QSettings settings(PENCIL2D, PENCIL2D);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    mFpsBox = <span class="keyword">new</span> QSpinBox(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    mFpsBox-&gt;setFixedHeight(24);</div>
@@ -135,26 +135,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    mFpsBox-&gt;setMinimum(1);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    mFpsBox-&gt;setMaximum(90);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    mFpsBox-&gt;setSuffix(<span class="stringliteral">&quot; fps&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mFpsBox-&gt;setToolTip(tr(<span class="stringliteral">&quot;Frames per second&quot;</span>));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    mFpsBox-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Frames per second&quot;</span>));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    mFpsBox-&gt;setFocusPolicy(Qt::WheelFocus);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    mLoopStartSpinBox = <span class="keyword">new</span> QSpinBox(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mLoopStartSpinBox-&gt;setFixedHeight(24);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    mLoopStartSpinBox-&gt;setValue(settings.value(<span class="stringliteral">&quot;loopStart&quot;</span>).toInt());</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    mLoopStartSpinBox-&gt;setMinimum(1);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mLoopStartSpinBox-&gt;setToolTip(tr(<span class="stringliteral">&quot;Start of playback loop&quot;</span>));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    mLoopStartSpinBox-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Start of playback loop&quot;</span>));</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    mLoopStartSpinBox-&gt;setFocusPolicy(Qt::WheelFocus);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    mLoopEndSpinBox = <span class="keyword">new</span> QSpinBox(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    mLoopEndSpinBox-&gt;setFixedHeight(24);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    mLoopEndSpinBox-&gt;setValue(settings.value(<span class="stringliteral">&quot;loopEnd&quot;</span>).toInt());</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    mLoopEndSpinBox-&gt;setMinimum(2);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    mLoopEndSpinBox-&gt;setToolTip(tr(<span class="stringliteral">&quot;End of playback loop&quot;</span>));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    mLoopEndSpinBox-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;End of playback loop&quot;</span>));</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    mLoopEndSpinBox-&gt;setFocusPolicy(Qt::WheelFocus);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    mPlaybackRangeCheckBox = <span class="keyword">new</span> QCheckBox(tr(<span class="stringliteral">&quot;Range&quot;</span>));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    mPlaybackRangeCheckBox = <span class="keyword">new</span> QCheckBox(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Range&quot;</span>));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    mPlaybackRangeCheckBox-&gt;setFixedHeight(24);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    mPlaybackRangeCheckBox-&gt;setToolTip(tr(<span class="stringliteral">&quot;Playback range&quot;</span>));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    mPlaybackRangeCheckBox-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Playback range&quot;</span>));</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    mPlayButton = <span class="keyword">new</span> QPushButton(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    mLoopButton = <span class="keyword">new</span> QPushButton();</div>
@@ -174,11 +174,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    mJumpToEndButton-&gt;setIcon(mJumpToEndIcon);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    mJumpToStartButton-&gt;setIcon(mJumpToStartIcon);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    mPlayButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;Play&quot;</span>));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    mLoopButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;Loop&quot;</span>));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    mSoundButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;Sound on/off&quot;</span>));</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    mJumpToEndButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;End&quot;</span>));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    mJumpToStartButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;Start&quot;</span>));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    mPlayButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Play&quot;</span>));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    mLoopButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Loop&quot;</span>));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    mSoundButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Sound on/off&quot;</span>));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    mJumpToEndButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;End&quot;</span>));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    mJumpToStartButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Start&quot;</span>));</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    mLoopButton-&gt;setCheckable(<span class="keyword">true</span>);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    mSoundButton-&gt;setCheckable(<span class="keyword">true</span>);</div>
@@ -242,21 +242,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keywordtype">void</span> TimeControls::makeConnections()</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    connect(mPlayButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::playButtonClicked);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    connect(mJumpToEndButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::jumpToEndButtonClicked);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    connect(mJumpToStartButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::jumpToStartButtonClicked);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    connect(mLoopButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::loopButtonClicked);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    connect(mPlaybackRangeCheckBox, &amp;QCheckBox::clicked, <span class="keyword">this</span>, &amp;TimeControls::playbackRangeClicked);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mPlayButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::playButtonClicked);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mJumpToEndButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::jumpToEndButtonClicked);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mJumpToStartButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::jumpToStartButtonClicked);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mLoopButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::loopButtonClicked);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mPlaybackRangeCheckBox, &amp;QCheckBox::clicked, <span class="keyword">this</span>, &amp;TimeControls::playbackRangeClicked);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    connect(mLoopStartSpinBox, spinBoxValueChanged, <span class="keyword">this</span>, &amp;TimeControls::loopStartValueChanged);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    connect(mLoopEndSpinBox, spinBoxValueChanged, <span class="keyword">this</span>, &amp;TimeControls::loopEndValueChanged);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mLoopStartSpinBox, spinBoxValueChanged, <span class="keyword">this</span>, &amp;TimeControls::loopStartValueChanged);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mLoopEndSpinBox, spinBoxValueChanged, <span class="keyword">this</span>, &amp;TimeControls::loopEndValueChanged);</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    connect(mPlaybackRangeCheckBox, &amp;QCheckBox::toggled, mLoopStartSpinBox, &amp;QSpinBox::setEnabled);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    connect(mPlaybackRangeCheckBox, &amp;QCheckBox::toggled, mLoopEndSpinBox, &amp;QSpinBox::setEnabled);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mPlaybackRangeCheckBox, &amp;QCheckBox::toggled, mLoopStartSpinBox, &amp;QSpinBox::setEnabled);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mPlaybackRangeCheckBox, &amp;QCheckBox::toggled, mLoopEndSpinBox, &amp;QSpinBox::setEnabled);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    connect(mSoundButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::soundClick);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    connect(mSoundButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::updateSoundIcon);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    connect(mFpsBox, spinBoxValueChanged, <span class="keyword">this</span>, &amp;TimeControls::fpsClick);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mSoundButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::soundClick);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mSoundButton, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;TimeControls::updateSoundIcon);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(mFpsBox, spinBoxValueChanged, <span class="keyword">this</span>, &amp;TimeControls::fpsClick);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
@@ -279,12 +279,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (mEditor-&gt;playback()-&gt;isPlaying())</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        mPlayButton-&gt;setIcon(mStopIcon);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        mPlayButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;Stop&quot;</span>));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        mPlayButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Stop&quot;</span>));</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        mPlayButton-&gt;setIcon(mStartIcon);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        mPlayButton-&gt;setToolTip(tr(<span class="stringliteral">&quot;Start&quot;</span>));</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        mPlayButton-&gt;setToolTip(<a class="codeRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Start&quot;</span>));</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
@@ -361,13 +361,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    mLoopEndSpinBox-&gt;setMaximum(frameLength);</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
 <div class="ttc" id="class_signal_blocker_html"><div class="ttname"><a href="class_signal_blocker.html">SignalBlocker</a></div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00047">util.h:47</a></div></div>
+<div class="ttc" id="qobject_html_tr"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a></div><div class="ttdeci">QString tr(const char *sourceText, const char *disambiguation, int n)</div></div>
 <div class="ttc" id="class_playback_manager_html"><div class="ttname"><a href="class_playback_manager.html">PlaybackManager</a></div><div class="ttdef"><b>Definition:</b> <a href="playbackmanager_8h_source.html#l00027">playbackmanager.h:27</a></div></div>
 <div class="ttc" id="class_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00028">timeline.h:28</a></div></div>
+<div class="ttc" id="qsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
 <div class="ttc" id="class_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00048">editor.h:48</a></div></div>
+<div class="ttc" id="qobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
+<div class="ttc" id="qobject_html_parent"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#parent">QObject::parent</a></div><div class="ttdeci">QObject * parent() const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2018 23:30:07 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
