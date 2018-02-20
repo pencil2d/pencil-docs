@@ -32,6 +32,7 @@ var searchData=
   ['addextranamespacedeclarations',['addExtraNamespaceDeclarations',['https://doc.qt.io/qt-5/qxmlstreamreader.html#addExtraNamespaceDeclarations',1,'QXmlStreamReader']]],
   ['addfuture',['addFuture',['https://doc.qt.io/qt-5/qfuturesynchronizer.html#addFuture',1,'QFutureSynchronizer']]],
   ['addhelpoption',['addHelpOption',['https://doc.qt.io/qt-5/qcommandlineparser.html#addHelpOption',1,'QCommandLineParser']]],
+  ['additem',['addItem',['../class_flow_layout.html#ab60fb7d4cfa8f5d2122e7db6c850ae8e',1,'FlowLayout']]],
   ['additionaldata',['additionalData',['https://doc.qt.io/qt-5/qxmlnodemodelindex.html#additionalData',1,'QXmlNodeModelIndex']]],
   ['addlibrarypath',['addLibraryPath',['https://doc.qt.io/qt-5/qcoreapplication.html#addLibraryPath',1,'QCoreApplication']]],
   ['addmonths',['addMonths',['https://doc.qt.io/qt-5/qdate.html#addMonths',1,'QDate::addMonths()'],['https://doc.qt.io/qt-5/qdatetime.html#addMonths',1,'QDateTime::addMonths()']]],

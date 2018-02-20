@@ -82,6 +82,7 @@ var searchData=
   ['exited',['exited',['https://doc.qt.io/qt-5/qabstractstate.html#exited',1,'QAbstractState']]],
   ['exitstatus',['exitStatus',['https://doc.qt.io/qt-5/qprocess.html#exitStatus',1,'QProcess']]],
   ['expandedto',['expandedTo',['https://doc.qt.io/qt-5/qsize.html#expandedTo',1,'QSize::expandedTo()'],['https://doc.qt.io/qt-5/qsizef.html#expandedTo',1,'QSizeF::expandedTo()']]],
+  ['expandingdirections',['expandingDirections',['../class_flow_layout.html#a8eb4762f57ec8bea9eca6f9a535b1d50',1,'FlowLayout']]],
   ['expirytimeout',['expiryTimeout',['https://doc.qt.io/qt-5/qthreadpool.html#expiryTimeout-prop',1,'QThreadPool::expiryTimeout()'],['https://doc.qt.io/qt-5/qthreadpool.html#expiryTimeout-prop',1,'QThreadPool::expiryTimeout() const']]],
   ['exponential',['exponential',['https://doc.qt.io/qt-5/qlocale.html#exponential',1,'QLocale']]],
   ['exportimagedialog',['ExportImageDialog',['../class_export_image_dialog.html',1,'']]],

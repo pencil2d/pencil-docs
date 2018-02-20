@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
+   &#160;<span id="projectnumber">620e973a7b691764f8daee262c3d7607ef1d7db1</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -146,29 +146,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> brushOn();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> smudgeOn();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> getDockLocation(Qt::DockWidgetArea area);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;signals:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> clearButtonClicked();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> resizeEvent(QResizeEvent* event) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> deselectAllTools();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    Ui::ToolBoxWidget* ui = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Qt::DockWidgetArea mAreaLocation;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// hack:</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// isFloating is not set until resizeEvent has been executed.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// and is therefore true initially, which causes some UI resize problems.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">bool</span> mIsFloating = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> mHasResizedOnce = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;signals:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> clearButtonClicked();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> deselectAllTools();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    Ui::ToolBoxWidget* ui = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_display_option_widget_html"><div class="ttname"><a href="class_display_option_widget.html">DisplayOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="displayoptionwidget_8h_source.html#l00030">displayoptionwidget.h:30</a></div></div>
 <div class="ttc" id="class_tool_option_widget_html"><div class="ttname"><a href="class_tool_option_widget.html">ToolOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="tooloptionwidget_8h_source.html#l00038">tooloptionwidget.h:38</a></div></div>
 <div class="ttc" id="class_tool_box_widget_html"><div class="ttname"><a href="class_tool_box_widget.html">ToolBoxWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="toolbox_8h_source.html#l00035">toolbox.h:35</a></div></div>
@@ -178,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 19 2018 03:26:50 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 20 2018 12:25:33 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

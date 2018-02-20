@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
+   &#160;<span id="projectnumber">620e973a7b691764f8daee262c3d7607ef1d7db1</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -243,11 +243,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> Status::OK;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<a class="code" href="class_sound_clip.html">SoundClip</a>* LayerSound::getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<a class="code" href="class_key_frame.html">KeyFrame</a>* LayerSound::createKeyFrame(<span class="keywordtype">int</span> position, <a class="code" href="class_object.html">Object</a>*)</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = getKeyFrameWhichCovers(frameNumber);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(key);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="class_sound_clip.html">SoundClip</a>* s = <span class="keyword">new</span> <a class="code" href="class_sound_clip.html">SoundClip</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    s-&gt;setPos(position);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<a class="code" href="class_sound_clip.html">SoundClip</a>* LayerSound::getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="class_key_frame.html">KeyFrame</a>* key = getKeyFrameWhichCovers(frameNumber);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(key);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 <div class="ttc" id="class_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00027">soundclip.h:27</a></div></div>
 <div class="ttc" id="qdir_html_filePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#filePath">QDir::filePath</a></div><div class="ttdeci">QString filePath(const QString &amp;fileName) const</div></div>
 <div class="ttc" id="qfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const</div></div>
@@ -265,7 +272,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 19 2018 03:26:51 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 20 2018 12:25:34 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Pencil2D
-   &#160;<span id="projectnumber">b22920386b9f992383d59a28b24c7079c1a18d3a</span>
+   &#160;<span id="projectnumber">620e973a7b691764f8daee262c3d7607ef1d7db1</span>
    </div>
    <div id="projectbrief">Pencil2D is an animation software for both bitmap and vector graphics. It is free, multi-platform, and open source.</div>
   </td>
@@ -86,7 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_layer_camera-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LayerCamera Class Reference</div>  </div>
@@ -131,9 +132,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDomElement</b> (Q
 <tr class="memitem:a1b2a76a49b41110f6c014e3279538358"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b2a76a49b41110f6c014e3279538358"></a>
 QTransform&#160;</td><td class="memItemRight" valign="bottom"><b>getViewAtFrame</b> (int frameNumber)</td></tr>
 <tr class="separator:a1b2a76a49b41110f6c014e3279538358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67dc3e1ea84e70294817ee8c29b592b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67dc3e1ea84e70294817ee8c29b592b0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LinearInterpolateTransform</b> (<a class="el" href="class_camera.html">Camera</a> *)</td></tr>
-<tr class="separator:a67dc3e1ea84e70294817ee8c29b592b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50fe20305c1cce192ede1aff165de39f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50fe20305c1cce192ede1aff165de39f"></a>
 <a class="elRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getViewRect</b> ()</td></tr>
 <tr class="separator:a50fe20305c1cce192ede1aff165de39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,9 +190,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getNextFrameNumber</b>
 <tr class="memitem:a12118a110fc817a3b55c4f389f1fcb95 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12118a110fc817a3b55c4f389f1fcb95"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>keyFrameCount</b> () const </td></tr>
 <tr class="separator:a12118a110fc817a3b55c4f389f1fcb95 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab85135a3baf9031d280f39cdbb301b15 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab85135a3baf9031d280f39cdbb301b15"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>addNewEmptyKeyAt</b> (int position)</td></tr>
-<tr class="separator:ab85135a3baf9031d280f39cdbb301b15 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d020385fb6b1e400b5797a57d2a5a0 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61d020385fb6b1e400b5797a57d2a5a0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>addNewKeyFrameAt</b> (int position)</td></tr>
+<tr class="separator:a61d020385fb6b1e400b5797a57d2a5a0 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b8e8c2a8171722d0fe8e9a190e4c03 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31b8e8c2a8171722d0fe8e9a190e4c03"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>addKeyFrame</b> (int position, <a class="el" href="class_key_frame.html">KeyFrame</a> *)</td></tr>
 <tr class="separator:a31b8e8c2a8171722d0fe8e9a190e4c03 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -406,6 +404,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac6b58e42d17bc45db008404395415f96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6b58e42d17bc45db008404395415f96"></a>
 <a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>saveKeyFrameFile</b> (<a class="el" href="class_key_frame.html">KeyFrame</a> *, <a class="elRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qstring.html">QString</a> path) override</td></tr>
 <tr class="separator:ac6b58e42d17bc45db008404395415f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94fbce33a8110f6261681bfaafaa84f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac94fbce33a8110f6261681bfaafaa84f"></a>
+<a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>createKeyFrame</b> (int position, <a class="el" href="class_object.html">Object</a> *) override</td></tr>
+<tr class="separator:ac94fbce33a8110f6261681bfaafaa84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_layer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_layer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_layer.html">Layer</a></td></tr>
 <tr class="memitem:ab2ec37f17789538f91ec2fd7ef00198f inherit pro_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2ec37f17789538f91ec2fd7ef00198f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (int LayerId)</td></tr>
@@ -439,8 +440,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qobject.html#disconnectNotify">disconnectNotify</a> (const <a class="elRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qmetamethod.html">QMetaMethod</a> &amp;signal)</td></tr>
 <tr class="separator:disconnectNotify inherit pro_methods_qobject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab004ee36cb268a801bf126486166deae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab004ee36cb268a801bf126486166deae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>linearInterpolateTransform</b> (<a class="el" href="class_camera.html">Camera</a> *)</td></tr>
+<tr class="separator:ab004ee36cb268a801bf126486166deae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
 <tr class="memitem:a2647bbcd861800ff50dc529a17dcc7e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2647bbcd861800ff50dc529a17dcc7e3"></a>
 <a class="elRef" doxygen="/home/travis/build/chchwy/pencil2d/util/qtcore.tags:https://doc.qt.io/qt-5//" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>viewRect</b></td></tr>
 <tr class="separator:a2647bbcd861800ff50dc529a17dcc7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -511,7 +518,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" doxygen
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 19 2018 03:26:52 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 20 2018 12:25:35 for Pencil2D by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
