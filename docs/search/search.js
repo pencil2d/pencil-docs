@@ -12,7 +12,8 @@ var indexSectionsWithContent =
   2: "q",
   3: "abcdefghijklmnopqrstuvwxyz~",
   4: "abcdefghiklmnoprstuvw",
-  5: "acdefghilmnopqrstuv"
+  5: "acdefghilmnopqrstuv",
+  6: "bn"
 };
 
 var indexSectionNames =
@@ -22,7 +23,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "functions",
   4: "variables",
-  5: "properties"
+  5: "properties",
+  6: "pages"
 };
 
 function convertToId(search)

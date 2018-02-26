@@ -96,6 +96,7 @@ var searchData=
   ['arguments',['arguments',['https://doc.qt.io/qt-5/qprocess.html#arguments',1,'QProcess::arguments()'],['https://doc.qt.io/qt-5/qcoreapplication.html#arguments',1,'QCoreApplication::arguments()'],['https://doc.qt.io/qt-5/qstatemachine-signalevent.html#arguments',1,'QStateMachine::SignalEvent::arguments()']]],
   ['array',['array',['https://doc.qt.io/qt-5/qjsondocument.html#array',1,'QJsonDocument']]],
   ['asprintf',['asprintf',['https://doc.qt.io/qt-5/qstring.html#asprintf',1,'QString']]],
+  ['assembleaudio',['assembleAudio',['../class_movie_exporter.html#a278df3f6f5254f89daf4dc2414525084',1,'MovieExporter']]],
   ['assertionhandler',['AssertionHandler',['../class_catch_1_1_assertion_handler.html',1,'Catch']]],
   ['assertioninfo',['AssertionInfo',['../struct_catch_1_1_assertion_info.html',1,'Catch']]],
   ['assignproperty',['assignProperty',['https://doc.qt.io/qt-5/qstate.html#assignProperty',1,'QState']]],

@@ -4,6 +4,8 @@ var searchData=
   ['generate64',['generate64',['https://doc.qt.io/qt-5/qrandomgenerator.html#generate64',1,'QRandomGenerator']]],
   ['generatebyteordermark',['generateByteOrderMark',['https://doc.qt.io/qt-5/qtextstream.html#generateByteOrderMark',1,'QTextStream']]],
   ['generatedouble',['generateDouble',['https://doc.qt.io/qt-5/qrandomgenerator.html#generateDouble',1,'QRandomGenerator']]],
+  ['generategif',['generateGif',['../class_movie_exporter.html#a53731a39f13276aa7d1a7dea071ea0e7',1,'MovieExporter']]],
+  ['generatemovie',['generateMovie',['../class_movie_exporter.html#a297351b8bce16a6087d565e921ff9ad6',1,'MovieExporter']]],
   ['genericiconname',['genericIconName',['https://doc.qt.io/qt-5/qmimetype.html#genericIconName-prop',1,'QMimeType']]],
   ['getallvertices',['getAllVertices',['../class_vector_image.html#a77ea31d5a1e632555cd5ef1db72a2203',1,'VectorImage']]],
   ['getandremoveverticescloseto',['getAndRemoveVerticesCloseTo',['../class_vector_image.html#ab373191d1b5bd1a966e881a36eebeae2',1,'VectorImage::getAndRemoveVerticesCloseTo(QPointF thisPoint, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)'],['../class_vector_image.html#af0eac3619839a9b25817a5542cda63b1',1,'VectorImage::getAndRemoveVerticesCloseTo(VertexRef thisPointRef, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)']]],

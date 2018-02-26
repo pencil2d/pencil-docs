@@ -34,7 +34,7 @@ var searchData=
   ['matchflags',['MatchFlags',['https://doc.qt.io/qt-5/qt.html#MatchFlag-enum',1,'Qt']]],
   ['matchinglocales',['matchingLocales',['https://doc.qt.io/qt-5/qlocale.html#matchingLocales',1,'QLocale']]],
   ['matchnotof',['MatchNotOf',['../struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of.html',1,'Catch::Matchers::Impl']]],
-  ['matchoptions',['MatchOptions',['https://doc.qt.io/qt-5/qregularexpression.html#MatchOption-enum',1,'QRegularExpression::MatchOptions()'],['https://doc.qt.io/qt-5/qregularexpressionmatch.html#matchOptions',1,'QRegularExpressionMatch::matchOptions()'],['https://doc.qt.io/qt-5/qregularexpressionmatchiterator.html#matchOptions',1,'QRegularExpressionMatchIterator::matchOptions()']]],
+  ['matchoptions',['matchOptions',['https://doc.qt.io/qt-5/qregularexpressionmatch.html#matchOptions',1,'QRegularExpressionMatch::matchOptions()'],['https://doc.qt.io/qt-5/qregularexpressionmatchiterator.html#matchOptions',1,'QRegularExpressionMatchIterator::matchOptions()'],['https://doc.qt.io/qt-5/qregularexpression.html#MatchOption-enum',1,'QRegularExpression::MatchOptions()']]],
   ['matchtype',['matchType',['https://doc.qt.io/qt-5/qregularexpressionmatch.html#matchType',1,'QRegularExpressionMatch::matchType()'],['https://doc.qt.io/qt-5/qregularexpressionmatchiterator.html#matchType',1,'QRegularExpressionMatchIterator::matchType()']]],
   ['matrixforelement',['matrixForElement',['https://doc.qt.io/qt-5/qsvgrenderer.html#matrixForElement',1,'QSvgRenderer']]],
   ['max',['max',['https://doc.qt.io/qt-5/qrandomgenerator.html#max',1,'QRandomGenerator']]],
