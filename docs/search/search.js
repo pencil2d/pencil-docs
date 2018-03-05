@@ -13,7 +13,7 @@ var indexSectionsWithContent =
   3: "abcdefghijklmnopqrstuvwxyz~",
   4: "abcdefghiklmnoprstuvw",
   5: "acdefghilmnopqrstuv",
-  6: "bn"
+  6: "bnp"
 };
 
 var indexSectionNames =
