@@ -12,7 +12,7 @@ var searchData=
   ['getc1',['getC1',['../class_vector_image.html#a6fe003db3fe7c3ad3ef2debc3dacd932',1,'VectorImage::getC1(int curveNumber, int vertexNumber)'],['../class_vector_image.html#a3c694a5ee39aca1fa9a6a17ec34e9b75',1,'VectorImage::getC1(VertexRef vertexRef)']]],
   ['getc2',['getC2',['../class_vector_image.html#ab94d1a72bda57e83331ecbee102fd388',1,'VectorImage::getC2(int curveNumber, int vertexNumber)'],['../class_vector_image.html#ad2e0ec2c9de7da0c8d359f7ab2c8a68f',1,'VectorImage::getC2(VertexRef vertexRef)']]],
   ['getchar',['getChar',['https://doc.qt.io/qt-5/qiodevice.html#getChar',1,'QIODevice']]],
-  ['getclosestvertexto',['getClosestVertexTo',['../class_vector_image.html#a1ad69f4a46eb78984bcc023d8fe3e17d',1,'VectorImage']]],
+  ['getclosestvertexto',['getClosestVertexTo',['../class_vector_image.html#a119cc2096c5c39ead67b38277d280af3',1,'VectorImage']]],
   ['getcolour',['getColour',['../class_vector_image.html#a2af586b45983232d15ff9dfd458e35e0',1,'VectorImage']]],
   ['getcolournumber',['getColourNumber',['../class_vector_image.html#af88e5c6c475db507be0369cdcdd33bd7',1,'VectorImage']]],
   ['getcoords',['getCoords',['https://doc.qt.io/qt-5/qrect.html#getCoords',1,'QRect::getCoords()'],['https://doc.qt.io/qt-5/qrectf.html#getCoords',1,'QRectF::getCoords()']]],
