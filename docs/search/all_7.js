@@ -1,6 +1,7 @@
 var searchData=
 [
   ['handle',['handle',['https://doc.qt.io/qt-5/qfiledevice.html#handle',1,'QFileDevice::handle()'],['https://doc.qt.io/qt-5/qwineventnotifier.html#handle',1,'QWinEventNotifier::handle()'],['https://doc.qt.io/qt-5/qt.html#HANDLE-typedef',1,'Qt::HANDLE()']]],
+  ['handledrawingonemptyframe',['handleDrawingOnEmptyFrame',['../class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579',1,'ScribbleArea']]],
   ['handlemessage',['handleMessage',['https://doc.qt.io/qt-5/qabstractmessagehandler.html#handleMessage',1,'QAbstractMessageHandler']]],
   ['handtool',['HandTool',['../class_hand_tool.html',1,'']]],
   ['hasattribute',['hasAttribute',['https://doc.qt.io/qt-5/qxmlstreamattributes.html#hasAttribute',1,'QXmlStreamAttributes::hasAttribute(const QString &amp;qualifiedName) const'],['https://doc.qt.io/qt-5/qxmlstreamattributes.html#hasAttribute-1',1,'QXmlStreamAttributes::hasAttribute(QLatin1String qualifiedName) const'],['https://doc.qt.io/qt-5/qxmlstreamattributes.html#hasAttribute-2',1,'QXmlStreamAttributes::hasAttribute(const QString &amp;namespaceUri, const QString &amp;name) const']]],
