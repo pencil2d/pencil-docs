@@ -21,7 +21,7 @@ var searchData=
   ['operator_20const_20t_20_2a',['operator const T *',['https://doc.qt.io/qt-5/qshareddatapointer.html#operator-const-T--2a',1,'QSharedDataPointer']]],
   ['operator_20const_20void_20_2a',['operator const void *',['https://doc.qt.io/qt-5/qbytearray-obsolete.html#operator-const-void--2a',1,'QByteArray']]],
   ['operator_20guid',['operator GUID',['https://doc.qt.io/qt-5/quuid.html#operator-GUID',1,'QUuid']]],
-  ['operator_20int',['operator Int',['https://doc.qt.io/qt-5/qflags.html#operator-Int',1,'QFlags::operator Int()'],['https://doc.qt.io/qt-5/qflag.html#operator-int',1,'QFlag::operator int()']]],
+  ['operator_20int',['operator int',['https://doc.qt.io/qt-5/qflag.html#operator-int',1,'QFlag::operator int()'],['https://doc.qt.io/qt-5/qflags.html#operator-Int',1,'QFlags::operator Int()']]],
   ['operator_20t',['operator T',['https://doc.qt.io/qt-5/qleinteger.html#operator-T',1,'QLEInteger::operator T()'],['https://doc.qt.io/qt-5/qbeinteger.html#operator-T',1,'QBEInteger::operator T()'],['https://doc.qt.io/qt-5/qatomicinteger.html#operator-T',1,'QAtomicInteger::operator T()'],['https://doc.qt.io/qt-5/qfuture.html#operator-T',1,'QFuture::operator T()']]],
   ['operator_20t_20_2a',['operator T *',['https://doc.qt.io/qt-5/qpointer.html#operator-T--2a',1,'QPointer::operator T *()'],['https://doc.qt.io/qt-5/qshareddatapointer.html#operator-T--2a',1,'QSharedDataPointer::operator T *()']]],
   ['operator_20type_20_2a',['operator Type *',['https://doc.qt.io/qt-5/qglobalstatic.html#operator-Type--2a',1,'QGlobalStatic']]],
