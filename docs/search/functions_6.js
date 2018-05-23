@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['generate',['generate',['https://doc.qt.io/qt-5/qrandomgenerator.html#generate',1,'QRandomGenerator::generate()'],['https://doc.qt.io/qt-5/qrandomgenerator64.html#generate',1,'QRandomGenerator64::generate()']]],
+  ['generate',['generate',['https://doc.qt.io/qt-5/qrandomgenerator.html#generate',1,'QRandomGenerator::generate()'],['https://doc.qt.io/qt-5/qrandomgenerator.html#generate-1',1,'QRandomGenerator::generate(ForwardIterator begin, ForwardIterator end)'],['https://doc.qt.io/qt-5/qrandomgenerator64.html#generate',1,'QRandomGenerator64::generate()']]],
   ['generate64',['generate64',['https://doc.qt.io/qt-5/qrandomgenerator.html#generate64',1,'QRandomGenerator']]],
   ['generatebyteordermark',['generateByteOrderMark',['https://doc.qt.io/qt-5/qtextstream.html#generateByteOrderMark',1,'QTextStream']]],
   ['generatedouble',['generateDouble',['https://doc.qt.io/qt-5/qrandomgenerator.html#generateDouble',1,'QRandomGenerator']]],
   ['generategif',['generateGif',['../class_movie_exporter.html#a53731a39f13276aa7d1a7dea071ea0e7',1,'MovieExporter']]],
   ['generatemovie',['generateMovie',['../class_movie_exporter.html#a297351b8bce16a6087d565e921ff9ad6',1,'MovieExporter']]],
   ['genericiconname',['genericIconName',['https://doc.qt.io/qt-5/qmimetype.html#genericIconName-prop',1,'QMimeType']]],
+  ['get',['get',['https://doc.qt.io/qt-5/qscopedpointer.html#get',1,'QScopedPointer::get()'],['https://doc.qt.io/qt-5/qsharedpointer.html#get',1,'QSharedPointer::get()']]],
   ['getallvertices',['getAllVertices',['../class_vector_image.html#a77ea31d5a1e632555cd5ef1db72a2203',1,'VectorImage']]],
   ['getandremoveverticescloseto',['getAndRemoveVerticesCloseTo',['../class_vector_image.html#ab373191d1b5bd1a966e881a36eebeae2',1,'VectorImage::getAndRemoveVerticesCloseTo(QPointF thisPoint, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)'],['../class_vector_image.html#af0eac3619839a9b25817a5542cda63b1',1,'VectorImage::getAndRemoveVerticesCloseTo(VertexRef thisPointRef, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)']]],
   ['getc1',['getC1',['../class_vector_image.html#a6fe003db3fe7c3ad3ef2debc3dacd932',1,'VectorImage::getC1(int curveNumber, int vertexNumber)'],['../class_vector_image.html#a3c694a5ee39aca1fa9a6a17ec34e9b75',1,'VectorImage::getC1(VertexRef vertexRef)']]],
@@ -37,7 +38,7 @@ var searchData=
   ['getverticescloseto',['getVerticesCloseTo',['../class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a',1,'VectorImage::getVerticesCloseTo(QPointF thisPoint, qreal maxDistance)'],['../class_vector_image.html#a567a560f3448619808153f1a01a72d1f',1,'VectorImage::getVerticesCloseTo(QPointF thisPoint, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)'],['../class_vector_image.html#adf832b5b5f3fffb30ed05f9dcefaea28',1,'VectorImage::getVerticesCloseTo(VertexRef thisPointRef, qreal maxDistance)'],['../class_vector_image.html#a022d006500248bc116b198f761e45c83',1,'VectorImage::getVerticesCloseTo(VertexRef thisPointRef, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)']]],
   ['global',['global',['https://doc.qt.io/qt-5/qrandomgenerator.html#global',1,'QRandomGenerator']]],
   ['globalinstance',['globalInstance',['https://doc.qt.io/qt-5/qthreadpool.html#globalInstance',1,'QThreadPool']]],
-  ['globalmatch',['globalMatch',['https://doc.qt.io/qt-5/qregularexpression.html#globalMatch',1,'QRegularExpression::globalMatch(const QString &amp;subject, int offset, MatchType matchType, MatchOptions matchOptions) const'],['https://doc.qt.io/qt-5/qregularexpression.html#globalMatch-1',1,'QRegularExpression::globalMatch(const QStringRef &amp;subjectRef, int offset, MatchType matchType, MatchOptions matchOptions) const']]],
+  ['globalmatch',['globalMatch',['https://doc.qt.io/qt-5/qregularexpression.html#globalMatch',1,'QRegularExpression::globalMatch(const QString &amp;subject, int offset, QRegularExpression::MatchType matchType, QRegularExpression::MatchOptions matchOptions) const const'],['https://doc.qt.io/qt-5/qregularexpression.html#globalMatch-1',1,'QRegularExpression::globalMatch(const QStringRef &amp;subjectRef, int offset, QRegularExpression::MatchType matchType, QRegularExpression::MatchOptions matchOptions) const const']]],
   ['globalrestorepolicy',['globalRestorePolicy',['https://doc.qt.io/qt-5/qstatemachine.html#globalRestorePolicy',1,'QStateMachine']]],
   ['globpatterns',['globPatterns',['https://doc.qt.io/qt-5/qmimetype.html#globPatterns-prop',1,'QMimeType']]],
   ['group',['group',['https://doc.qt.io/qt-5/qabstractanimation.html#group',1,'QAbstractAnimation::group()'],['https://doc.qt.io/qt-5/qfileinfo.html#group',1,'QFileInfo::group()'],['https://doc.qt.io/qt-5/qsettings.html#group',1,'QSettings::group()']]],

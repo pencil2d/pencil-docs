@@ -12,7 +12,6 @@ var searchData=
   ['qabstracttransition',['QAbstractTransition',['https://doc.qt.io/qt-5/qabstracttransition.html',1,'']]],
   ['qabstracturiresolver',['QAbstractUriResolver',['https://doc.qt.io/qt-5/qabstracturiresolver.html',1,'']]],
   ['qabstractxmlnodemodel',['QAbstractXmlNodeModel',['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html',1,'']]],
-  ['qabstractxmlreceiver',['QAbstractXmlReceiver',['https://doc.qt.io/qt-5/qabstractxmlreceiver.html',1,'']]],
   ['qanimationgroup',['QAnimationGroup',['https://doc.qt.io/qt-5/qanimationgroup.html',1,'']]],
   ['qassociativeiterable',['QAssociativeIterable',['https://doc.qt.io/qt-5/qassociativeiterable.html',1,'']]],
   ['qatomicint',['QAtomicInt',['https://doc.qt.io/qt-5/qatomicint.html',1,'']]],

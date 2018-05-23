@@ -1,7 +1,7 @@
 var searchData=
 [
   ['accepted',['accepted',['https://doc.qt.io/qt-5/qevent.html#accepted-prop',1,'QEvent']]],
-  ['active',['active',['https://doc.qt.io/qt-5/qtimer.html#active-prop',1,'QTimer::active()'],['https://doc.qt.io/qt-5/qabstractstate.html#active-prop',1,'QAbstractState::active()']]],
+  ['active',['active',['https://doc.qt.io/qt-5/qabstractstate.html#active-prop',1,'QAbstractState::active()'],['https://doc.qt.io/qt-5/qtimer.html#active-prop',1,'QTimer::active()']]],
   ['activethreadcount',['activeThreadCount',['https://doc.qt.io/qt-5/qthreadpool.html#activeThreadCount-prop',1,'QThreadPool']]],
   ['aliases',['aliases',['https://doc.qt.io/qt-5/qmimetype.html#aliases-prop',1,'QMimeType']]],
   ['allancestors',['allAncestors',['https://doc.qt.io/qt-5/qmimetype.html#allAncestors-prop',1,'QMimeType']]],
