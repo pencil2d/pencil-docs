@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pencil2d_20developer_20documentation',['Pencil2D Developer Documentation',['../md__home_travis_build_chchwy_pencil2d_docs_main.html',1,'']]],
   ['p1',['p1',['https://doc.qt.io/qt-5/qline.html#p1',1,'QLine::p1()'],['https://doc.qt.io/qt-5/qlinef.html#p1',1,'QLineF::p1()']]],
   ['p2',['p2',['https://doc.qt.io/qt-5/qline.html#p2',1,'QLine::p2()'],['https://doc.qt.io/qt-5/qlinef.html#p2',1,'QLineF::p2()']]],
   ['padchar',['padChar',['https://doc.qt.io/qt-5/qtextstream.html#padChar',1,'QTextStream']]],
@@ -34,7 +33,7 @@ var searchData=
   ['percent',['percent',['https://doc.qt.io/qt-5/qlocale.html#percent',1,'QLocale']]],
   ['period',['period',['https://doc.qt.io/qt-5/qeasingcurve.html#period',1,'QEasingCurve']]],
   ['permission',['permission',['https://doc.qt.io/qt-5/qfileinfo.html#permission',1,'QFileInfo']]],
-  ['permissions',['permissions',['https://doc.qt.io/qt-5/qfiledevice.html#permissions',1,'QFileDevice::permissions()'],['https://doc.qt.io/qt-5/qfile.html#permissions',1,'QFile::permissions() const const override'],['https://doc.qt.io/qt-5/qfile.html#permissions-1',1,'QFile::permissions(const QString &amp;fileName)'],['https://doc.qt.io/qt-5/qfileinfo.html#permissions',1,'QFileInfo::permissions()'],['https://doc.qt.io/qt-5/qfiledevice.html#Permission-enum',1,'QFileDevice::Permissions()']]],
+  ['permissions',['Permissions',['https://doc.qt.io/qt-5/qfiledevice.html#Permission-enum',1,'QFileDevice::Permissions()'],['https://doc.qt.io/qt-5/qfiledevice.html#permissions',1,'QFileDevice::permissions() const const'],['https://doc.qt.io/qt-5/qfile.html#permissions',1,'QFile::permissions() const const override'],['https://doc.qt.io/qt-5/qfile.html#permissions-1',1,'QFile::permissions(const QString &amp;fileName)'],['https://doc.qt.io/qt-5/qfileinfo.html#permissions',1,'QFileInfo::permissions()']]],
   ['persistentindexlist',['persistentIndexList',['https://doc.qt.io/qt-5/qabstractitemmodel.html#persistentIndexList',1,'QAbstractItemModel']]],
   ['pid',['pid',['https://doc.qt.io/qt-5/qprocess-obsolete.html#pid',1,'QProcess']]],
   ['playbackmanager',['PlaybackManager',['../class_playback_manager.html',1,'']]],

@@ -18,6 +18,7 @@ var searchData=
   ['deadline',['deadline',['https://doc.qt.io/qt-5/qdeadlinetimer.html#deadline',1,'QDeadlineTimer']]],
   ['deadlinensecs',['deadlineNSecs',['https://doc.qt.io/qt-5/qdeadlinetimer.html#deadlineNSecs',1,'QDeadlineTimer']]],
   ['debug',['debug',['https://doc.qt.io/qt-5/qmessagelogger.html#debug',1,'QMessageLogger::debug(const char *msg,...) const const'],['https://doc.qt.io/qt-5/qmessagelogger.html#debug-1',1,'QMessageLogger::debug(const QLoggingCategory &amp;cat, const char *msg,...) const const'],['https://doc.qt.io/qt-5/qmessagelogger.html#debug-2',1,'QMessageLogger::debug(QMessageLogger::CategoryFunction catFunc, const char *msg,...) const const'],['https://doc.qt.io/qt-5/qmessagelogger.html#debug-3',1,'QMessageLogger::debug() const const'],['https://doc.qt.io/qt-5/qmessagelogger.html#debug-4',1,'QMessageLogger::debug(const QLoggingCategory &amp;cat) const const'],['https://doc.qt.io/qt-5/qmessagelogger.html#debug-5',1,'QMessageLogger::debug(QMessageLogger::CategoryFunction catFunc) const const']]],
+  ['debugdetails',['DebugDetails',['../class_debug_details.html',1,'']]],
   ['debugstream',['debugStream',['https://doc.qt.io/qt-5/qmetatype.html#debugStream',1,'QMetaType']]],
   ['decimalpoint',['decimalPoint',['https://doc.qt.io/qt-5/qlocale.html#decimalPoint',1,'QLocale']]],
   ['decodename',['decodeName',['https://doc.qt.io/qt-5/qfile.html#decodeName',1,'QFile::decodeName(const QByteArray &amp;localFileName)'],['https://doc.qt.io/qt-5/qfile.html#decodeName-1',1,'QFile::decodeName(const char *localFileName)']]],
