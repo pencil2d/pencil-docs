@@ -14,6 +14,7 @@ var searchData=
   ['weekdays',['weekdays',['https://doc.qt.io/qt-5/qlocale.html#weekdays',1,'QLocale']]],
   ['weeknumber',['weekNumber',['https://doc.qt.io/qt-5/qdate.html#weekNumber',1,'QDate']]],
   ['wflags',['WFlags',['https://doc.qt.io/qt-5/qt-obsolete.html#WFlags-typedef',1,'Qt']]],
+  ['whichtransformationpoint',['whichTransformationPoint',['../class_move_tool.html#aba4caa2f5dfb53570562421236c2a731',1,'MoveTool']]],
   ['width',['width',['https://doc.qt.io/qt-5/qitemselectionrange.html#width',1,'QItemSelectionRange::width()'],['https://doc.qt.io/qt-5/qsize.html#width',1,'QSize::width()'],['https://doc.qt.io/qt-5/qsizef.html#width',1,'QSizeF::width()'],['https://doc.qt.io/qt-5/qrect.html#width',1,'QRect::width()'],['https://doc.qt.io/qt-5/qrectf.html#width',1,'QRectF::width()']]],
   ['windowflags',['WindowFlags',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
   ['windowsidtodefaultianaid',['windowsIdToDefaultIanaId',['https://doc.qt.io/qt-5/qtimezone.html#windowsIdToDefaultIanaId',1,'QTimeZone::windowsIdToDefaultIanaId(const QByteArray &amp;windowsId)'],['https://doc.qt.io/qt-5/qtimezone.html#windowsIdToDefaultIanaId-1',1,'QTimeZone::windowsIdToDefaultIanaId(const QByteArray &amp;windowsId, QLocale::Country country)']]],
