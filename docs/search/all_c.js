@@ -116,6 +116,7 @@ var searchData=
   ['msecsto',['msecsTo',['https://doc.qt.io/qt-5/qtime.html#msecsTo',1,'QTime::msecsTo()'],['https://doc.qt.io/qt-5/qdatetime.html#msecsTo',1,'QDateTime::msecsTo()'],['https://doc.qt.io/qt-5/qelapsedtimer.html#msecsTo',1,'QElapsedTimer::msecsTo()']]],
   ['msleep',['msleep',['https://doc.qt.io/qt-5/qthread.html#msleep',1,'QThread']]],
   ['mutex',['mutex',['https://doc.qt.io/qt-5/qmutexlocker.html#mutex',1,'QMutexLocker']]],
+  ['mz_5fdummy_5ftime_5ft_5ftag',['mz_dummy_time_t_tag',['../structmz__dummy__time__t__tag.html',1,'']]],
   ['mz_5fstream_5fs',['mz_stream_s',['../structmz__stream__s.html',1,'']]],
   ['mz_5fzip_5farchive',['mz_zip_archive',['../structmz__zip__archive.html',1,'']]],
   ['mz_5fzip_5farchive_5ffile_5fstat',['mz_zip_archive_file_stat',['../structmz__zip__archive__file__stat.html',1,'']]],
