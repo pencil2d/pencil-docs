@@ -99,6 +99,7 @@ var searchData=
   ['attribute',['attribute',['https://doc.qt.io/qt-5/qxmlserializer.html#attribute',1,'QXmlSerializer::attribute()'],['https://doc.qt.io/qt-5/qxmlformatter.html#attribute',1,'QXmlFormatter::attribute()']]],
   ['attributes',['attributes',['https://doc.qt.io/qt-5/qxmlstreamreader.html#attributes',1,'QXmlStreamReader::attributes()'],['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html#attributes',1,'QAbstractXmlNodeModel::attributes()']]],
   ['authority',['authority',['https://doc.qt.io/qt-5/qurl.html#authority',1,'QUrl']]],
+  ['autocrop',['autoCrop',['../class_bitmap_image.html#a9ce619b9feab04169caad75d6dd8c44c',1,'BitmapImage']]],
   ['autodelete',['autoDelete',['https://doc.qt.io/qt-5/qrunnable.html#autoDelete',1,'QRunnable']]],
   ['autodetectunicode',['autoDetectUnicode',['https://doc.qt.io/qt-5/qtextstream.html#autoDetectUnicode',1,'QTextStream']]],
   ['autoformatting',['autoFormatting',['https://doc.qt.io/qt-5/qxmlstreamwriter.html#autoFormatting',1,'QXmlStreamWriter']]],

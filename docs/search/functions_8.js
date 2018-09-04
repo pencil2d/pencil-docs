@@ -125,6 +125,7 @@ var searchData=
   ['islowsurrogate',['isLowSurrogate',['https://doc.qt.io/qt-5/qchar.html#isLowSurrogate',1,'QChar::isLowSurrogate() const const'],['https://doc.qt.io/qt-5/qchar.html#isLowSurrogate-1',1,'QChar::isLowSurrogate(uint ucs4)']]],
   ['ismark',['isMark',['https://doc.qt.io/qt-5/qchar.html#isMark',1,'QChar::isMark() const const'],['https://doc.qt.io/qt-5/qchar.html#isMark-1',1,'QChar::isMark(uint ucs4)']]],
   ['isminimal',['isMinimal',['https://doc.qt.io/qt-5/qregexp.html#isMinimal',1,'QRegExp']]],
+  ['isminimallybounded',['isMinimallyBounded',['../class_bitmap_image.html#abcc8d33352132a2e56f7fefe0c7bedb3',1,'BitmapImage']]],
   ['ismonotonic',['isMonotonic',['https://doc.qt.io/qt-5/qelapsedtimer.html#isMonotonic',1,'QElapsedTimer']]],
   ['isnativepath',['isNativePath',['https://doc.qt.io/qt-5/qfileinfo.html#isNativePath',1,'QFileInfo']]],
   ['isncname',['isNCName',['https://doc.qt.io/qt-5/qxmlname.html#isNCName',1,'QXmlName']]],

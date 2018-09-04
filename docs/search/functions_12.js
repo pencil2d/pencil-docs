@@ -69,6 +69,7 @@ var searchData=
   ['setcodecforlocale',['setCodecForLocale',['https://doc.qt.io/qt-5/qtextcodec.html#setCodecForLocale',1,'QTextCodec']]],
   ['setcolordata',['setColorData',['https://doc.qt.io/qt-5/qmimedata.html#setColorData',1,'QMimeData']]],
   ['setcolumn',['setColumn',['https://doc.qt.io/qt-5/qsourcelocation.html#setColumn',1,'QSourceLocation']]],
+  ['setcompositionmodebounds',['setCompositionModeBounds',['../class_bitmap_image.html#a87dc89f9c4deb4b3eb3c0a2ccf2c48af',1,'BitmapImage::setCompositionModeBounds(BitmapImage *source, QPainter::CompositionMode cm)'],['../class_bitmap_image.html#a395a74673eda9e79713f723e0f991b53',1,'BitmapImage::setCompositionModeBounds(QRect sourceBounds, bool isSourceMinBounds, QPainter::CompositionMode cm)']]],
   ['setcoords',['setCoords',['https://doc.qt.io/qt-5/qrect.html#setCoords',1,'QRect::setCoords()'],['https://doc.qt.io/qt-5/qrectf.html#setCoords',1,'QRectF::setCoords()']]],
   ['setcreateprocessargumentsmodifier',['setCreateProcessArgumentsModifier',['https://doc.qt.io/qt-5/qprocess.html#setCreateProcessArgumentsModifier',1,'QProcess']]],
   ['setcurrent',['setCurrent',['https://doc.qt.io/qt-5/qdir.html#setCurrent',1,'QDir']]],
