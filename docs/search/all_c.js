@@ -30,6 +30,7 @@ var searchData=
   ['matchermethod',['MatcherMethod',['../struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method.html',1,'Catch::Matchers::Impl']]],
   ['matchermethod_3c_20argt_20_3e',['MatcherMethod&lt; ArgT &gt;',['../struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method.html',1,'Catch::Matchers::Impl']]],
   ['matchermethod_3c_20ptrt_20_2a_20_3e',['MatcherMethod&lt; PtrT * &gt;',['../struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method_3_01_ptr_t_01_5_01_4.html',1,'Catch::Matchers::Impl']]],
+  ['matchermethod_3c_20t_20_3e',['MatcherMethod&lt; T &gt;',['../struct_catch_1_1_matchers_1_1_impl_1_1_matcher_method.html',1,'Catch::Matchers::Impl']]],
   ['matcheruntypedbase',['MatcherUntypedBase',['../class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base.html',1,'Catch::Matchers::Impl']]],
   ['matches',['matches',['https://doc.qt.io/qt-5/qurl.html#matches',1,'QUrl']]],
   ['matchexpr',['MatchExpr',['../class_catch_1_1_match_expr.html',1,'Catch']]],
