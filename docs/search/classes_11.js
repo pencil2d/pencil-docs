@@ -20,6 +20,7 @@ var searchData=
   ['spinslider',['SpinSlider',['../class_spin_slider.html',1,'']]],
   ['startswithmatcher',['StartsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_starts_with_matcher.html',1,'Catch::Matchers::StdString']]],
   ['status',['Status',['../class_status.html',1,'']]],
+  ['storage',['Storage',['https://doc.qt.io/qt-5/qrandomgenerator-storage.html',1,'QRandomGenerator']]],
   ['streamendstop',['StreamEndStop',['../struct_catch_1_1_stream_end_stop.html',1,'Catch']]],
   ['stringmaker',['StringMaker',['../struct_catch_1_1_string_maker.html',1,'Catch']]],
   ['stringmaker_3c_20bool_20_3e',['StringMaker&lt; bool &gt;',['../struct_catch_1_1_string_maker_3_01bool_01_4.html',1,'Catch']]],
@@ -51,6 +52,7 @@ var searchData=
   ['stringmaker_3c_20wchar_5ft_20const_20_2a_20_3e',['StringMaker&lt; wchar_t const * &gt;',['../struct_catch_1_1_string_maker_3_01wchar__t_01const_01_5_01_4.html',1,'Catch']]],
   ['stringmatcherbase',['StringMatcherBase',['../struct_catch_1_1_matchers_1_1_std_string_1_1_string_matcher_base.html',1,'Catch::Matchers::StdString']]],
   ['stringref',['StringRef',['../class_catch_1_1_string_ref.html',1,'Catch']]],
+  ['stringresult',['StringResult',['https://doc.qt.io/qt-5/qcborstreamreader-stringresult.html',1,'QCborStreamReader']]],
   ['strokemanager',['StrokeManager',['../class_stroke_manager.html',1,'']]],
   ['stroketool',['StrokeTool',['../class_stroke_tool.html',1,'']]]
 ];
