@@ -69,6 +69,7 @@ var searchData=
   ['modelabouttobereset',['modelAboutToBeReset',['https://doc.qt.io/qt-5/qabstractitemmodel.html#modelAboutToBeReset',1,'QAbstractItemModel']]],
   ['modelchanged',['modelChanged',['https://doc.qt.io/qt-5/qitemselectionmodel.html#modelChanged',1,'QItemSelectionModel']]],
   ['modelreset',['modelReset',['https://doc.qt.io/qt-5/qabstractitemmodel.html#modelReset',1,'QAbstractItemModel']]],
+  ['modifiers',['modifiers',['../class_pointer_event.html#a75394e79d3964bf1584bd8756dbc487a',1,'PointerEvent']]],
   ['month',['month',['https://doc.qt.io/qt-5/qdate.html#month',1,'QDate']]],
   ['monthname',['monthName',['https://doc.qt.io/qt-5/qlocale.html#monthName',1,'QLocale']]],
   ['mountedvolumes',['mountedVolumes',['https://doc.qt.io/qt-5/qstorageinfo.html#mountedVolumes',1,'QStorageInfo']]],

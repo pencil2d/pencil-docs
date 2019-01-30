@@ -193,6 +193,7 @@ var searchData=
   ['issurrogate',['isSurrogate',['https://doc.qt.io/qt-5/qchar.html#isSurrogate',1,'QChar::isSurrogate() const const'],['https://doc.qt.io/qt-5/qchar.html#isSurrogate-1',1,'QChar::isSurrogate(uint ucs4)']]],
   ['issymbol',['isSymbol',['https://doc.qt.io/qt-5/qchar.html#isSymbol',1,'QChar::isSymbol() const const'],['https://doc.qt.io/qt-5/qchar.html#isSymbol-1',1,'QChar::isSymbol(uint ucs4)']]],
   ['issymlink',['isSymLink',['https://doc.qt.io/qt-5/qfileinfo.html#isSymLink',1,'QFileInfo']]],
+  ['istabletevent',['isTabletEvent',['../class_pointer_event.html#a9188181c107114b88484811952e4deb2',1,'PointerEvent']]],
   ['istag',['isTag',['https://doc.qt.io/qt-5/qcborvalue.html#isTag',1,'QCborValue::isTag()'],['https://doc.qt.io/qt-5/qcborstreamreader.html#isTag',1,'QCborStreamReader::isTag()']]],
   ['istestandsetnative',['isTestAndSetNative',['https://doc.qt.io/qt-5/qatomicinteger.html#isTestAndSetNative',1,'QAtomicInteger::isTestAndSetNative()'],['https://doc.qt.io/qt-5/qatomicpointer.html#isTestAndSetNative',1,'QAtomicPointer::isTestAndSetNative()']]],
   ['istestandsetwaitfree',['isTestAndSetWaitFree',['https://doc.qt.io/qt-5/qatomicinteger.html#isTestAndSetWaitFree',1,'QAtomicInteger::isTestAndSetWaitFree()'],['https://doc.qt.io/qt-5/qatomicpointer.html#isTestAndSetWaitFree',1,'QAtomicPointer::isTestAndSetWaitFree()']]],

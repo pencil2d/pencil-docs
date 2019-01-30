@@ -36,6 +36,8 @@ var searchData=
   ['buildcpuarchitecture',['buildCpuArchitecture',['https://doc.qt.io/qt-5/qsysinfo.html#buildCpuArchitecture',1,'QSysInfo']]],
   ['builddate',['buildDate',['https://doc.qt.io/qt-5/qlibraryinfo-obsolete.html#buildDate',1,'QLibraryInfo']]],
   ['bundlename',['bundleName',['https://doc.qt.io/qt-5/qfileinfo.html#bundleName',1,'QFileInfo']]],
+  ['button',['button',['../class_pointer_event.html#ad04f726876ee5bdae0fc0c9b939976f6',1,'PointerEvent']]],
+  ['buttons',['buttons',['../class_pointer_event.html#a0c842c91ca7e7c6ac5ce3cac8111b74a',1,'PointerEvent']]],
   ['byteorder',['byteOrder',['https://doc.qt.io/qt-5/qdatastream.html#byteOrder',1,'QDataStream']]],
   ['bytesavailable',['bytesAvailable',['https://doc.qt.io/qt-5/qiodevice.html#bytesAvailable',1,'QIODevice::bytesAvailable()'],['https://doc.qt.io/qt-5/qprocess.html#bytesAvailable',1,'QProcess::bytesAvailable()'],['https://doc.qt.io/qt-5/qstorageinfo.html#bytesAvailable',1,'QStorageInfo::bytesAvailable()']]],
   ['bytesfree',['bytesFree',['https://doc.qt.io/qt-5/qstorageinfo.html#bytesFree',1,'QStorageInfo']]],

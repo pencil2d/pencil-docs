@@ -5,6 +5,7 @@ var searchData=
   ['pentool',['PenTool',['../class_pen_tool.html',1,'']]],
   ['playbackmanager',['PlaybackManager',['../class_playback_manager.html',1,'']]],
   ['pluralise',['pluralise',['../struct_catch_1_1pluralise.html',1,'Catch']]],
+  ['pointerevent',['PointerEvent',['../class_pointer_event.html',1,'']]],
   ['polylinetool',['PolylineTool',['../class_polyline_tool.html',1,'']]],
   ['popupcolorpalettewidget',['PopupColorPaletteWidget',['../class_popup_color_palette_widget.html',1,'']]],
   ['predicatematcher',['PredicateMatcher',['../class_catch_1_1_matchers_1_1_generic_1_1_predicate_matcher.html',1,'Catch::Matchers::Generic']]],

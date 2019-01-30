@@ -13,6 +13,7 @@ var searchData=
   ['weekdays',['weekdays',['https://doc.qt.io/qt-5/qlocale.html#weekdays',1,'QLocale']]],
   ['weeknumber',['weekNumber',['https://doc.qt.io/qt-5/qdate.html#weekNumber',1,'QDate']]],
   ['wflags',['WFlags',['https://doc.qt.io/qt-5/qt-obsolete.html#WFlags-typedef',1,'Qt']]],
+  ['widgetpos',['widgetPos',['../class_pointer_event.html#aeec0f519b8bcd1005881d5802650cb80',1,'PointerEvent']]],
   ['width',['width',['https://doc.qt.io/qt-5/qitemselectionrange.html#width',1,'QItemSelectionRange::width()'],['https://doc.qt.io/qt-5/qsize.html#width',1,'QSize::width()'],['https://doc.qt.io/qt-5/qsizef.html#width',1,'QSizeF::width()'],['https://doc.qt.io/qt-5/qrect.html#width',1,'QRect::width()'],['https://doc.qt.io/qt-5/qrectf.html#width',1,'QRectF::width()']]],
   ['wildcardtoregularexpression',['wildcardToRegularExpression',['https://doc.qt.io/qt-5/qregularexpression.html#wildcardToRegularExpression',1,'QRegularExpression']]],
   ['windowflags',['WindowFlags',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
