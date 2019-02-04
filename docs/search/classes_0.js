@@ -7,6 +7,5 @@ var searchData=
   ['assertionhandler',['AssertionHandler',['../class_catch_1_1_assertion_handler.html',1,'Catch']]],
   ['assertioninfo',['AssertionInfo',['../struct_catch_1_1_assertion_info.html',1,'Catch']]],
   ['assertionreaction',['AssertionReaction',['../struct_catch_1_1_assertion_reaction.html',1,'Catch']]],
-  ['atomicbools',['AtomicBools',['https://doc.qt.io/qt-5/qloggingcategory-atomicbools.html',1,'QLoggingCategory']]],
   ['autoreg',['AutoReg',['../struct_catch_1_1_auto_reg.html',1,'Catch']]]
 ];

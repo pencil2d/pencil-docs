@@ -20,7 +20,6 @@ var searchData=
   ['spinslider',['SpinSlider',['../class_spin_slider.html',1,'']]],
   ['startswithmatcher',['StartsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_starts_with_matcher.html',1,'Catch::Matchers::StdString']]],
   ['status',['Status',['../class_status.html',1,'']]],
-  ['storage',['Storage',['https://doc.qt.io/qt-5/qrandomgenerator-storage.html',1,'QRandomGenerator']]],
   ['streamendstop',['StreamEndStop',['../struct_catch_1_1_stream_end_stop.html',1,'Catch']]],
   ['stringmaker',['StringMaker',['../struct_catch_1_1_string_maker.html',1,'Catch']]],
   ['stringmaker_3c_20bool_20_3e',['StringMaker&lt; bool &gt;',['../struct_catch_1_1_string_maker_3_01bool_01_4.html',1,'Catch']]],
