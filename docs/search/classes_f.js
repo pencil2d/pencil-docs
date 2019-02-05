@@ -246,6 +246,7 @@ var searchData=
   ['qvariantanimation',['QVariantAnimation',['https://doc.qt.io/qt-5/qvariantanimation.html',1,'']]],
   ['qvarlengtharray',['QVarLengthArray',['https://doc.qt.io/qt-5/qvarlengtharray.html',1,'']]],
   ['qvector',['QVector',['https://doc.qt.io/qt-5/qvector.html',1,'']]],
+  ['qvector_3c_20int_20_3e',['QVector&lt; int &gt;',['https://doc.qt.io/qt-5/qvector.html',1,'']]],
   ['qvectoriterator',['QVectorIterator',['https://doc.qt.io/qt-5/qvectoriterator.html',1,'']]],
   ['qversionnumber',['QVersionNumber',['https://doc.qt.io/qt-5/qversionnumber.html',1,'']]],
   ['qwaitcondition',['QWaitCondition',['https://doc.qt.io/qt-5/qwaitcondition.html',1,'']]],
