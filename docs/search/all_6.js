@@ -13,7 +13,7 @@ var searchData=
   ['generators',['Generators',['../struct_catch_1_1_generators_1_1_generators.html',1,'Catch::Generators']]],
   ['genericiconname',['genericIconName',['https://doc.qt.io/qt-5/qmimetype.html#genericIconName-prop',1,'QMimeType::genericIconName()'],['https://doc.qt.io/qt-5/qmimetype.html#genericIconName-prop',1,'QMimeType::genericIconName() const const']]],
   ['gestureflags',['GestureFlags',['https://doc.qt.io/qt-5/qt.html#GestureFlag-enum',1,'Qt']]],
-  ['get',['get',['https://doc.qt.io/qt-5/qscopedpointer.html#get',1,'QScopedPointer::get()'],['https://doc.qt.io/qt-5/qsharedpointer.html#get',1,'QSharedPointer::get()']]],
+  ['get',['get',['https://doc.qt.io/qt-5/qscopedpointer.html#get',1,'QScopedPointer::get()'],['https://doc.qt.io/qt-5/qsharedpointer.html#get',1,'QSharedPointer::get()'],['https://doc.qt.io/qt-5/qml-qtquick-xmllistmodel-xmllistmodel.html#get-method',1,'QtQuick.XmlListModel.XmlListModel::get()']]],
   ['getallvertices',['getAllVertices',['../class_vector_image.html#a77ea31d5a1e632555cd5ef1db72a2203',1,'VectorImage']]],
   ['getandremoveverticescloseto',['getAndRemoveVerticesCloseTo',['../class_vector_image.html#ab373191d1b5bd1a966e881a36eebeae2',1,'VectorImage::getAndRemoveVerticesCloseTo(QPointF thisPoint, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)'],['../class_vector_image.html#af0eac3619839a9b25817a5542cda63b1',1,'VectorImage::getAndRemoveVerticesCloseTo(VertexRef thisPointRef, qreal maxDistance, QList&lt; VertexRef &gt; *listOfPoints)']]],
   ['getc1',['getC1',['../class_vector_image.html#a6fe003db3fe7c3ad3ef2debc3dacd932',1,'VectorImage::getC1(int curveNumber, int vertexNumber)'],['../class_vector_image.html#a3c694a5ee39aca1fa9a6a17ec34e9b75',1,'VectorImage::getC1(VertexRef vertexRef)']]],

@@ -30,6 +30,8 @@ var searchData=
   ['updateinterval',['updateInterval',['https://doc.qt.io/qt-5/qtimeline.html#updateInterval-prop',1,'QTimeLine']]],
   ['updatestate',['updateState',['https://doc.qt.io/qt-5/qabstractanimation.html#updateState',1,'QAbstractAnimation::updateState()'],['https://doc.qt.io/qt-5/qparallelanimationgroup.html#updateState',1,'QParallelAnimationGroup::updateState()'],['https://doc.qt.io/qt-5/qvariantanimation.html#updateState',1,'QVariantAnimation::updateState()'],['https://doc.qt.io/qt-5/qpropertyanimation.html#updateState',1,'QPropertyAnimation::updateState()'],['https://doc.qt.io/qt-5/qsequentialanimationgroup.html#updateState',1,'QSequentialAnimationGroup::updateState()']]],
   ['upperbound',['upperBound',['https://doc.qt.io/qt-5/qmap.html#upperBound',1,'QMap::upperBound(const Key &amp;key)'],['https://doc.qt.io/qt-5/qmap.html#upperBound-1',1,'QMap::upperBound(const Key &amp;key) const const']]],
+  ['uppercasebase',['uppercasebase',['https://doc.qt.io/qt-5/qtextstream.html#uppercasebase',1,'QTextStream']]],
+  ['uppercasedigits',['uppercasedigits',['https://doc.qt.io/qt-5/qtextstream.html#uppercasedigits',1,'QTextStream']]],
   ['uri',['uri',['https://doc.qt.io/qt-5/qsourcelocation.html#uri',1,'QSourceLocation']]],
   ['uriresolver',['uriResolver',['https://doc.qt.io/qt-5/qxmlquery.html#uriResolver',1,'QXmlQuery::uriResolver()'],['https://doc.qt.io/qt-5/qxmlschema.html#uriResolver',1,'QXmlSchema::uriResolver()'],['https://doc.qt.io/qt-5/qxmlschemavalidator.html#uriResolver',1,'QXmlSchemaValidator::uriResolver()']]],
   ['url',['url',['https://doc.qt.io/qt-5/qurl.html#url',1,'QUrl']]],

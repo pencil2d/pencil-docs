@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['data',['Data',['https://doc.qt.io/qt-5/qvariant-private-data.html',1,'QVariant::Private']]],
   ['debugdetails',['DebugDetails',['../class_debug_details.html',1,'']]],
   ['decomposer',['Decomposer',['../struct_catch_1_1_decomposer.html',1,'Catch']]],
   ['displayoptionwidget',['DisplayOptionWidget',['../class_display_option_widget.html',1,'']]],

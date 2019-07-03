@@ -11,7 +11,6 @@ var searchData=
   ['matcheruntypedbase',['MatcherUntypedBase',['../class_catch_1_1_matchers_1_1_impl_1_1_matcher_untyped_base.html',1,'Catch::Matchers::Impl']]],
   ['matchexpr',['MatchExpr',['../class_catch_1_1_match_expr.html',1,'Catch']]],
   ['matchnotof',['MatchNotOf',['../struct_catch_1_1_matchers_1_1_impl_1_1_match_not_of.html',1,'Catch::Matchers::Impl']]],
-  ['memorylayout',['MemoryLayout',['https://doc.qt.io/qt-5/qlist-memorylayout.html',1,'QList']]],
   ['messagebuilder',['MessageBuilder',['../struct_catch_1_1_message_builder.html',1,'Catch']]],
   ['messageinfo',['MessageInfo',['../struct_catch_1_1_message_info.html',1,'Catch']]],
   ['messagestream',['MessageStream',['../struct_catch_1_1_message_stream.html',1,'Catch']]],

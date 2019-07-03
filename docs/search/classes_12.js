@@ -20,5 +20,6 @@ var searchData=
   ['toolmanager',['ToolManager',['../class_tool_manager.html',1,'']]],
   ['tooloptionwidget',['ToolOptionWidget',['../class_tool_option_widget.html',1,'']]],
   ['toolspage',['ToolsPage',['../class_tools_page.html',1,'']]],
-  ['totals',['Totals',['../struct_catch_1_1_totals.html',1,'Catch']]]
+  ['totals',['Totals',['../struct_catch_1_1_totals.html',1,'Catch']]],
+  ['transformparameters',['TransformParameters',['../struct_transform_parameters.html',1,'']]]
 ];
