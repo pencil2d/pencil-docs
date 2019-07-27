@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['pegbaralignmentdialog',['PegBarAlignmentDialog',['../class_peg_bar_alignment_dialog.html',1,'']]],
   ['pencilapplication',['PencilApplication',['../class_pencil_application.html',1,'']]],
   ['penciltool',['PencilTool',['../class_pencil_tool.html',1,'']]],
   ['pentool',['PenTool',['../class_pen_tool.html',1,'']]],
