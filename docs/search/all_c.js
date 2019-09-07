@@ -49,7 +49,7 @@ var searchData=
   ['merge',['merge',['https://doc.qt.io/qt-5/qitemselection.html#merge',1,'QItemSelection']]],
   ['message',['message',['https://doc.qt.io/qt-5/qabstractmessagehandler.html#message',1,'QAbstractMessageHandler']]],
   ['messagebuilder',['MessageBuilder',['../struct_catch_1_1_message_builder.html',1,'Catch']]],
-  ['messagehandler',['messageHandler',['https://doc.qt.io/qt-5/qxmlquery.html#messageHandler',1,'QXmlQuery::messageHandler()'],['https://doc.qt.io/qt-5/qxmlschemavalidator.html#messageHandler',1,'QXmlSchemaValidator::messageHandler()'],['https://doc.qt.io/qt-5/qxmlschema.html#messageHandler',1,'QXmlSchema::messageHandler()']]],
+  ['messagehandler',['messageHandler',['https://doc.qt.io/qt-5/qxmlschemavalidator.html#messageHandler',1,'QXmlSchemaValidator::messageHandler()'],['https://doc.qt.io/qt-5/qxmlschema.html#messageHandler',1,'QXmlSchema::messageHandler()'],['https://doc.qt.io/qt-5/qxmlquery.html#messageHandler',1,'QXmlQuery::messageHandler()']]],
   ['messageinfo',['MessageInfo',['../struct_catch_1_1_message_info.html',1,'Catch']]],
   ['messagestream',['MessageStream',['../struct_catch_1_1_message_stream.html',1,'Catch']]],
   ['metadata',['metaData',['https://doc.qt.io/qt-5/qstaticplugin.html#metaData',1,'QStaticPlugin::metaData()'],['https://doc.qt.io/qt-5/qpluginloader.html#metaData',1,'QPluginLoader::metaData()']]],

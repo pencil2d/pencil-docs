@@ -35,7 +35,7 @@ var searchData=
   ['uppercasebase',['uppercasebase',['https://doc.qt.io/qt-5/qtextstream.html#uppercasebase',1,'QTextStream']]],
   ['uppercasedigits',['uppercasedigits',['https://doc.qt.io/qt-5/qtextstream.html#uppercasedigits',1,'QTextStream']]],
   ['uri',['uri',['https://doc.qt.io/qt-5/qsourcelocation.html#uri',1,'QSourceLocation']]],
-  ['uriresolver',['uriResolver',['https://doc.qt.io/qt-5/qxmlquery.html#uriResolver',1,'QXmlQuery::uriResolver()'],['https://doc.qt.io/qt-5/qxmlschemavalidator.html#uriResolver',1,'QXmlSchemaValidator::uriResolver()'],['https://doc.qt.io/qt-5/qxmlschema.html#uriResolver',1,'QXmlSchema::uriResolver()']]],
+  ['uriresolver',['uriResolver',['https://doc.qt.io/qt-5/qxmlschemavalidator.html#uriResolver',1,'QXmlSchemaValidator::uriResolver()'],['https://doc.qt.io/qt-5/qxmlschema.html#uriResolver',1,'QXmlSchema::uriResolver()'],['https://doc.qt.io/qt-5/qxmlquery.html#uriResolver',1,'QXmlQuery::uriResolver()']]],
   ['url',['url',['https://doc.qt.io/qt-5/qurl.html#url',1,'QUrl']]],
   ['urls',['urls',['https://doc.qt.io/qt-5/qmimedata.html#urls',1,'QMimeData']]],
   ['userinfo',['userInfo',['https://doc.qt.io/qt-5/qurl.html#userInfo',1,'QUrl']]],
