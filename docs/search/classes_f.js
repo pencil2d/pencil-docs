@@ -144,6 +144,7 @@ var searchData=
   ['qlist_3c_20qlayoutitem_20_2a_20_3e',['QList&lt; QLayoutItem * &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20qpointf_20_3e',['QList&lt; QPointF &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20qreal_20_3e',['QList&lt; qreal &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
+  ['qlist_3c_20qstring_20_3e',['QList&lt; QString &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20vertexref_20_3e',['QList&lt; VertexRef &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlistdata',['QListData',['https://doc.qt.io/qt-5/qlistdata.html',1,'']]],
   ['qlistiterator',['QListIterator',['https://doc.qt.io/qt-5/qlistiterator.html',1,'']]],
