@@ -64,7 +64,6 @@ var searchData=
   ['allencodedqueryitemvalues',['allEncodedQueryItemValues',['https://doc.qt.io/qt-5/qurl-obsolete.html#allEncodedQueryItemValues',1,'QUrl']]],
   ['allkeys',['allKeys',['https://doc.qt.io/qt-5/qsettings.html#allKeys',1,'QSettings']]],
   ['allmimetypes',['allMimeTypes',['https://doc.qt.io/qt-5/qmimedatabase.html#allMimeTypes',1,'QMimeDatabase']]],
-  ['allocationoptions',['AllocationOptions',['https://doc.qt.io/qt-5/qarraydata.html#AllocationOption-enum',1,'QArrayData']]],
   ['allqueryitemvalues',['allQueryItemValues',['https://doc.qt.io/qt-5/qurl-obsolete.html#allQueryItemValues',1,'QUrl::allQueryItemValues()'],['https://doc.qt.io/qt-5/qurlquery.html#allQueryItemValues',1,'QUrlQuery::allQueryItemValues()']]],
   ['allselectors',['allSelectors',['https://doc.qt.io/qt-5/qfileselector.html#allSelectors',1,'QFileSelector']]],
   ['amplitude',['amplitude',['https://doc.qt.io/qt-5/qeasingcurve.html#amplitude',1,'QEasingCurve']]],

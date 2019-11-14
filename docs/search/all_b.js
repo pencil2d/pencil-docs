@@ -53,7 +53,7 @@ var searchData=
   ['longdayname',['longDayName',['https://doc.qt.io/qt-5/qdate-obsolete.html#longDayName',1,'QDate']]],
   ['longmonthname',['longMonthName',['https://doc.qt.io/qt-5/qdate-obsolete.html#longMonthName',1,'QDate']]],
   ['loopcount',['loopCount',['https://doc.qt.io/qt-5/qabstractanimation.html#loopCount-prop',1,'QAbstractAnimation::loopCount()'],['https://doc.qt.io/qt-5/qtimeline.html#loopCount-prop',1,'QTimeLine::loopCount()'],['https://doc.qt.io/qt-5/qabstractanimation.html#loopCount-prop',1,'QAbstractAnimation::loopCount()'],['https://doc.qt.io/qt-5/qtimeline.html#loopCount-prop',1,'QTimeLine::loopCount()']]],
-  ['looplevel',['loopLevel',['https://doc.qt.io/qt-5/qdeferreddeleteevent.html#loopLevel',1,'QDeferredDeleteEvent::loopLevel()'],['https://doc.qt.io/qt-5/qthread.html#loopLevel',1,'QThread::loopLevel()']]],
+  ['looplevel',['loopLevel',['https://doc.qt.io/qt-5/qthread.html#loopLevel',1,'QThread']]],
   ['lowerbound',['lowerBound',['https://doc.qt.io/qt-5/qmap.html#lowerBound',1,'QMap::lowerBound(const Key &amp;key)'],['https://doc.qt.io/qt-5/qmap.html#lowerBound-1',1,'QMap::lowerBound(const Key &amp;key) const const']]],
   ['lowercasebase',['lowercasebase',['https://doc.qt.io/qt-5/qtextstream.html#lowercasebase',1,'QTextStream']]],
   ['lowercasedigits',['lowercasedigits',['https://doc.qt.io/qt-5/qtextstream.html#lowercasedigits',1,'QTextStream']]],
