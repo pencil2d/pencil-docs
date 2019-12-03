@@ -4,6 +4,7 @@ var searchData=
   ['p2',['p2',['https://doc.qt.io/qt-5/qline.html#p2',1,'QLine::p2()'],['https://doc.qt.io/qt-5/qlinef.html#p2',1,'QLineF::p2()']]],
   ['padchar',['padChar',['https://doc.qt.io/qt-5/qtextstream.html#padChar',1,'QTextStream']]],
   ['paint',['paint',['https://doc.qt.io/qt-5/qgraphicssvgitem.html#paint',1,'QGraphicsSvgItem']]],
+  ['paintcurrentframe',['paintCurrentFrame',['../class_canvas_painter.html#ae2aa8eb8b057c7e792777340ea711405',1,'CanvasPainter']]],
   ['paintengine',['paintEngine',['https://doc.qt.io/qt-5/qsvggenerator.html#paintEngine',1,'QSvgGenerator']]],
   ['paintevent',['paintEvent',['https://doc.qt.io/qt-5/qsvgwidget.html#paintEvent',1,'QSvgWidget']]],
   ['paintimage',['paintImage',['../class_vector_image.html#a87fd953e506cecad346c4d5e069d6788',1,'VectorImage']]],
