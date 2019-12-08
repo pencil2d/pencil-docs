@@ -849,21 +849,21 @@ Generating docs for compound mz_zip_array...
 Generating docs for compound mz_zip_internal_state_tag...
 Generating docs for compound mz_zip_reader_extract_iter_state...
 Generating docs for compound mz_zip_writer_add_state...
-G/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1772: warning: argument 'QList' of command @param is not found in the argument list of VectorImage::fillContour(QList< QPointF > contourPath, int colour)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1772: warning: argument 'QPointF' of command @param is not found in the argument list of VectorImage::fillContour(QList< QPointF > contourPath, int colour)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1772: warning: argument 'int' of command @param is not found in the argument list of VectorImage::fillContour(QList< QPointF > contourPath, int colour)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1772: warning: The following parameters of VectorImage::fillContour(QList< QPointF > contourPath, int colour) are not documented:
+G/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1784: warning: argument 'QList' of command @param is not found in the argument list of VectorImage::fillContour(QList< QPointF > contourPath, int colour)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1784: warning: argument 'QPointF' of command @param is not found in the argument list of VectorImage::fillContour(QList< QPointF > contourPath, int colour)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1784: warning: argument 'int' of command @param is not found in the argument list of VectorImage::fillContour(QList< QPointF > contourPath, int colour)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1784: warning: The following parameters of VectorImage::fillContour(QList< QPointF > contourPath, int colour) are not documented:
   parameter 'contourPath'
   parameter 'colour'
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1732: warning: argument 'QPointF' of command @param is not found in the argument list of VectorImage::fillSelectedPath(int colour)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1732: warning: argument 'int' of command @param is not found in the argument list of VectorImage::fillSelectedPath(int colour)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1732: warning: The following parameters of VectorImage::fillSelectedPath(int colour) are not documented:
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1744: warning: argument 'QPointF' of command @param is not found in the argument list of VectorImage::fillSelectedPath(int colour)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1744: warning: argument 'int' of command @param is not found in the argument list of VectorImage::fillSelectedPath(int colour)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:1744: warning: The following parameters of VectorImage::fillSelectedPath(int colour) are not documented:
   parameter 'colour'
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2250: warning: argument 'QPointF' of command @param is not found in the argument list of VectorImage::removeArea(QPointF point)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2250: warning: The following parameters of VectorImage::removeArea(QPointF point) are not documented:
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2262: warning: argument 'QPointF' of command @param is not found in the argument list of VectorImage::removeArea(QPointF point)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2262: warning: The following parameters of VectorImage::removeArea(QPointF point) are not documented:
   parameter 'point'
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2265: warning: argument 'BezierArea' of command @param is not found in the argument list of VectorImage::removeAreaInCurve(int curve, int areaNumber)
-/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2265: warning: The following parameters of VectorImage::removeAreaInCurve(int curve, int areaNumber) are not documented:
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2277: warning: argument 'BezierArea' of command @param is not found in the argument list of VectorImage::removeAreaInCurve(int curve, int areaNumber)
+/home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:2277: warning: The following parameters of VectorImage::removeAreaInCurve(int curve, int areaNumber) are not documented:
   parameter 'curve'
   parameter 'areaNumber'
 /home/travis/build/chchwy/pencil2d/core_lib/src/graphics/vector/vectorimage.cpp:630: warning: argument 'yesOrNo' of command @param is not found in the argument list of VectorImage::setSelected(QList< int > curveList, bool YesOrNo)
@@ -1060,5 +1060,5 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-lookup cache used 11702/65536 hits=119586 misses=12097
+lookup cache used 11745/65536 hits=120057 misses=12141
 finished...
