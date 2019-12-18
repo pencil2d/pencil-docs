@@ -49,5 +49,6 @@ var searchData=
   ['globpatterns',['globPatterns',['https://doc.qt.io/qt-5/qmimetype.html#globPatterns-prop',1,'QMimeType::globPatterns()'],['https://doc.qt.io/qt-5/qmimetype.html#globPatterns-prop',1,'QMimeType::globPatterns() const const']]],
   ['group',['group',['https://doc.qt.io/qt-5/qabstractanimation.html#group',1,'QAbstractAnimation::group()'],['https://doc.qt.io/qt-5/qfileinfo.html#group',1,'QFileInfo::group()'],['https://doc.qt.io/qt-5/qsettings.html#group',1,'QSettings::group()']]],
   ['groupid',['groupId',['https://doc.qt.io/qt-5/qfileinfo.html#groupId',1,'QFileInfo']]],
-  ['groupseparator',['groupSeparator',['https://doc.qt.io/qt-5/qlocale.html#groupSeparator',1,'QLocale']]]
+  ['groupseparator',['groupSeparator',['https://doc.qt.io/qt-5/qlocale.html#groupSeparator',1,'QLocale']]],
+  ['grownby',['grownBy',['https://doc.qt.io/qt-5/qsize.html#grownBy',1,'QSize::grownBy()'],['https://doc.qt.io/qt-5/qsizef.html#grownBy',1,'QSizeF::grownBy()']]]
 ];

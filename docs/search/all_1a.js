@@ -2,6 +2,7 @@ var searchData=
 [
   ['_7econnection',['~Connection',['https://doc.qt.io/qt-5/qmetaobject-connection.html#dtor.Connection',1,'QMetaObject::Connection']]],
   ['_7econst_5fiterator',['~const_iterator',['https://doc.qt.io/qt-5/qsequentialiterable-const-iterator.html#dtor.const_iterator',1,'QSequentialIterable::const_iterator::~const_iterator()'],['https://doc.qt.io/qt-5/qassociativeiterable-const-iterator.html#dtor.const_iterator',1,'QAssociativeIterable::const_iterator::~const_iterator()']]],
+  ['_7econverterstate',['~ConverterState',['https://doc.qt.io/qt-5/qtextcodec-converterstate.html#dtor.ConverterState',1,'QTextCodec::ConverterState']]],
   ['_7eflowlayout',['~FlowLayout',['../class_flow_layout.html#a5c16fe6974ca77e1d2f55dab01b233a6',1,'FlowLayout']]],
   ['_7eqabstractanimation',['~QAbstractAnimation',['https://doc.qt.io/qt-5/qabstractanimation.html#dtor.QAbstractAnimation',1,'QAbstractAnimation']]],
   ['_7eqabstracteventdispatcher',['~QAbstractEventDispatcher',['https://doc.qt.io/qt-5/qabstracteventdispatcher.html#dtor.QAbstractEventDispatcher',1,'QAbstractEventDispatcher']]],
@@ -90,6 +91,7 @@ var searchData=
   ['_7eqpropertyanimation',['~QPropertyAnimation',['https://doc.qt.io/qt-5/qpropertyanimation.html#dtor.QPropertyAnimation',1,'QPropertyAnimation']]],
   ['_7eqreadlocker',['~QReadLocker',['https://doc.qt.io/qt-5/qreadlocker.html#dtor.QReadLocker',1,'QReadLocker']]],
   ['_7eqreadwritelock',['~QReadWriteLock',['https://doc.qt.io/qt-5/qreadwritelock.html#dtor.QReadWriteLock',1,'QReadWriteLock']]],
+  ['_7eqrecursivemutex',['~QRecursiveMutex',['https://doc.qt.io/qt-5/qrecursivemutex.html#dtor.QRecursiveMutex',1,'QRecursiveMutex']]],
   ['_7eqregexp',['~QRegExp',['https://doc.qt.io/qt-5/qregexp.html#dtor.QRegExp',1,'QRegExp']]],
   ['_7eqregularexpression',['~QRegularExpression',['https://doc.qt.io/qt-5/qregularexpression.html#dtor.QRegularExpression',1,'QRegularExpression']]],
   ['_7eqregularexpressionmatch',['~QRegularExpressionMatch',['https://doc.qt.io/qt-5/qregularexpressionmatch.html#dtor.QRegularExpressionMatch',1,'QRegularExpressionMatch']]],
