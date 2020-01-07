@@ -15,6 +15,7 @@ var searchData=
   ['predicatematcher',['PredicateMatcher',['../class_catch_1_1_matchers_1_1_generic_1_1_predicate_matcher.html',1,'Catch::Matchers::Generic']]],
   ['preferencemanager',['PreferenceManager',['../class_preference_manager.html',1,'']]],
   ['preferencesdialog',['PreferencesDialog',['../class_preferences_dialog.html',1,'']]],
+  ['presetdialog',['PresetDialog',['../class_preset_dialog.html',1,'']]],
   ['previewcanvas',['PreviewCanvas',['../class_preview_canvas.html',1,'']]],
   ['previewwidget',['PreviewWidget',['../class_preview_widget.html',1,'']]],
   ['progressbarcontrol',['ProgressBarControl',['../class_double_progress_dialog_1_1_progress_bar_control.html',1,'DoubleProgressDialog']]],
