@@ -13,7 +13,7 @@ var searchData=
   ['vasprintf',['vasprintf',['https://doc.qt.io/qt-5/qstring.html#vasprintf',1,'QString']]],
   ['verbosity',['verbosity',['https://doc.qt.io/qt-5/qdebug.html#verbosity',1,'QDebug::verbosity(int verbosityLevel)'],['https://doc.qt.io/qt-5/qdebug.html#verbosity-1',1,'QDebug::verbosity() const const']]],
   ['version',['version',['https://doc.qt.io/qt-5/quuid.html#version',1,'QUuid::version()'],['https://doc.qt.io/qt-5/qdatastream.html#version',1,'QDataStream::version()'],['https://doc.qt.io/qt-5/qlibraryinfo.html#version',1,'QLibraryInfo::version()']]],
-  ['viewbox',['viewBox',['https://doc.qt.io/qt-5/qsvgrenderer.html#viewBox',1,'QSvgRenderer::viewBox()'],['https://doc.qt.io/qt-5/qsvggenerator.html#viewBox',1,'QSvgGenerator::viewBox()']]],
-  ['viewboxf',['viewBoxF',['https://doc.qt.io/qt-5/qsvgrenderer.html#viewBox-prop',1,'QSvgRenderer::viewBoxF()'],['https://doc.qt.io/qt-5/qsvggenerator.html#viewBox-prop',1,'QSvgGenerator::viewBoxF()']]],
+  ['viewbox',['viewBox',['https://doc.qt.io/qt-5/qsvggenerator.html#viewBox',1,'QSvgGenerator::viewBox()'],['https://doc.qt.io/qt-5/qsvgrenderer.html#viewBox',1,'QSvgRenderer::viewBox()']]],
+  ['viewboxf',['viewBoxF',['https://doc.qt.io/qt-5/qsvggenerator.html#viewBox-prop',1,'QSvgGenerator::viewBoxF()'],['https://doc.qt.io/qt-5/qsvgrenderer.html#viewBox-prop',1,'QSvgRenderer::viewBoxF()']]],
   ['vsprintf',['vsprintf',['https://doc.qt.io/qt-5/qstring-obsolete.html#vsprintf',1,'QString']]]
 ];
