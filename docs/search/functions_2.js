@@ -2,6 +2,7 @@ var searchData=
 [
   ['c',['c',['https://doc.qt.io/qt-5/qlocale.html#c',1,'QLocale']]],
   ['caching',['caching',['https://doc.qt.io/qt-5/qfileinfo.html#caching',1,'QFileInfo']]],
+  ['calculaterelativeopacityforlayer',['calculateRelativeOpacityForLayer',['../class_canvas_painter.html#afcb8520dbf4f80d2cb5f3ab9e6b33d14',1,'CanvasPainter']]],
   ['calculateselectionrect',['calculateSelectionRect',['../class_vector_image.html#a59f677bcef135d1f964b5c0827f32c88',1,'VectorImage']]],
   ['callontimeout',['callOnTimeout',['https://doc.qt.io/qt-5/qtimer.html#callOnTimeout',1,'QTimer::callOnTimeout(Functor slot, Qt::ConnectionType connectionType)'],['https://doc.qt.io/qt-5/qtimer.html#callOnTimeout-1',1,'QTimer::callOnTimeout(const QObject *context, Functor slot, Qt::ConnectionType connectionType)'],['https://doc.qt.io/qt-5/qtimer.html#callOnTimeout-2',1,'QTimer::callOnTimeout(const QObject *receiver, MemberFunction *slot, Qt::ConnectionType connectionType)']]],
   ['cancel',['cancel',['https://doc.qt.io/qt-5/qfuture.html#cancel',1,'QFuture::cancel()'],['https://doc.qt.io/qt-5/qfuturewatcher.html#cancel',1,'QFutureWatcher::cancel()'],['https://doc.qt.io/qt-5/qsemaphorereleaser.html#cancel',1,'QSemaphoreReleaser::cancel()'],['https://doc.qt.io/qt-5/qthreadpool-obsolete.html#cancel',1,'QThreadPool::cancel()']]],

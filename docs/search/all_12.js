@@ -183,6 +183,7 @@ var searchData=
   ['setkey',['setKey',['https://doc.qt.io/qt-5/qmessageauthenticationcode.html#setKey',1,'QMessageAuthenticationCode::setKey()'],['https://doc.qt.io/qt-5/qsharedmemory.html#setKey',1,'QSharedMemory::setKey()'],['https://doc.qt.io/qt-5/qsystemsemaphore.html#setKey',1,'QSystemSemaphore::setKey()']]],
   ['setkeyvalueat',['setKeyValueAt',['https://doc.qt.io/qt-5/qvariantanimation.html#setKeyValueAt',1,'QVariantAnimation']]],
   ['setkeyvalues',['setKeyValues',['https://doc.qt.io/qt-5/qvariantanimation.html#setKeyValues',1,'QVariantAnimation']]],
+  ['setlayervisibility',['setLayerVisibility',['../class_editor.html#acc028d1a85307682f933690c560fd6f1',1,'Editor']]],
   ['setleft',['setLeft',['https://doc.qt.io/qt-5/qmargins.html#setLeft',1,'QMargins::setLeft()'],['https://doc.qt.io/qt-5/qmarginsf.html#setLeft',1,'QMarginsF::setLeft()'],['https://doc.qt.io/qt-5/qrect.html#setLeft',1,'QRect::setLeft()'],['https://doc.qt.io/qt-5/qrectf.html#setLeft',1,'QRectF::setLeft()']]],
   ['setlength',['setLength',['https://doc.qt.io/qt-5/qlinef.html#setLength',1,'QLineF']]],
   ['setlibrarypaths',['setLibraryPaths',['https://doc.qt.io/qt-5/qcoreapplication.html#setLibraryPaths',1,'QCoreApplication']]],

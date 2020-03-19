@@ -100,6 +100,7 @@ var searchData=
   ['qgregoriancalendar',['QGregorianCalendar',['https://doc.qt.io/qt-5/qgregoriancalendar.html',1,'']]],
   ['qhash',['QHash',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20int_2c_20bool_20_3e',['QHash&lt; int, bool &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
+  ['qhash_3c_20int_2c_20float_20_3e',['QHash&lt; int, float &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20int_2c_20int_20_3e',['QHash&lt; int, int &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20int_2c_20qstring_20_3e',['QHash&lt; int, QString &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20toolpropertytype_2c_20bool_20_3e',['QHash&lt; ToolPropertyType, bool &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
