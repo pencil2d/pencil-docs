@@ -61,7 +61,7 @@ var searchData=
   ['isabsolute',['isAbsolute',['https://doc.qt.io/qt-5/qfileinfo.html#isAbsolute',1,'QFileInfo::isAbsolute()'],['https://doc.qt.io/qt-5/qdir.html#isAbsolute',1,'QDir::isAbsolute()']]],
   ['isabsolutepath',['isAbsolutePath',['https://doc.qt.io/qt-5/qdir.html#isAbsolutePath',1,'QDir']]],
   ['isaccepted',['isAccepted',['https://doc.qt.io/qt-5/qevent.html#accepted-prop',1,'QEvent']]],
-  ['isactive',['isActive',['https://doc.qt.io/qt-5/qbasictimer.html#isActive',1,'QBasicTimer::isActive()'],['https://doc.qt.io/qt-5/qtimer.html#isActive',1,'QTimer::isActive()']]],
+  ['isactive',['isActive',['https://doc.qt.io/qt-5/qbasictimer.html#isActive',1,'QBasicTimer::isActive()'],['https://doc.qt.io/qt-5/qtimer.html#isActive',1,'QTimer::isActive()'],['../class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6',1,'BaseTool::isActive()'],['../class_hand_tool.html#a74f48dc141ef29686edf79f80bd01ddc',1,'HandTool::isActive()'],['../class_polyline_tool.html#ad58ef25c9d93a1b6e8067fa56d82d0fd',1,'PolylineTool::isActive()']]],
   ['isanimated',['isAnimated',['https://doc.qt.io/qt-5/qstatemachine.html#isAnimated',1,'QStateMachine']]],
   ['isanycurveselected',['isAnyCurveSelected',['../class_vector_image.html#ae62ed331515d5593692dfd42f8195c56',1,'VectorImage']]],
   ['isanyoftype',['isAnyOfType',['https://doc.qt.io/qt-5/qoperatingsystemversion.html#isAnyOfType',1,'QOperatingSystemVersion']]],
