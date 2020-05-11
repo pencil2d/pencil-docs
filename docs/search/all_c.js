@@ -114,6 +114,7 @@ var searchData=
   ['movetopright',['moveTopRight',['https://doc.qt.io/qt-5/qrect.html#moveTopRight',1,'QRect::moveTopRight()'],['https://doc.qt.io/qt-5/qrectf.html#moveTopRight',1,'QRectF::moveTopRight()']]],
   ['movetothread',['moveToThread',['https://doc.qt.io/qt-5/qobject.html#moveToThread',1,'QObject']]],
   ['movieexporter',['MovieExporter',['../class_movie_exporter.html',1,'']]],
+  ['movieimporter',['MovieImporter',['../class_movie_importer.html',1,'']]],
   ['msec',['msec',['https://doc.qt.io/qt-5/qtime.html#msec',1,'QTime']]],
   ['msecssincereference',['msecsSinceReference',['https://doc.qt.io/qt-5/qelapsedtimer.html#msecsSinceReference',1,'QElapsedTimer']]],
   ['msecssincestartofday',['msecsSinceStartOfDay',['https://doc.qt.io/qt-5/qtime.html#msecsSinceStartOfDay',1,'QTime']]],
