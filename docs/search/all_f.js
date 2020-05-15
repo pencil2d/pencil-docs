@@ -37,7 +37,7 @@ var searchData=
   ['percent',['percent',['https://doc.qt.io/qt-5/qlocale.html#percent',1,'QLocale']]],
   ['period',['period',['https://doc.qt.io/qt-5/qeasingcurve.html#period',1,'QEasingCurve']]],
   ['permission',['permission',['https://doc.qt.io/qt-5/qfileinfo.html#permission',1,'QFileInfo']]],
-  ['permissions',['permissions',['https://doc.qt.io/qt-5/qfile.html#permissions',1,'QFile::permissions() const const override'],['https://doc.qt.io/qt-5/qfile.html#permissions-1',1,'QFile::permissions(const QString &amp;fileName)'],['https://doc.qt.io/qt-5/qfiledevice.html#permissions',1,'QFileDevice::permissions()'],['https://doc.qt.io/qt-5/qfileinfo.html#permissions',1,'QFileInfo::permissions()'],['https://doc.qt.io/qt-5/qfiledevice.html#Permission-enum',1,'QFileDevice::Permissions()']]],
+  ['permissions',['Permissions',['https://doc.qt.io/qt-5/qfiledevice.html#Permission-enum',1,'QFileDevice::Permissions()'],['https://doc.qt.io/qt-5/qfile.html#permissions',1,'QFile::permissions() const const override'],['https://doc.qt.io/qt-5/qfile.html#permissions-1',1,'QFile::permissions(const QString &amp;fileName)'],['https://doc.qt.io/qt-5/qfiledevice.html#permissions',1,'QFileDevice::permissions()'],['https://doc.qt.io/qt-5/qfileinfo.html#permissions',1,'QFileInfo::permissions()']]],
   ['persistentindexlist',['persistentIndexList',['https://doc.qt.io/qt-5/qabstractitemmodel.html#persistentIndexList',1,'QAbstractItemModel']]],
   ['pid',['pid',['https://doc.qt.io/qt-5/qprocess-obsolete.html#pid',1,'QProcess']]],
   ['playbackmanager',['PlaybackManager',['../class_playback_manager.html',1,'']]],
