@@ -1,8 +1,22 @@
 var searchData=
 [
-  ['key_5ftype',['key_type',['https://doc.qt.io/qt-5/qcbormap.html#key_type-typedef',1,'QCborMap::key_type()'],['https://doc.qt.io/qt-5/qhash.html#key_type-typedef',1,'QHash::key_type()'],['https://doc.qt.io/qt-5/qjsonobject.html#key_type-typedef',1,'QJsonObject::key_type()'],['https://doc.qt.io/qt-5/qmap.html#key_type-typedef',1,'QMap::key_type()'],['https://doc.qt.io/qt-5/qset.html#key_type-typedef',1,'QSet::key_type()']]],
-  ['key_5fvalue_5fiterator',['key_value_iterator',['https://doc.qt.io/qt-5/qhash.html#key_value_iterator-typedef',1,'QHash::key_value_iterator()'],['https://doc.qt.io/qt-5/qmap.html#key_value_iterator-typedef',1,'QMap::key_value_iterator()']]],
-  ['keyboardmodifiers',['KeyboardModifiers',['https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum',1,'Qt']]],
-  ['keyvalue',['KeyValue',['https://doc.qt.io/qt-5/qvariantanimation.html#KeyValue-typedef',1,'QVariantAnimation']]],
-  ['keyvalues',['KeyValues',['https://doc.qt.io/qt-5/qvariantanimation.html#KeyValues-typedef',1,'QVariantAnimation']]]
+  ['jalali',['Jalali',['https://doc.qt.io/qt-5/qcalendar.html#System-enum',1,'QCalendar']]],
+  ['jamaica',['Jamaica',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
+  ['jamoscript',['JamoScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
+  ['japan',['Japan',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
+  ['japanese',['Japanese',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
+  ['japanesescript',['JapaneseScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
+  ['javanese',['Javanese',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
+  ['javanesescript',['JavaneseScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
+  ['jersey',['Jersey',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
+  ['jju',['Jju',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
+  ['joining_5fcausing',['Joining_Causing',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
+  ['joining_5fdual',['Joining_Dual',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
+  ['joining_5fleft',['Joining_Left',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
+  ['joining_5fnone',['Joining_None',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
+  ['joining_5fright',['Joining_Right',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
+  ['joining_5ftransparent',['Joining_Transparent',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
+  ['jolafonyi',['JolaFonyi',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
+  ['jordan',['Jordan',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
+  ['julian',['Julian',['https://doc.qt.io/qt-5/qcalendar.html#System-enum',1,'QCalendar']]]
 ];

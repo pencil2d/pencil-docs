@@ -8,6 +8,7 @@ var searchData=
   ['animated',['animated',['https://doc.qt.io/qt-5/qstatemachine.html#animated-prop',1,'QStateMachine']]],
   ['applicationname',['applicationName',['https://doc.qt.io/qt-5/qcoreapplication.html#applicationName-prop',1,'QCoreApplication']]],
   ['applicationversion',['applicationVersion',['https://doc.qt.io/qt-5/qcoreapplication.html#applicationVersion-prop',1,'QCoreApplication']]],
+  ['aspectratiomode',['aspectRatioMode',['https://doc.qt.io/qt-5/qsvgrenderer.html#aspectRatioMode-prop',1,'QSvgRenderer']]],
   ['autoformatting',['autoFormatting',['https://doc.qt.io/qt-5/qxmlstreamwriter.html#autoFormatting-prop',1,'QXmlStreamWriter']]],
   ['autoformattingindent',['autoFormattingIndent',['https://doc.qt.io/qt-5/qxmlstreamwriter.html#autoFormattingIndent-prop',1,'QXmlStreamWriter']]]
 ];

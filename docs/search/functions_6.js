@@ -18,6 +18,7 @@ var searchData=
   ['getcolournumber',['getColourNumber',['../class_vector_image.html#af88e5c6c475db507be0369cdcdd33bd7',1,'VectorImage']]],
   ['getcoords',['getCoords',['https://doc.qt.io/qt-5/qrect.html#getCoords',1,'QRect::getCoords()'],['https://doc.qt.io/qt-5/qrectf.html#getCoords',1,'QRectF::getCoords()']]],
   ['getcurvescloseto',['getCurvesCloseTo',['../class_vector_image.html#aebfcbc2524dc8a02451a31b282f41f45',1,'VectorImage']]],
+  ['getcurvescolor',['getCurvesColor',['../class_vector_image.html#ab8a130891de9d32a8e32863923d3ef61',1,'VectorImage']]],
   ['getcurvesize',['getCurveSize',['../class_vector_image.html#af58e44290b046f828acac513006d9978',1,'VectorImage']]],
   ['getcurvevertices',['getCurveVertices',['../class_vector_image.html#a3136642276cf8e9b9061d1306f2129b6',1,'VectorImage']]],
   ['getdate',['getDate',['https://doc.qt.io/qt-5/qdate.html#getDate',1,'QDate']]],
