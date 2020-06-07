@@ -142,7 +142,7 @@ var searchData=
   ['qlist_3c_20bezierarea_20_3e',['QList&lt; BezierArea &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20beziercurve_20_3e',['QList&lt; BezierCurve &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20bool_20_3e',['QList&lt; bool &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
-  ['qlist_3c_20colourref_20_3e',['QList&lt; ColourRef &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
+  ['qlist_3c_20colorref_20_3e',['QList&lt; ColorRef &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20float_20_3e',['QList&lt; float &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20int_20_3e',['QList&lt; int &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],
   ['qlist_3c_20layer_20_2a_20_3e',['QList&lt; Layer * &gt;',['https://doc.qt.io/qt-5/qlist.html',1,'']]],

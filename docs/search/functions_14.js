@@ -42,7 +42,7 @@ var searchData=
   ['username',['userName',['https://doc.qt.io/qt-5/qurl.html#userName',1,'QUrl']]],
   ['userproperty',['userProperty',['https://doc.qt.io/qt-5/qmetaobject.html#userProperty',1,'QMetaObject']]],
   ['usertype',['userType',['https://doc.qt.io/qt-5/qmetaproperty.html#userType',1,'QMetaProperty::userType()'],['https://doc.qt.io/qt-5/qvariant.html#userType',1,'QVariant::userType()']]],
-  ['usescolour',['usesColour',['../class_vector_image.html#a60dce13db73c83396f2fbde8dd5429ff',1,'VectorImage']]],
+  ['usescolor',['usesColor',['../class_vector_image.html#a63f1eacc396ce8fd9648aa00abdc5797',1,'VectorImage']]],
   ['usleep',['usleep',['https://doc.qt.io/qt-5/qthread.html#usleep',1,'QThread']]],
   ['utc',['utc',['https://doc.qt.io/qt-5/qtimezone.html#utc',1,'QTimeZone']]],
   ['utf16',['utf16',['https://doc.qt.io/qt-5/qstring.html#utf16',1,'QString::utf16()'],['https://doc.qt.io/qt-5/qstringview.html#utf16',1,'QStringView::utf16()']]]

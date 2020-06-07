@@ -67,7 +67,7 @@ var searchData=
   ['removearea',['removeArea',['../class_vector_image.html#a3137d04e76c3408b2bce48d7ad449d2c',1,'VectorImage']]],
   ['removeareaincurve',['removeAreaInCurve',['../class_vector_image.html#a5e6a967364b20aec045efd8548a26d12',1,'VectorImage']]],
   ['removeat',['removeAt',['https://doc.qt.io/qt-5/qcborarray.html#removeAt',1,'QCborArray::removeAt()'],['https://doc.qt.io/qt-5/qjsonarray.html#removeAt',1,'QJsonArray::removeAt()'],['https://doc.qt.io/qt-5/qlist.html#removeAt',1,'QList::removeAt()'],['https://doc.qt.io/qt-5/qvector.html#removeAt',1,'QVector::removeAt()']]],
-  ['removecolour',['removeColour',['../class_vector_image.html#a2af7de421c2fbe8384399ba78d96dc3c',1,'VectorImage']]],
+  ['removecolor',['removeColor',['../class_vector_image.html#a7ebb8fdd62179e9a225a20bd54f8b614',1,'VectorImage']]],
   ['removecolumn',['removeColumn',['https://doc.qt.io/qt-5/qabstractitemmodel.html#removeColumn',1,'QAbstractItemModel']]],
   ['removecolumns',['removeColumns',['https://doc.qt.io/qt-5/qabstractitemmodel.html#removeColumns',1,'QAbstractItemModel::removeColumns()'],['https://doc.qt.io/qt-5/qidentityproxymodel.html#removeColumns',1,'QIdentityProxyModel::removeColumns()'],['https://doc.qt.io/qt-5/qsortfilterproxymodel.html#removeColumns',1,'QSortFilterProxyModel::removeColumns()'],['https://doc.qt.io/qt-5/qtransposeproxymodel.html#removeColumns',1,'QTransposeProxyModel::removeColumns()']]],
   ['removecurveat',['removeCurveAt',['../class_vector_image.html#a497115ba5de110d61cc459dfdce8cd5a',1,'VectorImage']]],

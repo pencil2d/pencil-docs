@@ -11,7 +11,6 @@ var searchData=
   ['selecttool',['SelectTool',['../class_select_tool.html',1,'']]],
   ['shortcutfilter',['ShortcutFilter',['../class_shortcut_filter.html',1,'']]],
   ['shortcutspage',['ShortcutsPage',['../class_shortcuts_page.html',1,'']]],
-  ['signalblocker',['SignalBlocker',['../class_signal_blocker.html',1,'']]],
   ['signalevent',['SignalEvent',['https://doc.qt.io/qt-5/qstatemachine-signalevent.html',1,'QStateMachine']]],
   ['singlevaluegenerator',['SingleValueGenerator',['../class_catch_1_1_generators_1_1_single_value_generator.html',1,'Catch::Generators']]],
   ['smudgetool',['SmudgeTool',['../class_smudge_tool.html',1,'']]],
