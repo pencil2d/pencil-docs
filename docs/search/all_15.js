@@ -15,7 +15,7 @@ var searchData=
   ['valuetokeys',['valueToKeys',['https://doc.qt.io/qt-5/qmetaenum.html#valueToKeys',1,'QMetaEnum']]],
   ['vanuatu',['Vanuatu',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['varangkshitiscript',['VarangKshitiScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
-  ['variant',['variant',['https://doc.qt.io/qt-5/quuid.html#variant',1,'QUuid::variant() const const'],['https://doc.qt.io/qt-5/quuid.html#Variant-enum',1,'QUuid::Variant()']]],
+  ['variant',['Variant',['https://doc.qt.io/qt-5/quuid.html#Variant-enum',1,'QUuid::Variant()'],['https://doc.qt.io/qt-5/quuid.html#variant',1,'QUuid::variant() const const']]],
   ['varunknown',['VarUnknown',['https://doc.qt.io/qt-5/quuid.html#Variant-enum',1,'QUuid']]],
   ['vasprintf',['vasprintf',['https://doc.qt.io/qt-5/qstring.html#vasprintf',1,'QString']]],
   ['vaticancitystate',['VaticanCityState',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
