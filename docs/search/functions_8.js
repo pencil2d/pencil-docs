@@ -84,6 +84,7 @@ var searchData=
   ['isconstant',['isConstant',['https://doc.qt.io/qt-5/qmetaproperty.html#isConstant',1,'QMetaProperty']]],
   ['iscontainer',['isContainer',['https://doc.qt.io/qt-5/qcborstreamreader.html#isContainer',1,'QCborStreamReader::isContainer()'],['https://doc.qt.io/qt-5/qcborvalue.html#isContainer',1,'QCborValue::isContainer()']]],
   ['iscriticalenabled',['isCriticalEnabled',['https://doc.qt.io/qt-5/qloggingcategory.html#isCriticalEnabled',1,'QLoggingCategory']]],
+  ['iscurveinvisible',['isCurveInvisible',['../class_vector_image.html#a6f8937a7290e9607f05526bf7fa5f83d',1,'VectorImage']]],
   ['isdatetime',['isDateTime',['https://doc.qt.io/qt-5/qcborvalue.html#isDateTime',1,'QCborValue']]],
   ['isdatevalid',['isDateValid',['https://doc.qt.io/qt-5/qcalendar.html#isDateValid',1,'QCalendar']]],
   ['isdaylighttime',['isDaylightTime',['https://doc.qt.io/qt-5/qdatetime.html#isDaylightTime',1,'QDateTime::isDaylightTime()'],['https://doc.qt.io/qt-5/qtimezone.html#isDaylightTime',1,'QTimeZone::isDaylightTime()']]],
