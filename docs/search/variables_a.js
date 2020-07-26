@@ -156,7 +156,7 @@ var searchData=
   ['key_5fdead_5fsmall_5fschwa',['Key_Dead_Small_Schwa',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fstroke',['Key_Dead_Stroke',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5ftilde',['Key_Dead_Tilde',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
-  ['key_5fdead_5fu',['Key_Dead_u',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_u()'],['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_U()']]],
+  ['key_5fdead_5fu',['Key_Dead_U',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_U()'],['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_u()']]],
   ['key_5fdead_5fvoiced_5fsound',['Key_Dead_Voiced_Sound',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdegree',['Key_degree',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdelete',['Key_Delete',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
