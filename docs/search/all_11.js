@@ -47,7 +47,7 @@ var searchData=
   ['readyread',['readyRead',['https://doc.qt.io/qt-5/qiodevice.html#readyRead',1,'QIODevice']]],
   ['readyreadstandarderror',['readyReadStandardError',['https://doc.qt.io/qt-5/qprocess.html#readyReadStandardError',1,'QProcess']]],
   ['readyreadstandardoutput',['readyReadStandardOutput',['https://doc.qt.io/qt-5/qprocess.html#readyReadStandardOutput',1,'QProcess']]],
-  ['realnumbernotation',['RealNumberNotation',['https://doc.qt.io/qt-5/qtextstream.html#RealNumberNotation-enum',1,'QTextStream::RealNumberNotation()'],['https://doc.qt.io/qt-5/qtextstream.html#realNumberNotation',1,'QTextStream::realNumberNotation() const const']]],
+  ['realnumbernotation',['realNumberNotation',['https://doc.qt.io/qt-5/qtextstream.html#realNumberNotation',1,'QTextStream::realNumberNotation() const const'],['https://doc.qt.io/qt-5/qtextstream.html#RealNumberNotation-enum',1,'QTextStream::RealNumberNotation()']]],
   ['realnumberprecision',['realNumberPrecision',['https://doc.qt.io/qt-5/qtextstream.html#realNumberPrecision',1,'QTextStream']]],
   ['realsha3_5f224',['RealSha3_224',['https://doc.qt.io/qt-5/qcryptographichash.html#Algorithm-enum',1,'QCryptographicHash']]],
   ['realsha3_5f256',['RealSha3_256',['https://doc.qt.io/qt-5/qcryptographichash.html#Algorithm-enum',1,'QCryptographicHash']]],
