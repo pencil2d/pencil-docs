@@ -166,7 +166,7 @@ var searchData=
   ['previoussibling',['PreviousSibling',['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html#SimpleAxis-enum',1,'QAbstractXmlNodeModel']]],
   ['previoustransition',['previousTransition',['https://doc.qt.io/qt-5/qtimezone.html#previousTransition',1,'QTimeZone']]],
   ['primaryorientation',['PrimaryOrientation',['https://doc.qt.io/qt-5/qt.html#ScreenOrientation-enum',1,'Qt']]],
-  ['priority',['Priority',['https://doc.qt.io/qt-5/qthread.html#Priority-enum',1,'QThread::Priority()'],['https://doc.qt.io/qt-5/qthread.html#priority',1,'QThread::priority() const const']]],
+  ['priority',['priority',['https://doc.qt.io/qt-5/qthread.html#priority',1,'QThread::priority() const const'],['https://doc.qt.io/qt-5/qthread.html#Priority-enum',1,'QThread::Priority()']]],
   ['private',['Private',['https://doc.qt.io/qt-5/qmetamethod.html#Access-enum',1,'QMetaMethod']]],
   ['process',['process',['https://doc.qt.io/qt-5/qcommandlineparser.html#process',1,'QCommandLineParser::process(const QStringList &amp;arguments)'],['https://doc.qt.io/qt-5/qcommandlineparser.html#process-1',1,'QCommandLineParser::process(const QCoreApplication &amp;app)']]],
   ['processchannel',['ProcessChannel',['https://doc.qt.io/qt-5/qprocess.html#ProcessChannel-enum',1,'QProcess']]],

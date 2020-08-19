@@ -251,7 +251,7 @@ var searchData=
   ['run',['run',['https://doc.qt.io/qt-5/qrunnable.html#run',1,'QRunnable::run()'],['https://doc.qt.io/qt-5/qthread.html#run',1,'QThread::run()'],['../class_movie_exporter.html#a086ba54d4615420bde8a5a8886c40d5b',1,'MovieExporter::run()'],['../class_movie_importer.html#a9a9e53e119ed296f8c6ae440acf5a22d',1,'MovieImporter::run()']]],
   ['rundi',['Rundi',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['runicscript',['RunicScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
-  ['running',['running',['https://doc.qt.io/qt-5/qstatemachine.html#running-prop',1,'QStateMachine::running()'],['https://doc.qt.io/qt-5/qabstractanimation.html#State-enum',1,'QAbstractAnimation::Running()'],['https://doc.qt.io/qt-5/qprocess.html#ProcessState-enum',1,'QProcess::Running()'],['https://doc.qt.io/qt-5/qtimeline.html#State-enum',1,'QTimeLine::Running()']]],
+  ['running',['Running',['https://doc.qt.io/qt-5/qabstractanimation.html#State-enum',1,'QAbstractAnimation::Running()'],['https://doc.qt.io/qt-5/qprocess.html#ProcessState-enum',1,'QProcess::Running()'],['https://doc.qt.io/qt-5/qtimeline.html#State-enum',1,'QTimeLine::Running()'],['https://doc.qt.io/qt-5/qstatemachine.html#running-prop',1,'QStateMachine::running()']]],
   ['runningchanged',['runningChanged',['https://doc.qt.io/qt-5/qstatemachine.html#runningChanged',1,'QStateMachine']]],
   ['runtimelocation',['RuntimeLocation',['https://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum',1,'QStandardPaths']]],
   ['russia',['Russia',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],

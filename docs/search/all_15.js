@@ -29,7 +29,7 @@ var searchData=
   ['verbosity',['verbosity',['https://doc.qt.io/qt-5/qdebug.html#verbosity',1,'QDebug::verbosity(int verbosityLevel)'],['https://doc.qt.io/qt-5/qdebug.html#verbosity-1',1,'QDebug::verbosity() const const']]],
   ['verbositylevel',['VerbosityLevel',['https://doc.qt.io/qt-5/qdebug.html#VerbosityLevel-enum',1,'QDebug']]],
   ['verpattern',['VerPattern',['https://doc.qt.io/qt-5/qt.html#BrushStyle-enum',1,'Qt']]],
-  ['version',['Version',['https://doc.qt.io/qt-5/qdatastream.html#Version-enum',1,'QDataStream::Version()'],['https://doc.qt.io/qt-5/quuid.html#Version-enum',1,'QUuid::Version()'],['https://doc.qt.io/qt-5/qdatastream.html#version',1,'QDataStream::version()'],['https://doc.qt.io/qt-5/qlibraryinfo.html#version',1,'QLibraryInfo::version()'],['https://doc.qt.io/qt-5/quuid.html#version',1,'QUuid::version()']]],
+  ['version',['version',['https://doc.qt.io/qt-5/qdatastream.html#version',1,'QDataStream::version()'],['https://doc.qt.io/qt-5/qlibraryinfo.html#version',1,'QLibraryInfo::version()'],['https://doc.qt.io/qt-5/quuid.html#version',1,'QUuid::version()'],['https://doc.qt.io/qt-5/qdatastream.html#Version-enum',1,'QDataStream::Version()'],['https://doc.qt.io/qt-5/quuid.html#Version-enum',1,'QUuid::Version()']]],
   ['vertexref',['VertexRef',['../class_vertex_ref.html',1,'']]],
   ['vertical',['Vertical',['https://doc.qt.io/qt-5/qchar.html#Decomposition-enum',1,'QChar::Vertical()'],['https://doc.qt.io/qt-5/qt.html#Orientation-enum',1,'Qt::Vertical()']]],
   ['verticalsorthint',['VerticalSortHint',['https://doc.qt.io/qt-5/qabstractitemmodel.html#LayoutChangeHint-enum',1,'QAbstractItemModel']]],
