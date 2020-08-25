@@ -825,6 +825,9 @@ Generating docs for compou/home/travis/build/chchwy/pencil2d/core_lib/src/canvas
 /home/travis/build/chchwy/pencil2d/core_lib/src/canvaspainter.h:91: warning: The following parameters of CanvasPainter::initializePainter(QPainter &painter, QPixmap &pixmap) are not documented:
   parameter 'painter'
   parameter 'pixmap'
+/home/travis/build/chchwy/pencil2d/core_lib/src/structure/filemanager.cpp:799: warning: Unsupported xml/html tag <layer> found
+/home/travis/build/chchwy/pencil2d/core_lib/src/structure/filemanager.cpp:800: warning: Unsupported xml/html tag <image> found
+/home/travis/build/chchwy/pencil2d/core_lib/src/structure/filemanager.cpp:801: warning: Unsupported xml/html tag </layer> found
 /home/travis/build/chchwy/pencil2d/core_lib/src/movieimporter.h:34: warning: The following parameters of MovieImporter::run(const QString &filePath, int fps, FileType type, std::function< void(int)> progress, std::function< void(QString)> progressMessage, std::function< bool()> askPermission) are not documented:
   parameter 'filePath'
   parameter 'fps'
@@ -1099,5 +1102,5 @@ Generating file index...
 Generating file member index...
 Generating example index...
 finalizing index lists...
-lookup cache used 12855/65536 hits=131923 misses=13296
+lookup cache used 12917/65536 hits=132594 misses=13357
 finished...

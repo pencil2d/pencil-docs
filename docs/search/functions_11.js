@@ -34,6 +34,8 @@ var searchData=
   ['realnumbernotation',['realNumberNotation',['https://doc.qt.io/qt-5/qtextstream.html#realNumberNotation',1,'QTextStream']]],
   ['realnumberprecision',['realNumberPrecision',['https://doc.qt.io/qt-5/qtextstream.html#realNumberPrecision',1,'QTextStream']]],
   ['reblock',['reblock',['https://doc.qt.io/qt-5/qsignalblocker.html#reblock',1,'QSignalBlocker']]],
+  ['rebuildlayerxmltag',['rebuildLayerXmlTag',['../class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f',1,'FileManager']]],
+  ['rebuildmainxml',['rebuildMainXML',['../class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d',1,'FileManager']]],
   ['receivers',['receivers',['https://doc.qt.io/qt-5/qobject.html#receivers',1,'QObject']]],
   ['recursivefilteringenabledchanged',['recursiveFilteringEnabledChanged',['https://doc.qt.io/qt-5/qsortfilterproxymodel.html#recursiveFilteringEnabledChanged',1,'QSortFilterProxyModel']]],
   ['ref',['ref',['https://doc.qt.io/qt-5/qatomicinteger.html#ref',1,'QAtomicInteger']]],

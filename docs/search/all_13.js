@@ -213,7 +213,7 @@ var searchData=
   ['tokelaucountry',['TokelauCountry',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['tokelaulanguage',['TokelauLanguage',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['tokenstring',['tokenString',['https://doc.qt.io/qt-5/qxmlstreamreader.html#tokenString',1,'QXmlStreamReader']]],
-  ['tokentype',['tokenType',['https://doc.qt.io/qt-5/qxmlstreamreader.html#tokenType',1,'QXmlStreamReader::tokenType() const const'],['https://doc.qt.io/qt-5/qxmlstreamreader.html#TokenType-enum',1,'QXmlStreamReader::TokenType()']]],
+  ['tokentype',['TokenType',['https://doc.qt.io/qt-5/qxmlstreamreader.html#TokenType-enum',1,'QXmlStreamReader::TokenType()'],['https://doc.qt.io/qt-5/qxmlstreamreader.html#tokenType',1,'QXmlStreamReader::tokenType() const const']]],
   ['tokpisin',['TokPisin',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['tolatin1',['toLatin1',['https://doc.qt.io/qt-5/qchar.html#toLatin1',1,'QChar::toLatin1()'],['https://doc.qt.io/qt-5/qlatin1char.html#toLatin1',1,'QLatin1Char::toLatin1()'],['https://doc.qt.io/qt-5/qstring.html#toLatin1',1,'QString::toLatin1()'],['https://doc.qt.io/qt-5/qstringref.html#toLatin1',1,'QStringRef::toLatin1()'],['https://doc.qt.io/qt-5/qstringview.html#toLatin1',1,'QStringView::toLatin1()']]],
   ['tolerantmode',['TolerantMode',['https://doc.qt.io/qt-5/qurl.html#ParsingMode-enum',1,'QUrl']]],
