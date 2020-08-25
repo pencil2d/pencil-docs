@@ -5,7 +5,7 @@ var searchData=
   ['padchar',['padChar',['https://doc.qt.io/qt-5/qtextstream.html#padChar',1,'QTextStream']]],
   ['pahawhhmongscript',['PahawhHmongScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['pahlavi',['Pahlavi',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
-  ['paint',['paint',['https://doc.qt.io/qt-5/qgraphicssvgitem.html#paint',1,'QGraphicsSvgItem::paint()'],['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Paint()']]],
+  ['paint',['Paint',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Paint()'],['https://doc.qt.io/qt-5/qgraphicssvgitem.html#paint',1,'QGraphicsSvgItem::paint()']]],
   ['paintcurrentframe',['paintCurrentFrame',['../class_canvas_painter.html#ae2aa8eb8b057c7e792777340ea711405',1,'CanvasPainter']]],
   ['paintengine',['paintEngine',['https://doc.qt.io/qt-5/qsvggenerator.html#paintEngine',1,'QSvgGenerator']]],
   ['paintevent',['paintEvent',['https://doc.qt.io/qt-5/qsvgwidget.html#paintEvent',1,'QSvgWidget']]],
