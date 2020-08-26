@@ -505,7 +505,7 @@ var searchData=
   ['query',['query',['https://doc.qt.io/qt-5/qurl.html#query',1,'QUrl::query()'],['https://doc.qt.io/qt-5/qurlquery.html#query',1,'QUrlQuery::query()']]],
   ['queryitems',['queryItems',['https://doc.qt.io/qt-5/qurl-obsolete.html#queryItems',1,'QUrl::queryItems()'],['https://doc.qt.io/qt-5/qurlquery.html#queryItems',1,'QUrlQuery::queryItems()']]],
   ['queryitemvalue',['queryItemValue',['https://doc.qt.io/qt-5/qurl-obsolete.html#queryItemValue',1,'QUrl::queryItemValue()'],['https://doc.qt.io/qt-5/qurlquery.html#queryItemValue',1,'QUrlQuery::queryItemValue()']]],
-  ['querylanguage',['QueryLanguage',['https://doc.qt.io/qt-5/qxmlquery.html#QueryLanguage-enum',1,'QXmlQuery::QueryLanguage()'],['https://doc.qt.io/qt-5/qxmlquery.html#queryLanguage',1,'QXmlQuery::queryLanguage() const const']]],
+  ['querylanguage',['queryLanguage',['https://doc.qt.io/qt-5/qxmlquery.html#queryLanguage',1,'QXmlQuery::queryLanguage() const const'],['https://doc.qt.io/qt-5/qxmlquery.html#QueryLanguage-enum',1,'QXmlQuery::QueryLanguage()']]],
   ['querypairdelimiter',['queryPairDelimiter',['https://doc.qt.io/qt-5/qurlquery.html#queryPairDelimiter',1,'QUrlQuery']]],
   ['queryvaluedelimiter',['queryValueDelimiter',['https://doc.qt.io/qt-5/qurlquery.html#queryValueDelimiter',1,'QUrlQuery']]],
   ['querywhatsthis',['QueryWhatsThis',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
