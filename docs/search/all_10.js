@@ -511,7 +511,7 @@ var searchData=
   ['querywhatsthis',['QueryWhatsThis',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['queuedconnection',['QueuedConnection',['https://doc.qt.io/qt-5/qt.html#ConnectionType-enum',1,'Qt']]],
   ['quicksizecursor',['quickSizeCursor',['../class_base_tool.html#ab119a5b829fa57e106e50171f77511d2',1,'BaseTool']]],
-  ['quit',['Quit',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Quit()'],['https://doc.qt.io/qt-5/qcoreapplication.html#quit',1,'QCoreApplication::quit()'],['https://doc.qt.io/qt-5/qeventloop.html#quit',1,'QEventLoop::quit()'],['https://doc.qt.io/qt-5/qthread.html#quit',1,'QThread::quit()']]],
+  ['quit',['quit',['https://doc.qt.io/qt-5/qcoreapplication.html#quit',1,'QCoreApplication::quit()'],['https://doc.qt.io/qt-5/qeventloop.html#quit',1,'QEventLoop::quit()'],['https://doc.qt.io/qt-5/qthread.html#quit',1,'QThread::quit()'],['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Quit()']]],
   ['quitlockenabled',['quitLockEnabled',['https://doc.qt.io/qt-5/qcoreapplication.html#quitLockEnabled-prop',1,'QCoreApplication']]],
   ['quncompress',['qUncompress',['https://doc.qt.io/qt-5/qbytearray.html#qUncompress',1,'QByteArray::qUncompress(const QByteArray &amp;data)'],['https://doc.qt.io/qt-5/qbytearray.html#qUncompress-1',1,'QByteArray::qUncompress(const uchar *data, int nbytes)']]],
   ['qunhandledexception',['QUnhandledException',['https://doc.qt.io/qt-5/qunhandledexception.html',1,'']]],
