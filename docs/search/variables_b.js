@@ -63,7 +63,7 @@ var searchData=
   ['lineara',['LinearA',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['linearascript',['LinearAScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['linearbscript',['LinearBScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
-  ['linearcurve',['LinearCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
+  ['linearcurve',['LinearCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
   ['lineargradientpattern',['LinearGradientPattern',['https://doc.qt.io/qt-5/qt.html#BrushStyle-enum',1,'Qt']]],
   ['linef',['LineF',['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant']]],
   ['linefeed',['LineFeed',['https://doc.qt.io/qt-5/qchar.html#SpecialCharacter-enum',1,'QChar']]],

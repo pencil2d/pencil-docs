@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['easeincurve',['EaseInCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
-  ['easeinoutcurve',['EaseInOutCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
-  ['easeoutcurve',['EaseOutCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
+  ['easeincurve',['EaseInCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
+  ['easeinoutcurve',['EaseInOutCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
+  ['easeoutcurve',['EaseOutCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
   ['easingcurve',['easingCurve',['https://doc.qt.io/qt-5/qtimeline.html#easingCurve-prop',1,'QTimeLine::easingCurve()'],['https://doc.qt.io/qt-5/qvariantanimation.html#easingCurve-prop',1,'QVariantAnimation::easingCurve()'],['https://doc.qt.io/qt-5/qtimeline.html#easingCurve-prop',1,'QTimeLine::easingCurve()'],['https://doc.qt.io/qt-5/qvariantanimation.html#easingCurve-prop',1,'QVariantAnimation::easingCurve()'],['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant::EasingCurve()']]],
   ['easingfunction',['EasingFunction',['https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef',1,'QEasingCurve']]],
   ['easterncham',['EasternCham',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
@@ -60,7 +60,7 @@ var searchData=
   ['endian',['Endian',['https://doc.qt.io/qt-5/qsysinfo.html#Endian-enum',1,'QSysInfo']]],
   ['endinsertcolumns',['endInsertColumns',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endInsertColumns',1,'QAbstractItemModel']]],
   ['endinsertrows',['endInsertRows',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endInsertRows',1,'QAbstractItemModel']]],
-  ['endl',['endl',['https://doc.qt.io/qt-5/qtextstream-obsolete.html#endl',1,'QTextStream::endl()'],['https://doc.qt.io/qt-5/qt.html#endl',1,'Qt::endl()']]],
+  ['endl',['endl',['https://doc.qt.io/qt-5/qt.html#endl',1,'Qt']]],
   ['endmap',['endMap',['https://doc.qt.io/qt-5/qcborstreamwriter.html#endMap',1,'QCborStreamWriter']]],
   ['endmovecolumns',['endMoveColumns',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endMoveColumns',1,'QAbstractItemModel']]],
   ['endmoverows',['endMoveRows',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endMoveRows',1,'QAbstractItemModel']]],

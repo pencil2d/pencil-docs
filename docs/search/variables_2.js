@@ -111,7 +111,7 @@ var searchData=
   ['copyerror',['CopyError',['https://doc.qt.io/qt-5/qfiledevice.html#FileError-enum',1,'QFileDevice']]],
   ['cornish',['Cornish',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['corsican',['Corsican',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
-  ['cosinecurve',['CosineCurve',['https://doc.qt.io/qt-5/qeasingcurve.html#Type-enum',1,'QEasingCurve::CosineCurve()'],['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine::CosineCurve()']]],
+  ['cosinecurve',['CosineCurve',['https://doc.qt.io/qt-5/qeasingcurve.html#Type-enum',1,'QEasingCurve::CosineCurve()'],['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine::CosineCurve()']]],
   ['costarica',['CostaRica',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['coverwindow',['CoverWindow',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
   ['crashed',['Crashed',['https://doc.qt.io/qt-5/qprocess.html#ProcessError-enum',1,'QProcess']]],

@@ -262,7 +262,7 @@ var searchData=
   ['simplifiedchinesescript',['SimplifiedChineseScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['simplifiedhanscript',['SimplifiedHanScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['sindhi',['Sindhi',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
-  ['sinecurve',['SineCurve',['https://doc.qt.io/qt-5/qeasingcurve.html#Type-enum',1,'QEasingCurve::SineCurve()'],['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine::SineCurve()']]],
+  ['sinecurve',['SineCurve',['https://doc.qt.io/qt-5/qeasingcurve.html#Type-enum',1,'QEasingCurve::SineCurve()'],['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine::SineCurve()']]],
   ['singapore',['Singapore',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['singleprecision',['SinglePrecision',['https://doc.qt.io/qt-5/qdatastream.html#FloatingPointPrecision-enum',1,'QDataStream']]],
   ['sinhala',['Sinhala',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],

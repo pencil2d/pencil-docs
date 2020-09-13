@@ -26,7 +26,7 @@ var searchData=
   ['endgroup',['endGroup',['https://doc.qt.io/qt-5/qsettings.html#endGroup',1,'QSettings']]],
   ['endinsertcolumns',['endInsertColumns',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endInsertColumns',1,'QAbstractItemModel']]],
   ['endinsertrows',['endInsertRows',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endInsertRows',1,'QAbstractItemModel']]],
-  ['endl',['endl',['https://doc.qt.io/qt-5/qtextstream-obsolete.html#endl',1,'QTextStream::endl()'],['https://doc.qt.io/qt-5/qt.html#endl',1,'Qt::endl()']]],
+  ['endl',['endl',['https://doc.qt.io/qt-5/qt.html#endl',1,'Qt']]],
   ['endmap',['endMap',['https://doc.qt.io/qt-5/qcborstreamwriter.html#endMap',1,'QCborStreamWriter']]],
   ['endmovecolumns',['endMoveColumns',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endMoveColumns',1,'QAbstractItemModel']]],
   ['endmoverows',['endMoveRows',['https://doc.qt.io/qt-5/qabstractitemmodel.html#endMoveRows',1,'QAbstractItemModel']]],

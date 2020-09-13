@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['easeincurve',['EaseInCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
-  ['easeinoutcurve',['EaseInOutCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
-  ['easeoutcurve',['EaseOutCurve',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]],
+  ['easeincurve',['EaseInCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
+  ['easeinoutcurve',['EaseInOutCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
+  ['easeoutcurve',['EaseOutCurve',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]],
   ['easingcurve',['EasingCurve',['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant']]],
   ['easingfunction',['EasingFunction',['https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef',1,'QEasingCurve']]],
   ['easterncham',['EasternCham',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],

@@ -21,5 +21,5 @@ var searchData=
   ['currencysymbolformat',['CurrencySymbolFormat',['https://doc.qt.io/qt-5/qlocale.html#CurrencySymbolFormat-enum',1,'QLocale']]],
   ['cursormovestyle',['CursorMoveStyle',['https://doc.qt.io/qt-5/qt.html#CursorMoveStyle-enum',1,'Qt']]],
   ['cursorshape',['CursorShape',['https://doc.qt.io/qt-5/qt.html#CursorShape-enum',1,'Qt']]],
-  ['curveshape',['CurveShape',['https://doc.qt.io/qt-5/qtimeline.html#CurveShape-enum',1,'QTimeLine']]]
+  ['curveshape',['CurveShape',['https://doc.qt.io/qt-5/qtimeline-obsolete.html#CurveShape-enum',1,'QTimeLine']]]
 ];
