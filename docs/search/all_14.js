@@ -130,7 +130,7 @@ var searchData=
   ['userproperty',['userProperty',['https://doc.qt.io/qt-5/qmetaobject.html#userProperty',1,'QMetaObject']]],
   ['userrole',['UserRole',['https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum',1,'Qt']]],
   ['userscope',['UserScope',['https://doc.qt.io/qt-5/qsettings.html#Scope-enum',1,'QSettings']]],
-  ['usertype',['userType',['https://doc.qt.io/qt-5/qmetaproperty.html#userType',1,'QMetaProperty::userType()'],['https://doc.qt.io/qt-5/qvariant.html#userType',1,'QVariant::userType() const const'],['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant::UserType()']]],
+  ['usertype',['UserType',['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant::UserType()'],['https://doc.qt.io/qt-5/qmetaproperty.html#userType',1,'QMetaProperty::userType()'],['https://doc.qt.io/qt-5/qvariant.html#userType',1,'QVariant::userType()']]],
   ['usescolor',['usesColor',['../class_vector_image.html#a63f1eacc396ce8fd9648aa00abdc5797',1,'VectorImage']]],
   ['useunicodepropertiesoption',['UseUnicodePropertiesOption',['https://doc.qt.io/qt-5/qregularexpression.html#PatternOption-enum',1,'QRegularExpression']]],
   ['ushort',['UShort',['https://doc.qt.io/qt-5/qmetatype.html#Type-enum',1,'QMetaType']]],
