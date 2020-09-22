@@ -161,6 +161,7 @@ var searchData=
   ['qlockfile',['QLockFile',['https://doc.qt.io/qt-5/qlockfile.html',1,'']]],
   ['qloggingcategory',['QLoggingCategory',['https://doc.qt.io/qt-5/qloggingcategory.html',1,'']]],
   ['qmap',['QMap',['https://doc.qt.io/qt-5/qmap.html',1,'']]],
+  ['qmap_3c_20unsigned_20int_2c_20qpixmapcache_3a_3akey_20_3e',['QMap&lt; unsigned int, QPixmapCache::Key &gt;',['https://doc.qt.io/qt-5/qmap.html',1,'']]],
   ['qmapdata',['QMapData',['https://doc.qt.io/qt-5/qmapdata.html',1,'']]],
   ['qmapdatabase',['QMapDataBase',['https://doc.qt.io/qt-5/qmapdatabase.html',1,'']]],
   ['qmapiterator',['QMapIterator',['https://doc.qt.io/qt-5/qmapiterator.html',1,'']]],

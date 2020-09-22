@@ -249,7 +249,7 @@ var searchData=
   ['mousemove',['MouseMove',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['mousetrackingchange',['MouseTrackingChange',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['movabletype',['MovableType',['https://doc.qt.io/qt-5/qmetatype.html#TypeFlag-enum',1,'QMetaType']]],
-  ['move',['move',['https://doc.qt.io/qt-5/qlist.html#move',1,'QList::move()'],['https://doc.qt.io/qt-5/qvector.html#move',1,'QVector::move()'],['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Move()']]],
+  ['move',['Move',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Move()'],['https://doc.qt.io/qt-5/qlist.html#move',1,'QList::move()'],['https://doc.qt.io/qt-5/qvector.html#move',1,'QVector::move()']]],
   ['moveaction',['MoveAction',['https://doc.qt.io/qt-5/qt.html#DropAction-enum',1,'Qt']]],
   ['movebottom',['moveBottom',['https://doc.qt.io/qt-5/qrect.html#moveBottom',1,'QRect::moveBottom()'],['https://doc.qt.io/qt-5/qrectf.html#moveBottom',1,'QRectF::moveBottom()']]],
   ['movebottomleft',['moveBottomLeft',['https://doc.qt.io/qt-5/qrect.html#moveBottomLeft',1,'QRect::moveBottomLeft()'],['https://doc.qt.io/qt-5/qrectf.html#moveBottomLeft',1,'QRectF::moveBottomLeft()']]],

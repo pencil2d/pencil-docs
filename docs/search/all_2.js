@@ -146,7 +146,7 @@ var searchData=
   ['clipboard',['Clipboard',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['clipoperation',['ClipOperation',['https://doc.qt.io/qt-5/qt.html#ClipOperation-enum',1,'Qt']]],
   ['clippertonisland',['ClippertonIsland',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
-  ['clocktype',['ClockType',['https://doc.qt.io/qt-5/qelapsedtimer.html#ClockType-enum',1,'QElapsedTimer::ClockType()'],['https://doc.qt.io/qt-5/qelapsedtimer.html#clockType',1,'QElapsedTimer::clockType()']]],
+  ['clocktype',['clockType',['https://doc.qt.io/qt-5/qelapsedtimer.html#clockType',1,'QElapsedTimer::clockType()'],['https://doc.qt.io/qt-5/qelapsedtimer.html#ClockType-enum',1,'QElapsedTimer::ClockType()']]],
   ['clone',['clone',['https://doc.qt.io/qt-5/qexception.html#clone',1,'QException::clone()'],['https://doc.qt.io/qt-5/qexplicitlyshareddatapointer.html#clone',1,'QExplicitlySharedDataPointer::clone()'],['https://doc.qt.io/qt-5/qshareddatapointer.html#clone',1,'QSharedDataPointer::clone()']]],
   ['close',['Close',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Close()'],['https://doc.qt.io/qt-5/qbuffer.html#close',1,'QBuffer::close()'],['https://doc.qt.io/qt-5/qfiledevice.html#close',1,'QFileDevice::close()'],['https://doc.qt.io/qt-5/qiodevice.html#close',1,'QIODevice::close()'],['https://doc.qt.io/qt-5/qprocess.html#close',1,'QProcess::close()']]],
   ['closedhandcursor',['ClosedHandCursor',['https://doc.qt.io/qt-5/qt.html#CursorShape-enum',1,'Qt']]],
