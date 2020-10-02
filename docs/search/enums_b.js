@@ -3,8 +3,17 @@ var searchData=
   ['language',['Language',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['layoutchangehint',['LayoutChangeHint',['https://doc.qt.io/qt-5/qabstractitemmodel.html#LayoutChangeHint-enum',1,'QAbstractItemModel']]],
   ['layoutdirection',['LayoutDirection',['https://doc.qt.io/qt-5/qt.html#LayoutDirection-enum',1,'Qt']]],
+  ['layoutflag',['LayoutFlag',['https://doc.qt.io/qt-5/qrawfont.html#LayoutFlag-enum',1,'QRawFont']]],
+  ['layoutmode',['LayoutMode',['https://doc.qt.io/qt-5/qlistview.html#LayoutMode-enum',1,'QListView']]],
   ['librarylocation',['LibraryLocation',['https://doc.qt.io/qt-5/qlibraryinfo.html#LibraryLocation-enum',1,'QLibraryInfo']]],
+  ['lineheighttypes',['LineHeightTypes',['https://doc.qt.io/qt-5/qtextblockformat.html#LineHeightTypes-enum',1,'QTextBlockFormat']]],
+  ['linewrapmode',['LineWrapMode',['https://doc.qt.io/qt-5/qplaintextedit.html#LineWrapMode-enum',1,'QPlainTextEdit::LineWrapMode()'],['https://doc.qt.io/qt-5/qtextedit.html#LineWrapMode-enum',1,'QTextEdit::LineWrapMode()']]],
+  ['loadcontrol',['LoadControl',['https://doc.qt.io/qt-5/qnetworkrequest.html#LoadControl-enum',1,'QNetworkRequest']]],
   ['loadhint',['LoadHint',['https://doc.qt.io/qt-5/qlibrary.html#LoadHint-enum',1,'QLibrary']]],
+  ['localsocketerror',['LocalSocketError',['https://doc.qt.io/qt-5/qlocalsocket.html#LocalSocketError-enum',1,'QLocalSocket']]],
+  ['localsocketstate',['LocalSocketState',['https://doc.qt.io/qt-5/qlocalsocket.html#LocalSocketState-enum',1,'QLocalSocket']]],
   ['locateoption',['LocateOption',['https://doc.qt.io/qt-5/qstandardpaths.html#LocateOption-enum',1,'QStandardPaths']]],
-  ['lockerror',['LockError',['https://doc.qt.io/qt-5/qlockfile.html#LockError-enum',1,'QLockFile']]]
+  ['lockerror',['LockError',['https://doc.qt.io/qt-5/qlockfile.html#LockError-enum',1,'QLockFile']]],
+  ['logelementtype',['LogElementType',['https://doc.qt.io/qt-5/qtest.html#LogElementType-enum',1,'QTest']]],
+  ['loggingmode',['LoggingMode',['https://doc.qt.io/qt-5/qopengldebuglogger.html#LoggingMode-enum',1,'QOpenGLDebugLogger']]]
 ];

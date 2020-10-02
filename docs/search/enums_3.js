@@ -6,9 +6,20 @@ var searchData=
   ['dayofweek',['DayOfWeek',['https://doc.qt.io/qt-5/qt.html#DayOfWeek-enum',1,'Qt']]],
   ['decomposition',['Decomposition',['https://doc.qt.io/qt-5/qchar.html#Decomposition-enum',1,'QChar']]],
   ['deletionpolicy',['DeletionPolicy',['https://doc.qt.io/qt-5/qabstractanimation.html#DeletionPolicy-enum',1,'QAbstractAnimation']]],
+  ['depthstencilmode',['DepthStencilMode',['https://doc.qt.io/qt-5/qopengltexture.html#DepthStencilMode-enum',1,'QOpenGLTexture']]],
+  ['devicetype',['DeviceType',['https://doc.qt.io/qt-5/qtouchdevice.html#DeviceType-enum',1,'QTouchDevice']]],
   ['diagnosticnotationoption',['DiagnosticNotationOption',['https://doc.qt.io/qt-5/qcborvalue.html#DiagnosticNotationOption-enum',1,'QCborValue']]],
-  ['direction',['Direction',['https://doc.qt.io/qt-5/qabstractanimation.html#Direction-enum',1,'QAbstractAnimation::Direction()'],['https://doc.qt.io/qt-5/qchar.html#Direction-enum',1,'QChar::Direction()'],['https://doc.qt.io/qt-5/qtimeline.html#Direction-enum',1,'QTimeLine::Direction()']]],
+  ['dialogcode',['DialogCode',['https://doc.qt.io/qt-5/qdialog.html#DialogCode-enum',1,'QDialog']]],
+  ['dialoglabel',['DialogLabel',['https://doc.qt.io/qt-5/qfiledialog.html#DialogLabel-enum',1,'QFileDialog']]],
+  ['direction',['Direction',['https://doc.qt.io/qt-5/qabstractanimation.html#Direction-enum',1,'QAbstractAnimation::Direction()'],['https://doc.qt.io/qt-5/qchar.html#Direction-enum',1,'QChar::Direction()'],['https://doc.qt.io/qt-5/qtimeline.html#Direction-enum',1,'QTimeLine::Direction()'],['https://doc.qt.io/qt-5/qboxlayout.html#Direction-enum',1,'QBoxLayout::Direction()'],['https://doc.qt.io/qt-5/qprogressbar.html#Direction-enum',1,'QProgressBar::Direction()']]],
+  ['dirtyflag',['DirtyFlag',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
+  ['dnseligibilitystatus',['DnsEligibilityStatus',['https://doc.qt.io/qt-5/qnetworkaddressentry.html#DnsEligibilityStatus-enum',1,'QNetworkAddressEntry']]],
+  ['dockoption',['DockOption',['https://doc.qt.io/qt-5/qmainwindow.html#DockOption-enum',1,'QMainWindow']]],
   ['dockwidgetarea',['DockWidgetArea',['https://doc.qt.io/qt-5/qt.html#DockWidgetArea-enum',1,'Qt']]],
+  ['dockwidgetfeature',['DockWidgetFeature',['https://doc.qt.io/qt-5/qdockwidget.html#DockWidgetFeature-enum',1,'QDockWidget']]],
   ['documentorder',['DocumentOrder',['https://doc.qt.io/qt-5/qxmlnodemodelindex.html#DocumentOrder-enum',1,'QXmlNodeModelIndex']]],
-  ['dropaction',['DropAction',['https://doc.qt.io/qt-5/qt.html#DropAction-enum',1,'Qt']]]
+  ['dragdropmode',['DragDropMode',['https://doc.qt.io/qt-5/qabstractitemview.html#DragDropMode-enum',1,'QAbstractItemView']]],
+  ['dragmode',['DragMode',['https://doc.qt.io/qt-5/qgraphicsview.html#DragMode-enum',1,'QGraphicsView']]],
+  ['dropaction',['DropAction',['https://doc.qt.io/qt-5/qt.html#DropAction-enum',1,'Qt']]],
+  ['dropindicatorposition',['DropIndicatorPosition',['https://doc.qt.io/qt-5/qabstractitemview.html#DropIndicatorPosition-enum',1,'QAbstractItemView']]]
 ];

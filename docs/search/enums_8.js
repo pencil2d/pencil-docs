@@ -1,13 +1,31 @@
 var searchData=
 [
+  ['icon',['Icon',['https://doc.qt.io/qt-5/qmessagebox.html#Icon-enum',1,'QMessageBox']]],
+  ['iconenginehook',['IconEngineHook',['https://doc.qt.io/qt-5/qiconengine.html#IconEngineHook-enum',1,'QIconEngine']]],
+  ['icontype',['IconType',['https://doc.qt.io/qt-5/qfileiconprovider.html#IconType-enum',1,'QFileIconProvider']]],
   ['imageconversionflag',['ImageConversionFlag',['https://doc.qt.io/qt-5/qt.html#ImageConversionFlag-enum',1,'Qt']]],
+  ['imageoption',['ImageOption',['https://doc.qt.io/qt-5/qimageiohandler.html#ImageOption-enum',1,'QImageIOHandler']]],
+  ['imagereadererror',['ImageReaderError',['https://doc.qt.io/qt-5/qimagereader.html#ImageReaderError-enum',1,'QImageReader']]],
+  ['imagewritererror',['ImageWriterError',['https://doc.qt.io/qt-5/qimagewriter.html#ImageWriterError-enum',1,'QImageWriter']]],
+  ['infoflag',['InfoFlag',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html#InfoFlag-enum',1,'QTouchEvent::TouchPoint']]],
+  ['input',['Input',['https://doc.qt.io/qt-5/qscroller.html#Input-enum',1,'QScroller']]],
   ['inputchannelmode',['InputChannelMode',['https://doc.qt.io/qt-5/qprocess.html#InputChannelMode-enum',1,'QProcess']]],
+  ['inputdialogoption',['InputDialogOption',['https://doc.qt.io/qt-5/qinputdialog.html#InputDialogOption-enum',1,'QInputDialog']]],
   ['inputmethodhint',['InputMethodHint',['https://doc.qt.io/qt-5/qt.html#InputMethodHint-enum',1,'Qt']]],
   ['inputmethodquery',['InputMethodQuery',['https://doc.qt.io/qt-5/qt.html#InputMethodQuery-enum',1,'Qt']]],
+  ['inputmode',['InputMode',['https://doc.qt.io/qt-5/qinputdialog.html#InputMode-enum',1,'QInputDialog']]],
+  ['insertpolicy',['InsertPolicy',['https://doc.qt.io/qt-5/qcombobox.html#InsertPolicy-enum',1,'QComboBox']]],
+  ['interfaceflag',['InterfaceFlag',['https://doc.qt.io/qt-5/qnetworkinterface.html#InterfaceFlag-enum',1,'QNetworkInterface']]],
+  ['interfacetype',['InterfaceType',['https://doc.qt.io/qt-5/qaccessible.html#InterfaceType-enum',1,'QAccessible::InterfaceType()'],['https://doc.qt.io/qt-5/qnetworkinterface.html#InterfaceType-enum',1,'QNetworkInterface::InterfaceType()']]],
   ['intersecttype',['IntersectType',['https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum',1,'QLineF']]],
+  ['invaliddatapolicy',['InvalidDataPolicy',['https://doc.qt.io/qt-5/qdomimplementation.html#InvalidDataPolicy-enum',1,'QDomImplementation']]],
+  ['invertmode',['InvertMode',['https://doc.qt.io/qt-5/qimage.html#InvertMode-enum',1,'QImage']]],
   ['itemdatarole',['ItemDataRole',['https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum',1,'Qt']]],
   ['itemflag',['ItemFlag',['https://doc.qt.io/qt-5/qt.html#ItemFlag-enum',1,'Qt']]],
+  ['itemindexmethod',['ItemIndexMethod',['https://doc.qt.io/qt-5/qgraphicsscene.html#ItemIndexMethod-enum',1,'QGraphicsScene']]],
+  ['itemrole',['ItemRole',['https://doc.qt.io/qt-5/qformlayout.html#ItemRole-enum',1,'QFormLayout']]],
   ['itemselectionmode',['ItemSelectionMode',['https://doc.qt.io/qt-5/qt.html#ItemSelectionMode-enum',1,'Qt']]],
   ['itemselectionoperation',['ItemSelectionOperation',['https://doc.qt.io/qt-5/qt.html#ItemSelectionOperation-enum',1,'Qt']]],
-  ['iteratorflag',['IteratorFlag',['https://doc.qt.io/qt-5/qdiriterator.html#IteratorFlag-enum',1,'QDirIterator']]]
+  ['itemtype',['ItemType',['https://doc.qt.io/qt-5/qstandarditem.html#ItemType-enum',1,'QStandardItem::ItemType()'],['https://doc.qt.io/qt-5/qlistwidgetitem.html#ItemType-enum',1,'QListWidgetItem::ItemType()'],['https://doc.qt.io/qt-5/qtablewidgetitem.html#ItemType-enum',1,'QTableWidgetItem::ItemType()'],['https://doc.qt.io/qt-5/qtreewidgetitem.html#ItemType-enum',1,'QTreeWidgetItem::ItemType()']]],
+  ['iteratorflag',['IteratorFlag',['https://doc.qt.io/qt-5/qdiriterator.html#IteratorFlag-enum',1,'QDirIterator::IteratorFlag()'],['https://doc.qt.io/qt-5/qtreewidgetitemiterator.html#IteratorFlag-enum',1,'QTreeWidgetItemIterator::IteratorFlag()']]]
 ];

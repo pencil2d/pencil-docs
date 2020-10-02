@@ -1,6 +1,7 @@
 var searchData=
 [
   ['macversion',['MacVersion',['https://doc.qt.io/qt-5/qsysinfo-obsolete.html#MacVersion-enum',1,'QSysInfo']]],
+  ['markertype',['MarkerType',['https://doc.qt.io/qt-5/qtextblockformat.html#MarkerType-enum',1,'QTextBlockFormat']]],
   ['maskmode',['MaskMode',['https://doc.qt.io/qt-5/qt.html#MaskMode-enum',1,'Qt']]],
   ['matchflag',['MatchFlag',['https://doc.qt.io/qt-5/qt.html#MatchFlag-enum',1,'Qt']]],
   ['matchmode',['MatchMode',['https://doc.qt.io/qt-5/qmimedatabase.html#MatchMode-enum',1,'QMimeDatabase']]],
@@ -8,10 +9,23 @@ var searchData=
   ['matchtype',['MatchType',['https://doc.qt.io/qt-5/qregularexpression.html#MatchType-enum',1,'QRegularExpression']]],
   ['measurementsystem',['MeasurementSystem',['https://doc.qt.io/qt-5/qlocale.html#MeasurementSystem-enum',1,'QLocale']]],
   ['memorymapflags',['MemoryMapFlags',['https://doc.qt.io/qt-5/qfiledevice.html#MemoryMapFlags-enum',1,'QFileDevice']]],
+  ['menuitemtype',['MenuItemType',['https://doc.qt.io/qt-5/qstyleoptionmenuitem.html#MenuItemType-enum',1,'QStyleOptionMenuItem']]],
+  ['menurole',['MenuRole',['https://doc.qt.io/qt-5/qaction.html#MenuRole-enum',1,'QAction']]],
+  ['messageicon',['MessageIcon',['https://doc.qt.io/qt-5/qsystemtrayicon.html#MessageIcon-enum',1,'QSystemTrayIcon']]],
+  ['metainformation',['MetaInformation',['https://doc.qt.io/qt-5/qtextdocument.html#MetaInformation-enum',1,'QTextDocument']]],
   ['methodtype',['MethodType',['https://doc.qt.io/qt-5/qmetamethod.html#MethodType-enum',1,'QMetaMethod']]],
+  ['mipmapgeneration',['MipMapGeneration',['https://doc.qt.io/qt-5/qopengltexture.html#MipMapGeneration-enum',1,'QOpenGLTexture']]],
+  ['mode',['Mode',['https://doc.qt.io/qt-5/qclipboard.html#Mode-enum',1,'QClipboard::Mode()'],['https://doc.qt.io/qt-5/qicon.html#Mode-enum',1,'QIcon::Mode()'],['https://doc.qt.io/qt-5/qpagelayout.html#Mode-enum',1,'QPageLayout::Mode()'],['https://doc.qt.io/qt-5/qcolormap.html#Mode-enum',1,'QColormap::Mode()'],['https://doc.qt.io/qt-5/qlcdnumber.html#Mode-enum',1,'QLCDNumber::Mode()']]],
+  ['modelchangetype',['ModelChangeType',['https://doc.qt.io/qt-5/qaccessibletablemodelchangeevent.html#ModelChangeType-enum',1,'QAccessibleTableModelChangeEvent']]],
+  ['modelsorting',['ModelSorting',['https://doc.qt.io/qt-5/qcompleter.html#ModelSorting-enum',1,'QCompleter']]],
   ['modifier',['Modifier',['https://doc.qt.io/qt-5/qt.html#Modifier-enum',1,'Qt']]],
   ['monthnametype',['MonthNameType',['https://doc.qt.io/qt-5/qdate.html#MonthNameType-enum',1,'QDate']]],
+  ['mouseaction',['MouseAction',['https://doc.qt.io/qt-5/qtest.html#MouseAction-enum',1,'QTest']]],
   ['mousebutton',['MouseButton',['https://doc.qt.io/qt-5/qt.html#MouseButton-enum',1,'Qt']]],
   ['mouseeventflag',['MouseEventFlag',['https://doc.qt.io/qt-5/qt.html#MouseEventFlag-enum',1,'Qt']]],
-  ['mouseeventsource',['MouseEventSource',['https://doc.qt.io/qt-5/qt.html#MouseEventSource-enum',1,'Qt']]]
+  ['mouseeventsource',['MouseEventSource',['https://doc.qt.io/qt-5/qt.html#MouseEventSource-enum',1,'Qt']]],
+  ['movement',['Movement',['https://doc.qt.io/qt-5/qlistview.html#Movement-enum',1,'QListView']]],
+  ['movemode',['MoveMode',['https://doc.qt.io/qt-5/qtextcursor.html#MoveMode-enum',1,'QTextCursor']]],
+  ['moveoperation',['MoveOperation',['https://doc.qt.io/qt-5/qtextcursor.html#MoveOperation-enum',1,'QTextCursor']]],
+  ['moviestate',['MovieState',['https://doc.qt.io/qt-5/qmovie.html#MovieState-enum',1,'QMovie']]]
 ];

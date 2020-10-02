@@ -1,9 +1,19 @@
 var searchData=
 [
   ['base64option',['Base64Option',['https://doc.qt.io/qt-5/qbytearray.html#Base64Option-enum',1,'QByteArray']]],
+  ['bearertype',['BearerType',['https://doc.qt.io/qt-5/qnetworkconfiguration.html#BearerType-enum',1,'QNetworkConfiguration']]],
   ['bgmode',['BGMode',['https://doc.qt.io/qt-5/qt.html#BGMode-enum',1,'Qt']]],
+  ['bindflag',['BindFlag',['https://doc.qt.io/qt-5/qabstractsocket.html#BindFlag-enum',1,'QAbstractSocket']]],
+  ['bindingtarget',['BindingTarget',['https://doc.qt.io/qt-5/qopengltexture.html#BindingTarget-enum',1,'QOpenGLTexture']]],
+  ['blurhint',['BlurHint',['https://doc.qt.io/qt-5/qgraphicsblureffect.html#BlurHint-enum',1,'QGraphicsBlurEffect']]],
+  ['borderstyle',['BorderStyle',['https://doc.qt.io/qt-5/qtextframeformat.html#BorderStyle-enum',1,'QTextFrameFormat']]],
   ['boundaryreason',['BoundaryReason',['https://doc.qt.io/qt-5/qtextboundaryfinder.html#BoundaryReason-enum',1,'QTextBoundaryFinder']]],
   ['boundarytype',['BoundaryType',['https://doc.qt.io/qt-5/qtextboundaryfinder.html#BoundaryType-enum',1,'QTextBoundaryFinder']]],
   ['brushstyle',['BrushStyle',['https://doc.qt.io/qt-5/qt.html#BrushStyle-enum',1,'Qt']]],
-  ['byteorder',['ByteOrder',['https://doc.qt.io/qt-5/qdatastream.html#ByteOrder-enum',1,'QDataStream']]]
+  ['buttonfeature',['ButtonFeature',['https://doc.qt.io/qt-5/qstyleoptionbutton.html#ButtonFeature-enum',1,'QStyleOptionButton']]],
+  ['buttonlayout',['ButtonLayout',['https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonLayout-enum',1,'QDialogButtonBox']]],
+  ['buttonposition',['ButtonPosition',['https://doc.qt.io/qt-5/qtabbar.html#ButtonPosition-enum',1,'QTabBar']]],
+  ['buttonrole',['ButtonRole',['https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonRole-enum',1,'QDialogButtonBox::ButtonRole()'],['https://doc.qt.io/qt-5/qmessagebox.html#ButtonRole-enum',1,'QMessageBox::ButtonRole()']]],
+  ['buttonsymbols',['ButtonSymbols',['https://doc.qt.io/qt-5/qabstractspinbox.html#ButtonSymbols-enum',1,'QAbstractSpinBox']]],
+  ['byteorder',['ByteOrder',['https://doc.qt.io/qt-5/qdatastream.html#ByteOrder-enum',1,'QDataStream::ByteOrder()'],['https://doc.qt.io/qt-5/qpixelformat.html#ByteOrder-enum',1,'QPixelFormat::ByteOrder()']]]
 ];

@@ -12,6 +12,7 @@ var searchData=
   ['bezierarea',['BezierArea',['../class_bezier_area.html',1,'']]],
   ['beziercurve',['BezierCurve',['../class_bezier_curve.html',1,'']]],
   ['binaryexpr',['BinaryExpr',['../class_catch_1_1_binary_expr.html',1,'Catch']]],
+  ['binder',['Binder',['https://doc.qt.io/qt-5/qopenglvertexarrayobject-binder.html',1,'QOpenGLVertexArrayObject']]],
   ['bitmapimage',['BitmapImage',['../class_bitmap_image.html',1,'']]],
   ['blitrect',['BlitRect',['../class_blit_rect.html',1,'']]],
   ['brushtool',['BrushTool',['../class_brush_tool.html',1,'']]],

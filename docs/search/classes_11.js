@@ -1,11 +1,13 @@
 var searchData=
 [
+  ['scaledpixmapargument',['ScaledPixmapArgument',['https://doc.qt.io/qt-5/qiconengine-scaledpixmapargument.html',1,'QIconEngine']]],
   ['scopedmessage',['ScopedMessage',['../class_catch_1_1_scoped_message.html',1,'Catch']]],
   ['scopeguard',['ScopeGuard',['../class_scope_guard.html',1,'']]],
   ['scribblearea',['ScribbleArea',['../class_scribble_area.html',1,'']]],
   ['section',['Section',['../class_catch_1_1_section.html',1,'Catch']]],
   ['sectionendinfo',['SectionEndInfo',['../struct_catch_1_1_section_end_info.html',1,'Catch']]],
   ['sectioninfo',['SectionInfo',['../struct_catch_1_1_section_info.html',1,'Catch']]],
+  ['selection',['Selection',['https://doc.qt.io/qt-5/qabstracttextdocumentlayout-selection.html',1,'QAbstractTextDocumentLayout']]],
   ['selectionmanager',['SelectionManager',['../class_selection_manager.html',1,'']]],
   ['selectionpainter',['SelectionPainter',['../class_selection_painter.html',1,'']]],
   ['selecttool',['SelectTool',['../class_select_tool.html',1,'']]],
@@ -20,6 +22,7 @@ var searchData=
   ['sourcelineinfo',['SourceLineInfo',['../struct_catch_1_1_source_line_info.html',1,'Catch']]],
   ['spinslider',['SpinSlider',['../class_spin_slider.html',1,'']]],
   ['startswithmatcher',['StartsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_starts_with_matcher.html',1,'Catch::Matchers::StdString']]],
+  ['state',['State',['https://doc.qt.io/qt-5/qaccessible-state.html',1,'QAccessible']]],
   ['status',['Status',['../class_status.html',1,'']]],
   ['streamendstop',['StreamEndStop',['../struct_catch_1_1_stream_end_stop.html',1,'Catch']]],
   ['stringmaker',['StringMaker',['../struct_catch_1_1_string_maker.html',1,'Catch']]],
