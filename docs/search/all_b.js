@@ -227,7 +227,7 @@ var searchData=
   ['linkhovered',['linkHovered',['https://doc.qt.io/qt-5/qgraphicstextitem.html#linkHovered',1,'QGraphicsTextItem::linkHovered()'],['https://doc.qt.io/qt-5/qlabel.html#linkHovered',1,'QLabel::linkHovered()']]],
   ['linksaccessiblebykeyboard',['LinksAccessibleByKeyboard',['https://doc.qt.io/qt-5/qt.html#TextInteractionFlag-enum',1,'Qt']]],
   ['linksaccessiblebymouse',['LinksAccessibleByMouse',['https://doc.qt.io/qt-5/qt.html#TextInteractionFlag-enum',1,'Qt']]],
-  ['linkvisited',['LinkVisited',['https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum',1,'QPalette::LinkVisited()'],['https://doc.qt.io/qt-5/qpalette.html#linkVisited',1,'QPalette::linkVisited() const const']]],
+  ['linkvisited',['linkVisited',['https://doc.qt.io/qt-5/qpalette.html#linkVisited',1,'QPalette::linkVisited() const const'],['https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum',1,'QPalette::LinkVisited()']]],
   ['list',['List',['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html#List-typedef',1,'QAbstractXmlNodeModel::List()'],['https://doc.qt.io/qt-5/qxmlnodemodelindex.html#List-typedef',1,'QXmlNodeModelIndex::List()'],['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant::List()'],['https://doc.qt.io/qt-5/qaccessible.html#Role-enum',1,'QAccessible::List()'],['https://doc.qt.io/qt-5/qfiledialog.html#ViewMode-enum',1,'QFileDialog::List()']]],
   ['listcircle',['ListCircle',['https://doc.qt.io/qt-5/qtextlistformat.html#Style-enum',1,'QTextListFormat']]],
   ['listdecimal',['ListDecimal',['https://doc.qt.io/qt-5/qtextlistformat.html#Style-enum',1,'QTextListFormat']]],
