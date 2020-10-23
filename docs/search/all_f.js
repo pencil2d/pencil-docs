@@ -70,7 +70,7 @@ var searchData=
   ['pane',['Pane',['https://doc.qt.io/qt-5/qaccessible.html#Role-enum',1,'QAccessible']]],
   ['panel',['Panel',['https://doc.qt.io/qt-5/qframe.html#Shape-enum',1,'QFrame::Panel()'],['https://doc.qt.io/qt-5/qgraphicsitem.html#panel',1,'QGraphicsItem::panel()']]],
   ['panelmodal',['PanelModal',['https://doc.qt.io/qt-5/qgraphicsitem.html#PanelModality-enum',1,'QGraphicsItem']]],
-  ['panelmodality',['PanelModality',['https://doc.qt.io/qt-5/qgraphicsitem.html#PanelModality-enum',1,'QGraphicsItem::PanelModality()'],['https://doc.qt.io/qt-5/qgraphicsitem.html#panelModality',1,'QGraphicsItem::panelModality() const const']]],
+  ['panelmodality',['panelModality',['https://doc.qt.io/qt-5/qgraphicsitem.html#panelModality',1,'QGraphicsItem::panelModality() const const'],['https://doc.qt.io/qt-5/qgraphicsitem.html#PanelModality-enum',1,'QGraphicsItem::PanelModality()']]],
   ['pangesture',['PanGesture',['https://doc.qt.io/qt-5/qt.html#GestureType-enum',1,'Qt']]],
   ['pannativegesture',['PanNativeGesture',['https://doc.qt.io/qt-5/qt.html#NativeGestureType-enum',1,'Qt']]],
   ['papiamento',['Papiamento',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
