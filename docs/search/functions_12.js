@@ -3,6 +3,7 @@ var searchData=
   ['samplecount',['sampleCount',['https://doc.qt.io/qt-5/qopengltimemonitor.html#sampleCount',1,'QOpenGLTimeMonitor']]],
   ['samplecountflagbits',['sampleCountFlagBits',['https://doc.qt.io/qt-5/qvulkanwindow.html#sampleCountFlagBits',1,'QVulkanWindow']]],
   ['samples',['samples',['https://doc.qt.io/qt-5/qopenglframebufferobjectformat.html#samples',1,'QOpenGLFramebufferObjectFormat::samples()'],['https://doc.qt.io/qt-5/qopengltexture.html#samples',1,'QOpenGLTexture::samples()'],['https://doc.qt.io/qt-5/qsurfaceformat.html#samples',1,'QSurfaceFormat::samples()']]],
+  ['sanitizebackupelementsafterlayerdeletion',['sanitizeBackupElementsAfterLayerDeletion',['../class_editor.html#ac4a0e777c71af5870ae4b581ea3761f6',1,'Editor']]],
   ['saturation',['saturation',['https://doc.qt.io/qt-5/qcolor.html#saturation',1,'QColor']]],
   ['saturationf',['saturationF',['https://doc.qt.io/qt-5/qcolor.html#saturationF',1,'QColor']]],
   ['saturationsize',['saturationSize',['https://doc.qt.io/qt-5/qpixelformat.html#saturationSize',1,'QPixelFormat']]],
