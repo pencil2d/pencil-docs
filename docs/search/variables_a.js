@@ -118,7 +118,7 @@ var searchData=
   ['key_5fcurrency',['Key_currency',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fcut',['Key_Cut',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fd',['Key_D',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
-  ['key_5fdead_5fa',['Key_Dead_A',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_A()'],['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_a()']]],
+  ['key_5fdead_5fa',['Key_Dead_a',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_a()'],['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_A()']]],
   ['key_5fdead_5fabovecomma',['Key_Dead_Abovecomma',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fabovedot',['Key_Dead_Abovedot',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fabovereversedcomma',['Key_Dead_Abovereversedcomma',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
