@@ -150,7 +150,7 @@ var searchData=
   ['key_5fdead_5fdiaeresis',['Key_Dead_Diaeresis',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fdoubleacute',['Key_Dead_Doubleacute',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fdoublegrave',['Key_Dead_Doublegrave',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
-  ['key_5fdead_5fe',['Key_Dead_e',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_e()'],['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_E()']]],
+  ['key_5fdead_5fe',['Key_Dead_E',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_E()'],['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt::Key_Dead_e()']]],
   ['key_5fdead_5fgrave',['Key_Dead_Grave',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fgreek',['Key_Dead_Greek',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],
   ['key_5fdead_5fhook',['Key_Dead_Hook',['https://doc.qt.io/qt-5/qt.html#Key-enum',1,'Qt']]],

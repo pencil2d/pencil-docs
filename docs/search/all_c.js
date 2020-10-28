@@ -311,7 +311,7 @@ var searchData=
   ['middlebutton',['MiddleButton',['https://doc.qt.io/qt-5/qt.html#MouseButton-enum',1,'Qt']]],
   ['middleclick',['MiddleClick',['https://doc.qt.io/qt-5/qsystemtrayicon.html#ActivationReason-enum',1,'QSystemTrayIcon']]],
   ['middlemousebuttongesture',['MiddleMouseButtonGesture',['https://doc.qt.io/qt-5/qscroller.html#ScrollerGestureType-enum',1,'QScroller']]],
-  ['midlight',['Midlight',['https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum',1,'QPalette::Midlight()'],['https://doc.qt.io/qt-5/qpalette.html#midlight',1,'QPalette::midlight() const const']]],
+  ['midlight',['midlight',['https://doc.qt.io/qt-5/qpalette.html#midlight',1,'QPalette::midlight() const const'],['https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum',1,'QPalette::Midlight()']]],
   ['midlinewidth',['midLineWidth',['https://doc.qt.io/qt-5/qframe.html#midLineWidth-prop',1,'QFrame::midLineWidth()'],['https://doc.qt.io/qt-5/qframe.html#midLineWidth-prop',1,'QFrame::midLineWidth() const const']]],
   ['midnightbloom',['MidnightBloom',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['midref',['midRef',['https://doc.qt.io/qt-5/qstring.html#midRef',1,'QString']]],
