@@ -215,7 +215,7 @@ var searchData=
   ['deselectall',['deselectAll',['../class_vector_image.html#a3155f5e0c0d597682f2fcea41cc1e5e2',1,'VectorImage']]],
   ['deseretscript',['DeseretScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['deserthump',['DesertHump',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
-  ['desktop',['Desktop',['https://doc.qt.io/qt-5/qaccessible.html#Role-enum',1,'QAccessible::Desktop()'],['https://doc.qt.io/qt-5/qfileiconprovider.html#IconType-enum',1,'QFileIconProvider::Desktop()'],['https://doc.qt.io/qt-5/qapplication.html#desktop',1,'QApplication::desktop()'],['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt::Desktop()']]],
+  ['desktop',['Desktop',['https://doc.qt.io/qt-5/qaccessible.html#Role-enum',1,'QAccessible::Desktop()'],['https://doc.qt.io/qt-5/qfileiconprovider.html#IconType-enum',1,'QFileIconProvider::Desktop()'],['https://doc.qt.io/qt-5/qapplication-obsolete.html#desktop',1,'QApplication::desktop()'],['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt::Desktop()']]],
   ['desktopfilename',['desktopFileName',['https://doc.qt.io/qt-5/qguiapplication.html#desktopFileName-prop',1,'QGuiApplication::desktopFileName()'],['https://doc.qt.io/qt-5/qguiapplication.html#desktopFileName-prop',1,'QGuiApplication::desktopFileName()']]],
   ['desktoplocation',['DesktopLocation',['https://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum',1,'QStandardPaths::DesktopLocation()'],['https://doc.qt.io/qt-5/qdesktopservices-obsolete.html#StandardLocation-enum',1,'QDesktopServices::DesktopLocation()']]],
   ['desktopsettingsaware',['desktopSettingsAware',['https://doc.qt.io/qt-5/qguiapplication.html#desktopSettingsAware',1,'QGuiApplication']]],

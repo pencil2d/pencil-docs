@@ -72,6 +72,7 @@ var searchData=
   ['nicaragua',['Nicaragua',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['niger',['Niger',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['nigeria',['Nigeria',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
+  ['nigerianpidgin',['NigerianPidgin',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['nightcall',['NightCall',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['nightfade',['NightFade',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['nightparty',['NightParty',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],

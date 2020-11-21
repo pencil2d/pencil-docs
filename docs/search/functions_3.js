@@ -105,7 +105,7 @@ var searchData=
   ['description',['description',['https://doc.qt.io/qt-5/qcommandlineoption.html#description',1,'QCommandLineOption::description()'],['https://doc.qt.io/qt-5/qimagewriter-obsolete.html#description',1,'QImageWriter::description()'],['https://doc.qt.io/qt-5/qpictureio.html#description',1,'QPictureIO::description()'],['https://doc.qt.io/qt-5/qsvggenerator.html#description-prop',1,'QSvgGenerator::description()'],['https://doc.qt.io/qt-5/qcommandlinkbutton.html#description-prop',1,'QCommandLinkButton::description()']]],
   ['deselect',['deselect',['https://doc.qt.io/qt-5/qlineedit.html#deselect',1,'QLineEdit']]],
   ['deselectall',['deselectAll',['../class_vector_image.html#a3155f5e0c0d597682f2fcea41cc1e5e2',1,'VectorImage']]],
-  ['desktop',['desktop',['https://doc.qt.io/qt-5/qapplication.html#desktop',1,'QApplication']]],
+  ['desktop',['desktop',['https://doc.qt.io/qt-5/qapplication-obsolete.html#desktop',1,'QApplication']]],
   ['desktopfilename',['desktopFileName',['https://doc.qt.io/qt-5/qguiapplication.html#desktopFileName-prop',1,'QGuiApplication']]],
   ['desktopsettingsaware',['desktopSettingsAware',['https://doc.qt.io/qt-5/qguiapplication.html#desktopSettingsAware',1,'QGuiApplication']]],
   ['destinationaddress',['destinationAddress',['https://doc.qt.io/qt-5/qnetworkdatagram.html#destinationAddress',1,'QNetworkDatagram']]],
