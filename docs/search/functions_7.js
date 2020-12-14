@@ -1,6 +1,7 @@
 var searchData=
 [
   ['handle',['handle',['https://doc.qt.io/qt-5/qfiledevice.html#handle',1,'QFileDevice::handle()'],['https://doc.qt.io/qt-5/qwineventnotifier.html#handle',1,'QWinEventNotifier::handle()'],['https://doc.qt.io/qt-5/qbackingstore.html#handle',1,'QBackingStore::handle()'],['https://doc.qt.io/qt-5/qopenglframebufferobject.html#handle',1,'QOpenGLFramebufferObject::handle()'],['https://doc.qt.io/qt-5/qscreen.html#handle',1,'QScreen::handle()'],['https://doc.qt.io/qt-5/qsslcertificate.html#handle',1,'QSslCertificate::handle()'],['https://doc.qt.io/qt-5/qsslkey.html#handle',1,'QSslKey::handle()'],['https://doc.qt.io/qt-5/qsplitter.html#handle',1,'QSplitter::handle()']]],
+  ['handlecommandlineoptions',['handleCommandLineOptions',['../class_pencil2_d.html#ab1f892c698e062aba86005dd4b3b97c3',1,'Pencil2D']]],
   ['handledrawingonemptyframe',['handleDrawingOnEmptyFrame',['../class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579',1,'ScribbleArea']]],
   ['handleinput',['handleInput',['https://doc.qt.io/qt-5/qscroller.html#handleInput',1,'QScroller']]],
   ['handlemessage',['handleMessage',['https://doc.qt.io/qt-5/qabstractmessagehandler.html#handleMessage',1,'QAbstractMessageHandler']]],

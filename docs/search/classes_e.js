@@ -3,7 +3,7 @@ var searchData=
   ['paintcontext',['PaintContext',['https://doc.qt.io/qt-5/qabstracttextdocumentlayout-paintcontext.html',1,'QAbstractTextDocumentLayout']]],
   ['pegbaralignmentdialog',['PegBarAlignmentDialog',['../class_peg_bar_alignment_dialog.html',1,'']]],
   ['pegbarresult',['PegbarResult',['../struct_pegbar_result.html',1,'']]],
-  ['pencilapplication',['PencilApplication',['../class_pencil_application.html',1,'']]],
+  ['pencil2d',['Pencil2D',['../class_pencil2_d.html',1,'']]],
   ['penciltool',['PencilTool',['../class_pencil_tool.html',1,'']]],
   ['pentool',['PenTool',['../class_pen_tool.html',1,'']]],
   ['pixmapfragment',['PixmapFragment',['https://doc.qt.io/qt-5/qpainter-pixmapfragment.html',1,'QPainter']]],

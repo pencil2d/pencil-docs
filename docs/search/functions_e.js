@@ -40,6 +40,7 @@ var searchData=
   ['opened',['opened',['https://doc.qt.io/qt-5/qnetworksession.html#opened',1,'QNetworkSession']]],
   ['openexternallinks',['openExternalLinks',['https://doc.qt.io/qt-5/qgraphicstextitem.html#openExternalLinks-prop',1,'QGraphicsTextItem::openExternalLinks()'],['https://doc.qt.io/qt-5/qlabel.html#openExternalLinks-prop',1,'QLabel::openExternalLinks()'],['https://doc.qt.io/qt-5/qtextbrowser.html#openExternalLinks-prop',1,'QTextBrowser::openExternalLinks()']]],
   ['openfile',['openFile',['https://doc.qt.io/qt-5/qfileopenevent.html#openFile',1,'QFileOpenEvent']]],
+  ['openfilerequested',['openFileRequested',['../class_pencil2_d.html#a6772105204b1fa7baebb0f97649eac52',1,'Pencil2D']]],
   ['openglfeatures',['openGLFeatures',['https://doc.qt.io/qt-5/qopenglfunctions.html#openGLFeatures',1,'QOpenGLFunctions']]],
   ['openglmodulehandle',['openGLModuleHandle',['https://doc.qt.io/qt-5/qopenglcontext.html#openGLModuleHandle',1,'QOpenGLContext']]],
   ['openglmoduletype',['openGLModuleType',['https://doc.qt.io/qt-5/qopenglcontext.html#openGLModuleType',1,'QOpenGLContext']]],
