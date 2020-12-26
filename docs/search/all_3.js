@@ -323,6 +323,7 @@ var searchData=
   ['dirtyflag',['DirtyFlag',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
   ['dirtyflags',['DirtyFlags',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
   ['dirtyfont',['DirtyFont',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
+  ['dirtyframes',['dirtyFrames',['../class_layer.html#adc67befdb4803767843925a34a51ee73',1,'Layer']]],
   ['dirtyhints',['DirtyHints',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
   ['dirtyopacity',['DirtyOpacity',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
   ['dirtypen',['DirtyPen',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],

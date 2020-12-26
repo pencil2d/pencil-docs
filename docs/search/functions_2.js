@@ -160,6 +160,7 @@ var searchData=
   ['clearcontents',['clearContents',['https://doc.qt.io/qt-5/qtablewidget.html#clearContents',1,'QTableWidget']]],
   ['clearcurrentindex',['clearCurrentIndex',['https://doc.qt.io/qt-5/qitemselectionmodel.html#clearCurrentIndex',1,'QItemSelectionModel']]],
   ['cleardata',['clearData',['https://doc.qt.io/qt-5/qstandarditem.html#clearData',1,'QStandardItem']]],
+  ['cleardirtyframes',['clearDirtyFrames',['../class_layer.html#aaf818d8e108e3ee39ae1cd1d9af7981d',1,'Layer']]],
   ['clearedittext',['clearEditText',['https://doc.qt.io/qt-5/qcombobox.html#clearEditText',1,'QComboBox']]],
   ['clearerror',['clearError',['https://doc.qt.io/qt-5/qstatemachine.html#clearError',1,'QStateMachine']]],
   ['clearfocus',['clearFocus',['https://doc.qt.io/qt-5/qgraphicsitem.html#clearFocus',1,'QGraphicsItem::clearFocus()'],['https://doc.qt.io/qt-5/qgraphicsscene.html#clearFocus',1,'QGraphicsScene::clearFocus()'],['https://doc.qt.io/qt-5/qwidget.html#clearFocus',1,'QWidget::clearFocus()']]],

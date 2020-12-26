@@ -310,7 +310,7 @@ var searchData=
   ['log',['log',['https://doc.qt.io/qt-5/qopenglshader.html#log',1,'QOpenGLShader::log()'],['https://doc.qt.io/qt-5/qopenglshaderprogram.html#log',1,'QOpenGLShaderProgram::log()']]],
   ['logelementtype',['LogElementType',['https://doc.qt.io/qt-5/qtest.html#LogElementType-enum',1,'QTest']]],
   ['loggedmessages',['loggedMessages',['https://doc.qt.io/qt-5/qopengldebuglogger.html#loggedMessages',1,'QOpenGLDebugLogger']]],
-  ['loggingmode',['LoggingMode',['https://doc.qt.io/qt-5/qopengldebuglogger.html#LoggingMode-enum',1,'QOpenGLDebugLogger::LoggingMode()'],['https://doc.qt.io/qt-5/qopengldebuglogger.html#loggingMode-prop',1,'QOpenGLDebugLogger::loggingMode()'],['https://doc.qt.io/qt-5/qopengldebuglogger.html#loggingMode',1,'QOpenGLDebugLogger::loggingMode() const const']]],
+  ['loggingmode',['loggingMode',['https://doc.qt.io/qt-5/qopengldebuglogger.html#loggingMode-prop',1,'QOpenGLDebugLogger::loggingMode()'],['https://doc.qt.io/qt-5/qopengldebuglogger.html#loggingMode',1,'QOpenGLDebugLogger::loggingMode() const const'],['https://doc.qt.io/qt-5/qopengldebuglogger.html#LoggingMode-enum',1,'QOpenGLDebugLogger::LoggingMode()']]],
   ['logicalcoordinates',['LogicalCoordinates',['https://doc.qt.io/qt-5/qt.html#CoordinateSystem-enum',1,'Qt']]],
   ['logicaldevicelost',['logicalDeviceLost',['https://doc.qt.io/qt-5/qvulkanwindowrenderer.html#logicalDeviceLost',1,'QVulkanWindowRenderer']]],
   ['logicaldotsperinch',['logicalDotsPerInch',['https://doc.qt.io/qt-5/qscreen.html#logicalDotsPerInch-prop',1,'QScreen::logicalDotsPerInch()'],['https://doc.qt.io/qt-5/qscreen.html#logicalDotsPerInch-prop',1,'QScreen::logicalDotsPerInch() const const']]],
