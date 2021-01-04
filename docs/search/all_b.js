@@ -103,7 +103,7 @@ var searchData=
   ['leaveeditfocus',['LeaveEditFocus',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['leaveevent',['leaveEvent',['https://doc.qt.io/qt-5/qmdisubwindow.html#leaveEvent',1,'QMdiSubWindow::leaveEvent()'],['https://doc.qt.io/qt-5/qmenu.html#leaveEvent',1,'QMenu::leaveEvent()'],['https://doc.qt.io/qt-5/qmenubar.html#leaveEvent',1,'QMenuBar::leaveEvent()'],['https://doc.qt.io/qt-5/qtoolbutton.html#leaveEvent',1,'QToolButton::leaveEvent()'],['https://doc.qt.io/qt-5/qwidget.html#leaveEvent',1,'QWidget::leaveEvent()']]],
   ['leavemulticastgroup',['leaveMulticastGroup',['https://doc.qt.io/qt-5/qudpsocket.html#leaveMulticastGroup',1,'QUdpSocket::leaveMulticastGroup(const QHostAddress &amp;groupAddress)'],['https://doc.qt.io/qt-5/qudpsocket.html#leaveMulticastGroup-1',1,'QUdpSocket::leaveMulticastGroup(const QHostAddress &amp;groupAddress, const QNetworkInterface &amp;iface)']]],
-  ['leavewhatsthismode',['LeaveWhatsThisMode',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::LeaveWhatsThisMode()'],['https://doc.qt.io/qt-5/qwhatsthis.html#leaveWhatsThisMode',1,'QWhatsThis::leaveWhatsThisMode()']]],
+  ['leavewhatsthismode',['leaveWhatsThisMode',['https://doc.qt.io/qt-5/qwhatsthis.html#leaveWhatsThisMode',1,'QWhatsThis::leaveWhatsThisMode()'],['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::LeaveWhatsThisMode()']]],
   ['lebanon',['Lebanon',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['lecocktail',['LeCocktail',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['ledger',['Ledger',['https://doc.qt.io/qt-5/qpagesize.html#PageSizeId-enum',1,'QPageSize::Ledger()'],['https://doc.qt.io/qt-5/qpagedpaintdevice.html#PageSize-enum',1,'QPagedPaintDevice::Ledger()']]],

@@ -14,7 +14,7 @@ var searchData=
   ['zlibcompression',['ZlibCompression',['https://doc.qt.io/qt-5/qresource.html#Compression-enum',1,'QResource']]],
   ['zoomin',['ZoomIn',['https://doc.qt.io/qt-5/qkeysequence.html#StandardKey-enum',1,'QKeySequence::ZoomIn()'],['https://doc.qt.io/qt-5/qplaintextedit.html#zoomIn',1,'QPlainTextEdit::zoomIn()'],['https://doc.qt.io/qt-5/qtextedit.html#zoomIn',1,'QTextEdit::zoomIn()']]],
   ['zoomnativegesture',['ZoomNativeGesture',['https://doc.qt.io/qt-5/qt.html#NativeGestureType-enum',1,'Qt']]],
-  ['zoomout',['zoomOut',['https://doc.qt.io/qt-5/qplaintextedit.html#zoomOut',1,'QPlainTextEdit::zoomOut()'],['https://doc.qt.io/qt-5/qtextedit.html#zoomOut',1,'QTextEdit::zoomOut()'],['https://doc.qt.io/qt-5/qkeysequence.html#StandardKey-enum',1,'QKeySequence::ZoomOut()']]],
+  ['zoomout',['ZoomOut',['https://doc.qt.io/qt-5/qkeysequence.html#StandardKey-enum',1,'QKeySequence::ZoomOut()'],['https://doc.qt.io/qt-5/qplaintextedit.html#zoomOut',1,'QPlainTextEdit::zoomOut()'],['https://doc.qt.io/qt-5/qtextedit.html#zoomOut',1,'QTextEdit::zoomOut()']]],
   ['zorderchange',['ZOrderChange',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['zscale',['zScale',['https://doc.qt.io/qt-5/qgraphicsscale.html#zScale-prop',1,'QGraphicsScale::zScale()'],['https://doc.qt.io/qt-5/qgraphicsscale.html#zScale-prop',1,'QGraphicsScale::zScale() const const']]],
   ['zscalechanged',['zScaleChanged',['https://doc.qt.io/qt-5/qgraphicsscale.html#zScaleChanged',1,'QGraphicsScale']]],
