@@ -98,7 +98,7 @@ var searchData=
   ['hsl',['HSL',['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSL()'],['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsl()']]],
   ['hsv',['Hsv',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsv()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSV()']]],
   ['htmlresource',['HtmlResource',['https://doc.qt.io/qt-5/qtextdocument.html#ResourceType-enum',1,'QTextDocument']]],
-  ['http2allowedattribute',['HTTP2AllowedAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::HTTP2AllowedAttribute()'],['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::Http2AllowedAttribute()']]],
+  ['http2allowedattribute',['Http2AllowedAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::Http2AllowedAttribute()'],['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::HTTP2AllowedAttribute()']]],
   ['http2directattribute',['Http2DirectAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest']]],
   ['http2wasusedattribute',['Http2WasUsedAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::Http2WasUsedAttribute()'],['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::HTTP2WasUsedAttribute()']]],
   ['httpcachingproxy',['HttpCachingProxy',['https://doc.qt.io/qt-5/qnetworkproxy.html#ProxyType-enum',1,'QNetworkProxy']]],

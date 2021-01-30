@@ -87,7 +87,7 @@ var searchData=
   ['filepathrole',['FilePathRole',['https://doc.qt.io/qt-5/qdirmodel.html#Roles-enum',1,'QDirModel::FilePathRole()'],['https://doc.qt.io/qt-5/qfilesystemmodel.html#Roles-enum',1,'QFileSystemModel::FilePathRole()']]],
   ['filepermissions',['FilePermissions',['https://doc.qt.io/qt-5/qfilesystemmodel.html#Roles-enum',1,'QFileSystemModel']]],
   ['filerenamed',['fileRenamed',['https://doc.qt.io/qt-5/qfilesystemmodel.html#fileRenamed',1,'QFileSystemModel']]],
-  ['files',['Files',['https://doc.qt.io/qt-5/qdir.html#Filter-enum',1,'QDir::Files()'],['https://doc.qt.io/qt-5/qfilesystemwatcher.html#files',1,'QFileSystemWatcher::files()']]],
+  ['files',['files',['https://doc.qt.io/qt-5/qfilesystemwatcher.html#files',1,'QFileSystemWatcher::files()'],['https://doc.qt.io/qt-5/qdir.html#Filter-enum',1,'QDir::Files()']]],
   ['fileselected',['fileSelected',['https://doc.qt.io/qt-5/qfiledialog.html#fileSelected',1,'QFileDialog']]],
   ['filespage',['FilesPage',['../class_files_page.html',1,'']]],
   ['filesselected',['filesSelected',['https://doc.qt.io/qt-5/qfiledialog.html#filesSelected',1,'QFileDialog']]],
