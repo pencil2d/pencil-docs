@@ -201,7 +201,7 @@ var searchData=
   ['frameshadow',['frameShadow',['https://doc.qt.io/qt-5/qframe.html#frameShadow-prop',1,'QFrame']]],
   ['frameshape',['frameShape',['https://doc.qt.io/qt-5/qframe.html#frameShape-prop',1,'QFrame']]],
   ['framesize',['frameSize',['https://doc.qt.io/qt-5/qwidget.html#frameSize-prop',1,'QWidget']]],
-  ['framesmoved',['framesMoved',['../class_editor.html#a4cb0dd5646add78caff4a79a7f8b91d2',1,'Editor']]],
+  ['framesmodified',['framesModified',['../class_editor.html#a5da792317757541ad6e7c1b7e2294a4a',1,'Editor']]],
   ['framespersecond',['framesPerSecond',['https://doc.qt.io/qt-5/qsvgrenderer.html#framesPerSecond-prop',1,'QSvgRenderer']]],
   ['framestyle',['frameStyle',['https://doc.qt.io/qt-5/qframe.html#frameStyle',1,'QFrame']]],
   ['frameswapped',['frameSwapped',['https://doc.qt.io/qt-5/qopenglwindow.html#frameSwapped',1,'QOpenGLWindow::frameSwapped()'],['https://doc.qt.io/qt-5/qopenglwidget.html#frameSwapped',1,'QOpenGLWidget::frameSwapped()']]],

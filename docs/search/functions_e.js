@@ -31,7 +31,7 @@ var searchData=
   ['onexit',['onExit',['https://doc.qt.io/qt-5/qabstractstate.html#onExit',1,'QAbstractState::onExit()'],['https://doc.qt.io/qt-5/qfinalstate.html#onExit',1,'QFinalState::onExit()'],['https://doc.qt.io/qt-5/qhistorystate.html#onExit',1,'QHistoryState::onExit()'],['https://doc.qt.io/qt-5/qstate.html#onExit',1,'QState::onExit()'],['https://doc.qt.io/qt-5/qstatemachine.html#onExit',1,'QStateMachine::onExit()']]],
   ['onfpseditingfinished',['onFpsEditingFinished',['../class_time_controls.html#aaaf7aad2eb8ae091c70e6241ab74fc55',1,'TimeControls']]],
   ['onframemodified',['onFrameModified',['../class_scribble_area.html#afb209db328a8fc763c26a36db98ce8f3',1,'ScribbleArea']]],
-  ['onframesmoved',['onFramesMoved',['../class_scribble_area.html#a431390c734c4450a6b1335071e042155',1,'ScribbleArea']]],
+  ['onframesmodified',['onFramesModified',['../class_scribble_area.html#aa6224825fddc3080baeb4583e4f64d32',1,'ScribbleArea']]],
   ['onlayerchanged',['onLayerChanged',['../class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f',1,'ScribbleArea']]],
   ['onlinestatechanged',['onlineStateChanged',['https://doc.qt.io/qt-5/qnetworkconfigurationmanager.html#onlineStateChanged',1,'QNetworkConfigurationManager']]],
   ['onobjectchanged',['onObjectChanged',['../class_scribble_area.html#ac5d4dc72aeabdc8542c2cf861d82412a',1,'ScribbleArea']]],
