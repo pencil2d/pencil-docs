@@ -136,7 +136,7 @@ var searchData=
   ['nextprotocolnegotiationstatus',['NextProtocolNegotiationStatus',['https://doc.qt.io/qt-5/qsslconfiguration.html#NextProtocolNegotiationStatus-enum',1,'QSslConfiguration::NextProtocolNegotiationStatus()'],['https://doc.qt.io/qt-5/qsslconfiguration.html#nextProtocolNegotiationStatus',1,'QSslConfiguration::nextProtocolNegotiationStatus() const const']]],
   ['nextprotocolnegotiationunsupported',['NextProtocolNegotiationUnsupported',['https://doc.qt.io/qt-5/qsslconfiguration.html#NextProtocolNegotiationStatus-enum',1,'QSslConfiguration']]],
   ['nextrow',['NextRow',['https://doc.qt.io/qt-5/qtextcursor.html#MoveOperation-enum',1,'QTextCursor']]],
-  ['nextsibling',['nextSibling',['https://doc.qt.io/qt-5/qdomnode.html#nextSibling',1,'QDomNode::nextSibling()'],['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html#SimpleAxis-enum',1,'QAbstractXmlNodeModel::NextSibling()']]],
+  ['nextsibling',['NextSibling',['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html#SimpleAxis-enum',1,'QAbstractXmlNodeModel::NextSibling()'],['https://doc.qt.io/qt-5/qdomnode.html#nextSibling',1,'QDomNode::nextSibling()']]],
   ['nextsiblingelement',['nextSiblingElement',['https://doc.qt.io/qt-5/qdomnode.html#nextSiblingElement',1,'QDomNode']]],
   ['nexttransition',['nextTransition',['https://doc.qt.io/qt-5/qtimezone.html#nextTransition',1,'QTimeZone']]],
   ['nextword',['NextWord',['https://doc.qt.io/qt-5/qtextcursor.html#MoveOperation-enum',1,'QTextCursor']]],
