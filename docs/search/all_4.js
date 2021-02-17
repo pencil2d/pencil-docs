@@ -330,7 +330,6 @@ var searchData=
   ['exportimagedialog',['ExportImageDialog',['../class_export_image_dialog.html',1,'']]],
   ['exportmoviedesc',['ExportMovieDesc',['../struct_export_movie_desc.html',1,'']]],
   ['exportmoviedialog',['ExportMovieDialog',['../class_export_movie_dialog.html',1,'']]],
-  ['exportmovieparameters',['ExportMovieParameters',['../struct_export_movie_parameters.html',1,'']]],
   ['expose',['Expose',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['exposeevent',['exposeEvent',['https://doc.qt.io/qt-5/qwindow.html#exposeEvent',1,'QWindow']]],
   ['exprlhs',['ExprLhs',['../class_catch_1_1_expr_lhs.html',1,'Catch']]],

@@ -12,7 +12,6 @@ var searchData=
   ['exportimagedialog',['ExportImageDialog',['../class_export_image_dialog.html',1,'']]],
   ['exportmoviedesc',['ExportMovieDesc',['../struct_export_movie_desc.html',1,'']]],
   ['exportmoviedialog',['ExportMovieDialog',['../class_export_movie_dialog.html',1,'']]],
-  ['exportmovieparameters',['ExportMovieParameters',['../struct_export_movie_parameters.html',1,'']]],
   ['exprlhs',['ExprLhs',['../class_catch_1_1_expr_lhs.html',1,'Catch']]],
   ['extraselection',['ExtraSelection',['https://doc.qt.io/qt-5/qtextedit-extraselection.html',1,'QTextEdit']]],
   ['eyedroppertool',['EyedropperTool',['../class_eyedropper_tool.html',1,'']]]
