@@ -199,7 +199,7 @@ var searchData=
   ['floatable',['floatable',['https://doc.qt.io/qt-5/qtoolbar.html#floatable-prop',1,'QToolBar']]],
   ['floating',['floating',['https://doc.qt.io/qt-5/qdockwidget.html#floating-prop',1,'QDockWidget::floating()'],['https://doc.qt.io/qt-5/qtoolbar.html#floating-prop',1,'QToolBar::floating()']]],
   ['floatingpoint',['FloatingPoint',['https://doc.qt.io/qt-5/qpixelformat.html#TypeInterpretation-enum',1,'QPixelFormat']]],
-  ['floatingpointprecision',['FloatingPointPrecision',['https://doc.qt.io/qt-5/qdatastream.html#FloatingPointPrecision-enum',1,'QDataStream::FloatingPointPrecision()'],['https://doc.qt.io/qt-5/qdatastream.html#floatingPointPrecision',1,'QDataStream::floatingPointPrecision() const const']]],
+  ['floatingpointprecision',['floatingPointPrecision',['https://doc.qt.io/qt-5/qdatastream.html#floatingPointPrecision',1,'QDataStream::floatingPointPrecision() const const'],['https://doc.qt.io/qt-5/qdatastream.html#FloatingPointPrecision-enum',1,'QDataStream::FloatingPointPrecision()']]],
   ['floatingpointprecisionoption',['FloatingPointPrecisionOption',['https://doc.qt.io/qt-5/qlocale.html#FloatingPointPrecisionOption-enum',1,'QLocale']]],
   ['floatingpointshortest',['FloatingPointShortest',['https://doc.qt.io/qt-5/qlocale.html#FloatingPointPrecisionOption-enum',1,'QLocale']]],
   ['floatleft',['FloatLeft',['https://doc.qt.io/qt-5/qtextframeformat.html#Position-enum',1,'QTextFrameFormat']]],
