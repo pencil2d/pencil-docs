@@ -1,8 +1,9 @@
 var searchData=
 [
   ['paintcontext',['PaintContext',['https://doc.qt.io/qt-5/qabstracttextdocumentlayout-paintcontext.html',1,'QAbstractTextDocumentLayout']]],
+  ['pegbaraligner',['PegBarAligner',['../class_peg_bar_aligner.html',1,'']]],
   ['pegbaralignmentdialog',['PegBarAlignmentDialog',['../class_peg_bar_alignment_dialog.html',1,'']]],
-  ['pegbarresult',['PegbarResult',['../struct_pegbar_result.html',1,'']]],
+  ['pegstatus',['PegStatus',['../class_peg_status.html',1,'']]],
   ['pencil2d',['Pencil2D',['../class_pencil2_d.html',1,'']]],
   ['penciltool',['PencilTool',['../class_pencil_tool.html',1,'']]],
   ['pentool',['PenTool',['../class_pen_tool.html',1,'']]],
