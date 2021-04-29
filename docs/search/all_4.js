@@ -38,7 +38,7 @@ var searchData=
   ['effectivewinid',['effectiveWinId',['https://doc.qt.io/qt-5/qwidget.html#effectiveWinId',1,'QWidget']]],
   ['egypt',['Egypt',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['egyptianhieroglyphsscript',['EgyptianHieroglyphsScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
-  ['elapsed',['elapsed',['https://doc.qt.io/qt-5/qelapsedtimer.html#elapsed',1,'QElapsedTimer::elapsed()'],['https://doc.qt.io/qt-5/qtime.html#elapsed',1,'QTime::elapsed()']]],
+  ['elapsed',['elapsed',['https://doc.qt.io/qt-5/qelapsedtimer.html#elapsed',1,'QElapsedTimer::elapsed()'],['https://doc.qt.io/qt-5/qtime-obsolete.html#elapsed',1,'QTime::elapsed()']]],
   ['elbasanscript',['ElbasanScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['element',['Element',['https://doc.qt.io/qt-5/qpainterpath-element.html',1,'QPainterPath']]],
   ['element',['Element',['https://doc.qt.io/qt-5/qxmlnodemodelindex.html#NodeKind-enum',1,'QXmlNodeModelIndex']]],

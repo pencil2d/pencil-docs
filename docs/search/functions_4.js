@@ -13,7 +13,7 @@ var searchData=
   ['effectiveopacity',['effectiveOpacity',['https://doc.qt.io/qt-5/qgraphicsitem.html#effectiveOpacity',1,'QGraphicsItem']]],
   ['effectivesizehint',['effectiveSizeHint',['https://doc.qt.io/qt-5/qgraphicslayoutitem.html#effectiveSizeHint',1,'QGraphicsLayoutItem']]],
   ['effectivewinid',['effectiveWinId',['https://doc.qt.io/qt-5/qwidget.html#effectiveWinId',1,'QWidget']]],
-  ['elapsed',['elapsed',['https://doc.qt.io/qt-5/qelapsedtimer.html#elapsed',1,'QElapsedTimer::elapsed()'],['https://doc.qt.io/qt-5/qtime.html#elapsed',1,'QTime::elapsed()']]],
+  ['elapsed',['elapsed',['https://doc.qt.io/qt-5/qelapsedtimer.html#elapsed',1,'QElapsedTimer::elapsed()'],['https://doc.qt.io/qt-5/qtime-obsolete.html#elapsed',1,'QTime::elapsed()']]],
   ['elementat',['elementAt',['https://doc.qt.io/qt-5/qpainterpath.html#elementAt',1,'QPainterPath']]],
   ['elementbyid',['elementById',['https://doc.qt.io/qt-5/qdomdocument.html#elementById',1,'QDomDocument::elementById()'],['https://doc.qt.io/qt-5/qabstractxmlnodemodel.html#elementById',1,'QAbstractXmlNodeModel::elementById()'],['https://doc.qt.io/qt-5/qsimplexmlnodemodel.html#elementById',1,'QSimpleXmlNodeModel::elementById()']]],
   ['elementcount',['elementCount',['https://doc.qt.io/qt-5/qpainterpath.html#elementCount',1,'QPainterPath']]],
