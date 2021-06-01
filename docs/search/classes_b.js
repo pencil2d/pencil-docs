@@ -1,6 +1,7 @@
 var searchData=
 [
   ['mainwindow2',['MainWindow2',['../class_main_window2.html',1,'']]],
+  ['mapgenerator',['MapGenerator',['../class_catch_1_1_generators_1_1_map_generator.html',1,'Catch::Generators']]],
   ['matchallof',['MatchAllOf',['../struct_catch_1_1_matchers_1_1_impl_1_1_match_all_of.html',1,'Catch::Matchers::Impl']]],
   ['matchanyof',['MatchAnyOf',['../struct_catch_1_1_matchers_1_1_impl_1_1_match_any_of.html',1,'Catch::Matchers::Impl']]],
   ['matcherbase',['MatcherBase',['../struct_catch_1_1_matchers_1_1_impl_1_1_matcher_base.html',1,'Catch::Matchers::Impl']]],

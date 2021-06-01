@@ -8,7 +8,6 @@ var searchData=
   ['basedockwidget',['BaseDockWidget',['../class_base_dock_widget.html',1,'']]],
   ['basemanager',['BaseManager',['../class_base_manager.html',1,'']]],
   ['basetool',['BaseTool',['../class_base_tool.html',1,'']]],
-  ['benchmarklooper',['BenchmarkLooper',['../class_catch_1_1_benchmark_looper.html',1,'Catch']]],
   ['bezierarea',['BezierArea',['../class_bezier_area.html',1,'']]],
   ['beziercurve',['BezierCurve',['../class_bezier_curve.html',1,'']]],
   ['binaryexpr',['BinaryExpr',['../class_catch_1_1_binary_expr.html',1,'Catch']]],
