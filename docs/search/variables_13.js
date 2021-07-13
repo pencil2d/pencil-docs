@@ -195,7 +195,7 @@ var searchData=
   ['time',['Time',['https://doc.qt.io/qt-5/qdir.html#SortFlag-enum',1,'QDir::Time()'],['https://doc.qt.io/qt-5/quuid.html#Version-enum',1,'QUuid::Time()'],['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant::Time()']]],
   ['timecriticalpriority',['TimeCriticalPriority',['https://doc.qt.io/qt-5/qthread.html#Priority-enum',1,'QThread']]],
   ['timedout',['Timedout',['https://doc.qt.io/qt-5/qprocess.html#ProcessError-enum',1,'QProcess']]],
-  ['timeouterror',['TimeoutError',['https://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum',1,'QNetworkReply::TimeoutError()'],['https://doc.qt.io/qt-5/qfiledevice.html#FileError-enum',1,'QFileDevice::TimeOutError()']]],
+  ['timeouterror',['TimeOutError',['https://doc.qt.io/qt-5/qfiledevice.html#FileError-enum',1,'QFileDevice::TimeOutError()'],['https://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum',1,'QNetworkReply::TimeoutError()']]],
   ['timer',['Timer',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['times',['Times',['https://doc.qt.io/qt-5/qfont.html#StyleHint-enum',1,'QFont']]],
   ['timesections_5fmask',['TimeSections_Mask',['https://doc.qt.io/qt-5/qdatetimeedit.html#Section-enum',1,'QDateTimeEdit']]],

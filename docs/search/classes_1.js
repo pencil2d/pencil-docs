@@ -12,8 +12,10 @@ var searchData=
   ['beziercurve',['BezierCurve',['../class_bezier_curve.html',1,'']]],
   ['binaryexpr',['BinaryExpr',['../class_catch_1_1_binary_expr.html',1,'Catch']]],
   ['binder',['Binder',['https://doc.qt.io/qt-5/qopenglvertexarrayobject-binder.html',1,'QOpenGLVertexArrayObject']]],
+  ['bitmapbucket',['BitmapBucket',['../class_bitmap_bucket.html',1,'']]],
   ['bitmapimage',['BitmapImage',['../class_bitmap_image.html',1,'']]],
   ['blitrect',['BlitRect',['../class_blit_rect.html',1,'']]],
   ['brushtool',['BrushTool',['../class_brush_tool.html',1,'']]],
+  ['bucketoptionswidget',['BucketOptionsWidget',['../class_bucket_options_widget.html',1,'']]],
   ['buckettool',['BucketTool',['../class_bucket_tool.html',1,'']]]
 ];
