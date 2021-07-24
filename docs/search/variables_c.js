@@ -109,6 +109,7 @@ var searchData=
   ['md5',['Md5',['https://doc.qt.io/qt-5/qcryptographichash.html#Algorithm-enum',1,'QCryptographicHash::Md5()'],['https://doc.qt.io/qt-5/quuid.html#Version-enum',1,'QUuid::Md5()']]],
   ['meanfruit',['MeanFruit',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['medial',['Medial',['https://doc.qt.io/qt-5/qchar.html#Decomposition-enum',1,'QChar']]],
+  ['meditor',['mEditor',['../class_status_bar.html#acae46202c284e52dfffcb63354b4f6a9',1,'StatusBar']]],
   ['medium',['Medium',['https://doc.qt.io/qt-5/qfont.html#Weight-enum',1,'QFont']]],
   ['mediumseverity',['MediumSeverity',['https://doc.qt.io/qt-5/qopengldebugmessage.html#Severity-enum',1,'QOpenGLDebugMessage']]],
   ['meiteimayekscript',['MeiteiMayekScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
@@ -169,6 +170,7 @@ var searchData=
   ['mixedhopes',['MixedHopes',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['mixedtype',['MixedType',['https://doc.qt.io/qt-5/qhttpmultipart.html#ContentType-enum',1,'QHttpMultiPart']]],
   ['mminbound',['mMinBound',['../class_bitmap_image.html#a519b6d9017ee9c7482b8f27cbe94349c',1,'BitmapImage']]],
+  ['mmodifiedlabel',['mModifiedLabel',['../class_status_bar.html#ae8e80a59190abd7dd6d82a145068c153',1,'StatusBar']]],
   ['modelindex',['ModelIndex',['https://doc.qt.io/qt-5/qvariant-obsolete.html#Type-enum',1,'QVariant']]],
   ['modelreset',['ModelReset',['https://doc.qt.io/qt-5/qaccessibletablemodelchangeevent.html#ModelChangeType-enum',1,'QAccessibleTableModelChangeEvent']]],
   ['moderatecaching',['ModerateCaching',['https://doc.qt.io/qt-5/qstatictext.html#PerformanceHint-enum',1,'QStaticText']]],
@@ -261,6 +263,8 @@ var searchData=
   ['msecsection',['MSecSection',['https://doc.qt.io/qt-5/qdatetimeedit.html#Section-enum',1,'QDateTimeEdit']]],
   ['mswindowsfixedsizedialoghint',['MSWindowsFixedSizeDialogHint',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
   ['mswindowsowndc',['MSWindowsOwnDC',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
+  ['mtoolicon',['mToolIcon',['../class_status_bar.html#abf4ac7d60d381c626c33e72477fcf79f',1,'StatusBar']]],
+  ['mtoollabel',['mToolLabel',['../class_status_bar.html#a5852e80ed2a06ed4eca16d82f162a366',1,'StatusBar']]],
   ['multaniscript',['MultaniScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['multicastloopbackoption',['MulticastLoopbackOption',['https://doc.qt.io/qt-5/qabstractsocket.html#SocketOption-enum',1,'QAbstractSocket']]],
   ['multicastttloption',['MulticastTtlOption',['https://doc.qt.io/qt-5/qabstractsocket.html#SocketOption-enum',1,'QAbstractSocket']]],
@@ -331,5 +335,7 @@ var searchData=
   ['mv_5fyosemite',['MV_YOSEMITE',['https://doc.qt.io/qt-5/qsysinfo-obsolete.html#MacVersion-enum',1,'QSysInfo']]],
   ['mx',['MX',['https://doc.qt.io/qt-5/qdnslookup.html#Type-enum',1,'QDnsLookup']]],
   ['myanmar',['Myanmar',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale::Myanmar()'],['https://doc.qt.io/qt-5/qfontdatabase.html#WritingSystem-enum',1,'QFontDatabase::Myanmar()']]],
-  ['myanmarscript',['MyanmarScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]]
+  ['myanmarscript',['MyanmarScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
+  ['mzoombox',['mZoomBox',['../class_status_bar.html#aa9c9b0196761ec4cd5353990bad5c379',1,'StatusBar']]],
+  ['mzoomslider',['mZoomSlider',['../class_status_bar.html#aebed852cac3ee3b5b5e8889686f34721',1,'StatusBar']]]
 ];

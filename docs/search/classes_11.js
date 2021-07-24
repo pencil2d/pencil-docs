@@ -26,6 +26,7 @@ var searchData=
   ['startswithmatcher',['StartsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_starts_with_matcher.html',1,'Catch::Matchers::StdString']]],
   ['state',['State',['https://doc.qt.io/qt-5/qaccessible-state.html',1,'QAccessible']]],
   ['status',['Status',['../class_status.html',1,'']]],
+  ['statusbar',['StatusBar',['../class_status_bar.html',1,'']]],
   ['streamendstop',['StreamEndStop',['../struct_catch_1_1_stream_end_stop.html',1,'Catch']]],
   ['stringmaker',['StringMaker',['../struct_catch_1_1_string_maker.html',1,'Catch']]],
   ['stringmaker_3c_20bool_20_3e',['StringMaker&lt; bool &gt;',['../struct_catch_1_1_string_maker_3_01bool_01_4.html',1,'Catch']]],

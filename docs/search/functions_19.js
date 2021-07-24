@@ -3,6 +3,7 @@ var searchData=
   ['z',['z',['https://doc.qt.io/qt-5/qquaternion.html#z',1,'QQuaternion::z()'],['https://doc.qt.io/qt-5/qtabletevent.html#z',1,'QTabletEvent::z()'],['https://doc.qt.io/qt-5/qvector3d.html#z',1,'QVector3D::z()'],['https://doc.qt.io/qt-5/qvector4d.html#z',1,'QVector4D::z()']]],
   ['zchanged',['zChanged',['https://doc.qt.io/qt-5/qgraphicsobject.html#zChanged',1,'QGraphicsObject']]],
   ['zerodigit',['zeroDigit',['https://doc.qt.io/qt-5/qlocale.html#zeroDigit',1,'QLocale']]],
+  ['zoomchanged',['zoomChanged',['../class_status_bar.html#acdb54f2c1ebf1192013476d475d42cfc',1,'StatusBar']]],
   ['zoomin',['zoomIn',['https://doc.qt.io/qt-5/qplaintextedit.html#zoomIn',1,'QPlainTextEdit::zoomIn()'],['https://doc.qt.io/qt-5/qtextedit.html#zoomIn',1,'QTextEdit::zoomIn()']]],
   ['zoomout',['zoomOut',['https://doc.qt.io/qt-5/qplaintextedit.html#zoomOut',1,'QPlainTextEdit::zoomOut()'],['https://doc.qt.io/qt-5/qtextedit.html#zoomOut',1,'QTextEdit::zoomOut()']]],
   ['zscale',['zScale',['https://doc.qt.io/qt-5/qgraphicsscale.html#zScale-prop',1,'QGraphicsScale']]],

@@ -21,6 +21,7 @@ var searchData=
   ['elementid',['elementId',['https://doc.qt.io/qt-5/qgraphicssvgitem.html#elementId',1,'QGraphicsSvgItem']]],
   ['elementsbytagname',['elementsByTagName',['https://doc.qt.io/qt-5/qdomdocument.html#elementsByTagName',1,'QDomDocument::elementsByTagName()'],['https://doc.qt.io/qt-5/qdomelement.html#elementsByTagName',1,'QDomElement::elementsByTagName()']]],
   ['elementsbytagnamens',['elementsByTagNameNS',['https://doc.qt.io/qt-5/qdomdocument.html#elementsByTagNameNS',1,'QDomDocument::elementsByTagNameNS()'],['https://doc.qt.io/qt-5/qdomelement.html#elementsByTagNameNS',1,'QDomElement::elementsByTagNameNS()']]],
+  ['elidedlabel',['ElidedLabel',['../class_elided_label.html#a09b11bfe02eb292a02d54e083c58cb7c',1,'ElidedLabel']]],
   ['elidedtext',['elidedText',['https://doc.qt.io/qt-5/qfontmetrics.html#elidedText',1,'QFontMetrics::elidedText()'],['https://doc.qt.io/qt-5/qfontmetricsf.html#elidedText',1,'QFontMetricsF::elidedText()'],['https://doc.qt.io/qt-5/qabstractitemdelegate-obsolete.html#elidedText',1,'QAbstractItemDelegate::elidedText()']]],
   ['elidemode',['elideMode',['https://doc.qt.io/qt-5/qtabbar.html#elideMode-prop',1,'QTabBar::elideMode()'],['https://doc.qt.io/qt-5/qtabwidget.html#elideMode-prop',1,'QTabWidget::elideMode()']]],
   ['ellipsediameters',['ellipseDiameters',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html#ellipseDiameters',1,'QTouchEvent::TouchPoint']]],

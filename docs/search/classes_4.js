@@ -2,6 +2,7 @@ var searchData=
 [
   ['editor',['Editor',['../class_editor.html',1,'']]],
   ['element',['Element',['https://doc.qt.io/qt-5/qpainterpath-element.html',1,'QPainterPath']]],
+  ['elidedlabel',['ElidedLabel',['../class_elided_label.html',1,'']]],
   ['endswithmatcher',['EndsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_ends_with_matcher.html',1,'Catch::Matchers::StdString']]],
   ['enuminfo',['EnumInfo',['../struct_catch_1_1_detail_1_1_enum_info.html',1,'Catch::Detail']]],
   ['equalsmatcher',['EqualsMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_equals_matcher.html',1,'Catch::Matchers::StdString']]],

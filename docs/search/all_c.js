@@ -246,6 +246,7 @@ var searchData=
   ['meanfruit',['MeanFruit',['https://doc.qt.io/qt-5/qgradient.html#Preset-enum',1,'QGradient']]],
   ['measurementsystem',['measurementSystem',['https://doc.qt.io/qt-5/qlocale.html#measurementSystem',1,'QLocale::measurementSystem() const const'],['https://doc.qt.io/qt-5/qlocale.html#MeasurementSystem-enum',1,'QLocale::MeasurementSystem()']]],
   ['medial',['Medial',['https://doc.qt.io/qt-5/qchar.html#Decomposition-enum',1,'QChar']]],
+  ['meditor',['mEditor',['../class_status_bar.html#acae46202c284e52dfffcb63354b4f6a9',1,'StatusBar']]],
   ['medium',['Medium',['https://doc.qt.io/qt-5/qfont.html#Weight-enum',1,'QFont']]],
   ['mediumseverity',['MediumSeverity',['https://doc.qt.io/qt-5/qopengldebugmessage.html#Severity-enum',1,'QOpenGLDebugMessage']]],
   ['meiteimayekscript',['MeiteiMayekScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
@@ -345,7 +346,7 @@ var searchData=
   ['minimumdescent',['MinimumDescent',['https://doc.qt.io/qt-5/qt.html#SizeHint-enum',1,'Qt']]],
   ['minimumduration',['minimumDuration',['https://doc.qt.io/qt-5/qprogressdialog.html#minimumDuration-prop',1,'QProgressDialog::minimumDuration()'],['https://doc.qt.io/qt-5/qprogressdialog.html#minimumDuration-prop',1,'QProgressDialog::minimumDuration() const const']]],
   ['minimumexpanding',['MinimumExpanding',['https://doc.qt.io/qt-5/qsizepolicy.html#Policy-enum',1,'QSizePolicy']]],
-  ['minimumheight',['minimumHeight',['https://doc.qt.io/qt-5/qwindow.html#minimumHeight-prop',1,'QWindow::minimumHeight()'],['https://doc.qt.io/qt-5/qwidget.html#minimumHeight-prop',1,'QWidget::minimumHeight()'],['https://doc.qt.io/qt-5/qwindow.html#minimumHeight-prop',1,'QWindow::minimumHeight()'],['https://doc.qt.io/qt-5/qgraphicslayoutitem.html#minimumHeight',1,'QGraphicsLayoutItem::minimumHeight()'],['https://doc.qt.io/qt-5/qwidget.html#minimumHeight-prop',1,'QWidget::minimumHeight()'],['https://doc.qt.io/qt-5/qtextblockformat.html#LineHeightTypes-enum',1,'QTextBlockFormat::MinimumHeight()']]],
+  ['minimumheight',['MinimumHeight',['https://doc.qt.io/qt-5/qtextblockformat.html#LineHeightTypes-enum',1,'QTextBlockFormat::MinimumHeight()'],['https://doc.qt.io/qt-5/qwindow.html#minimumHeight-prop',1,'QWindow::minimumHeight()'],['https://doc.qt.io/qt-5/qwidget.html#minimumHeight-prop',1,'QWidget::minimumHeight()'],['https://doc.qt.io/qt-5/qwindow.html#minimumHeight-prop',1,'QWindow::minimumHeight()'],['https://doc.qt.io/qt-5/qgraphicslayoutitem.html#minimumHeight',1,'QGraphicsLayoutItem::minimumHeight()'],['https://doc.qt.io/qt-5/qwidget.html#minimumHeight-prop',1,'QWidget::minimumHeight()']]],
   ['minimumheightchanged',['minimumHeightChanged',['https://doc.qt.io/qt-5/qwindow.html#minimumHeight-prop',1,'QWindow']]],
   ['minimumheightforwidth',['minimumHeightForWidth',['https://doc.qt.io/qt-5/qboxlayout.html#minimumHeightForWidth',1,'QBoxLayout::minimumHeightForWidth()'],['https://doc.qt.io/qt-5/qgridlayout.html#minimumHeightForWidth',1,'QGridLayout::minimumHeightForWidth()'],['https://doc.qt.io/qt-5/qlayoutitem.html#minimumHeightForWidth',1,'QLayoutItem::minimumHeightForWidth()']]],
   ['minimumlevelofdetail',['minimumLevelOfDetail',['https://doc.qt.io/qt-5/qopengltexture.html#minimumLevelOfDetail',1,'QOpenGLTexture']]],
@@ -390,6 +391,7 @@ var searchData=
   ['mkdir',['mkdir',['https://doc.qt.io/qt-5/qdir.html#mkdir',1,'QDir::mkdir()'],['https://doc.qt.io/qt-5/qdirmodel.html#mkdir',1,'QDirModel::mkdir()'],['https://doc.qt.io/qt-5/qfilesystemmodel.html#mkdir',1,'QFileSystemModel::mkdir()']]],
   ['mkpath',['mkpath',['https://doc.qt.io/qt-5/qdir.html#mkpath',1,'QDir']]],
   ['mminbound',['mMinBound',['../class_bitmap_image.html#a519b6d9017ee9c7482b8f27cbe94349c',1,'BitmapImage']]],
+  ['mmodifiedlabel',['mModifiedLabel',['../class_status_bar.html#ae8e80a59190abd7dd6d82a145068c153',1,'StatusBar']]],
   ['mnemonic',['mnemonic',['https://doc.qt.io/qt-5/qkeysequence.html#mnemonic',1,'QKeySequence']]],
   ['modal',['modal',['https://doc.qt.io/qt-5/qdialog.html#modal-prop',1,'QDialog::modal()'],['https://doc.qt.io/qt-5/qwidget.html#modal-prop',1,'QWidget::modal()']]],
   ['modality',['modality',['https://doc.qt.io/qt-5/qwindow.html#modality-prop',1,'QWindow::modality()'],['https://doc.qt.io/qt-5/qwindow.html#modality-prop',1,'QWindow::modality() const const']]],
@@ -561,6 +563,8 @@ var searchData=
   ['msleep',['msleep',['https://doc.qt.io/qt-5/qthread.html#msleep',1,'QThread']]],
   ['mswindowsfixedsizedialoghint',['MSWindowsFixedSizeDialogHint',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
   ['mswindowsowndc',['MSWindowsOwnDC',['https://doc.qt.io/qt-5/qt.html#WindowType-enum',1,'Qt']]],
+  ['mtoolicon',['mToolIcon',['../class_status_bar.html#abf4ac7d60d381c626c33e72477fcf79f',1,'StatusBar']]],
+  ['mtoollabel',['mToolLabel',['../class_status_bar.html#a5852e80ed2a06ed4eca16d82f162a366',1,'StatusBar']]],
   ['mtuhint',['mtuHint',['https://doc.qt.io/qt-5/qdtls.html#mtuHint',1,'QDtls']]],
   ['multaniscript',['MultaniScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['multicastinterface',['multicastInterface',['https://doc.qt.io/qt-5/qudpsocket.html#multicastInterface',1,'QUdpSocket']]],
@@ -643,5 +647,7 @@ var searchData=
   ['mz_5fzip_5farray',['mz_zip_array',['../structmz__zip__array.html',1,'']]],
   ['mz_5fzip_5finternal_5fstate_5ftag',['mz_zip_internal_state_tag',['../structmz__zip__internal__state__tag.html',1,'']]],
   ['mz_5fzip_5freader_5fextract_5fiter_5fstate',['mz_zip_reader_extract_iter_state',['../structmz__zip__reader__extract__iter__state.html',1,'']]],
-  ['mz_5fzip_5fwriter_5fadd_5fstate',['mz_zip_writer_add_state',['../structmz__zip__writer__add__state.html',1,'']]]
+  ['mz_5fzip_5fwriter_5fadd_5fstate',['mz_zip_writer_add_state',['../structmz__zip__writer__add__state.html',1,'']]],
+  ['mzoombox',['mZoomBox',['../class_status_bar.html#aa9c9b0196761ec4cd5353990bad5c379',1,'StatusBar']]],
+  ['mzoomslider',['mZoomSlider',['../class_status_bar.html#aebed852cac3ee3b5b5e8889686f34721',1,'StatusBar']]]
 ];
