@@ -66,7 +66,7 @@ var searchData=
   ['lastvalidcodepoint',['LastValidCodePoint',['https://doc.qt.io/qt-5/qchar.html#SpecialCharacter-enum',1,'QChar']]],
   ['lastwindowclosed',['lastWindowClosed',['https://doc.qt.io/qt-5/qguiapplication.html#lastWindowClosed',1,'QGuiApplication']]],
   ['latin',['Latin',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale::Latin()'],['https://doc.qt.io/qt-5/qfontdatabase.html#WritingSystem-enum',1,'QFontDatabase::Latin()']]],
-  ['latin1',['Latin1',['https://doc.qt.io/qt-5/qcoreapplication-obsolete.html#Encoding-enum',1,'QCoreApplication::Latin1()'],['https://doc.qt.io/qt-5/qlatin1string.html#latin1',1,'QLatin1String::latin1()']]],
+  ['latin1',['latin1',['https://doc.qt.io/qt-5/qlatin1string.html#latin1',1,'QLatin1String::latin1()'],['https://doc.qt.io/qt-5/qcoreapplication-obsolete.html#Encoding-enum',1,'QCoreApplication::Latin1()']]],
   ['latinamerica',['LatinAmerica',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['latinamericaandthecaribbean',['LatinAmericaAndTheCaribbean',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],
   ['latinscript',['LatinScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
