@@ -199,6 +199,7 @@ var searchData=
   ['qfinalstate',['QFinalState',['https://doc.qt.io/qt-5/qfinalstate.html',1,'']]],
   ['qflag',['QFlag',['https://doc.qt.io/qt-5/qflag.html',1,'']]],
   ['qflags',['QFlags',['https://doc.qt.io/qt-5/qflags.html',1,'']]],
+  ['qflags_3c_20qt_3a_3akey_20_3e',['QFlags&lt; Qt::Key &gt;',['https://doc.qt.io/qt-5/qflags.html',1,'']]],
   ['qfloat16',['qfloat16',['https://doc.qt.io/qt-5/qfloat16.html',1,'']]],
   ['qfocusevent',['QFocusEvent',['https://doc.qt.io/qt-5/qfocusevent.html',1,'']]],
   ['qfocusframe',['QFocusFrame',['https://doc.qt.io/qt-5/qfocusframe.html',1,'']]],

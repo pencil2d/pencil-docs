@@ -301,6 +301,7 @@ var searchData=
   ['qfindtestdata',['QFINDTESTDATA',['https://doc.qt.io/qt-5/qtest.html#QFINDTESTDATA',1,'QTest']]],
   ['qflag',['QFlag',['https://doc.qt.io/qt-5/qflag.html',1,'QFlag'],['https://doc.qt.io/qt-5/qflag.html#QFlag',1,'QFlag::QFlag(int value)'],['https://doc.qt.io/qt-5/qflag.html#QFlag-1',1,'QFlag::QFlag(uint value)'],['https://doc.qt.io/qt-5/qflag.html#QFlag-2',1,'QFlag::QFlag(short value)'],['https://doc.qt.io/qt-5/qflag.html#QFlag-3',1,'QFlag::QFlag(ushort value)']]],
   ['qflags',['QFlags',['https://doc.qt.io/qt-5/qflags.html',1,'QFlags'],['https://doc.qt.io/qt-5/qflags.html#QFlags',1,'QFlags::QFlags(const QFlags&lt; T &gt; &amp;other)'],['https://doc.qt.io/qt-5/qflags.html#QFlags-1',1,'QFlags::QFlags()'],['https://doc.qt.io/qt-5/qflags.html#QFlags-2',1,'QFlags::QFlags(Enum flags)'],['https://doc.qt.io/qt-5/qflags-obsolete.html#QFlags-3',1,'QFlags::QFlags(QFlags::Zero)'],['https://doc.qt.io/qt-5/qflags.html#QFlags-4',1,'QFlags::QFlags(QFlag flag)'],['https://doc.qt.io/qt-5/qflags.html#QFlags-5',1,'QFlags::QFlags(std::initializer_list&lt; Enum &gt; flags)']]],
+  ['qflags_3c_20qt_3a_3akey_20_3e',['QFlags&lt; Qt::Key &gt;',['https://doc.qt.io/qt-5/qflags.html',1,'']]],
   ['qfloat16',['qfloat16',['https://doc.qt.io/qt-5/qfloat16.html',1,'']]],
   ['qfloatfromfloat16',['qFloatFromFloat16',['https://doc.qt.io/qt-5/qfloat16.html#qFloatFromFloat16',1,'qfloat16']]],
   ['qfloattofloat16',['qFloatToFloat16',['https://doc.qt.io/qt-5/qfloat16.html#qFloatToFloat16',1,'qfloat16']]],
