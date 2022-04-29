@@ -63,7 +63,6 @@ var searchData=
   ['mandaeanscript',['MandaeanScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['mandatorybreak',['MandatoryBreak',['https://doc.qt.io/qt-5/qtextboundaryfinder.html#BoundaryReason-enum',1,'QTextBoundaryFinder']]],
   ['mandingo',['Mandingo',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
-  ['manhattandistance',['manhattanDistance',['../class_bitmap_image.html#a2acf537bfc72940658256932018f74e5',1,'BitmapImage']]],
   ['manhattanlength',['manhattanLength',['https://doc.qt.io/qt-5/qpoint.html#manhattanLength',1,'QPoint::manhattanLength()'],['https://doc.qt.io/qt-5/qpointf.html#manhattanLength',1,'QPointF::manhattanLength()']]],
   ['manichaeanmiddlepersian',['ManichaeanMiddlePersian',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale']]],
   ['manichaeanscript',['ManichaeanScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
