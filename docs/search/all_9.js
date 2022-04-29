@@ -30,7 +30,7 @@ var searchData=
   ['joining_5fnone',['Joining_None',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
   ['joining_5fright',['Joining_Right',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
   ['joining_5ftransparent',['Joining_Transparent',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar']]],
-  ['joiningtype',['joiningType',['https://doc.qt.io/qt-5/qchar.html#joiningType',1,'QChar::joiningType() const const'],['https://doc.qt.io/qt-5/qchar.html#joiningType-1',1,'QChar::joiningType(uint ucs4)'],['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar::JoiningType()']]],
+  ['joiningtype',['JoiningType',['https://doc.qt.io/qt-5/qchar.html#JoiningType-enum',1,'QChar::JoiningType()'],['https://doc.qt.io/qt-5/qchar.html#joiningType',1,'QChar::joiningType() const const'],['https://doc.qt.io/qt-5/qchar.html#joiningType-1',1,'QChar::joiningType(uint ucs4)']]],
   ['joinmulticastgroup',['joinMulticastGroup',['https://doc.qt.io/qt-5/qudpsocket.html#joinMulticastGroup',1,'QUdpSocket::joinMulticastGroup(const QHostAddress &amp;groupAddress)'],['https://doc.qt.io/qt-5/qudpsocket.html#joinMulticastGroup-1',1,'QUdpSocket::joinMulticastGroup(const QHostAddress &amp;groupAddress, const QNetworkInterface &amp;iface)']]],
   ['joinpreviouseditblock',['joinPreviousEditBlock',['https://doc.qt.io/qt-5/qtextcursor.html#joinPreviousEditBlock',1,'QTextCursor']]],
   ['joinstyle',['joinStyle',['https://doc.qt.io/qt-5/qpainterpathstroker.html#joinStyle',1,'QPainterPathStroker::joinStyle()'],['https://doc.qt.io/qt-5/qpen.html#joinStyle',1,'QPen::joinStyle()']]],
