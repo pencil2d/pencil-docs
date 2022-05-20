@@ -1120,7 +1120,7 @@ var searchData=
   ['queuedconnection',['QueuedConnection',['https://doc.qt.io/qt-5/qt.html#ConnectionType-enum',1,'Qt']]],
   ['quickdraw',['QuickDraw',['https://doc.qt.io/qt-5/qpaintengine.html#Type-enum',1,'QPaintEngine']]],
   ['quicksizecursor',['quickSizeCursor',['../class_base_tool.html#ab119a5b829fa57e106e50171f77511d2',1,'BaseTool']]],
-  ['quit',['quit',['https://doc.qt.io/qt-5/qcoreapplication.html#quit',1,'QCoreApplication::quit()'],['https://doc.qt.io/qt-5/qeventloop.html#quit',1,'QEventLoop::quit()'],['https://doc.qt.io/qt-5/qthread.html#quit',1,'QThread::quit()'],['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Quit()'],['https://doc.qt.io/qt-5/qkeysequence.html#StandardKey-enum',1,'QKeySequence::Quit()']]],
+  ['quit',['Quit',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent::Quit()'],['https://doc.qt.io/qt-5/qkeysequence.html#StandardKey-enum',1,'QKeySequence::Quit()'],['https://doc.qt.io/qt-5/qcoreapplication.html#quit',1,'QCoreApplication::quit()'],['https://doc.qt.io/qt-5/qeventloop.html#quit',1,'QEventLoop::quit()'],['https://doc.qt.io/qt-5/qthread.html#quit',1,'QThread::quit()']]],
   ['quitlockenabled',['quitLockEnabled',['https://doc.qt.io/qt-5/qcoreapplication.html#quitLockEnabled-prop',1,'QCoreApplication']]],
   ['quitonlastwindowclosed',['quitOnLastWindowClosed',['https://doc.qt.io/qt-5/qguiapplication.html#quitOnLastWindowClosed-prop',1,'QGuiApplication::quitOnLastWindowClosed()'],['https://doc.qt.io/qt-5/qguiapplication.html#quitOnLastWindowClosed-prop',1,'QGuiApplication::quitOnLastWindowClosed()']]],
   ['quitrole',['QuitRole',['https://doc.qt.io/qt-5/qaction.html#MenuRole-enum',1,'QAction']]],
