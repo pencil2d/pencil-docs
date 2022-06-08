@@ -15,7 +15,7 @@ var searchData=
   ['handshakecomplete',['HandshakeComplete',['https://doc.qt.io/qt-5/qdtls.html#HandshakeState-enum',1,'QDtls']]],
   ['handshakeinprogress',['HandshakeInProgress',['https://doc.qt.io/qt-5/qdtls.html#HandshakeState-enum',1,'QDtls']]],
   ['handshakenotstarted',['HandshakeNotStarted',['https://doc.qt.io/qt-5/qdtls.html#HandshakeState-enum',1,'QDtls']]],
-  ['handshakestate',['handshakeState',['https://doc.qt.io/qt-5/qdtls.html#handshakeState',1,'QDtls::handshakeState() const const'],['https://doc.qt.io/qt-5/qdtls.html#HandshakeState-enum',1,'QDtls::HandshakeState()']]],
+  ['handshakestate',['HandshakeState',['https://doc.qt.io/qt-5/qdtls.html#HandshakeState-enum',1,'QDtls::HandshakeState()'],['https://doc.qt.io/qt-5/qdtls.html#handshakeState',1,'QDtls::handshakeState() const const']]],
   ['handshaketimeout',['handshakeTimeout',['https://doc.qt.io/qt-5/qdtls.html#handshakeTimeout',1,'QDtls']]],
   ['handtool',['HandTool',['../class_hand_tool.html',1,'']]],
   ['hangulscript',['HangulScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
