@@ -369,6 +369,7 @@ var searchData=
   ['isindatagrammode',['isInDatagramMode',['https://doc.qt.io/qt-5/qsctpsocket.html#isInDatagramMode',1,'QSctpSocket']]],
   ['isindexhidden',['isIndexHidden',['https://doc.qt.io/qt-5/qabstractitemview.html#isIndexHidden',1,'QAbstractItemView::isIndexHidden()'],['https://doc.qt.io/qt-5/qcolumnview.html#isIndexHidden',1,'QColumnView::isIndexHidden()'],['https://doc.qt.io/qt-5/qlistview.html#isIndexHidden',1,'QListView::isIndexHidden()'],['https://doc.qt.io/qt-5/qtableview.html#isIndexHidden',1,'QTableView::isIndexHidden()'],['https://doc.qt.io/qt-5/qtreeview.html#isIndexHidden',1,'QTreeView::isIndexHidden()']]],
   ['isinfoenabled',['isInfoEnabled',['https://doc.qt.io/qt-5/qloggingcategory.html#isInfoEnabled',1,'QLoggingCategory']]],
+  ['isinstanceopen',['isInstanceOpen',['../class_pencil2_d.html#a2d617614f484971c7f6b2217e1baa20b',1,'Pencil2D']]],
   ['isinsubnet',['isInSubnet',['https://doc.qt.io/qt-5/qhostaddress.html#isInSubnet',1,'QHostAddress::isInSubnet(const QHostAddress &amp;subnet, int netmask) const const'],['https://doc.qt.io/qt-5/qhostaddress.html#isInSubnet-1',1,'QHostAddress::isInSubnet(const QPair&lt; QHostAddress, int &gt; &amp;subnet) const const']]],
   ['isinteger',['isInteger',['https://doc.qt.io/qt-5/qcborstreamreader.html#isInteger',1,'QCborStreamReader::isInteger()'],['https://doc.qt.io/qt-5/qcborvalue.html#isInteger',1,'QCborValue::isInteger()']]],
   ['isinteractive',['isInteractive',['https://doc.qt.io/qt-5/qgraphicsview.html#interactive-prop',1,'QGraphicsView']]],
