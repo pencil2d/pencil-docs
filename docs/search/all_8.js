@@ -435,7 +435,7 @@ var searchData=
   ['invalidcacertificate',['InvalidCaCertificate',['https://doc.qt.io/qt-5/qsslerror.html#SslError-enum',1,'QSslError']]],
   ['invalidconfigurationerror',['InvalidConfigurationError',['https://doc.qt.io/qt-5/qnetworksession.html#SessionError-enum',1,'QNetworkSession']]],
   ['invaliddataerror',['InvalidDataError',['https://doc.qt.io/qt-5/qimagereader.html#ImageReaderError-enum',1,'QImageReader']]],
-  ['invaliddatapolicy',['invalidDataPolicy',['https://doc.qt.io/qt-5/qdomimplementation.html#invalidDataPolicy',1,'QDomImplementation::invalidDataPolicy()'],['https://doc.qt.io/qt-5/qdomimplementation.html#InvalidDataPolicy-enum',1,'QDomImplementation::InvalidDataPolicy()']]],
+  ['invaliddatapolicy',['InvalidDataPolicy',['https://doc.qt.io/qt-5/qdomimplementation.html#InvalidDataPolicy-enum',1,'QDomImplementation::InvalidDataPolicy()'],['https://doc.qt.io/qt-5/qdomimplementation.html#invalidDataPolicy',1,'QDomImplementation::invalidDataPolicy()']]],
   ['invalidevent',['InvalidEvent',['https://doc.qt.io/qt-5/qaccessible.html#Event-enum',1,'QAccessible']]],
   ['invalidformat',['InvalidFormat',['https://doc.qt.io/qt-5/qsettings.html#Format-enum',1,'QSettings::InvalidFormat()'],['https://doc.qt.io/qt-5/qtextformat.html#FormatType-enum',1,'QTextFormat::InvalidFormat()']]],
   ['invalidimageerror',['InvalidImageError',['https://doc.qt.io/qt-5/qimagewriter.html#ImageWriterError-enum',1,'QImageWriter']]],
