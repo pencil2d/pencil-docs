@@ -1109,7 +1109,7 @@ var searchData=
   ['queryitems',['queryItems',['https://doc.qt.io/qt-5/qurl-obsolete.html#queryItems',1,'QUrl::queryItems()'],['https://doc.qt.io/qt-5/qurlquery.html#queryItems',1,'QUrlQuery::queryItems()']]],
   ['queryitemvalue',['queryItemValue',['https://doc.qt.io/qt-5/qurl-obsolete.html#queryItemValue',1,'QUrl::queryItemValue()'],['https://doc.qt.io/qt-5/qurlquery.html#queryItemValue',1,'QUrlQuery::queryItemValue()']]],
   ['querykeyboardmodifiers',['queryKeyboardModifiers',['https://doc.qt.io/qt-5/qguiapplication.html#queryKeyboardModifiers',1,'QGuiApplication']]],
-  ['querylanguage',['QueryLanguage',['https://doc.qt.io/qt-5/qxmlquery.html#QueryLanguage-enum',1,'QXmlQuery::QueryLanguage()'],['https://doc.qt.io/qt-5/qxmlquery.html#queryLanguage',1,'QXmlQuery::queryLanguage() const const']]],
+  ['querylanguage',['queryLanguage',['https://doc.qt.io/qt-5/qxmlquery.html#queryLanguage',1,'QXmlQuery::queryLanguage() const const'],['https://doc.qt.io/qt-5/qxmlquery.html#QueryLanguage-enum',1,'QXmlQuery::QueryLanguage()']]],
   ['querypairdelimiter',['queryPairDelimiter',['https://doc.qt.io/qt-5/qurlquery.html#queryPairDelimiter',1,'QUrlQuery']]],
   ['querypeer',['QueryPeer',['https://doc.qt.io/qt-5/qsslsocket.html#PeerVerifyMode-enum',1,'QSslSocket']]],
   ['queryproxy',['queryProxy',['https://doc.qt.io/qt-5/qnetworkproxyfactory.html#queryProxy',1,'QNetworkProxyFactory']]],
