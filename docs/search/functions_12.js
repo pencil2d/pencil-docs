@@ -805,6 +805,7 @@ var searchData=
   ['setindentationdepth',['setIndentationDepth',['https://doc.qt.io/qt-5/qxmlformatter.html#setIndentationDepth',1,'QXmlFormatter']]],
   ['setindentwidth',['setIndentWidth',['https://doc.qt.io/qt-5/qtextdocument.html#setIndentWidth',1,'QTextDocument']]],
   ['setindex',['setIndex',['https://doc.qt.io/qt-5/qundostack.html#setIndex',1,'QUndoStack']]],
+  ['setindexedcolor',['setIndexedColor',['../class_color_manager.html#a70d425b1b371ac9b7e3dfba17d2681d7',1,'ColorManager']]],
   ['setindexwidget',['setIndexWidget',['https://doc.qt.io/qt-5/qabstractitemview.html#setIndexWidget',1,'QAbstractItemView']]],
   ['setinformativetext',['setInformativeText',['https://doc.qt.io/qt-5/qmessagebox.html#informativeText-prop',1,'QMessageBox']]],
   ['setinicodec',['setIniCodec',['https://doc.qt.io/qt-5/qsettings.html#setIniCodec',1,'QSettings::setIniCodec(QTextCodec *codec)'],['https://doc.qt.io/qt-5/qsettings.html#setIniCodec-1',1,'QSettings::setIniCodec(const char *codecName)']]],
