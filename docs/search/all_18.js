@@ -37,7 +37,7 @@ var searchData=
   ['yuv420sp',['YUV420SP',['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat']]],
   ['yuv422',['YUV422',['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat']]],
   ['yuv444',['YUV444',['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat']]],
-  ['yuvlayout',['yuvLayout',['https://doc.qt.io/qt-5/qpixelformat.html#yuvLayout',1,'QPixelFormat::yuvLayout() const const'],['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat::YUVLayout()']]],
+  ['yuvlayout',['YUVLayout',['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat::YUVLayout()'],['https://doc.qt.io/qt-5/qpixelformat.html#yuvLayout',1,'QPixelFormat::yuvLayout() const const']]],
   ['yuyv',['YUYV',['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat']]],
   ['yv12',['YV12',['https://doc.qt.io/qt-5/qpixelformat.html#YUVLayout-enum',1,'QPixelFormat']]]
 ];
