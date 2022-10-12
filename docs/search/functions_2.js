@@ -12,6 +12,7 @@ var searchData=
   ['caching',['caching',['https://doc.qt.io/qt-5/qfileinfo.html#caching',1,'QFileInfo']]],
   ['calculaterelativeopacityforlayer',['calculateRelativeOpacityForLayer',['../class_canvas_painter.html#afcb8520dbf4f80d2cb5f3ab9e6b33d14',1,'CanvasPainter']]],
   ['calculateselectionrect',['calculateSelectionRect',['../class_vector_image.html#a59f677bcef135d1f964b5c0827f32c88',1,'VectorImage']]],
+  ['calculateselectiontransformation',['calculateSelectionTransformation',['../class_selection_manager.html#afa0edfc543ff7f7c94b14457360c553d',1,'SelectionManager']]],
   ['calendarpopup',['calendarPopup',['https://doc.qt.io/qt-5/qdatetimeedit.html#calendarPopup-prop',1,'QDateTimeEdit']]],
   ['calendarwidget',['calendarWidget',['https://doc.qt.io/qt-5/qdatetimeedit.html#calendarWidget',1,'QDateTimeEdit']]],
   ['callontimeout',['callOnTimeout',['https://doc.qt.io/qt-5/qtimer.html#callOnTimeout',1,'QTimer::callOnTimeout(Functor slot, Qt::ConnectionType connectionType)'],['https://doc.qt.io/qt-5/qtimer.html#callOnTimeout-1',1,'QTimer::callOnTimeout(const QObject *context, Functor slot, Qt::ConnectionType connectionType)'],['https://doc.qt.io/qt-5/qtimer.html#callOnTimeout-2',1,'QTimer::callOnTimeout(const QObject *receiver, MemberFunction *slot, Qt::ConnectionType connectionType)']]],

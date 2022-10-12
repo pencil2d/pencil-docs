@@ -25,7 +25,6 @@ var searchData=
   ['oldposf',['oldPosF',['https://doc.qt.io/qt-5/qhoverevent.html#oldPosF',1,'QHoverEvent']]],
   ['oldsize',['oldSize',['https://doc.qt.io/qt-5/qresizeevent.html#oldSize',1,'QResizeEvent::oldSize()'],['https://doc.qt.io/qt-5/qgraphicssceneresizeevent.html#oldSize',1,'QGraphicsSceneResizeEvent::oldSize()']]],
   ['oldstate',['oldState',['https://doc.qt.io/qt-5/qwindowstatechangeevent.html#oldState',1,'QWindowStateChangeEvent']]],
-  ['oncurrentframemodified',['onCurrentFrameModified',['../class_scribble_area.html#a96c5afb6570926121624f15f23a90f66',1,'ScribbleArea']]],
   ['onentry',['onEntry',['https://doc.qt.io/qt-5/qabstractstate.html#onEntry',1,'QAbstractState::onEntry()'],['https://doc.qt.io/qt-5/qfinalstate.html#onEntry',1,'QFinalState::onEntry()'],['https://doc.qt.io/qt-5/qhistorystate.html#onEntry',1,'QHistoryState::onEntry()'],['https://doc.qt.io/qt-5/qstate.html#onEntry',1,'QState::onEntry()'],['https://doc.qt.io/qt-5/qstatemachine.html#onEntry',1,'QStateMachine::onEntry()']]],
   ['onexit',['onExit',['https://doc.qt.io/qt-5/qabstractstate.html#onExit',1,'QAbstractState::onExit()'],['https://doc.qt.io/qt-5/qfinalstate.html#onExit',1,'QFinalState::onExit()'],['https://doc.qt.io/qt-5/qhistorystate.html#onExit',1,'QHistoryState::onExit()'],['https://doc.qt.io/qt-5/qstate.html#onExit',1,'QState::onExit()'],['https://doc.qt.io/qt-5/qstatemachine.html#onExit',1,'QStateMachine::onExit()']]],
   ['onfpseditingfinished',['onFpsEditingFinished',['../class_time_controls.html#aaaf7aad2eb8ae091c70e6241ab74fc55',1,'TimeControls']]],
