@@ -14,7 +14,7 @@ var searchData=
   ['objecthide',['ObjectHide',['https://doc.qt.io/qt-5/qaccessible.html#Event-enum',1,'QAccessible']]],
   ['objectid',['objectId',['https://doc.qt.io/qt-5/qopengltimerquery.html#objectId',1,'QOpenGLTimerQuery::objectId()'],['https://doc.qt.io/qt-5/qopenglvertexarrayobject.html#objectId',1,'QOpenGLVertexArrayObject::objectId()']]],
   ['objectids',['objectIds',['https://doc.qt.io/qt-5/qopengltimemonitor.html#objectIds',1,'QOpenGLTimeMonitor']]],
-  ['objectindex',['objectIndex',['https://doc.qt.io/qt-5/qtextformat.html#objectIndex',1,'QTextFormat::objectIndex()'],['https://doc.qt.io/qt-5/qtextobject.html#objectIndex',1,'QTextObject::objectIndex()'],['https://doc.qt.io/qt-5/qtextformat.html#Property-enum',1,'QTextFormat::ObjectIndex()']]],
+  ['objectindex',['ObjectIndex',['https://doc.qt.io/qt-5/qtextformat.html#Property-enum',1,'QTextFormat::ObjectIndex()'],['https://doc.qt.io/qt-5/qtextformat.html#objectIndex',1,'QTextFormat::objectIndex() const const'],['https://doc.qt.io/qt-5/qtextobject.html#objectIndex',1,'QTextObject::objectIndex()']]],
   ['objectmode',['ObjectMode',['https://doc.qt.io/qt-5/qgradient.html#CoordinateMode-enum',1,'QGradient']]],
   ['objectname',['objectName',['https://doc.qt.io/qt-5/qobject.html#objectName-prop',1,'QObject::objectName()'],['https://doc.qt.io/qt-5/qobject.html#objectName-prop',1,'QObject::objectName() const const']]],
   ['objectnamechanged',['objectNameChanged',['https://doc.qt.io/qt-5/qobject.html#objectNameChanged',1,'QObject']]],
