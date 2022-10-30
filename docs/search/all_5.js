@@ -371,7 +371,7 @@ var searchData=
   ['framecount',['frameCount',['https://doc.qt.io/qt-5/qmovie.html#frameCount',1,'QMovie']]],
   ['framefeature',['FrameFeature',['https://doc.qt.io/qt-5/qstyleoptionframe.html#FrameFeature-enum',1,'QStyleOptionFrame']]],
   ['framefeatures',['FrameFeatures',['https://doc.qt.io/qt-5/qstyleoptionframe.html#FrameFeature-enum',1,'QStyleOptionFrame']]],
-  ['frameformat',['frameFormat',['https://doc.qt.io/qt-5/qtextframe.html#frameFormat',1,'QTextFrame::frameFormat()'],['https://doc.qt.io/qt-5/qtextformat.html#FormatType-enum',1,'QTextFormat::FrameFormat()']]],
+  ['frameformat',['FrameFormat',['https://doc.qt.io/qt-5/qtextformat.html#FormatType-enum',1,'QTextFormat::FrameFormat()'],['https://doc.qt.io/qt-5/qtextframe.html#frameFormat',1,'QTextFrame::frameFormat()']]],
   ['framefortime',['frameForTime',['https://doc.qt.io/qt-5/qtimeline.html#frameForTime',1,'QTimeLine']]],
   ['framegeometry',['frameGeometry',['https://doc.qt.io/qt-5/qwidget.html#frameGeometry-prop',1,'QWidget::frameGeometry()'],['https://doc.qt.io/qt-5/qwindow.html#frameGeometry',1,'QWindow::frameGeometry()'],['https://doc.qt.io/qt-5/qwidget.html#frameGeometry-prop',1,'QWidget::frameGeometry()']]],
   ['frameheight',['FrameHeight',['https://doc.qt.io/qt-5/qtextformat.html#Property-enum',1,'QTextFormat']]],
