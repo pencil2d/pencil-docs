@@ -95,7 +95,7 @@ var searchData=
   ['hoverenter',['HoverEnter',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['hoverleave',['HoverLeave',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['hovermove',['HoverMove',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
-  ['hsl',['Hsl',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsl()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSL()']]],
+  ['hsl',['HSL',['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSL()'],['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsl()']]],
   ['hsv',['Hsv',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsv()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSV()']]],
   ['htmlresource',['HtmlResource',['https://doc.qt.io/qt-5/qtextdocument.html#ResourceType-enum',1,'QTextDocument']]],
   ['http2allowedattribute',['Http2AllowedAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::Http2AllowedAttribute()'],['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::HTTP2AllowedAttribute()']]],

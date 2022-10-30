@@ -249,7 +249,7 @@ var searchData=
   ['hovermove',['HoverMove',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['hovermoveevent',['hoverMoveEvent',['https://doc.qt.io/qt-5/qgraphicsitem.html#hoverMoveEvent',1,'QGraphicsItem::hoverMoveEvent()'],['https://doc.qt.io/qt-5/qgraphicsproxywidget.html#hoverMoveEvent',1,'QGraphicsProxyWidget::hoverMoveEvent()'],['https://doc.qt.io/qt-5/qgraphicstextitem.html#hoverMoveEvent',1,'QGraphicsTextItem::hoverMoveEvent()'],['https://doc.qt.io/qt-5/qgraphicswidget.html#hoverMoveEvent',1,'QGraphicsWidget::hoverMoveEvent()']]],
   ['href',['href',['https://doc.qt.io/qt-5/qwhatsthisclickedevent.html#href',1,'QWhatsThisClickedEvent']]],
-  ['hsl',['Hsl',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsl()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSL()']]],
+  ['hsl',['HSL',['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSL()'],['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsl()']]],
   ['hslhue',['hslHue',['https://doc.qt.io/qt-5/qcolor.html#hslHue',1,'QColor']]],
   ['hslhuef',['hslHueF',['https://doc.qt.io/qt-5/qcolor.html#hslHueF',1,'QColor']]],
   ['hslsaturation',['hslSaturation',['https://doc.qt.io/qt-5/qcolor.html#hslSaturation',1,'QColor']]],
