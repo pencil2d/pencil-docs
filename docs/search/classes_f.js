@@ -279,6 +279,7 @@ var searchData=
   ['qhash_3c_20int_2c_20float_20_3e',['QHash&lt; int, float &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20int_2c_20int_20_3e',['QHash&lt; int, int &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20int_2c_20qstring_20_3e',['QHash&lt; int, QString &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
+  ['qhash_3c_20qrgb_2c_20bool_20_3e',['QHash&lt; QRgb, bool &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20qt_3a_3akeyboardmodifiers_2c_20toolpropertytype_20_3e',['QHash&lt; Qt::KeyboardModifiers, ToolPropertyType &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20toolpropertytype_2c_20bool_20_3e',['QHash&lt; ToolPropertyType, bool &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],
   ['qhash_3c_20tooltype_2c_20basetool_20_2a_20_3e',['QHash&lt; ToolType, BaseTool * &gt;',['https://doc.qt.io/qt-5/qhash.html',1,'']]],

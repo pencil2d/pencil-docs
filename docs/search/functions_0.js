@@ -216,6 +216,7 @@ var searchData=
   ['allowedareas',['allowedAreas',['https://doc.qt.io/qt-5/qdockwidget.html#allowedAreas-prop',1,'QDockWidget::allowedAreas()'],['https://doc.qt.io/qt-5/qtoolbar.html#allowedAreas-prop',1,'QToolBar::allowedAreas()']]],
   ['allowedareaschanged',['allowedAreasChanged',['https://doc.qt.io/qt-5/qdockwidget.html#allowedAreasChanged',1,'QDockWidget::allowedAreasChanged()'],['https://doc.qt.io/qt-5/qtoolbar.html#allowedAreasChanged',1,'QToolBar::allowedAreasChanged()']]],
   ['allowednextprotocols',['allowedNextProtocols',['https://doc.qt.io/qt-5/qsslconfiguration.html#allowedNextProtocols',1,'QSslConfiguration']]],
+  ['allowfill',['allowFill',['../class_bitmap_bucket.html#ac3979352c12d147f675cbaa6233d80e9',1,'BitmapBucket']]],
   ['allowserrorinteraction',['allowsErrorInteraction',['https://doc.qt.io/qt-5/qsessionmanager.html#allowsErrorInteraction',1,'QSessionManager']]],
   ['allowsinteraction',['allowsInteraction',['https://doc.qt.io/qt-5/qsessionmanager.html#allowsInteraction',1,'QSessionManager']]],
   ['allqueryitemvalues',['allQueryItemValues',['https://doc.qt.io/qt-5/qurl-obsolete.html#allQueryItemValues',1,'QUrl::allQueryItemValues()'],['https://doc.qt.io/qt-5/qurlquery.html#allQueryItemValues',1,'QUrlQuery::allQueryItemValues()']]],

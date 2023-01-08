@@ -322,6 +322,7 @@ var searchData=
   ['bsptreedepth',['bspTreeDepth',['https://doc.qt.io/qt-5/qgraphicsscene.html#bspTreeDepth-prop',1,'QGraphicsScene::bspTreeDepth()'],['https://doc.qt.io/qt-5/qgraphicsscene.html#bspTreeDepth-prop',1,'QGraphicsScene::bspTreeDepth() const const']]],
   ['bsptreeindex',['BspTreeIndex',['https://doc.qt.io/qt-5/qgraphicsscene.html#ItemIndexMethod-enum',1,'QGraphicsScene']]],
   ['bucketoptionswidget',['BucketOptionsWidget',['../class_bucket_options_widget.html',1,'']]],
+  ['bucketreferencemodeiscurrentlayer',['bucketReferenceModeIsCurrentLayer',['../class_tool_manager.html#a586a8cd19ba6854639714e73cec2df8b',1,'ToolManager']]],
   ['buckettool',['BucketTool',['../class_bucket_tool.html',1,'']]],
   ['buddy',['buddy',['https://doc.qt.io/qt-5/qabstractitemmodel.html#buddy',1,'QAbstractItemModel::buddy()'],['https://doc.qt.io/qt-5/qabstractproxymodel.html#buddy',1,'QAbstractProxyModel::buddy()'],['https://doc.qt.io/qt-5/qsortfilterproxymodel.html#buddy',1,'QSortFilterProxyModel::buddy()'],['https://doc.qt.io/qt-5/qlabel.html#buddy',1,'QLabel::buddy()']]],
   ['buffer',['buffer',['https://doc.qt.io/qt-5/qbuffer.html#buffer',1,'QBuffer::buffer()'],['https://doc.qt.io/qt-5/qbuffer.html#buffer-1',1,'QBuffer::buffer() const const']]],

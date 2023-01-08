@@ -132,7 +132,7 @@ var searchData=
   ['openglsurface',['OpenGLSurface',['https://doc.qt.io/qt-5/qsurface.html#SurfaceType-enum',1,'QSurface']]],
   ['openhandcursor',['OpenHandCursor',['https://doc.qt.io/qt-5/qt.html#CursorShape-enum',1,'Qt']]],
   ['openlinks',['openLinks',['https://doc.qt.io/qt-5/qtextbrowser.html#openLinks-prop',1,'QTextBrowser::openLinks()'],['https://doc.qt.io/qt-5/qtextbrowser.html#openLinks-prop',1,'QTextBrowser::openLinks() const const']]],
-  ['openmode',['OpenMode',['https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum',1,'QIODevice::OpenMode()'],['https://doc.qt.io/qt-5/qiodevice.html#openMode',1,'QIODevice::openMode() const const']]],
+  ['openmode',['openMode',['https://doc.qt.io/qt-5/qiodevice.html#openMode',1,'QIODevice::openMode() const const'],['https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum',1,'QIODevice::OpenMode()']]],
   ['openmodeflag',['OpenModeFlag',['https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum',1,'QIODevice']]],
   ['openpersistenteditor',['openPersistentEditor',['https://doc.qt.io/qt-5/qabstractitemview.html#openPersistentEditor',1,'QAbstractItemView::openPersistentEditor()'],['https://doc.qt.io/qt-5/qlistwidget.html#openPersistentEditor',1,'QListWidget::openPersistentEditor()'],['https://doc.qt.io/qt-5/qtablewidget.html#openPersistentEditor',1,'QTableWidget::openPersistentEditor()'],['https://doc.qt.io/qt-5/qtreewidget.html#openPersistentEditor',1,'QTreeWidget::openPersistentEditor()']]],
   ['openurl',['openUrl',['https://doc.qt.io/qt-5/qdesktopservices.html#openUrl',1,'QDesktopServices']]],

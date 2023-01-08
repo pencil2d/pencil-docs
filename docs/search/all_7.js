@@ -254,7 +254,7 @@ var searchData=
   ['hslhuef',['hslHueF',['https://doc.qt.io/qt-5/qcolor.html#hslHueF',1,'QColor']]],
   ['hslsaturation',['hslSaturation',['https://doc.qt.io/qt-5/qcolor.html#hslSaturation',1,'QColor']]],
   ['hslsaturationf',['hslSaturationF',['https://doc.qt.io/qt-5/qcolor.html#hslSaturationF',1,'QColor']]],
-  ['hsv',['HSV',['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSV()'],['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsv()']]],
+  ['hsv',['Hsv',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsv()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSV()']]],
   ['hsvhue',['hsvHue',['https://doc.qt.io/qt-5/qcolor.html#hsvHue',1,'QColor']]],
   ['hsvhuef',['hsvHueF',['https://doc.qt.io/qt-5/qcolor.html#hsvHueF',1,'QColor']]],
   ['hsvsaturation',['hsvSaturation',['https://doc.qt.io/qt-5/qcolor.html#hsvSaturation',1,'QColor']]],

@@ -124,6 +124,7 @@ var searchData=
   ['brushorigin',['brushOrigin',['https://doc.qt.io/qt-5/qpaintenginestate.html#brushOrigin',1,'QPaintEngineState::brushOrigin()'],['https://doc.qt.io/qt-5/qpainter.html#brushOrigin',1,'QPainter::brushOrigin()']]],
   ['brushproperty',['brushProperty',['https://doc.qt.io/qt-5/qtextformat.html#brushProperty',1,'QTextFormat']]],
   ['bsptreedepth',['bspTreeDepth',['https://doc.qt.io/qt-5/qgraphicsscene.html#bspTreeDepth-prop',1,'QGraphicsScene']]],
+  ['bucketreferencemodeiscurrentlayer',['bucketReferenceModeIsCurrentLayer',['../class_tool_manager.html#a586a8cd19ba6854639714e73cec2df8b',1,'ToolManager']]],
   ['buddy',['buddy',['https://doc.qt.io/qt-5/qabstractitemmodel.html#buddy',1,'QAbstractItemModel::buddy()'],['https://doc.qt.io/qt-5/qabstractproxymodel.html#buddy',1,'QAbstractProxyModel::buddy()'],['https://doc.qt.io/qt-5/qsortfilterproxymodel.html#buddy',1,'QSortFilterProxyModel::buddy()'],['https://doc.qt.io/qt-5/qlabel.html#buddy',1,'QLabel::buddy()']]],
   ['buffer',['buffer',['https://doc.qt.io/qt-5/qbuffer.html#buffer',1,'QBuffer::buffer()'],['https://doc.qt.io/qt-5/qbuffer.html#buffer-1',1,'QBuffer::buffer() const const']]],
   ['bufferid',['bufferId',['https://doc.qt.io/qt-5/qopenglbuffer.html#bufferId',1,'QOpenGLBuffer']]],
