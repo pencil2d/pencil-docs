@@ -12,7 +12,6 @@ var searchData=
   ['testinvokerasmethod',['TestInvokerAsMethod',['../class_catch_1_1_test_invoker_as_method.html',1,'Catch']]],
   ['timecontrols',['TimeControls',['../class_time_controls.html',1,'']]],
   ['timeline',['TimeLine',['../class_time_line.html',1,'']]],
-  ['timeline2',['Timeline2',['../class_timeline2.html',1,'']]],
   ['timelinecells',['TimeLineCells',['../class_time_line_cells.html',1,'']]],
   ['timelinepage',['TimelinePage',['../class_timeline_page.html',1,'']]],
   ['timer',['Timer',['../class_catch_1_1_timer.html',1,'Catch']]],
