@@ -96,7 +96,7 @@ var searchData=
   ['hoverleave',['HoverLeave',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['hovermove',['HoverMove',['https://doc.qt.io/qt-5/qevent.html#Type-enum',1,'QEvent']]],
   ['hsl',['Hsl',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsl()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSL()']]],
-  ['hsv',['Hsv',['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsv()'],['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSV()']]],
+  ['hsv',['HSV',['https://doc.qt.io/qt-5/qpixelformat.html#ColorModel-enum',1,'QPixelFormat::HSV()'],['https://doc.qt.io/qt-5/qcolor.html#Spec-enum',1,'QColor::Hsv()']]],
   ['htmlresource',['HtmlResource',['https://doc.qt.io/qt-5/qtextdocument.html#ResourceType-enum',1,'QTextDocument']]],
   ['http2allowedattribute',['Http2AllowedAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::Http2AllowedAttribute()'],['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest::HTTP2AllowedAttribute()']]],
   ['http2directattribute',['Http2DirectAttribute',['https://doc.qt.io/qt-5/qnetworkrequest.html#Attribute-enum',1,'QNetworkRequest']]],
