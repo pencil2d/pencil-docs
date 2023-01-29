@@ -300,7 +300,7 @@ var searchData=
   ['methodindex',['methodIndex',['https://doc.qt.io/qt-5/qmetamethod.html#methodIndex',1,'QMetaMethod']]],
   ['methodoffset',['methodOffset',['https://doc.qt.io/qt-5/qmetaobject.html#methodOffset',1,'QMetaObject']]],
   ['methodsignature',['methodSignature',['https://doc.qt.io/qt-5/qmetamethod.html#methodSignature',1,'QMetaMethod']]],
-  ['methodtype',['methodType',['https://doc.qt.io/qt-5/qmetamethod.html#methodType',1,'QMetaMethod::methodType() const const'],['https://doc.qt.io/qt-5/qmetamethod.html#MethodType-enum',1,'QMetaMethod::MethodType()']]],
+  ['methodtype',['MethodType',['https://doc.qt.io/qt-5/qmetamethod.html#MethodType-enum',1,'QMetaMethod::MethodType()'],['https://doc.qt.io/qt-5/qmetamethod.html#methodType',1,'QMetaMethod::methodType() const const']]],
   ['metric',['metric',['https://doc.qt.io/qt-5/qopenglpaintdevice.html#metric',1,'QOpenGLPaintDevice::metric()'],['https://doc.qt.io/qt-5/qpaintdevice.html#metric',1,'QPaintDevice::metric()'],['https://doc.qt.io/qt-5/qsvggenerator.html#metric',1,'QSvgGenerator::metric()'],['https://doc.qt.io/qt-5/qopenglwidget.html#metric',1,'QOpenGLWidget::metric()'],['https://doc.qt.io/qt-5/qwidget.html#metric',1,'QWidget::metric()']]],
   ['metricsystem',['MetricSystem',['https://doc.qt.io/qt-5/qlocale.html#MeasurementSystem-enum',1,'QLocale']]],
   ['mexico',['Mexico',['https://doc.qt.io/qt-5/qlocale.html#Country-enum',1,'QLocale']]],

@@ -550,7 +550,7 @@ var searchData=
   ['keyvalueat',['keyValueAt',['https://doc.qt.io/qt-5/qvariantanimation.html#keyValueAt',1,'QVariantAnimation']]],
   ['keyvaluebegin',['keyValueBegin',['https://doc.qt.io/qt-5/qhash.html#keyValueBegin',1,'QHash::keyValueBegin()'],['https://doc.qt.io/qt-5/qhash.html#keyValueBegin-1',1,'QHash::keyValueBegin() const const'],['https://doc.qt.io/qt-5/qmap.html#keyValueBegin',1,'QMap::keyValueBegin()'],['https://doc.qt.io/qt-5/qmap.html#keyValueBegin-1',1,'QMap::keyValueBegin() const const']]],
   ['keyvalueend',['keyValueEnd',['https://doc.qt.io/qt-5/qhash.html#keyValueEnd',1,'QHash::keyValueEnd()'],['https://doc.qt.io/qt-5/qhash.html#keyValueEnd-1',1,'QHash::keyValueEnd() const const'],['https://doc.qt.io/qt-5/qmap.html#keyValueEnd',1,'QMap::keyValueEnd()'],['https://doc.qt.io/qt-5/qmap.html#keyValueEnd-1',1,'QMap::keyValueEnd() const const']]],
-  ['keyvalues',['KeyValues',['https://doc.qt.io/qt-5/qvariantanimation.html#KeyValues-typedef',1,'QVariantAnimation::KeyValues()'],['https://doc.qt.io/qt-5/qvariantanimation.html#keyValues',1,'QVariantAnimation::keyValues() const const']]],
+  ['keyvalues',['keyValues',['https://doc.qt.io/qt-5/qvariantanimation.html#keyValues',1,'QVariantAnimation::keyValues() const const'],['https://doc.qt.io/qt-5/qvariantanimation.html#KeyValues-typedef',1,'QVariantAnimation::KeyValues()']]],
   ['kharoshthiscript',['KharoshthiScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
   ['khmer',['Khmer',['https://doc.qt.io/qt-5/qlocale.html#Language-enum',1,'QLocale::Khmer()'],['https://doc.qt.io/qt-5/qfontdatabase.html#WritingSystem-enum',1,'QFontDatabase::Khmer()']]],
   ['khmerscript',['KhmerScript',['https://doc.qt.io/qt-5/qlocale.html#Script-enum',1,'QLocale']]],
