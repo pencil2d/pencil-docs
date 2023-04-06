@@ -1,21 +1,13 @@
 var searchData=
 [
-  ['editor',['Editor',['../class_editor.html',1,'']]],
-  ['element',['Element',['https://doc.qt.io/qt-5/qpainterpath-element.html',1,'QPainterPath']]],
-  ['elidedlabel',['ElidedLabel',['../class_elided_label.html',1,'']]],
-  ['endswithmatcher',['EndsWithMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_ends_with_matcher.html',1,'Catch::Matchers::StdString']]],
-  ['enuminfo',['EnumInfo',['../struct_catch_1_1_detail_1_1_enum_info.html',1,'Catch::Detail']]],
-  ['equalsmatcher',['EqualsMatcher',['../struct_catch_1_1_matchers_1_1_std_string_1_1_equals_matcher.html',1,'Catch::Matchers::StdString']]],
-  ['equalsmatcher',['EqualsMatcher',['../struct_catch_1_1_matchers_1_1_vector_1_1_equals_matcher.html',1,'Catch::Matchers::Vector']]],
-  ['erasertool',['EraserTool',['../class_eraser_tool.html',1,'']]],
-  ['errordialog',['ErrorDialog',['../class_error_dialog.html',1,'']]],
-  ['exceptionmessagematcher',['ExceptionMessageMatcher',['../class_catch_1_1_matchers_1_1_exception_1_1_exception_message_matcher.html',1,'Catch::Matchers::Exception']]],
-  ['exceptiontranslator',['ExceptionTranslator',['../class_catch_1_1_exception_translator_registrar_1_1_exception_translator.html',1,'Catch::ExceptionTranslatorRegistrar']]],
-  ['exceptiontranslatorregistrar',['ExceptionTranslatorRegistrar',['../class_catch_1_1_exception_translator_registrar.html',1,'Catch']]],
-  ['exportimagedialog',['ExportImageDialog',['../class_export_image_dialog.html',1,'']]],
-  ['exportmoviedesc',['ExportMovieDesc',['../struct_export_movie_desc.html',1,'']]],
-  ['exportmoviedialog',['ExportMovieDialog',['../class_export_movie_dialog.html',1,'']]],
-  ['exprlhs',['ExprLhs',['../class_catch_1_1_expr_lhs.html',1,'Catch']]],
-  ['extraselection',['ExtraSelection',['https://doc.qt.io/qt-5/qtextedit-extraselection.html',1,'QTextEdit']]],
-  ['eyedroppertool',['EyedropperTool',['../class_eyedropper_tool.html',1,'']]]
+  ['editor_0',['Editor',['../class_editor.html',1,'']]],
+  ['element_1',['Element',['https://doc.qt.io/qt-5/qpainterpath-element.html',1,'QPainterPath']]],
+  ['elidedlabel_2',['ElidedLabel',['../class_elided_label.html',1,'']]],
+  ['erasertool_3',['EraserTool',['../class_eraser_tool.html',1,'']]],
+  ['errordialog_4',['ErrorDialog',['../class_error_dialog.html',1,'']]],
+  ['exportimagedialog_5',['ExportImageDialog',['../class_export_image_dialog.html',1,'']]],
+  ['exportmoviedesc_6',['ExportMovieDesc',['../struct_export_movie_desc.html',1,'']]],
+  ['exportmoviedialog_7',['ExportMovieDialog',['../class_export_movie_dialog.html',1,'']]],
+  ['extraselection_8',['ExtraSelection',['https://doc.qt.io/qt-5/qtextedit-extraselection.html',1,'QTextEdit']]],
+  ['eyedroppertool_9',['EyedropperTool',['../class_eyedropper_tool.html',1,'']]]
 ];
