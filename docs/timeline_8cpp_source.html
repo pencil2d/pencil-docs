@@ -349,142 +349,144 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(editor(), &amp;<a class="code hl_signal" href="class_editor.html#ab278e2a655561a23cd1617db3a2e1fc1">Editor::scrubbed</a>, <span class="keyword">this</span>, &amp;TimeLine::updateFrame);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(editor(), &amp;<a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">Editor::frameModified</a>, <span class="keyword">this</span>, &amp;TimeLine::updateContent);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <a class="code hl_class" href="class_layer_manager.html">LayerManager</a>* layer = editor()-&gt;layers();</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(layer, &amp;LayerManager::layerCountChanged, <span class="keyword">this</span>, &amp;TimeLine::updateLayerNumber);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(layer, &amp;LayerManager::currentLayerChanged, <span class="keyword">this</span>, &amp;TimeLine::onLayerChanged);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    mNumLayers = layer-&gt;count();</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    scrubbing = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="keywordtype">void</span> TimeLine::updateUI()</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>{</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    updateContent();</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>}</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="keywordtype">void</span> TimeLine::updateUICached()</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>{</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    mLayerList-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    mTracks-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>}</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">  258</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">TimeLine::extendLength</a>(<span class="keywordtype">int</span> frame)</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>{</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">int</span> currentLength = mTracks-&gt;getFrameLength();</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">if</span>(frame &gt; (currentLength * 0.75))</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    {</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordtype">int</span> newLength = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::max(frame, currentLength) * 1.5);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">if</span> (newLength &gt; 9999)</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            newLength = 9999;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        mTracks-&gt;setFrameLength(newLength);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        updateLength();</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="keywordtype">void</span> TimeLine::resizeEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qresizeevent.html">QResizeEvent</a>*)</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>{</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    updateLayerView();</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="keywordtype">void</span> TimeLine::wheelEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwheelevent.html">QWheelEvent</a>* event)</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>{</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>-&gt;modifiers() &amp; <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a>)</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        mHScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qscrollbar.html#event">event</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>);</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        mVScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qscrollbar.html#event">event</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>}</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="keywordtype">void</span> TimeLine::updateFrame(<span class="keywordtype">int</span> frameNumber)</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>{</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    Q_ASSERT(mTracks);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(editor(), &amp;<a class="code hl_signal" href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">Editor::framesModified</a>, <span class="keyword">this</span>, &amp;TimeLine::updateContent);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_class" href="class_layer_manager.html">LayerManager</a>* layer = editor()-&gt;layers();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(layer, &amp;LayerManager::layerCountChanged, <span class="keyword">this</span>, &amp;TimeLine::updateLayerNumber);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(layer, &amp;LayerManager::currentLayerChanged, <span class="keyword">this</span>, &amp;TimeLine::onLayerChanged);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    mNumLayers = layer-&gt;count();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    scrubbing = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>}</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="keywordtype">void</span> TimeLine::updateUI()</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>{</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    updateContent();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>}</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keywordtype">void</span> TimeLine::updateUICached()</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>{</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    mLayerList-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    mTracks-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">  259</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">TimeLine::extendLength</a>(<span class="keywordtype">int</span> frame)</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>{</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordtype">int</span> currentLength = mTracks-&gt;getFrameLength();</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">if</span>(frame &gt; (currentLength * 0.75))</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordtype">int</span> newLength = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::max(frame, currentLength) * 1.5);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordflow">if</span> (newLength &gt; 9999)</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            newLength = 9999;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        mTracks-&gt;setFrameLength(newLength);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        updateLength();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>}</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keywordtype">void</span> TimeLine::resizeEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qresizeevent.html">QResizeEvent</a>*)</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>{</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    updateLayerView();</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>}</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="keywordtype">void</span> TimeLine::wheelEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwheelevent.html">QWheelEvent</a>* event)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>{</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>-&gt;modifiers() &amp; <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a>)</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        mHScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qscrollbar.html#event">event</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        mVScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qscrollbar.html#event">event</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>}</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keywordtype">void</span> TimeLine::updateFrame(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>{</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    Q_ASSERT(mTracks);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    mTracks-&gt;updateFrame(mLastUpdatedFrame);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    mTracks-&gt;updateFrame(frameNumber);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    mLastUpdatedFrame = frameNumber;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>}</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keywordtype">void</span> TimeLine::updateLayerView()</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>{</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keywordtype">int</span> pageDisplay = (mTracks-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#height-prop">height</a>() - mTracks-&gt;getOffsetY()) / mTracks-&gt;getLayerHeight();</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    mVScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#minimum-prop">setMinimum</a>(0);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    mVScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">setMaximum</a>(qMax(0, mNumLayers - pageDisplay));</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    updateContent();</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>}</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="keywordtype">void</span> TimeLine::updateLayerNumber(<span class="keywordtype">int</span> numberOfLayers)</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>{</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    mNumLayers = numberOfLayers;</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    updateLayerView();</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>}</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keywordtype">void</span> TimeLine::updateLength()</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>{</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keywordtype">int</span> frameLength = mTracks-&gt;getFrameLength();</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    mHScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">setMaximum</a>(qMax(0, frameLength - mTracks-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / mTracks-&gt;getFrameSize()));</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    mTimeControls-&gt;updateLength(frameLength);</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    updateContent();</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="keywordtype">void</span> TimeLine::updateContent()</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>{</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    mLayerList-&gt;updateContent();</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    mTracks-&gt;updateContent();</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>}</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="keywordtype">void</span> TimeLine::setLoop(<span class="keywordtype">bool</span> loop)</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>{</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    mTimeControls-&gt;setLoop(loop);</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>}</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keywordtype">void</span> TimeLine::setPlaying(<span class="keywordtype">bool</span> isPlaying)</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>{</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    Q_UNUSED(isPlaying)</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    mTimeControls-&gt;updatePlayState();</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>}</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="keywordtype">void</span> TimeLine::setRangeState(<span class="keywordtype">bool</span> range)</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>{</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    mTimeControls-&gt;setRangeState(range);</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="keywordtype">int</span> TimeLine::getRangeLower()</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>{</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">return</span> mTimeControls-&gt;getRangeLower();</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>}</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="keywordtype">int</span> TimeLine::getRangeUpper()</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>{</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">return</span> mTimeControls-&gt;getRangeUpper();</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>}</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="keywordtype">void</span> TimeLine::onObjectLoaded()</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>{</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    mTimeControls-&gt;updateUI();</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    updateLayerNumber(editor()-&gt;layers()-&gt;count());</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="keywordtype">void</span> TimeLine::onLayerChanged()</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>{</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    mLayerDeleteButton-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#enabled-prop">setEnabled</a>(editor()-&gt;layers()-&gt;canDeleteLayer(editor()-&gt;currentLayerIndex()));</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    mTracks-&gt;updateFrame(mLastUpdatedFrame);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    mTracks-&gt;updateFrame(frameNumber);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    mLastUpdatedFrame = frameNumber;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keywordtype">void</span> TimeLine::updateLayerView()</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>{</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordtype">int</span> pageDisplay = (mTracks-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#height-prop">height</a>() - mTracks-&gt;getOffsetY()) / mTracks-&gt;getLayerHeight();</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    mVScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#minimum-prop">setMinimum</a>(0);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    mVScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">setMaximum</a>(qMax(0, mNumLayers - pageDisplay));</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    updateContent();</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>}</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="keywordtype">void</span> TimeLine::updateLayerNumber(<span class="keywordtype">int</span> numberOfLayers)</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>{</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    mNumLayers = numberOfLayers;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    updateLayerView();</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>}</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keywordtype">void</span> TimeLine::updateLength()</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>{</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordtype">int</span> frameLength = mTracks-&gt;getFrameLength();</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    mHScrollbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">setMaximum</a>(qMax(0, frameLength - mTracks-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / mTracks-&gt;getFrameSize()));</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    mTimeControls-&gt;updateLength(frameLength);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    updateContent();</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>}</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="keywordtype">void</span> TimeLine::updateContent()</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>{</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    mLayerList-&gt;updateContent();</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    mTracks-&gt;updateContent();</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="keywordtype">void</span> TimeLine::setLoop(<span class="keywordtype">bool</span> loop)</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>{</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    mTimeControls-&gt;setLoop(loop);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>}</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="keywordtype">void</span> TimeLine::setPlaying(<span class="keywordtype">bool</span> isPlaying)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>{</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    Q_UNUSED(isPlaying)</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    mTimeControls-&gt;updatePlayState();</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>}</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keywordtype">void</span> TimeLine::setRangeState(<span class="keywordtype">bool</span> range)</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>{</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    mTimeControls-&gt;setRangeState(range);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>}</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="keywordtype">int</span> TimeLine::getRangeLower()</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>{</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">return</span> mTimeControls-&gt;getRangeLower();</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keywordtype">int</span> TimeLine::getRangeUpper()</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>{</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keywordflow">return</span> mTimeControls-&gt;getRangeUpper();</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>}</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="keywordtype">void</span> TimeLine::onObjectLoaded()</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>{</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    mTimeControls-&gt;updateUI();</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    updateLayerNumber(editor()-&gt;layers()-&gt;count());</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>}</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="keywordtype">void</span> TimeLine::onLayerChanged()</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>{</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    mLayerDeleteButton-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#enabled-prop">setEnabled</a>(editor()-&gt;layers()-&gt;canDeleteLayer(editor()-&gt;currentLayerIndex()));</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>}</div>
 <div class="ttc" id="aclass_base_dock_widget_html"><div class="ttname"><a href="class_base_dock_widget.html">BaseDockWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="basedockwidget_8h_source.html#l00026">basedockwidget.h:27</a></div></div>
+<div class="ttc" id="aclass_editor_html_a5da792317757541ad6e7c1b7e2294a4a"><div class="ttname"><a href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">Editor::framesModified</a></div><div class="ttdeci">void framesModified()</div><div class="ttdoc">This should be emitted after modifying multiple frames.</div></div>
 <div class="ttc" id="aclass_editor_html_a95f7fac452454a5842d42c73df37d0f7"><div class="ttname"><a href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">Editor::frameModified</a></div><div class="ttdeci">void frameModified(int frameNumber)</div><div class="ttdoc">This should be emitted after modifying the frame content.</div></div>
 <div class="ttc" id="aclass_editor_html_ab278e2a655561a23cd1617db3a2e1fc1"><div class="ttname"><a href="class_editor.html#ab278e2a655561a23cd1617db3a2e1fc1">Editor::scrubbed</a></div><div class="ttdeci">void scrubbed(int frameNumber)</div><div class="ttdoc">This should be emitted after scrubbing.</div></div>
 <div class="ttc" id="aclass_layer_manager_html"><div class="ttname"><a href="class_layer_manager.html">LayerManager</a></div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8h_source.html#l00030">layermanager.h:31</a></div></div>
 <div class="ttc" id="aclass_time_controls_html"><div class="ttname"><a href="class_time_controls.html">TimeControls</a></div><div class="ttdef"><b>Definition:</b> <a href="timecontrols_8h_source.html#l00032">timecontrols.h:33</a></div></div>
 <div class="ttc" id="aclass_time_line_cells_html"><div class="ttname"><a href="class_time_line_cells.html">TimeLineCells</a></div><div class="ttdef"><b>Definition:</b> <a href="timelinecells_8h_source.html#l00043">timelinecells.h:44</a></div></div>
-<div class="ttc" id="aclass_time_line_html_a302a57106840bf8e44a60f1816e92810"><div class="ttname"><a href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">TimeLine::extendLength</a></div><div class="ttdeci">void extendLength(int frame)</div><div class="ttdoc">Extends the timeline frame length if necessary.</div><div class="ttdef"><b>Definition:</b> <a href="timeline_8cpp_source.html#l00258">timeline.cpp:258</a></div></div>
+<div class="ttc" id="aclass_time_line_html_a302a57106840bf8e44a60f1816e92810"><div class="ttname"><a href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">TimeLine::extendLength</a></div><div class="ttdeci">void extendLength(int frame)</div><div class="ttdoc">Extends the timeline frame length if necessary.</div><div class="ttdef"><b>Definition:</b> <a href="timeline_8cpp_source.html#l00259">timeline.cpp:259</a></div></div>
 <div class="ttc" id="aqabstractbutton_html_clicked"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractbutton.html#clicked">QAbstractButton::clicked</a></div><div class="ttdeci">void clicked(bool checked)</div></div>
 <div class="ttc" id="aqabstractbutton_html_icon-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractbutton.html#icon-prop">QAbstractButton::setIcon</a></div><div class="ttdeci">void setIcon(const QIcon &amp;icon)</div></div>
 <div class="ttc" id="aqabstractslider_html_maximum-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">QAbstractSlider::setMaximum</a></div><div class="ttdeci">void setMaximum(int)</div></div>
@@ -555,10 +557,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Apr 6 2023 22:45:51 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Apr 10 2023 22:21:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision e71a9019f0c18656aa91234e9e85300a209a0ba0
+   based on revision 6d71b502618c49e0f6c6b815b38fa02df0598eb1
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -246,9 +246,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afc4e7cf649bfa91911347746d198e959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fe96c1c7a9e7b390069150f6af3067c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a9fe96c1c7a9e7b390069150f6af3067c">clearVertices</a> ()</td></tr>
 <tr class="separator:a9fe96c1c7a9e7b390069150f6af3067c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef8057fb453ae21b5213c924476fafae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#aef8057fb453ae21b5213c924476fafae">setAlignToPosition</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> point)</td></tr>
-<tr class="memdesc:aef8057fb453ae21b5213c924476fafae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point from where the dragging will be based of.  <br /></td></tr>
-<tr class="separator:aef8057fb453ae21b5213c924476fafae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54723433e49ec011de72ad18eb878cf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a54723433e49ec011de72ad18eb878cf3">setDragOrigin</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> point)</td></tr>
+<tr class="memdesc:a54723433e49ec011de72ad18eb878cf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The point from where the dragging will be based of inside the selection area.  <br /></td></tr>
+<tr class="separator:a54723433e49ec011de72ad18eb878cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ef46a7cec131f0313ba6c424e13351"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" href="https://doc.qt.io/qt-5/qlist.html">QList</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a15ef46a7cec131f0313ba6c424e13351">closestCurves</a> () const</td></tr>
 <tr class="separator:a15ef46a7cec131f0313ba6c424e13351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ccb734653faccbe6115ae4f1fc67691"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" href="https://doc.qt.io/qt-5/qlist.html">QList</a>&lt; <a class="el" href="class_vertex_ref.html">VertexRef</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a4ccb734653faccbe6115ae4f1fc67691">closestVertices</a> () const</td></tr>
@@ -515,8 +515,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a5e8f8880aefab3d93d1afb2fdfcc5eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaac44c3830785d6e9eb7842db62fc2f1"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qlist.html">QList</a>&lt; <a class="el" href="class_vertex_ref.html">VertexRef</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#aaac44c3830785d6e9eb7842db62fc2f1">mClosestVertices</a></td></tr>
 <tr class="separator:aaac44c3830785d6e9eb7842db62fc2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef3580601de9240dd852237ae28efa5d"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#aef3580601de9240dd852237ae28efa5d">mAlignToAxisStartPosition</a></td></tr>
-<tr class="separator:aef3580601de9240dd852237ae28efa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352a5afb046a2645401b302419a125ad"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a352a5afb046a2645401b302419a125ad">mDragOrigin</a></td></tr>
+<tr class="separator:a352a5afb046a2645401b302419a125ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ff84d1ca8e7faa0c6d5a193d45c40c"><td class="memItemLeft" align="right" valign="top">MoveMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a25ff84d1ca8e7faa0c6d5a193d45c40c">mMoveMode</a> = MoveMode::NONE</td></tr>
 <tr class="separator:a25ff84d1ca8e7faa0c6d5a193d45c40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bb0d8e89491ecb0cf4821710a46a25a"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_selection_manager.html#a5bb0d8e89491ecb0cf4821710a46a25a">mSelectionTransform</a></td></tr>
@@ -1032,7 +1032,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>ScribbleArea::flipSelection flip selection along the X or Y axis. </p>
 
-<p class="definition">Definition at line <a class="el" href="selectionmanager_8cpp_source.html#l00331">331</a> of file <a class="el" href="selectionmanager_8cpp_source.html">selectionmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selectionmanager_8cpp_source.html#l00326">326</a> of file <a class="el" href="selectionmanager_8cpp_source.html">selectionmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1451,7 +1451,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selectionmanager_8cpp_source.html#l00346">346</a> of file <a class="el" href="selectionmanager_8cpp_source.html">selectionmanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selectionmanager_8cpp_source.html#l00341">341</a> of file <a class="el" href="selectionmanager_8cpp_source.html">selectionmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1685,37 +1685,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 </div>
 </div>
-<a id="aef8057fb453ae21b5213c924476fafae" name="aef8057fb453ae21b5213c924476fafae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef8057fb453ae21b5213c924476fafae">&#9670;&#160;</a></span>setAlignToPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SelectionManager::setAlignToPosition </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td>
-          <td class="paramname"><em>point</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The point from where the dragging will be based of. </p>
-<p>This is only usable in combination with mLockAxis </p>
-
-<p class="definition">Definition at line <a class="el" href="selectionmanager_8h_source.html#l00118">118</a> of file <a class="el" href="selectionmanager_8h_source.html">selectionmanager.h</a>.</p>
-
-</div>
-</div>
 <a id="af28933fd959b9123f13adddd2ddfeec8" name="af28933fd959b9123f13adddd2ddfeec8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af28933fd959b9123f13adddd2ddfeec8">&#9670;&#160;</a></span>setCurves()</h2>
 
@@ -1741,6 +1710,37 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="selectionmanager_8h_source.html#l00110">110</a> of file <a class="el" href="selectionmanager_8h_source.html">selectionmanager.h</a>.</p>
+
+</div>
+</div>
+<a id="a54723433e49ec011de72ad18eb878cf3" name="a54723433e49ec011de72ad18eb878cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54723433e49ec011de72ad18eb878cf3">&#9670;&#160;</a></span>setDragOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelectionManager::setDragOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The point from where the dragging will be based of inside the selection area. </p>
+<p>Not to be confused with the selection origin </p>
+
+<p class="definition">Definition at line <a class="el" href="selectionmanager_8h_source.html#l00118">118</a> of file <a class="el" href="selectionmanager_8h_source.html">selectionmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2070,30 +2070,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aef3580601de9240dd852237ae28efa5d" name="aef3580601de9240dd852237ae28efa5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef3580601de9240dd852237ae28efa5d">&#9670;&#160;</a></span>mAlignToAxisStartPosition</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> SelectionManager::mAlignToAxisStartPosition</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="selectionmanager_8h_source.html#l00153">153</a> of file <a class="el" href="selectionmanager_8h_source.html">selectionmanager.h</a>.</p>
-
-</div>
-</div>
 <a id="a2ce53590eb0068483d4f227723d93926" name="a2ce53590eb0068483d4f227723d93926"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ce53590eb0068483d4f227723d93926">&#9670;&#160;</a></span>mAnchorPoint</h2>
 
@@ -2187,6 +2163,30 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="selectionmanager_8h_source.html#l00151">151</a> of file <a class="el" href="selectionmanager_8h_source.html">selectionmanager.h</a>.</p>
+
+</div>
+</div>
+<a id="a352a5afb046a2645401b302419a125ad" name="a352a5afb046a2645401b302419a125ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352a5afb046a2645401b302419a125ad">&#9670;&#160;</a></span>mDragOrigin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> SelectionManager::mDragOrigin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="selectionmanager_8h_source.html#l00153">153</a> of file <a class="el" href="selectionmanager_8h_source.html">selectionmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2456,10 +2456,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Apr 6 2023 22:45:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Apr 10 2023 22:21:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision e71a9019f0c18656aa91234e9e85300a209a0ba0
+   based on revision 6d71b502618c49e0f6c6b815b38fa02df0598eb1
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

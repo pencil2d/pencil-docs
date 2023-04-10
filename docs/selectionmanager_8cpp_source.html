@@ -268,12 +268,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">switch</span> (mMoveMode)</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">case</span> MoveMode::MIDDLE: {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> newOffset = currentPoint - offset;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> newOffset = currentPoint - mDragOrigin;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">if</span> (mLockAxis) {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            mTranslation = <a class="code hl_function" href="class_selection_manager.html#a57c9f67427f8319964d761735dc61b20">alignPositionToAxis</a>(currentPoint);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            mTranslation = offset + <a class="code hl_function" href="class_selection_manager.html#a57c9f67427f8319964d761735dc61b20">alignPositionToAxis</a>(newOffset);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            translate(newOffset);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            mTranslation = offset + newOffset;</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
@@ -428,48 +428,43 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_selection_manager.html#ae4fa6caaf9d3721194c8af6408cd2500">  311</a></span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> <a class="code hl_function" href="class_selection_manager.html#a57c9f67427f8319964d761735dc61b20">SelectionManager::alignPositionToAxis</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> currentPoint)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="comment">// Calculate angle from the start selection anchor point to the current point</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="comment">// we can&#39;t use the transformed point here.</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keywordtype">double</span> angle = qAbs(qRadiansToDegrees(MathUtils::getDifferenceAngle(mAlignToAxisStartPosition, currentPoint)));</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    Q_ASSERT(angle &gt;= 0 &amp;&amp; angle &lt;= 180);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordflow">if</span> (qAbs(currentPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>()) &gt; qAbs(currentPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>())) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="comment">// Align to y axis</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(0, currentPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    }</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keywordflow">if</span> (angle &gt; 45 &amp;&amp; angle &lt; 135) {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="comment">// Align to y axis</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(mAlignToAxisStartPosition.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), currentPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="comment">// Otherwise 0 &lt;= angle &lt;= 45 || 135 &lt;= angle &lt;= 180 --&gt; align to x axis</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(currentPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), mAlignToAxisStartPosition.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">  331</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">SelectionManager::flipSelection</a>(<span class="keywordtype">bool</span> flipVertical)</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>{</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordflow">if</span> (flipVertical)</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        mScaleY = -mScaleY;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    }</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    {</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        mScaleX = -mScaleX;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    setTransformAnchor(mOriginalRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#center">center</a>());</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <a class="code hl_function" href="class_selection_manager.html#afa0edfc543ff7f7c94b14457360c553d">calculateSelectionTransformation</a>();</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    emit selectionChanged();</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>}</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="keywordtype">void</span> SelectionManager::resetSelectionProperties()</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>{</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_function" href="class_selection_manager.html#a3d086cd53b6d736f28f4b3e8b62a5126">resetSelectionTransformProperties</a>();</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    mSelectionPolygon = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>();</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    mOriginalRect = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>();</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    emit selectionChanged();</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>}</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="comment">// Align to x axis</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(currentPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), 0);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>}</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">  326</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">SelectionManager::flipSelection</a>(<span class="keywordtype">bool</span> flipVertical)</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>{</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordflow">if</span> (flipVertical)</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        mScaleY = -mScaleY;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        mScaleX = -mScaleX;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    setTransformAnchor(mOriginalRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#center">center</a>());</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <a class="code hl_function" href="class_selection_manager.html#afa0edfc543ff7f7c94b14457360c553d">calculateSelectionTransformation</a>();</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    emit selectionChanged();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>}</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="keywordtype">void</span> SelectionManager::resetSelectionProperties()</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>{</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <a class="code hl_function" href="class_selection_manager.html#a3d086cd53b6d736f28f4b3e8b62a5126">resetSelectionTransformProperties</a>();</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    mSelectionPolygon = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>();</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    mOriginalRect = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>();</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    emit selectionChanged();</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>}</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00055">editor.h:56</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00037">layer.h:38</a></div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00041">object.h:42</a></div></div>
-<div class="ttc" id="aclass_selection_manager_html_a31ce57909625651ef1909c2714f3cfca"><div class="ttname"><a href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">SelectionManager::flipSelection</a></div><div class="ttdeci">void flipSelection(bool flipVertical)</div><div class="ttdoc">ScribbleArea::flipSelection flip selection along the X or Y axis.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00331">selectionmanager.cpp:331</a></div></div>
+<div class="ttc" id="aclass_selection_manager_html_a31ce57909625651ef1909c2714f3cfca"><div class="ttname"><a href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">SelectionManager::flipSelection</a></div><div class="ttdeci">void flipSelection(bool flipVertical)</div><div class="ttdoc">ScribbleArea::flipSelection flip selection along the X or Y axis.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00326">selectionmanager.cpp:326</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html_a3d086cd53b6d736f28f4b3e8b62a5126"><div class="ttname"><a href="class_selection_manager.html#a3d086cd53b6d736f28f4b3e8b62a5126">SelectionManager::resetSelectionTransformProperties</a></div><div class="ttdeci">void resetSelectionTransformProperties()</div><div class="ttdoc">SelectionManager::resetSelectionTransformProperties should be used whenever translate,...</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00055">selectionmanager.cpp:55</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html_a57c9f67427f8319964d761735dc61b20"><div class="ttname"><a href="class_selection_manager.html#a57c9f67427f8319964d761735dc61b20">SelectionManager::alignPositionToAxis</a></div><div class="ttdeci">void alignPositionToAxis(bool state)</div><div class="ttdoc">Locks movement either horizontally or vertically depending on drag direction.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00055">selectionmanager.h:55</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html_afa0edfc543ff7f7c94b14457360c553d"><div class="ttname"><a href="class_selection_manager.html#afa0edfc543ff7f7c94b14457360c553d">SelectionManager::calculateSelectionTransformation</a></div><div class="ttdeci">void calculateSelectionTransformation()</div><div class="ttdoc">This should be called to update the selection transform.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00297">selectionmanager.cpp:297</a></div></div>
@@ -501,10 +496,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Apr 6 2023 22:45:52 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Apr 10 2023 22:21:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision e71a9019f0c18656aa91234e9e85300a209a0ba0
+   based on revision 6d71b502618c49e0f6c6b815b38fa02df0598eb1
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
