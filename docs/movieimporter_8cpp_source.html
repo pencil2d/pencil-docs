@@ -460,7 +460,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> audioPath = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(mTempDir-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtemporarydir.html#path">path</a>()).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(<span class="stringliteral">&quot;audio.wav&quot;</span>);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> args{ <span class="stringliteral">&quot;-i&quot;</span>, filePath, <span class="stringliteral">&quot;-map_metadata&quot;</span>, <span class="stringliteral">&quot;-1&quot;</span>, <span class="stringliteral">&quot;-bitexact&quot;</span>, audioPath };</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> args{ <span class="stringliteral">&quot;-i&quot;</span>, filePath, <span class="stringliteral">&quot;-map_metadata&quot;</span>, <span class="stringliteral">&quot;-1&quot;</span>, <span class="stringliteral">&quot;-flags&quot;</span>, <span class="stringliteral">&quot;bitexact&quot;</span>, <span class="stringliteral">&quot;-fflags&quot;</span>, <span class="stringliteral">&quot;bitexact&quot;</span>, audioPath };</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    status = <a class="code hl_function" href="class_movie_exporter.html#aade03843134824f6854d13272ee3e255">MovieExporter::executeFFmpeg</a>(ffmpegLocation(), args, [&amp;progress, <span class="keyword">this</span>] (<span class="keywordtype">int</span> frame) {</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        Q_UNUSED(frame)</div>
@@ -568,10 +568,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon Apr 10 2023 22:21:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 12 2023 15:45:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 6d71b502618c49e0f6c6b815b38fa02df0598eb1
+   based on revision 2c898fe45e036d5d4cb10087e7696653381cdc79
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
