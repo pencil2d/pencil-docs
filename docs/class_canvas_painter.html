@@ -124,8 +124,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f83d6117217d8c3f8a1f9fe7a3754ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a0f83d6117217d8c3f8a1f9fe7a3754ec">setCanvas</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *canvas)</td></tr>
-<tr class="separator:a0f83d6117217d8c3f8a1f9fe7a3754ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ecfcc6285aeb436738c00fd0d14dc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#aa5ecfcc6285aeb436738c00fd0d14dc3">CanvasPainter</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &amp;canvas)</td></tr>
+<tr class="separator:aa5ecfcc6285aeb436738c00fd0d14dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e6f5937e769bc575f01227be7acb4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ad6e6f5937e769bc575f01227be7acb4e">reset</a> ()</td></tr>
+<tr class="separator:ad6e6f5937e769bc575f01227be7acb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8124eb94651800a9f130204329e8bf90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a8124eb94651800a9f130204329e8bf90">setViewTransform</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> view, const <a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> viewInverse)</td></tr>
 <tr class="separator:a8124eb94651800a9f130204329e8bf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06394e3d8942aa05a7a0c23bf164c8ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a06394e3d8942aa05a7a0c23bf164c8ae">setOnionSkinOptions</a> (const <a class="el" href="struct_onion_skin_painter_options.html">OnionSkinPainterOptions</a> &amp;onionSkinOptions)</td></tr>
@@ -138,45 +140,39 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6decf207bbc3d5d0cb56789b9695389c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93061b03dcc4a42556cd4b541e435b65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a93061b03dcc4a42556cd4b541e435b65">setPaintSettings</a> (const <a class="el" href="class_object.html">Object</a> *object, int currentLayer, int frame, <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> rect, <a class="el" href="class_bitmap_image.html">BitmapImage</a> *buffer)</td></tr>
 <tr class="separator:a93061b03dcc4a42556cd4b541e435b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a253e73eadc6c892bef7673568b6dcd7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a253e73eadc6c892bef7673568b6dcd7e">paint</a> ()</td></tr>
-<tr class="separator:a253e73eadc6c892bef7673568b6dcd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb692f8d14ede4a694117114b5ce2ca0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#aeb692f8d14ede4a694117114b5ce2ca0">paintCached</a> ()</td></tr>
-<tr class="separator:aeb692f8d14ede4a694117114b5ce2ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4233a77176cb57dfc98b6894dcc94b03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a4233a77176cb57dfc98b6894dcc94b03">paint</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:a4233a77176cb57dfc98b6894dcc94b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8155e4ef49e172518ba7fe1ec0e738c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a8155e4ef49e172518ba7fe1ec0e738c1">paintCached</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:a8155e4ef49e172518ba7fe1ec0e738c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6db286d35e05e93cdb81e0131d18495d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a6db286d35e05e93cdb81e0131d18495d">resetLayerCache</a> ()</td></tr>
 <tr class="separator:a6db286d35e05e93cdb81e0131d18495d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a323945b2943e790f8bdeee08d69451a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a323945b2943e790f8bdeee08d69451a3">initializePainter</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, <a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &amp;pixmap)</td></tr>
-<tr class="memdesc:a323945b2943e790f8bdeee08d69451a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_canvas_painter.html#a323945b2943e790f8bdeee08d69451a3" title="CanvasPainter::initializePainter Enriches the painter with a context and sets it&#39;s initial matrix.">CanvasPainter::initializePainter</a> Enriches the painter with a context and sets it's initial matrix.  <br /></td></tr>
-<tr class="separator:a323945b2943e790f8bdeee08d69451a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa68a8b95302370cf41386da8f2e1d6b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#aa68a8b95302370cf41386da8f2e1d6b1">renderPreLayers</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
-<tr class="separator:aa68a8b95302370cf41386da8f2e1d6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9dbd17d89a4afc10e6eda328a8b89fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ad9dbd17d89a4afc10e6eda328a8b89fe">renderCurLayer</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
-<tr class="separator:ad9dbd17d89a4afc10e6eda328a8b89fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3521d4fae16b8a7c5db33525635b929e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a3521d4fae16b8a7c5db33525635b929e">renderPostLayers</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
-<tr class="separator:a3521d4fae16b8a7c5db33525635b929e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a57f38f0fee677ae898fd3d4abf849d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a4a57f38f0fee677ae898fd3d4abf849d">paintBackground</a> ()</td></tr>
-<tr class="separator:a4a57f38f0fee677ae898fd3d4abf849d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a8a2762ba144e616d2b6371f8dc9b12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a3a8a2762ba144e616d2b6371f8dc9b12">paintOnionSkin</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
-<tr class="separator:a3a8a2762ba144e616d2b6371f8dc9b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7db306bbe706033ee6f9f997b85ae378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a7db306bbe706033ee6f9f997b85ae378">renderPostLayers</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *pixmap)</td></tr>
-<tr class="separator:a7db306bbe706033ee6f9f997b85ae378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1322bc480d60a54abe8d14d86d48fabe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a1322bc480d60a54abe8d14d86d48fabe">renderCurLayer</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *pixmap)</td></tr>
-<tr class="separator:a1322bc480d60a54abe8d14d86d48fabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30de64df23ced35662acc13fac00cfde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a30de64df23ced35662acc13fac00cfde">renderPreLayers</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *pixmap)</td></tr>
-<tr class="separator:a30de64df23ced35662acc13fac00cfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2aa8eb8b057c7e792777340ea711405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ae2aa8eb8b057c7e792777340ea711405">paintCurrentFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, int startLayer, int endLayer)</td></tr>
-<tr class="memdesc:ae2aa8eb8b057c7e792777340ea711405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints layers within the specified range for the current frame.  <br /></td></tr>
-<tr class="separator:ae2aa8eb8b057c7e792777340ea711405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0a13508bec60911039267e13240d37e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ad0a13508bec60911039267e13240d37e">paintBitmapFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;, <a class="el" href="class_layer.html">Layer</a> *layer, int nFrame, bool colorize, bool useLastKeyFrame, bool isCurrentFrame)</td></tr>
-<tr class="separator:ad0a13508bec60911039267e13240d37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf8cc12833297348a9e6a2aed286eff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#acf8cc12833297348a9e6a2aed286eff0">paintVectorFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;, <a class="el" href="class_layer.html">Layer</a> *layer, int nFrame, bool colorize, bool useLastKeyFrame, bool isCurrentFrame)</td></tr>
-<tr class="separator:acf8cc12833297348a9e6a2aed286eff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35b5d44b7dc9b06a6a95f97b757b6212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a35b5d44b7dc9b06a6a95f97b757b6212">paintTransformedSelection</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter) const</td></tr>
-<tr class="separator:a35b5d44b7dc9b06a6a95f97b757b6212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac88a9511db3fdb822c5e930509a3ec7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ac88a9511db3fdb822c5e930509a3ec7c">prescale</a> (<a class="el" href="class_bitmap_image.html">BitmapImage</a> *bitmapImage)</td></tr>
-<tr class="separator:ac88a9511db3fdb822c5e930509a3ec7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394a53b7766671386ec3af87358a07f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, <a class="elRef" href="https://doc.qt.io/qt-5/qpaintdevice.html">QPaintDevice</a> &amp;device, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="memdesc:a394a53b7766671386ec3af87358a07f9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9" title="CanvasPainter::initializePainter Enriches the painter with a context and sets it&#39;s initial matrix.">CanvasPainter::initializePainter</a> Enriches the painter with a context and sets it's initial matrix.  <br /></td></tr>
+<tr class="separator:a394a53b7766671386ec3af87358a07f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089e07c2dac13538d98cf2e04629021b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a089e07c2dac13538d98cf2e04629021b">paintOnionSkin</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:a089e07c2dac13538d98cf2e04629021b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06efd6793e448ef6fe98da6fc4b3a5cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a06efd6793e448ef6fe98da6fc4b3a5cd">renderPostLayers</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:a06efd6793e448ef6fe98da6fc4b3a5cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46a7f763f89c7fdd774dca71a9e9ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ae46a7f763f89c7fdd774dca71a9e9ef9">renderPreLayers</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:ae46a7f763f89c7fdd774dca71a9e9ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ab50dda3f9ad9b8f0f5cd8790a062f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">paintCurrentFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect, int startLayer, int endLayer)</td></tr>
+<tr class="memdesc:ae2ab50dda3f9ad9b8f0f5cd8790a062f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Paints layers within the specified range for the current frame.  <br /></td></tr>
+<tr class="separator:ae2ab50dda3f9ad9b8f0f5cd8790a062f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89671f71192cfed655983187ac24881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ad89671f71192cfed655983187ac24881">paintTransformedSelection</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, <a class="el" href="class_bitmap_image.html">BitmapImage</a> *bitmapImage, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;selection) const</td></tr>
+<tr class="separator:ad89671f71192cfed655983187ac24881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae32aabefaff8c1536a0dd73ea5e0b00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#aae32aabefaff8c1536a0dd73ea5e0b00">paintBitmapOnionSkinFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect, <a class="el" href="class_layer.html">Layer</a> *layer, int nFrame, bool colorize)</td></tr>
+<tr class="separator:aae32aabefaff8c1536a0dd73ea5e0b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd6e85e3d82fc79ef5b15cf7e9075fe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#acd6e85e3d82fc79ef5b15cf7e9075fe0">paintVectorOnionSkinFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect, <a class="el" href="class_layer.html">Layer</a> *layer, int nFrame, bool colorize)</td></tr>
+<tr class="separator:acd6e85e3d82fc79ef5b15cf7e9075fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1a170aa043990a0f1fb58968833b13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#acc1a170aa043990a0f1fb58968833b13">paintOnionSkinFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;onionSkinPainter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect, int nFrame, bool colorize, qreal frameOpacity)</td></tr>
+<tr class="separator:acc1a170aa043990a0f1fb58968833b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4899c7a2620a10c7699471ac675261d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a4899c7a2620a10c7699471ac675261d7">paintCurrentBitmapFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect, <a class="el" href="class_layer.html">Layer</a> *layer, bool isCurrentLayer)</td></tr>
+<tr class="separator:a4899c7a2620a10c7699471ac675261d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5009b9deb9af2c355383ec83c2af291b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a5009b9deb9af2c355383ec83c2af291b">paintCurrentVectorFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect, <a class="el" href="class_layer.html">Layer</a> *layer, bool isCurrentLayer)</td></tr>
+<tr class="separator:a5009b9deb9af2c355383ec83c2af291b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -184,8 +180,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aba41293b80feeb55c9482d8c73e76c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab02e6238b38eb60b0c416c2f7276992c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ab02e6238b38eb60b0c416c2f7276992c">mObject</a> = nullptr</td></tr>
 <tr class="separator:ab02e6238b38eb60b0c416c2f7276992c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71def6481decabf5e8ce1ce481033cf3"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a71def6481decabf5e8ce1ce481033cf3">mCanvas</a> = nullptr</td></tr>
-<tr class="separator:a71def6481decabf5e8ce1ce481033cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405d0e8520f5503e6ef37890636f7bb2"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a405d0e8520f5503e6ef37890636f7bb2">mCanvas</a></td></tr>
+<tr class="separator:a405d0e8520f5503e6ef37890636f7bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab46643aa6d8f779b9a8ac889418f4ddf"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ab46643aa6d8f779b9a8ac889418f4ddf">mViewTransform</a></td></tr>
 <tr class="separator:ab46643aa6d8f779b9a8ac889418f4ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d1f49f498e411eb3d43ae6bd88c5cc4"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a8d1f49f498e411eb3d43ae6bd88c5cc4">mViewInverse</a></td></tr>
@@ -204,10 +200,18 @@ Private Attributes</h2></td></tr>
 <tr class="separator:afc56a31560646ba60a38d1d6a12b870c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb453f065b6a85c99d157fe0b9ce7d47"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#afb453f065b6a85c99d157fe0b9ce7d47">mSelectionTransform</a></td></tr>
 <tr class="separator:afb453f065b6a85c99d157fe0b9ce7d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e7c0a6ca452bdc85877f715c50f521d"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a1e7c0a6ca452bdc85877f715c50f521d">mPreLayersCache</a></td></tr>
-<tr class="separator:a1e7c0a6ca452bdc85877f715c50f521d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63da22a1d12b17da414ff6f6b8a601b2"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a63da22a1d12b17da414ff6f6b8a601b2">mPostLayersCache</a></td></tr>
-<tr class="separator:a63da22a1d12b17da414ff6f6b8a601b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9e7c270a6f39d034e4bf98d9b46727"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#abb9e7c270a6f39d034e4bf98d9b46727">mPostLayersPixmap</a></td></tr>
+<tr class="separator:abb9e7c270a6f39d034e4bf98d9b46727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca383b6ab6afa79d8c6b9d1da7fc94c"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a3ca383b6ab6afa79d8c6b9d1da7fc94c">mPreLayersPixmap</a></td></tr>
+<tr class="separator:a3ca383b6ab6afa79d8c6b9d1da7fc94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba030087f8c62e358d97589a1191a47"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#aeba030087f8c62e358d97589a1191a47">mCurrentLayerPixmap</a></td></tr>
+<tr class="separator:aeba030087f8c62e358d97589a1191a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c329c3c5d9a3b1ab7b9f699b996253"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a53c329c3c5d9a3b1ab7b9f699b996253">mOnionSkinPixmap</a></td></tr>
+<tr class="separator:a53c329c3c5d9a3b1ab7b9f699b996253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7afae65829997a200b110ee57f58d42"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ac7afae65829997a200b110ee57f58d42">mPreLayersPixmapCacheValid</a> = false</td></tr>
+<tr class="separator:ac7afae65829997a200b110ee57f58d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137863a931cd4941946e2ba644f1f00e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#a137863a931cd4941946e2ba644f1f00e">mPostLayersPixmapCacheValid</a> = false</td></tr>
+<tr class="separator:a137863a931cd4941946e2ba644f1f00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af09b51ba728bed3e8549f7ab7354dc85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_onion_skin_sub_painter.html">OnionSkinSubPainter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#af09b51ba728bed3e8549f7ab7354dc85">mOnionSkinSubPainter</a></td></tr>
 <tr class="separator:af09b51ba728bed3e8549f7ab7354dc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e06b5ab6c19d8704e1675d710a48b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_onion_skin_painter_options.html">OnionSkinPainterOptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_canvas_painter.html#ad2e06b5ab6c19d8704e1675d710a48b2">mOnionSkinPainterOptions</a></td></tr>
@@ -222,8 +226,8 @@ Static Private Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00049">49</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3ddc29520291b8ff2ae0e2bdfff0ca29" name="a3ddc29520291b8ff2ae0e2bdfff0ca29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ddc29520291b8ff2ae0e2bdfff0ca29">&#9670;&#160;</a></span>CanvasPainter()</h2>
+<a id="aa5ecfcc6285aeb436738c00fd0d14dc3" name="aa5ecfcc6285aeb436738c00fd0d14dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ecfcc6285aeb436738c00fd0d14dc3">&#9670;&#160;</a></span>CanvasPainter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +238,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">CanvasPainter::CanvasPainter </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &amp;&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -245,7 +250,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00031">31</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00030">30</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
@@ -292,12 +297,12 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00069">69</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00076">76</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a323945b2943e790f8bdeee08d69451a3" name="a323945b2943e790f8bdeee08d69451a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a323945b2943e790f8bdeee08d69451a3">&#9670;&#160;</a></span>initializePainter()</h2>
+<a id="a394a53b7766671386ec3af87358a07f9" name="a394a53b7766671386ec3af87358a07f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394a53b7766671386ec3af87358a07f9">&#9670;&#160;</a></span>initializePainter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,8 +319,14 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> &amp;&#160;</td>
-          <td class="paramname"><em>pixmap</em>&#160;</td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpaintdevice.html">QPaintDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -330,11 +341,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_canvas_painter.html#a323945b2943e790f8bdeee08d69451a3" title="CanvasPainter::initializePainter Enriches the painter with a context and sets it&#39;s initial matrix.">CanvasPainter::initializePainter</a> Enriches the painter with a context and sets it's initial matrix. </p>
+<p><a class="el" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9" title="CanvasPainter::initializePainter Enriches the painter with a context and sets it&#39;s initial matrix.">CanvasPainter::initializePainter</a> Enriches the painter with a context and sets it's initial matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">painter</td><td>The in/out painter </td></tr>
     <tr><td class="paramname">pixmap</td><td>The paint device ie. a pixmap </td></tr>
+    <tr><td class="paramname">blitRect</td><td>The rect where the blitting will occur </td></tr>
   </table>
   </dd>
 </dl>
@@ -343,8 +355,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a253e73eadc6c892bef7673568b6dcd7e" name="a253e73eadc6c892bef7673568b6dcd7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a253e73eadc6c892bef7673568b6dcd7e">&#9670;&#160;</a></span>paint()</h2>
+<a id="a4233a77176cb57dfc98b6894dcc94b03" name="a4233a77176cb57dfc98b6894dcc94b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4233a77176cb57dfc98b6894dcc94b03">&#9670;&#160;</a></span>paint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,18 +364,19 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void CanvasPainter::paint </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00184">184</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00166">166</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4a57f38f0fee677ae898fd3d4abf849d" name="a4a57f38f0fee677ae898fd3d4abf849d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a57f38f0fee677ae898fd3d4abf849d">&#9670;&#160;</a></span>paintBackground()</h2>
+<a id="aae32aabefaff8c1536a0dd73ea5e0b00" name="aae32aabefaff8c1536a0dd73ea5e0b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae32aabefaff8c1536a0dd73ea5e0b00">&#9670;&#160;</a></span>paintBitmapOnionSkinFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -372,37 +385,16 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CanvasPainter::paintBackground </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00194">194</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad0a13508bec60911039267e13240d37e" name="ad0a13508bec60911039267e13240d37e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0a13508bec60911039267e13240d37e">&#9670;&#160;</a></span>paintBitmapFrame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CanvasPainter::paintBitmapFrame </td>
+          <td class="memname">void CanvasPainter::paintBitmapOnionSkinFrame </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
           <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -420,19 +412,7 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>colorize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useLastKeyFrame</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isCurrentFrame</em>&#160;</td>
+          <td class="paramname"><em>colorize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -447,12 +427,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00223">223</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00220">220</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aeb692f8d14ede4a694117114b5ce2ca0" name="aeb692f8d14ede4a694117114b5ce2ca0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb692f8d14ede4a694117114b5ce2ca0">&#9670;&#160;</a></span>paintCached()</h2>
+<a id="a8155e4ef49e172518ba7fe1ec0e738c1" name="a8155e4ef49e172518ba7fe1ec0e738c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8155e4ef49e172518ba7fe1ec0e738c1">&#9670;&#160;</a></span>paintCached()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,18 +440,69 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void CanvasPainter::paintCached </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00074">74</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00081">81</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ae2aa8eb8b057c7e792777340ea711405" name="ae2aa8eb8b057c7e792777340ea711405"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2aa8eb8b057c7e792777340ea711405">&#9670;&#160;</a></span>paintCurrentFrame()</h2>
+<a id="a4899c7a2620a10c7699471ac675261d7" name="a4899c7a2620a10c7699471ac675261d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4899c7a2620a10c7699471ac675261d7">&#9670;&#160;</a></span>paintCurrentBitmapFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CanvasPainter::paintCurrentBitmapFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_layer.html">Layer</a> *&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isCurrentLayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00278">278</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2ab50dda3f9ad9b8f0f5cd8790a062f" name="ae2ab50dda3f9ad9b8f0f5cd8790a062f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2ab50dda3f9ad9b8f0f5cd8790a062f">&#9670;&#160;</a></span>paintCurrentFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -484,6 +515,12 @@ Static Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
           <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -520,12 +557,62 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00436">436</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00383">383</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a3a8a2762ba144e616d2b6371f8dc9b12" name="a3a8a2762ba144e616d2b6371f8dc9b12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a8a2762ba144e616d2b6371f8dc9b12">&#9670;&#160;</a></span>paintOnionSkin()</h2>
+<a id="a5009b9deb9af2c355383ec83c2af291b" name="a5009b9deb9af2c355383ec83c2af291b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5009b9deb9af2c355383ec83c2af291b">&#9670;&#160;</a></span>paintCurrentVectorFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CanvasPainter::paintCurrentVectorFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_layer.html">Layer</a> *&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isCurrentLayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00309">309</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a089e07c2dac13538d98cf2e04629021b" name="a089e07c2dac13538d98cf2e04629021b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089e07c2dac13538d98cf2e04629021b">&#9670;&#160;</a></span>paintOnionSkin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,8 +624,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void CanvasPainter::paintOnionSkin </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
-          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -548,12 +645,74 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00199">199</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00196">196</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a35b5d44b7dc9b06a6a95f97b757b6212" name="a35b5d44b7dc9b06a6a95f97b757b6212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35b5d44b7dc9b06a6a95f97b757b6212">&#9670;&#160;</a></span>paintTransformedSelection()</h2>
+<a id="acc1a170aa043990a0f1fb58968833b13" name="acc1a170aa043990a0f1fb58968833b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1a170aa043990a0f1fb58968833b13">&#9670;&#160;</a></span>paintOnionSkinFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CanvasPainter::paintOnionSkinFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
+          <td class="paramname"><em>onionSkinPainter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>colorize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">qreal&#160;</td>
+          <td class="paramname"><em>frameOpacity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00251">251</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad89671f71192cfed655983187ac24881" name="ad89671f71192cfed655983187ac24881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89671f71192cfed655983187ac24881">&#9670;&#160;</a></span>paintTransformedSelection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -565,8 +724,24 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void CanvasPainter::paintTransformedSelection </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
-          <td class="paramname"><em>painter</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bitmap_image.html">BitmapImage</a> *&#160;</td>
+          <td class="paramname"><em>bitmapImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>selection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -576,12 +751,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00409">409</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00344">344</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="acf8cc12833297348a9e6a2aed286eff0" name="acf8cc12833297348a9e6a2aed286eff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf8cc12833297348a9e6a2aed286eff0">&#9670;&#160;</a></span>paintVectorFrame()</h2>
+<a id="acd6e85e3d82fc79ef5b15cf7e9075fe0" name="acd6e85e3d82fc79ef5b15cf7e9075fe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6e85e3d82fc79ef5b15cf7e9075fe0">&#9670;&#160;</a></span>paintVectorOnionSkinFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -590,10 +765,16 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CanvasPainter::paintVectorFrame </td>
+          <td class="memname">void CanvasPainter::paintVectorOnionSkinFrame </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
           <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -611,19 +792,7 @@ Static Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>colorize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useLastKeyFrame</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>isCurrentFrame</em>&#160;</td>
+          <td class="paramname"><em>colorize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -638,96 +807,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00336">336</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00236">236</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac88a9511db3fdb822c5e930509a3ec7c" name="ac88a9511db3fdb822c5e930509a3ec7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac88a9511db3fdb822c5e930509a3ec7c">&#9670;&#160;</a></span>prescale()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CanvasPainter::prescale </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_bitmap_image.html">BitmapImage</a> *&#160;</td>
-          <td class="paramname"><em>bitmapImage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00314">314</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad9dbd17d89a4afc10e6eda328a8b89fe" name="ad9dbd17d89a4afc10e6eda328a8b89fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9dbd17d89a4afc10e6eda328a8b89fe">&#9670;&#160;</a></span>renderCurLayer() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CanvasPainter::renderCurLayer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
-          <td class="paramname"><em>painter</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00152">152</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a1322bc480d60a54abe8d14d86d48fabe" name="a1322bc480d60a54abe8d14d86d48fabe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1322bc480d60a54abe8d14d86d48fabe">&#9670;&#160;</a></span>renderCurLayer() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CanvasPainter::renderCurLayer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *&#160;</td>
-          <td class="paramname"><em>pixmap</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00145">145</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a3521d4fae16b8a7c5db33525635b929e" name="a3521d4fae16b8a7c5db33525635b929e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3521d4fae16b8a7c5db33525635b929e">&#9670;&#160;</a></span>renderPostLayers() <span class="overload">[1/2]</span></h2>
+<a id="a06efd6793e448ef6fe98da6fc4b3a5cd" name="a06efd6793e448ef6fe98da6fc4b3a5cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06efd6793e448ef6fe98da6fc4b3a5cd">&#9670;&#160;</a></span>renderPostLayers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -739,36 +824,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void CanvasPainter::renderPostLayers </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
-          <td class="paramname"><em>painter</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>painter</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00164">164</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a7db306bbe706033ee6f9f997b85ae378" name="a7db306bbe706033ee6f9f997b85ae378"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7db306bbe706033ee6f9f997b85ae378">&#9670;&#160;</a></span>renderPostLayers() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">void CanvasPainter::renderPostLayers </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *&#160;</td>
-          <td class="paramname"><em>pixmap</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -778,12 +845,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00157">157</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00146">146</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa68a8b95302370cf41386da8f2e1d6b1" name="aa68a8b95302370cf41386da8f2e1d6b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa68a8b95302370cf41386da8f2e1d6b1">&#9670;&#160;</a></span>renderPreLayers() <span class="overload">[1/2]</span></h2>
+<a id="ae46a7f763f89c7fdd774dca71a9e9ef9" name="ae46a7f763f89c7fdd774dca71a9e9ef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46a7f763f89c7fdd774dca71a9e9ef9">&#9670;&#160;</a></span>renderPreLayers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,8 +862,18 @@ Static Private Attributes</h2></td></tr>
           <td class="memname">void CanvasPainter::renderPreLayers </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
-          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -806,35 +883,26 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00134">134</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00135">135</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a30de64df23ced35662acc13fac00cfde" name="a30de64df23ced35662acc13fac00cfde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30de64df23ced35662acc13fac00cfde">&#9670;&#160;</a></span>renderPreLayers() <span class="overload">[2/2]</span></h2>
+<a id="ad6e6f5937e769bc575f01227be7acb4e" name="ad6e6f5937e769bc575f01227be7acb4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e6f5937e769bc575f01227be7acb4e">&#9670;&#160;</a></span>reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CanvasPainter::renderPreLayers </td>
+          <td class="memname">void CanvasPainter::reset </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *&#160;</td>
-          <td class="paramname"><em>pixmap</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00127">127</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00039">39</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
@@ -854,26 +922,6 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00114">114</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a0f83d6117217d8c3f8a1f9fe7a3754ec" name="a0f83d6117217d8c3f8a1f9fe7a3754ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f83d6117217d8c3f8a1f9fe7a3754ec">&#9670;&#160;</a></span>setCanvas()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CanvasPainter::setCanvas </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> *&#160;</td>
-          <td class="paramname"><em>canvas</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00039">39</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
@@ -977,7 +1025,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00172">172</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00154">154</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1055,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00053">53</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00060">60</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1085,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00045">45</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8cpp_source.html#l00052">52</a> of file <a class="el" href="canvaspainter_8cpp_source.html">canvaspainter.cpp</a>.</p>
 
 </div>
 </div>
@@ -1062,12 +1110,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00109">109</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00105">105</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
-<a id="a71def6481decabf5e8ce1ce481033cf3" name="a71def6481decabf5e8ce1ce481033cf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71def6481decabf5e8ce1ce481033cf3">&#9670;&#160;</a></span>mCanvas</h2>
+<a id="a405d0e8520f5503e6ef37890636f7bb2" name="a405d0e8520f5503e6ef37890636f7bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405d0e8520f5503e6ef37890636f7bb2">&#9670;&#160;</a></span>mCanvas</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1076,7 +1124,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>* CanvasPainter::mCanvas = nullptr</td>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&amp; CanvasPainter::mCanvas</td>
         </tr>
       </table>
   </td>
@@ -1086,7 +1134,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00103">103</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00099">99</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1110,7 +1158,31 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00107">107</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00103">103</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+
+</div>
+</div>
+<a id="aeba030087f8c62e358d97589a1191a47" name="aeba030087f8c62e358d97589a1191a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba030087f8c62e358d97589a1191a47">&#9670;&#160;</a></span>mCurrentLayerPixmap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> CanvasPainter::mCurrentLayerPixmap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00117">117</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1206,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00108">108</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00104">104</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1230,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00102">102</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00098">98</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1254,31 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00122">122</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00124">124</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+
+</div>
+</div>
+<a id="a53c329c3c5d9a3b1ab7b9f699b996253" name="a53c329c3c5d9a3b1ab7b9f699b996253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c329c3c5d9a3b1ab7b9f699b996253">&#9670;&#160;</a></span>mOnionSkinPixmap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> CanvasPainter::mOnionSkinPixmap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00118">118</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1206,7 +1302,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00121">121</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00123">123</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1230,12 +1326,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00100">100</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00096">96</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
-<a id="a63da22a1d12b17da414ff6f6b8a601b2" name="a63da22a1d12b17da414ff6f6b8a601b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63da22a1d12b17da414ff6f6b8a601b2">&#9670;&#160;</a></span>mPostLayersCache</h2>
+<a id="abb9e7c270a6f39d034e4bf98d9b46727" name="abb9e7c270a6f39d034e4bf98d9b46727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9e7c270a6f39d034e4bf98d9b46727">&#9670;&#160;</a></span>mPostLayersPixmap</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1244,7 +1340,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&gt; CanvasPainter::mPostLayersCache</td>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> CanvasPainter::mPostLayersPixmap</td>
         </tr>
       </table>
   </td>
@@ -1254,12 +1350,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00119">119</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00115">115</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
-<a id="a1e7c0a6ca452bdc85877f715c50f521d" name="a1e7c0a6ca452bdc85877f715c50f521d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e7c0a6ca452bdc85877f715c50f521d">&#9670;&#160;</a></span>mPreLayersCache</h2>
+<a id="a137863a931cd4941946e2ba644f1f00e" name="a137863a931cd4941946e2ba644f1f00e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137863a931cd4941946e2ba644f1f00e">&#9670;&#160;</a></span>mPostLayersPixmapCacheValid</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1268,7 +1364,55 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&gt; CanvasPainter::mPreLayersCache</td>
+          <td class="memname">bool CanvasPainter::mPostLayersPixmapCacheValid = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00120">120</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+
+</div>
+</div>
+<a id="a3ca383b6ab6afa79d8c6b9d1da7fc94c" name="a3ca383b6ab6afa79d8c6b9d1da7fc94c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca383b6ab6afa79d8c6b9d1da7fc94c">&#9670;&#160;</a></span>mPreLayersPixmap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> CanvasPainter::mPreLayersPixmap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00116">116</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+
+</div>
+</div>
+<a id="ac7afae65829997a200b110ee57f58d42" name="ac7afae65829997a200b110ee57f58d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7afae65829997a200b110ee57f58d42">&#9670;&#160;</a></span>mPreLayersPixmapCacheValid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CanvasPainter::mPreLayersPixmapCacheValid = false</td>
         </tr>
       </table>
   </td>
@@ -1302,7 +1446,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00114">114</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00110">110</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1326,7 +1470,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00111">111</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00107">107</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1494,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00115">115</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00111">111</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1374,7 +1518,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00116">116</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00112">112</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1398,7 +1542,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00105">105</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00101">101</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1422,7 +1566,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00104">104</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00100">100</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1446,7 +1590,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00124">124</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvaspainter_8h_source.html#l00126">126</a> of file <a class="el" href="canvaspainter_8h_source.html">canvaspainter.h</a>.</p>
 
 </div>
 </div>
@@ -1460,10 +1604,10 @@ Static Private Attributes</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Apr 22 2023 13:27:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Jun 3 2023 18:50:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ba40ec95b45cbdfdedd98c38d71d3364d8cb9fa8
+   based on revision c215a604369a2f2122245ea9799f43c6507932d7
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

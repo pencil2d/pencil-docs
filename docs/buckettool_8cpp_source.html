@@ -315,7 +315,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="comment">// Because we can change layer to on the fly but we do not act reactively on it</span></div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="comment">// it&#39;s neccesary to invalidate layer cache on press event, otherwise the cache</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="comment">// will be drawn until a move event has been initiated.</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#a9eec5d82f10f0f8858898a93c6242383">invalidateCaches</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#a78b0d91f1323a5837f2a08b64d4726db">invalidatePainterCaches</a>();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">void</span> BucketTool::pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>* event)</div>
@@ -389,7 +389,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <span class="comment">// otherwise dragging won&#39;t show until release event</span></div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keywordflow">if</span> (properties.bucketFillToLayerMode == 1)</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                mScribbleArea-&gt;invalidateCaches();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                mScribbleArea-&gt;invalidatePainterCaches();</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            }</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        }</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    });</div>
@@ -452,10 +452,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> path(p[0]);</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            path.cubicTo(p[1], p[2], p[3]);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            mScribbleArea-&gt;drawPath(path, pen, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#BrushStyle-enum">Qt::NoBrush</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Source</a>);</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            mScribbleArea-&gt;refreshVector(path.boundingRect().toRect(), rad);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>}</div>
 <div class="ttc" id="aclass_bitmap_bucket_html"><div class="ttname"><a href="class_bitmap_bucket.html">BitmapBucket</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapbucket_8h_source.html#l00034">bitmapbucket.h:35</a></div></div>
 <div class="ttc" id="aclass_bitmap_bucket_html_a91b5d2ae7eec5d378881e49d0eaad85b"><div class="ttname"><a href="class_bitmap_bucket.html#a91b5d2ae7eec5d378881e49d0eaad85b">BitmapBucket::paint</a></div><div class="ttdeci">void paint(const QPointF updatedPoint, std::function&lt; void(BucketState, int, int)&gt; progress)</div><div class="ttdoc">Will paint at the given point, given that it makes sense.</div><div class="ttdef"><b>Definition:</b> <a href="bitmapbucket_8cpp_source.html#l00101">bitmapbucket.cpp:101</a></div></div>
 <div class="ttc" id="aclass_bucket_tool_html_a73dd15022326729eb46ccec330e57406"><div class="ttname"><a href="class_bucket_tool.html#a73dd15022326729eb46ccec330e57406">BucketTool::setWidth</a></div><div class="ttdeci">void setWidth(const qreal width) override</div><div class="ttdoc">BrushTool::setWidth.</div><div class="ttdef"><b>Definition:</b> <a href="buckettool_8cpp_source.html#l00114">buckettool.cpp:114</a></div></div>
@@ -464,14 +463,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00037">layer.h:38</a></div></div>
 <div class="ttc" id="aclass_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:26</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html_a9eec5d82f10f0f8858898a93c6242383"><div class="ttname"><a href="class_scribble_area.html#a9eec5d82f10f0f8858898a93c6242383">ScribbleArea::invalidateCaches</a></div><div class="ttdeci">void invalidateCaches()</div><div class="ttdoc">Invalidate the layer pixmap and camera painter caches.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00273">scribblearea.cpp:273</a></div></div>
+<div class="ttc" id="aclass_scribble_area_html_a78b0d91f1323a5837f2a08b64d4726db"><div class="ttname"><a href="class_scribble_area.html#a78b0d91f1323a5837f2a08b64d4726db">ScribbleArea::invalidatePainterCaches</a></div><div class="ttdeci">void invalidatePainterCaches()</div><div class="ttdoc">Invalidate the layer pixmap and camera painter caches.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00271">scribblearea.cpp:271</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00028">stroketool.h:29</a></div></div>
-<div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00032">vectorimage.h:33</a></div></div>
-<div class="ttc" id="aclass_vector_image_html_a07ec9f1e65edabd432ddc861f21e8460"><div class="ttname"><a href="class_vector_image.html#a07ec9f1e65edabd432ddc861f21e8460">VectorImage::applyColorToSelectedArea</a></div><div class="ttdeci">void applyColorToSelectedArea(int colorNumber)</div><div class="ttdoc">VectorImage::applyColorToSelectedArea.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01327">vectorimage.cpp:1327</a></div></div>
-<div class="ttc" id="aclass_vector_image_html_a283e2d9e15c5653046494cf4b3e60ea6"><div class="ttname"><a href="class_vector_image.html#a283e2d9e15c5653046494cf4b3e60ea6">VectorImage::fillSelectedPath</a></div><div class="ttdeci">void fillSelectedPath(int color)</div><div class="ttdoc">VectorImage::fillSelectedPath.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01801">vectorimage.cpp:1801</a></div></div>
+<div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_a07ec9f1e65edabd432ddc861f21e8460"><div class="ttname"><a href="class_vector_image.html#a07ec9f1e65edabd432ddc861f21e8460">VectorImage::applyColorToSelectedArea</a></div><div class="ttdeci">void applyColorToSelectedArea(int colorNumber)</div><div class="ttdoc">VectorImage::applyColorToSelectedArea.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01322">vectorimage.cpp:1322</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_a283e2d9e15c5653046494cf4b3e60ea6"><div class="ttname"><a href="class_vector_image.html#a283e2d9e15c5653046494cf4b3e60ea6">VectorImage::fillSelectedPath</a></div><div class="ttdeci">void fillSelectedPath(int color)</div><div class="ttdoc">VectorImage::fillSelectedPath.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01796">vectorimage.cpp:1796</a></div></div>
 <div class="ttc" id="aclass_vector_image_html_a5feff6a8dc9178be02b149575a222471"><div class="ttname"><a href="class_vector_image.html#a5feff6a8dc9178be02b149575a222471">VectorImage::isPathFilled</a></div><div class="ttdeci">bool isPathFilled()</div><div class="ttdoc">VectorImage::isPathFilled.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00706">vectorimage.cpp:706</a></div></div>
-<div class="ttc" id="aclass_vector_image_html_a61512d6ed9bce23e16d3e0d3cf435bac"><div class="ttname"><a href="class_vector_image.html#a61512d6ed9bce23e16d3e0d3cf435bac">VectorImage::applyColorToSelectedCurve</a></div><div class="ttdeci">void applyColorToSelectedCurve(int colorNumber)</div><div class="ttdoc">VectorImage::applyColorToSelectedCurve.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01314">vectorimage.cpp:1314</a></div></div>
-<div class="ttc" id="aclass_vector_image_html_aa6d32b8d1549462c0d15e1bc2e16705a"><div class="ttname"><a href="class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a">VectorImage::applyWidthToSelection</a></div><div class="ttdeci">void applyWidthToSelection(qreal width)</div><div class="ttdoc">VectorImage::applyWidthToSelection.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01340">vectorimage.cpp:1340</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_a61512d6ed9bce23e16d3e0d3cf435bac"><div class="ttname"><a href="class_vector_image.html#a61512d6ed9bce23e16d3e0d3cf435bac">VectorImage::applyColorToSelectedCurve</a></div><div class="ttdeci">void applyColorToSelectedCurve(int colorNumber)</div><div class="ttdoc">VectorImage::applyColorToSelectedCurve.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01309">vectorimage.cpp:1309</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_aa6d32b8d1549462c0d15e1bc2e16705a"><div class="ttname"><a href="class_vector_image.html#aa6d32b8d1549462c0d15e1bc2e16705a">VectorImage::applyWidthToSelection</a></div><div class="ttdeci">void applyWidthToSelection(qreal width)</div><div class="ttdoc">VectorImage::applyWidthToSelection.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01335">vectorimage.cpp:1335</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
 <div class="ttc" id="aqcolor_html_rgba"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html#rgba">QColor::rgba</a></div><div class="ttdeci">QRgb rgba() const const</div></div>
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
@@ -502,10 +501,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Apr 22 2023 13:27:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Jun 3 2023 18:50:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ba40ec95b45cbdfdedd98c38d71d3364d8cb9fa8
+   based on revision c215a604369a2f2122245ea9799f43c6507932d7
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

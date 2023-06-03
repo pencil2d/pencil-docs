@@ -167,6 +167,28 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#bottom">bottom</a>() &lt; p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>()) { <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setBottom">setBottom</a>(p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>()); }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> BlitRect::extend(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; rect)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    extend(rect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#topLeft">topLeft</a>(), rect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>());</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> BlitRect::extend(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>&amp; p, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>&amp; size)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> (mInitialized == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setTopLeft">setTopLeft</a>(p);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setBottomRight">setBottomRight</a>(p + <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>(), <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>()));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        mInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#left">left</a>() &gt; p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>()) { <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setLeft">setLeft</a>(p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>()); }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#right">right</a>() &lt; p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>() + <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>()) { <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setRight">setRight</a>(p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>() + <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>()); }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#top">top</a>() &gt; p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>()) { <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setTop">setTop</a>(p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>()); }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#bottom">bottom</a>() &lt; p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>() + <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>()) { <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#setBottom">setBottom</a>(p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>() + <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>()); }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 <div class="ttc" id="aqpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
 <div class="ttc" id="aqpoint_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#x">QPoint::x</a></div><div class="ttdeci">int x() const const</div></div>
 <div class="ttc" id="aqpoint_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#y">QPoint::y</a></div><div class="ttdeci">int y() const const</div></div>
@@ -183,18 +205,22 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqrect_html_setTop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#setTop">QRect::setTop</a></div><div class="ttdeci">void setTop(int y)</div></div>
 <div class="ttc" id="aqrect_html_setTopLeft"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#setTopLeft">QRect::setTopLeft</a></div><div class="ttdeci">void setTopLeft(const QPoint &amp;position)</div></div>
 <div class="ttc" id="aqrect_html_setTopRight"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#setTopRight">QRect::setTopRight</a></div><div class="ttdeci">void setTopRight(const QPoint &amp;position)</div></div>
+<div class="ttc" id="aqrect_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#size">QRect::size</a></div><div class="ttdeci">QSize size() const const</div></div>
 <div class="ttc" id="aqrect_html_top"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#top">QRect::top</a></div><div class="ttdeci">int top() const const</div></div>
 <div class="ttc" id="aqrect_html_topLeft"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#topLeft">QRect::topLeft</a></div><div class="ttdeci">QPoint topLeft() const const</div></div>
+<div class="ttc" id="aqsize_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html">QSize</a></div></div>
+<div class="ttc" id="aqsize_html_height"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html#height">QSize::height</a></div><div class="ttdeci">int height() const const</div></div>
+<div class="ttc" id="aqsize_html_width"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html#width">QSize::width</a></div><div class="ttdeci">int width() const const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Apr 22 2023 13:27:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Jun 3 2023 18:50:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ba40ec95b45cbdfdedd98c38d71d3364d8cb9fa8
+   based on revision c215a604369a2f2122245ea9799f43c6507932d7
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

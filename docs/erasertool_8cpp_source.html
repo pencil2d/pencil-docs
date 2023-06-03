@@ -313,153 +313,131 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        qreal brushWidth = properties.width * pressure;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        mCurrentWidth = brushWidth;</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <a class="code hl_class" href="class_blit_rect.html">BlitRect</a> rect(point.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>());</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        mScribbleArea-&gt;drawBrush(point,</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                                 brushWidth,</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                                 properties.feather,</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                                 <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255, 255, 255, 255),</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                                 opacity,</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                                 properties.useFeather,</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                                 properties.useAA == ON);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordtype">int</span> rad = qRound(brushWidth / 2 + 2);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">//continuously update buffer to update stroke behind grid.</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        mScribbleArea-&gt;paintBitmapBufferRect(rect);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        mScribbleArea-&gt;refreshBitmap(rect, rad);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>}</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keywordtype">void</span> EraserTool::drawStroke()</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>{</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    StrokeTool::drawStroke();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> p = strokeManager()-&gt;interpolateStroke();</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>(); i++)</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            p[i] = mEditor-&gt;view()-&gt;mapScreenToCanvas(p[i]);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        mScribbleArea-&gt;drawBrush(point,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                                 brushWidth,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                                 properties.feather,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                                 <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255, 255, 255, 255),</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                                 opacity,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                                 properties.useFeather,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                                 properties.useAA == ON);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">void</span> EraserTool::drawStroke()</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>{</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    StrokeTool::drawStroke();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> p = strokeManager()-&gt;interpolateStroke();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        qreal pressure = (properties.pressure) ? mCurrentPressure : 1.0;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        qreal opacity = (properties.pressure) ? (mCurrentPressure * 0.5) : 1.0;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        qreal brushWidth = properties.width * pressure;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        mCurrentWidth = brushWidth;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        qreal brushStep = (0.5 * brushWidth);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        brushStep = qMax(1.0, brushStep);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <a class="code hl_class" href="class_blit_rect.html">BlitRect</a> rect;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> a = mLastBrushPoint;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> b = getCurrentPoint();</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        qreal pressure = (properties.pressure) ? mCurrentPressure : 1.0;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        qreal opacity = (properties.pressure) ? (mCurrentPressure * 0.5) : 1.0;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        qreal brushWidth = properties.width * pressure;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        mCurrentWidth = brushWidth;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        qreal brushStep = (0.5 * brushWidth);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        brushStep = qMax(1.0, brushStep);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <a class="code hl_class" href="class_blit_rect.html">BlitRect</a> rect;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> a = mLastBrushPoint;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> b = getCurrentPoint();</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        qreal distance = 4 * <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(b, a).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordtype">int</span> steps = qRound(distance / brushStep);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; steps; i++)</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> point = mLastBrushPoint + (i + 1) * brushStep * (getCurrentPoint() - mLastBrushPoint) / distance;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            rect.extend(point.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>());</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            mScribbleArea-&gt;drawBrush(point,</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                                     brushWidth,</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                                     properties.feather,</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                                     <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::white</a>,</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                                     opacity,</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                                     properties.useFeather,</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                                     properties.useAA == ON);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <span class="keywordflow">if</span> (i == (steps - 1))</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            {</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                mLastBrushPoint = getCurrentPoint();</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            }</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordtype">int</span> rad = qRound(brushWidth / 2 + 2);</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        mScribbleArea-&gt;paintBitmapBufferRect(rect);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        mScribbleArea-&gt;refreshBitmap(rect, rad);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        mCurrentWidth = properties.width;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">if</span> (properties.pressure)</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            mCurrentWidth = (mCurrentWidth + (strokeManager()-&gt;getPressure() * mCurrentWidth)) * 0.5;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        qreal brushWidth = mCurrentWidth;</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::white</a>, brushWidth, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenStyle-enum">Qt::SolidLine</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenCapStyle-enum">Qt::RoundCap</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenJoinStyle-enum">Qt::RoundJoin</a>);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordtype">int</span> rad = qRound(brushWidth) / 2 + 2;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">if</span> (p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>() == 4)</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> path(p[0]);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            path.cubicTo(p[1],</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                         p[2],</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                         p[3]);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            qDebug() &lt;&lt; path;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            mScribbleArea-&gt;drawPath(path, pen, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#BrushStyle-enum">Qt::NoBrush</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Source</a>);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            mScribbleArea-&gt;refreshVector(path.boundingRect().toRect(), rad);</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        qreal distance = 4 * <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(b, a).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordtype">int</span> steps = qRound(distance / brushStep);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; steps; i++)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> point = mLastBrushPoint + (i + 1) * brushStep * (getCurrentPoint() - mLastBrushPoint) / distance;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            mScribbleArea-&gt;drawBrush(point,</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                                     brushWidth,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                                     properties.feather,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                                     <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::white</a>,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                                     opacity,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                                     properties.useFeather,</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                                     properties.useAA == ON);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">if</span> (i == (steps - 1))</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                mLastBrushPoint = getCurrentPoint();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        mCurrentWidth = properties.width;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">if</span> (properties.pressure)</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            mCurrentWidth = (mCurrentWidth + (strokeManager()-&gt;getPressure() * mCurrentWidth)) * 0.5;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        qreal brushWidth = mCurrentWidth;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::white</a>, brushWidth, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenStyle-enum">Qt::SolidLine</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenCapStyle-enum">Qt::RoundCap</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenJoinStyle-enum">Qt::RoundJoin</a>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">if</span> (p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>() == 4)</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> path(p[0]);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            path.cubicTo(p[1],</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                         p[2],</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                         p[3]);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            mScribbleArea-&gt;drawPath(path, pen, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#BrushStyle-enum">Qt::NoBrush</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Source</a>);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="keywordtype">void</span> EraserTool::removeVectorPaint()</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>{</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        mScribbleArea-&gt;paintBitmapBuffer();</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        mScribbleArea-&gt;clearBitmapBuffer();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        mScribbleArea-&gt;clearBitmapBuffer();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; } <span class="comment">// Can happen if the first frame is deleted while drawing</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="comment">// Clear the area containing the last point</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="comment">//vectorImage-&gt;removeArea(lastPoint);</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="comment">// Clear the temporary pixel path</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#aca66348037820beba53cab477f12e055">deleteSelectedPoints</a>();</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    }</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="keywordtype">void</span> EraserTool::removeVectorPaint()</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="keywordtype">void</span> EraserTool::updateStrokes()</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>{</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP || layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    {</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        mScribbleArea-&gt;paintBitmapBuffer();</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        mScribbleArea-&gt;clearBitmapBuffer();</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    }</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        drawStroke();</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    {</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        mScribbleArea-&gt;clearBitmapBuffer();</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; } <span class="comment">// Can happen if the first frame is deleted while drawing</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="comment">// Clear the area containing the last point</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="comment">//vectorImage-&gt;removeArea(lastPoint);</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="comment">// Clear the temporary pixel path</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#aca66348037820beba53cab477f12e055">deleteSelectedPoints</a>();</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    }</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>}</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keywordtype">void</span> EraserTool::updateStrokes()</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>{</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP || layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    {</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        drawStroke();</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        qreal radius = properties.width / 2;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* currKey = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(layer-&gt;getLastKeyFrameAtPosition(mEditor-&gt;currentFrame()));</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;VertexRef&gt;</a> nearbyVertices = currKey-&gt;<a class="code hl_function" href="class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a">getVerticesCloseTo</a>(getCurrentPoint(), radius);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> nearbyVertice : nearbyVertices)</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        {</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            currKey-&gt;<a class="code hl_function" href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">setSelected</a>(nearbyVertice, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        }</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    }</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>}</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        qreal radius = properties.width / 2;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* currKey = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(layer-&gt;getLastKeyFrameAtPosition(mEditor-&gt;currentFrame()));</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;VertexRef&gt;</a> nearbyVertices = currKey-&gt;<a class="code hl_function" href="class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a">getVerticesCloseTo</a>(getCurrentPoint(), radius);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> nearbyVertice : nearbyVertices)</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            currKey-&gt;<a class="code hl_function" href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">setSelected</a>(nearbyVertice, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    }</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>}</div>
 <div class="ttc" id="aclass_blit_rect_html"><div class="ttname"><a href="class_blit_rect.html">BlitRect</a></div><div class="ttdef"><b>Definition:</b> <a href="blitrect_8h_source.html#l00024">blitrect.h:25</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00037">layer.h:38</a></div></div>
 <div class="ttc" id="aclass_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:26</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00028">stroketool.h:29</a></div></div>
-<div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00032">vectorimage.h:33</a></div></div>
+<div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
 <div class="ttc" id="aclass_vector_image_html_a5046ddaeae625dd40dab3d4dc861b09c"><div class="ttname"><a href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">VectorImage::setSelected</a></div><div class="ttdeci">void setSelected(int curveNumber, bool YesOrNo)</div><div class="ttdoc">VectorImage::setSelected.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00617">vectorimage.cpp:617</a></div></div>
-<div class="ttc" id="aclass_vector_image_html_aca66348037820beba53cab477f12e055"><div class="ttname"><a href="class_vector_image.html#aca66348037820beba53cab477f12e055">VectorImage::deleteSelectedPoints</a></div><div class="ttdeci">void deleteSelectedPoints()</div><div class="ttdoc">VectorImage::deleteSelectedPoints.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01016">vectorimage.cpp:1016</a></div></div>
-<div class="ttc" id="aclass_vector_image_html_ae60e9bc5c6ca0cce8d31543ba9588f0a"><div class="ttname"><a href="class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a">VectorImage::getVerticesCloseTo</a></div><div class="ttdeci">QList&lt; VertexRef &gt; getVerticesCloseTo(QPointF thisPoint, qreal maxDistance)</div><div class="ttdoc">VectorImage::getVerticesCloseTo.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01470">vectorimage.cpp:1470</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_aca66348037820beba53cab477f12e055"><div class="ttname"><a href="class_vector_image.html#aca66348037820beba53cab477f12e055">VectorImage::deleteSelectedPoints</a></div><div class="ttdeci">void deleteSelectedPoints()</div><div class="ttdoc">VectorImage::deleteSelectedPoints.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01031">vectorimage.cpp:1031</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_ae60e9bc5c6ca0cce8d31543ba9588f0a"><div class="ttname"><a href="class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a">VectorImage::getVerticesCloseTo</a></div><div class="ttdeci">QList&lt; VertexRef &gt; getVerticesCloseTo(QPointF thisPoint, qreal maxDistance)</div><div class="ttdoc">VectorImage::getVerticesCloseTo.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l01465">vectorimage.cpp:1465</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
 <div class="ttc" id="aqhash_html_insert"><div class="ttname"><a href="https://doc.qt.io/qt-5/qhash.html#insert">QHash::insert</a></div><div class="ttdeci">QHash::iterator insert(const Key &amp;key, const T &amp;value)</div></div>
@@ -474,7 +452,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqpen_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpen.html">QPen</a></div></div>
 <div class="ttc" id="aqpixmap_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a></div></div>
 <div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
-<div class="ttc" id="aqpointf_html_toPoint"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#toPoint">QPointF::toPoint</a></div><div class="ttdeci">QPoint toPoint() const const</div></div>
 <div class="ttc" id="aqsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
 <div class="ttc" id="aqt_html_BrushStyle-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#BrushStyle-enum">Qt::NoBrush</a></div><div class="ttdeci">NoBrush</div></div>
 <div class="ttc" id="aqt_html_GlobalColor-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::white</a></div><div class="ttdeci">white</div></div>
@@ -489,10 +466,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Apr 22 2023 13:27:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Jun 3 2023 18:50:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ba40ec95b45cbdfdedd98c38d71d3364d8cb9fa8
+   based on revision c215a604369a2f2122245ea9799f43c6507932d7
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

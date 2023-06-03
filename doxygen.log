@@ -24,8 +24,8 @@ Searching for dia files...
 Searching for files to exclude
 Searching INPUT for files to process...
 Searching for files in directory /home/runner/work/pencil/pencil/app
-Searching for files in directory /home/runner/work/pencil/pencil/app/ui
 Searching for files in directory /home/runner/work/pencil/pencil/app/src
+Searching for files in directory /home/runner/work/pencil/pencil/app/ui
 Searching for files in directory /home/runner/work/pencil/pencil/app/data
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/unused
@@ -35,18 +35,18 @@ Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/background
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/interface
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/structure
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/vector
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/util
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/macosx
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/win32
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/linux
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/managers
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/tool
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/structure
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/util
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/vector
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/interface
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/managers
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/icons
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/resources
@@ -885,6 +885,11 @@ Generating code for file core_lib/src/too/home/runner/work/pencil/pencil/core_li
   parameter 'searchBounds'
   parameter 'maxBounds'
   parameter 'expand'
+/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.h:74: warning: argument 'pixmap' of command @param is not found in the argument list of CanvasPainter::initializePainter(QPainter &painter, QPaintDevice &device, const QRect &blitRect)
+/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.h:74: warning: The following parameter of CanvasPainter::initializePainter(QPainter &painter, QPaintDevice &device, const QRect &blitRect) is not documented:
+  parameter 'device'
+/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.cpp:379: warning: The following parameter of CanvasPainter::paintCurrentFrame(QPainter &painter, const QRect &blitRect, int startLayer, int endLayer) is not documented:
+  parameter 'blitRect'
 l/selecttool.cpp...
 Generating code for file core_lib/src/tool/selecttool.h...
 Generating code for file core_lib/src/tool/smudgetool.cpp...
@@ -1100,6 +1105,6 @@ Generating example index...
 finalizing index lists...
 writing tag file...
 Running plantuml with JAVA...
-type lookup cache used 17123/65536 hits=123988 misses=18183
-symbol lookup cache used 17587/65536 hits=202025 misses=17587
+type lookup cache used 17120/65536 hits=124011 misses=18180
+symbol lookup cache used 17576/65536 hits=201758 misses=17576
 finished...
