@@ -851,246 +851,251 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* key = layer-&gt;getKeyFrameAt(mEditor-&gt;currentFrame());</div>
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    <span class="keywordflow">if</span> (key == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span> </div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* dupKey = key-&gt;clone();</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    <span class="keywordtype">int</span> nextEmptyFrame = mEditor-&gt;currentFrame() + 1;</div>
-<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>    <span class="keywordflow">while</span> (layer-&gt;keyExistsWhichCovers(nextEmptyFrame))</div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    {</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>        nextEmptyFrame += 1;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    }</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span> </div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    layer-&gt;addKeyFrame(nextEmptyFrame, dupKey);</div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    mEditor-&gt;scrubTo(nextEmptyFrame);</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>    emit mEditor-&gt;<a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">frameModified</a>(nextEmptyFrame);</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="comment">// Duplicating a selected keyframe is not handled properly.</span></div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    <span class="comment">// The desired behavior is to clear selection anyway so we just do that.</span></div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    deselectAll();</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* dupKey = key-&gt;clone();</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span> </div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <span class="keywordtype">int</span> nextEmptyFrame = mEditor-&gt;currentFrame() + 1;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>    <span class="keywordflow">while</span> (layer-&gt;keyExistsWhichCovers(nextEmptyFrame))</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    {</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>        nextEmptyFrame += 1;</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>    }</div>
 <div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span> </div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::SOUND)</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>    {</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>        mEditor-&gt;sound()-&gt;processSound(<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(dupKey));</div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>        showSoundClipWarningIfNeeded();</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    }</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    {</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>        dupKey-&gt;setFileName(<span class="stringliteral">&quot;&quot;</span>); <span class="comment">// don&#39;t share filename</span></div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>        dupKey-&gt;modification();</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    }</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span> </div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    mEditor-&gt;layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>}</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="keywordtype">void</span> ActionCommands::moveFrameForward()</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>{</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>    <span class="keywordflow">if</span> (layer)</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>    {</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        <span class="keywordflow">if</span> (layer-&gt;moveKeyFrame(mEditor-&gt;currentFrame(), 1))</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        {</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>            mEditor-&gt;scrubForward();</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>        }</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    }</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    mEditor-&gt;layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    emit mEditor-&gt;<a class="code hl_signal" href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">framesModified</a>();</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>}</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span> </div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span><span class="keywordtype">void</span> ActionCommands::moveFrameBackward()</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>{</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    <span class="keywordflow">if</span> (layer)</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>    {</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>        <span class="keywordflow">if</span> (layer-&gt;moveKeyFrame(mEditor-&gt;currentFrame(), -1))</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        {</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>            mEditor-&gt;scrubBackward();</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>        }</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    }</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    emit mEditor-&gt;<a class="code hl_signal" href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">framesModified</a>();</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>}</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span> </div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewBitmapLayer()</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>{</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    <span class="keywordtype">bool</span> ok;</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> text = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                                         <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                                         mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>)), &amp;ok);</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !text.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    {</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        mEditor-&gt;layers()-&gt;createBitmapLayer(text);</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    }</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>}</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span> </div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewVectorLayer()</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>{</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <span class="keywordtype">bool</span> ok;</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> text = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>                                         <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>                                         mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Vector Layer&quot;</span>)), &amp;ok);</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !text.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>    {</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>        mEditor-&gt;layers()-&gt;createVectorLayer(text);</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    }</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>}</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span> </div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewCameraLayer()</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>{</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    <span class="keywordtype">bool</span> ok;</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> text = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>, <span class="stringliteral">&quot;A popup when creating a new layer&quot;</span>),</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>                                         <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>                                         mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Camera Layer&quot;</span>)), &amp;ok);</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !text.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    {</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        mEditor-&gt;layers()-&gt;createCameraLayer(text);</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>    }</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>}</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span> </div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewSoundLayer()</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>{</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strLayerName = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>                                                 <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>                                                 mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Sound Layer&quot;</span>)), &amp;ok);</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !strLayerName.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    {</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;createSoundLayer(strLayerName);</div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>        mEditor-&gt;layers()-&gt;setCurrentLayer(layer);</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>   }</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>}</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span> </div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::deleteCurrentLayer()</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>{</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>    <a class="code hl_class" href="class_layer_manager.html">LayerManager</a>* layerMgr = mEditor-&gt;layers();</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strLayerName = layerMgr-&gt;currentLayer()-&gt;name();</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>    layer-&gt;addKeyFrame(nextEmptyFrame, dupKey);</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>    mEditor-&gt;scrubTo(nextEmptyFrame);</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    emit mEditor-&gt;<a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">frameModified</a>(nextEmptyFrame);</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span> </div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::SOUND)</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    {</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>        mEditor-&gt;sound()-&gt;processSound(<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_sound_clip.html">SoundClip</a>*<span class="keyword">&gt;</span>(dupKey));</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>        showSoundClipWarningIfNeeded();</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    }</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    {</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>        dupKey-&gt;setFileName(<span class="stringliteral">&quot;&quot;</span>); <span class="comment">// don&#39;t share filename</span></div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>        dupKey-&gt;modification();</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>    }</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>    mEditor-&gt;layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>    emit mEditor-&gt;layers()-&gt;currentLayerChanged(mEditor-&gt;layers()-&gt;currentLayerIndex()); <span class="comment">// trigger timeline repaint.</span></div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>}</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span> </div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="keywordtype">void</span> ActionCommands::moveFrameForward()</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>{</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    <span class="keywordflow">if</span> (layer)</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    {</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>        <span class="keywordflow">if</span> (layer-&gt;moveKeyFrame(mEditor-&gt;currentFrame(), 1))</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>        {</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>            mEditor-&gt;scrubForward();</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>        }</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    }</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>    mEditor-&gt;layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    emit mEditor-&gt;<a class="code hl_signal" href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">framesModified</a>();</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>}</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span> </div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span><span class="keywordtype">void</span> ActionCommands::moveFrameBackward()</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>{</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    <span class="keywordflow">if</span> (layer)</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    {</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>        <span class="keywordflow">if</span> (layer-&gt;moveKeyFrame(mEditor-&gt;currentFrame(), -1))</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>        {</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>            mEditor-&gt;scrubBackward();</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>        }</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    }</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    emit mEditor-&gt;<a class="code hl_signal" href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">framesModified</a>();</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>}</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewBitmapLayer()</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>{</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> text = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>                                         <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>                                         mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>)), &amp;ok);</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !text.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>    {</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>        mEditor-&gt;layers()-&gt;createBitmapLayer(text);</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>    }</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>}</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span> </div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewVectorLayer()</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>{</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>    <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> text = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>                                         <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>                                         mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Vector Layer&quot;</span>)), &amp;ok);</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !text.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>    {</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>        mEditor-&gt;layers()-&gt;createVectorLayer(text);</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>    }</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>}</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span> </div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewCameraLayer()</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>{</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>    <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> text = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>, <span class="stringliteral">&quot;A popup when creating a new layer&quot;</span>),</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>                                         <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>                                         mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Camera Layer&quot;</span>)), &amp;ok);</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !text.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    {</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>        mEditor-&gt;layers()-&gt;createCameraLayer(text);</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    }</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>}</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span> </div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::addNewSoundLayer()</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>{</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strLayerName = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a>(<span class="keyword">nullptr</span>, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer Properties&quot;</span>),</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>                                                 <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Layer name:&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a>,</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                                                 mEditor-&gt;layers()-&gt;nameSuggestLayer(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Sound Layer&quot;</span>)), &amp;ok);</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <span class="keywordflow">if</span> (ok &amp;&amp; !strLayerName.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    {</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;createSoundLayer(strLayerName);</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>        mEditor-&gt;layers()-&gt;setCurrentLayer(layer);</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>   }</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>}</div>
 <div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span> </div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    <span class="keywordflow">if</span> (!layerMgr-&gt;canDeleteLayer(mEditor-&gt;currentLayerIndex())) {</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>        <span class="keywordflow">return</span> Status::CANCELED;</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    }</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span> </div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <span class="keywordtype">int</span> ret = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#warning">QMessageBox::warning</a>(mParent,</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>                                   <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Delete Layer&quot;</span>, <span class="stringliteral">&quot;Windows title of Delete current layer pop-up.&quot;</span>),</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>                                   <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Are you sure you want to delete layer: %1? This cannot be undone.&quot;</span>).arg(strLayerName),</div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>                                   <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Cancel</a>,</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>                                   <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>);</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    <span class="keywordflow">if</span> (ret == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>)</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>    {</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>        <a class="code hl_class" href="class_status.html">Status</a> st = layerMgr-&gt;deleteLayer(mEditor-&gt;currentLayerIndex());</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>        <span class="keywordflow">if</span> (st == Status::ERROR_NEED_AT_LEAST_ONE_CAMERA_LAYER)</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>        {</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>            <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#information">QMessageBox::information</a>(mParent, <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>                                     <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Please keep at least one camera layer in project&quot;</span>, <span class="stringliteral">&quot;text when failed to delete camera layer&quot;</span>));</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>        }</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    }</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>}</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span> </div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span><span class="keywordtype">void</span> ActionCommands::setLayerVisibilityIndex(<span class="keywordtype">int</span> index)</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>{</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>    mEditor-&gt;<a class="code hl_function" href="class_editor.html#acc028d1a85307682f933690c560fd6f1">setLayerVisibility</a>(<span class="keyword">static_cast&lt;</span>LayerVisibility<span class="keyword">&gt;</span>(index));</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span><a class="code hl_class" href="class_status.html">Status</a> ActionCommands::deleteCurrentLayer()</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>{</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <a class="code hl_class" href="class_layer_manager.html">LayerManager</a>* layerMgr = mEditor-&gt;layers();</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strLayerName = layerMgr-&gt;currentLayer()-&gt;name();</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span> </div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    <span class="keywordflow">if</span> (!layerMgr-&gt;canDeleteLayer(mEditor-&gt;currentLayerIndex())) {</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>        <span class="keywordflow">return</span> Status::CANCELED;</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    }</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    <span class="keywordtype">int</span> ret = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#warning">QMessageBox::warning</a>(mParent,</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>                                   <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Delete Layer&quot;</span>, <span class="stringliteral">&quot;Windows title of Delete current layer pop-up.&quot;</span>),</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>                                   <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Are you sure you want to delete layer: %1? This cannot be undone.&quot;</span>).arg(strLayerName),</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>                                   <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Cancel</a>,</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>                                   <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>);</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>    <span class="keywordflow">if</span> (ret == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>)</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    {</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>        <a class="code hl_class" href="class_status.html">Status</a> st = layerMgr-&gt;deleteLayer(mEditor-&gt;currentLayerIndex());</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>        <span class="keywordflow">if</span> (st == Status::ERROR_NEED_AT_LEAST_ONE_CAMERA_LAYER)</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>        {</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>            <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#information">QMessageBox::information</a>(mParent, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>                                     <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Please keep at least one camera layer in project&quot;</span>, <span class="stringliteral">&quot;text when failed to delete camera layer&quot;</span>));</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        }</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    }</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>    <span class="keywordflow">return</span> Status::OK;</div>
 <div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>}</div>
 <div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span> </div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span><span class="keywordtype">void</span> ActionCommands::changeKeyframeLineColor()</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span><span class="keywordtype">void</span> ActionCommands::setLayerVisibilityIndex(<span class="keywordtype">int</span> index)</div>
 <div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>{</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    <span class="keywordflow">if</span> (mEditor-&gt;layers()-&gt;currentLayer()-&gt;type() == Layer::BITMAP &amp;&amp;</div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>            mEditor-&gt;layers()-&gt;currentLayer()-&gt;keyExists(mEditor-&gt;currentFrame()))</div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>    {</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>        QRgb color = mEditor-&gt;color()-&gt;<a class="code hl_function" href="class_color_manager.html#a7e795319fdaae13a3d8819ec920c982a">frontColor</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>();</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>        <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* layer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>        layer-&gt;getBitmapImageAtFrame(mEditor-&gt;currentFrame())-&gt;fillNonAlphaPixels(color);</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">updateFrame</a>(mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>    }</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>}</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span> </div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span><span class="keywordtype">void</span> ActionCommands::changeallKeyframeLineColor()</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>{</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    <span class="keywordflow">if</span> (mEditor-&gt;layers()-&gt;currentLayer()-&gt;type() == Layer::BITMAP)</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>    {</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>        QRgb color = mEditor-&gt;color()-&gt;<a class="code hl_function" href="class_color_manager.html#a7e795319fdaae13a3d8819ec920c982a">frontColor</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>();</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>        <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* layer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = layer-&gt;firstKeyFramePosition(); i &lt;= layer-&gt;getMaxKeyFramePosition(); i++)</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>        {</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>            <span class="keywordflow">if</span> (layer-&gt;keyExists(i))</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>                layer-&gt;getBitmapImageAtFrame(i)-&gt;fillNonAlphaPixels(color);</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>        }</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">updateFrame</a>(mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    }</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>}</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span> </div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span><span class="keywordtype">void</span> ActionCommands::help()</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>{</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;http://www.pencil2d.org/doc/&quot;</span>;</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>}</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span> </div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span><span class="keywordtype">void</span> ActionCommands::quickGuide()</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>{</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sDocPath = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#writableLocation">QStandardPaths::writableLocation</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum">QStandardPaths::DocumentsLocation</a>);</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sCopyDest = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(sDocPath).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(<span class="stringliteral">&quot;pencil2d_quick_guide.pdf&quot;</span>);</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    mEditor-&gt;<a class="code hl_function" href="class_editor.html#acc028d1a85307682f933690c560fd6f1">setLayerVisibility</a>(<span class="keyword">static_cast&lt;</span>LayerVisibility<span class="keyword">&gt;</span>(index));</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>}</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span> </div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span><span class="keywordtype">void</span> ActionCommands::changeKeyframeLineColor()</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>{</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    <span class="keywordflow">if</span> (mEditor-&gt;layers()-&gt;currentLayer()-&gt;type() == Layer::BITMAP &amp;&amp;</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>            mEditor-&gt;layers()-&gt;currentLayer()-&gt;keyExists(mEditor-&gt;currentFrame()))</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>    {</div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>        QRgb color = mEditor-&gt;color()-&gt;<a class="code hl_function" href="class_color_manager.html#a7e795319fdaae13a3d8819ec920c982a">frontColor</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>();</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>        <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* layer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>        layer-&gt;getBitmapImageAtFrame(mEditor-&gt;currentFrame())-&gt;fillNonAlphaPixels(color);</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">updateFrame</a>(mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    }</div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>}</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span> </div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span><span class="keywordtype">void</span> ActionCommands::changeallKeyframeLineColor()</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>{</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>    <span class="keywordflow">if</span> (mEditor-&gt;layers()-&gt;currentLayer()-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    {</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>        QRgb color = mEditor-&gt;color()-&gt;<a class="code hl_function" href="class_color_manager.html#a7e795319fdaae13a3d8819ec920c982a">frontColor</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>();</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>        <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* layer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = layer-&gt;firstKeyFramePosition(); i &lt;= layer-&gt;getMaxKeyFramePosition(); i++)</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>        {</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>            <span class="keywordflow">if</span> (layer-&gt;keyExists(i))</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>                layer-&gt;getBitmapImageAtFrame(i)-&gt;fillNonAlphaPixels(color);</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>        }</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">updateFrame</a>(mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>    }</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>}</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span> </div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span><span class="keywordtype">void</span> ActionCommands::help()</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>{</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;http://www.pencil2d.org/doc/&quot;</span>;</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>}</div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> quickGuideFile(<span class="stringliteral">&quot;:/app/pencil2d_quick_guide.pdf&quot;</span>);</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>    quickGuideFile.copy(sCopyDest);</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qurl.html#fromLocalFile">QUrl::fromLocalFile</a>(sCopyDest));</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>}</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span> </div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span><span class="keywordtype">void</span> ActionCommands::website()</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>{</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://www.pencil2d.org/&quot;</span>;</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>}</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span> </div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span><span class="keywordtype">void</span> ActionCommands::forum()</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>{</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://discuss.pencil2d.org/&quot;</span>;</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>}</div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span> </div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="keywordtype">void</span> ActionCommands::discord()</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>{</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://discord.gg/8FxdV2g&quot;</span>;</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>}</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span> </div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="keywordtype">void</span> ActionCommands::reportbug()</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>{</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://github.com/pencil2d/pencil/issues&quot;</span>;</div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>}</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span> </div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span><span class="keywordtype">void</span> ActionCommands::checkForUpdates()</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>{</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    <a class="code hl_class" href="class_check_updates_dialog.html">CheckUpdatesDialog</a> dialog;</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    dialog.startChecking();</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    dialog.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialog.html#exec">exec</a>();</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>}</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span><span class="comment">// This action is a temporary measure until we have an automated recover mechanism in place</span></div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span><span class="keywordtype">void</span> ActionCommands::openTemporaryDirectory()</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>{</div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    <span class="keywordtype">int</span> ret = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#warning">QMessageBox::warning</a>(mParent, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Warning&quot;</span>), <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;The temporary directory is meant to be used only by Pencil2D. Do not modify it unless you know what you are doing.&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Cancel</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>);</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    <span class="keywordflow">if</span> (ret == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>)</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    {</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>        <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qurl.html#fromLocalFile">QUrl::fromLocalFile</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a>().filePath(<span class="stringliteral">&quot;Pencil2D&quot;</span>)));</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    }</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>}</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span> </div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span><span class="keywordtype">void</span> ActionCommands::about()</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>{</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    <a class="code hl_class" href="class_about_dialog.html">AboutDialog</a>* aboutBox = <span class="keyword">new</span> <a class="code hl_class" href="class_about_dialog.html">AboutDialog</a>(mParent);</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    aboutBox-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setAttribute">setAttribute</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#WidgetAttribute-enum">Qt::WA_DeleteOnClose</a>);</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    aboutBox-&gt;init();</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>    aboutBox-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialog.html#exec">exec</a>();</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>}</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span> </div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span><span class="keywordtype">void</span> ActionCommands::showSoundClipWarningIfNeeded()</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>{</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    <span class="keywordtype">int</span> clipCount = mEditor-&gt;sound()-&gt;soundClipCount();</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <span class="keywordflow">if</span> (clipCount &gt;= MovieExporter::MAX_SOUND_FRAMES &amp;&amp; !mSuppressSoundWarning) {</div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>        <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#warning">QMessageBox::warning</a>(mParent, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Warning&quot;</span>), <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;You currently have a total of %1 sound clips. Due to current limitations, you will be unable to export any animation exceeding %2 sound clips. We recommend splitting up larger projects into multiple smaller project to stay within this limit.&quot;</span>).arg(clipCount).arg(MovieExporter::MAX_SOUND_FRAMES));</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>        mSuppressSoundWarning = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>        mSuppressSoundWarning = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    }</div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>}</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span><span class="keywordtype">void</span> ActionCommands::quickGuide()</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>{</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sDocPath = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#writableLocation">QStandardPaths::writableLocation</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum">QStandardPaths::DocumentsLocation</a>);</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sCopyDest = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(sDocPath).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(<span class="stringliteral">&quot;pencil2d_quick_guide.pdf&quot;</span>);</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span> </div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> quickGuideFile(<span class="stringliteral">&quot;:/app/pencil2d_quick_guide.pdf&quot;</span>);</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    quickGuideFile.copy(sCopyDest);</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qurl.html#fromLocalFile">QUrl::fromLocalFile</a>(sCopyDest));</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>}</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span> </div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span><span class="keywordtype">void</span> ActionCommands::website()</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>{</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://www.pencil2d.org/&quot;</span>;</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>}</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span><span class="keywordtype">void</span> ActionCommands::forum()</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>{</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://discuss.pencil2d.org/&quot;</span>;</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>}</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span> </div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="keywordtype">void</span> ActionCommands::discord()</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>{</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://discord.gg/8FxdV2g&quot;</span>;</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>}</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span> </div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span><span class="keywordtype">void</span> ActionCommands::reportbug()</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>{</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> url = <span class="stringliteral">&quot;https://github.com/pencil2d/pencil/issues&quot;</span>;</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qurl.html">QUrl</a>(url));</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>}</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span> </div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span><span class="keywordtype">void</span> ActionCommands::checkForUpdates()</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>{</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    <a class="code hl_class" href="class_check_updates_dialog.html">CheckUpdatesDialog</a> dialog;</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    dialog.startChecking();</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    dialog.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialog.html#exec">exec</a>();</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>}</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span><span class="comment">// This action is a temporary measure until we have an automated recover mechanism in place</span></div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span><span class="keywordtype">void</span> ActionCommands::openTemporaryDirectory()</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>{</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keywordtype">int</span> ret = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#warning">QMessageBox::warning</a>(mParent, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Warning&quot;</span>), <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;The temporary directory is meant to be used only by Pencil2D. Do not modify it unless you know what you are doing.&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Cancel</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>);</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>    <span class="keywordflow">if</span> (ret == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Ok</a>)</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    {</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>        <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdesktopservices.html#openUrl">QDesktopServices::openUrl</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qurl.html#fromLocalFile">QUrl::fromLocalFile</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a>().filePath(<span class="stringliteral">&quot;Pencil2D&quot;</span>)));</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    }</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>}</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="keywordtype">void</span> ActionCommands::about()</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>{</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    <a class="code hl_class" href="class_about_dialog.html">AboutDialog</a>* aboutBox = <span class="keyword">new</span> <a class="code hl_class" href="class_about_dialog.html">AboutDialog</a>(mParent);</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>    aboutBox-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setAttribute">setAttribute</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#WidgetAttribute-enum">Qt::WA_DeleteOnClose</a>);</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>    aboutBox-&gt;init();</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    aboutBox-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialog.html#exec">exec</a>();</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>}</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span><span class="keywordtype">void</span> ActionCommands::showSoundClipWarningIfNeeded()</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>{</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    <span class="keywordtype">int</span> clipCount = mEditor-&gt;sound()-&gt;soundClipCount();</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keywordflow">if</span> (clipCount &gt;= MovieExporter::MAX_SOUND_FRAMES &amp;&amp; !mSuppressSoundWarning) {</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>        <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#warning">QMessageBox::warning</a>(mParent, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Warning&quot;</span>), <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;You currently have a total of %1 sound clips. Due to current limitations, you will be unable to export any animation exceeding %2 sound clips. We recommend splitting up larger projects into multiple smaller project to stay within this limit.&quot;</span>).arg(clipCount).arg(MovieExporter::MAX_SOUND_FRAMES));</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>        mSuppressSoundWarning = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>        mSuppressSoundWarning = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    }</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>}</div>
 <div class="ttc" id="aclass_about_dialog_html"><div class="ttname"><a href="class_about_dialog.html">AboutDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="aboutdialog_8h_source.html#l00026">aboutdialog.h:27</a></div></div>
 <div class="ttc" id="aclass_action_commands_html_aa22c5d39f054881b947cd6612339ca80"><div class="ttname"><a href="class_action_commands.html#aa22c5d39f054881b947cd6612339ca80">ActionCommands::insertKeyFrameAtCurrentPosition</a></div><div class="ttdeci">Status insertKeyFrameAtCurrentPosition()</div><div class="ttdoc">Will insert a keyframe at the current position and push connected frames to the right.</div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8cpp_source.html#l00647">actioncommands.cpp:647</a></div></div>
 <div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00024">camera.h:25</a></div></div>
@@ -1175,10 +1180,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Jul 18 2023 14:43:52 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Aug 4 2023 16:49:24 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision f5a60600c5b8244ea1836b216fa625bf3c9befa9
+   based on revision bb5598a299e4c27b9424584f5051679e4cbf412f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
