@@ -240,16 +240,18 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        qreal angleOffset = <span class="keyword">static_cast&lt;</span>qreal<span class="keyword">&gt;</span>(std::atan2(curV.y(), curV.x()) - std::atan2(startV.y(), startV.x()));</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        angleOffset = qRadiansToDegrees(angleOffset);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordtype">float</span> newAngle = viewMgr-&gt;rotation() + <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(angleOffset);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        viewMgr-&gt;rotate(newAngle);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isScale)</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> delta = (<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(getCurrentPixel().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() - mLastPixel.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>())) / 100.f;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keyword">const</span> qreal scaleValue = viewMgr-&gt;scaling() * (1 + (delta * mDeltaFactor));</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        viewMgr-&gt;scaleAtOffset(scaleValue, mStartPoint);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">// Invert rotation direction if view is flipped either vertically or horizontally</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> delta = viewMgr-&gt;isFlipHorizontal() == !viewMgr-&gt;isFlipVertical()</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(angleOffset * -1) : <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(angleOffset);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        viewMgr-&gt;rotateRelative(delta);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isScale)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> delta = (<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(getCurrentPixel().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() - mLastPixel.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>())) / 100.f;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">const</span> qreal scaleValue = viewMgr-&gt;scaling() * (1 + (delta * mDeltaFactor));</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        viewMgr-&gt;scaleAtOffset(scaleValue, mStartPoint);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>}</div>
 <div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_view_manager_html"><div class="ttname"><a href="class_view_manager.html">ViewManager</a></div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8h_source.html#l00025">viewmanager.h:26</a></div></div>
@@ -272,10 +274,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 6 2023 11:34:55 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Aug 8 2023 05:54:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision c4e61e3472637e2f9b2f3358675aad4fa225c9ed
+   based on revision 7b0f1207179852b4203984940aacf9e76408e219
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
