@@ -161,14 +161,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> SelectTool::cursor()</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Don&#39;t update cursor while we&#39;re moving the selection</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (mScribbleArea-&gt;isPointerInUse()) { <span class="keywordflow">return</span> mCursorPixmap; }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (mScribbleArea-&gt;isPointerInUse()) { <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>(mCursorPixmap); }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    mEditor-&gt;select()-&gt;setMoveModeForAnchorInRange(getCurrentPoint());</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    MoveMode mode = mEditor-&gt;select()-&gt;getMoveMode();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    mCursorPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255, 255, 255, 0));</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> cursorPainter(&amp;mCursorPixmap);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    cursorPainter.setRenderHint(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::HighQualityAntialiasing</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    cursorPainter.setRenderHint(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">switch</span>(mode)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
@@ -197,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">default</span>:</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        Q_UNREACHABLE();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> mCursorPixmap;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>(mCursorPixmap);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> SelectTool::resetToDefault()</div>
@@ -436,7 +436,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqobject_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div></div>
 <div class="ttc" id="aqobject_html_event"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#event">QObject::event</a></div><div class="ttdeci">virtual bool event(QEvent *e)</div></div>
 <div class="ttc" id="aqpainter_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a></div></div>
-<div class="ttc" id="aqpainter_html_RenderHint-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::HighQualityAntialiasing</a></div><div class="ttdeci">HighQualityAntialiasing</div></div>
+<div class="ttc" id="aqpainter_html_RenderHint-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a></div><div class="ttdeci">Antialiasing</div></div>
 <div class="ttc" id="aqpixmap_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a></div></div>
 <div class="ttc" id="aqpixmap_html_fill"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpixmap.html#fill">QPixmap::fill</a></div><div class="ttdeci">void fill(const QColor &amp;color)</div></div>
 <div class="ttc" id="aqpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
@@ -468,10 +468,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:11 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -169,7 +169,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    mSlider-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#maximumWidth-prop">setMaximumWidth</a>(500);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a> = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a>();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">setMargin</a>(2);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">setContentsMargins</a>(2, 2, 2, 2);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#spacing-prop">setSpacing</a>(2);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#addWidget">addWidget</a>(mLabel, 0, 0, 1, 1);</div>
@@ -246,8 +246,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqgridlayout_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a></div></div>
 <div class="ttc" id="aqlabel_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlabel.html">QLabel</a></div></div>
 <div class="ttc" id="aqlabel_html_text-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlabel.html#text-prop">QLabel::setText</a></div><div class="ttdeci">void setText(const QString &amp;)</div></div>
-<div class="ttc" id="aqlayout-obsolete_html_setMargin"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">QLayout::setMargin</a></div><div class="ttdeci">void setMargin(int margin)</div></div>
 <div class="ttc" id="aqlayout_html_addWidget"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#addWidget">QLayout::addWidget</a></div><div class="ttdeci">void addWidget(QWidget *w)</div></div>
+<div class="ttc" id="aqlayout_html_setContentsMargins"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">QLayout::setContentsMargins</a></div><div class="ttdeci">void setContentsMargins(int left, int top, int right, int bottom)</div></div>
 <div class="ttc" id="aqlayout_html_spacing-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#spacing-prop">QLayout::setSpacing</a></div><div class="ttdeci">void setSpacing(int)</div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="aqsizepolicy_html_Policy-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsizepolicy.html#Policy-enum">QSizePolicy::Preferred</a></div><div class="ttdeci">Preferred</div></div>
@@ -266,10 +266,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -166,15 +166,20 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_enumerationRef" href="https://doc.qt.io/qt-5/qevent.html#Type-enum">QEvent::Type</a> eventType() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    InputType inputType() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_enumerationRef" href="https://doc.qt.io/qt-5/qtabletevent.html#TabletDevice-enum">QTabletEvent::TabletDevice</a> device() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_enumerationRef" href="https://doc.qt.io/qt-5/qtabletevent.html#PointerType-enum">QTabletEvent::PointerType</a> pointerType() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtabletevent.html">QTabletEvent</a>* mTabletEvent = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qmouseevent.html">QMouseEvent</a>* mMouseEvent = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(6, 0, 0)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    QInputDevice::DeviceType device() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QPointingDevice::PointerType pointerType() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_enumerationRef" href="https://doc.qt.io/qt-5/qtabletevent.html#TabletDevice-enum">QTabletEvent::TabletDevice</a> device() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_enumerationRef" href="https://doc.qt.io/qt-5/qtabletevent.html#PointerType-enum">QTabletEvent::PointerType</a> pointerType() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// POINTEREVENT_H</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtabletevent.html">QTabletEvent</a>* mTabletEvent = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qmouseevent.html">QMouseEvent</a>* mMouseEvent = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">// POINTEREVENT_H</span></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html_a12d4df734b7e64c658635713f530743d"><div class="ttname"><a href="class_pointer_event.html#a12d4df734b7e64c658635713f530743d">PointerEvent::tangentialPressure</a></div><div class="ttdeci">qreal tangentialPressure() const</div><div class="ttdoc">Returns the tangential pressure of a tablet's that support it This is typically given by a finger whe...</div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8cpp_source.html#l00095">pointerevent.cpp:95</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html_a3d17f6882347bdf6bec55c92ca805276"><div class="ttname"><a href="class_pointer_event.html#a3d17f6882347bdf6bec55c92ca805276">PointerEvent::pos</a></div><div class="ttdeci">QPoint pos() const</div><div class="ttdoc">Returns QPoint of the device.</div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8cpp_source.html#l00017">pointerevent.cpp:17</a></div></div>
@@ -202,10 +207,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:11 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

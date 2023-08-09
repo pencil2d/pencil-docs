@@ -109,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_docs_build_linux"></a></p>
 <p>These are instructions for building <a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a> on Linux. If you are using Windows go <a class="el" href="build_windows.html">here</a>, and macOS go <a class="el" href="build_macos.html">here</a>. This guide is primarily targeted towards developers. If you just want to use the latest version you can just download one of our <a href="https://www.pencil2d.org/download/nightly/">nightly builds</a>.</p>
-<p>This tutorial was made with Ubuntu Xenial Xerus (16.04) and Arch Linux in mind, however you should be able to adapt this guide to other versions or distributions if necessary.</p>
+<p>This tutorial was made with Ubuntu and Arch Linux in mind, however you should be able to adapt this guide to other distributions if necessary.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Installing Dependencies</h1>
 <p>There are a few things that must be installed in order to build <a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a>. In this section, we will go over the installation of each of these components in detail. For Ubuntu we describe both graphical and command-line methods of installation, choose whichever one you feel more comfortable with (and if you don't know the difference, choose graphical). For Arch Linux we describe only the command-line method since that is what most Arch users are used to.</p>
@@ -130,15 +130,18 @@ Graphical method</h4>
 </ul>
 <h4><a class="anchor" id="autotoc_md6"></a>
 Command-line method</h4>
-<p><a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a> must be built with the Qt 5 framework. To install Qt 5, run this command: </p><pre class="fragment">sudo apt install qt5-default qt5-qmake libqt5xmlpatterns5-dev libqt5svg5-dev qtmultimedia5-dev
+<p><a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a> must be built with the Qt framework, version 5.6 or newer. Therefore, you will need at least Ubuntu 16.10 (Yakkety Yak) to use this method, as Canonical does not provide recent enough versions of <a class="elRef" href="https://doc.qt.io/qt-5/qt.html">Qt</a> for older versions of Ubuntu. To install Qt 5, run this command: </p><pre class="fragment">sudo apt install qt5-default qtbase5-dev qtmultimedia5-dev qttools5-dev-tools libqt5svg5-dev
+</pre> <dl class="section note"><dt>Note</dt><dd>If you are using Ubuntu 20.04 (Focal Fossa) or newer, you can omit qt5-default from the command above.</dd></dl>
+<p>If you are using Ubuntu 22.04 (Jammy Jellyfish) or later, you can alternatively install Qt 6 by running this command: </p><pre class="fragment">sudo apt install qt6-base-dev qt6-l10n-tools qt6-multimedia-dev libqt6svg6-dev
 </pre><p> For a more pleasant development experience, you might want to install Qt Creator as well (recommended). To do so, run the following command: </p><pre class="fragment">sudo apt install qtcreator
 </pre> <h3><a class="anchor" id="autotoc_md7"></a>
 Arch Linux</h3>
-<p>Pencil uses version 5 of the Qt framework. To install all required components of Qt, run this command: </p><pre class="fragment">sudo pacman -S --needed qt5-multimedia qt5-svg qt5-xmlpatterns qt-gstreamer
-</pre><p> For a more pleasant development experience, you might want to install Qt Creator as well (recommended). To do so, run the following command: </p><pre class="fragment">sudo pacman -S --needed qtcreator
+<p>Pencil uses the Qt framework, version 5.6 or newer. To install all required components of Qt 5, run this command: </p><pre class="fragment">sudo pacman -S --needed qt5-base qt5-multimedia qt5-svg qt5-tools qt-gstreamer
+</pre><p> If you would like to use Qt 6 instead, simply replace the version number in the command above.</p>
+<p>For a more pleasant development experience, you might want to install Qt Creator as well (recommended). To do so, run the following command: </p><pre class="fragment">sudo pacman -S --needed qtcreator
 </pre> <h2><a class="anchor" id="autotoc_md8"></a>
 Make and GCC/Clang</h2>
-<p>You will need GNU Make and either GCC or CLANG to build <a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a>.</p>
+<p>You will need GNU Make and either GCC or Clang to build <a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a>.</p>
 <h3><a class="anchor" id="autotoc_md9"></a>
 Ubuntu</h3>
 <p>These are usually installed by default, so you don't have to worry about them. If however you encounter issues, you can run the following commands.</p>
@@ -146,7 +149,7 @@ Ubuntu</h3>
 <li>GNU Make and GCC: <pre class="fragment">sudo apt install make g++
 </pre></li>
 <li>GNU Make and Clang: <pre class="fragment">sudo apt install make clang
-</pre> </li>
+</pre></li>
 </ul>
 <h3><a class="anchor" id="autotoc_md10"></a>
 Arch Linux</h3>
@@ -155,7 +158,7 @@ Arch Linux</h3>
 <li>GNU Make and GCC: <pre class="fragment">sudo pacman -S --needed make gcc
 </pre></li>
 <li>GNU Make and Clang: <pre class="fragment">sudo pacman -S --needed make clang
-</pre> </li>
+</pre></li>
 </ul>
 <h1><a class="anchor" id="autotoc_md11"></a>
 Get the source code</h1>
@@ -187,7 +190,8 @@ With QMake/GNU Make</h3>
 <td class="markdownTableBodyNone">Clang   </td><td class="markdownTableBodyNone">linux-clang   </td><td class="markdownTableBodyNone">linux-clang   </td></tr>
 </table>
 <p>Substitute &lt;mkspec&gt; for the mkspec of your desired configuration and run the command below: </p><pre class="fragment">mkdir build; pushd build; qmake -r -spec &lt;mkspec&gt; CONFIG+=debug ..; popd
-</pre><p> Next you have to use GNU Make to actually compile the source code. Run the command: </p><pre class="fragment">make -C build
+</pre> <dl class="section note"><dt>Note</dt><dd>In order to use Qt 6, you might need to replace <code>qmake</code> with <code>qmake6</code>.</dd></dl>
+<p>Next you have to use GNU Make to actually compile the source code. Run the command: </p><pre class="fragment">make -C build
 </pre><p> You can then open <a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a> by running this from the source directory: </p><pre class="fragment">./build/bin/pencil2d
 </pre> <h2><a class="anchor" id="autotoc_md15"></a>
 Next steps</h2>
@@ -199,10 +203,10 @@ Next steps</h2>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:11 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

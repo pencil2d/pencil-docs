@@ -152,8 +152,10 @@ Official Qt Installer (Recommended)</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md22"></a>
 Command-line method</h2>
-<p>If you have <code>Homebrew</code> installed, you can install Qt 5 framework via Homebrew as well. Run this command: </p><pre class="fragment">brew install qt5
-</pre><p> And also run the following commands to install Qt Creator: </p><pre class="fragment">brew tap caskroom/cask
+<p>If you have <code>Homebrew</code> installed, you can install Qt 5 framework via Homebrew as well. Run this command: </p><pre class="fragment">brew install qt@5
+</pre><p> If you would like to use Qt 6 instead, simply replace the version number in the command above.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Please note that there are known issues with the Homebrew build of <a class="elRef" href="https://doc.qt.io/qt-5/qt.html">Qt</a> 6 which may cause <a class="el" href="class_pencil2_d.html" title="The main application class handling startup as well as the main loop.">Pencil2D</a> to crash. As a workaround, you can try disabling the "Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH" option in your run configuration after configuring the project in <a class="elRef" href="https://doc.qt.io/qt-5/qt.html">Qt</a> Creator. Otherwise, please use the official builds instead (see above), as they are not affected. For more details, see <a href="https://github.com/orgs/Homebrew/discussions/4362">this discussion</a>.</dd></dl>
+<p>And also run the following commands to install Qt Creator: </p><pre class="fragment">brew tap caskroom/cask
 brew cask install qt-creator
 </pre> <h1><a class="anchor" id="autotoc_md23"></a>
 3. Get Source Code</h1>
@@ -189,10 +191,10 @@ Next steps</h1>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:11 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

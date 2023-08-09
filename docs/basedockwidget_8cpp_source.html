@@ -171,19 +171,21 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#ifdef __APPLE__</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// For some reason the behavior of minimumSize and the margin changes on mac when floating, so we need to do this</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    minHeight += <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>()-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#margin-prop">margin</a>()*2;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">setMinimumSize</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>()-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">minimumSize</a>().<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>(), minHeight));</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">int</span> BaseDockWidget::getMinHeightForWidth(<span class="keywordtype">int</span> width)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    Q_UNUSED(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> top, bottom;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>()-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#getContentsMargins">getContentsMargins</a>(<span class="keyword">nullptr</span>, &amp;top, <span class="keyword">nullptr</span>, &amp;bottom);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    minHeight += top + bottom;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">setMinimumSize</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>()-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">minimumSize</a>().<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>(), minHeight));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">int</span> BaseDockWidget::getMinHeightForWidth(<span class="keywordtype">int</span> width)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    Q_UNUSED(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
 <div class="ttc" id="aqdockwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdockwidget.html">QDockWidget</a></div></div>
 <div class="ttc" id="aqdockwidget_html_event"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdockwidget.html#event">QDockWidget::event</a></div><div class="ttdeci">virtual bool event(QEvent *event) override</div></div>
-<div class="ttc" id="aqlayout-obsolete_html_margin-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout-obsolete.html#margin-prop">QLayout::margin</a></div><div class="ttdeci">margin</div></div>
+<div class="ttc" id="aqlayout_html_getContentsMargins"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#getContentsMargins">QLayout::getContentsMargins</a></div><div class="ttdeci">void getContentsMargins(int *left, int *top, int *right, int *bottom) const const</div></div>
 <div class="ttc" id="aqresizeevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qresizeevent.html">QResizeEvent</a></div></div>
 <div class="ttc" id="aqsize_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html">QSize</a></div></div>
 <div class="ttc" id="aqt_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html">Qt</a></div></div>
@@ -199,10 +201,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

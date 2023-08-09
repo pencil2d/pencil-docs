@@ -9,10 +9,9 @@ var searchData=
   ['networkerror_6',['NetworkError',['https://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum',1,'QNetworkReply']]],
   ['networklayerprotocol_7',['NetworkLayerProtocol',['https://doc.qt.io/qt-5/qabstractsocket.html#NetworkLayerProtocol-enum',1,'QAbstractSocket']]],
   ['nextprotocolnegotiationstatus_8',['NextProtocolNegotiationStatus',['https://doc.qt.io/qt-5/qsslconfiguration.html#NextProtocolNegotiationStatus-enum',1,'QSslConfiguration']]],
-  ['nodekind_9',['NodeKind',['https://doc.qt.io/qt-5/qxmlnodemodelindex.html#NodeKind-enum',1,'QXmlNodeModelIndex']]],
-  ['nodetype_10',['NodeType',['https://doc.qt.io/qt-5/qdomnode.html#NodeType-enum',1,'QDomNode']]],
-  ['normalizationform_11',['NormalizationForm',['https://doc.qt.io/qt-5/qstring.html#NormalizationForm-enum',1,'QString']]],
-  ['notation_12',['Notation',['https://doc.qt.io/qt-5/qdoublevalidator.html#Notation-enum',1,'QDoubleValidator']]],
-  ['numberflag_13',['NumberFlag',['https://doc.qt.io/qt-5/qtextstream.html#NumberFlag-enum',1,'QTextStream']]],
-  ['numberoption_14',['NumberOption',['https://doc.qt.io/qt-5/qlocale.html#NumberOption-enum',1,'QLocale']]]
+  ['nodetype_9',['NodeType',['https://doc.qt.io/qt-5/qdomnode.html#NodeType-enum',1,'QDomNode']]],
+  ['normalizationform_10',['NormalizationForm',['https://doc.qt.io/qt-5/qstring.html#NormalizationForm-enum',1,'QString']]],
+  ['notation_11',['Notation',['https://doc.qt.io/qt-5/qdoublevalidator.html#Notation-enum',1,'QDoubleValidator']]],
+  ['numberflag_12',['NumberFlag',['https://doc.qt.io/qt-5/qtextstream.html#NumberFlag-enum',1,'QTextStream']]],
+  ['numberoption_13',['NumberOption',['https://doc.qt.io/qt-5/qlocale.html#NumberOption-enum',1,'QLocale']]]
 ];

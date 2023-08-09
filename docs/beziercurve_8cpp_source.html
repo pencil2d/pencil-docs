@@ -972,56 +972,64 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span> </div>
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> intersectionPoint = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(50.0, 50.0); <span class="comment">// bogus point</span></div>
 <div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>* cubicIntersection = &amp;intersectionPoint;</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>    <span class="keywordflow">if</span> ( R1.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#intersects">intersects</a>(R2) || L2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#intersect">intersect</a>(L1, cubicIntersection) == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a> )</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    {</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>        <span class="comment">//if (L2.intersect(L1, intersection) == QLineF::BoundedIntersection) {</span></div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>        <span class="comment">//qDebug() &lt;&lt; &quot;                   FOUND rectangle intersection &quot;;</span></div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>        <span class="comment">//if (intersectionPoint != curve1.getVertex(i1-1) &amp;&amp; intersectionPoint != curve1.getVertex(i1)) {</span></div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        <span class="comment">//  qDebug() &lt;&lt; &quot;                   it&#39;s not one of the points &quot;;</span></div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>        <span class="comment">// find the cubic intersection</span></div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>        <span class="keywordtype">int</span> nSteps = 24;</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        P1 = curve1.getVertex(i1-1);</div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;=nSteps; i++)</div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>        {</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>            qreal s = (i+0.0)/nSteps;</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>            Q1 = curve1.getPointOnCubic(i1, s);</div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>            P2 = curve2.getVertex(i2-1);</div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=1; j&lt;=nSteps; j++)</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>            {</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>                qreal t = (j+0.0)/nSteps;</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>                Q2 = curve2.getPointOnCubic(i2, t);</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>                L1 = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(P1, Q1);</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>                L2 = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(P2, Q2);</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>                <span class="keywordflow">if</span> (L2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#intersect">intersect</a>(L1, cubicIntersection) == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a>)</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>                {</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>                    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> intersectionPoint = *cubicIntersection;</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>                    <span class="keywordflow">if</span> (intersectionPoint != curve1.getVertex(i1-1) &amp;&amp; intersectionPoint != curve1.getVertex(i1))</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>                    {</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>                        qreal fraction1 = eLength(intersectionPoint-Q1)/(0.0+eLength(Q1-P1));</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>                        qreal fraction2 = eLength(intersectionPoint-Q2)/(0.0+eLength(Q2-P2));</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>                        qreal t1 = (i - fraction1)/nSteps;</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>                        qreal t2 = (j - fraction2)/nSteps;</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>                        <a class="code hl_struct" href="struct_intersection.html">Intersection</a> intersection;</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>                        intersection.point = intersectionPoint;</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>                        intersection.t1 = t1;</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>                        intersection.t2 = t2;</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>                        intersections.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#append">append</a>( intersection );</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>                        result = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>                        <span class="comment">//qDebug() &lt;&lt; &quot;FOUND cubic interesection &quot; &lt;&lt; intersectionPoint &lt;&lt; i &lt;&lt; j;</span></div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>                    }</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>                }</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                P2 = Q2;</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>            }</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>            P1 = Q1;</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>        }</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    }</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    {</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>        <span class="comment">//return false; // approximation to speed up the calculation</span></div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    }</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    <span class="comment">//qDebug() &lt;&lt; &quot;------&quot;;</span></div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>}</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span><span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(5, 14, 0)</span></div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    <span class="keywordflow">if</span> ( R1.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#intersects">intersects</a>(R2) || L2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#intersects">intersects</a>(L1, cubicIntersection) == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a> )</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <span class="keywordflow">if</span> ( R1.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#intersects">intersects</a>(R2) || L2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#intersect">intersect</a>(L1, cubicIntersection) == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a> )</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    {</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>        <span class="comment">//if (L2.intersect(L1, intersection) == QLineF::BoundedIntersection) {</span></div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>        <span class="comment">//qDebug() &lt;&lt; &quot;                   FOUND rectangle intersection &quot;;</span></div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        <span class="comment">//if (intersectionPoint != curve1.getVertex(i1-1) &amp;&amp; intersectionPoint != curve1.getVertex(i1)) {</span></div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>        <span class="comment">//  qDebug() &lt;&lt; &quot;                   it&#39;s not one of the points &quot;;</span></div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>        <span class="comment">// find the cubic intersection</span></div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>        <span class="keywordtype">int</span> nSteps = 24;</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>        P1 = curve1.getVertex(i1-1);</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;=nSteps; i++)</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>        {</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>            qreal s = (i+0.0)/nSteps;</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>            Q1 = curve1.getPointOnCubic(i1, s);</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>            P2 = curve2.getVertex(i2-1);</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=1; j&lt;=nSteps; j++)</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>            {</div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>                qreal t = (j+0.0)/nSteps;</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>                Q2 = curve2.getPointOnCubic(i2, t);</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>                L1 = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(P1, Q1);</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>                L2 = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(P2, Q2);</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span><span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(5, 14, 0)</span></div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>                <span class="keywordflow">if</span> (L2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#intersects">intersects</a>(L1, cubicIntersection) == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a>)</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>                <span class="keywordflow">if</span> (L2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#intersect">intersect</a>(L1, cubicIntersection) == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a>)</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>                {</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>                    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> intersectionPoint = *cubicIntersection;</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>                    <span class="keywordflow">if</span> (intersectionPoint != curve1.getVertex(i1-1) &amp;&amp; intersectionPoint != curve1.getVertex(i1))</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>                    {</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>                        qreal fraction1 = eLength(intersectionPoint-Q1)/(0.0+eLength(Q1-P1));</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>                        qreal fraction2 = eLength(intersectionPoint-Q2)/(0.0+eLength(Q2-P2));</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>                        qreal t1 = (i - fraction1)/nSteps;</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>                        qreal t2 = (j - fraction2)/nSteps;</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>                        <a class="code hl_struct" href="struct_intersection.html">Intersection</a> intersection;</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                        intersection.point = intersectionPoint;</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>                        intersection.t1 = t1;</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>                        intersection.t2 = t2;</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>                        intersections.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#append">append</a>( intersection );</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>                        result = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>                        <span class="comment">//qDebug() &lt;&lt; &quot;FOUND cubic interesection &quot; &lt;&lt; intersectionPoint &lt;&lt; i &lt;&lt; j;</span></div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>                    }</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>                }</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>                P2 = Q2;</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>            }</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>            P1 = Q1;</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>        }</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    }</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    {</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>        <span class="comment">//return false; // approximation to speed up the calculation</span></div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    }</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    <span class="comment">//qDebug() &lt;&lt; &quot;------&quot;;</span></div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>}</div>
 <div class="ttc" id="aclass_bezier_curve_html"><div class="ttname"><a href="class_bezier_curve.html">BezierCurve</a></div><div class="ttdef"><b>Definition:</b> <a href="beziercurve_8h_source.html#l00033">beziercurve.h:34</a></div></div>
 <div class="ttc" id="aclass_bezier_curve_html_a6c929c4aaacd0d12165fe71f859d4b7d"><div class="ttname"><a href="class_bezier_curve.html#a6c929c4aaacd0d12165fe71f859d4b7d">BezierCurve::setFilled</a></div><div class="ttdeci">void setFilled(bool yesOrNo)</div><div class="ttdoc">BezierCurve::setFilled.</div><div class="ttdef"><b>Definition:</b> <a href="beziercurve_8cpp_source.html#l00277">beziercurve.cpp:277</a></div></div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
@@ -1040,6 +1048,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqlinef-obsolete_html_IntersectType-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef-obsolete.html#IntersectType-enum">QLineF::BoundedIntersection</a></div><div class="ttdeci">BoundedIntersection</div></div>
 <div class="ttc" id="aqlinef-obsolete_html_intersect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef-obsolete.html#intersect">QLineF::intersect</a></div><div class="ttdeci">QLineF::IntersectType intersect(const QLineF &amp;line, QPointF *intersectionPoint) const const</div></div>
 <div class="ttc" id="aqlinef_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a></div></div>
+<div class="ttc" id="aqlinef_html_intersects"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html#intersects">QLineF::intersects</a></div><div class="ttdeci">QLineF::IntersectionType intersects(const QLineF &amp;line, QPointF *intersectionPoint) const const</div></div>
 <div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
 <div class="ttc" id="aqlist_html_append"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#append">QList::append</a></div><div class="ttdeci">void append(const T &amp;value)</div></div>
 <div class="ttc" id="aqlist_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#at">QList::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
@@ -1097,10 +1106,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

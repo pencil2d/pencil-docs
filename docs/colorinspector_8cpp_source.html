@@ -185,11 +185,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    ui-&gt;hsvAlphaSlider-&gt;init(ColorSlider::ColorSpecType::HSV, ColorSlider::ColorType::ALPHA, mCurrentColor, 0.0, 255.0);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpalette.html">QPalette</a> p1 = ui-&gt;colorWrapper-&gt;palette();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    p1.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpalette.html#setBrush">setBrush</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Background</a>, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;:/background/checkerboard.png&quot;</span>)));</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    p1.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpalette.html#setBrush">setBrush</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Window</a>, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;:/background/checkerboard.png&quot;</span>)));</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    ui-&gt;colorWrapper-&gt;setPalette(p1);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpalette.html">QPalette</a> p2 = ui-&gt;color-&gt;palette();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    p2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpalette.html#setColor">setColor</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Background</a>, mCurrentColor);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    p2.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpalette.html#setColor">setColor</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Window</a>, mCurrentColor);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    ui-&gt;color-&gt;setPalette(p2);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;colorSpecTabWidget, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtabwidget.html#currentChanged">QTabWidget::currentChanged</a>, <span class="keyword">this</span>, &amp;ColorInspector::onColorSpecChanged);</div>
@@ -298,7 +298,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    ui-&gt;hsvAlphaSpinBox-&gt;setValue(qRound(mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>() / 2.55));</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpalette.html">QPalette</a> p = ui-&gt;color-&gt;palette();</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpalette.html#setColor">setColor</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Background</a>, mCurrentColor);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    p.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpalette.html#setColor">setColor</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Window</a>, mCurrentColor);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    ui-&gt;color-&gt;setPalette(p);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
@@ -374,7 +374,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqimage_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html">QImage</a></div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="aqpalette_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpalette.html">QPalette</a></div></div>
-<div class="ttc" id="aqpalette_html_ColorRole-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Background</a></div><div class="ttdeci">Background</div></div>
+<div class="ttc" id="aqpalette_html_ColorRole-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpalette.html#ColorRole-enum">QPalette::Window</a></div><div class="ttdeci">Window</div></div>
 <div class="ttc" id="aqpalette_html_setBrush"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpalette.html#setBrush">QPalette::setBrush</a></div><div class="ttdeci">void setBrush(QPalette::ColorRole role, const QBrush &amp;brush)</div></div>
 <div class="ttc" id="aqpalette_html_setColor"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpalette.html#setColor">QPalette::setColor</a></div><div class="ttdeci">void setColor(QPalette::ColorGroup group, QPalette::ColorRole role, const QColor &amp;color)</div></div>
 <div class="ttc" id="aqsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
@@ -390,10 +390,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

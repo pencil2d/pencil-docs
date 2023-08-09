@@ -482,8 +482,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; filepaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#count">count</a>(); i++)</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    {</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> file = filepaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#at">at</a>(i);</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <span class="keywordflow">if</span> (!file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfileinfo.html#exists">exists</a>())</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> file(filepaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#at">at</a>(i));</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <span class="keywordflow">if</span> (!file.exists())</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            failedPathsString += filepaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#at">at</a>(i) + <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    }</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
@@ -513,7 +513,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqdir_html_entryList-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#entryList-1">QDir::entryList</a></div><div class="ttdeci">QStringList entryList(QDir::Filters filters, QDir::SortFlags sort) const const</div></div>
 <div class="ttc" id="aqeventloop_html_ProcessEventsFlag-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qeventloop.html#ProcessEventsFlag-enum">QEventLoop::ExcludeUserInputEvents</a></div><div class="ttdeci">ExcludeUserInputEvents</div></div>
 <div class="ttc" id="aqfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
-<div class="ttc" id="aqfileinfo_html_exists"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#exists">QFileInfo::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqlist_html_append"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#append">QList::append</a></div><div class="ttdeci">void append(const T &amp;value)</div></div>
 <div class="ttc" id="aqlist_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#at">QList::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
 <div class="ttc" id="aqlist_html_count"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#count">QList::count</a></div><div class="ttdeci">int count(const T &amp;value) const const</div></div>
@@ -554,10 +553,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

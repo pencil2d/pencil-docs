@@ -187,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> BackgroundWidget::paintEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpaintevent.html">QPaintEvent</a> *)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstyleoption.html">QStyleOption</a> opt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    opt.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstyleoption-obsolete.html#init">init</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    opt.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstyleoption.html#initFrom">initFrom</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> painter(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#style">style</a>()-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstyle.html#drawPrimitive">drawPrimitive</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qstyle.html#PrimitiveElement-enum">QStyle::PE_Widget</a>, &amp;opt, &amp;painter, <span class="keyword">this</span>);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
@@ -286,8 +286,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqstring_html_arg-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#arg-1">QString::arg</a></div><div class="ttdeci">QString arg(qlonglong a, int fieldWidth, int base, QChar fillChar) const const</div></div>
 <div class="ttc" id="aqstyle_html_PrimitiveElement-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyle.html#PrimitiveElement-enum">QStyle::PE_Widget</a></div><div class="ttdeci">PE_Widget</div></div>
 <div class="ttc" id="aqstyle_html_drawPrimitive"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyle.html#drawPrimitive">QStyle::drawPrimitive</a></div><div class="ttdeci">virtual void drawPrimitive(QStyle::PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget) const const=0</div></div>
-<div class="ttc" id="aqstyleoption-obsolete_html_init"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyleoption-obsolete.html#init">QStyleOption::init</a></div><div class="ttdeci">void init(const QWidget *widget)</div></div>
 <div class="ttc" id="aqstyleoption_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyleoption.html">QStyleOption</a></div></div>
+<div class="ttc" id="aqstyleoption_html_initFrom"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyleoption.html#initFrom">QStyleOption::initFrom</a></div><div class="ttdeci">void initFrom(const QWidget *widget)</div></div>
 <div class="ttc" id="aqt_html_GlobalColor-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::black</a></div><div class="ttdeci">black</div></div>
 <div class="ttc" id="aqt_html_PenStyle-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#PenStyle-enum">Qt::NoPen</a></div><div class="ttdeci">NoPen</div></div>
 <div class="ttc" id="aqt_html_WidgetAttribute-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#WidgetAttribute-enum">Qt::WA_StaticContents</a></div><div class="ttdeci">WA_StaticContents</div></div>
@@ -303,10 +303,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

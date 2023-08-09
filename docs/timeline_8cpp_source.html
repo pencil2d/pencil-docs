@@ -210,7 +210,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    layerButtons-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setFixedHeight">setFixedHeight</a>(30);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qhboxlayout.html">QHBoxLayout</a>* leftToolBarLayout = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qhboxlayout.html">QHBoxLayout</a>();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    leftToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">setMargin</a>(0);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    leftToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">setContentsMargins</a>(0, 0, 0, 0);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    leftToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qboxlayout.html#addWidget">addWidget</a>(layerButtons);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    leftToolBar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">setLayout</a>(leftToolBarLayout);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
@@ -230,7 +230,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a>* leftLayout = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a>();</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    leftLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(leftToolBar, 0, 0);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    leftLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(mLayerList, 1, 0);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    leftLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">setMargin</a>(0);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    leftLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">setContentsMargins</a>(0, 0, 0, 0);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    leftLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#setSpacing">setSpacing</a>(0);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    leftWidget-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">setLayout</a>(leftLayout);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
@@ -285,14 +285,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    rightToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qboxlayout.html#addWidget">addWidget</a>(timelineButtons);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    rightToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setAlignment">setAlignment</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#AlignmentFlag-enum">Qt::AlignLeft</a>);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    rightToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qboxlayout.html#addWidget">addWidget</a>(mTimeControls);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    rightToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">setMargin</a>(0);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    rightToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">setContentsMargins</a>(0, 0, 0, 0);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    rightToolBarLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qboxlayout.html#setSpacing">setSpacing</a>(0);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    rightToolBar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">setLayout</a>(rightToolBarLayout);</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a>* rightLayout = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qgridlayout.html">QGridLayout</a>();</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    rightLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(rightToolBar, 0, 0);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    rightLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(mTracks, 1, 0);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    rightLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">setMargin</a>(0);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    rightLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">setContentsMargins</a>(0, 0, 0, 0);</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    rightLayout-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#setSpacing">setSpacing</a>(0);</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    rightWidget-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">setLayout</a>(rightLayout);</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
@@ -307,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    lay-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(splitter, 0, 0);</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    lay-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(mVScrollbar, 0, 1);</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    lay-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#addWidget-1">addWidget</a>(mHScrollbar, 1, 0);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    lay-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">setMargin</a>(0);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    lay-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">setContentsMargins</a>(0, 0, 0, 0);</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    lay-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qgridlayout.html#setSpacing">setSpacing</a>(0);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    timeLineContent-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">setLayout</a>(lay);</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#setWidget">setWidget</a>(timeLineContent);</div>
@@ -509,8 +509,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqicon_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qicon.html">QIcon</a></div></div>
 <div class="ttc" id="aqlabel_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlabel.html">QLabel</a></div></div>
 <div class="ttc" id="aqlabel_html_indent-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlabel.html#indent-prop">QLabel::setIndent</a></div><div class="ttdeci">void setIndent(int)</div></div>
-<div class="ttc" id="aqlayout-obsolete_html_setMargin"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout-obsolete.html#setMargin">QLayout::setMargin</a></div><div class="ttdeci">void setMargin(int margin)</div></div>
 <div class="ttc" id="aqlayout_html_setAlignment"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#setAlignment">QLayout::setAlignment</a></div><div class="ttdeci">bool setAlignment(QWidget *w, Qt::Alignment alignment)</div></div>
+<div class="ttc" id="aqlayout_html_setContentsMargins"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#setContentsMargins">QLayout::setContentsMargins</a></div><div class="ttdeci">void setContentsMargins(int left, int top, int right, int bottom)</div></div>
 <div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
 <div class="ttc" id="aqmenu_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmenu.html">QMenu</a></div></div>
 <div class="ttc" id="aqmenu_html_addAction"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmenu.html#addAction">QMenu::addAction</a></div><div class="ttdeci">QAction * addAction(const QString &amp;text)</div></div>
@@ -557,10 +557,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Aug 8 2023 21:33:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Aug 9 2023 18:09:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 852b73baa22113fa3143a3149803497a61743f9a
+   based on revision ec22990d99fdc3e80fa6efe8b5a364e8d81de750
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

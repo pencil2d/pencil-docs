@@ -11,15 +11,14 @@ var searchData=
   ['diagnosticnotationoption_8',['DiagnosticNotationOption',['https://doc.qt.io/qt-5/qcborvalue.html#DiagnosticNotationOption-enum',1,'QCborValue']]],
   ['dialogcode_9',['DialogCode',['https://doc.qt.io/qt-5/qdialog.html#DialogCode-enum',1,'QDialog']]],
   ['dialoglabel_10',['DialogLabel',['https://doc.qt.io/qt-5/qfiledialog.html#DialogLabel-enum',1,'QFileDialog']]],
-  ['direction_11',['Direction',['https://doc.qt.io/qt-5/qprogressbar.html#Direction-enum',1,'QProgressBar::Direction()'],['https://doc.qt.io/qt-5/qboxlayout.html#Direction-enum',1,'QBoxLayout::Direction()'],['https://doc.qt.io/qt-5/qtimeline.html#Direction-enum',1,'QTimeLine::Direction()'],['https://doc.qt.io/qt-5/qchar.html#Direction-enum',1,'QChar::Direction()'],['https://doc.qt.io/qt-5/qabstractanimation.html#Direction-enum',1,'QAbstractAnimation::Direction()']]],
+  ['direction_11',['Direction',['https://doc.qt.io/qt-5/qboxlayout.html#Direction-enum',1,'QBoxLayout::Direction()'],['https://doc.qt.io/qt-5/qprogressbar.html#Direction-enum',1,'QProgressBar::Direction()'],['https://doc.qt.io/qt-5/qtimeline.html#Direction-enum',1,'QTimeLine::Direction()'],['https://doc.qt.io/qt-5/qchar.html#Direction-enum',1,'QChar::Direction()'],['https://doc.qt.io/qt-5/qabstractanimation.html#Direction-enum',1,'QAbstractAnimation::Direction()']]],
   ['dirtyflag_12',['DirtyFlag',['https://doc.qt.io/qt-5/qpaintengine.html#DirtyFlag-enum',1,'QPaintEngine']]],
   ['dnseligibilitystatus_13',['DnsEligibilityStatus',['https://doc.qt.io/qt-5/qnetworkaddressentry.html#DnsEligibilityStatus-enum',1,'QNetworkAddressEntry']]],
   ['dockoption_14',['DockOption',['https://doc.qt.io/qt-5/qmainwindow.html#DockOption-enum',1,'QMainWindow']]],
   ['dockwidgetarea_15',['DockWidgetArea',['https://doc.qt.io/qt-5/qt.html#DockWidgetArea-enum',1,'Qt']]],
   ['dockwidgetfeature_16',['DockWidgetFeature',['https://doc.qt.io/qt-5/qdockwidget.html#DockWidgetFeature-enum',1,'QDockWidget']]],
-  ['documentorder_17',['DocumentOrder',['https://doc.qt.io/qt-5/qxmlnodemodelindex.html#DocumentOrder-enum',1,'QXmlNodeModelIndex']]],
-  ['dragdropmode_18',['DragDropMode',['https://doc.qt.io/qt-5/qabstractitemview.html#DragDropMode-enum',1,'QAbstractItemView']]],
-  ['dragmode_19',['DragMode',['https://doc.qt.io/qt-5/qgraphicsview.html#DragMode-enum',1,'QGraphicsView']]],
-  ['dropaction_20',['DropAction',['https://doc.qt.io/qt-5/qt.html#DropAction-enum',1,'Qt']]],
-  ['dropindicatorposition_21',['DropIndicatorPosition',['https://doc.qt.io/qt-5/qabstractitemview.html#DropIndicatorPosition-enum',1,'QAbstractItemView']]]
+  ['dragdropmode_17',['DragDropMode',['https://doc.qt.io/qt-5/qabstractitemview.html#DragDropMode-enum',1,'QAbstractItemView']]],
+  ['dragmode_18',['DragMode',['https://doc.qt.io/qt-5/qgraphicsview.html#DragMode-enum',1,'QGraphicsView']]],
+  ['dropaction_19',['DropAction',['https://doc.qt.io/qt-5/qt.html#DropAction-enum',1,'Qt']]],
+  ['dropindicatorposition_20',['DropIndicatorPosition',['https://doc.qt.io/qt-5/qabstractitemview.html#DropIndicatorPosition-enum',1,'QAbstractItemView']]]
 ];
