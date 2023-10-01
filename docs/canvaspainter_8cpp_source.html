@@ -277,280 +277,279 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> CanvasPainter::setPaintSettings(<span class="keyword">const</span> <a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">int</span> currentLayer, <span class="keywordtype">int</span> frame, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> rect, <a class="code hl_class" href="class_tiled_buffer.html">TiledBuffer</a>* tiledBuffer)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> CanvasPainter::setPaintSettings(<span class="keyword">const</span> <a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">int</span> currentLayer, <span class="keywordtype">int</span> frame, <a class="code hl_class" href="class_tiled_buffer.html">TiledBuffer</a>* tiledBuffer)</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    Q_UNUSED(rect)</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    Q_ASSERT(<span class="keywordtype">object</span>);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    mObject = object;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    CANVASPAINTER_LOG(<span class="stringliteral">&quot;Set CurrentLayerIndex = %d&quot;</span>, currentLayer);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    mCurrentLayerIndex = currentLayer;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    mFrameNumber = frame;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    mTiledBuffer = tiledBuffer;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keywordtype">void</span> CanvasPainter::paint(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>{</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> preLayerPainter;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> mainPainter;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> postLayerPainter;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(mainPainter, mCanvas, blitRect);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(preLayerPainter, mPreLayersPixmap, blitRect);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    renderPreLayers(preLayerPainter, blitRect);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    preLayerPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#end">end</a>();</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mPreLayersPixmap);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_function" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">paintCurrentFrame</a>(mainPainter, blitRect, mCurrentLayerIndex, mCurrentLayerIndex);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(postLayerPainter, mPostLayersPixmap, blitRect);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    renderPostLayers(postLayerPainter, blitRect);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    postLayerPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#end">end</a>();</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mPostLayersPixmap);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    mPreLayersPixmapCacheValid = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    mPostLayersPixmapCacheValid = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keywordtype">void</span> CanvasPainter::paintOnionSkin(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect)</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>{</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(mCurrentLayerIndex);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    mOnionSkinSubPainter.paint(painter, layer, mOnionSkinPainterOptions, mFrameNumber, [&amp;] (OnionSkinPaintState state, <span class="keywordtype">int</span> onionFrameNumber) {</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">if</span> (state == OnionSkinPaintState::PREV) {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keywordflow">switch</span> (layer-&gt;type())</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            {</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            case Layer::BITMAP: { paintBitmapOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizePrevFrames); break; }</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="keywordflow">case</span> Layer::VECTOR: { paintVectorOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizePrevFrames); break; }</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            }</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> (state == OnionSkinPaintState::NEXT) {</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordflow">switch</span> (layer-&gt;type())</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            case Layer::BITMAP: { paintBitmapOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizeNextFrames); break; }</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordflow">case</span> Layer::VECTOR: { paintVectorOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizeNextFrames); break; }</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            }</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    });</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">void</span> CanvasPainter::paintBitmapOnionSkinFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">int</span> nFrame, <span class="keywordtype">bool</span> colorize)</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>{</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* bitmapLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layer);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = bitmapLayer-&gt;getBitmapImageAtFrame(nFrame);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    bitmapImage-&gt;loadFile(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> onionSkinPainter;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(onionSkinPainter, mOnionSkinPixmap, blitRect);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawImage">drawImage</a>(bitmapImage-&gt;topLeft(), *bitmapImage-&gt;image());</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    paintOnionSkinFrame(painter, onionSkinPainter, nFrame, colorize, bitmapImage-&gt;getOpacity());</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>}</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="keywordtype">void</span> CanvasPainter::paintVectorOnionSkinFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">int</span> nFrame, <span class="keywordtype">bool</span> colorize)</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>{</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_class" href="class_layer_vector.html">LayerVector</a>* vectorLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    CANVASPAINTER_LOG(<span class="stringliteral">&quot;Paint Onion skin vector, Frame = %d&quot;</span>, nFrame);</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = vectorLayer-&gt;getVectorImageAtFrame(nFrame);</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> onionSkinPainter;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(onionSkinPainter, mOnionSkinPixmap, blitRect);</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">paintImage</a>(onionSkinPainter, mOptions.bOutlines, mOptions.bThinLines, mOptions.bAntiAlias);</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    paintOnionSkinFrame(painter, onionSkinPainter, nFrame, colorize, vectorImage-&gt;getOpacity());</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="keywordtype">void</span> CanvasPainter::paintOnionSkinFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; onionSkinPainter, <span class="keywordtype">int</span> nFrame, <span class="keywordtype">bool</span> colorize, qreal frameOpacity)</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>{</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">// Don&#39;t transform the image here as we used the viewTransform in the image output</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// Remember to adjust overall opacity based on opacity value from image</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(frameOpacity - (1.0-painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#opacity">opacity</a>()));</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">if</span> (colorize)</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    {</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> colorBrush = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>; <span class="comment">//no color for the current frame</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (nFrame &lt; mFrameNumber)</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            colorBrush = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::red</a>;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (nFrame &gt; mFrameNumber)</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            colorBrush = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::blue</a>;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceIn</a>);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setBrush">setBrush</a>(colorBrush);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawRect">drawRect</a>(painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#viewport">viewport</a>());</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mOnionSkinPixmap);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>}</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="keywordtype">void</span> CanvasPainter::paintCurrentBitmapFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">bool</span> isCurrentLayer)</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>{</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* bitmapLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layer);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* paintedImage = bitmapLayer-&gt;getLastBitmapImageAtFrame(mFrameNumber);</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keywordflow">if</span> (paintedImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    paintedImage-&gt;loadFile(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isDrawing = mTiledBuffer &amp;&amp; !mTiledBuffer-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> currentBitmapPainter;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(currentBitmapPainter, mCurrentLayerPixmap, blitRect);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(paintedImage-&gt;getOpacity() - (1.0-painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#opacity">opacity</a>()));</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">if</span> (isCurrentLayer &amp;&amp; isDrawing)</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    {</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="comment">// Certain tools require being painted continuously, for example, the Polyline tool.</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <span class="comment">// The tiled buffer does not update the area outside which it paints,</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="comment">// so in that case, in order to see the previously laid-down polyline stroke,</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="comment">// the surrounding area must be drawn again before</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="comment">// applying the new tiled output on top</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keywordflow">if</span> (!blitRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#contains-1">contains</a>(mTiledBuffer-&gt;bounds()) || mOptions.<a class="code hl_variable" href="struct_canvas_painter_options.html#a7e5502c24b9865bc1079f2cd74455a94">bIgnoreCanvasBuffer</a>) {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Source</a>);</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawImage">drawImage</a>(paintedImage-&gt;topLeft(), *paintedImage-&gt;image());</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keyword">const</span> <span class="keyword">auto</span> tiles = mTiledBuffer-&gt;tiles();</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_tile.html">Tile</a>* tile : tiles) {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(tile-&gt;posF(), tile-&gt;pixmap());</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        }</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="comment">// When we&#39;re drawing using a tool, the surface will be painted by the tiled buffer,</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="comment">// and thus we don&#39;t want to paint the current image again</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="comment">// When we&#39;re on another layer though, the tiled buffer is not used</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawImage">drawImage</a>(paintedImage-&gt;topLeft(), *paintedImage-&gt;image());</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="comment">// We do not wish to draw selection transformations on anything but the current layer</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordflow">if</span> (isCurrentLayer &amp;&amp; mRenderTransform) {</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        paintTransformedSelection(currentBitmapPainter, paintedImage, mSelection);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mCurrentLayerPixmap);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="keywordtype">void</span> CanvasPainter::paintCurrentVectorFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">bool</span> isCurrentLayer)</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>{</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <a class="code hl_class" href="class_layer_vector.html">LayerVector</a>* vectorLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer);</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = vectorLayer-&gt;getLastVectorImageAtFrame(mFrameNumber, 0);</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    {</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> currentVectorPainter;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(currentVectorPainter, mCurrentLayerPixmap, blitRect);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isDrawing = mTiledBuffer-&gt;<a class="code hl_function" href="class_tiled_buffer.html#ab151cd8502ff27a04a100338f8eeac1e">isValid</a>();</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="comment">// Paint existing vector image to the painter</span></div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">paintImage</a>(currentVectorPainter, mOptions.bOutlines, mOptions.bThinLines, mOptions.bAntiAlias);</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">if</span> (isCurrentLayer) {</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        <span class="keywordflow">if</span> (isDrawing) {</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            currentVectorPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(mOptions.cmBufferBlendMode);</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tiles = mTiledBuffer-&gt;tiles();</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_tile.html">Tile</a>* tile : tiles) {</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                currentVectorPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(tile-&gt;posF(), tile-&gt;pixmap());</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            }</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mRenderTransform) {</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ada2a3aff947a90cfc53e95ed3e391b5a">setSelectionTransformation</a>(mSelectionTransform);</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        }</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="comment">// Don&#39;t transform the image here as we used the viewTransform in the image output</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setTransform">setTransform</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>());</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <span class="comment">// Remember to adjust opacity based on additional opacity value from the keyframe</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(vectorImage-&gt;getOpacity() - (1.0-painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#opacity">opacity</a>()));</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mCurrentLayerPixmap);</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>}</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="keywordtype">void</span> CanvasPainter::paintTransformedSelection(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; selection)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="comment">// Make sure there is something selected</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="keywordflow">if</span> (selection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() == 0 &amp;&amp; selection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>() == 0)</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> transformedPixmap = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>(mSelection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>());</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    transformedPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>);</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> imagePainter(&amp;transformedPixmap);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    imagePainter.translate(-selection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#topLeft">topLeft</a>());</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    imagePainter.drawImage(bitmapImage-&gt;topLeft(), *bitmapImage-&gt;image());</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    imagePainter.end();</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#save">save</a>();</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setTransform">setTransform</a>(mViewTransform);</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <span class="comment">// Clear the painted area to make it look like the content has been erased</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#save">save</a>();</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Clear</a>);</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#fillRect">fillRect</a>(selection, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255,255,255,255));</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="comment">// Multiply the selection and view matrix to get proper rotation and scale values</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="comment">// Now the image origin will be topleft</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setTransform">setTransform</a>(mSelectionTransform*mViewTransform);</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    <span class="comment">// Draw the selection image separately and on top</span></div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(selection, transformedPixmap);</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>}</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">  411</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">CanvasPainter::paintCurrentFrame</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <span class="keywordtype">int</span> startLayer, <span class="keywordtype">int</span> endLayer)</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>{</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(1.0);</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    <span class="keywordtype">bool</span> isCameraLayer = mObject-&gt;getLayer(mCurrentLayerIndex)-&gt;type() == Layer::CAMERA;</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span> </div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startLayer; i &lt;= endLayer; ++i)</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    {</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(i);</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span> </div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <span class="keywordflow">if</span> (!layer-&gt;visible())</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        <span class="keywordflow">if</span> (mOptions.eLayerVisibility == LayerVisibility::RELATED &amp;&amp; !isCameraLayer)</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        {</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>            painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(calculateRelativeOpacityForLayer(mCurrentLayerIndex, i, mOptions.fLayerVisibilityThreshold));</div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        }</div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        <span class="keywordtype">bool</span> isCurrentLayer = mCurrentLayerIndex == i;</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span> </div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        CANVASPAINTER_LOG(<span class="stringliteral">&quot;  Render Layer[%d] %s&quot;</span>, i, layer-&gt;name());</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>        <span class="keywordflow">switch</span> (layer-&gt;type())</div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>        {</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        <span class="keywordflow">case</span> Layer::BITMAP: { paintCurrentBitmapFrame(painter, blitRect, layer, isCurrentLayer); <span class="keywordflow">break</span>; }</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        <span class="keywordflow">case</span> Layer::VECTOR: { paintCurrentVectorFrame(painter, blitRect, layer, isCurrentLayer); <span class="keywordflow">break</span>; }</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        }</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    }</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>}</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    Q_ASSERT(<span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    mObject = object;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    CANVASPAINTER_LOG(<span class="stringliteral">&quot;Set CurrentLayerIndex = %d&quot;</span>, currentLayer);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    mCurrentLayerIndex = currentLayer;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    mFrameNumber = frame;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    mTiledBuffer = tiledBuffer;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keywordtype">void</span> CanvasPainter::paint(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> preLayerPainter;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> mainPainter;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> postLayerPainter;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(mainPainter, mCanvas, blitRect);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(preLayerPainter, mPreLayersPixmap, blitRect);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    renderPreLayers(preLayerPainter, blitRect);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    preLayerPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#end">end</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mPreLayersPixmap);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <a class="code hl_function" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">paintCurrentFrame</a>(mainPainter, blitRect, mCurrentLayerIndex, mCurrentLayerIndex);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(postLayerPainter, mPostLayersPixmap, blitRect);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    renderPostLayers(postLayerPainter, blitRect);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    postLayerPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#end">end</a>();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mPostLayersPixmap);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    mainPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    mPreLayersPixmapCacheValid = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    mPostLayersPixmapCacheValid = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>}</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">void</span> CanvasPainter::paintOnionSkin(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>{</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(mCurrentLayerIndex);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    mOnionSkinSubPainter.paint(painter, layer, mOnionSkinPainterOptions, mFrameNumber, [&amp;] (OnionSkinPaintState state, <span class="keywordtype">int</span> onionFrameNumber) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">if</span> (state == OnionSkinPaintState::PREV) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">switch</span> (layer-&gt;type())</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            case Layer::BITMAP: { paintBitmapOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizePrevFrames); break; }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">case</span> Layer::VECTOR: { paintVectorOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizePrevFrames); break; }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">if</span> (state == OnionSkinPaintState::NEXT) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordflow">switch</span> (layer-&gt;type())</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            case Layer::BITMAP: { paintBitmapOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizeNextFrames); break; }</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">case</span> Layer::VECTOR: { paintVectorOnionSkinFrame(painter, blitRect, layer, onionFrameNumber, mOnionSkinPainterOptions.colorizeNextFrames); break; }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    });</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="keywordtype">void</span> CanvasPainter::paintBitmapOnionSkinFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">int</span> nFrame, <span class="keywordtype">bool</span> colorize)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>{</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* bitmapLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layer);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = bitmapLayer-&gt;getBitmapImageAtFrame(nFrame);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    bitmapImage-&gt;loadFile(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> onionSkinPainter;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(onionSkinPainter, mOnionSkinPixmap, blitRect);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawImage">drawImage</a>(bitmapImage-&gt;topLeft(), *bitmapImage-&gt;image());</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    paintOnionSkinFrame(painter, onionSkinPainter, nFrame, colorize, bitmapImage-&gt;getOpacity());</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="keywordtype">void</span> CanvasPainter::paintVectorOnionSkinFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">int</span> nFrame, <span class="keywordtype">bool</span> colorize)</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>{</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <a class="code hl_class" href="class_layer_vector.html">LayerVector</a>* vectorLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    CANVASPAINTER_LOG(<span class="stringliteral">&quot;Paint Onion skin vector, Frame = %d&quot;</span>, nFrame);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = vectorLayer-&gt;getVectorImageAtFrame(nFrame);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> onionSkinPainter;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(onionSkinPainter, mOnionSkinPixmap, blitRect);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">paintImage</a>(onionSkinPainter, mOptions.bOutlines, mOptions.bThinLines, mOptions.bAntiAlias);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    paintOnionSkinFrame(painter, onionSkinPainter, nFrame, colorize, vectorImage-&gt;getOpacity());</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keywordtype">void</span> CanvasPainter::paintOnionSkinFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; onionSkinPainter, <span class="keywordtype">int</span> nFrame, <span class="keywordtype">bool</span> colorize, qreal frameOpacity)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>{</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// Don&#39;t transform the image here as we used the viewTransform in the image output</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// Remember to adjust overall opacity based on opacity value from image</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(frameOpacity - (1.0-painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#opacity">opacity</a>()));</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">if</span> (colorize)</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> colorBrush = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>; <span class="comment">//no color for the current frame</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">if</span> (nFrame &lt; mFrameNumber)</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            colorBrush = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::red</a>;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (nFrame &gt; mFrameNumber)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            colorBrush = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::blue</a>;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceIn</a>);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setBrush">setBrush</a>(colorBrush);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        onionSkinPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawRect">drawRect</a>(painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#viewport">viewport</a>());</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mOnionSkinPixmap);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keywordtype">void</span> CanvasPainter::paintCurrentBitmapFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">bool</span> isCurrentLayer)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>{</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* bitmapLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layer);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* paintedImage = bitmapLayer-&gt;getLastBitmapImageAtFrame(mFrameNumber);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">if</span> (paintedImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    paintedImage-&gt;loadFile(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isDrawing = mTiledBuffer &amp;&amp; !mTiledBuffer-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> currentBitmapPainter;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(currentBitmapPainter, mCurrentLayerPixmap, blitRect);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(paintedImage-&gt;getOpacity() - (1.0-painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#opacity">opacity</a>()));</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">if</span> (isCurrentLayer &amp;&amp; isDrawing)</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    {</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="comment">// Certain tools require being painted continuously, for example, the Polyline tool.</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="comment">// The tiled buffer does not update the area outside which it paints,</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <span class="comment">// so in that case, in order to see the previously laid-down polyline stroke,</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="comment">// the surrounding area must be drawn again before</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="comment">// applying the new tiled output on top</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keywordflow">if</span> (!blitRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#contains-1">contains</a>(mTiledBuffer-&gt;bounds()) || mOptions.<a class="code hl_variable" href="struct_canvas_painter_options.html#a7e5502c24b9865bc1079f2cd74455a94">bIgnoreCanvasBuffer</a>) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Source</a>);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawImage">drawImage</a>(paintedImage-&gt;topLeft(), *paintedImage-&gt;image());</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keyword">const</span> <span class="keyword">auto</span> tiles = mTiledBuffer-&gt;tiles();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_tile.html">Tile</a>* tile : tiles) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(tile-&gt;posF(), tile-&gt;pixmap());</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="comment">// When we&#39;re drawing using a tool, the surface will be painted by the tiled buffer,</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="comment">// and thus we don&#39;t want to paint the current image again</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="comment">// When we&#39;re on another layer though, the tiled buffer is not used</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        currentBitmapPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawImage">drawImage</a>(paintedImage-&gt;topLeft(), *paintedImage-&gt;image());</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="comment">// We do not wish to draw selection transformations on anything but the current layer</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordflow">if</span> (isCurrentLayer &amp;&amp; mRenderTransform) {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        paintTransformedSelection(currentBitmapPainter, paintedImage, mSelection);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    }</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mCurrentLayerPixmap);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="keywordtype">void</span> CanvasPainter::paintCurrentVectorFrame(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <a class="code hl_class" href="class_layer.html">Layer</a>* layer, <span class="keywordtype">bool</span> isCurrentLayer)</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>{</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <a class="code hl_class" href="class_layer_vector.html">LayerVector</a>* vectorLayer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = vectorLayer-&gt;getLastVectorImageAtFrame(mFrameNumber, 0);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> currentVectorPainter;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(currentVectorPainter, mCurrentLayerPixmap, blitRect);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isDrawing = mTiledBuffer-&gt;<a class="code hl_function" href="class_tiled_buffer.html#ab151cd8502ff27a04a100338f8eeac1e">isValid</a>();</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="comment">// Paint existing vector image to the painter</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#a87fd953e506cecad346c4d5e069d6788">paintImage</a>(currentVectorPainter, mOptions.bOutlines, mOptions.bThinLines, mOptions.bAntiAlias);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">if</span> (isCurrentLayer) {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">if</span> (isDrawing) {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            currentVectorPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(mOptions.cmBufferBlendMode);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tiles = mTiledBuffer-&gt;tiles();</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class_tile.html">Tile</a>* tile : tiles) {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                currentVectorPainter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(tile-&gt;posF(), tile-&gt;pixmap());</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            }</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mRenderTransform) {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ada2a3aff947a90cfc53e95ed3e391b5a">setSelectionTransformation</a>(mSelectionTransform);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    }</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <span class="comment">// Don&#39;t transform the image here as we used the viewTransform in the image output</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setWorldMatrixEnabled">setWorldMatrixEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setTransform">setTransform</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>());</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="comment">// Remember to adjust opacity based on additional opacity value from the keyframe</span></div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(vectorImage-&gt;getOpacity() - (1.0-painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#opacity">opacity</a>()));</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(mPointZero, mCurrentLayerPixmap);</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>}</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="keywordtype">void</span> CanvasPainter::paintTransformedSelection(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; selection)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="comment">// Make sure there is something selected</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordflow">if</span> (selection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>() == 0 &amp;&amp; selection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>() == 0)</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> transformedPixmap = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>(mSelection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#size">size</a>());</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    transformedPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> imagePainter(&amp;transformedPixmap);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    imagePainter.translate(-selection.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#topLeft">topLeft</a>());</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    imagePainter.drawImage(bitmapImage-&gt;topLeft(), *bitmapImage-&gt;image());</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    imagePainter.end();</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#save">save</a>();</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setTransform">setTransform</a>(mViewTransform);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="comment">// Clear the painted area to make it look like the content has been erased</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#save">save</a>();</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Clear</a>);</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#fillRect">fillRect</a>(selection, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255,255,255,255));</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="comment">// Multiply the selection and view matrix to get proper rotation and scale values</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="comment">// Now the image origin will be topleft</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setTransform">setTransform</a>(mSelectionTransform*mViewTransform);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <span class="comment">// Draw the selection image separately and on top</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(selection, transformedPixmap);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>}</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno"><a class="line" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">  410</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">CanvasPainter::paintCurrentFrame</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect, <span class="keywordtype">int</span> startLayer, <span class="keywordtype">int</span> endLayer)</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>{</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(1.0);</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="keywordtype">bool</span> isCameraLayer = mObject-&gt;getLayer(mCurrentLayerIndex)-&gt;type() == Layer::CAMERA;</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = startLayer; i &lt;= endLayer; ++i)</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    {</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(i);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <span class="keywordflow">if</span> (!layer-&gt;visible())</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keywordflow">if</span> (mOptions.eLayerVisibility == LayerVisibility::RELATED &amp;&amp; !isCameraLayer)</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>            painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setOpacity">setOpacity</a>(calculateRelativeOpacityForLayer(mCurrentLayerIndex, i, mOptions.fLayerVisibilityThreshold));</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        }</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        <span class="keywordtype">bool</span> isCurrentLayer = mCurrentLayerIndex == i;</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span> </div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        CANVASPAINTER_LOG(<span class="stringliteral">&quot;  Render Layer[%d] %s&quot;</span>, i, layer-&gt;name());</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        <span class="keywordflow">switch</span> (layer-&gt;type())</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>        {</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>        <span class="keywordflow">case</span> Layer::BITMAP: { paintCurrentBitmapFrame(painter, blitRect, layer, isCurrentLayer); <span class="keywordflow">break</span>; }</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        <span class="keywordflow">case</span> Layer::VECTOR: { paintCurrentVectorFrame(painter, blitRect, layer, isCurrentLayer); <span class="keywordflow">break</span>; }</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        }</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    }</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>}</div>
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00028">bitmapimage.h:29</a></div></div>
 <div class="ttc" id="aclass_canvas_painter_html_a394a53b7766671386ec3af87358a07f9"><div class="ttname"><a href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">CanvasPainter::initializePainter</a></div><div class="ttdeci">void initializePainter(QPainter &amp;painter, QPaintDevice &amp;device, const QRect &amp;blitRect)</div><div class="ttdoc">CanvasPainter::initializePainter Enriches the painter with a context and sets it's initial matrix.</div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8cpp_source.html#l00125">canvaspainter.cpp:125</a></div></div>
-<div class="ttc" id="aclass_canvas_painter_html_ae2ab50dda3f9ad9b8f0f5cd8790a062f"><div class="ttname"><a href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">CanvasPainter::paintCurrentFrame</a></div><div class="ttdeci">void paintCurrentFrame(QPainter &amp;painter, const QRect &amp;blitRect, int startLayer, int endLayer)</div><div class="ttdoc">Paints layers within the specified range for the current frame.</div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8cpp_source.html#l00411">canvaspainter.cpp:411</a></div></div>
+<div class="ttc" id="aclass_canvas_painter_html_ae2ab50dda3f9ad9b8f0f5cd8790a062f"><div class="ttname"><a href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">CanvasPainter::paintCurrentFrame</a></div><div class="ttdeci">void paintCurrentFrame(QPainter &amp;painter, const QRect &amp;blitRect, int startLayer, int endLayer)</div><div class="ttdoc">Paints layers within the specified range for the current frame.</div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8cpp_source.html#l00410">canvaspainter.cpp:410</a></div></div>
 <div class="ttc" id="aclass_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00025">layerbitmap.h:26</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00037">layer.h:38</a></div></div>
 <div class="ttc" id="aclass_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:26</a></div></div>
@@ -604,10 +603,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Oct 1 2023 12:38:06 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 13:55:33 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision d3be33998650cc103d9491516f9c791de8b6bc4e
+   based on revision 58eb218117f023d118336de0e073de738f9f5013
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
