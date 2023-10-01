@@ -1003,7 +1003,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>        QRgb color = mEditor-&gt;color()-&gt;<a class="code hl_function" href="class_color_manager.html#a7e795319fdaae13a3d8819ec920c982a">frontColor</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>();</div>
 <div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>        <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* layer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;currentLayer());</div>
 <div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>        layer-&gt;getBitmapImageAtFrame(mEditor-&gt;currentFrame())-&gt;fillNonAlphaPixels(color);</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">updateFrame</a>(mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">updateFrame</a>();</div>
 <div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>    }</div>
 <div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>}</div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span> </div>
@@ -1018,7 +1018,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>            <span class="keywordflow">if</span> (layer-&gt;keyExists(i))</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                layer-&gt;getBitmapImageAtFrame(i)-&gt;fillNonAlphaPixels(color);</div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>        }</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">updateFrame</a>(mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>        mEditor-&gt;<a class="code hl_function" href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">updateFrame</a>();</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>    }</div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>}</div>
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span> </div>
@@ -1104,9 +1104,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_check_updates_dialog_html"><div class="ttname"><a href="class_check_updates_dialog.html">CheckUpdatesDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="checkupdatesdialog_8h_source.html#l00030">checkupdatesdialog.h:31</a></div></div>
 <div class="ttc" id="aclass_color_manager_html_a7e795319fdaae13a3d8819ec920c982a"><div class="ttname"><a href="class_color_manager.html#a7e795319fdaae13a3d8819ec920c982a">ColorManager::frontColor</a></div><div class="ttdeci">QColor frontColor(bool useIndexedColor=true)</div><div class="ttdoc">frontColor</div><div class="ttdef"><b>Definition:</b> <a href="colormanager_8cpp_source.html#l00061">colormanager.cpp:61</a></div></div>
 <div class="ttc" id="aclass_double_progress_dialog_html"><div class="ttname"><a href="class_double_progress_dialog.html">DoubleProgressDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="doubleprogressdialog_8h_source.html#l00028">doubleprogressdialog.h:29</a></div></div>
-<div class="ttc" id="aclass_editor_html_a42ff0078b761c089d74f3949fe7a14c2"><div class="ttname"><a href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">Editor::updateFrame</a></div><div class="ttdeci">void updateFrame(int frameNumber)</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l01112">editor.cpp:1112</a></div></div>
 <div class="ttc" id="aclass_editor_html_a5da792317757541ad6e7c1b7e2294a4a"><div class="ttname"><a href="class_editor.html#a5da792317757541ad6e7c1b7e2294a4a">Editor::framesModified</a></div><div class="ttdeci">void framesModified()</div><div class="ttdoc">This should be emitted after modifying multiple frames.</div></div>
 <div class="ttc" id="aclass_editor_html_a95f7fac452454a5842d42c73df37d0f7"><div class="ttname"><a href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">Editor::frameModified</a></div><div class="ttdeci">void frameModified(int frameNumber)</div><div class="ttdoc">This should be emitted after modifying the frame content.</div></div>
+<div class="ttc" id="aclass_editor_html_a967de652d00ed7465dd02940f79dbf52"><div class="ttname"><a href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">Editor::updateFrame</a></div><div class="ttdeci">void updateFrame()</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l01112">editor.cpp:1112</a></div></div>
 <div class="ttc" id="aclass_editor_html_acc028d1a85307682f933690c560fd6f1"><div class="ttname"><a href="class_editor.html#acc028d1a85307682f933690c560fd6f1">Editor::setLayerVisibility</a></div><div class="ttdeci">void setLayerVisibility(LayerVisibility visibility)</div><div class="ttdoc">The visibility value should match any of the VISIBILITY enum values.</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l00759">editor.cpp:759</a></div></div>
 <div class="ttc" id="aclass_error_dialog_html"><div class="ttname"><a href="class_error_dialog.html">ErrorDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="errordialog_8h_source.html#l00027">errordialog.h:28</a></div></div>
 <div class="ttc" id="aclass_export_image_dialog_html"><div class="ttname"><a href="class_export_image_dialog.html">ExportImageDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="exportimagedialog_8h_source.html#l00027">exportimagedialog.h:28</a></div></div>
@@ -1182,10 +1182,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Sep 24 2023 19:39:34 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 07:11:55 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 1395c86cb17dafbb32de44cbabe1f4c58636468d
+   based on revision a4d63308eb43f374a673becebd0e2b275743c4ea
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

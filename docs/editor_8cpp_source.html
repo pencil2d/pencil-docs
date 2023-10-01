@@ -1227,254 +1227,248 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>    }</div>
 <div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>}</div>
 <div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span> </div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"><a class="line" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2"> 1112</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">Editor::updateFrame</a>(<span class="keywordtype">int</span> frameNumber)</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"><a class="line" href="class_editor.html#a967de652d00ed7465dd02940f79dbf52"> 1112</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">Editor::updateFrame</a>()</div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>{</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#ae3af1b38916fc8c3293c4378fb9df3d9">updateFrame</a>(frameNumber);</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">updateFrame</a>();</div>
 <div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>}</div>
 <div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span> </div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"><a class="line" href="class_editor.html#a7da1dca332790d92b34e25e7efd0bbde"> 1117</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_editor.html#a7da1dca332790d92b34e25e7efd0bbde">Editor::updateCurrentFrame</a>()</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span><span class="keywordtype">void</span> Editor::setCurrentLayerIndex(<span class="keywordtype">int</span> i)</div>
 <div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>{</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#ad7b559e675fa6524fea0978feab97fe0">updateCurrentFrame</a>();</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>}</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span> </div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span><span class="keywordtype">void</span> Editor::setCurrentLayerIndex(<span class="keywordtype">int</span> i)</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>{</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>    mCurrentLayerIndex = i;</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span> </div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(i);</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> mgr : mAllManagers)</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>    {</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>        mgr-&gt;workingLayerChanged(layer);</div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    }</div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>}</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>    mCurrentLayerIndex = i;</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span> </div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(i);</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> mgr : mAllManagers)</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>    {</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>        mgr-&gt;workingLayerChanged(layer);</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>    }</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>}</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span> </div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span><span class="keywordtype">void</span> Editor::scrubTo(<span class="keywordtype">int</span> frame)</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>{</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    <span class="keywordflow">if</span> (frame &lt; 1) { frame = 1; }</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    mFrame = frame;</div>
 <div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span> </div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span><span class="keywordtype">void</span> Editor::scrubTo(<span class="keywordtype">int</span> frame)</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>{</div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>    <span class="keywordflow">if</span> (frame &lt; 1) { frame = 1; }</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    mFrame = frame;</div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span> </div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    emit <a class="code hl_signal" href="class_editor.html#ab278e2a655561a23cd1617db3a2e1fc1">scrubbed</a>(frame);</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span> </div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>    <span class="comment">// FIXME: should not emit Timeline update here.</span></div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>    <span class="comment">// Editor must be an individual class.</span></div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>    <span class="comment">// Will remove all Timeline related code in Editor class.</span></div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    <span class="keywordflow">if</span> (mPlaybackManager &amp;&amp; !mPlaybackManager-&gt;isPlaying())</div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>    {</div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>        emit updateTimeLineCached(); <span class="comment">// needs to update the timeline to update onion skin positions</span></div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>    }</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    mObject-&gt;updateActiveFrames(frame);</div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>}</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span> </div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span><span class="keywordtype">void</span> Editor::scrubForward()</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>{</div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>    <span class="keywordtype">int</span> nextFrame = mFrame + 1;</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>    <span class="keywordflow">if</span> (!playback()-&gt;isPlaying()) {</div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>        playback()-&gt;playScrub(nextFrame);</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>    }</div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    scrubTo(nextFrame);</div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>}</div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span> </div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span><span class="keywordtype">void</span> Editor::scrubBackward()</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>{</div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    <span class="keywordflow">if</span> (currentFrame() &gt; 1)</div>
-<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>    {</div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>        <span class="keywordtype">int</span> previousFrame = mFrame - 1;</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>        <span class="keywordflow">if</span> (!playback()-&gt;isPlaying()) {</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>            playback()-&gt;playScrub(previousFrame);</div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>        }</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        scrubTo(previousFrame);</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    }</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    emit <a class="code hl_signal" href="class_editor.html#ab278e2a655561a23cd1617db3a2e1fc1">scrubbed</a>(frame);</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span> </div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>    <span class="comment">// FIXME: should not emit Timeline update here.</span></div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    <span class="comment">// Editor must be an individual class.</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>    <span class="comment">// Will remove all Timeline related code in Editor class.</span></div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>    <span class="keywordflow">if</span> (mPlaybackManager &amp;&amp; !mPlaybackManager-&gt;isPlaying())</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>    {</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>        emit updateTimeLineCached(); <span class="comment">// needs to update the timeline to update onion skin positions</span></div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>    }</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>    mObject-&gt;updateActiveFrames(frame);</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>}</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span> </div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span><span class="keywordtype">void</span> Editor::scrubForward()</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>{</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>    <span class="keywordtype">int</span> nextFrame = mFrame + 1;</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <span class="keywordflow">if</span> (!playback()-&gt;isPlaying()) {</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>        playback()-&gt;playScrub(nextFrame);</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>    }</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>    scrubTo(nextFrame);</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>}</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span> </div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span><span class="keywordtype">void</span> Editor::scrubBackward()</div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>{</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    <span class="keywordflow">if</span> (currentFrame() &gt; 1)</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>    {</div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>        <span class="keywordtype">int</span> previousFrame = mFrame - 1;</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>        <span class="keywordflow">if</span> (!playback()-&gt;isPlaying()) {</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>            playback()-&gt;playScrub(previousFrame);</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>        }</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>        scrubTo(previousFrame);</div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    }</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>}</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span><a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* Editor::addNewKey()</div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>{</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    <span class="keywordflow">return</span> addKeyFrame(layers()-&gt;currentLayerIndex(), currentFrame());</div>
 <div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>}</div>
 <div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span> </div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span><a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* Editor::addNewKey()</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span><a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* Editor::addKeyFrame(<span class="keywordtype">int</span> layerNumber, <span class="keywordtype">int</span> frameIndex)</div>
 <div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>{</div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>    <span class="keywordflow">return</span> addKeyFrame(layers()-&gt;currentLayerIndex(), currentFrame());</div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>}</div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(layerNumber);</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>    Q_ASSERT(layer);</div>
 <div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span><a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* Editor::addKeyFrame(<span class="keywordtype">int</span> layerNumber, <span class="keywordtype">int</span> frameIndex)</div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>{</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(layerNumber);</div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>    Q_ASSERT(layer);</div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>    <span class="keywordflow">if</span> (!layer-&gt;visible())</div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>    {</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>        mScribbleArea-&gt;showLayerNotVisibleWarning();</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>    }</div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span> </div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>    <span class="comment">// Find next available space for a keyframe (where either no key exists or there is an empty sound key)</span></div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>    <span class="keywordflow">while</span> (layer-&gt;keyExists(frameIndex))</div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>    {</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::SOUND</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>            &amp;&amp; layer-&gt;getKeyFrameAt(frameIndex)-&gt;fileName().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>()</div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>            &amp;&amp; layer-&gt;removeKeyFrame(frameIndex))</div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>        {</div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>        }</div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>        {</div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>            frameIndex += 1;</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>        }</div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>    }</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span> </div>
-<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    <span class="keywordtype">bool</span> ok = layer-&gt;addNewKeyFrameAt(frameIndex);</div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    <span class="keywordflow">if</span> (ok)</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    {</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        scrubTo(frameIndex); <span class="comment">// currentFrameChanged() emit inside.</span></div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        emit <a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">frameModified</a>(frameIndex);</div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    }</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>    <span class="keywordflow">return</span> layer-&gt;getKeyFrameAt(frameIndex);</div>
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>}</div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>    <span class="keywordflow">if</span> (!layer-&gt;visible())</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>    {</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>        mScribbleArea-&gt;showLayerNotVisibleWarning();</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    }</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span> </div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>    <span class="comment">// Find next available space for a keyframe (where either no key exists or there is an empty sound key)</span></div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>    <span class="keywordflow">while</span> (layer-&gt;keyExists(frameIndex))</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>    {</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::SOUND</div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>            &amp;&amp; layer-&gt;getKeyFrameAt(frameIndex)-&gt;fileName().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>()</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>            &amp;&amp; layer-&gt;removeKeyFrame(frameIndex))</div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        {</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        }</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>        {</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>            frameIndex += 1;</div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>        }</div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>    }</div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span> </div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>    <span class="keywordtype">bool</span> ok = layer-&gt;addNewKeyFrameAt(frameIndex);</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>    <span class="keywordflow">if</span> (ok)</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>    {</div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>        scrubTo(frameIndex); <span class="comment">// currentFrameChanged() emit inside.</span></div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>        emit <a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">frameModified</a>(frameIndex);</div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>        layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    }</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    <span class="keywordflow">return</span> layer-&gt;getKeyFrameAt(frameIndex);</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>}</div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span><span class="keywordtype">void</span> Editor::removeKey()</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>{</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>    Q_ASSERT(layer != <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span> </div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span><span class="keywordtype">void</span> Editor::removeKey()</div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>{</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>    Q_ASSERT(layer != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span> </div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>    <span class="keywordflow">if</span> (!layer-&gt;visible())</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    {</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>        mScribbleArea-&gt;showLayerNotVisibleWarning();</div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>    }</div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>    <span class="keywordflow">if</span> (!layer-&gt;keyExistsWhichCovers(currentFrame()))</div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    {</div>
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>        scrubBackward();</div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>    }</div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span> </div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Remove frame&quot;</span>));</div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span> </div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>    deselectAll();</div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    layer-&gt;removeKeyFrame(currentFrame());</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>    layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>    emit layers()-&gt;currentLayerChanged(layers()-&gt;currentLayerIndex()); <span class="comment">// trigger timeline repaint.</span></div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>}</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>    <span class="keywordflow">if</span> (!layer-&gt;visible())</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    {</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>        mScribbleArea-&gt;showLayerNotVisibleWarning();</div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>    }</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span> </div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    <span class="keywordflow">if</span> (!layer-&gt;keyExistsWhichCovers(currentFrame()))</div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    {</div>
+<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>        scrubBackward();</div>
+<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>    }</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span> </div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Remove frame&quot;</span>));</div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span> </div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>    deselectAll();</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>    layer-&gt;removeKeyFrame(currentFrame());</div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    emit layers()-&gt;currentLayerChanged(layers()-&gt;currentLayerIndex()); <span class="comment">// trigger timeline repaint.</span></div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>}</div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span> </div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span><span class="keywordtype">void</span> Editor::scrubNextKeyFrame()</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>{</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* currentLayer = layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    Q_ASSERT(currentLayer);</div>
 <div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span> </div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span><span class="keywordtype">void</span> Editor::scrubNextKeyFrame()</div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>{</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* currentLayer = layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>    Q_ASSERT(currentLayer);</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    <span class="keywordtype">int</span> nextPosition = currentLayer-&gt;getNextKeyFramePosition(currentFrame());</div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    <span class="keywordflow">if</span> (currentFrame() &gt;= currentLayer-&gt;getMaxKeyFramePosition()) nextPosition = currentFrame() + 1;</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    scrubTo(nextPosition);</div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>}</div>
 <div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span> </div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>    <span class="keywordtype">int</span> nextPosition = currentLayer-&gt;getNextKeyFramePosition(currentFrame());</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>    <span class="keywordflow">if</span> (currentFrame() &gt;= currentLayer-&gt;getMaxKeyFramePosition()) nextPosition = currentFrame() + 1;</div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>    scrubTo(nextPosition);</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>}</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span><span class="keywordtype">void</span> Editor::scrubPreviousKeyFrame()</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>{</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(layers()-&gt;currentLayerIndex());</div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>    Q_ASSERT(layer);</div>
 <div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span> </div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span><span class="keywordtype">void</span> Editor::scrubPreviousKeyFrame()</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>{</div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(layers()-&gt;currentLayerIndex());</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>    Q_ASSERT(layer);</div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span> </div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>    <span class="keywordtype">int</span> prevPosition = layer-&gt;getPreviousKeyFramePosition(currentFrame());</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>    scrubTo(prevPosition);</div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>}</div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span> </div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span><span class="keywordtype">void</span> Editor::switchVisibilityOfLayer(<span class="keywordtype">int</span> layerNumber)</div>
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>{</div>
-<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(layerNumber);</div>
-<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>    <span class="keywordflow">if</span> (layer != <span class="keyword">nullptr</span>) layer-&gt;switchVisibility();</div>
-<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">onLayerChanged</a>();</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span> </div>
-<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>    emit updateTimeLine();</div>
-<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>}</div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>    <span class="keywordtype">int</span> prevPosition = layer-&gt;getPreviousKeyFramePosition(currentFrame());</div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>    scrubTo(prevPosition);</div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>}</div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span> </div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span><span class="keywordtype">void</span> Editor::switchVisibilityOfLayer(<span class="keywordtype">int</span> layerNumber)</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>{</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mObject-&gt;getLayer(layerNumber);</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>    <span class="keywordflow">if</span> (layer != <span class="keyword">nullptr</span>) layer-&gt;switchVisibility();</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">onLayerChanged</a>();</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span> </div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>    emit updateTimeLine();</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>}</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span> </div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span><span class="keywordtype">void</span> Editor::swapLayers(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>{</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>    <span class="keywordtype">bool</span> didSwapLayer = mObject-&gt;swapLayers(i, j);</div>
+<div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span>    <span class="keywordflow">if</span> (!didSwapLayer) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span> </div>
-<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span><span class="keywordtype">void</span> Editor::swapLayers(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)</div>
-<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>{</div>
-<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>    <span class="keywordtype">bool</span> didSwapLayer = mObject-&gt;swapLayers(i, j);</div>
-<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>    <span class="keywordflow">if</span> (!didSwapLayer) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span> </div>
-<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    <span class="keywordflow">if</span> (j &lt; i)</div>
-<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>    {</div>
-<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>        layers()-&gt;setCurrentLayer(j + 1);</div>
-<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>    }</div>
-<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>    {</div>
-<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>        layers()-&gt;setCurrentLayer(j - 1);</div>
-<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span>    }</div>
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span>    emit updateTimeLine();</div>
-<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">onLayerChanged</a>();</div>
+<div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>    <span class="keywordflow">if</span> (j &lt; i)</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>    {</div>
+<div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>        layers()-&gt;setCurrentLayer(j + 1);</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>    }</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>    {</div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        layers()-&gt;setCurrentLayer(j - 1);</div>
+<div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>    }</div>
+<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>    emit updateTimeLine();</div>
+<div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">onLayerChanged</a>();</div>
+<div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>}</div>
+<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span> </div>
+<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span><span class="keywordtype">bool</span> Editor::canSwapLayers(<span class="keywordtype">int</span> layerIndexLeft, <span class="keywordtype">int</span> layerIndexRight)<span class="keyword"> const</span></div>
+<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"> 1278</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>    <span class="keywordflow">return</span> mObject-&gt;canSwapLayers(layerIndexLeft, layerIndexRight);</div>
 <div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>}</div>
 <div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span> </div>
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span><span class="keywordtype">bool</span> Editor::canSwapLayers(<span class="keywordtype">int</span> layerIndexLeft, <span class="keywordtype">int</span> layerIndexRight)<span class="keyword"> const</span></div>
-<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>    <span class="keywordflow">return</span> mObject-&gt;canSwapLayers(layerIndexLeft, layerIndexRight);</div>
-<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>}</div>
-<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span> </div>
-<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span><span class="keywordtype">void</span> Editor::prepareSave()</div>
-<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>{</div>
-<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> mgr : mAllManagers)</div>
-<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>    {</div>
-<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>        mgr-&gt;save(mObject.get());</div>
-<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>    }</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span><span class="keywordtype">void</span> Editor::prepareSave()</div>
+<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>{</div>
+<div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> mgr : mAllManagers)</div>
+<div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>    {</div>
+<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>        mgr-&gt;save(mObject.get());</div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>    }</div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>}</div>
+<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span> </div>
+<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span><span class="keywordtype">void</span> Editor::clearCurrentFrame()</div>
+<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>{</div>
+<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>    mScribbleArea-&gt;clearImage();</div>
 <div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>}</div>
 <div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span> </div>
-<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span><span class="keywordtype">void</span> Editor::clearCurrentFrame()</div>
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>{</div>
-<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>    mScribbleArea-&gt;clearImage();</div>
-<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>}</div>
+<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span><span class="keywordtype">bool</span> Editor::canCopy()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* keyframe = layer-&gt;getLastKeyFrameAtPosition(mFrame);</div>
 <div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span> </div>
-<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span><span class="keywordtype">bool</span> Editor::canCopy()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* keyframe = layer-&gt;getLastKeyFrameAtPosition(mFrame);</div>
-<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span> </div>
-<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>    <span class="keywordflow">switch</span> (layer-&gt;type())</div>
-<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span>    {</div>
-<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>    <span class="keywordflow">case</span> Layer::SOUND:</div>
-<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>    <span class="keywordflow">case</span> Layer::CAMERA:</div>
-<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span>        <span class="keywordflow">return</span> canCopyFrames(layer);</div>
-<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>    <span class="keywordflow">case</span> Layer::BITMAP:</div>
-<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span>        <span class="keywordflow">return</span> canCopyBitmapImage(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>*<span class="keyword">&gt;</span>(keyframe)) || canCopyFrames(layer);</div>
-<div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span>    <span class="keywordflow">case</span> Layer::VECTOR:</div>
-<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>        <span class="keywordflow">return</span> canCopyVectorImage(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(keyframe)) || canCopyFrames(layer);</div>
-<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span>        Q_UNREACHABLE();</div>
-<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span>    }</div>
-<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span>}</div>
-<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span> </div>
-<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span><span class="keywordtype">bool</span> Editor::canPaste()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span>    <span class="keyword">auto</span> clipboardMan = clipboards();</div>
-<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span>    <span class="keyword">auto</span> layerType = layer-&gt;type();</div>
+<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>    <span class="keywordflow">switch</span> (layer-&gt;type())</div>
+<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span>    {</div>
+<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span>    <span class="keywordflow">case</span> Layer::SOUND:</div>
+<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>    <span class="keywordflow">case</span> Layer::CAMERA:</div>
+<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span>        <span class="keywordflow">return</span> canCopyFrames(layer);</div>
+<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span>    <span class="keywordflow">case</span> Layer::BITMAP:</div>
+<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span>        <span class="keywordflow">return</span> canCopyBitmapImage(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>*<span class="keyword">&gt;</span>(keyframe)) || canCopyFrames(layer);</div>
+<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span>    <span class="keywordflow">case</span> Layer::VECTOR:</div>
+<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span>        <span class="keywordflow">return</span> canCopyVectorImage(<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(keyframe)) || canCopyFrames(layer);</div>
+<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>        Q_UNREACHABLE();</div>
+<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span>    }</div>
+<div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span>}</div>
+<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span> </div>
+<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span><span class="keywordtype">bool</span> Editor::canPaste()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span>    <span class="keyword">auto</span> clipboardMan = clipboards();</div>
+<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span>    <span class="keyword">auto</span> layerType = layer-&gt;type();</div>
+<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span> </div>
+<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span>    <span class="keywordflow">return</span> (layerType == clipboardMan-&gt;framesLayerType() &amp;&amp; !clipboardMan-&gt;framesIsEmpty()) ||</div>
+<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span>           (layerType == Layer::BITMAP &amp;&amp; clipboardMan-&gt;getBitmapClipboard().isLoaded()) ||</div>
+<div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span>           (layerType == Layer::VECTOR &amp;&amp; !clipboardMan-&gt;getVectorClipboard().isEmpty());</div>
+<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span>}</div>
 <div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span> </div>
-<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span>    <span class="keywordflow">return</span> (layerType == clipboardMan-&gt;framesLayerType() &amp;&amp; !clipboardMan-&gt;framesIsEmpty()) ||</div>
-<div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span>           (layerType == Layer::BITMAP &amp;&amp; clipboardMan-&gt;getBitmapClipboard().isLoaded()) ||</div>
-<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span>           (layerType == Layer::VECTOR &amp;&amp; !clipboardMan-&gt;getVectorClipboard().isEmpty());</div>
-<div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span>}</div>
-<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span> </div>
-<div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span><span class="keywordtype">bool</span> Editor::canCopyFrames(<span class="keyword">const</span> <a class="code hl_class" href="class_layer.html">Layer</a>* layer)<span class="keyword"> const</span></div>
-<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span>    Q_ASSERT(layer != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>    <span class="keywordflow">return</span> layer-&gt;hasAnySelectedFrames();</div>
+<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span><span class="keywordtype">bool</span> Editor::canCopyFrames(<span class="keyword">const</span> <a class="code hl_class" href="class_layer.html">Layer</a>* layer)<span class="keyword"> const</span></div>
+<div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span>    Q_ASSERT(layer != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span>    <span class="keywordflow">return</span> layer-&gt;hasAnySelectedFrames();</div>
+<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span>}</div>
+<div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span> </div>
+<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span><span class="keywordtype">bool</span> Editor::canCopyBitmapImage(<a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage)<span class="keyword"> const</span></div>
+<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>    <span class="keywordflow">return</span> bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;isLoaded() &amp;&amp; !bitmapImage-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
 <div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span>}</div>
 <div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span> </div>
-<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span><span class="keywordtype">bool</span> Editor::canCopyBitmapImage(<a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage)<span class="keyword"> const</span></div>
+<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span><span class="keywordtype">bool</span> Editor::canCopyVectorImage(<span class="keyword">const</span> <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage)<span class="keyword"> const</span></div>
 <div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span>    <span class="keywordflow">return</span> bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;isLoaded() &amp;&amp; !bitmapImage-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
+<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span>    <span class="keywordflow">return</span> vectorImage != <span class="keyword">nullptr</span> &amp;&amp; !vectorImage-&gt;isEmpty();</div>
 <div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span>}</div>
-<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span> </div>
-<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span><span class="keywordtype">bool</span> Editor::canCopyVectorImage(<span class="keyword">const</span> <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage)<span class="keyword"> const</span></div>
-<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span>    <span class="keywordflow">return</span> vectorImage != <span class="keyword">nullptr</span> &amp;&amp; !vectorImage-&gt;isEmpty();</div>
-<div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span>}</div>
 <div class="ttc" id="aclass_backup_bitmap_element_html"><div class="ttname"><a href="class_backup_bitmap_element.html">BackupBitmapElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00047">backupelement.h:48</a></div></div>
 <div class="ttc" id="aclass_backup_element_html"><div class="ttname"><a href="class_backup_element.html">BackupElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00028">backupelement.h:29</a></div></div>
 <div class="ttc" id="aclass_backup_sound_element_html"><div class="ttname"><a href="class_backup_sound_element.html">BackupSoundElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00077">backupelement.h:78</a></div></div>
 <div class="ttc" id="aclass_backup_vector_element_html"><div class="ttname"><a href="class_backup_vector_element.html">BackupVectorElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00062">backupelement.h:63</a></div></div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
-<div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00026">bitmapimage.h:27</a></div></div>
+<div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00028">bitmapimage.h:29</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html"><div class="ttname"><a href="class_clipboard_manager.html">ClipboardManager</a></div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8h_source.html#l00030">clipboardmanager.h:31</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a2359cfbac2a26c66f1dcd7ab46c74490"><div class="ttname"><a href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a></div><div class="ttdeci">void copySelectedFrames(const Layer *currentLayer)</div><div class="ttdoc">Copy selected keyframes of any given layer and remember its type.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00075">clipboardmanager.cpp:75</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a246ab78619269a6b36f0eb54e43111ad"><div class="ttname"><a href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">ClipboardManager::copyVectorImage</a></div><div class="ttdeci">void copyVectorImage(const VectorImage *vectorImage)</div><div class="ttdoc">Copy the entire vector image to clipboard, this operation does not yet support partial selections.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00066">clipboardmanager.cpp:66</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_ad9bd299496b467c084f89d1bff13e2bb"><div class="ttname"><a href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a></div><div class="ttdeci">void copyBitmapImage(BitmapImage *image, QRectF selectionRect)</div><div class="ttdoc">Copy bitmap image to clipboard and save its latest position Additionally only a part of the image wil...</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00049">clipboardmanager.cpp:49</a></div></div>
 <div class="ttc" id="aclass_color_manager_html"><div class="ttname"><a href="class_color_manager.html">ColorManager</a></div><div class="ttdef"><b>Definition:</b> <a href="colormanager_8h_source.html#l00026">colormanager.h:27</a></div></div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
-<div class="ttc" id="aclass_editor_html_a42ff0078b761c089d74f3949fe7a14c2"><div class="ttname"><a href="class_editor.html#a42ff0078b761c089d74f3949fe7a14c2">Editor::updateFrame</a></div><div class="ttdeci">void updateFrame(int frameNumber)</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l01112">editor.cpp:1112</a></div></div>
-<div class="ttc" id="aclass_editor_html_a7da1dca332790d92b34e25e7efd0bbde"><div class="ttname"><a href="class_editor.html#a7da1dca332790d92b34e25e7efd0bbde">Editor::updateCurrentFrame</a></div><div class="ttdeci">void updateCurrentFrame()</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l01117">editor.cpp:1117</a></div></div>
 <div class="ttc" id="aclass_editor_html_a95f7fac452454a5842d42c73df37d0f7"><div class="ttname"><a href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">Editor::frameModified</a></div><div class="ttdeci">void frameModified(int frameNumber)</div><div class="ttdoc">This should be emitted after modifying the frame content.</div></div>
+<div class="ttc" id="aclass_editor_html_a967de652d00ed7465dd02940f79dbf52"><div class="ttname"><a href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">Editor::updateFrame</a></div><div class="ttdeci">void updateFrame()</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l01112">editor.cpp:1112</a></div></div>
 <div class="ttc" id="aclass_editor_html_ab278e2a655561a23cd1617db3a2e1fc1"><div class="ttname"><a href="class_editor.html#ab278e2a655561a23cd1617db3a2e1fc1">Editor::scrubbed</a></div><div class="ttdeci">void scrubbed(int frameNumber)</div><div class="ttdoc">This should be emitted after scrubbing.</div></div>
 <div class="ttc" id="aclass_editor_html_ac4a0e777c71af5870ae4b581ea3761f6"><div class="ttname"><a href="class_editor.html#ac4a0e777c71af5870ae4b581ea3761f6">Editor::sanitizeBackupElementsAfterLayerDeletion</a></div><div class="ttdeci">void sanitizeBackupElementsAfterLayerDeletion(int layerIndex)</div><div class="ttdoc">Restores integrity of the backup elements after a layer has been deleted.</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l00331">editor.cpp:331</a></div></div>
 <div class="ttc" id="aclass_editor_html_acc028d1a85307682f933690c560fd6f1"><div class="ttname"><a href="class_editor.html#acc028d1a85307682f933690c560fd6f1">Editor::setLayerVisibility</a></div><div class="ttdeci">void setLayerVisibility(LayerVisibility visibility)</div><div class="ttdoc">The visibility value should match any of the VISIBILITY enum values.</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l00759">editor.cpp:759</a></div></div>
@@ -1492,11 +1486,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_overlay_manager_html"><div class="ttname"><a href="class_overlay_manager.html">OverlayManager</a></div><div class="ttdef"><b>Definition:</b> <a href="overlaymanager_8h_source.html#l00031">overlaymanager.h:32</a></div></div>
 <div class="ttc" id="aclass_playback_manager_html"><div class="ttname"><a href="class_playback_manager.html">PlaybackManager</a></div><div class="ttdef"><b>Definition:</b> <a href="playbackmanager_8h_source.html#l00029">playbackmanager.h:30</a></div></div>
 <div class="ttc" id="aclass_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00027">preferencemanager.h:28</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html_a41ea0506fe49be145fe7f32a2c8ae579"><div class="ttname"><a href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">ScribbleArea::handleDrawingOnEmptyFrame</a></div><div class="ttdeci">void handleDrawingOnEmptyFrame()</div><div class="ttdoc">Call this when starting to use a paint tool.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00944">scribblearea.cpp:944</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html_a9842fc4d6a239391c0524de13d1b05a1"><div class="ttname"><a href="class_scribble_area.html#a9842fc4d6a239391c0524de13d1b05a1">ScribbleArea::onOnionSkinTypeChanged</a></div><div class="ttdeci">void onOnionSkinTypeChanged()</div><div class="ttdoc">Onion skin type changed, all frames will be affected.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00361">scribblearea.cpp:361</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html_ad7b559e675fa6524fea0978feab97fe0"><div class="ttname"><a href="class_scribble_area.html#ad7b559e675fa6524fea0978feab97fe0">ScribbleArea::updateCurrentFrame</a></div><div class="ttdeci">void updateCurrentFrame()</div><div class="ttdoc">Update current frame.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00192">scribblearea.cpp:192</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html_ae3af1b38916fc8c3293c4378fb9df3d9"><div class="ttname"><a href="class_scribble_area.html#ae3af1b38916fc8c3293c4378fb9df3d9">ScribbleArea::updateFrame</a></div><div class="ttdeci">void updateFrame(int frame)</div><div class="ttdoc">Update frame.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00197">scribblearea.cpp:197</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html_af048d68a1e65cad60aac63d1a79a374f"><div class="ttname"><a href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">ScribbleArea::onLayerChanged</a></div><div class="ttdeci">void onLayerChanged()</div><div class="ttdoc">Layer changed, invalidate relevant cache.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00349">scribblearea.cpp:349</a></div></div>
+<div class="ttc" id="aclass_scribble_area_html_a3be7383b5ac5a61fd0e7041a31698868"><div class="ttname"><a href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">ScribbleArea::updateFrame</a></div><div class="ttdeci">void updateFrame()</div><div class="ttdoc">Update frame.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00219">scribblearea.cpp:219</a></div></div>
+<div class="ttc" id="aclass_scribble_area_html_a41ea0506fe49be145fe7f32a2c8ae579"><div class="ttname"><a href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">ScribbleArea::handleDrawingOnEmptyFrame</a></div><div class="ttdeci">void handleDrawingOnEmptyFrame()</div><div class="ttdoc">Call this when starting to use a paint tool.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00925">scribblearea.cpp:925</a></div></div>
+<div class="ttc" id="aclass_scribble_area_html_a9842fc4d6a239391c0524de13d1b05a1"><div class="ttname"><a href="class_scribble_area.html#a9842fc4d6a239391c0524de13d1b05a1">ScribbleArea::onOnionSkinTypeChanged</a></div><div class="ttdeci">void onOnionSkinTypeChanged()</div><div class="ttdoc">Onion skin type changed, all frames will be affected.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00389">scribblearea.cpp:389</a></div></div>
+<div class="ttc" id="aclass_scribble_area_html_af048d68a1e65cad60aac63d1a79a374f"><div class="ttname"><a href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">ScribbleArea::onLayerChanged</a></div><div class="ttdeci">void onLayerChanged()</div><div class="ttdoc">Layer changed, invalidate relevant cache.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00377">scribblearea.cpp:377</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html"><div class="ttname"><a href="class_selection_manager.html">SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00032">selectionmanager.h:33</a></div></div>
 <div class="ttc" id="aclass_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00026">soundclip.h:27</a></div></div>
 <div class="ttc" id="aclass_sound_manager_html"><div class="ttname"><a href="class_sound_manager.html">SoundManager</a></div><div class="ttdef"><b>Definition:</b> <a href="soundmanager_8h_source.html#l00029">soundmanager.h:30</a></div></div>
@@ -1544,10 +1537,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Sep 24 2023 19:39:34 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 07:11:55 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 1395c86cb17dafbb32de44cbabe1f4c58636468d
+   based on revision a4d63308eb43f374a673becebd0e2b275743c4ea
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -153,10 +153,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2ef67a75c60d2bd92a83d64b817192f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e80ffffca8914e1a569b7ddc15d9aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_brush_tool.html#a0e80ffffca8914e1a569b7ddc15d9aa0">drawStroke</a> ()</td></tr>
 <tr class="separator:a0e80ffffca8914e1a569b7ddc15d9aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41480136602a995c515f530a995b2612"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_brush_tool.html#a41480136602a995c515f530a995b2612">paintVectorStroke</a> ()</td></tr>
-<tr class="separator:a41480136602a995c515f530a995b2612"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af69bee7809fddf744abe1db518da2bca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_brush_tool.html#af69bee7809fddf744abe1db518da2bca">paintBitmapStroke</a> ()</td></tr>
-<tr class="separator:af69bee7809fddf744abe1db518da2bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871e43d778973260a83ab8101f072e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_brush_tool.html#a871e43d778973260a83ab8101f072e25">paintVectorStroke</a> (<a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
+<tr class="separator:a871e43d778973260a83ab8101f072e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcdc9daa98e3db4ac60e23b0281fd58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_brush_tool.html#adcdc9daa98e3db4ac60e23b0281fd58d">paintAt</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> point)</td></tr>
 <tr class="separator:adcdc9daa98e3db4ac60e23b0281fd58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a238340af3cb03a4fb7b4dbd2b9bb65fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_brush_tool.html#a238340af3cb03a4fb7b4dbd2b9bb65fb">setWidth</a> (const qreal width) override</td></tr>
@@ -626,7 +624,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="brushtool_8h_source.html#l00025">25</a> of file <a class="el" href="brushtool_8h_source.html">brushtool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="brushtool_8h_source.html#l00026">26</a> of file <a class="el" href="brushtool_8h_source.html">brushtool.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac9f80233fac2bf0afbf07b015b533073" name="ac9f80233fac2bf0afbf07b015b533073"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac9f80233fac2bf0afbf07b015b533073">&#9670;&#160;</a></span>BrushTool()</h2>
@@ -750,31 +748,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="brushtool_8cpp_source.html#l00185">185</a> of file <a class="el" href="brushtool_8cpp_source.html">brushtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="brushtool_8cpp_source.html#l00184">184</a> of file <a class="el" href="brushtool_8cpp_source.html">brushtool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="af69bee7809fddf744abe1db518da2bca" name="af69bee7809fddf744abe1db518da2bca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69bee7809fddf744abe1db518da2bca">&#9670;&#160;</a></span>paintBitmapStroke()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BrushTool::paintBitmapStroke </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="brushtool_8cpp_source.html#l00280">280</a> of file <a class="el" href="brushtool_8cpp_source.html">brushtool.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a41480136602a995c515f530a995b2612" name="a41480136602a995c515f530a995b2612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41480136602a995c515f530a995b2612">&#9670;&#160;</a></span>paintVectorStroke()</h2>
+<a id="a871e43d778973260a83ab8101f072e25" name="a871e43d778973260a83ab8101f072e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871e43d778973260a83ab8101f072e25">&#9670;&#160;</a></span>paintVectorStroke()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -782,13 +761,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="memname">void BrushTool::paintVectorStroke </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_layer.html">Layer</a> *&#160;</td>
+          <td class="paramname"><em>layer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="brushtool_8cpp_source.html#l00288">288</a> of file <a class="el" href="brushtool_8cpp_source.html">brushtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="brushtool_8cpp_source.html#l00283">283</a> of file <a class="el" href="brushtool_8cpp_source.html">brushtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1197,10 +1177,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Sep 24 2023 19:39:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 07:11:55 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 1395c86cb17dafbb32de44cbabe1f4c58636468d
+   based on revision a4d63308eb43f374a673becebd0e2b275743c4ea
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

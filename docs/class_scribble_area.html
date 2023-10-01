@@ -147,8 +147,6 @@ Public Slots</h2></td></tr>
 <tr class="separator:af3928cb8e37c92767d88fa327d015f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ec0c0b60fd4432fcb703bb105192456"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a9ec0c0b60fd4432fcb703bb105192456">toggleThinLines</a> ()</td></tr>
 <tr class="separator:a9ec0c0b60fd4432fcb703bb105192456"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c55d2f5e6bb40beab603fc4bb0b101f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a5c55d2f5e6bb40beab603fc4bb0b101f">toggleOutlines</a> ()</td></tr>
-<tr class="separator:a5c55d2f5e6bb40beab603fc4bb0b101f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86699bfff2f91acff24c7942de04087f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a86699bfff2f91acff24c7942de04087f">increaseLayerVisibilityIndex</a> ()</td></tr>
 <tr class="separator:a86699bfff2f91acff24c7942de04087f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46d0e2b2abe756baef89f9709d1e8ddd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a46d0e2b2abe756baef89f9709d1e8ddd">decreaseLayerVisibilityIndex</a> ()</td></tr>
@@ -161,15 +159,16 @@ Public Slots</h2></td></tr>
 <tr class="separator:af05b416db6d4f6a8e2c97445e1a686be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d24a26c6ffefd7260786370738b6769"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a0d24a26c6ffefd7260786370738b6769">showLayerNotVisibleWarning</a> ()</td></tr>
 <tr class="separator:a0d24a26c6ffefd7260786370738b6769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142df758746edc0e05f3541e6ec28d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a142df758746edc0e05f3541e6ec28d5b">onTileUpdated</a> (<a class="el" href="class_tiled_buffer.html">TiledBuffer</a> *tiledBuffer, <a class="el" href="class_tile.html">Tile</a> *tile)</td></tr>
+<tr class="separator:a142df758746edc0e05f3541e6ec28d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f5ba733508358316b3377ea8c11eb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a14f5ba733508358316b3377ea8c11eb2">onTileCreated</a> (<a class="el" href="class_tiled_buffer.html">TiledBuffer</a> *tiledBuffer, <a class="el" href="class_tile.html">Tile</a> *tile)</td></tr>
+<tr class="separator:a14f5ba733508358316b3377ea8c11eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:abe2f13af2f61ad591155a533284dbe63"><td class="memItemLeft" align="right" valign="top"><a id="abe2f13af2f61ad591155a533284dbe63" name="abe2f13af2f61ad591155a533284dbe63"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>multiLayerOnionSkinChanged</b> (bool)</td></tr>
 <tr class="separator:abe2f13af2f61ad591155a533284dbe63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcba856d29d33d60709c2aa4596f2d66"><td class="memItemLeft" align="right" valign="top"><a id="adcba856d29d33d60709c2aa4596f2d66" name="adcba856d29d33d60709c2aa4596f2d66"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refreshPreview</b> ()</td></tr>
-<tr class="separator:adcba856d29d33d60709c2aa4596f2d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aeee961e32f557272b334ed0d85ff16"><td class="memItemLeft" align="right" valign="top"><a id="a5aeee961e32f557272b334ed0d85ff16" name="a5aeee961e32f557272b334ed0d85ff16"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>selectionUpdated</b> ()</td></tr>
 <tr class="separator:a5aeee961e32f557272b334ed0d85ff16"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,38 +187,25 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7e6906179fe4aee9479d733436d5c630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa893ea0f8c8ab8ee8552ce16832ed299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#aa893ea0f8c8ab8ee8552ce16832ed299">deleteSelection</a> ()</td></tr>
 <tr class="separator:aa893ea0f8c8ab8ee8552ce16832ed299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19f11ddf1899f1d847e32fa18f5d4aed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a19f11ddf1899f1d847e32fa18f5d4aed">displaySelectionProperties</a> ()</td></tr>
-<tr class="separator:a19f11ddf1899f1d847e32fa18f5d4aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a394329a56e30b31459b10cc1eaef2545"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a394329a56e30b31459b10cc1eaef2545">applyTransformedSelection</a> ()</td></tr>
 <tr class="separator:a394329a56e30b31459b10cc1eaef2545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedf7185e098c5de5405ae2932b8fe4de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#aedf7185e098c5de5405ae2932b8fe4de">cancelTransformedSelection</a> ()</td></tr>
 <tr class="separator:aedf7185e098c5de5405ae2932b8fe4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb6de8c520f6717f92c8509051de76b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#afb6de8c520f6717f92c8509051de76b2">isLayerPaintable</a> () const</td></tr>
 <tr class="separator:afb6de8c520f6717f92c8509051de76b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08485c0b955dfb9afb3e620f4c0d5895"><td class="memItemLeft" align="right" valign="top"><a id="a08485c0b955dfb9afb3e620f4c0d5895" name="a08485c0b955dfb9afb3e620f4c0d5895"></a>
-<a class="elRef" href="https://doc.qt.io/qt-5/qvector.html">QVector</a>&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>calcSelectionCenterPoints</b> ()</td></tr>
-<tr class="separator:a08485c0b955dfb9afb3e620f4c0d5895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92739ccf6323fe81b34aecd7e1549d2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a92739ccf6323fe81b34aecd7e1549d2a">setEffect</a> (SETTING e, bool isOn)</td></tr>
 <tr class="separator:a92739ccf6323fe81b34aecd7e1549d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeac7303761f22dcf7f1af6162f80074c"><td class="memItemLeft" align="right" valign="top">LayerVisibility&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#aeac7303761f22dcf7f1af6162f80074c">getLayerVisibility</a> () const</td></tr>
 <tr class="separator:aeac7303761f22dcf7f1af6162f80074c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcca31ffea37e941e211256d889fe7f6"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#adcca31ffea37e941e211256d889fe7f6">getCurveSmoothing</a> () const</td></tr>
 <tr class="separator:adcca31ffea37e941e211256d889fe7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e6c066346388255e543befb60b4c9a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a09e6c066346388255e543befb60b4c9a">usePressure</a> () const</td></tr>
-<tr class="separator:a09e6c066346388255e543befb60b4c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158fdead3d824177d93707fd4d58dd8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a158fdead3d824177d93707fd4d58dd8a">makeInvisible</a> () const</td></tr>
 <tr class="separator:a158fdead3d824177d93707fd4d58dd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cef5b48fc2b032a07a892f43dff3006"><td class="memItemLeft" align="right" valign="top"><a id="a2cef5b48fc2b032a07a892f43dff3006" name="a2cef5b48fc2b032a07a892f43dff3006"></a>
-<a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCameraRect</b> ()</td></tr>
-<tr class="separator:a2cef5b48fc2b032a07a892f43dff3006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af531f6727e3f58f10c48b577692b3f87"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#af531f6727e3f58f10c48b577692b3f87">getCentralPoint</a> ()</td></tr>
 <tr class="separator:af531f6727e3f58f10c48b577692b3f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b559e675fa6524fea0978feab97fe0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ad7b559e675fa6524fea0978feab97fe0">updateCurrentFrame</a> ()</td></tr>
-<tr class="memdesc:ad7b559e675fa6524fea0978feab97fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update current frame.  <br /></td></tr>
-<tr class="separator:ad7b559e675fa6524fea0978feab97fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3af1b38916fc8c3293c4378fb9df3d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ae3af1b38916fc8c3293c4378fb9df3d9">updateFrame</a> (int frame)</td></tr>
-<tr class="memdesc:ae3af1b38916fc8c3293c4378fb9df3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update frame.  <br /></td></tr>
-<tr class="separator:ae3af1b38916fc8c3293c4378fb9df3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be7383b5ac5a61fd0e7041a31698868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">updateFrame</a> ()</td></tr>
+<tr class="memdesc:a3be7383b5ac5a61fd0e7041a31698868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update frame.  <br /></td></tr>
+<tr class="separator:a3be7383b5ac5a61fd0e7041a31698868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a031a86fafd0d221248d13d331813ec73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a031a86fafd0d221248d13d331813ec73">onScrubbed</a> (int frameNumber)</td></tr>
 <tr class="memdesc:a031a86fafd0d221248d13d331813ec73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame scrubbed, invalidate relevant cache.  <br /></td></tr>
 <tr class="separator:a031a86fafd0d221248d13d331813ec73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,23 +239,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8e652517e95df86558ec708fe4a6a88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ac8e652517e95df86558ec708fe4a6a88">onToolChanged</a> (ToolType)</td></tr>
 <tr class="memdesc:ac8e652517e95df86558ec708fe4a6a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tool changed, invalidate cache and frame if needed.  <br /></td></tr>
 <tr class="separator:ac8e652517e95df86558ec708fe4a6a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeed26489fb8a4d7ca4bb1ff50779a257"><td class="memItemLeft" align="right" valign="top"><a id="aeed26489fb8a4d7ca4bb1ff50779a257" name="aeed26489fb8a4d7ca4bb1ff50779a257"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setModified</b> (int layerNumber, int frameNumber)</td></tr>
-<tr class="memdesc:aeed26489fb8a4d7ca4bb1ff50779a257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set frame on layer to modified and invalidate current frame cache. <br /></td></tr>
-<tr class="separator:aeed26489fb8a4d7ca4bb1ff50779a257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a515f7003fd89ee014ed22ed34a8a1628"><td class="memItemLeft" align="right" valign="top"><a id="a515f7003fd89ee014ed22ed34a8a1628" name="a515f7003fd89ee014ed22ed34a8a1628"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setModified</b> (const <a class="el" href="class_layer.html">Layer</a> *layer, int frameNumber)</td></tr>
-<tr class="separator:a515f7003fd89ee014ed22ed34a8a1628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeafe1e5263c09a1f305c1367b17c56c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#aeafe1e5263c09a1f305c1367b17c56c6">endStroke</a> ()</td></tr>
+<tr class="separator:aeafe1e5263c09a1f305c1367b17c56c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dbeeb69589589abdb3273c031e056f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a0dbeeb69589589abdb3273c031e056f1">flipSelection</a> (bool flipVertical)</td></tr>
 <tr class="separator:a0dbeeb69589589abdb3273c031e056f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c922867702a284053384d9b8232631d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_tool.html">BaseTool</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a0c922867702a284053384d9b8232631d">currentTool</a> () const</td></tr>
 <tr class="separator:a0c922867702a284053384d9b8232631d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef363129ce2ac1490f83d34f999abbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_tool.html">BaseTool</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#abef363129ce2ac1490f83d34f999abbf">getTool</a> (ToolType eToolMode)</td></tr>
-<tr class="separator:abef363129ce2ac1490f83d34f999abbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ee9dba33bc26ec377bdfec4f8468ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a22ee9dba33bc26ec377bdfec4f8468ed">setCurrentTool</a> (ToolType eToolMode)</td></tr>
-<tr class="separator:a22ee9dba33bc26ec377bdfec4f8468ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad62ce52ce84b6f5ac8c5ccb5eb3f9f05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ad62ce52ce84b6f5ac8c5ccb5eb3f9f05">floodFillError</a> (int errorType)</td></tr>
-<tr class="separator:ad62ce52ce84b6f5ac8c5ccb5eb3f9f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd42d5ab6a4beb0e0d08b0455848b5cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#afd42d5ab6a4beb0e0d08b0455848b5cc">isMouseInUse</a> () const</td></tr>
 <tr class="separator:afd42d5ab6a4beb0e0d08b0455848b5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf17ef1da45115677dab9e7184f51660"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#abf17ef1da45115677dab9e7184f51660">isTabletInUse</a> () const</td></tr>
@@ -282,16 +257,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setModified</b> (cons
 <tr class="separator:a9ad9f73769cdd65b94cbb9dcb68fc02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab094db4076bd923a0f49d209fbffe4ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ab094db4076bd923a0f49d209fbffe4ac">drawPolyline</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> path, <a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen, bool useAA)</td></tr>
 <tr class="separator:ab094db4076bd923a0f49d209fbffe4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb34d89de91e4398a7fba7e281fefc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a9bb34d89de91e4398a7fba7e281fefc5">drawLine</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> P1, <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> P2, <a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> cm)</td></tr>
-<tr class="separator:a9bb34d89de91e4398a7fba7e281fefc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a5a03a6515934b0280272da11f5854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a09a5a03a6515934b0280272da11f5854">drawPath</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> path, <a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen, <a class="elRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> brush, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> cm)</td></tr>
 <tr class="separator:a09a5a03a6515934b0280272da11f5854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e364945a6f6df74f05e5d6e6a82898"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ad2e364945a6f6df74f05e5d6e6a82898">drawPen</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, <a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> fillColor, bool useAA=true)</td></tr>
 <tr class="separator:ad2e364945a6f6df74f05e5d6e6a82898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf846605569419a44f6dfe2f83a5b3a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#abf846605569419a44f6dfe2f83a5b3a8">drawPencil</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, qreal fixedBrushFeather, <a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> fillColor, qreal opacity)</td></tr>
 <tr class="separator:abf846605569419a44f6dfe2f83a5b3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14cb2918d22b02bf0d0e72295108761b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a14cb2918d22b02bf0d0e72295108761b">drawBrush</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, qreal offset, <a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> fillColor, qreal opacity, bool usingFeather=true, bool useAA=false)</td></tr>
-<tr class="separator:a14cb2918d22b02bf0d0e72295108761b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4fb1f9107d0615e5165de8eafcfa73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a7b4fb1f9107d0615e5165de8eafcfa73">drawBrush</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint, qreal brushWidth, qreal offset, <a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> fillColor, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> compMode, qreal opacity, bool usingFeather=true, bool useAA=false)</td></tr>
+<tr class="separator:a7b4fb1f9107d0615e5165de8eafcfa73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc6e60c527b72a7b741691098e335bb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#abc6e60c527b72a7b741691098e335bb1">blurBrush</a> (<a class="el" href="class_bitmap_image.html">BitmapImage</a> *bmiSource_, <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> srcPoint_, <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_)</td></tr>
 <tr class="separator:abc6e60c527b72a7b741691098e335bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d486cbfe677dd5c5d900ad14e826028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a7d486cbfe677dd5c5d900ad14e826028">liquifyBrush</a> (<a class="el" href="class_bitmap_image.html">BitmapImage</a> *bmiSource_, <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> srcPoint_, <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> thePoint_, qreal brushWidth_, qreal offset_, qreal opacity_)</td></tr>
@@ -300,8 +273,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setModified</b> (cons
 <tr class="separator:ae748cf63f59c46fbc0464fd438ca98e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7694886b5ee7cfca4f60f278e90be24a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a7694886b5ee7cfca4f60f278e90be24a">paintCanvasCursor</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
 <tr class="separator:a7694886b5ee7cfca4f60f278e90be24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f97940c9f01af965d8be855652f4622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a1f97940c9f01af965d8be855652f4622">clearBitmapBuffer</a> ()</td></tr>
-<tr class="separator:a1f97940c9f01af965d8be855652f4622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce9a564b61f22b14618cb7596344f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a6ce9a564b61f22b14618cb7596344f90">clearDrawingBuffer</a> ()</td></tr>
+<tr class="separator:a6ce9a564b61f22b14618cb7596344f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80df805c06ba570d3e52b14b66899a1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a80df805c06ba570d3e52b14b66899a1a">setGaussianGradient</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qgradient.html">QGradient</a> &amp;gradient, <a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color, qreal opacity, qreal offset)</td></tr>
 <tr class="separator:a80df805c06ba570d3e52b14b66899a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056dc46c6a82c533b2c303a07f324646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a056dc46c6a82c533b2c303a07f324646">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *)</td></tr>
@@ -1292,12 +1265,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="ht
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9de12346ecbfc0cab204330ae6e17e76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bitmap_image.html">BitmapImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a9de12346ecbfc0cab204330ae6e17e76">mBufferImg</a></td></tr>
-<tr class="separator:a9de12346ecbfc0cab204330ae6e17e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849986093033b8c4d348f1a8c44292cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tiled_buffer.html">TiledBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a849986093033b8c4d348f1a8c44292cc">mTiledBuffer</a></td></tr>
+<tr class="separator:a849986093033b8c4d348f1a8c44292cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3530b5097016d0d8fa3bf365f5a16353"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a3530b5097016d0d8fa3bf365f5a16353">mCursorImg</a></td></tr>
 <tr class="separator:a3530b5097016d0d8fa3bf365f5a16353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18a231c6b4734b002e68e3d35e614329"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a18a231c6b4734b002e68e3d35e614329">mTransCursImg</a></td></tr>
-<tr class="separator:a18a231c6b4734b002e68e3d35e614329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_qwidget"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_qwidget')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el"  href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></td></tr>
 <tr class="memitem:RenderFlag-enum inherit pub_attribs_qwidget"><td class="memItemLeft" align="right" valign="top"><a id="RenderFlag-enum" name="RenderFlag-enum"></a>
 typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#RenderFlag-enum">RenderFlags</a></td></tr>
@@ -1526,40 +1497,24 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ae14086f1d29526eadc41a62a457cd5ee"><td class="memItemLeft" align="right" valign="top">MoveMode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ae14086f1d29526eadc41a62a457cd5ee">mMoveMode</a> = MoveMode::NONE</td></tr>
-<tr class="separator:ae14086f1d29526eadc41a62a457cd5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a294779713620d5f9b8450cf405347763"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_stroke_manager.html">StrokeManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a294779713620d5f9b8450cf405347763">mStrokeManager</a></td></tr>
 <tr class="separator:a294779713620d5f9b8450cf405347763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb9c5d0159f3a362ae8b48f1ee5a4721"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_editor.html">Editor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#adb9c5d0159f3a362ae8b48f1ee5a4721">mEditor</a> = nullptr</td></tr>
 <tr class="separator:adb9c5d0159f3a362ae8b48f1ee5a4721"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fef8b78d9437604e1c92b850938ea3f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a2fef8b78d9437604e1c92b850938ea3f">mIsSimplified</a> = false</td></tr>
-<tr class="separator:a2fef8b78d9437604e1c92b850938ea3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884fb8480511a7c2b042308639506e5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a884fb8480511a7c2b042308639506e5a">mShowThinLines</a> = false</td></tr>
-<tr class="separator:a884fb8480511a7c2b042308639506e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0e03550fd06b178be5f7018536fdf6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ab0e03550fd06b178be5f7018536fdf6e">mQuickSizing</a> = true</td></tr>
 <tr class="separator:ab0e03550fd06b178be5f7018536fdf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fd70380891b6449873ee5f19c1dbceb"><td class="memItemLeft" align="right" valign="top">LayerVisibility&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a6fd70380891b6449873ee5f19c1dbceb">mLayerVisibility</a> = LayerVisibility::ALL</td></tr>
 <tr class="separator:a6fd70380891b6449873ee5f19c1dbceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5e546eeb580acf5009d2b174490dcdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ac5e546eeb580acf5009d2b174490dcdf">mUsePressure</a> = true</td></tr>
-<tr class="separator:ac5e546eeb580acf5009d2b174490dcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25a3c51f7412ba947679615170b1552d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a25a3c51f7412ba947679615170b1552d">mMakeInvisible</a> = false</td></tr>
 <tr class="separator:a25a3c51f7412ba947679615170b1552d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ba6ccdace6a73b2c3914af6d459fbe2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a6ba6ccdace6a73b2c3914af6d459fbe2">mToolCursors</a> = true</td></tr>
-<tr class="separator:a6ba6ccdace6a73b2c3914af6d459fbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308100a1f20e1a96eaf819d72d2ff897"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a308100a1f20e1a96eaf819d72d2ff897">mCurveSmoothingLevel</a> = 0.0</td></tr>
 <tr class="separator:a308100a1f20e1a96eaf819d72d2ff897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a729737cf7ea87377843e734e3c5029b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a729737cf7ea87377843e734e3c5029b5">mMultiLayerOnionSkin</a> = false</td></tr>
 <tr class="separator:a729737cf7ea87377843e734e3c5029b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a583d3ca6e4397c3161c3e12be433752a"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a583d3ca6e4397c3161c3e12be433752a">mOnionColor</a></td></tr>
-<tr class="separator:a583d3ca6e4397c3161c3e12be433752a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49bd0f34a44a81acdd22665838d93e1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a49bd0f34a44a81acdd22665838d93e1b">mDeltaFactor</a> = 1</td></tr>
 <tr class="separator:a49bd0f34a44a81acdd22665838d93e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034cbdf1e2056e5b6c668a2490c56960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a034cbdf1e2056e5b6c668a2490c56960">mKeyboardInUse</a> = false</td></tr>
-<tr class="separator:a034cbdf1e2056e5b6c668a2490c56960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2f1aadf0f660c2e957f82fe516e7664"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#ac2f1aadf0f660c2e957f82fe516e7664">mMouseInUse</a> = false</td></tr>
 <tr class="separator:ac2f1aadf0f660c2e957f82fe516e7664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6731bd8369f63a35219ba7d51d131986"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a6731bd8369f63a35219ba7d51d131986">mMouseRightButtonInUse</a> = false</td></tr>
-<tr class="separator:a6731bd8369f63a35219ba7d51d131986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e8a3e4df31fc7ea7e5129a0237b67e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a72e8a3e4df31fc7ea7e5129a0237b67e">mTabletInUse</a> = false</td></tr>
 <tr class="separator:a72e8a3e4df31fc7ea7e5129a0237b67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4965c004282faf8b5a51417d3b17408f"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a4965c004282faf8b5a51417d3b17408f">mDevicePixelRatio</a> = 1.</td></tr>
@@ -1605,8 +1560,6 @@ Private Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:af20db3d012e8ad5f8e28bd5202a1d5a5"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#af20db3d012e8ad5f8e28bd5202a1d5a5">MoveTool</a></td></tr>
 <tr class="separator:af20db3d012e8ad5f8e28bd5202a1d5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e21cfee295001f6993ee7e359367f7f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a5e21cfee295001f6993ee7e359367f7f">EditTool</a></td></tr>
-<tr class="separator:a5e21cfee295001f6993ee7e359367f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05b6d7b3bb9148f53c98b2b98d47d5ff"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a05b6d7b3bb9148f53c98b2b98d47d5ff">SmudgeTool</a></td></tr>
 <tr class="separator:a05b6d7b3bb9148f53c98b2b98d47d5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a8751f0e86bd7989094cb7d389dbc61"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scribble_area.html#a7a8751f0e86bd7989094cb7d389dbc61">BucketTool</a></td></tr>
@@ -1858,7 +1811,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00051">51</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00052">52</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab700798356bbb963bea4b362953c2b12" name="ab700798356bbb963bea4b362953c2b12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab700798356bbb963bea4b362953c2b12">&#9670;&#160;</a></span>ScribbleArea()</h2>
@@ -1876,7 +1829,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00047">47</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00048">48</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -1903,7 +1856,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00058">58</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00059">59</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -1923,7 +1876,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01459">1459</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01444">1444</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -1977,7 +1930,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01359">1359</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01367">1367</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -1996,18 +1949,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01499">1499</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01484">1484</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a1f97940c9f01af965d8be855652f4622" name="a1f97940c9f01af965d8be855652f4622"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f97940c9f01af965d8be855652f4622">&#9670;&#160;</a></span>clearBitmapBuffer()</h2>
+<a id="a6ce9a564b61f22b14618cb7596344f90" name="a6ce9a564b61f22b14618cb7596344f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce9a564b61f22b14618cb7596344f90">&#9670;&#160;</a></span>clearDrawingBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ScribbleArea::clearBitmapBuffer </td>
+          <td class="memname">void ScribbleArea::clearDrawingBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2015,7 +1968,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00874">874</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00868">868</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2042,7 +1995,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01646">1646</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01580">1580</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2070,7 +2023,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01171">1171</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01155">1155</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2089,7 +2042,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01597">1597</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01546">1546</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2117,7 +2070,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01178">1178</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01162">1162</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2144,7 +2097,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01586">1586</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01535">1535</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2163,31 +2116,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01617">1617</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01551">1551</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a19f11ddf1899f1d847e32fa18f5d4aed" name="a19f11ddf1899f1d847e32fa18f5d4aed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19f11ddf1899f1d847e32fa18f5d4aed">&#9670;&#160;</a></span>displaySelectionProperties()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScribbleArea::displaySelectionProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01528">1528</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a14cb2918d22b02bf0d0e72295108761b" name="a14cb2918d22b02bf0d0e72295108761b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14cb2918d22b02bf0d0e72295108761b">&#9670;&#160;</a></span>drawBrush()</h2>
+<a id="a7b4fb1f9107d0615e5165de8eafcfa73" name="a7b4fb1f9107d0615e5165de8eafcfa73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4fb1f9107d0615e5165de8eafcfa73">&#9670;&#160;</a></span>drawBrush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2219,6 +2153,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a>&#160;</td>
+          <td class="paramname"><em>compMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">qreal&#160;</td>
           <td class="paramname"><em>opacity</em>, </td>
         </tr>
@@ -2242,7 +2182,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01296">1296</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01281">1281</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2280,49 +2220,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01252">1252</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a9bb34d89de91e4398a7fba7e281fefc5" name="a9bb34d89de91e4398a7fba7e281fefc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bb34d89de91e4398a7fba7e281fefc5">&#9670;&#160;</a></span>drawLine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScribbleArea::drawLine </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td>
-          <td class="paramname"><em>P1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td>
-          <td class="paramname"><em>P2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a>&#160;</td>
-          <td class="paramname"><em>pen</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a>&#160;</td>
-          <td class="paramname"><em>cm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00879">879</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01237">1237</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2364,7 +2262,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00884">884</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01266">1266</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2406,7 +2304,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01282">1282</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01271">1271</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2454,7 +2352,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01291">1291</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01276">1276</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2490,7 +2388,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01432">1432</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01297">1297</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2521,6 +2419,25 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 </div>
 </div>
+<a id="aeafe1e5263c09a1f305c1367b17c56c6" name="aeafe1e5263c09a1f305c1367b17c56c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeafe1e5263c09a1f305c1367b17c56c6">&#9670;&#160;</a></span>endStroke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScribbleArea::endStroke </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01316">1316</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ac12323d95dcb494656cf99e571817f5b" name="ac12323d95dcb494656cf99e571817f5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac12323d95dcb494656cf99e571817f5b">&#9670;&#160;</a></span>event()</h2>
 
@@ -2547,7 +2464,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#event">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00371">371</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00399">399</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2567,27 +2484,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01317">1317</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad62ce52ce84b6f5ac8c5ccb5eb3f9f05" name="ad62ce52ce84b6f5ac8c5ccb5eb3f9f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad62ce52ce84b6f5ac8c5ccb5eb3f9f05">&#9670;&#160;</a></span>floodFillError()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScribbleArea::floodFillError </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>errorType</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01698">1698</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01325">1325</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2606,7 +2503,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01454">1454</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01439">1439</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2633,7 +2530,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00082">82</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00079">79</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -2660,7 +2557,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00081">81</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00078">78</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -2691,26 +2588,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 </div>
 </div>
-<a id="abef363129ce2ac1490f83d34f999abbf" name="abef363129ce2ac1490f83d34f999abbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abef363129ce2ac1490f83d34f999abbf">&#9670;&#160;</a></span>getTool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_base_tool.html">BaseTool</a> * ScribbleArea::getTool </td>
-          <td>(</td>
-          <td class="paramtype">ToolType&#160;</td>
-          <td class="paramname"><em>eToolMode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01602">1602</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
 <a id="a992734f69c0a89793508034b51002533" name="a992734f69c0a89793508034b51002533"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a992734f69c0a89793508034b51002533">&#9670;&#160;</a></span>handleDoubleClick()</h2>
 
@@ -2734,7 +2611,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00719">719</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00735">735</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2756,7 +2633,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <p>Call this when starting to use a paint tool. </p>
 <p>Checks whether we are drawing on an empty frame, and if so, takes action according to use preference. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00944">944</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00925">925</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2783,7 +2660,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01578">1578</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01527">1527</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2802,7 +2679,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00062">62</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00063">63</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2832,7 +2709,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <p>Invalidate all cache. </p>
 <p>call this if you're certain that the change you've made affects all frames </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00255">255</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00280">280</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2861,7 +2738,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>invalidate cache for dirty keyframes. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00203">203</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00228">228</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2891,7 +2768,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Invalidate cache for the given frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00265">265</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00292">292</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2921,7 +2798,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>invalidate onion skin cache around frame </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00214">214</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00239">239</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2951,7 +2828,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <p>Invalidate the layer pixmap and camera painter caches. </p>
 <p>Call this in most situations where the layer rendering order is affected. Peviously known as setAllDirty. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00276">276</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00303">303</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2970,7 +2847,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00747">747</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00763">763</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -2997,7 +2874,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00142">142</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00128">128</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -3024,7 +2901,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00144">144</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00130">130</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -3051,7 +2928,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00143">143</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00129">129</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -3071,7 +2948,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00468">468</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00494">494</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3091,7 +2968,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00419">419</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00445">445</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3121,7 +2998,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#keyPressEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00384">384</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00412">412</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3151,7 +3028,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#keyReleaseEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00496">496</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00522">522</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3205,7 +3082,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01378">1378</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01384">1384</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3232,7 +3109,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00084">84</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00080">80</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -3262,7 +3139,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#mouseDoubleClickEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00792">792</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00808">808</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3292,7 +3169,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#mouseMoveEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00771">771</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00787">787</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3322,7 +3199,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#mousePressEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00755">755</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00771">771</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3352,7 +3229,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#mouseReleaseEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00781">781</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00797">797</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3374,7 +3251,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Frame modified, invalidate cache for frame if any. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00334">334</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00362">362</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3395,7 +3272,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Multiple frames modified, invalidate cache for affected frames. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00325">325</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00353">353</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3416,7 +3293,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p><a class="el" href="class_layer.html">Layer</a> changed, invalidate relevant cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00349">349</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00377">377</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3437,7 +3314,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p><a class="el" href="class_object.html">Object</a> updated, invalidate all cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00366">366</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00394">394</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3459,7 +3336,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <p>Onion skin type changed, all frames will be affected. </p>
 <p>All cache will be invalidated </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00361">361</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00389">389</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3480,7 +3357,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Playstate changed, invalidate relevant cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00305">305</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00332">332</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3502,7 +3379,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Frame scrubbed, invalidate relevant cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00319">319</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00346">346</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3523,7 +3400,83 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Selection was changed, keep cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00354">354</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00382">382</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a14f5ba733508358316b3377ea8c11eb2" name="a14f5ba733508358316b3377ea8c11eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f5ba733508358316b3377ea8c11eb2">&#9670;&#160;</a></span>onTileCreated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScribbleArea::onTileCreated </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tiled_buffer.html">TiledBuffer</a> *&#160;</td>
+          <td class="paramname"><em>tiledBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tile.html">Tile</a> *&#160;</td>
+          <td class="paramname"><em>tile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00202">202</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a142df758746edc0e05f3541e6ec28d5b" name="a142df758746edc0e05f3541e6ec28d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142df758746edc0e05f3541e6ec28d5b">&#9670;&#160;</a></span>onTileUpdated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScribbleArea::onTileUpdated </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tiled_buffer.html">TiledBuffer</a> *&#160;</td>
+          <td class="paramname"><em>tiledBuffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_tile.html">Tile</a> *&#160;</td>
+          <td class="paramname"><em>tile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00195">195</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3545,7 +3498,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Tool changed, invalidate cache and frame if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00295">295</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00322">322</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3577,7 +3530,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Tool property updated, invalidate cache and frame if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00283">283</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00310">310</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3598,7 +3551,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>View updated, invalidate relevant cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00344">344</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00372">372</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3617,7 +3570,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00822">822</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00838">838</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3637,7 +3590,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00890">890</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00873">873</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3667,7 +3620,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#paintEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00997">997</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00978">978</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3695,7 +3648,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01156">1156</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01140">1140</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3723,7 +3676,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01678">1678</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01612">1612</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3743,7 +3696,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00680">680</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00703">703</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3763,7 +3716,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00642">642</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00666">666</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3783,7 +3736,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00698">698</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00721">721</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3811,7 +3764,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01185">1185</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01169">1169</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3849,7 +3802,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01215">1215</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01199">1199</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3877,7 +3830,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01322">1322</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01330">1330</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3907,27 +3860,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#resizeEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00801">801</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a22ee9dba33bc26ec377bdfec4f8468ed" name="a22ee9dba33bc26ec377bdfec4f8468ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22ee9dba33bc26ec377bdfec4f8468ed">&#9670;&#160;</a></span>setCurrentTool()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScribbleArea::setCurrentTool </td>
-          <td>(</td>
-          <td class="paramtype">ToolType&#160;</td>
-          <td class="paramname"><em>eToolMode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01607">1607</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00817">817</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -3955,7 +3888,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00177">177</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00180">180</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4013,7 +3946,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00183">183</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00186">186</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4055,7 +3988,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01262">1262</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01246">1246</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4083,7 +4016,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01570">1570</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01519">1519</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4111,7 +4044,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00109">109</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00112">112</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4138,7 +4071,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00814">814</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00830">830</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4168,7 +4101,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#tabletEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00562">562</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00586">586</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4195,34 +4128,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00731">731</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a5c55d2f5e6bb40beab603fc4bb0b101f" name="a5c55d2f5e6bb40beab603fc4bb0b101f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c55d2f5e6bb40beab603fc4bb0b101f">&#9670;&#160;</a></span>toggleOutlines</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScribbleArea::toggleOutlines </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01564">1564</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00747">747</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4249,7 +4155,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01558">1558</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l01513">1513</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4268,34 +4174,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00916">916</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00896">896</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ad7b559e675fa6524fea0978feab97fe0" name="ad7b559e675fa6524fea0978feab97fe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7b559e675fa6524fea0978feab97fe0">&#9670;&#160;</a></span>updateCurrentFrame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScribbleArea::updateCurrentFrame </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Update current frame. </p>
-<p>calls <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update()</a> behind the scene and update cache if necessary </p>
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00192">192</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ae3af1b38916fc8c3293c4378fb9df3d9" name="ae3af1b38916fc8c3293c4378fb9df3d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3af1b38916fc8c3293c4378fb9df3d9">&#9670;&#160;</a></span>updateFrame()</h2>
+<a id="a3be7383b5ac5a61fd0e7041a31698868" name="a3be7383b5ac5a61fd0e7041a31698868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be7383b5ac5a61fd0e7041a31698868">&#9670;&#160;</a></span>updateFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4303,8 +4187,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
         <tr>
           <td class="memname">void ScribbleArea::updateFrame </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4313,7 +4196,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <p>Update frame. </p>
 <p>calls <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update()</a> behind the scene and update cache if necessary </p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00197">197</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00219">219</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4340,34 +4223,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00171">171</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a09e6c066346388255e543befb60b4c9a" name="a09e6c066346388255e543befb60b4c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e6c066346388255e543befb60b4c9a">&#9670;&#160;</a></span>usePressure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::usePressure </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00083">83</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00174">174</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4397,7 +4253,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qwidget.html#wheelEvent">QWidget</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00526">526</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8cpp_source.html#l00550">550</a> of file <a class="el" href="scribblearea_8cpp_source.html">scribblearea.cpp</a>.</p>
 
 </div>
 </div>
@@ -4426,30 +4282,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 </div>
 </div>
-<a id="a5e21cfee295001f6993ee7e359367f7f" name="a5e21cfee295001f6993ee7e359367f7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e21cfee295001f6993ee7e359367f7f">&#9670;&#160;</a></span>EditTool</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class EditTool</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00056">56</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
 <a id="af20db3d012e8ad5f8e28bd5202a1d5a5" name="af20db3d012e8ad5f8e28bd5202a1d5a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af20db3d012e8ad5f8e28bd5202a1d5a5">&#9670;&#160;</a></span>MoveTool</h2>
 
@@ -4470,7 +4302,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00055">55</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00056">56</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4519,23 +4351,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00282">282</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a9de12346ecbfc0cab204330ae6e17e76" name="a9de12346ecbfc0cab204330ae6e17e76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9de12346ecbfc0cab204330ae6e17e76">&#9670;&#160;</a></span>mBufferImg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_bitmap_image.html">BitmapImage</a> ScribbleArea::mBufferImg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00206">206</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00254">254</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4559,7 +4375,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00298">298</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00270">270</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4583,7 +4399,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00294">294</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00266">266</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4607,7 +4423,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00295">295</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00267">267</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4631,7 +4447,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00289">289</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00261">261</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4647,7 +4463,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00208">208</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00193">193</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4671,7 +4487,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00256">256</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00233">233</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4695,7 +4511,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00259">259</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00235">235</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4719,7 +4535,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00275">275</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00247">247</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4743,7 +4559,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00280">280</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00252">252</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4767,7 +4583,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00283">283</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00255">255</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4791,7 +4607,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00246">246</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00228">228</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4815,55 +4631,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00279">279</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a2fef8b78d9437604e1c92b850938ea3f" name="a2fef8b78d9437604e1c92b850938ea3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fef8b78d9437604e1c92b850938ea3f">&#9670;&#160;</a></span>mIsSimplified</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::mIsSimplified = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00249">249</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a034cbdf1e2056e5b6c668a2490c56960" name="a034cbdf1e2056e5b6c668a2490c56960"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a034cbdf1e2056e5b6c668a2490c56960">&#9670;&#160;</a></span>mKeyboardInUse</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::mKeyboardInUse = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00271">271</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00251">251</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4887,7 +4655,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00252">252</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00231">231</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4911,7 +4679,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00306">306</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00278">278</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4935,7 +4703,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00254">254</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00232">232</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4959,7 +4727,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00287">287</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00259">259</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -4983,55 +4751,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00272">272</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a6731bd8369f63a35219ba7d51d131986" name="a6731bd8369f63a35219ba7d51d131986"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6731bd8369f63a35219ba7d51d131986">&#9670;&#160;</a></span>mMouseRightButtonInUse</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::mMouseRightButtonInUse = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00273">273</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="ae14086f1d29526eadc41a62a457cd5ee" name="ae14086f1d29526eadc41a62a457cd5ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae14086f1d29526eadc41a62a457cd5ee">&#9670;&#160;</a></span>mMoveMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">MoveMode ScribbleArea::mMoveMode = MoveMode::NONE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00242">242</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00245">245</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5055,31 +4775,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00257">257</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a583d3ca6e4397c3161c3e12be433752a" name="a583d3ca6e4397c3161c3e12be433752a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a583d3ca6e4397c3161c3e12be433752a">&#9670;&#160;</a></span>mOnionColor</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> ScribbleArea::mOnionColor</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00258">258</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00234">234</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5103,7 +4799,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00300">300</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00272">272</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5127,7 +4823,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00285">285</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00257">257</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5151,7 +4847,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00296">296</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00268">268</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5175,7 +4871,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00303">303</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00275">275</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5199,7 +4895,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00292">292</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00264">264</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5223,7 +4919,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00251">251</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00230">230</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5247,31 +4943,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00297">297</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a884fb8480511a7c2b042308639506e5a" name="a884fb8480511a7c2b042308639506e5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a884fb8480511a7c2b042308639506e5a">&#9670;&#160;</a></span>mShowThinLines</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::mShowThinLines = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00250">250</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00269">269</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5295,7 +4967,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00244">244</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00226">226</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5319,7 +4991,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00274">274</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00246">246</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5343,47 +5015,23 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00284">284</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00256">256</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
-<a id="a6ba6ccdace6a73b2c3914af6d459fbe2" name="a6ba6ccdace6a73b2c3914af6d459fbe2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ba6ccdace6a73b2c3914af6d459fbe2">&#9670;&#160;</a></span>mToolCursors</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::mToolCursors = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00255">255</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="a18a231c6b4734b002e68e3d35e614329" name="a18a231c6b4734b002e68e3d35e614329"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18a231c6b4734b002e68e3d35e614329">&#9670;&#160;</a></span>mTransCursImg</h2>
+<a id="a849986093033b8c4d348f1a8c44292cc" name="a849986093033b8c4d348f1a8c44292cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849986093033b8c4d348f1a8c44292cc">&#9670;&#160;</a></span>mTiledBuffer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> ScribbleArea::mTransCursImg</td>
+          <td class="memname"><a class="el" href="class_tiled_buffer.html">TiledBuffer</a> ScribbleArea::mTiledBuffer</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00209">209</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00191">191</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5407,31 +5055,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00290">290</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
-
-</div>
-</div>
-<a id="ac5e546eeb580acf5009d2b174490dcdf" name="ac5e546eeb580acf5009d2b174490dcdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5e546eeb580acf5009d2b174490dcdf">&#9670;&#160;</a></span>mUsePressure</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ScribbleArea::mUsePressure = true</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00253">253</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scribblearea_8h_source.html#l00262">262</a> of file <a class="el" href="scribblearea_8h_source.html">scribblearea.h</a>.</p>
 
 </div>
 </div>
@@ -5445,10 +5069,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Sep 24 2023 19:39:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 07:11:56 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 1395c86cb17dafbb32de44cbabe1f4c58636468d
+   based on revision a4d63308eb43f374a673becebd0e2b275743c4ea
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

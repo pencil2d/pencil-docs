@@ -139,25 +139,25 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;stroketool.h&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;QColor&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_brush_tool.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="class_brush_tool.html">BrushTool</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_stroke_tool.html">StrokeTool</a></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#Q_OBJECT">Q_OBJECT</a></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_brush_tool.html">BrushTool</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a> = 0);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ToolType type() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> loadSettings() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> resetToDefault() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> drawStroke();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> paintVectorStroke();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> paintBitmapStroke();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span><a class="code hl_class" href="class_layer.html">Layer</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_brush_tool.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_brush_tool.html">BrushTool</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_stroke_tool.html">StrokeTool</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#Q_OBJECT">Q_OBJECT</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_brush_tool.html">BrushTool</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a> = 0);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ToolType type() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> loadSettings() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> resetToDefault() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> drawStroke();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> paintVectorStroke(<a class="code hl_class" href="class_layer.html">Layer</a>* layer);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> paintAt(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> point);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> setWidth(<span class="keyword">const</span> qreal width) <span class="keyword">override</span>;</div>
@@ -175,7 +175,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// BRUSHTOOL_H</span></div>
-<div class="ttc" id="aclass_brush_tool_html"><div class="ttname"><a href="class_brush_tool.html">BrushTool</a></div><div class="ttdef"><b>Definition:</b> <a href="brushtool_8h_source.html#l00025">brushtool.h:26</a></div></div>
+<div class="ttc" id="aclass_brush_tool_html"><div class="ttname"><a href="class_brush_tool.html">BrushTool</a></div><div class="ttdef"><b>Definition:</b> <a href="brushtool_8h_source.html#l00026">brushtool.h:27</a></div></div>
+<div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00037">layer.h:38</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00028">stroketool.h:29</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
@@ -190,10 +191,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Sep 24 2023 19:39:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 07:11:55 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 1395c86cb17dafbb32de44cbabe1f4c58636468d
+   based on revision a4d63308eb43f374a673becebd0e2b275743c4ea
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
