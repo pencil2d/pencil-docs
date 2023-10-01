@@ -534,44 +534,39 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>    properties.bucketFillExpand = fillExpandValue;</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>}</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="keywordtype">void</span> BaseTool::setFillToLayerMode(<span class="keywordtype">int</span> layerMode)</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="keywordtype">void</span> BaseTool::setFillReferenceMode(<span class="keywordtype">int</span> referenceMode)</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>{</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    properties.bucketFillToLayerMode = layerMode;</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    properties.bucketFillReferenceMode = referenceMode;</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>}</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="keywordtype">void</span> BaseTool::setFillReferenceMode(<span class="keywordtype">int</span> referenceMode)</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="keywordtype">void</span> BaseTool::setFillExpandEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled)</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>{</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    properties.bucketFillReferenceMode = referenceMode;</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    properties.bucketFillExpandEnabled = enabled;</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>}</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span> </div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="keywordtype">void</span> BaseTool::setFillExpandEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="keywordtype">void</span> BaseTool::setUseFillContour(<span class="keyword">const</span> <span class="keywordtype">bool</span> useFillContour)</div>
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>{</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    properties.bucketFillExpandEnabled = enabled;</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    properties.useFillContour = useFillContour;</div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>}</div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span> </div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="keywordtype">void</span> BaseTool::setUseFillContour(<span class="keyword">const</span> <span class="keywordtype">bool</span> useFillContour)</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="keywordtype">void</span> BaseTool::setShowSelectionInfo(<span class="keyword">const</span> <span class="keywordtype">bool</span> b)</div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>{</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>    properties.useFillContour = useFillContour;</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>    properties.showSelectionInfo = b;</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>}</div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> </div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="keywordtype">void</span> BaseTool::setShowSelectionInfo(<span class="keyword">const</span> <span class="keywordtype">bool</span> b)</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="keywordtype">void</span> BaseTool::setShowCameraPath(<span class="keyword">const</span> <span class="keywordtype">bool</span> showCameraPath)</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>{</div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>    properties.showSelectionInfo = b;</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>    properties.cameraShowPath = showCameraPath;</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>}</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span> </div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="keywordtype">void</span> BaseTool::setShowCameraPath(<span class="keyword">const</span> <span class="keywordtype">bool</span> showCameraPath)</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="keywordtype">void</span> BaseTool::setPathDotColorType(<span class="keyword">const</span> DotColorType dotColorType)</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>{</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    properties.cameraShowPath = showCameraPath;</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    properties.cameraPathDotColorType = dotColorType;</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>}</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span><span class="keywordtype">void</span> BaseTool::setPathDotColorType(<span class="keyword">const</span> DotColorType dotColorType)</div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span><span class="keywordtype">void</span> BaseTool::resetCameraPath()</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>{</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    properties.cameraPathDotColorType = dotColorType;</div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>}</div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span> </div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span><span class="keywordtype">void</span> BaseTool::resetCameraPath()</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>{</div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>}</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>}</div>
 <div class="ttc" id="aclass_base_tool_html_a3255c19d934bad5922b957bd1326dce3"><div class="ttname"><a href="class_base_tool.html#a3255c19d934bad5922b957bd1326dce3">BaseTool::canvasCursor</a></div><div class="ttdeci">static QPixmap canvasCursor(float brushWidth, float brushFeather, bool useFeather, float scalingFac, int windowWidth)</div><div class="ttdoc">precision circular cursor: used for drawing a cursor within scribble area.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00125">basetool.cpp:125</a></div></div>
 <div class="ttc" id="aclass_base_tool_html_a4c282b9467d8fb36feb9feeef9604ca6"><div class="ttname"><a href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">BaseTool::isActive</a></div><div class="ttdeci">virtual bool isActive()</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00204">basetool.cpp:204</a></div></div>
 <div class="ttc" id="aclass_base_tool_html_a92dd16c12e6b7b5e14cd9cc08af4c637"><div class="ttname"><a href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">BaseTool::isDrawingTool</a></div><div class="ttdeci">bool isDrawingTool()</div><div class="ttdoc">BaseTool::isDrawingTool - A drawing tool is anything that applies something to the canvas.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00112">basetool.cpp:112</a></div></div>
@@ -622,10 +617,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Oct 1 2023 07:15:40 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Oct 1 2023 07:19:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision f09d0ca87aaa9d1a3b5c1f45f425416e8b0cf025
+   based on revision 1914718c68db5b1a92c6d9908c118648608c118c
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
