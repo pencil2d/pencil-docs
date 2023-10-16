@@ -1815,18 +1815,21 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span>    mOverlayToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#addAction">addAction</a>(ui-&gt;actionTwoPointPerspective);</div>
 <div class="line"><a id="l01698" name="l01698"></a><span class="lineno"> 1698</span>    mOverlayToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#addAction">addAction</a>(ui-&gt;actionThreePointPerspective);</div>
 <div class="line"><a id="l01699" name="l01699"></a><span class="lineno"> 1699</span>    mOverlayToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#iconSize-prop">setIconSize</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>(22,22));</div>
-<div class="line"><a id="l01700" name="l01700"></a><span class="lineno"> 1700</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbutton.html">QToolButton</a>* perspectiveLinesAngleButton = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbutton.html">QToolButton</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l01701" name="l01701"></a><span class="lineno"> 1701</span>    perspectiveLinesAngleButton-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbutton.html#setDefaultAction">setDefaultAction</a>(ui-&gt;menuPerspectiveLinesAngle-&gt;menuAction());</div>
-<div class="line"><a id="l01702" name="l01702"></a><span class="lineno"> 1702</span>    perspectiveLinesAngleButton-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbutton.html#popupMode-prop">setPopupMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qtoolbutton.html#ToolButtonPopupMode-enum">QToolButton::InstantPopup</a>);</div>
-<div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span>    mOverlayToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#addWidget">addWidget</a>(perspectiveLinesAngleButton);</div>
-<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span> </div>
-<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>    mToolbars = { mMainToolbar, mViewToolbar, mOverlayToolbar };</div>
-<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span> </div>
-<div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>* tb : mToolbars)</div>
-<div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span>    {</div>
-<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span>        ui-&gt;menuToolbars-&gt;addAction(tb-&gt;toggleViewAction());</div>
-<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span>    }</div>
-<div class="line"><a id="l01711" name="l01711"></a><span class="lineno"> 1711</span>}</div>
+<div class="line"><a id="l01700" name="l01700"></a><span class="lineno"> 1700</span>    mViewToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#iconSize-prop">setIconSize</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>(22,22));</div>
+<div class="line"><a id="l01701" name="l01701"></a><span class="lineno"> 1701</span>    mMainToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#iconSize-prop">setIconSize</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>(22,22));</div>
+<div class="line"><a id="l01702" name="l01702"></a><span class="lineno"> 1702</span>    </div>
+<div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbutton.html">QToolButton</a>* perspectiveLinesAngleButton = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbutton.html">QToolButton</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>    perspectiveLinesAngleButton-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbutton.html#setDefaultAction">setDefaultAction</a>(ui-&gt;menuPerspectiveLinesAngle-&gt;menuAction());</div>
+<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>    perspectiveLinesAngleButton-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbutton.html#popupMode-prop">setPopupMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qtoolbutton.html#ToolButtonPopupMode-enum">QToolButton::InstantPopup</a>);</div>
+<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>    mOverlayToolbar-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtoolbar.html#addWidget">addWidget</a>(perspectiveLinesAngleButton);</div>
+<div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span> </div>
+<div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span>    mToolbars = { mMainToolbar, mViewToolbar, mOverlayToolbar };</div>
+<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span> </div>
+<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>* tb : mToolbars)</div>
+<div class="line"><a id="l01711" name="l01711"></a><span class="lineno"> 1711</span>    {</div>
+<div class="line"><a id="l01712" name="l01712"></a><span class="lineno"> 1712</span>        ui-&gt;menuToolbars-&gt;addAction(tb-&gt;toggleViewAction());</div>
+<div class="line"><a id="l01713" name="l01713"></a><span class="lineno"> 1713</span>    }</div>
+<div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span>}</div>
 <div class="ttc" id="aclass_action_commands_html"><div class="ttname"><a href="class_action_commands.html">ActionCommands</a></div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8h_source.html#l00029">actioncommands.h:30</a></div></div>
 <div class="ttc" id="aclass_action_commands_html_aa22c5d39f054881b947cd6612339ca80"><div class="ttname"><a href="class_action_commands.html#aa22c5d39f054881b947cd6612339ca80">ActionCommands::insertKeyFrameAtCurrentPosition</a></div><div class="ttdeci">Status insertKeyFrameAtCurrentPosition()</div><div class="ttdoc">Will insert a keyframe at the current position and push connected frames to the right.</div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8cpp_source.html#l00649">actioncommands.cpp:649</a></div></div>
 <div class="ttc" id="aclass_base_dock_widget_html"><div class="ttname"><a href="class_base_dock_widget.html">BaseDockWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="basedockwidget_8h_source.html#l00026">basedockwidget.h:27</a></div></div>
@@ -1873,7 +1876,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_status_bar_html_aed3181a3a1e265338233e98d29176b5f"><div class="ttname"><a href="class_status_bar.html#aed3181a3a1e265338233e98d29176b5f">StatusBar::updateZoomStatus</a></div><div class="ttdeci">void updateZoomStatus()</div><div class="ttdoc">Updates the zoom level displayed in the status bar.</div><div class="ttdef"><b>Definition:</b> <a href="statusbar_8cpp_source.html#l00175">statusbar.cpp:175</a></div></div>
 <div class="ttc" id="aclass_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00039">pencilerror.h:40</a></div></div>
 <div class="ttc" id="aclass_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00030">timeline.h:31</a></div></div>
-<div class="ttc" id="aclass_time_line_html_a302a57106840bf8e44a60f1816e92810"><div class="ttname"><a href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">TimeLine::extendLength</a></div><div class="ttdeci">void extendLength(int frame)</div><div class="ttdoc">Extends the timeline frame length if necessary.</div><div class="ttdef"><b>Definition:</b> <a href="timeline_8cpp_source.html#l00259">timeline.cpp:259</a></div></div>
+<div class="ttc" id="aclass_time_line_html_a302a57106840bf8e44a60f1816e92810"><div class="ttname"><a href="class_time_line.html#a302a57106840bf8e44a60f1816e92810">TimeLine::extendLength</a></div><div class="ttdeci">void extendLength(int frame)</div><div class="ttdoc">Extends the timeline frame length if necessary.</div><div class="ttdef"><b>Definition:</b> <a href="timeline_8cpp_source.html#l00256">timeline.cpp:256</a></div></div>
 <div class="ttc" id="aclass_tool_box_widget_html"><div class="ttname"><a href="class_tool_box_widget.html">ToolBoxWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="toolbox_8h_source.html#l00035">toolbox.h:36</a></div></div>
 <div class="ttc" id="aclass_tool_option_widget_html"><div class="ttname"><a href="class_tool_option_widget.html">ToolOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="tooloptionwidget_8h_source.html#l00040">tooloptionwidget.h:41</a></div></div>
 <div class="ttc" id="aqaction_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qaction.html">QAction</a></div></div>
@@ -2013,10 +2016,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Oct 1 2023 13:55:33 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Oct 16 2023 06:11:35 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 58eb218117f023d118336de0e073de738f9f5013
+   based on revision 6a4fe12ded32efb8e7b714dc8b88fbe8f82b2397
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
