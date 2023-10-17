@@ -1,7 +1,7 @@
 var searchData=
 [
   ['keeppositiononinsert_0',['keepPositionOnInsert',['https://doc.qt.io/qt-5/qtextcursor.html#keepPositionOnInsert',1,'QTextCursor']]],
-  ['keepselection_1',['keepSelection',['../class_select_tool.html#ab6b34b617c3d68ac020c4d5b6195823b',1,'SelectTool']]],
+  ['keepselection_1',['keepSelection',['../class_select_tool.html#a2064c7d379655bd22ec191cd560a6a3e',1,'SelectTool']]],
   ['kerneltype_2',['kernelType',['https://doc.qt.io/qt-5/qsysinfo.html#kernelType',1,'QSysInfo']]],
   ['kernelversion_3',['kernelVersion',['https://doc.qt.io/qt-5/qsysinfo.html#kernelVersion',1,'QSysInfo']]],
   ['kerning_4',['kerning',['https://doc.qt.io/qt-5/qfont.html#kerning',1,'QFont']]],
