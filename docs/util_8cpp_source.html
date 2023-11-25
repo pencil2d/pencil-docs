@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;QApplication&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;QStandardPaths&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> clipInfiniteLineToEdge(qreal&amp; t0, qreal&amp; t1, qreal p, qreal q)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> clipLineToEdge(qreal&amp; t0, qreal&amp; t1, qreal p, qreal q)</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (p &lt; 0) { <span class="comment">// Line entering the clipping window</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        t0 = qMax(t0, q / p);</div>
@@ -155,14 +155,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qt.html#left">left</a> = clip.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#left">left</a>(), <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qt.html#right">right</a> = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qt.html#left">left</a> + clip.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#width">width</a>(), top = clip.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#top">top</a>(), bottom = top + clip.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#height">height</a>();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    qreal x1 = line.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#x1">x1</a>(), x2 = line.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#x2">x2</a>(), dx = line.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#dx">dx</a>(), y1 = line.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#y1">y1</a>(), y2 = line.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#y2">y2</a>(), dy = line.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#dy">dy</a>();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> (t0 == 0 &amp;&amp; t1 == 1 &amp;&amp; (x1 &lt; left &amp;&amp; x2 &lt; left ||</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                               x1 &gt; right &amp;&amp; x2 &gt; right ||</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                               y1 &lt; top &amp;&amp; y2 &lt; top ||</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                               y1 &gt; bottom &amp;&amp; y2 &gt; bottom) ||</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        !clipInfiniteLineToEdge(t0, t1, -dx, x1 - left) ||</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        !clipInfiniteLineToEdge(t0, t1,  dx, right - x1) ||</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        !clipInfiniteLineToEdge(t0, t1, -dy, y1 - top) ||</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        !clipInfiniteLineToEdge(t0, t1,  dy, bottom - y1)) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> ((t0 == 0 &amp;&amp; t1 == 1 &amp;&amp; ((x1 &lt; left &amp;&amp; x2 &lt; left) ||</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                (x1 &gt; right &amp;&amp; x2 &gt; right) ||</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                                (y1 &lt; top &amp;&amp; y2 &lt; top) ||</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                                (y1 &gt; bottom &amp;&amp; y2 &gt; bottom))) ||</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        !clipLineToEdge(t0, t1, -dx, x1 - left) ||</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        !clipLineToEdge(t0, t1,  dx, right - x1) ||</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        !clipLineToEdge(t0, t1, -dy, y1 - top) ||</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        !clipLineToEdge(t0, t1,  dy, bottom - y1)) {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
@@ -277,10 +277,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Nov 12 2023 13:02:51 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Nov 25 2023 12:59:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision f7dbcfdeeb3fe08abe05886e3d7efc5adc21df26
+   based on revision a7ab2a60adf4ec9e3f31aa35b9019b3544b5d506
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
