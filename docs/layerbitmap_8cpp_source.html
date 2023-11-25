@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;bitmapimage.h&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>LayerBitmap::LayerBitmap(<a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>) : <a class="code hl_class" href="class_layer.html">Layer</a>(object, <a class="code hl_class" href="class_layer.html">Layer</a>::BITMAP)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>LayerBitmap::LayerBitmap(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) : <a class="code hl_class" href="class_layer.html">Layer</a>(id, <a class="code hl_class" href="class_layer.html">Layer</a>::BITMAP)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    setName(tr(<span class="stringliteral">&quot;Bitmap Layer&quot;</span>));</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
@@ -217,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> Status::OK;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* LayerBitmap::createKeyFrame(<span class="keywordtype">int</span> position, <a class="code hl_class" href="class_object.html">Object</a>*)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* LayerBitmap::createKeyFrame(<span class="keywordtype">int</span> position)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* b = <span class="keyword">new</span> <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    b-&gt;setPos(position);</div>
@@ -345,8 +345,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00028">bitmapimage.h:29</a></div></div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
-<div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00037">layer.h:38</a></div></div>
-<div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00041">object.h:42</a></div></div>
+<div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00036">layer.h:37</a></div></div>
 <div class="ttc" id="aclass_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00039">pencilerror.h:40</a></div></div>
 <div class="ttc" id="aqdir_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html">QDir</a></div></div>
 <div class="ttc" id="aqdir_html_filePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#filePath">QDir::filePath</a></div><div class="ttdeci">QString filePath(const QString &amp;fileName) const const</div></div>
@@ -386,10 +385,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Nov 25 2023 12:59:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Nov 25 2023 13:00:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision a7ab2a60adf4ec9e3f31aa35b9019b3544b5d506
+   based on revision 18c5494f61f228a0f7b8820420627d4ac76231a8
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
