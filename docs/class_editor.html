@@ -262,8 +262,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3bd8bb6c3db1d0822d318cd830afbdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a868402f9fab31f045fc429c60d838cd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a868402f9fab31f045fc429c60d838cd7">importImage</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;filePath)</td></tr>
 <tr class="separator:a868402f9fab31f045fc429c60d838cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a900fc0027607605f6013d728a1eae28a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a900fc0027607605f6013d728a1eae28a">importGIF</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;filePath, int numOfImages=0)</td></tr>
-<tr class="separator:a900fc0027607605f6013d728a1eae28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a83b8b884a04fd31c06820b663188ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a3a83b8b884a04fd31c06820b663188ca">importAnimatedImage</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;filePath, int frameSpacing, const std::function&lt; void(int)&gt; &amp;progressChanged, const std::function&lt; bool()&gt; &amp;wasCanceled)</td></tr>
+<tr class="separator:a3a83b8b884a04fd31c06820b663188ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a352121d4b71e82f9769537ad2844fbdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a352121d4b71e82f9769537ad2844fbdb">restoreKey</a> ()</td></tr>
 <tr class="separator:a352121d4b71e82f9769537ad2844fbdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc47adc1f851e5574cfa627fb3a9ae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a8bc47adc1f851e5574cfa627fb3a9ae3">scrubNextKeyFrame</a> ()</td></tr>
@@ -573,8 +573,8 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:af0bfb690a2e7c633cc0b8832c1561647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#af0bfb690a2e7c633cc0b8832c1561647">importBitmapImage</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;, int space=0)</td></tr>
-<tr class="separator:af0bfb690a2e7c633cc0b8832c1561647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31025160dfc6fbb8358818bb3019928"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#aa31025160dfc6fbb8358818bb3019928">importBitmapImage</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;)</td></tr>
+<tr class="separator:aa31025160dfc6fbb8358818bb3019928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a2275b8a55380cb4b94721c26ff2c59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a9a2275b8a55380cb4b94721c26ff2c59">importVectorImage</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;)</td></tr>
 <tr class="separator:a9a2275b8a55380cb4b94721c26ff2c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b44115d520ec4c4f56c9d0e9dd39e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor.html#a73b44115d520ec4c4f56c9d0e9dd39e1">pasteToCanvas</a> (<a class="el" href="class_bitmap_image.html">BitmapImage</a> *bitmapImage, int frameNumber)</td></tr>
@@ -802,7 +802,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01171">1171</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01214">1214</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -821,7 +821,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01166">1166</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01209">1209</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +943,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01295">1295</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01338">1338</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -971,7 +971,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01331">1331</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01374">1374</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -999,7 +999,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01325">1325</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01368">1368</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1027,7 +1027,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01336">1336</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01379">1379</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1046,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01314">1314</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01357">1357</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1076,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01277">1277</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01320">1320</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1095,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01290">1290</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01333">1333</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1355,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01090">1090</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01133">1133</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1453,8 +1453,50 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 </div>
 </div>
-<a id="af0bfb690a2e7c633cc0b8832c1561647" name="af0bfb690a2e7c633cc0b8832c1561647"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0bfb690a2e7c633cc0b8832c1561647">&#9670;&#160;</a></span>importBitmapImage()</h2>
+<a id="a3a83b8b884a04fd31c06820b663188ca" name="a3a83b8b884a04fd31c06820b663188ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a83b8b884a04fd31c06820b663188ca">&#9670;&#160;</a></span>importAnimatedImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_status.html">Status</a> Editor::importAnimatedImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frameSpacing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(int)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>progressChanged</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; bool()&gt; &amp;&#160;</td>
+          <td class="paramname"><em>wasCanceled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01035">1035</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa31025160dfc6fbb8358818bb3019928" name="aa31025160dfc6fbb8358818bb3019928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31025160dfc6fbb8358818bb3019928">&#9670;&#160;</a></span>importBitmapImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1466,18 +1508,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
           <td class="memname"><a class="el" href="class_status.html">Status</a> Editor::importBitmapImage </td>
           <td>(</td>
           <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>space</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1488,36 +1520,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l00917">917</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a900fc0027607605f6013d728a1eae28a" name="a900fc0027607605f6013d728a1eae28a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a900fc0027607605f6013d728a1eae28a">&#9670;&#160;</a></span>importGIF()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_status.html">Status</a> Editor::importGIF </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;&#160;</td>
-          <td class="paramname"><em>filePath</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numOfImages</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01051">1051</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1537,7 +1539,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01023">1023</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01007">1007</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1565,7 +1567,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l00989">989</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l00973">973</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2000,7 +2002,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01282">1282</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01325">1325</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2038,7 +2040,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01207">1207</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01250">1250</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2155,7 +2157,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01154">1154</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01197">1197</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2174,7 +2176,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01145">1145</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01188">1188</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2193,7 +2195,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01232">1232</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01275">1275</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2212,7 +2214,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01242">1242</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01285">1285</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2232,7 +2234,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01128">1128</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01171">1171</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2278,7 +2280,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01064">1064</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01107">1107</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2298,7 +2300,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01117">1117</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01160">1160</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2495,7 +2497,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01260">1260</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01303">1303</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2515,7 +2517,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01251">1251</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01294">1294</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2609,7 +2611,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Will call update() and update the canvas Only call this directly If you need the cache to be intact and require the frame to be repainted. </p>
 
-<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01112">1112</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_8cpp_source.html#l01155">1155</a> of file <a class="el" href="editor_8cpp_source.html">editor.cpp</a>.</p>
 
 </div>
 </div>
@@ -3490,10 +3492,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Dec 10 2023 13:57:06 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Dec 12 2023 06:42:27 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 363dcd79c6d772abb126b9df22a5369910c21ffb
+   based on revision 3c9a7a4d4f7072ec577ff10e59b58bd882a5d209
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

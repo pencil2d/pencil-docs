@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QtMath&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>DoubleProgressDialog::DoubleProgressDialog(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent) :</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a>(parent),</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qprogressdialog.html">QProgressDialog</a>(parent),</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ui(new Ui::<a class="code hl_class" href="class_double_progress_dialog.html">DoubleProgressDialog</a>)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ui-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setupUi">setupUi</a>(<span class="keyword">this</span>);</div>
@@ -147,7 +147,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    major = <span class="keyword">new</span> ProgressBarControl(ui-&gt;majorProgressBar);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    minor = <span class="keyword">new</span> ProgressBarControl(ui-&gt;minorProgressBar);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    connect(ui-&gt;cancelButton, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractbutton.html#pressed">QPushButton::pressed</a>, <span class="keyword">this</span>, &amp;DoubleProgressDialog::canceled);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    setCancelButton(ui-&gt;cancelButton);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>DoubleProgressDialog::~DoubleProgressDialog()</div>
@@ -169,23 +169,23 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    bar = b;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> DoubleProgressDialog::ProgressBarControl::setMin(<span class="keywordtype">float</span> minimum)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> DoubleProgressDialog::ProgressBarControl::setMin(<span class="keywordtype">float</span> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#minimum-prop">minimum</a>)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    min = minimum;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    min = <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#minimum-prop">minimum</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span>(max &lt; min) setMax(min);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    bar-&gt;setMinimum(convertUnits(min));</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> DoubleProgressDialog::ProgressBarControl::setMax(<span class="keywordtype">float</span> maximum)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> DoubleProgressDialog::ProgressBarControl::setMax(<span class="keywordtype">float</span> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#maximum-prop">maximum</a>)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    max = maximum;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    max = <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#maximum-prop">maximum</a>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span>(min &gt; max) setMin(max);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    bar-&gt;setMaximum(convertUnits(max));</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> DoubleProgressDialog::ProgressBarControl::setValue(<span class="keywordtype">float</span> value)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> DoubleProgressDialog::ProgressBarControl::setValue(<span class="keywordtype">float</span> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#value-prop">value</a>)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    val = qBound(min, value, max);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    val = qBound(min, <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#value-prop">value</a>, max);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    bar-&gt;setValue(convertUnits(val));</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
@@ -204,14 +204,16 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    val *= unitFactor / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(oldFactor);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">int</span> DoubleProgressDialog::ProgressBarControl::convertUnits(<span class="keywordtype">float</span> value)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">int</span> DoubleProgressDialog::ProgressBarControl::convertUnits(<span class="keywordtype">float</span> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#value-prop">value</a>)</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>{</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> qRound(value * unitFactor);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> qRound(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qprogressdialog.html#value-prop">value</a> * unitFactor);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
 <div class="ttc" id="aclass_double_progress_dialog_html"><div class="ttname"><a href="class_double_progress_dialog.html">DoubleProgressDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="doubleprogressdialog_8h_source.html#l00028">doubleprogressdialog.h:29</a></div></div>
-<div class="ttc" id="aqabstractbutton_html_pressed"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractbutton.html#pressed">QAbstractButton::pressed</a></div><div class="ttdeci">void pressed()</div></div>
-<div class="ttc" id="aqdialog_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a></div></div>
 <div class="ttc" id="aqprogressbar_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprogressbar.html">QProgressBar</a></div></div>
+<div class="ttc" id="aqprogressdialog_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprogressdialog.html">QProgressDialog</a></div></div>
+<div class="ttc" id="aqprogressdialog_html_maximum-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprogressdialog.html#maximum-prop">QProgressDialog::maximum</a></div><div class="ttdeci">maximum</div></div>
+<div class="ttc" id="aqprogressdialog_html_minimum-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprogressdialog.html#minimum-prop">QProgressDialog::minimum</a></div><div class="ttdeci">minimum</div></div>
+<div class="ttc" id="aqprogressdialog_html_value-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qprogressdialog.html#value-prop">QProgressDialog::value</a></div><div class="ttdeci">value</div></div>
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
 <div class="ttc" id="aqwidget_html_setupUi"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#setupUi">QWidget::setupUi</a></div><div class="ttdeci">void setupUi(QWidget *widget)</div></div>
@@ -221,10 +223,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Dec 10 2023 13:57:05 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Dec 12 2023 06:42:27 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 363dcd79c6d772abb126b9df22a5369910c21ffb
+   based on revision 3c9a7a4d4f7072ec577ff10e59b58bd882a5d209
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
