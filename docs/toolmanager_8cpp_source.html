@@ -530,12 +530,15 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span><span class="keywordtype">void</span> ToolManager::clearTemporaryTool()</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>{</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    mTemporaryTool = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    mTemporaryTriggerKeys = {};</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    mTemporaryTriggerModifiers = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::NoModifier</a>;</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    mTemporaryTriggerMouseButtons = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::NoButton</a>;</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    emit toolChanged(currentTool()-&gt;type());</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>}</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    <span class="keywordflow">if</span> (mTemporaryTool) {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        mTemporaryTool-&gt;leavingThisTool();</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        mTemporaryTool = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    }</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    mTemporaryTriggerKeys = {};</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    mTemporaryTriggerModifiers = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::NoModifier</a>;</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    mTemporaryTriggerMouseButtons = <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::NoButton</a>;</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    emit toolChanged(currentTool()-&gt;type());</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>}</div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
 <div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00068">basetool.h:69</a></div></div>
 <div class="ttc" id="aclass_brush_tool_html"><div class="ttname"><a href="class_brush_tool.html">BrushTool</a></div><div class="ttdef"><b>Definition:</b> <a href="brushtool_8h_source.html#l00026">brushtool.h:27</a></div></div>
@@ -567,10 +570,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Dec 12 2023 06:42:27 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Jan 19 2024 20:54:05 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3c9a7a4d4f7072ec577ff10e59b58bd882a5d209
+   based on revision 4eb164396476eff449a74ff80aa6a2aca6cb7a31
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
