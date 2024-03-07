@@ -152,6 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a18aa74cbc809ae39cbab133e1b55a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a5a18aa74cbc809ae39cbab133e1b55a6">pointerMoveEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *) override</td></tr>
 <tr class="separator:a5a18aa74cbc809ae39cbab133e1b55a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f590d9cc9f2de1dcd9f43cc6667b4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">leavingThisTool</a> () override</td></tr>
+<tr class="memdesc:aa5f590d9cc9f2de1dcd9f43cc6667b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will clean up <code>active</code> connections.  <br /></td></tr>
 <tr class="separator:aa5f590d9cc9f2de1dcd9f43cc6667b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad7376f4b191c78577c70bc16a02bc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a1ad7376f4b191c78577c70bc16a02bc6">resetToDefault</a> () override</td></tr>
 <tr class="separator:a1ad7376f4b191c78577c70bc16a02bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,8 +166,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e38868688c01d68fd29d19401c18f78 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a id="a8e38868688c01d68fd29d19401c18f78" name="a8e38868688c01d68fd29d19401c18f78"></a>
 virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> ()=0</td></tr>
 <tr class="separator:a8e38868688c01d68fd29d19401c18f78 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a id="adfa6eee5e4aa0b27f569583d1e992323" name="adfa6eee5e4aa0b27f569583d1e992323"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings</b> ()=0</td></tr>
+<tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adfa6eee5e4aa0b27f569583d1e992323">loadSettings</a> ()=0</td></tr>
 <tr class="separator:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#abc15ea8b94b4138a7687bfd1a3d761a8">cursor</a> ()</td></tr>
 <tr class="separator:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,19 +182,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings<
 <tr class="separator:aeb281d75bb330be32df469f3e200e0b2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada20bbd8ba83acf1d3027dfeab7a7466 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ada20bbd8ba83acf1d3027dfeab7a7466">keyReleaseEvent</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *)</td></tr>
 <tr class="separator:ada20bbd8ba83acf1d3027dfeab7a7466 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0760f7c89fb75f91e1c1cf9342ac98f3 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0760f7c89fb75f91e1c1cf9342ac98f3">startAdjusting</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> modifiers, qreal argStep)</td></tr>
-<tr class="separator:a0760f7c89fb75f91e1c1cf9342ac98f3 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef966e67270576bddb85ff2f38d857a8 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#aef966e67270576bddb85ff2f38d857a8">stopAdjusting</a> ()</td></tr>
-<tr class="separator:aef966e67270576bddb85ff2f38d857a8 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782032feeda29de016b3af2ff1bbfbbb inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a782032feeda29de016b3af2ff1bbfbbb">adjustCursor</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> modifiers)</td></tr>
-<tr class="separator:a782032feeda29de016b3af2ff1bbfbbb inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a782243358ce1eeb4bad043367b59e7e6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a782243358ce1eeb4bad043367b59e7e6">clearToolData</a> ()</td></tr>
 <tr class="separator:a782243358ce1eeb4bad043367b59e7e6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad065ee68da73cc5fe2af2cb7ac400f04 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ad065ee68da73cc5fe2af2cb7ac400f04">resetToDefault</a> ()</td></tr>
 <tr class="separator:ad065ee68da73cc5fe2af2cb7ac400f04 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab119a5b829fa57e106e50171f77511d2 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ab119a5b829fa57e106e50171f77511d2">quickSizeCursor</a> (qreal scalingFac)</td></tr>
-<tr class="memdesc:ab119a5b829fa57e106e50171f77511d2 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing stroke size while adjusting  <br /></td></tr>
-<tr class="separator:ab119a5b829fa57e106e50171f77511d2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">isActive</a> ()</td></tr>
 <tr class="memdesc:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
 <tr class="separator:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,10 +231,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings<
 <tr class="separator:a91aac57f49fe13b1c75780f4c08ecb69 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e0ecfc88d4142b8b700dc85d186a72 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a04e0ecfc88d4142b8b700dc85d186a72">resetCameraPath</a> ()</td></tr>
 <tr class="separator:a04e0ecfc88d4142b8b700dc85d186a72 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2ce094d9614c3da524aaeccaa2870a inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5e2ce094d9614c3da524aaeccaa2870a">paint</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
-<tr class="separator:a5e2ce094d9614c3da524aaeccaa2870a inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0768bf26d0f1539e622cb2437bf82119 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0768bf26d0f1539e622cb2437bf82119">leavingThisTool</a> ()</td></tr>
-<tr class="separator:a0768bf26d0f1539e622cb2437bf82119 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9165e75a2c2dcfa3e877d776b782806c inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a9165e75a2c2dcfa3e877d776b782806c">paint</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:a9165e75a2c2dcfa3e877d776b782806c inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa7f072b858ca73cd6515b099830a44 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">leavingThisTool</a> ()</td></tr>
+<tr class="memdesc:a1fa7f072b858ca73cd6515b099830a44 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will clean up <code>active</code> connections.  <br /></td></tr>
+<tr class="separator:a1fa7f072b858ca73cd6515b099830a44 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">enteringThisTool</a> ()</td></tr>
+<tr class="memdesc:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup <code>active</code> connections here that should only emit while tool is active <code>leavingThisTool</code> will handle the cleanup of <code>active</code> connections.  <br /></td></tr>
+<tr class="separator:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60011570e57834fa08d5142aeb3f327 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ae60011570e57834fa08d5142aeb3f327">getCurrentPressPixel</a> () const</td></tr>
 <tr class="separator:ae60011570e57834fa08d5142aeb3f327 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a730c45752919251c4492344f1202f1f6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a730c45752919251c4492344f1202f1f6">getCurrentPressPoint</a> () const</td></tr>
@@ -514,11 +509,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActiveChanged</b> (
 <tr class="inherit_header pub_static_methods_class_base_tool"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_base_tool')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="class_base_tool.html">BaseTool</a></td></tr>
 <tr class="memitem:adb33b66e50cb1a7e6fe546b4c8a28ffe inherit pub_static_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">static <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adb33b66e50cb1a7e6fe546b4c8a28ffe">TypeName</a> (ToolType)</td></tr>
 <tr class="separator:adb33b66e50cb1a7e6fe546b4c8a28ffe inherit pub_static_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3255c19d934bad5922b957bd1326dce3 inherit pub_static_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">static <a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3255c19d934bad5922b957bd1326dce3">canvasCursor</a> (float brushWidth, float brushFeather, bool useFeather, float scalingFac, int windowWidth)</td></tr>
-<tr class="memdesc:a3255c19d934bad5922b957bd1326dce3 inherit pub_static_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing a cursor within scribble area.  <br /></td></tr>
-<tr class="separator:a3255c19d934bad5922b957bd1326dce3 inherit pub_static_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac351cf40e309e2739425094caf68c03 inherit pub_static_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#aac351cf40e309e2739425094caf68c03">isAdjusting</a> ()</td></tr>
-<tr class="separator:aac351cf40e309e2739425094caf68c03 inherit pub_static_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_qobject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_qobject')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el"  href="https://doc.qt.io/qt-5/qobject.html">QObject</a></td></tr>
 <tr class="memitem:tr inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a id="tr" name="tr"></a>
 <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a> (const char *sourceText, const char *disambiguation, int n)</td></tr>
@@ -600,8 +590,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <tr class="separator:ab5dacc4a8c7db9f2bdcb03c3d1a8633d inherit pro_attribs_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53df17120211f0d55f6eb3f5b98b04ea inherit pro_attribs_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scribble_area.html">ScribbleArea</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a53df17120211f0d55f6eb3f5b98b04ea">mScribbleArea</a> = nullptr</td></tr>
 <tr class="separator:a53df17120211f0d55f6eb3f5b98b04ea inherit pro_attribs_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3059877f21baf7a7b3befffac4ce70d inherit pro_attribs_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qhash.html">QHash</a>&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>, ToolPropertyType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ac3059877f21baf7a7b3befffac4ce70d">mQuickSizingProperties</a></td></tr>
-<tr class="separator:ac3059877f21baf7a7b3befffac4ce70d inherit pro_attribs_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d786c0912024808bdc8e036d7b18bfa inherit pro_attribs_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qlist.html">QList</a>&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qmetaobject-connection.html">QMetaObject::Connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5d786c0912024808bdc8e036d7b18bfa">mActiveConnections</a></td></tr>
+<tr class="separator:a5d786c0912024808bdc8e036d7b18bfa inherit pro_attribs_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_qobject"><td colspan="2" onclick="javascript:toggleInherit('properties_qobject')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el"  href="https://doc.qt.io/qt-5/qobject.html">QObject</a></td></tr>
 <tr class="memitem:objectName-prop inherit properties_qobject"><td class="memItemLeft" align="right" valign="top"><a id="objectName-prop" name="objectName-prop"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="https://doc.qt.io/qt-5/qobject.html#objectName-prop">objectName</a></td></tr>
@@ -768,7 +758,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00343">343</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00345">345</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -817,7 +807,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00353">353</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00355">355</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -844,7 +834,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
+<p>Will clean up <code>active</code> connections. </p>
+
+<p>Reimplemented from <a class="el" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00320">320</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
@@ -994,7 +986,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00329">329</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00331">331</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1092,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00334">334</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00336">336</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1350,10 +1342,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Feb 25 2024 23:31:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Mar 7 2024 12:39:23 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ab2063f32e1c3e9b23b839033345c03b7acaf755
+   based on revision 758a1a1f99e03163e72386d2739cd6f437739724
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

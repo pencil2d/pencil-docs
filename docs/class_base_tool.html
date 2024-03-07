@@ -120,7 +120,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_base_tool-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BaseTool Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -133,20 +132,20 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
  <div class="center">
   <img src="class_base_tool.png" usemap="#BaseTool_map" alt=""/>
   <map id="BaseTool_map" name="BaseTool_map">
-<area target="_parent" href="https://doc.qt.io/qt-5/qobject.html" alt="QObject" shape="rect" coords="339,0,442,24"/>
+<area target="_parent" href="https://doc.qt.io/qt-5/qobject.html" alt="QObject" shape="rect" coords="282,0,385,24"/>
 <area href="class_camera_tool.html" alt="CameraTool" shape="rect" coords="0,112,103,136"/>
 <area href="class_eyedropper_tool.html" alt="EyedropperTool" shape="rect" coords="113,112,216,136"/>
 <area href="class_hand_tool.html" alt="HandTool" shape="rect" coords="226,112,329,136"/>
 <area href="class_move_tool.html" alt="MoveTool" shape="rect" coords="339,112,442,136"/>
-<area href="class_polyline_tool.html" alt="PolylineTool" shape="rect" coords="452,112,555,136"/>
-<area href="class_select_tool.html" alt="SelectTool" shape="rect" coords="565,112,668,136"/>
-<area href="class_stroke_tool.html" alt="StrokeTool" shape="rect" coords="678,112,781,136"/>
-<area href="class_brush_tool.html" alt="BrushTool" shape="rect" coords="395,168,498,192"/>
-<area href="class_bucket_tool.html" alt="BucketTool" shape="rect" coords="508,168,611,192"/>
-<area href="class_eraser_tool.html" alt="EraserTool" shape="rect" coords="621,168,724,192"/>
-<area href="class_pen_tool.html" alt="PenTool" shape="rect" coords="734,168,837,192"/>
-<area href="class_pencil_tool.html" alt="PencilTool" shape="rect" coords="847,168,950,192"/>
-<area href="class_smudge_tool.html" alt="SmudgeTool" shape="rect" coords="960,168,1063,192"/>
+<area href="class_select_tool.html" alt="SelectTool" shape="rect" coords="452,112,555,136"/>
+<area href="class_stroke_tool.html" alt="StrokeTool" shape="rect" coords="565,112,668,136"/>
+<area href="class_brush_tool.html" alt="BrushTool" shape="rect" coords="226,168,329,192"/>
+<area href="class_bucket_tool.html" alt="BucketTool" shape="rect" coords="339,168,442,192"/>
+<area href="class_eraser_tool.html" alt="EraserTool" shape="rect" coords="452,168,555,192"/>
+<area href="class_pen_tool.html" alt="PenTool" shape="rect" coords="565,168,668,192"/>
+<area href="class_pencil_tool.html" alt="PencilTool" shape="rect" coords="678,168,781,192"/>
+<area href="class_polyline_tool.html" alt="PolylineTool" shape="rect" coords="791,168,894,192"/>
+<area href="class_smudge_tool.html" alt="SmudgeTool" shape="rect" coords="904,168,1007,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -165,8 +164,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e38868688c01d68fd29d19401c18f78"><td class="memItemLeft" align="right" valign="top"><a id="a8e38868688c01d68fd29d19401c18f78" name="a8e38868688c01d68fd29d19401c18f78"></a>
 virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> ()=0</td></tr>
 <tr class="separator:a8e38868688c01d68fd29d19401c18f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323"><td class="memItemLeft" align="right" valign="top"><a id="adfa6eee5e4aa0b27f569583d1e992323" name="adfa6eee5e4aa0b27f569583d1e992323"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings</b> ()=0</td></tr>
+<tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adfa6eee5e4aa0b27f569583d1e992323">loadSettings</a> ()=0</td></tr>
 <tr class="separator:adfa6eee5e4aa0b27f569583d1e992323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc15ea8b94b4138a7687bfd1a3d761a8"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#abc15ea8b94b4138a7687bfd1a3d761a8">cursor</a> ()</td></tr>
 <tr class="separator:abc15ea8b94b4138a7687bfd1a3d761a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,19 +180,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings<
 <tr class="separator:aeb281d75bb330be32df469f3e200e0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada20bbd8ba83acf1d3027dfeab7a7466"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ada20bbd8ba83acf1d3027dfeab7a7466">keyReleaseEvent</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *)</td></tr>
 <tr class="separator:ada20bbd8ba83acf1d3027dfeab7a7466"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0760f7c89fb75f91e1c1cf9342ac98f3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0760f7c89fb75f91e1c1cf9342ac98f3">startAdjusting</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> modifiers, qreal argStep)</td></tr>
-<tr class="separator:a0760f7c89fb75f91e1c1cf9342ac98f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef966e67270576bddb85ff2f38d857a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#aef966e67270576bddb85ff2f38d857a8">stopAdjusting</a> ()</td></tr>
-<tr class="separator:aef966e67270576bddb85ff2f38d857a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782032feeda29de016b3af2ff1bbfbbb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a782032feeda29de016b3af2ff1bbfbbb">adjustCursor</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> modifiers)</td></tr>
-<tr class="separator:a782032feeda29de016b3af2ff1bbfbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a782243358ce1eeb4bad043367b59e7e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a782243358ce1eeb4bad043367b59e7e6">clearToolData</a> ()</td></tr>
 <tr class="separator:a782243358ce1eeb4bad043367b59e7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad065ee68da73cc5fe2af2cb7ac400f04"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ad065ee68da73cc5fe2af2cb7ac400f04">resetToDefault</a> ()</td></tr>
 <tr class="separator:ad065ee68da73cc5fe2af2cb7ac400f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab119a5b829fa57e106e50171f77511d2"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ab119a5b829fa57e106e50171f77511d2">quickSizeCursor</a> (qreal scalingFac)</td></tr>
-<tr class="memdesc:ab119a5b829fa57e106e50171f77511d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing stroke size while adjusting  <br /></td></tr>
-<tr class="separator:ab119a5b829fa57e106e50171f77511d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c282b9467d8fb36feb9feeef9604ca6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">isActive</a> ()</td></tr>
 <tr class="memdesc:a4c282b9467d8fb36feb9feeef9604ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
 <tr class="separator:a4c282b9467d8fb36feb9feeef9604ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,10 +229,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings<
 <tr class="separator:a91aac57f49fe13b1c75780f4c08ecb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e0ecfc88d4142b8b700dc85d186a72"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a04e0ecfc88d4142b8b700dc85d186a72">resetCameraPath</a> ()</td></tr>
 <tr class="separator:a04e0ecfc88d4142b8b700dc85d186a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2ce094d9614c3da524aaeccaa2870a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5e2ce094d9614c3da524aaeccaa2870a">paint</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter)</td></tr>
-<tr class="separator:a5e2ce094d9614c3da524aaeccaa2870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0768bf26d0f1539e622cb2437bf82119"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0768bf26d0f1539e622cb2437bf82119">leavingThisTool</a> ()</td></tr>
-<tr class="separator:a0768bf26d0f1539e622cb2437bf82119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9165e75a2c2dcfa3e877d776b782806c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a9165e75a2c2dcfa3e877d776b782806c">paint</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;painter, const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;blitRect)</td></tr>
+<tr class="separator:a9165e75a2c2dcfa3e877d776b782806c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa7f072b858ca73cd6515b099830a44"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">leavingThisTool</a> ()</td></tr>
+<tr class="memdesc:a1fa7f072b858ca73cd6515b099830a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will clean up <code>active</code> connections.  <br /></td></tr>
+<tr class="separator:a1fa7f072b858ca73cd6515b099830a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5577b89e6555c3336c57a61922de83c2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">enteringThisTool</a> ()</td></tr>
+<tr class="memdesc:a5577b89e6555c3336c57a61922de83c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup <code>active</code> connections here that should only emit while tool is active <code>leavingThisTool</code> will handle the cleanup of <code>active</code> connections.  <br /></td></tr>
+<tr class="separator:a5577b89e6555c3336c57a61922de83c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60011570e57834fa08d5142aeb3f327"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ae60011570e57834fa08d5142aeb3f327">getCurrentPressPixel</a> () const</td></tr>
 <tr class="separator:ae60011570e57834fa08d5142aeb3f327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a730c45752919251c4492344f1202f1f6"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a730c45752919251c4492344f1202f1f6">getCurrentPressPoint</a> () const</td></tr>
@@ -473,11 +466,6 @@ T&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="http
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adb33b66e50cb1a7e6fe546b4c8a28ffe"><td class="memItemLeft" align="right" valign="top">static <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adb33b66e50cb1a7e6fe546b4c8a28ffe">TypeName</a> (ToolType)</td></tr>
 <tr class="separator:adb33b66e50cb1a7e6fe546b4c8a28ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3255c19d934bad5922b957bd1326dce3"><td class="memItemLeft" align="right" valign="top">static <a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3255c19d934bad5922b957bd1326dce3">canvasCursor</a> (float brushWidth, float brushFeather, bool useFeather, float scalingFac, int windowWidth)</td></tr>
-<tr class="memdesc:a3255c19d934bad5922b957bd1326dce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">precision circular cursor: used for drawing a cursor within scribble area.  <br /></td></tr>
-<tr class="separator:a3255c19d934bad5922b957bd1326dce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac351cf40e309e2739425094caf68c03"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#aac351cf40e309e2739425094caf68c03">isAdjusting</a> ()</td></tr>
-<tr class="separator:aac351cf40e309e2739425094caf68c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_qobject"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_qobject')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el"  href="https://doc.qt.io/qt-5/qobject.html">QObject</a></td></tr>
 <tr class="memitem:tr inherit pub_static_methods_qobject"><td class="memItemLeft" align="right" valign="top"><a id="tr" name="tr"></a>
 <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a> (const char *sourceText, const char *disambiguation, int n)</td></tr>
@@ -565,22 +553,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ab5dacc4a8c7db9f2bdcb03c3d1a8633d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53df17120211f0d55f6eb3f5b98b04ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scribble_area.html">ScribbleArea</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a53df17120211f0d55f6eb3f5b98b04ea">mScribbleArea</a> = nullptr</td></tr>
 <tr class="separator:a53df17120211f0d55f6eb3f5b98b04ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3059877f21baf7a7b3befffac4ce70d"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qhash.html">QHash</a>&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>, ToolPropertyType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ac3059877f21baf7a7b3befffac4ce70d">mQuickSizingProperties</a></td></tr>
-<tr class="separator:ac3059877f21baf7a7b3befffac4ce70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d786c0912024808bdc8e036d7b18bfa"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qlist.html">QList</a>&lt; <a class="elRef" href="https://doc.qt.io/qt-5/qmetaobject-connection.html">QMetaObject::Connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5d786c0912024808bdc8e036d7b18bfa">mActiveConnections</a></td></tr>
+<tr class="separator:a5d786c0912024808bdc8e036d7b18bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:afffda677f54151b82b93c627f711b370"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stroke_manager.html">StrokeManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#afffda677f54151b82b93c627f711b370">mStrokeManager</a> = nullptr</td></tr>
 <tr class="separator:afffda677f54151b82b93c627f711b370"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2da42773c1225a995abc83db37919d3"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ac2da42773c1225a995abc83db37919d3">mAdjustmentStep</a> = 0.0f</td></tr>
-<tr class="separator:ac2da42773c1225a995abc83db37919d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a241a1e6f175491dba97967a788db90bd"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a241a1e6f175491dba97967a788db90bd">msIsAdjusting</a> = false</td></tr>
-<tr class="separator:a241a1e6f175491dba97967a788db90bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a934a2610df51dcdfbc738af72d535980"><td class="memItemLeft" align="right" valign="top">static qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a934a2610df51dcdfbc738af72d535980">msOriginalPropertyValue</a></td></tr>
-<tr class="separator:a934a2610df51dcdfbc738af72d535980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -591,7 +570,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00068">68</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00069">69</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5b1628883b15a523900cfd1c9b308c4b" name="a5b1628883b15a523900cfd1c9b308c4b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b1628883b15a523900cfd1c9b308c4b">&#9670;&#160;</a></span>BaseTool()</h2>
@@ -617,98 +596,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00056">56</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00048">48</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a782032feeda29de016b3af2ff1bbfbbb" name="a782032feeda29de016b3af2ff1bbfbbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a782032feeda29de016b3af2ff1bbfbbb">&#9670;&#160;</a></span>adjustCursor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BaseTool::adjustCursor </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>&#160;</td>
-          <td class="paramname"><em>modifiers</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00287">287</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a3255c19d934bad5922b957bd1326dce3" name="a3255c19d934bad5922b957bd1326dce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3255c19d934bad5922b957bd1326dce3">&#9670;&#160;</a></span>canvasCursor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> BaseTool::canvasCursor </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>feather</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFeather</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>scalingFac</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>windowWidth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>precision circular cursor: used for drawing a cursor within scribble area. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00125">125</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
-
-</div>
-</div>
 <a id="a782243358ce1eeb4bad043367b59e7e6" name="a782243358ce1eeb4bad043367b59e7e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a782243358ce1eeb4bad043367b59e7e6">&#9670;&#160;</a></span>clearToolData()</h2>
 
@@ -732,7 +624,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00098">98</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00094">94</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -759,7 +651,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00071">71</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00063">63</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -786,7 +678,38 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00159">159</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00156">156</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+
+</div>
+</div>
+<a id="a5577b89e6555c3336c57a61922de83c2" name="a5577b89e6555c3336c57a61922de83c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5577b89e6555c3336c57a61922de83c2">&#9670;&#160;</a></span>enteringThisTool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool BaseTool::enteringThisTool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup <code>active</code> connections here that should only emit while tool is active <code>leavingThisTool</code> will handle the cleanup of <code>active</code> connections. </p>
+
+<p>Reimplemented in <a class="el" href="class_stroke_tool.html#a332add55697041088ff14ce06ce3cd5e">StrokeTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00135">135</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -805,7 +728,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00332">332</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00137">137</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +747,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00337">337</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00142">142</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -843,7 +766,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00322">322</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00127">127</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +785,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00327">327</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00132">132</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +804,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00342">342</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00147">147</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -900,7 +823,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00347">347</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00152">152</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -919,7 +842,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00352">352</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00157">157</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -938,7 +861,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00357">357</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00162">162</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -958,7 +881,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00076">76</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00077">77</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -991,34 +914,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_hand_tool.html#a74f48dc141ef29686edf79f80bd01ddc">HandTool</a>, and <a class="el" href="class_polyline_tool.html#ad58ef25c9d93a1b6e8067fa56d82d0fd">PolylineTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00204">204</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aac351cf40e309e2739425094caf68c03" name="aac351cf40e309e2739425094caf68c03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac351cf40e309e2739425094caf68c03">&#9670;&#160;</a></span>isAdjusting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool BaseTool::isAdjusting </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00103">103</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00122">122</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +936,7 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="el" href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637" title="BaseTool::isDrawingTool - A drawing tool is anything that applies something to the canvas.">BaseTool::isDrawingTool</a> - A drawing tool is anything that applies something to the canvas. </p>
 <p>SELECT and MOVE does not count here because they modify already applied content. </p><dl class="section return"><dt>Returns</dt><dd>true if not a drawing tool and false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00112">112</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00113">113</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +964,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00151">151</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00148">148</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +992,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00090">90</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00091">91</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -1124,12 +1020,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00091">91</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00092">92</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
-<a id="a0768bf26d0f1539e622cb2437bf82119" name="a0768bf26d0f1539e622cb2437bf82119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0768bf26d0f1539e622cb2437bf82119">&#9670;&#160;</a></span>leavingThisTool()</h2>
+<a id="a1fa7f072b858ca73cd6515b099830a44" name="a1fa7f072b858ca73cd6515b099830a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa7f072b858ca73cd6515b099830a44">&#9670;&#160;</a></span>leavingThisTool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1138,7 +1034,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool BaseTool::leavingThisTool </td>
+          <td class="memname">bool BaseTool::leavingThisTool </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1146,17 +1042,48 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00138">138</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p>Will clean up <code>active</code> connections. </p>
+
+<p>Reimplemented in <a class="el" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool</a>, <a class="el" href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">PolylineTool</a>, and <a class="el" href="class_stroke_tool.html#a250428011793f1f73abd4d60300df388">StrokeTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00068">68</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a5e2ce094d9614c3da524aaeccaa2870a" name="a5e2ce094d9614c3da524aaeccaa2870a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e2ce094d9614c3da524aaeccaa2870a">&#9670;&#160;</a></span>paint()</h2>
+<a id="adfa6eee5e4aa0b27f569583d1e992323" name="adfa6eee5e4aa0b27f569583d1e992323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa6eee5e4aa0b27f569583d1e992323">&#9670;&#160;</a></span>loadSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void BaseTool::loadSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_stroke_tool.html#a92dfe291f09be113ced6b7a4395bd4dc">StrokeTool</a>.</p>
+
+</div>
+</div>
+<a id="a9165e75a2c2dcfa3e877d776b782806c" name="a9165e75a2c2dcfa3e877d776b782806c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9165e75a2c2dcfa3e877d776b782806c">&#9670;&#160;</a></span>paint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1168,8 +1095,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">virtual void BaseTool::paint </td>
           <td>(</td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> &amp;&#160;</td>
-          <td class="paramname"><em>painter</em></td><td>)</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> &amp;&#160;</td>
+          <td class="paramname"><em>blitRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1179,7 +1116,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00136">136</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00128">128</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -1207,7 +1144,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00102">102</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00103">103</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1172,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00092">92</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00093">93</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1200,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00087">87</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00088">88</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1291,30 +1228,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00097">97</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ab119a5b829fa57e106e50171f77511d2" name="ab119a5b829fa57e106e50171f77511d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab119a5b829fa57e106e50171f77511d2">&#9670;&#160;</a></span>quickSizeCursor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> BaseTool::quickSizeCursor </td>
-          <td>(</td>
-          <td class="paramtype">qreal&#160;</td>
-          <td class="paramname"><em>scalingFac</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>precision circular cursor: used for drawing stroke size while adjusting </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="elRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00213">213</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00098">98</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1255,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00462">462</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00267">267</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1368,7 +1282,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00099">99</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00095">95</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -1396,7 +1310,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00402">402</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00207">207</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1424,7 +1338,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00382">382</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00187">187</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1366,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00367">367</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00172">172</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1480,7 +1394,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00427">427</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00232">232</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1422,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00437">437</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00242">242</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1536,7 +1450,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00407">407</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00212">212</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1564,7 +1478,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00432">432</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00237">237</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1592,7 +1506,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00377">377</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00182">182</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1620,7 +1534,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00457">457</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00262">262</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1648,7 +1562,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00392">392</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00197">197</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1676,7 +1590,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00387">387</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00192">192</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1704,7 +1618,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00452">452</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00257">257</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1732,7 +1646,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00447">447</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00252">252</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1760,7 +1674,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00412">412</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00217">217</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1788,7 +1702,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00417">417</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00222">222</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1816,7 +1730,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00422">422</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00227">227</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1844,7 +1758,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00372">372</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00177">177</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1872,7 +1786,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00442">442</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00247">247</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1900,7 +1814,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00397">397</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00202">202</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1930,72 +1844,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_bucket_tool.html#a73dd15022326729eb46ccec330e57406">BucketTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00362">362</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a0760f7c89fb75f91e1c1cf9342ac98f3" name="a0760f7c89fb75f91e1c1cf9342ac98f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0760f7c89fb75f91e1c1cf9342ac98f3">&#9670;&#160;</a></span>startAdjusting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool BaseTool::startAdjusting </td>
-          <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>&#160;</td>
-          <td class="paramname"><em>modifiers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">qreal&#160;</td>
-          <td class="paramname"><em>argStep</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00251">251</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
-
-</div>
-</div>
-<a id="aef966e67270576bddb85ff2f38d857a8" name="aef966e67270576bddb85ff2f38d857a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef966e67270576bddb85ff2f38d857a8">&#9670;&#160;</a></span>stopAdjusting()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BaseTool::stopAdjusting </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00279">279</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00167">167</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -2022,7 +1871,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00158">158</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00155">155</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2049,7 +1898,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00076">76</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00077">77</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2077,13 +1926,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00035">35</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8cpp_source.html#l00027">27</a> of file <a class="el" href="basetool_8cpp_source.html">basetool.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac2da42773c1225a995abc83db37919d3" name="ac2da42773c1225a995abc83db37919d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2da42773c1225a995abc83db37919d3">&#9670;&#160;</a></span>mAdjustmentStep</h2>
+<a id="a5d786c0912024808bdc8e036d7b18bfa" name="a5d786c0912024808bdc8e036d7b18bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d786c0912024808bdc8e036d7b18bfa">&#9670;&#160;</a></span>mActiveConnections</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2092,17 +1941,17 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">qreal BaseTool::mAdjustmentStep = 0.0f</td>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qlist.html">QList</a>&lt;<a class="elRef" href="https://doc.qt.io/qt-5/qmetaobject-connection.html">QMetaObject::Connection</a>&gt; BaseTool::mActiveConnections</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00170">170</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00162">162</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2126,7 +1975,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00163">163</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00160">160</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2150,31 +1999,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00161">161</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
-
-</div>
-</div>
-<a id="ac3059877f21baf7a7b3befffac4ce70d" name="ac3059877f21baf7a7b3befffac4ce70d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3059877f21baf7a7b3befffac4ce70d">&#9670;&#160;</a></span>mQuickSizingProperties</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qhash.html">QHash</a>&lt;<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>, ToolPropertyType&gt; BaseTool::mQuickSizingProperties</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00166">166</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00158">158</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2198,55 +2023,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00164">164</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
-
-</div>
-</div>
-<a id="a241a1e6f175491dba97967a788db90bd" name="a241a1e6f175491dba97967a788db90bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a241a1e6f175491dba97967a788db90bd">&#9670;&#160;</a></span>msIsAdjusting</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool BaseTool::msIsAdjusting = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00172">172</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
-
-</div>
-</div>
-<a id="a934a2610df51dcdfbc738af72d535980" name="a934a2610df51dcdfbc738af72d535980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a934a2610df51dcdfbc738af72d535980">&#9670;&#160;</a></span>msOriginalPropertyValue</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">qreal BaseTool::msOriginalPropertyValue</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00173">173</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00161">161</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2270,7 +2047,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00169">169</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00165">165</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2286,7 +2063,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00140">140</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="basetool_8h_source.html#l00137">137</a> of file <a class="el" href="basetool_8h_source.html">basetool.h</a>.</p>
 
 </div>
 </div>
@@ -2300,10 +2077,10 @@ Additional Inherited Members</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Feb 25 2024 23:31:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Mar 7 2024 12:39:23 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ab2063f32e1c3e9b23b839033345c03b7acaf755
+   based on revision 758a1a1f99e03163e72386d2739cd6f437739724
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

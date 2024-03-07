@@ -128,9 +128,20 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> qAtan2(b.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() - a.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>(), b.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() - a.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>());</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">// MATHUTILS_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">inline</span> qreal map(qreal x, qreal inputMin, qreal inputMax, qreal outputMin, qreal outputMax)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        qreal slope = (outputMax - outputMin) / (inputMax - inputMin);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> outputMin + slope * (x - inputMin);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">inline</span> qreal normalize(qreal x, qreal min, qreal max)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> qAbs((x - max) / (min - max));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">// MATHUTILS_H</span></div>
 <div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="aqpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const const</div></div>
 <div class="ttc" id="aqpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const const</div></div>
@@ -140,10 +151,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Feb 25 2024 23:31:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Mar 7 2024 12:39:23 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ab2063f32e1c3e9b23b839033345c03b7acaf755
+   based on revision 758a1a1f99e03163e72386d2739cd6f437739724
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
