@@ -170,6 +170,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa7e569e3de81b2b7b3f955f05be17485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92dfe291f09be113ced6b7a4395bd4dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a92dfe291f09be113ced6b7a4395bd4dc">loadSettings</a> () override</td></tr>
 <tr class="separator:a92dfe291f09be113ced6b7a4395bd4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617934362e350417aba259efd87e07ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a617934362e350417aba259efd87e07ad">isActive</a> () const override</td></tr>
+<tr class="memdesc:a617934362e350417aba259efd87e07ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
+<tr class="separator:a617934362e350417aba259efd87e07ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35dc6f3ba521b1101fc5fecfe44fc800"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a35dc6f3ba521b1101fc5fecfe44fc800">keyPressEvent</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *event) override</td></tr>
 <tr class="separator:a35dc6f3ba521b1101fc5fecfe44fc800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee6ced4232c2a26be8a984d7d27d6f47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#aee6ced4232c2a26be8a984d7d27d6f47">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *event) override</td></tr>
@@ -212,9 +215,9 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="separator:a782243358ce1eeb4bad043367b59e7e6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad065ee68da73cc5fe2af2cb7ac400f04 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ad065ee68da73cc5fe2af2cb7ac400f04">resetToDefault</a> ()</td></tr>
 <tr class="separator:ad065ee68da73cc5fe2af2cb7ac400f04 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">isActive</a> ()</td></tr>
-<tr class="memdesc:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
-<tr class="separator:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0234f514f71278e171b7471caaec191b inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">isActive</a> () const</td></tr>
+<tr class="memdesc:a0234f514f71278e171b7471caaec191b inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
+<tr class="separator:a0234f514f71278e171b7471caaec191b inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41674db30a44ca3c446b6414913691ee inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a41674db30a44ca3c446b6414913691ee">setWidth</a> (const qreal width)</td></tr>
 <tr class="separator:a41674db30a44ca3c446b6414913691ee inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b2353c95ff5cc84340ef622d9a12415 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3b2353c95ff5cc84340ef622d9a12415">setFeather</a> (const qreal feather)</td></tr>
@@ -265,22 +268,6 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="memitem:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">enteringThisTool</a> ()</td></tr>
 <tr class="memdesc:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup <code>active</code> connections here that should only emit while tool is active <code>leavingThisTool</code> will handle the cleanup of <code>active</code> connections.  <br /></td></tr>
 <tr class="separator:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60011570e57834fa08d5142aeb3f327 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ae60011570e57834fa08d5142aeb3f327">getCurrentPressPixel</a> () const</td></tr>
-<tr class="separator:ae60011570e57834fa08d5142aeb3f327 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a730c45752919251c4492344f1202f1f6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a730c45752919251c4492344f1202f1f6">getCurrentPressPoint</a> () const</td></tr>
-<tr class="separator:a730c45752919251c4492344f1202f1f6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d71d1107128dab114511a69ada930d inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#af4d71d1107128dab114511a69ada930d">getCurrentPixel</a> () const</td></tr>
-<tr class="separator:af4d71d1107128dab114511a69ada930d inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f3d6d282b94cd4da0ccfd0a7a135845 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3f3d6d282b94cd4da0ccfd0a7a135845">getCurrentPoint</a> () const</td></tr>
-<tr class="separator:a3f3d6d282b94cd4da0ccfd0a7a135845 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37e5440d8e390eba10d36c53c5bf443e inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a37e5440d8e390eba10d36c53c5bf443e">getLastPixel</a> () const</td></tr>
-<tr class="separator:a37e5440d8e390eba10d36c53c5bf443e inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a721aed18250580dd5c2c4117e80f9818 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a721aed18250580dd5c2c4117e80f9818">getLastPoint</a> () const</td></tr>
-<tr class="separator:a721aed18250580dd5c2c4117e80f9818 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60bc005c821d78eacdde80d9739db603 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a60bc005c821d78eacdde80d9739db603">getLastPressPixel</a> () const</td></tr>
-<tr class="separator:a60bc005c821d78eacdde80d9739db603 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49bbfd599b7ec284804eb20042f943f2 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a49bbfd599b7ec284804eb20042f943f2">getLastPressPoint</a> () const</td></tr>
-<tr class="separator:a49bbfd599b7ec284804eb20042f943f2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5563687a6fba096faff70e5a68fd85bf inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5563687a6fba096faff70e5a68fd85bf">isPropertyEnabled</a> (ToolPropertyType t)</td></tr>
 <tr class="separator:a5563687a6fba096faff70e5a68fd85bf inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92dd16c12e6b7b5e14cd9cc08af4c637 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">isDrawingTool</a> ()</td></tr>
@@ -503,6 +490,18 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac30d34562a7a151add274a534393d660"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#ac30d34562a7a151add274a534393d660">getCurrentPressPixel</a> () const</td></tr>
+<tr class="separator:ac30d34562a7a151add274a534393d660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb166cdaa12480d6a581b63570fbd53"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a6bb166cdaa12480d6a581b63570fbd53">getCurrentPressPoint</a> () const</td></tr>
+<tr class="separator:a6bb166cdaa12480d6a581b63570fbd53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb417e23cf4537da98b4011bb59fe39f"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#abb417e23cf4537da98b4011bb59fe39f">getCurrentPixel</a> () const</td></tr>
+<tr class="separator:abb417e23cf4537da98b4011bb59fe39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995f5e0059c0fae6681887ade13aa38e"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a995f5e0059c0fae6681887ade13aa38e">getCurrentPoint</a> () const</td></tr>
+<tr class="separator:a995f5e0059c0fae6681887ade13aa38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5919c0c6ea5751eca8ff80b0089d9428"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a5919c0c6ea5751eca8ff80b0089d9428">getLastPixel</a> () const</td></tr>
+<tr class="separator:a5919c0c6ea5751eca8ff80b0089d9428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990160f942ee3305cb87c0be04e3e0b3"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a990160f942ee3305cb87c0be04e3e0b3">getLastPoint</a> () const</td></tr>
+<tr class="separator:a990160f942ee3305cb87c0be04e3e0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f96661a4a5bc9506d6ffa6d8af4914"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#aa1f96661a4a5bc9506d6ffa6d8af4914">startAdjusting</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> modifiers)</td></tr>
 <tr class="separator:aa1f96661a4a5bc9506d6ffa6d8af4914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84cb88ed6b008f96a876bf221f4c4789"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a84cb88ed6b008f96a876bf221f4c4789">stopAdjusting</a> ()</td></tr>
@@ -515,8 +514,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="inherit_header pro_methods_class_base_tool"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_base_tool')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_base_tool.html">BaseTool</a></td></tr>
 <tr class="memitem:a5b1628883b15a523900cfd1c9b308c4b inherit pro_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5b1628883b15a523900cfd1c9b308c4b">BaseTool</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a> *<a class="elRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>)</td></tr>
 <tr class="separator:a5b1628883b15a523900cfd1c9b308c4b inherit pro_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfceb0b20ee9298aeae6ef0376ac0fe4 inherit pro_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stroke_manager.html">StrokeManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#acfceb0b20ee9298aeae6ef0376ac0fe4">strokeManager</a> () const</td></tr>
-<tr class="separator:acfceb0b20ee9298aeae6ef0376ac0fe4 inherit pro_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfc4c70de9b9ebf5a50ad9edbea4f64 inherit pro_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_editor.html">Editor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#afcfc4c70de9b9ebf5a50ad9edbea4f64">editor</a> ()</td></tr>
 <tr class="separator:afcfc4c70de9b9ebf5a50ad9edbea4f64 inherit pro_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_qobject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_qobject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el"  href="https://doc.qt.io/qt-5/qobject.html">QObject</a></td></tr>
@@ -570,6 +567,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:accf27bf17db803c13fd48947cd80a7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf19871aaf06c64f385dba4fe98090fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_canvas_cursor_painter.html">CanvasCursorPainter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#abf19871aaf06c64f385dba4fe98090fa">mCanvasCursorPainter</a></td></tr>
 <tr class="separator:abf19871aaf06c64f385dba4fe98090fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116dd559105db09abb170d454cac02d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stroke_interpolator.html">StrokeInterpolator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stroke_tool.html#a116dd559105db09abb170d454cac02d9">mInterpolator</a></td></tr>
+<tr class="separator:a116dd559105db09abb170d454cac02d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_base_tool"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_base_tool')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_base_tool.html">BaseTool</a></td></tr>
 <tr class="memitem:a743705ea2c34cbf3159cc976e515117a inherit pro_attribs_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qhash.html">QHash</a>&lt; ToolPropertyType, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a743705ea2c34cbf3159cc976e515117a">mPropertyEnabled</a></td></tr>
 <tr class="separator:a743705ea2c34cbf3159cc976e515117a inherit pro_attribs_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -644,7 +643,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00031">31</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00032">32</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa1137e6b014378e4b963e1cad93519ad" name="aa1137e6b014378e4b963e1cad93519ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1137e6b014378e4b963e1cad93519ad">&#9670;&#160;</a></span>StrokeTool()</h2>
@@ -670,7 +669,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00054">54</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00053">53</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -699,7 +698,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00305">305</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00334">334</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +717,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00155">155</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00184">184</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -750,7 +749,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Reimplemented in <a class="el" href="class_smudge_tool.html#aee5890c75ad73904691f8921f5bbf748">SmudgeTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00137">137</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00166">166</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -769,7 +768,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00142">142</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00171">171</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -800,7 +799,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00069">69</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00068">68</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +829,169 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Reimplemented from <a class="elRef" href="https://doc.qt.io/qt-5/qobject.html#event">QObject</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00206">206</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00235">235</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb417e23cf4537da98b4011bb59fe39f" name="abb417e23cf4537da98b4011bb59fe39f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb417e23cf4537da98b4011bb59fe39f">&#9670;&#160;</a></span>getCurrentPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeTool::getCurrentPixel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00103">103</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a995f5e0059c0fae6681887ade13aa38e" name="a995f5e0059c0fae6681887ade13aa38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995f5e0059c0fae6681887ade13aa38e">&#9670;&#160;</a></span>getCurrentPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeTool::getCurrentPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00108">108</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac30d34562a7a151add274a534393d660" name="ac30d34562a7a151add274a534393d660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30d34562a7a151add274a534393d660">&#9670;&#160;</a></span>getCurrentPressPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeTool::getCurrentPressPixel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00093">93</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6bb166cdaa12480d6a581b63570fbd53" name="a6bb166cdaa12480d6a581b63570fbd53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb166cdaa12480d6a581b63570fbd53">&#9670;&#160;</a></span>getCurrentPressPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeTool::getCurrentPressPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00098">98</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5919c0c6ea5751eca8ff80b0089d9428" name="a5919c0c6ea5751eca8ff80b0089d9428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5919c0c6ea5751eca8ff80b0089d9428">&#9670;&#160;</a></span>getLastPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeTool::getLastPixel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00113">113</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a990160f942ee3305cb87c0be04e3e0b3" name="a990160f942ee3305cb87c0be04e3e0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990160f942ee3305cb87c0be04e3e0b3">&#9670;&#160;</a></span>getLastPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> StrokeTool::getLastPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00118">118</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -850,7 +1011,40 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00171">171</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00200">200</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a617934362e350417aba259efd87e07ad" name="a617934362e350417aba259efd87e07ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617934362e350417aba259efd87e07ad">&#9670;&#160;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StrokeTool::isActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the tool is active. </p>
+<p>An active tool is definied as one which is actively modifying the buffer. This is used to check if an full frame cache can be used instead of redrawing with <a class="el" href="class_canvas_painter.html">CanvasPainter</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the tool is currently active, else returns false. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">BaseTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00054">54</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +1074,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00118">118</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00147">147</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -911,7 +1105,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00075">75</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00074">74</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -941,7 +1135,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00059">59</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00058">58</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -969,7 +1163,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00080">80</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00079">79</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -996,7 +1190,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00089">89</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00088">88</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1230,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00338">338</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00367">367</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1260,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00196">196</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00225">225</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1290,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00191">191</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00220">220</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1126,7 +1320,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00201">201</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00230">230</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1154,7 +1348,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00260">260</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00289">289</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1368,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00094">94</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00123">123</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1201,7 +1395,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00298">298</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00327">327</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1220,7 +1414,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00221">221</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8cpp_source.html#l00250">250</a> of file <a class="el" href="stroketool_8cpp_source.html">stroketool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1439,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00048">48</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00049">49</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1269,7 +1463,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00047">47</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00048">48</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1293,7 +1487,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00098">98</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00107">107</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1511,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00095">95</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00104">104</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1535,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00100">100</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00109">109</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1365,7 +1559,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00086">86</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00095">95</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1583,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00084">84</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00093">93</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1413,7 +1607,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00083">83</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00092">92</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1437,7 +1631,31 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00078">78</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00087">87</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+
+</div>
+</div>
+<a id="a116dd559105db09abb170d454cac02d9" name="a116dd559105db09abb170d454cac02d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116dd559105db09abb170d454cac02d9">&#9670;&#160;</a></span>mInterpolator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_stroke_interpolator.html">StrokeInterpolator</a> StrokeTool::mInterpolator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00111">111</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1679,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00096">96</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00105">105</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1703,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00074">74</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00083">83</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1509,7 +1727,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00077">77</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00086">86</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1533,7 +1751,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00075">75</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00084">84</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1557,7 +1775,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00080">80</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00089">89</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1581,7 +1799,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00081">81</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00090">90</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1605,7 +1823,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00050">50</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00051">51</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1629,7 +1847,7 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00049">49</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stroketool_8h_source.html#l00050">50</a> of file <a class="el" href="stroketool_8h_source.html">stroketool.h</a>.</p>
 
 </div>
 </div>
@@ -1643,10 +1861,10 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Mar 9 2024 07:05:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Mar 9 2024 07:10:17 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 46e046f7168185f691b77c38ed21190ce1174df0
+   based on revision 4fb9b978fbaa5d187ce5323d101bcf5271a585e2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

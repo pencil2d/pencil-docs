@@ -19,6 +19,6 @@ var searchData=
   ['status_16',['Status',['../class_status.html',1,'']]],
   ['statusbar_17',['StatusBar',['../class_status_bar.html',1,'']]],
   ['stringresult_18',['StringResult',['https://doc.qt.io/qt-5/qcborstreamreader-stringresult.html',1,'QCborStreamReader']]],
-  ['strokemanager_19',['StrokeManager',['../class_stroke_manager.html',1,'']]],
+  ['strokeinterpolator_19',['StrokeInterpolator',['../class_stroke_interpolator.html',1,'']]],
   ['stroketool_20',['StrokeTool',['../class_stroke_tool.html',1,'']]]
 ];

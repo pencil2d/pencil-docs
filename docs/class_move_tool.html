@@ -154,6 +154,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa5f590d9cc9f2de1dcd9f43cc6667b4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">leavingThisTool</a> () override</td></tr>
 <tr class="memdesc:aa5f590d9cc9f2de1dcd9f43cc6667b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will clean up <code>active</code> connections.  <br /></td></tr>
 <tr class="separator:aa5f590d9cc9f2de1dcd9f43cc6667b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9111e41c91c9e11a5fbc658f0eb54893"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">isActive</a> () const override</td></tr>
+<tr class="memdesc:a9111e41c91c9e11a5fbc658f0eb54893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
+<tr class="separator:a9111e41c91c9e11a5fbc658f0eb54893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad7376f4b191c78577c70bc16a02bc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a1ad7376f4b191c78577c70bc16a02bc6">resetToDefault</a> () override</td></tr>
 <tr class="separator:a1ad7376f4b191c78577c70bc16a02bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a904105fbf3d4e1df379d8bfb3c7c325f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a904105fbf3d4e1df379d8bfb3c7c325f">setShowSelectionInfo</a> (const bool b) override</td></tr>
@@ -186,9 +189,9 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="separator:a782243358ce1eeb4bad043367b59e7e6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad065ee68da73cc5fe2af2cb7ac400f04 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ad065ee68da73cc5fe2af2cb7ac400f04">resetToDefault</a> ()</td></tr>
 <tr class="separator:ad065ee68da73cc5fe2af2cb7ac400f04 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">isActive</a> ()</td></tr>
-<tr class="memdesc:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
-<tr class="separator:a4c282b9467d8fb36feb9feeef9604ca6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0234f514f71278e171b7471caaec191b inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">isActive</a> () const</td></tr>
+<tr class="memdesc:a0234f514f71278e171b7471caaec191b inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the tool is active.  <br /></td></tr>
+<tr class="separator:a0234f514f71278e171b7471caaec191b inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41674db30a44ca3c446b6414913691ee inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a41674db30a44ca3c446b6414913691ee">setWidth</a> (const qreal width)</td></tr>
 <tr class="separator:a41674db30a44ca3c446b6414913691ee inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b2353c95ff5cc84340ef622d9a12415 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3b2353c95ff5cc84340ef622d9a12415">setFeather</a> (const qreal feather)</td></tr>
@@ -239,22 +242,6 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="memitem:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">enteringThisTool</a> ()</td></tr>
 <tr class="memdesc:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup <code>active</code> connections here that should only emit while tool is active <code>leavingThisTool</code> will handle the cleanup of <code>active</code> connections.  <br /></td></tr>
 <tr class="separator:a5577b89e6555c3336c57a61922de83c2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60011570e57834fa08d5142aeb3f327 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#ae60011570e57834fa08d5142aeb3f327">getCurrentPressPixel</a> () const</td></tr>
-<tr class="separator:ae60011570e57834fa08d5142aeb3f327 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a730c45752919251c4492344f1202f1f6 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a730c45752919251c4492344f1202f1f6">getCurrentPressPoint</a> () const</td></tr>
-<tr class="separator:a730c45752919251c4492344f1202f1f6 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d71d1107128dab114511a69ada930d inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#af4d71d1107128dab114511a69ada930d">getCurrentPixel</a> () const</td></tr>
-<tr class="separator:af4d71d1107128dab114511a69ada930d inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f3d6d282b94cd4da0ccfd0a7a135845 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a3f3d6d282b94cd4da0ccfd0a7a135845">getCurrentPoint</a> () const</td></tr>
-<tr class="separator:a3f3d6d282b94cd4da0ccfd0a7a135845 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37e5440d8e390eba10d36c53c5bf443e inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a37e5440d8e390eba10d36c53c5bf443e">getLastPixel</a> () const</td></tr>
-<tr class="separator:a37e5440d8e390eba10d36c53c5bf443e inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a721aed18250580dd5c2c4117e80f9818 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a721aed18250580dd5c2c4117e80f9818">getLastPoint</a> () const</td></tr>
-<tr class="separator:a721aed18250580dd5c2c4117e80f9818 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60bc005c821d78eacdde80d9739db603 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a60bc005c821d78eacdde80d9739db603">getLastPressPixel</a> () const</td></tr>
-<tr class="separator:a60bc005c821d78eacdde80d9739db603 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49bbfd599b7ec284804eb20042f943f2 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a49bbfd599b7ec284804eb20042f943f2">getLastPressPoint</a> () const</td></tr>
-<tr class="separator:a49bbfd599b7ec284804eb20042f943f2 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5563687a6fba096faff70e5a68fd85bf inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5563687a6fba096faff70e5a68fd85bf">isPropertyEnabled</a> (ToolPropertyType t)</td></tr>
 <tr class="separator:a5563687a6fba096faff70e5a68fd85bf inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92dd16c12e6b7b5e14cd9cc08af4c637 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">isDrawingTool</a> ()</td></tr>
@@ -470,25 +457,27 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:ab0b84251d53d0797197f630a731902ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab36f2ca0bc212f8c7ea90465435198f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#ab36f2ca0bc212f8c7ea90465435198f7">updateSettings</a> (const SETTING setting)</td></tr>
 <tr class="separator:ab36f2ca0bc212f8c7ea90465435198f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33c63521d90dbb485bce040bfb56472a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a33c63521d90dbb485bce040bfb56472a">beginInteraction</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod, <a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
-<tr class="separator:a33c63521d90dbb485bce040bfb56472a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02f4e03eb7ab00d43ea30b82b36ac883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a02f4e03eb7ab00d43ea30b82b36ac883">createVectorSelection</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod, <a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
-<tr class="memdesc:a02f4e03eb7ab00d43ea30b82b36ac883"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_move_tool.html#a02f4e03eb7ab00d43ea30b82b36ac883" title="MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...">MoveTool::createVectorSelection</a> In vector the selection rectangle is based on the bounding box of the curves We can therefore create a selection just by clicking near/on a curve.  <br /></td></tr>
-<tr class="separator:a02f4e03eb7ab00d43ea30b82b36ac883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eec7550089e7a5c921de9c649b64d91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a8eec7550089e7a5c921de9c649b64d91">transformSelection</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod)</td></tr>
-<tr class="separator:a8eec7550089e7a5c921de9c649b64d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f09569441dcc9e256d3869be432620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#aa1f09569441dcc9e256d3869be432620">storeClosestVectorCurve</a> (<a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
-<tr class="memdesc:aa1f09569441dcc9e256d3869be432620"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_move_tool.html#aa1f09569441dcc9e256d3869be432620" title="MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.">MoveTool::storeClosestVectorCurve</a> stores the curves closest to the mouse position in mClosestCurves.  <br /></td></tr>
-<tr class="separator:aa1f09569441dcc9e256d3869be432620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465029999551118118d35a3cdfce11a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a465029999551118118d35a3cdfce11a6">beginInteraction</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;pos, <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod, <a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
+<tr class="separator:a465029999551118118d35a3cdfce11a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84466382ae84e8a6ad6efb411f255dbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a84466382ae84e8a6ad6efb411f255dbe">createVectorSelection</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;pos, <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod, <a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
+<tr class="memdesc:a84466382ae84e8a6ad6efb411f255dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_move_tool.html#a84466382ae84e8a6ad6efb411f255dbe" title="MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...">MoveTool::createVectorSelection</a> In vector the selection rectangle is based on the bounding box of the curves We can therefore create a selection just by clicking near/on a curve.  <br /></td></tr>
+<tr class="separator:a84466382ae84e8a6ad6efb411f255dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6efe77501ae37eb11704535c6e66b8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#ad6efe77501ae37eb11704535c6e66b8b">transformSelection</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;pos, <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod)</td></tr>
+<tr class="separator:ad6efe77501ae37eb11704535c6e66b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab707da7eaa805f40803cdd307d82ca86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#ab707da7eaa805f40803cdd307d82ca86">storeClosestVectorCurve</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;pos, <a class="el" href="class_layer.html">Layer</a> *layer)</td></tr>
+<tr class="memdesc:ab707da7eaa805f40803cdd307d82ca86"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_move_tool.html#ab707da7eaa805f40803cdd307d82ca86" title="MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.">MoveTool::storeClosestVectorCurve</a> stores the curves closest to the mouse position in mClosestCurves.  <br /></td></tr>
+<tr class="separator:ab707da7eaa805f40803cdd307d82ca86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09553d51725b813afe74c27f1a47422"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#aa09553d51725b813afe74c27f1a47422">setCurveSelected</a> (<a class="el" href="class_vector_image.html">VectorImage</a> *vectorImage, <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod)</td></tr>
 <tr class="separator:aa09553d51725b813afe74c27f1a47422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab2094d754eec86ead9697e06a2991bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#aab2094d754eec86ead9697e06a2991bf">setAreaSelected</a> (<a class="el" href="class_vector_image.html">VectorImage</a> *vectorImage, <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod)</td></tr>
-<tr class="separator:aab2094d754eec86ead9697e06a2991bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85bec91c7497b1e8a4e44e813699575c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a85bec91c7497b1e8a4e44e813699575c">setAreaSelected</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;pos, <a class="el" href="class_vector_image.html">VectorImage</a> *vectorImage, <a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a> keyMod)</td></tr>
+<tr class="separator:a85bec91c7497b1e8a4e44e813699575c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99bec03b7b72911204f317f6cdd90b6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_layer.html">Layer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a99bec03b7b72911204f317f6cdd90b6e">currentPaintableLayer</a> ()</td></tr>
 <tr class="separator:a99bec03b7b72911204f317f6cdd90b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:aad4cd1b3353359666c282bcdee24ffe6"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#aad4cd1b3353359666c282bcdee24ffe6">mCurrentPoint</a></td></tr>
+<tr class="separator:aad4cd1b3353359666c282bcdee24ffe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a5c96aa65e373a53b04abcfbbb2f26"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a80a5c96aa65e373a53b04abcfbbb2f26">mRotatedAngle</a> = 0.0</td></tr>
 <tr class="separator:a80a5c96aa65e373a53b04abcfbbb2f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a7148d9f0f2cad5f23ee8d4f6f69e0"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a24a7148d9f0f2cad5f23ee8d4f6f69e0">mPreviousAngle</a> = 0.0</td></tr>
@@ -553,8 +542,6 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 <tr class="inherit_header pro_methods_class_base_tool"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_base_tool')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_base_tool.html">BaseTool</a></td></tr>
 <tr class="memitem:a5b1628883b15a523900cfd1c9b308c4b inherit pro_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a5b1628883b15a523900cfd1c9b308c4b">BaseTool</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a> *<a class="elRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>)</td></tr>
 <tr class="separator:a5b1628883b15a523900cfd1c9b308c4b inherit pro_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfceb0b20ee9298aeae6ef0376ac0fe4 inherit pro_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stroke_manager.html">StrokeManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#acfceb0b20ee9298aeae6ef0376ac0fe4">strokeManager</a> () const</td></tr>
-<tr class="separator:acfceb0b20ee9298aeae6ef0376ac0fe4 inherit pro_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfc4c70de9b9ebf5a50ad9edbea4f64 inherit pro_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_editor.html">Editor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#afcfc4c70de9b9ebf5a50ad9edbea4f64">editor</a> ()</td></tr>
 <tr class="separator:afcfc4c70de9b9ebf5a50ad9edbea4f64 inherit pro_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_qobject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_qobject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el"  href="https://doc.qt.io/qt-5/qobject.html">QObject</a></td></tr>
@@ -625,7 +612,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00038">38</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00037">37</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -653,12 +640,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00308">308</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00310">310</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a33c63521d90dbb485bce040bfb56472a" name="a33c63521d90dbb485bce040bfb56472a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33c63521d90dbb485bce040bfb56472a">&#9670;&#160;</a></span>beginInteraction()</h2>
+<a id="a465029999551118118d35a3cdfce11a6" name="a465029999551118118d35a3cdfce11a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465029999551118118d35a3cdfce11a6">&#9670;&#160;</a></span>beginInteraction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -669,6 +656,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="memname">void MoveTool::beginInteraction </td>
           <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>&#160;</td>
           <td class="paramname"><em>keyMod</em>, </td>
         </tr>
@@ -691,12 +684,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00205">205</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00207">207</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a02f4e03eb7ab00d43ea30b82b36ac883" name="a02f4e03eb7ab00d43ea30b82b36ac883"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02f4e03eb7ab00d43ea30b82b36ac883">&#9670;&#160;</a></span>createVectorSelection()</h2>
+<a id="a84466382ae84e8a6ad6efb411f255dbe" name="a84466382ae84e8a6ad6efb411f255dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84466382ae84e8a6ad6efb411f255dbe">&#9670;&#160;</a></span>createVectorSelection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -707,6 +700,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="memname">void MoveTool::createVectorSelection </td>
           <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>&#160;</td>
           <td class="paramname"><em>keyMod</em>, </td>
         </tr>
@@ -729,9 +728,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_move_tool.html#a02f4e03eb7ab00d43ea30b82b36ac883" title="MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...">MoveTool::createVectorSelection</a> In vector the selection rectangle is based on the bounding box of the curves We can therefore create a selection just by clicking near/on a curve. </p>
+<p><a class="el" href="class_move_tool.html#a84466382ae84e8a6ad6efb411f255dbe" title="MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...">MoveTool::createVectorSelection</a> In vector the selection rectangle is based on the bounding box of the curves We can therefore create a selection just by clicking near/on a curve. </p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00250">250</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00252">252</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +757,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00345">345</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00352">352</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -787,7 +786,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00062">62</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00061">61</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -807,7 +806,40 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00355">355</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00362">362</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9111e41c91c9e11a5fbc658f0eb54893" name="a9111e41c91c9e11a5fbc658f0eb54893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9111e41c91c9e11a5fbc658f0eb54893">&#9670;&#160;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MoveTool::isActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the tool is active. </p>
+<p>An active tool is definied as one which is actively modifying the buffer. This is used to check if an full frame cache can be used instead of redrawing with <a class="el" href="class_canvas_painter.html">CanvasPainter</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the tool is currently active, else returns false. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">BaseTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00333">333</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +870,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00320">320</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00322">322</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +899,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00047">47</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00046">46</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -897,7 +929,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00125">125</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00121">121</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -927,7 +959,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00102">102</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00098">98</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -957,7 +989,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00160">160</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00162">162</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -986,12 +1018,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00331">331</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00338">338</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aab2094d754eec86ead9697e06a2991bf" name="aab2094d754eec86ead9697e06a2991bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab2094d754eec86ead9697e06a2991bf">&#9670;&#160;</a></span>setAreaSelected()</h2>
+<a id="a85bec91c7497b1e8a4e44e813699575c" name="a85bec91c7497b1e8a4e44e813699575c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85bec91c7497b1e8a4e44e813699575c">&#9670;&#160;</a></span>setAreaSelected()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1002,6 +1034,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="memname">void MoveTool::setAreaSelected </td>
           <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="class_vector_image.html">VectorImage</a> *&#160;</td>
           <td class="paramname"><em>vectorImage</em>, </td>
         </tr>
@@ -1024,7 +1062,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00281">281</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00283">283</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1062,7 +1100,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00267">267</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00269">269</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1092,12 +1130,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00336">336</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00343">343</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa1f09569441dcc9e256d3869be432620" name="aa1f09569441dcc9e256d3869be432620"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1f09569441dcc9e256d3869be432620">&#9670;&#160;</a></span>storeClosestVectorCurve()</h2>
+<a id="ab707da7eaa805f40803cdd307d82ca86" name="ab707da7eaa805f40803cdd307d82ca86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab707da7eaa805f40803cdd307d82ca86">&#9670;&#160;</a></span>storeClosestVectorCurve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1108,9 +1146,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="memname">void MoveTool::storeClosestVectorCurve </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_layer.html">Layer</a> *&#160;</td>
-          <td class="paramname"><em>layer</em></td><td>)</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_layer.html">Layer</a> *&#160;</td>
+          <td class="paramname"><em>layer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1120,14 +1168,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_move_tool.html#aa1f09569441dcc9e256d3869be432620" title="MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.">MoveTool::storeClosestVectorCurve</a> stores the curves closest to the mouse position in mClosestCurves. </p>
+<p><a class="el" href="class_move_tool.html#ab707da7eaa805f40803cdd307d82ca86" title="MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.">MoveTool::storeClosestVectorCurve</a> stores the curves closest to the mouse position in mClosestCurves. </p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00299">299</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00301">301</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a8eec7550089e7a5c921de9c649b64d91" name="a8eec7550089e7a5c921de9c649b64d91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eec7550089e7a5c921de9c649b64d91">&#9670;&#160;</a></span>transformSelection()</h2>
+<a id="ad6efe77501ae37eb11704535c6e66b8b" name="ad6efe77501ae37eb11704535c6e66b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6efe77501ae37eb11704535c6e66b8b">&#9670;&#160;</a></span>transformSelection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1138,9 +1186,19 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="memname">void MoveTool::transformSelection </td>
           <td>(</td>
-          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>&#160;</td>
-          <td class="paramname"><em>keyMod</em></td><td>)</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="elRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::KeyboardModifiers</a>&#160;</td>
+          <td class="paramname"><em>keyMod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1150,7 +1208,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00176">176</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00178">178</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1237,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00042">42</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00041">41</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1207,11 +1265,35 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00081">81</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00077">77</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aad4cd1b3353359666c282bcdee24ffe6" name="aad4cd1b3353359666c282bcdee24ffe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4cd1b3353359666c282bcdee24ffe6">&#9670;&#160;</a></span>mCurrentPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> MoveTool::mCurrentPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00063">63</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+
+</div>
+</div>
 <a id="ae709056647c619892b282eb2fb036113" name="ae709056647c619892b282eb2fb036113"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae709056647c619892b282eb2fb036113">&#9670;&#160;</a></span>mOffset</h2>
 
@@ -1232,7 +1314,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00066">66</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00068">68</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1256,7 +1338,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00065">65</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00067">67</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1280,7 +1362,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00063">63</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00065">65</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1304,7 +1386,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00062">62</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00064">64</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1410,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00064">64</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00066">66</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1342,10 +1424,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Mar 9 2024 07:05:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Mar 9 2024 07:10:17 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 46e046f7168185f691b77c38ed21190ce1174df0
+   based on revision 4fb9b978fbaa5d187ce5323d101bcf5271a585e2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

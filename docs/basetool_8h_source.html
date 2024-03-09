@@ -151,139 +151,124 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qmouseevent.html">QMouseEvent</a>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtabletevent.html">QTabletEvent</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">class </span><a class="code hl_class" href="class_stroke_manager.html">StrokeManager</a>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span><a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_properties.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="class_properties.html">Properties</a></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    qreal width = 1.0;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    qreal feather = 1.0;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">bool</span>  pressure = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">int</span>   invisibility = 0;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">int</span>   preserveAlpha = 0;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span>  vectorMergeEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span>  bezier_state = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">bool</span>  useFeather = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">int</span>   useAA = 0;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span>   fillMode = 0;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span>   stabilizerLevel = 0;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    qreal tolerance = 0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> toleranceEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">int</span> bucketFillExpand = 0;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> bucketFillExpandEnabled = 0;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">int</span> bucketFillReferenceMode = 0;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span>  useFillContour = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span>  showSelectionInfo = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span>  cameraShowPath = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    DotColorType cameraPathDotColorType = DotColorType::RED;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">const</span> <span class="keywordtype">int</span> ON = 1;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">const</span> <span class="keywordtype">int</span> OFF = 0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">const</span> <span class="keywordtype">int</span> DISABLED = -1;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">class </span><a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_properties.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="class_properties.html">Properties</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    qreal width = 1.0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    qreal feather = 1.0;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span>  pressure = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">int</span>   invisibility = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">int</span>   preserveAlpha = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span>  vectorMergeEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span>  bezier_state = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span>  useFeather = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span>   useAA = 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">int</span>   fillMode = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span>   stabilizerLevel = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    qreal tolerance = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> toleranceEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">int</span> bucketFillExpand = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">bool</span> bucketFillExpandEnabled = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> bucketFillReferenceMode = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span>  useFillContour = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span>  showSelectionInfo = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span>  cameraShowPath = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    DotColorType cameraPathDotColorType = DotColorType::RED;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">const</span> <span class="keywordtype">int</span> ON = 1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">const</span> <span class="keywordtype">int</span> OFF = 0;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">const</span> <span class="keywordtype">int</span> DISABLED = -1;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_base_tool.html">   69</a></span><span class="keyword">class </span><a class="code hl_class" href="class_base_tool.html">BaseTool</a> : <span class="keyword">public</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#Q_OBJECT">Q_OBJECT</a></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_base_tool.html">BaseTool</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> TypeName(ToolType);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> typeName() { <span class="keywordflow">return</span> TypeName(type()); }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> initialize(<a class="code hl_class" href="class_editor.html">Editor</a>* editor);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">virtual</span> ToolType type() = 0;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadSettings() = 0;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">virtual</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerDoubleClickEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// return true if handled</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> keyPressEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>*) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> keyReleaseEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>*) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> clearToolData() {}</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> resetToDefault() {}</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">isActive</a>();</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setWidth(<span class="keyword">const</span> qreal width);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFeather(<span class="keyword">const</span> qreal feather);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setInvisibility(<span class="keyword">const</span> <span class="keywordtype">bool</span> invisibility);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setBezier(<span class="keyword">const</span> <span class="keywordtype">bool</span> bezier_state);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPressure(<span class="keyword">const</span> <span class="keywordtype">bool</span> pressure);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setUseFeather(<span class="keyword">const</span> <span class="keywordtype">bool</span> usingFeather);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPreserveAlpha(<span class="keyword">const</span> <span class="keywordtype">bool</span> preserveAlpha);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setVectorMergeEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> vectorMergeEnabled);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAA(<span class="keyword">const</span> <span class="keywordtype">int</span> useAA);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillMode(<span class="keyword">const</span> <span class="keywordtype">int</span> mode);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setStabilizerLevel(<span class="keyword">const</span> <span class="keywordtype">int</span> level);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setTolerance(<span class="keyword">const</span> <span class="keywordtype">int</span> tolerance);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setToleranceEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillExpand(<span class="keyword">const</span> <span class="keywordtype">int</span> fillExpandValue);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillExpandEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillReferenceMode(<span class="keywordtype">int</span> referenceMode);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setUseFillContour(<span class="keyword">const</span> <span class="keywordtype">bool</span> useFillContour);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setShowSelectionInfo(<span class="keyword">const</span> <span class="keywordtype">bool</span> b);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setShowCameraPath(<span class="keyword">const</span> <span class="keywordtype">bool</span> showCameraPath);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPathDotColorType(<span class="keyword">const</span> DotColorType dotColorType);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> resetCameraPath();</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> paint(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect) { Q_UNUSED(painter) Q_UNUSED(blitRect) }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">leavingThisTool</a>();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">  135</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">enteringThisTool</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_class" href="class_properties.html">Properties</a> properties;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getCurrentPressPixel() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getCurrentPressPoint() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getCurrentPixel() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getCurrentPoint() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getLastPixel() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getLastPoint() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getLastPressPixel() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> getLastPressPoint() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">bool</span> isPropertyEnabled(ToolPropertyType t) { <span class="keywordflow">return</span> mPropertyEnabled[t]; }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">isDrawingTool</a>();</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>signals:</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">bool</span> isActiveChanged(ToolType, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_base_tool.html">   68</a></span><span class="keyword">class </span><a class="code hl_class" href="class_base_tool.html">BaseTool</a> : <span class="keyword">public</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#Q_OBJECT">Q_OBJECT</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_base_tool.html">BaseTool</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">static</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> TypeName(ToolType);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> typeName() { <span class="keywordflow">return</span> TypeName(type()); }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> initialize(<a class="code hl_class" href="class_editor.html">Editor</a>* editor);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">virtual</span> ToolType type() = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadSettings() = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerDoubleClickEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// return true if handled</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> keyPressEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>*) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> keyReleaseEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>*) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> clearToolData() {}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> resetToDefault() {}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">isActive</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setWidth(<span class="keyword">const</span> qreal width);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFeather(<span class="keyword">const</span> qreal feather);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setInvisibility(<span class="keyword">const</span> <span class="keywordtype">bool</span> invisibility);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setBezier(<span class="keyword">const</span> <span class="keywordtype">bool</span> bezier_state);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPressure(<span class="keyword">const</span> <span class="keywordtype">bool</span> pressure);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setUseFeather(<span class="keyword">const</span> <span class="keywordtype">bool</span> usingFeather);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPreserveAlpha(<span class="keyword">const</span> <span class="keywordtype">bool</span> preserveAlpha);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setVectorMergeEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> vectorMergeEnabled);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setAA(<span class="keyword">const</span> <span class="keywordtype">int</span> useAA);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillMode(<span class="keyword">const</span> <span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setStabilizerLevel(<span class="keyword">const</span> <span class="keywordtype">int</span> level);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setTolerance(<span class="keyword">const</span> <span class="keywordtype">int</span> tolerance);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setToleranceEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillExpand(<span class="keyword">const</span> <span class="keywordtype">int</span> fillExpandValue);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillExpandEnabled(<span class="keyword">const</span> <span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFillReferenceMode(<span class="keywordtype">int</span> referenceMode);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setUseFillContour(<span class="keyword">const</span> <span class="keywordtype">bool</span> useFillContour);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setShowSelectionInfo(<span class="keyword">const</span> <span class="keywordtype">bool</span> b);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setShowCameraPath(<span class="keyword">const</span> <span class="keywordtype">bool</span> showCameraPath);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPathDotColorType(<span class="keyword">const</span> DotColorType dotColorType);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> resetCameraPath();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> paint(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; blitRect) { Q_UNUSED(painter) Q_UNUSED(blitRect) }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">leavingThisTool</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">  134</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">enteringThisTool</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_class" href="class_properties.html">Properties</a> properties;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">bool</span> isPropertyEnabled(ToolPropertyType t) { <span class="keywordflow">return</span> mPropertyEnabled[t]; }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">isDrawingTool</a>();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>signals:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">bool</span> isActiveChanged(ToolType, <span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_class" href="class_editor.html">Editor</a>* editor() { <span class="keywordflow">return</span> mEditor; }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qhash.html">QHash&lt;ToolPropertyType, bool&gt;</a> mPropertyEnabled;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_class" href="class_editor.html">Editor</a>* mEditor = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_class" href="class_scribble_area.html">ScribbleArea</a>* mScribbleArea = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QMetaObject::Connection&gt;</a> mActiveConnections;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>};</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_class" href="class_stroke_manager.html">StrokeManager</a>* strokeManager()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mStrokeManager; }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_class" href="class_editor.html">Editor</a>* editor() { <span class="keywordflow">return</span> mEditor; }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qhash.html">QHash&lt;ToolPropertyType, bool&gt;</a> mPropertyEnabled;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_class" href="class_editor.html">Editor</a>* mEditor = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_class" href="class_scribble_area.html">ScribbleArea</a>* mScribbleArea = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QMetaObject::Connection&gt;</a> mActiveConnections;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_class" href="class_stroke_manager.html">StrokeManager</a>* mStrokeManager = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>};</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#endif </span><span class="comment">// BASETOOL_H</span></div>
-<div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#endif </span><span class="comment">// BASETOOL_H</span></div>
+<div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00068">basetool.h:69</a></div></div>
+<div class="ttc" id="aclass_base_tool_html_a0234f514f71278e171b7471caaec191b"><div class="ttname"><a href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">BaseTool::isActive</a></div><div class="ttdeci">virtual bool isActive() const</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00121">basetool.cpp:121</a></div></div>
 <div class="ttc" id="aclass_base_tool_html_a1fa7f072b858ca73cd6515b099830a44"><div class="ttname"><a href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool::leavingThisTool</a></div><div class="ttdeci">virtual bool leavingThisTool()</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00068">basetool.cpp:68</a></div></div>
-<div class="ttc" id="aclass_base_tool_html_a4c282b9467d8fb36feb9feeef9604ca6"><div class="ttname"><a href="class_base_tool.html#a4c282b9467d8fb36feb9feeef9604ca6">BaseTool::isActive</a></div><div class="ttdeci">virtual bool isActive()</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00122">basetool.cpp:122</a></div></div>
-<div class="ttc" id="aclass_base_tool_html_a5577b89e6555c3336c57a61922de83c2"><div class="ttname"><a href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">BaseTool::enteringThisTool</a></div><div class="ttdeci">virtual bool enteringThisTool()</div><div class="ttdoc">Setup active connections here that should only emit while tool is active leavingThisTool will handle ...</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00135">basetool.h:135</a></div></div>
-<div class="ttc" id="aclass_base_tool_html_a92dd16c12e6b7b5e14cd9cc08af4c637"><div class="ttname"><a href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">BaseTool::isDrawingTool</a></div><div class="ttdeci">bool isDrawingTool()</div><div class="ttdoc">BaseTool::isDrawingTool - A drawing tool is anything that applies something to the canvas.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00113">basetool.cpp:113</a></div></div>
+<div class="ttc" id="aclass_base_tool_html_a5577b89e6555c3336c57a61922de83c2"><div class="ttname"><a href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">BaseTool::enteringThisTool</a></div><div class="ttdeci">virtual bool enteringThisTool()</div><div class="ttdoc">Setup active connections here that should only emit while tool is active leavingThisTool will handle ...</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00134">basetool.h:134</a></div></div>
+<div class="ttc" id="aclass_base_tool_html_a92dd16c12e6b7b5e14cd9cc08af4c637"><div class="ttname"><a href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">BaseTool::isDrawingTool</a></div><div class="ttdeci">bool isDrawingTool()</div><div class="ttdoc">BaseTool::isDrawingTool - A drawing tool is anything that applies something to the canvas.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00112">basetool.cpp:112</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00067">editor.h:68</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
-<div class="ttc" id="aclass_properties_html"><div class="ttname"><a href="class_properties.html">Properties</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00039">basetool.h:40</a></div></div>
-<div class="ttc" id="aclass_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00052">scribblearea.h:53</a></div></div>
-<div class="ttc" id="aclass_stroke_manager_html"><div class="ttname"><a href="class_stroke_manager.html">StrokeManager</a></div><div class="ttdef"><b>Definition:</b> <a href="strokemanager_8h_source.html#l00032">strokemanager.h:33</a></div></div>
+<div class="ttc" id="aclass_properties_html"><div class="ttname"><a href="class_properties.html">Properties</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00038">basetool.h:39</a></div></div>
+<div class="ttc" id="aclass_scribble_area_html"><div class="ttname"><a href="class_scribble_area.html">ScribbleArea</a></div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8h_source.html#l00051">scribblearea.h:52</a></div></div>
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
 <div class="ttc" id="aqhash_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qhash.html">QHash</a></div></div>
 <div class="ttc" id="aqkeyevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a></div></div>
@@ -294,7 +279,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqobject_html_parent"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#parent">QObject::parent</a></div><div class="ttdeci">QObject * parent() const const</div></div>
 <div class="ttc" id="aqpainter_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a></div></div>
 <div class="ttc" id="aqpixmap_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a></div></div>
-<div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="aqrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
 <div class="ttc" id="aqtabletevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtabletevent.html">QTabletEvent</a></div></div>
@@ -304,10 +288,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Mar 9 2024 07:05:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Mar 9 2024 07:10:17 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 46e046f7168185f691b77c38ed21190ce1174df0
+   based on revision 4fb9b978fbaa5d187ce5323d101bcf5271a585e2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
