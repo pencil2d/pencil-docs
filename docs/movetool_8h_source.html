@@ -180,20 +180,19 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mCurrentPoint;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    qreal mRotatedAngle = 0.0;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    qreal mPreviousAngle = 0.0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> mRotationIncrement = 0;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    MoveMode mPerspMode;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mOffset;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> mRotationIncrement = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    MoveMode mPerspMode;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mOffset;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00068">basetool.h:69</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00036">layer.h:37</a></div></div>
 <div class="ttc" id="aclass_move_tool_html"><div class="ttname"><a href="class_move_tool.html">MoveTool</a></div><div class="ttdef"><b>Definition:</b> <a href="movetool_8h_source.html#l00029">movetool.h:30</a></div></div>
-<div class="ttc" id="aclass_move_tool_html_a84466382ae84e8a6ad6efb411f255dbe"><div class="ttname"><a href="class_move_tool.html#a84466382ae84e8a6ad6efb411f255dbe">MoveTool::createVectorSelection</a></div><div class="ttdeci">void createVectorSelection(const QPointF &amp;pos, Qt::KeyboardModifiers keyMod, Layer *layer)</div><div class="ttdoc">MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00252">movetool.cpp:252</a></div></div>
-<div class="ttc" id="aclass_move_tool_html_a9111e41c91c9e11a5fbc658f0eb54893"><div class="ttname"><a href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">MoveTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00333">movetool.cpp:333</a></div></div>
-<div class="ttc" id="aclass_move_tool_html_aa5f590d9cc9f2de1dcd9f43cc6667b4a"><div class="ttname"><a href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool::leavingThisTool</a></div><div class="ttdeci">bool leavingThisTool() override</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00322">movetool.cpp:322</a></div></div>
-<div class="ttc" id="aclass_move_tool_html_ab707da7eaa805f40803cdd307d82ca86"><div class="ttname"><a href="class_move_tool.html#ab707da7eaa805f40803cdd307d82ca86">MoveTool::storeClosestVectorCurve</a></div><div class="ttdeci">void storeClosestVectorCurve(const QPointF &amp;pos, Layer *layer)</div><div class="ttdoc">MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00301">movetool.cpp:301</a></div></div>
+<div class="ttc" id="aclass_move_tool_html_a84466382ae84e8a6ad6efb411f255dbe"><div class="ttname"><a href="class_move_tool.html#a84466382ae84e8a6ad6efb411f255dbe">MoveTool::createVectorSelection</a></div><div class="ttdeci">void createVectorSelection(const QPointF &amp;pos, Qt::KeyboardModifiers keyMod, Layer *layer)</div><div class="ttdoc">MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00251">movetool.cpp:251</a></div></div>
+<div class="ttc" id="aclass_move_tool_html_a9111e41c91c9e11a5fbc658f0eb54893"><div class="ttname"><a href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">MoveTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00331">movetool.cpp:331</a></div></div>
+<div class="ttc" id="aclass_move_tool_html_aa5f590d9cc9f2de1dcd9f43cc6667b4a"><div class="ttname"><a href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool::leavingThisTool</a></div><div class="ttdeci">bool leavingThisTool() override</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00320">movetool.cpp:320</a></div></div>
+<div class="ttc" id="aclass_move_tool_html_ab707da7eaa805f40803cdd307d82ca86"><div class="ttname"><a href="class_move_tool.html#ab707da7eaa805f40803cdd307d82ca86">MoveTool::storeClosestVectorCurve</a></div><div class="ttdeci">void storeClosestVectorCurve(const QPointF &amp;pos, Layer *layer)</div><div class="ttdoc">MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00300">movetool.cpp:300</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
@@ -208,10 +207,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Apr 11 2024 10:48:29 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Apr 13 2024 23:55:51 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision f7412059cf8354cb7c1f4039c9e3f6041492f8c4
+   based on revision dfd68c5a7e8cbdf34e182893f33be245cbb475d0
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
