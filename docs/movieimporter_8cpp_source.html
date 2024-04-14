@@ -415,7 +415,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                imgTopLeft.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#setY">setY</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(viewMan-&gt;getImportView().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#dy">dy</a>()) - bitmapImage-&gt;image()-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#height">height</a>() / 2);</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                bitmapImage-&gt;moveTopLeft(imgTopLeft);</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            layer-&gt;addKeyFrame(currentFrame, bitmapImage);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            layer-&gt;<a class="code hl_function" href="class_layer.html#a8153a09769652bc43159d0cd2cb42759">addKeyFrame</a>(currentFrame, bitmapImage);</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            mEditor-&gt;layers()-&gt;<a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            mEditor-&gt;scrubTo(currentFrame + 1);</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        }</div>
@@ -478,7 +478,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    Q_ASSERT(!layer-&gt;keyExists(currentFrame));</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <a class="code hl_class" href="class_sound_clip.html">SoundClip</a>* key = <span class="keyword">new</span> <a class="code hl_class" href="class_sound_clip.html">SoundClip</a>;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    layer-&gt;addKeyFrame(currentFrame, key);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    layer-&gt;<a class="code hl_function" href="class_layer.html#a8153a09769652bc43159d0cd2cb42759">addKeyFrame</a>(currentFrame, key);</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    key-&gt;setSoundClipName(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a>(filePath).fileName()); <span class="comment">// keep the original file name</span></div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <a class="code hl_class" href="class_status.html">Status</a> st = mEditor-&gt;sound()-&gt;loadSound(key, audioPath);</div>
@@ -508,6 +508,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00028">bitmapimage.h:29</a></div></div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00036">layer.h:37</a></div></div>
+<div class="ttc" id="aclass_layer_html_a8153a09769652bc43159d0cd2cb42759"><div class="ttname"><a href="class_layer.html#a8153a09769652bc43159d0cd2cb42759">Layer::addKeyFrame</a></div><div class="ttdeci">virtual bool addKeyFrame(int position, KeyFrame *pKeyFrame)</div><div class="ttdoc">Adds a keyframe at the given position, unless one already exists.</div><div class="ttdef"><b>Definition:</b> <a href="layer_8cpp_source.html#l00191">layer.cpp:191</a></div></div>
 <div class="ttc" id="aclass_layer_manager_html_ae648788f4b7559ad43f499381f158659"><div class="ttname"><a href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">LayerManager::notifyAnimationLengthChanged</a></div><div class="ttdeci">void notifyAnimationLengthChanged()</div><div class="ttdoc">This should be emitted whenever the animation length frames, eg.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00398">layermanager.cpp:398</a></div></div>
 <div class="ttc" id="aclass_movie_exporter_html_aade03843134824f6854d13272ee3e255"><div class="ttname"><a href="class_movie_exporter.html#aade03843134824f6854d13272ee3e255">MovieExporter::executeFFmpeg</a></div><div class="ttdeci">static Status executeFFmpeg(const QString &amp;cmd, const QStringList &amp;args, std::function&lt; bool(int)&gt; progress)</div><div class="ttdoc">Runs the specified command (should be ffmpeg) and allows for progress feedback.</div><div class="ttdef"><b>Definition:</b> <a href="movieexporter_8cpp_source.html#l00541">movieexporter.cpp:541</a></div></div>
 <div class="ttc" id="aclass_movie_importer_html_a9a9e53e119ed296f8c6ae440acf5a22d"><div class="ttname"><a href="class_movie_importer.html#a9a9e53e119ed296f8c6ae440acf5a22d">MovieImporter::run</a></div><div class="ttdeci">Status run(const QString &amp;filePath, int fps, FileType type, std::function&lt; void(int)&gt; progress, std::function&lt; void(QString)&gt; progressMessage, std::function&lt; bool()&gt; askPermission)</div><div class="ttdef"><b>Definition:</b> <a href="movieimporter_8cpp_source.html#l00165">movieimporter.cpp:165</a></div></div>
@@ -574,10 +575,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Apr 13 2024 23:55:51 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Apr 14 2024 08:37:14 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision dfd68c5a7e8cbdf34e182893f33be245cbb475d0
+   based on revision 37cbd9763f3d256bf6d4d02cd53a4e837962dabe
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

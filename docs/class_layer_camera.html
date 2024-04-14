@@ -145,6 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a628a0fecc8bd16c68d9d0fa1a191c795"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#a628a0fecc8bd16c68d9d0fa1a191c795">loadDomElement</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> &amp;element, <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataDirPath, ProgressCallback progressStep) override</td></tr>
 <tr class="separator:a628a0fecc8bd16c68d9d0fa1a191c795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bb321b6afd84fc5f4de828dc24394af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#a2bb321b6afd84fc5f4de828dc24394af">addKeyFrame</a> (int position, <a class="el" href="class_key_frame.html">KeyFrame</a> *pKeyFrame) override</td></tr>
+<tr class="memdesc:a2bb321b6afd84fc5f4de828dc24394af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a keyframe at the given position, unless one already exists.  <br /></td></tr>
 <tr class="separator:a2bb321b6afd84fc5f4de828dc24394af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43c81216d12f4ebed688c2c46f9f34a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#af43c81216d12f4ebed688c2c46f9f34a">removeKeyFrame</a> (int position) override</td></tr>
 <tr class="separator:af43c81216d12f4ebed688c2c46f9f34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,10 +255,12 @@ virtual <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElem
 <tr class="memdesc:ae17c05e0505d385d20cfdd05691e6fd9 inherit pub_methods_class_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will insert an empty frame (exposure) after the given position.  <br /></td></tr>
 <tr class="separator:ae17c05e0505d385d20cfdd05691e6fd9 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d020385fb6b1e400b5797a57d2a5a0 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a61d020385fb6b1e400b5797a57d2a5a0">addNewKeyFrameAt</a> (int position)</td></tr>
+<tr class="memdesc:a61d020385fb6b1e400b5797a57d2a5a0 inherit pub_methods_class_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new keyframe at the given position, unless one already exists.  <br /></td></tr>
 <tr class="separator:a61d020385fb6b1e400b5797a57d2a5a0 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f73047cc25cc9559769bc635a2e5c78 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a5f73047cc25cc9559769bc635a2e5c78">addOrReplaceKeyFrame</a> (int position, <a class="el" href="class_key_frame.html">KeyFrame</a> *pKeyFrame)</td></tr>
 <tr class="separator:a5f73047cc25cc9559769bc635a2e5c78 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8153a09769652bc43159d0cd2cb42759 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#a8153a09769652bc43159d0cd2cb42759">addKeyFrame</a> (int position, <a class="el" href="class_key_frame.html">KeyFrame</a> *pKeyFrame)</td></tr>
+<tr class="memdesc:a8153a09769652bc43159d0cd2cb42759 inherit pub_methods_class_layer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a keyframe at the given position, unless one already exists.  <br /></td></tr>
 <tr class="separator:a8153a09769652bc43159d0cd2cb42759 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ad33e133d9e676b9a352418a93adf2ff1">removeKeyFrame</a> (int position)</td></tr>
 <tr class="separator:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -740,7 +743,17 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_layer.html">Layer</a>.</p>
+<p>Adds a keyframe at the given position, unless one already exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>The new position of the keyframe </td></tr>
+    <tr><td class="paramname">pKeyFrame</td><td>The keyframe to add. Its previous position will be overwritten </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if a keyframe already exists at the position, true if the keyframe was successfully added </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_layer.html#a8153a09769652bc43159d0cd2cb42759">Layer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00044">44</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
@@ -1810,10 +1823,10 @@ typedef&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Apr 13 2024 23:55:52 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Apr 14 2024 08:37:14 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision dfd68c5a7e8cbdf34e182893f33be245cbb475d0
+   based on revision 37cbd9763f3d256bf6d4d02cd53a4e837962dabe
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
