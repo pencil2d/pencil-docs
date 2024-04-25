@@ -152,9 +152,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab151cd8502ff27a04a100338f8eeac1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tiled_buffer.html#ab151cd8502ff27a04a100338f8eeac1e">isValid</a> () const</td></tr>
 <tr class="memdesc:ab151cd8502ff27a04a100338f8eeac1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if there are any tiles, otherwise false.  <br /></td></tr>
 <tr class="separator:ab151cd8502ff27a04a100338f8eeac1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2980e856c841ad94fc19c5066a5452b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tiled_buffer.html#ad2980e856c841ad94fc19c5066a5452b">drawBrush</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;point, int brushWidth, <a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen, <a class="elRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> brush, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> cm, bool antialiasing)</td></tr>
-<tr class="memdesc:ad2980e856c841ad94fc19c5066a5452b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a brush with the specified parameters to the tiled buffer.  <br /></td></tr>
-<tr class="separator:ad2980e856c841ad94fc19c5066a5452b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2caca53438dce486e0dbd7f828fc7de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tiled_buffer.html#ab2caca53438dce486e0dbd7f828fc7de">drawBrush</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> &amp;point, qreal brushWidth, <a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen, <a class="elRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> brush, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> cm, bool antialiasing)</td></tr>
+<tr class="memdesc:ab2caca53438dce486e0dbd7f828fc7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a brush with the specified parameters to the tiled buffer.  <br /></td></tr>
+<tr class="separator:ab2caca53438dce486e0dbd7f828fc7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2be9722ffba64b2727ffbdd15a3a795d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tiled_buffer.html#a2be9722ffba64b2727ffbdd15a3a795d">drawPath</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a> path, <a class="elRef" href="https://doc.qt.io/qt-5/qpen.html">QPen</a> pen, <a class="elRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> brush, <a class="elRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> cm, bool antialiasing)</td></tr>
 <tr class="memdesc:a2be9722ffba64b2727ffbdd15a3a795d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a path with the specified parameters to the tiled buffer.  <br /></td></tr>
 <tr class="separator:a2be9722ffba64b2727ffbdd15a3a795d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -548,8 +548,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 </div>
 </div>
-<a id="ad2980e856c841ad94fc19c5066a5452b" name="ad2980e856c841ad94fc19c5066a5452b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2980e856c841ad94fc19c5066a5452b">&#9670;&#160;</a></span>drawBrush()</h2>
+<a id="ab2caca53438dce486e0dbd7f828fc7de" name="ab2caca53438dce486e0dbd7f828fc7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2caca53438dce486e0dbd7f828fc7de">&#9670;&#160;</a></span>drawBrush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -563,7 +563,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">qreal&#160;</td>
           <td class="paramname"><em>brushWidth</em>, </td>
         </tr>
         <tr>
@@ -893,10 +893,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Apr 24 2024 15:28:05 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Apr 25 2024 02:59:38 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision b09d081fe44278b49ac1d6660b8195fc04045c34
+   based on revision 5a02bab373683b586cbcffc46ffc0bea254e8b70
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
