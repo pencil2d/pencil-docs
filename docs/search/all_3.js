@@ -536,7 +536,7 @@ var searchData=
   ['drawbackground_533',['drawBackground',['https://doc.qt.io/qt-5/qgraphicsscene.html#drawBackground',1,'QGraphicsScene::drawBackground()'],['https://doc.qt.io/qt-5/qitemdelegate.html#drawBackground',1,'QItemDelegate::drawBackground()'],['https://doc.qt.io/qt-5/qgraphicsview.html#drawBackground',1,'QGraphicsView::drawBackground()']]],
   ['drawbase_534',['drawBase',['https://doc.qt.io/qt-5/qtabbar.html#drawBase-prop',1,'QTabBar::drawBase()'],['https://doc.qt.io/qt-5/qtabbar.html#drawBase-prop',1,'QTabBar::drawBase() const const']]],
   ['drawbranches_535',['drawBranches',['https://doc.qt.io/qt-5/qtreeview.html#drawBranches',1,'QTreeView']]],
-  ['drawbrush_536',['drawBrush',['../class_tiled_buffer.html#ab2caca53438dce486e0dbd7f828fc7de',1,'TiledBuffer']]],
+  ['drawbrush_536',['drawBrush',['../class_tiled_buffer.html#add0e9ac681192099565951e003094900',1,'TiledBuffer']]],
   ['drawcheck_537',['drawCheck',['https://doc.qt.io/qt-5/qitemdelegate.html#drawCheck',1,'QItemDelegate']]],
   ['drawchildren_538',['DrawChildren',['https://doc.qt.io/qt-5/qwidget.html#RenderFlag-enum',1,'QWidget']]],
   ['drawchord_539',['drawChord',['https://doc.qt.io/qt-5/qpainter.html#drawChord-1',1,'QPainter::drawChord(int x, int y, int width, int height, int startAngle, int spanAngle)'],['https://doc.qt.io/qt-5/qpainter.html#drawChord',1,'QPainter::drawChord(const QRectF &amp;rectangle, int startAngle, int spanAngle)'],['https://doc.qt.io/qt-5/qpainter.html#drawChord-2',1,'QPainter::drawChord(const QRect &amp;rectangle, int startAngle, int spanAngle)']]],
