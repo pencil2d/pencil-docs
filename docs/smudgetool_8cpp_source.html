@@ -234,30 +234,30 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keywordtype">bool</span> SmudgeTool::keyPressEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *event)</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span> (event-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qkeyevent.html#key">key</a>() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#Key-enum">Qt::Key_Alt</a>)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;key() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#Key-enum">Qt::Key_Alt</a>)</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    {</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        toolMode = 1; <span class="comment">// alternative mode</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        mScribbleArea-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#cursor-prop">setCursor</a>(cursor()); <span class="comment">// update cursor</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> StrokeTool::keyPressEvent(event);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">return</span> StrokeTool::keyPressEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keywordtype">bool</span> SmudgeTool::keyReleaseEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *event)</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (event-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qkeyevent.html#key">key</a>() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#Key-enum">Qt::Key_Alt</a>)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;key() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#Key-enum">Qt::Key_Alt</a>)</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        toolMode = 0; <span class="comment">// default mode</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        mScribbleArea-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#cursor-prop">setCursor</a>(cursor()); <span class="comment">// update cursor</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> StrokeTool::keyReleaseEvent(event);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> StrokeTool::keyReleaseEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keywordtype">void</span> SmudgeTool::pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>* event)</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    mInterpolator.pointerPressEvent(event);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (handleQuickSizing(event)) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    mInterpolator.pointerPressEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (handleQuickSizing(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>)) {</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
@@ -265,9 +265,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (event-&gt;<a class="code hl_function" href="class_pointer_event.html#a51bcb2093506b8194874487efffc0445">button</a>() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;button() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>)</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        startStroke(event-&gt;inputType());</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        startStroke(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;inputType());</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            mLastBrushPoint = getCurrentPoint();</div>
@@ -291,7 +291,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">//                }</span></div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                <span class="comment">//qDebug() &lt;&lt; &quot;closestCurves:&quot; &lt;&lt; closestCurves &lt;&lt; &quot; | closestVertices&quot; &lt;&lt; closestVertices;</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span> (event-&gt;<a class="code hl_function" href="class_pointer_event.html#a9d969ba3f5a82db0113cfb2a2724ddfa">modifiers</a>() != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a> &amp;&amp; !vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ae9c74e9fda199bc0a8e459961321bf62">isSelected</a>(selectMan-&gt;closestVertices()))</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;modifiers() != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a> &amp;&amp; !vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ae9c74e9fda199bc0a8e459961321bf62">isSelected</a>(selectMan-&gt;closestVertices()))</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                    mEditor-&gt;deselectAll();</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                }</div>
@@ -309,17 +309,17 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    StrokeTool::pointerPressEvent(event);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    StrokeTool::pointerPressEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keywordtype">void</span> SmudgeTool::pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>* event)</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    mInterpolator.pointerMoveEvent(event);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">if</span> (handleQuickSizing(event)) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    mInterpolator.pointerMoveEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">if</span> (handleQuickSizing(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>)) {</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordflow">if</span> (event-&gt;inputType() != mCurrentInputType) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;inputType() != mCurrentInputType) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
@@ -330,7 +330,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">if</span> (event-&gt;<a class="code hl_function" href="class_pointer_event.html#aba1ca4826f7718e8af2ced01cd187510">buttons</a>() &amp; <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>)   <span class="comment">// the user is also pressing the mouse (dragging) {</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;buttons() &amp; <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>)   <span class="comment">// the user is also pressing the mouse (dragging) {</span></div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        {</div>
@@ -338,7 +338,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">else</span> <span class="comment">//if (layer-&gt;type() == Layer::VECTOR)</span></div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">if</span> (event-&gt;<a class="code hl_function" href="class_pointer_event.html#a9d969ba3f5a82db0113cfb2a2724ddfa">modifiers</a>() != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a>)    <span class="comment">// (and the user doesn&#39;t press shift)</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;modifiers() != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a>)    <span class="comment">// (and the user doesn&#39;t press shift)</span></div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            {</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
@@ -370,22 +370,22 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        }</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    StrokeTool::pointerMoveEvent(event);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    StrokeTool::pointerMoveEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keywordtype">void</span> SmudgeTool::pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>* event)</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>{</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    mInterpolator.pointerReleaseEvent(event);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">if</span> (handleQuickSizing(event)) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    mInterpolator.pointerReleaseEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">if</span> (handleQuickSizing(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>)) {</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    }</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">if</span> (event-&gt;inputType() != mCurrentInputType) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;inputType() != mCurrentInputType) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">if</span> (event-&gt;<a class="code hl_function" href="class_pointer_event.html#a51bcb2093506b8194874487efffc0445">button</a>() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>)</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;button() == <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>)</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        mEditor-&gt;backup(typeName());</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
@@ -413,7 +413,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        }</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    }</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    StrokeTool::pointerReleaseEvent(event);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    StrokeTool::pointerReleaseEvent(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>);</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>}</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keywordtype">void</span> SmudgeTool::drawStroke()</div>
@@ -509,9 +509,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00036">layer.h:37</a></div></div>
 <div class="ttc" id="aclass_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:26</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
-<div class="ttc" id="aclass_pointer_event_html_a51bcb2093506b8194874487efffc0445"><div class="ttname"><a href="class_pointer_event.html#a51bcb2093506b8194874487efffc0445">PointerEvent::button</a></div><div class="ttdeci">Qt::MouseButton button() const</div><div class="ttdoc">Returns Qt::MouseButton()</div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8cpp_source.html#l00038">pointerevent.cpp:38</a></div></div>
-<div class="ttc" id="aclass_pointer_event_html_a9d969ba3f5a82db0113cfb2a2724ddfa"><div class="ttname"><a href="class_pointer_event.html#a9d969ba3f5a82db0113cfb2a2724ddfa">PointerEvent::modifiers</a></div><div class="ttdeci">Qt::KeyboardModifiers modifiers() const</div><div class="ttdoc">Returns the modifier created by keyboard while a device was in use.</div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8cpp_source.html#l00144">pointerevent.cpp:144</a></div></div>
-<div class="ttc" id="aclass_pointer_event_html_aba1ca4826f7718e8af2ced01cd187510"><div class="ttname"><a href="class_pointer_event.html#aba1ca4826f7718e8af2ced01cd187510">PointerEvent::buttons</a></div><div class="ttdeci">Qt::MouseButtons buttons() const</div><div class="ttdoc">Returns Qt::MouseButtons()</div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8cpp_source.html#l00054">pointerevent.cpp:54</a></div></div>
 <div class="ttc" id="aclass_smudge_tool_html_aee5890c75ad73904691f8921f5bbf748"><div class="ttname"><a href="class_smudge_tool.html#aee5890c75ad73904691f8921f5bbf748">SmudgeTool::emptyFrameActionEnabled</a></div><div class="ttdeci">bool emptyFrameActionEnabled() override</div><div class="ttdoc">Whether to enable the &quot;drawing on empty frame&quot; preference.</div><div class="ttdef"><b>Definition:</b> <a href="smudgetool_8cpp_source.html#l00100">smudgetool.cpp:100</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00032">stroketool.h:33</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html_a92dfe291f09be113ced6b7a4395bd4dc"><div class="ttname"><a href="class_stroke_tool.html#a92dfe291f09be113ced6b7a4395bd4dc">StrokeTool::loadSettings</a></div><div class="ttdeci">void loadSettings() override</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8cpp_source.html#l00058">stroketool.cpp:58</a></div></div>
@@ -525,12 +522,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
 <div class="ttc" id="aqhash_html_insert"><div class="ttname"><a href="https://doc.qt.io/qt-5/qhash.html#insert">QHash::insert</a></div><div class="ttdeci">QHash::iterator insert(const Key &amp;key, const T &amp;value)</div></div>
 <div class="ttc" id="aqkeyevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a></div></div>
-<div class="ttc" id="aqkeyevent_html_key"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeyevent.html#key">QKeyEvent::key</a></div><div class="ttdeci">int key() const const</div></div>
 <div class="ttc" id="aqlinef_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a></div></div>
 <div class="ttc" id="aqlinef_html_length"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html#length">QLineF::length</a></div><div class="ttdeci">qreal length() const const</div></div>
 <div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
 <div class="ttc" id="aqlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const const</div></div>
 <div class="ttc" id="aqobject_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html">QObject</a></div></div>
+<div class="ttc" id="aqobject_html_event"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#event">QObject::event</a></div><div class="ttdeci">virtual bool event(QEvent *e)</div></div>
 <div class="ttc" id="aqpixmap_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a></div></div>
 <div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="aqrectf_html_toRect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#toRect">QRectF::toRect</a></div><div class="ttdeci">QRect toRect() const const</div></div>
@@ -548,10 +545,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Fri Apr 26 2024 19:33:24 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Apr 27 2024 10:10:21 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 124ec313f96e0dc2002596229a0dc7d2bc380940
+   based on revision d9043356b93fdc159ba5ada2c2d6f6732f9f9f0b
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
