@@ -176,22 +176,23 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> hideInstructionsLabel(<span class="keywordtype">bool</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#hide">hide</a>);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> setInstructionsLabel(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; text);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> browse();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> setPosIndex(<span class="keywordtype">int</span> index) { mPosIndex = index; }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    Ui::ImportExportDialog* ui = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> m_filePaths;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    FileType mFileType = FileType::ANIMATION;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    Mode mMode = Import;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">int</span> mPosIndex = 0;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// IMPORTEXPORTDIALOG_H</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> setOkButtonEnabled(<span class="keywordtype">bool</span> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#enabled-prop">enabled</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> browse();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> setPosIndex(<span class="keywordtype">int</span> index) { mPosIndex = index; }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    Ui::ImportExportDialog* ui = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> m_filePaths;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    FileType mFileType = FileType::ANIMATION;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    Mode mMode = Import;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">int</span> mPosIndex = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// IMPORTEXPORTDIALOG_H</span></div>
 <div class="ttc" id="aclass_import_export_dialog_html"><div class="ttname"><a href="class_import_export_dialog.html">ImportExportDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="importexportdialog_8h_source.html#l00031">importexportdialog.h:32</a></div></div>
 <div class="ttc" id="aqdialog-obsolete_html_extension"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialog-obsolete.html#extension">QDialog::extension</a></div><div class="ttdeci">QWidget * extension() const const</div></div>
 <div class="ttc" id="aqdialog_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a></div></div>
@@ -202,6 +203,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
 <div class="ttc" id="aqstringlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a></div></div>
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
+<div class="ttc" id="aqwidget_html_enabled-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#enabled-prop">QWidget::enabled</a></div><div class="ttdeci">enabled</div></div>
 <div class="ttc" id="aqwidget_html_hide"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#hide">QWidget::hide</a></div><div class="ttdeci">void hide()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
@@ -209,10 +211,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon Apr 29 2024 05:37:33 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Apr 29 2024 09:32:43 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 835545e95d5f43e26e3905973a90a3f09a7d8976
+   based on revision 8c3b530c205b6c4834f06f86cc70fcb70c117b76
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
