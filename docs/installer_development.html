@@ -131,10 +131,10 @@ Prerequisites</h1>
 <li>Both the dotnet and the nuget CLI tool. Installation instructions for these two tools can be found <a href="https://learn.microsoft.com/en-us/nuget/install-nuget-client-tools#cli-tools">on Microsoft Learn</a>.</li>
 <li>rc2po and po2rc from the Translate Toolkit (optional). If you are also building Pencil2D itself from source, these are necessary for translations of the file type associations to be included in the resulting binary. Installation instructions can be found <a href="https://docs.translatehouse.org/projects/translate-toolkit/en/latest/installation.html">in the Translate Toolkit documentation</a>. When using pip to install Translate Toolkit, please make sure to use the <code>translate-toolkit[rc]</code> requirement specifier so that the additional dependencies of the rc2po and po2rc tools are satisfied. Once the installation is complete, you will need to reconfigure your Pencil2D build by recursively re-running qmake. Please pay attention to the output and make sure there are no warnings concerning po2rc. If qmake cannot find po2rc, you can also manually set the PO2RC qmake variable to the path of the po2rc executable.</li>
 <li>Tikal from the <a href="https://okapiframework.org/">Okapi Framework</a>.</li>
-<li>The WiX Toolset as well as its Bal and Util extensions. Use the following commands to install these from the command line: <pre class="fragment">dotnet tool install -g wix
-wix extension add -g WixToolset.Util.wixext WixToolset.Bal.wixext
+<li>The WiX Toolset as well as its BootstrapperApplications and Util extensions. Use the following commands to install these from the command line: <pre class="fragment">dotnet tool install -g wix
+wix extension add -g WixToolset.Util.wixext WixToolset.BootstrapperApplications.wixext
 </pre></li>
-<li>WiX utility libraries. The build system expects these in the util/installer directory. Use the following command to install them from the command line: <pre class="fragment">nuget install -x -OutputDirectory path\to\util\installer WixToolset.BalUtil
+<li>WiX utility libraries. The build system expects these in the util/installer directory. Use the following command to install them from the command line: <pre class="fragment">nuget install -x -OutputDirectory path\to\util\installer WixToolset.WixStandardBootstrapperApplicationFunctionApi
 </pre></li>
 <li>The WiX theme viewer (optional), which can be useful when making changes to the installer's UI layout. It is available from the <a href="https://github.com/wixtoolset/wix/releases">WiX Toolset GitHub releases</a> through the WixAdditionalTools installer.</li>
 <li>Orca (optional), a graphical editor for Windows Installer databases from the Windows SDK which can be useful to inspect the generated database. Installation instructions for Orca can be found <a href="https://learn.microsoft.com/en-us/windows/win32/msi/orca-exe">on Microsoft Learn</a>.</li>
@@ -179,7 +179,7 @@ Preparing for building the bootstrapper</h2>
 Building the bootstrapper</h2>
 <p>Before the bootstrapper can be built, the localisation files need to be converted from the standard XLIFF format to WiX’s proprietary format. To do this, first create a copy of the util/installer/pencil2d.wxl file named pencil2d_LOCALE.wxl for every pencil2d_LOCALE.wxl.xlf file in util/installer/translations, where LOCALE is the locale of the translation, such as de or pt_BR. Then, in each of those files, replace the contents of the Culture and Language tags with the translation's locale and decimal LCID, respectively. Finally, run the following command to copy the translations from the XLIFF file to the newly created WiX localisation file: </p><pre class="fragment">tikal.bat -m -fc path\to\util\installer\okf_xml_wxl -ie utf-8 -oe utf-8 -sd path\to\util\installer -od path\to\util\installer path\to\util\installer\translations\pencil2d_LOCALE.wxl.xlf
 </pre><p> Available LCIDs are listed in the <a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/">Windows Language Code Identifier (LCID) Reference</a>.</p>
-<p>Finally, building the bootstrapper requires the same version information as the Windows Installer database. Use the following command to build it: </p><pre class="fragment">wix build -arch x64 -sw1133 -b path\to\util\installer -b DISTDIR -ext WixToolset.Util.wixext -ext WixToolset.Bal.wixext -d Edition=Release -d Version=X.X.X -out pencil2d-win64-X.X.X.exe path\to\util\installer\pencil2d.bundle.wxs
+<p>Finally, building the bootstrapper requires the same version information as the Windows Installer database. Use the following command to build it: </p><pre class="fragment">wix build -arch x64 -sw1133 -b path\to\util\installer -b DISTDIR -ext WixToolset.Util.wixext -ext WixToolset.BootstrapperApplications.wixext -d Edition=Release -d Version=X.X.X -out pencil2d-win64-X.X.X.exe path\to\util\installer\pencil2d.bundle.wxs
 </pre><p> Again, in order to build for something other than 64-bit x86, replace x64 and win64 accordingly. It may be necessary to add the directories containing the Windows Installer database or pencil2d.dll to WiX’s search path using the <code>-b</code> option depending on where you created them.</p>
 <h1><a class="anchor" id="autotoc_md54"></a>
 Making changes</h1>
@@ -205,10 +205,10 @@ Incremental builds</h2>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 16 2024 08:44:57 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun May 19 2024 08:53:13 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision d24487fc3101dfc474f05122328d762ba726f729
+   based on revision b534c8c7b7988bb57bd3cab74252c6668e4880a1
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
