@@ -1,0 +1,4 @@
+<map id="FileDialog" name="FileDialog">
+<area shape="rect" id="node1" title="A wrapper around QFileDialog which remembers selected paths." alt="" coords="5,84,107,115"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="11,5,101,36"/>
+</map>

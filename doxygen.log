@@ -1,4 +1,5 @@
 Doxygen version used: 1.9.6 (4586b5cfaa3d46d51f6a51882951d15644c49edf)
+Parsing layout file util/docs/layout.xml...
 Searching for include files...
 Searching for example files...
 Searching for images...
@@ -50,8 +51,7 @@ Reading tag file 'util/docs/qtgui.tags', location 'https://doc.qt.io/qt-5/'...
 Reading tag file 'util/docs/qtnetwork.tags', location 'https://doc.qt.io/qt-5/'...
 Reading tag file 'util/docs/qtsvg.tags', location 'https://doc.qt.io/qt-5/'...
 Reading tag file 'util/docs/qttestlib.tags', location 'https://doc.qt.io/qt-5/'...
-Reading tag file 'util/docs/qtwidgets.tags', location 'https://doc.qt.io/qt-5/'...
-Reading tag error: Tag file '/usr/share/qt5/doc/qtcore/qtcore.tags' does not exist or is not a file. Skipping it...
+Reading tag file 'util/docs/qtwidgets.tags', locatierror: Tag file '/usr/share/qt5/doc/qtcore/qtcore.tags' does not exist or is not a file. Skipping it...
 error: Tag file '/usr/share/qt5/doc/qtgui/qtgui.tags' does not exist or is not a file. Skipping it...
 error: Tag file '/usr/share/qt5/doc/qtnetwork/qtnetwork.tags' does not exist or is not a file. Skipping it...
 error: Tag file '/usr/share/qt5/doc/qtsvg/qtsvg.tags' does not exist or is not a file. Skipping it...
@@ -65,7 +65,8 @@ error: Tag file '/usr/share/doc/qt/qtsvg/qtsvg.tags' does not exist or is not a 
 error: Tag file '/usr/share/doc/qt/qttestlib/qttestlib.tags' does not exist or is not a file. Skipping it...
 error: Tag file '/usr/share/doc/qt/qtwidgets/qtwidgets.tags' does not exist or is not a file. Skipping it...
 error: Tag file '/usr/share/doc/qt/qtxml/qtxml.tags' does not exist or is not a file. Skipping it...
-file 'util/docs/qtxml.tags', location 'https://doc.qt.io/qt-5/'...
+on 'https://doc.qt.io/qt-5/'...
+Reading tag file 'util/docs/qtxml.tags', location 'https://doc.qt.io/qt-5/'...
 Parsing files
 Preprocessing /home/runner/work/pencil/pencil/app/src/aboutdialog.cpp...
 Parsing file /home/runner/work/pencil/pencil/app/src/aboutdialog.cpp...
@@ -931,7 +932,7 @@ Generating code for file core_lib/src/util/pencildef.h...
 Generating code for file core_lib/src/util/pencilerror.cpp...
 Generating code for file core_lib/src/util/pencilerror.h...
 Generating code for file core_lib/src/util/pencilsettings.cpp...
-Generating code for file core_lib/src/util/pencils/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapbucket.h:52: warning: The following parameter of BitmapBucket::allowFill(const QPoint &checkPoint, const QRgb &checkColor) const is not documented:
+Genera/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapbucket.h:52: warning: The following parameter of BitmapBucket::allowFill(const QPoint &checkPoint, const QRgb &checkColor) const is not documented:
   parameter 'checkColor'
 /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:980: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
 /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:980: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
@@ -945,7 +946,7 @@ Generating code for file core_lib/src/util/pencils/home/runner/work/pencil/penci
   parameter 'device'
 /home/runner/work/pencil/pencil/core_lib/src/canvaspainter.cpp:395: warning: The following parameter of CanvasPainter::paintCurrentFrame(QPainter &painter, const QRect &blitRect, int startLayer, int endLayer) is not documented:
   parameter 'blitRect'
-ettings.h...
+ting code for file core_lib/src/util/pencilsettings.h...
 Generating code for file core_lib/src/util/pointerevent.cpp...
 Generating code for file core_lib/src/util/pointerevent.h...
 Generating code for file core_lib/src/util/preferencesdef.h...
@@ -1031,10 +1032,10 @@ Generating docs for compound KeyFrame...
 Generating docs for compound KeyFrameEventListener...
 Generating docs for compound Layer...
 Generating docs for compound LayerBitmap...
-Generating docs for compound LayerCamera...
 /home/runner/work/pencil/pencil/core_lib/src/managers/selectionmanager.h:133: warning: argument 'currentPosition' of command @param is not found in the argument list of SelectionManager::alignPositionToAxis(QPointF currentPoint) const
 /home/runner/work/pencil/pencil/core_lib/src/managers/selectionmanager.h:133: warning: The following parameter of SelectionManager::alignPositionToAxis(QPointF currentPoint) const is not documented:
   parameter 'currentPoint'
+Generating docs for compound LayerCamera...
 Generating docs for compound LayerManager...
 Generating docs for compound LayerOpacityDialog...
 Generating docs for compound LayerSound...
@@ -1122,6 +1123,20 @@ Generating concept documentation...
 Generating namespace index...
 Generating graph info page...
 Generating directory documentation...
+Generating dependency graph for directory core_lib/src/graphics/bitmap
+Generating dependency graph for directory core_lib/src/external
+Generating dependency graph for directory core_lib/src/graphics
+Generating dependency graph for directory core_lib/src/interface
+Generating dependency graph for directory core_lib/src/external/linux
+Generating dependency graph for directory core_lib/src/external/macosx
+Generating dependency graph for directory core_lib/src/managers
+Generating dependency graph for directory app/src
+Generating dependency graph for directory core_lib/src
+Generating dependency graph for directory core_lib/src/structure
+Generating dependency graph for directory core_lib/src/tool
+Generating dependency graph for directory core_lib/src/util
+Generating dependency graph for directory core_lib/src/graphics/vector
+Generating dependency graph for directory core_lib/src/external/win32
 Generating index page...
 Generating page index...
 Generating module index...
@@ -1131,6 +1146,7 @@ Generating concept index...
 Generating annotated compound index...
 Generating alphabetical compound index...
 Generating hierarchical class index...
+Generating graphical class hierarchy...
 Generating member index...
 Generating file index...
 Generating file member index...
@@ -1138,6 +1154,464 @@ Generating example index...
 finalizing index lists...
 writing tag file...
 Running plantuml with JAVA...
-type lookup cache used 17355/65536 hits=124698 misses=18427
-symbol lookup cache used 17818/65536 hits=201704 misses=17818
+Running dot...
+Generating dot graphs using 5 parallel threads...
+Running dot for graph 1/306
+Running dot for graph 2/306
+Running dot for graph 3/306
+Running dot for graph 4/306
+Running dot for graph 5/306
+Running dot for graph 6/306
+Running dot for graph 7/306
+Running dot for graph 8/306
+Running dot for graph 9/306
+Running dot for graph 10/306
+Running dot for graph 11/306
+Running dot for graph 12/306
+Running dot for graph 13/306
+Running dot for graph 14/306
+Running dot for graph 15/306
+Running dot for graph 16/306
+Running dot for graph 17/306
+Running dot for graph 18/306
+Running dot for graph 19/306
+Running dot for graph 20/306
+Running dot for graph 21/306
+Running dot for graph 22/306
+Running dot for graph 23/306
+Running dot for graph 24/306
+Running dot for graph 25/306
+Running dot for graph 26/306
+Running dot for graph 27/306
+Running dot for graph 28/306
+Running dot for graph 29/306
+Running dot for graph 30/306
+Running dot for graph 31/306
+Running dot for graph 32/306
+Running dot for graph 33/306
+Running dot for graph 34/306
+Running dot for graph 35/306
+Running dot for graph 36/306
+Running dot for graph 37/306
+Running dot for graph 38/306
+Running dot for graph 39/306
+Running dot for graph 40/306
+Running dot for graph 41/306
+Running dot for graph 42/306
+Running dot for graph 43/306
+Running dot for graph 44/306
+Running dot for graph 45/306
+Running dot for graph 46/306
+Running dot for graph 47/306
+Running dot for graph 48/306
+Running dot for graph 49/306
+Running dot for graph 50/306
+Running dot for graph 51/306
+Running dot for graph 52/306
+Running dot for graph 53/306
+Running dot for graph 54/306
+Running dot for graph 55/306
+Running dot for graph 56/306
+Running dot for graph 57/306
+Running dot for graph 58/306
+Running dot for graph 59/306
+Running dot for graph 60/306
+Running dot for graph 61/306
+Running dot for graph 62/306
+Running dot for graph 63/306
+Running dot for graph 64/306
+Running dot for graph 65/306
+Running dot for graph 66/306
+Running dot for graph 67/306
+Running dot for graph 68/306
+Running dot for graph 69/306
+Running dot for graph 70/306
+Running dot for graph 71/306
+Running dot for graph 72/306
+Running dot for graph 73/306
+Running dot for graph 74/306
+Running dot for graph 75/306
+Running dot for graph 76/306
+Running dot for graph 77/306
+Running dot for graph 78/306
+Running dot for graph 79/306
+Running dot for graph 80/306
+Running dot for graph 81/306
+Running dot for graph 82/306
+Running dot for graph 83/306
+Running dot for graph 84/306
+Running dot for graph 85/306
+Running dot for graph 86/306
+Running dot for graph 87/306
+Running dot for graph 88/306
+Running dot for graph 89/306
+Running dot for graph 90/306
+Running dot for graph 91/306
+Running dot for graph 92/306
+Running dot for graph 93/306
+Running dot for graph 94/306
+Running dot for graph 95/306
+Running dot for graph 96/306
+Running dot for graph 97/306
+Running dot for graph 98/306
+Running dot for graph 99/306
+Running dot for graph 100/306
+Running dot for graph 101/306
+Running dot for graph 102/306
+Running dot for graph 103/306
+Running dot for graph 104/306
+Running dot for graph 105/306
+Running dot for graph 106/306
+Running dot for graph 107/306
+Running dot for graph 108/306
+Running dot for graph 109/306
+Running dot for graph 110/306
+Running dot for graph 111/306
+Running dot for graph 112/306
+Running dot for graph 113/306
+Running dot for graph 114/306
+Running dot for graph 115/306
+Running dot for graph 116/306
+Running dot for graph 117/306
+Running dot for graph 118/306
+Running dot for graph 119/306
+Running dot for graph 120/306
+Running dot for graph 121/306
+Running dot for graph 122/306
+Running dot for graph 123/306
+Running dot for graph 124/306
+Running dot for graph 125/306
+Running dot for graph 126/306
+Running dot for graph 127/306
+Running dot for graph 128/306
+Running dot for graph 129/306
+Running dot for graph 130/306
+Running dot for graph 131/306
+Running dot for graph 132/306
+Running dot for graph 133/306
+Running dot for graph 134/306
+Running dot for graph 135/306
+Running dot for graph 136/306
+Running dot for graph 137/306
+Running dot for graph 138/306
+Running dot for graph 139/306
+Running dot for graph 140/306
+Running dot for graph 141/306
+Running dot for graph 142/306
+Running dot for graph 143/306
+Running dot for graph 144/306
+Running dot for graph 145/306
+Running dot for graph 146/306
+Running dot for graph 147/306
+Running dot for graph 148/306
+Running dot for graph 149/306
+Running dot for graph 150/306
+Running dot for graph 151/306
+Running dot for graph 152/306
+Running dot for graph 153/306
+Running dot for graph 154/306
+Running dot for graph 155/306
+Running dot for graph 156/306
+Running dot for graph 157/306
+Running dot for graph 158/306
+Running dot for graph 159/306
+Running dot for graph 160/306
+Running dot for graph 161/306
+Running dot for graph 162/306
+Running dot for graph 163/306
+Running dot for graph 164/306
+Running dot for graph 165/306
+Running dot for graph 166/306
+Running dot for graph 167/306
+Running dot for graph 168/306
+Running dot for graph 169/306
+Running dot for graph 170/306
+Running dot for graph 171/306
+Running dot for graph 172/306
+Running dot for graph 173/306
+Running dot for graph 174/306
+Running dot for graph 175/306
+Running dot for graph 176/306
+Running dot for graph 177/306
+Running dot for graph 178/306
+Running dot for graph 179/306
+Running dot for graph 180/306
+Running dot for graph 181/306
+Running dot for graph 182/306
+Running dot for graph 183/306
+Running dot for graph 184/306
+Running dot for graph 185/306
+Running dot for graph 186/306
+Running dot for graph 187/306
+Running dot for graph 188/306
+Running dot for graph 189/306
+Running dot for graph 190/306
+Running dot for graph 191/306
+Running dot for graph 192/306
+Running dot for graph 193/306
+Running dot for graph 194/306
+Running dot for graph 195/306
+Running dot for graph 196/306
+Running dot for graph 197/306
+Running dot for graph 198/306
+Running dot for graph 199/306
+Running dot for graph 200/306
+Running dot for graph 201/306
+Running dot for graph 202/306
+Running dot for graph 203/306
+Running dot for graph 204/306
+Running dot for graph 205/306
+Running dot for graph 206/306
+Running dot for graph 207/306
+Running dot for graph 208/306
+Running dot for graph 209/306
+Running dot for graph 210/306
+Running dot for graph 211/306
+Running dot for graph 212/306
+Running dot for graph 213/306
+Running dot for graph 214/306
+Running dot for graph 215/306
+Running dot for graph 216/306
+Running dot for graph 217/306
+Running dot for graph 218/306
+Running dot for graph 219/306
+Running dot for graph 220/306
+Running dot for graph 221/306
+Running dot for graph 222/306
+Running dot for graph 223/306
+Running dot for graph 224/306
+Running dot for graph 225/306
+Running dot for graph 226/306
+Running dot for graph 227/306
+Running dot for graph 228/306
+Running dot for graph 229/306
+Running dot for graph 230/306
+Running dot for graph 231/306
+Running dot for graph 232/306
+Running dot for graph 233/306
+Running dot for graph 234/306
+Running dot for graph 235/306
+Running dot for graph 236/306
+Running dot for graph 237/306
+Running dot for graph 238/306
+Running dot for graph 239/306
+Running dot for graph 240/306
+Running dot for graph 241/306
+Running dot for graph 242/306
+Running dot for graph 243/306
+Running dot for graph 244/306
+Running dot for graph 245/306
+Running dot for graph 246/306
+Running dot for graph 247/306
+Running dot for graph 248/306
+Running dot for graph 249/306
+Running dot for graph 250/306
+Running dot for graph 251/306
+Running dot for graph 252/306
+Running dot for graph 253/306
+Running dot for graph 254/306
+Running dot for graph 255/306
+Running dot for graph 256/306
+Running dot for graph 257/306
+Running dot for graph 258/306
+Running dot for graph 259/306
+Running dot for graph 260/306
+Running dot for graph 261/306
+Running dot for graph 262/306
+Running dot for graph 263/306
+Running dot for graph 264/306
+Running dot for graph 265/306
+Running dot for graph 266/306
+Running dot for graph 267/306
+Running dot for graph 268/306
+Running dot for graph 269/306
+Running dot for graph 270/306
+Running dot for graph 271/306
+Running dot for graph 272/306
+Running dot for graph 273/306
+Running dot for graph 274/306
+Running dot for graph 275/306
+Running dot for graph 276/306
+Running dot for graph 277/306
+Running dot for graph 278/306
+Running dot for graph 279/306
+Running dot for graph 280/306
+Running dot for graph 281/306
+Running dot for graph 282/306
+Running dot for graph 283/306
+Running dot for graph 284/306
+Running dot for graph 285/306
+Running dot for graph 286/306
+Running dot for graph 287/306
+Running dot for graph 288/306
+Running dot for graph 289/306
+Running dot for graph 290/306
+Running dot for graph 291/306
+Running dot for graph 292/306
+Running dot for graph 293/306
+Running dot for graph 294/306
+Running dot for graph 295/306
+Running dot for graph 296/306
+Running dot for graph 297/306
+Running dot for graph 298/306
+Running dot for graph 299/306
+Running dot for graph 300/306
+Running dot for graph 301/306
+Running dot for graph 302/306
+Running dot for graph 303/306
+Running dot for graph 304/306
+Running dot for graph 305/306
+Running dot for graph 306/306
+Patching output file 1/150
+Patching output file 2/150
+Patching output file 3/150
+Patching output file 4/150
+Patching output file 5/150
+Patching output file 6/150
+Patching output file 7/150
+Patching output file 8/150
+Patching output file 9/150
+Patching output file 10/150
+Patching output file 11/150
+Patching output file 12/150
+Patching output file 13/150
+Patching output file 14/150
+Patching output file 15/150
+Patching output file 16/150
+Patching output file 17/150
+Patching output file 18/150
+Patching output file 19/150
+Patching output file 20/150
+Patching output file 21/150
+Patching output file 22/150
+Patching output file 23/150
+Patching output file 24/150
+Patching output file 25/150
+Patching output file 26/150
+Patching output file 27/150
+Patching output file 28/150
+Patching output file 29/150
+Patching output file 30/150
+Patching output file 31/150
+Patching output file 32/150
+Patching output file 33/150
+Patching output file 34/150
+Patching output file 35/150
+Patching output file 36/150
+Patching output file 37/150
+Patching output file 38/150
+Patching output file 39/150
+Patching output file 40/150
+Patching output file 41/150
+Patching output file 42/150
+Patching output file 43/150
+Patching output file 44/150
+Patching output file 45/150
+Patching output file 46/150
+Patching output file 47/150
+Patching output file 48/150
+Patching output file 49/150
+Patching output file 50/150
+Patching output file 51/150
+Patching output file 52/150
+Patching output file 53/150
+Patching output file 54/150
+Patching output file 55/150
+Patching output file 56/150
+Patching output file 57/150
+Patching output file 58/150
+Patching output file 59/150
+Patching output file 60/150
+Patching output file 61/150
+Patching output file 62/150
+Patching output file 63/150
+Patching output file 64/150
+Patching output file 65/150
+Patching output file 66/150
+Patching output file 67/150
+Patching output file 68/150
+Patching output file 69/150
+Patching output file 70/150
+Patching output file 71/150
+Patching output file 72/150
+Patching output file 73/150
+Patching output file 74/150
+Patching output file 75/150
+Patching output file 76/150
+Patching output file 77/150
+Patching output file 78/150
+Patching output file 79/150
+Patching output file 80/150
+Patching output file 81/150
+Patching output file 82/150
+Patching output file 83/150
+Patching output file 84/150
+Patching output file 85/150
+Patching output file 86/150
+Patching output file 87/150
+Patching output file 88/150
+Patching output file 89/150
+Patching output file 90/150
+Patching output file 91/150
+Patching output file 92/150
+Patching output file 93/150
+Patching output file 94/150
+Patching output file 95/150
+Patching output file 96/150
+Patching output file 97/150
+Patching output file 98/150
+Patching output file 99/150
+Patching output file 100/150
+Patching output file 101/150
+Patching output file 102/150
+Patching output file 103/150
+Patching output file 104/150
+Patching output file 105/150
+Patching output file 106/150
+Patching output file 107/150
+Patching output file 108/150
+Patching output file 109/150
+Patching output file 110/150
+Patching output file 111/150
+Patching output file 112/150
+Patching output file 113/150
+Patching output file 114/150
+Patching output file 115/150
+Patching output file 116/150
+Patching output file 117/150
+Patching output file 118/150
+Patching output file 119/150
+Patching output file 120/150
+Patching output file 121/150
+Patching output file 122/150
+Patching output file 123/150
+Patching output file 124/150
+Patching output file 125/150
+Patching output file 126/150
+Patching output file 127/150
+Patching output file 128/150
+Patching output file 129/150
+Patching output file 130/150
+Patching output file 131/150
+Patching output file 132/150
+Patching output file 133/150
+Patching output file 134/150
+Patching output file 135/150
+Patching output file 136/150
+Patching output file 137/150
+Patching output file 138/150
+Patching output file 139/150
+Patching output file 140/150
+Patching output file 141/150
+Patching output file 142/150
+Patching output file 143/150
+Patching output file 144/150
+Patching output file 145/150
+Patching output file 146/150
+Patching output file 147/150
+Patching output file 148/150
+Patching output file 149/150
+Patching output file 150/150
+type lookup cache used 17355/65536 hits=124694 misses=18427
+symbol lookup cache used 17785/65536 hits=201012 misses=17785
 finished...

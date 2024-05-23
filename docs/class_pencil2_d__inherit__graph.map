@@ -1,0 +1,7 @@
+<map id="Pencil2D" name="Pencil2D">
+<area shape="rect" id="node1" title="The main application class handling startup as well as the main loop." alt="" coords="42,320,135,351"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qapplication.html" title=" " alt="" coords="25,241,152,272"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qguiapplication.html" title=" " alt="" coords="11,163,166,193"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qcoreapplication.html" title=" " alt="" coords="5,84,172,115"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="44,5,133,36"/>
+</map>

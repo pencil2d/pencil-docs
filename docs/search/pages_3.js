@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pencil2d_20developer_20documentation_0',['Pencil2D Developer Documentation',['../index.html',1,'']]]
+  ['navigating_20the_20source_20code_0',['Navigating the source code',['../code_overview.html',1,'']]]
 ];

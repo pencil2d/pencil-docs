@@ -1,0 +1,7 @@
+<map id="Layer" name="Layer">
+<area shape="rect" id="node1" title=" " alt="" coords="261,5,328,36"/>
+<area shape="rect" id="node2" href="$class_layer_bitmap.html" title=" " alt="" coords="5,84,131,115"/>
+<area shape="rect" id="node3" href="$class_layer_camera.html" title=" " alt="" coords="155,84,285,115"/>
+<area shape="rect" id="node4" href="$class_layer_sound.html" title=" " alt="" coords="310,84,431,115"/>
+<area shape="rect" id="node5" href="$class_layer_vector.html" title=" " alt="" coords="455,84,574,115"/>
+</map>

@@ -364,7 +364,7 @@ function SearchBox(name, resultsPath, extension)
         var left = getXPos(domSearchBox) + 150;
         var top  = getYPos(domSearchBox) + 20;
         domPopupSearchResultsWindow.style.display = 'block';
-        left -= domPopupSearchResults.offsetWidth;
+        left -= domPopupSearchResults.offsetWidth - domPopupSearchResultsWindow.clientWidth - parseFloat(getComputedStyle(domPopupSearchResultsWindow).borderLeftWidth) - parseFloat(getComputedStyle(domPopupSearchResultsWindow).borderRightWidth) + domPopupSearchResultsWindow.offsetWidth;
         var maxWidth  = document.body.clientWidth;
         var maxHeight = document.body.clientHeight;
         var width = 300;
