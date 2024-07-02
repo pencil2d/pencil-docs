@@ -9,41 +9,41 @@ Searching for dia files...
 Searching for files to exclude
 Searching INPUT for files to process...
 Searching for files in directory /home/runner/work/pencil/pencil/app
+Searching for files in directory /home/runner/work/pencil/pencil/app/src
 Searching for files in directory /home/runner/work/pencil/pencil/app/data
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/general
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/tools
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/preferences
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/menubar
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/misc
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/display
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/controls
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/tools
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/timeline
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/onion
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/menubar
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/preferences
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/general
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/background
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/display
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/controls
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/resources
-Searching for files in directory /home/runner/work/pencil/pencil/app/translations
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/background
 Searching for files in directory /home/runner/work/pencil/pencil/app/ui
-Searching for files in directory /home/runner/work/pencil/pencil/app/src
+Searching for files in directory /home/runner/work/pencil/pencil/app/translations
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/icons
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/resources
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/interface
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/tool
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/util
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/structure
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/managers
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/win32
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/macosx
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/linux
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/vector
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/util
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/managers
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/linux
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/win32
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/macosx
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/structure
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/interface
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/icons
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/resources
 Searching for files in directory /home/runner/work/pencil/pencil/docs
 Reading and parsing tag files
 Reading tag file 'util/docs/qtcore.tags', location 'https://doc.qt.io/qt-5/'...
@@ -1612,6 +1612,6 @@ Patching output file 147/150
 Patching output file 148/150
 Patching output file 149/150
 Patching output file 150/150
-type lookup cache used 17362/65536 hits=124756 misses=18434
-symbol lookup cache used 17798/65536 hits=201047 misses=17798
+type lookup cache used 17363/65536 hits=124764 misses=18435
+symbol lookup cache used 17800/65536 hits=201053 misses=17800
 finished...

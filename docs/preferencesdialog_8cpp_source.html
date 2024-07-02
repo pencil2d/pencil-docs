@@ -141,62 +141,69 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ui(new Ui::<a class="code hl_class" href="class_preferences_dialog.html">PreferencesDialog</a>)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ui-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setupUi">setupUi</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>PreferencesDialog::~PreferencesDialog()</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">delete</span> ui;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> PreferencesDialog::init(<a class="code hl_class" href="class_preference_manager.html">PreferenceManager</a>* m)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    Q_ASSERT(m != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    mPrefManager = m;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    ui-&gt;general-&gt;setManager(mPrefManager);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    ui-&gt;general-&gt;updateValues();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    ui-&gt;filesPage-&gt;setManager(mPrefManager);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    ui-&gt;filesPage-&gt;updateValues();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    ui-&gt;timeline-&gt;setManager(mPrefManager);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    ui-&gt;timeline-&gt;updateValues();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    ui-&gt;tools-&gt;setManager(mPrefManager);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ui-&gt;tools-&gt;updateValues();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    ui-&gt;shortcuts-&gt;setManager(mPrefManager);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;general, &amp;GeneralPage::windowOpacityChange, <span class="keyword">this</span>, &amp;PreferencesDialog::windowOpacityChange);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;timeline, &amp;TimelinePage::soundScrubChanged, <span class="keyword">this</span>, &amp;PreferencesDialog::soundScrubChanged);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;timeline, &amp;TimelinePage::soundScrubMsecChanged, <span class="keyword">this</span>, &amp;PreferencesDialog::soundScrubMsecChanged);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;filesPage, &amp;FilesPage::clearRecentList, <span class="keyword">this</span>, &amp;PreferencesDialog::clearRecentList);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;buttonBox, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#rejected">QDialogButtonBox::rejected</a>, <span class="keyword">this</span>, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#close">PreferencesDialog::close</a>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">auto</span> onCurrentItemChanged = <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidget.html">QListWidget</a>::*)(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>*, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>*)<span class="keyword">&gt;</span>(&amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidget.html#currentItemChanged">QListWidget::currentItemChanged</a>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;contentsWidget, onCurrentItemChanged, <span class="keyword">this</span>, &amp;PreferencesDialog::changePage);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> PreferencesDialog::closeEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcloseevent.html">QCloseEvent</a>*)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialog.html#done">done</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdialog.html#DialogCode-enum">QDialog::Accepted</a>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> PreferencesDialog::changePage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* current, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* previous)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (!current)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        current = previous;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    ui-&gt;pagesWidget-&gt;setCurrentIndex(ui-&gt;contentsWidget-&gt;row(current));</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> PreferencesDialog::updateRecentListBtn(<span class="keywordtype">bool</span> isEmpty)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">if</span> (isEmpty)</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        emit updateRecentFileListBtn();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 0 + 1 * ui-&gt;contentsWidget-&gt;count(); i++) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item = ui-&gt;contentsWidget-&gt;item(i);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// Fill entire width</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setSizeHint">setSizeHint</a>({std::numeric_limits&lt;int&gt;::max(),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                           ui-&gt;contentsWidget-&gt;visualItemRect(item).height()});</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>PreferencesDialog::~PreferencesDialog()</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">delete</span> ui;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> PreferencesDialog::init(<a class="code hl_class" href="class_preference_manager.html">PreferenceManager</a>* m)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Q_ASSERT(m != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    mPrefManager = m;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    ui-&gt;general-&gt;setManager(mPrefManager);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ui-&gt;general-&gt;updateValues();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ui-&gt;filesPage-&gt;setManager(mPrefManager);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ui-&gt;filesPage-&gt;updateValues();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ui-&gt;timeline-&gt;setManager(mPrefManager);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    ui-&gt;timeline-&gt;updateValues();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    ui-&gt;tools-&gt;setManager(mPrefManager);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ui-&gt;tools-&gt;updateValues();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    ui-&gt;shortcuts-&gt;setManager(mPrefManager);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;general, &amp;GeneralPage::windowOpacityChange, <span class="keyword">this</span>, &amp;PreferencesDialog::windowOpacityChange);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;timeline, &amp;TimelinePage::soundScrubChanged, <span class="keyword">this</span>, &amp;PreferencesDialog::soundScrubChanged);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;timeline, &amp;TimelinePage::soundScrubMsecChanged, <span class="keyword">this</span>, &amp;PreferencesDialog::soundScrubMsecChanged);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;filesPage, &amp;FilesPage::clearRecentList, <span class="keyword">this</span>, &amp;PreferencesDialog::clearRecentList);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;buttonBox, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#rejected">QDialogButtonBox::rejected</a>, <span class="keyword">this</span>, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#close">PreferencesDialog::close</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> onCurrentItemChanged = <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidget.html">QListWidget</a>::*)(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>*, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>*)<span class="keyword">&gt;</span>(&amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidget.html#currentItemChanged">QListWidget::currentItemChanged</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#connect">connect</a>(ui-&gt;contentsWidget, onCurrentItemChanged, <span class="keyword">this</span>, &amp;PreferencesDialog::changePage);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> PreferencesDialog::closeEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcloseevent.html">QCloseEvent</a>*)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialog.html#done">done</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdialog.html#DialogCode-enum">QDialog::Accepted</a>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> PreferencesDialog::changePage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* current, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* previous)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span> (!current)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        current = previous;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    ui-&gt;pagesWidget-&gt;setCurrentIndex(ui-&gt;contentsWidget-&gt;row(current));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">void</span> PreferencesDialog::updateRecentListBtn(<span class="keywordtype">bool</span> isEmpty)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> (isEmpty)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        emit updateRecentFileListBtn();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 <div class="ttc" id="aclass_preference_manager_html"><div class="ttname"><a href="class_preference_manager.html">PreferenceManager</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencemanager_8h_source.html#l00027">preferencemanager.h:28</a></div></div>
 <div class="ttc" id="aclass_preferences_dialog_html"><div class="ttname"><a href="class_preferences_dialog.html">PreferencesDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="preferencesdialog_8h_source.html#l00029">preferencesdialog.h:30</a></div></div>
 <div class="ttc" id="aqcloseevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcloseevent.html">QCloseEvent</a></div></div>
@@ -207,6 +214,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqlistwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlistwidget.html">QListWidget</a></div></div>
 <div class="ttc" id="aqlistwidget_html_currentItemChanged"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlistwidget.html#currentItemChanged">QListWidget::currentItemChanged</a></div><div class="ttdeci">void currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)</div></div>
 <div class="ttc" id="aqlistwidgetitem_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a></div></div>
+<div class="ttc" id="aqlistwidgetitem_html_setSizeHint"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setSizeHint">QListWidgetItem::setSizeHint</a></div><div class="ttdeci">void setSizeHint(const QSize &amp;size)</div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
 <div class="ttc" id="aqwidget_html_close"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#close">QWidget::close</a></div><div class="ttdeci">bool close()</div></div>
@@ -217,10 +225,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Jun 19 2024 05:50:15 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Jul 2 2024 05:28:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision a7cfa31ece6dc5e37f3c5649033877541edc92ca
+   based on revision 258c31be940aacf777776cc5b1053dc8204770a1
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
