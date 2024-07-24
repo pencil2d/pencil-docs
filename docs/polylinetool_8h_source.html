@@ -156,30 +156,33 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> pointerDoubleClickEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> keyPressEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> clearToolData() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> setWidth(<span class="keyword">const</span> qreal width) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> setFeather(<span class="keyword">const</span> qreal feather) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> setAA(<span class="keyword">const</span> <span class="keywordtype">int</span> AA) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">leavingThisTool</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> keyReleaseEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> clearToolData() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> setWidth(<span class="keyword">const</span> qreal width) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> setFeather(<span class="keyword">const</span> qreal feather) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> setAA(<span class="keyword">const</span> <span class="keywordtype">int</span> AA) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> setClosedPath(<span class="keyword">const</span> <span class="keywordtype">bool</span> closed) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">isActive</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">leavingThisTool</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> mPoints;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> drawPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> endPoint);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> cancelPolyline();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> endPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">// POLYLINETOOL_H</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">isActive</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> mPoints;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> mClosedPathOverrideEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> drawPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> endPoint);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> cancelPolyline();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> endPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// POLYLINETOOL_H</span></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_polyline_tool_html"><div class="ttname"><a href="class_polyline_tool.html">PolylineTool</a></div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8h_source.html#l00025">polylinetool.h:26</a></div></div>
-<div class="ttc" id="aclass_polyline_tool_html_a8b8fc17180b250d723ac9328b27ba0f2"><div class="ttname"><a href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">PolylineTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8cpp_source.html#l00107">polylinetool.cpp:107</a></div></div>
-<div class="ttc" id="aclass_polyline_tool_html_ad4048304b08aa8204373522fce1bc786"><div class="ttname"><a href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">PolylineTool::leavingThisTool</a></div><div class="ttdeci">bool leavingThisTool() override</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8cpp_source.html#l00097">polylinetool.cpp:97</a></div></div>
+<div class="ttc" id="aclass_polyline_tool_html_a8b8fc17180b250d723ac9328b27ba0f2"><div class="ttname"><a href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">PolylineTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8cpp_source.html#l00120">polylinetool.cpp:120</a></div></div>
+<div class="ttc" id="aclass_polyline_tool_html_ad4048304b08aa8204373522fce1bc786"><div class="ttname"><a href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">PolylineTool::leavingThisTool</a></div><div class="ttdeci">bool leavingThisTool() override</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8cpp_source.html#l00110">polylinetool.cpp:110</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00032">stroketool.h:33</a></div></div>
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
 <div class="ttc" id="aqkeyevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a></div></div>
@@ -195,10 +198,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Jul 20 2024 09:46:54 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Jul 24 2024 19:11:14 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision eba8d6db44a31ce9574bb76076b90bbbe64b81c9
+   based on revision 92c2281bbbae9797319b6182daf6b8ef4635e36e
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

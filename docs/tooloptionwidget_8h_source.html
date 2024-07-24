@@ -183,22 +183,23 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> setStabilizerLevel(<span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> setFillContour(<span class="keywordtype">int</span>);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> setBezier(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> setShowSelectionInfo(<span class="keywordtype">bool</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> disableAllOptions();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> setVisibility(<a class="code hl_class" href="class_base_tool.html">BaseTool</a>*);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> createUI();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    Ui::ToolOptions* ui = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_class" href="class_bucket_options_widget.html">BucketOptionsWidget</a>* mBucketOptionsWidget = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_class" href="class_camera_options_widget.html">CameraOptionsWidget</a>* mCameraOptionsWidget = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">// TOOLOPTIONDOCKWIDGET_H</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> setClosedPath(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> setShowSelectionInfo(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> disableAllOptions();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> setVisibility(<a class="code hl_class" href="class_base_tool.html">BaseTool</a>*);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> createUI();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    Ui::ToolOptions* ui = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_class" href="class_bucket_options_widget.html">BucketOptionsWidget</a>* mBucketOptionsWidget = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="class_camera_options_widget.html">CameraOptionsWidget</a>* mCameraOptionsWidget = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif </span><span class="comment">// TOOLOPTIONDOCKWIDGET_H</span></div>
 <div class="ttc" id="aclass_base_dock_widget_html"><div class="ttname"><a href="class_base_dock_widget.html">BaseDockWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="basedockwidget_8h_source.html#l00026">basedockwidget.h:27</a></div></div>
-<div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00068">basetool.h:69</a></div></div>
+<div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
 <div class="ttc" id="aclass_bucket_options_widget_html"><div class="ttname"><a href="class_bucket_options_widget.html">BucketOptionsWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="bucketoptionswidget_8h_source.html#l00030">bucketoptionswidget.h:31</a></div></div>
 <div class="ttc" id="aclass_camera_options_widget_html"><div class="ttname"><a href="class_camera_options_widget.html">CameraOptionsWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="cameraoptionswidget_8h_source.html#l00032">cameraoptionswidget.h:33</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00067">editor.h:68</a></div></div>
@@ -219,10 +220,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Jul 20 2024 09:46:54 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Jul 24 2024 19:11:14 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision eba8d6db44a31ce9574bb76076b90bbbe64b81c9
+   based on revision 92c2281bbbae9797319b6182daf6b8ef4635e36e
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
