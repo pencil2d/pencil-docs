@@ -680,7 +680,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; baseName = fileInfo.completeBaseName();</div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span> </div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    <span class="keywordtype">int</span> backupCount = 0;</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> dirFileInfo : directory.entryInfoList(QDir::Filter::Files)) {</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a> &amp;dirFileInfo : directory.entryInfoList(QDir::Filter::Files)) {</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> searchFileBaseName = dirFileInfo.completeBaseName();</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>        <span class="keywordflow">if</span> (baseName.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#compare-1">compare</a>(searchFileBaseName) == 0 &amp;&amp; searchFileBaseName.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#contains-1">contains</a>(PFF_BACKUP_IDENTIFIER)) {</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>            backupCount++;</div>
@@ -1204,10 +1204,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Jul 27 2024 07:25:43 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Jul 28 2024 09:28:29 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision e910aee7fe0529d0464d6451cb8c13420cf6794d
+   based on revision 62a3a0237bc5cdafd6b2f6f193efe8b44473d963
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

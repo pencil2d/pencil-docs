@@ -667,7 +667,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pos : currentLayer-&gt;<a class="code hl_function" href="class_layer.html#a6aad42843245219bcc33f8b5a36d9fe6">selectedKeyFramesPositions</a>()) {</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            currentLayer-&gt;removeKeyFrame(pos);</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        }</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        layers()-&gt;currentLayerChanged(currentLayerIndex());</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        emit layers()-&gt;currentLayerChanged(currentLayerIndex());</div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        emit updateTimeLine();</div>
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    }</div>
@@ -1587,10 +1587,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Jul 27 2024 07:25:43 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Jul 28 2024 09:28:28 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision e910aee7fe0529d0464d6451cb8c13420cf6794d
+   based on revision 62a3a0237bc5cdafd6b2f6f193efe8b44473d963
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
