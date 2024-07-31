@@ -18,8 +18,6 @@ var searchData=
   ['preferencemanager_15',['PreferenceManager',['../class_preference_manager.html',1,'']]],
   ['preferencesdialog_16',['PreferencesDialog',['../class_preferences_dialog.html',1,'']]],
   ['presetdialog_17',['PresetDialog',['../class_preset_dialog.html',1,'']]],
-  ['previewcanvas_18',['PreviewCanvas',['../class_preview_canvas.html',1,'']]],
-  ['previewwidget_19',['PreviewWidget',['../class_preview_widget.html',1,'']]],
-  ['progressbarcontrol_20',['ProgressBarControl',['../class_double_progress_dialog_1_1_progress_bar_control.html',1,'DoubleProgressDialog']]],
-  ['properties_21',['Properties',['../class_properties.html',1,'']]]
+  ['progressbarcontrol_18',['ProgressBarControl',['../class_double_progress_dialog_1_1_progress_bar_control.html',1,'DoubleProgressDialog']]],
+  ['properties_19',['Properties',['../class_properties.html',1,'']]]
 ];
