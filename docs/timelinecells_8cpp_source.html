@@ -1201,7 +1201,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>            updateContent();</div>
 <div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>        }</div>
 <div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>    }</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>    <span class="keywordflow">if</span> (mType == TIMELINE_CELL_TYPE::Layers &amp;&amp; layerNumber != mStartLayerNumber &amp;&amp; mStartLayerNumber != -1 &amp;&amp; layerNumber != -1)</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>    <span class="keywordflow">if</span> (mType == TIMELINE_CELL_TYPE::Layers &amp;&amp; !mScrollingVertically &amp;&amp; layerNumber != mStartLayerNumber &amp;&amp; mStartLayerNumber != -1 &amp;&amp; layerNumber != -1)</div>
 <div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>    {</div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>        mToLayer = getInbetweenLayerNumber(event-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmouseevent.html#pos">pos</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>());</div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>        <span class="keywordflow">if</span> (mToLayer != mFromLayer &amp;&amp; mToLayer &gt; -1 &amp;&amp; mToLayer &lt; mEditor-&gt;layers()-&gt;count())</div>
@@ -1328,50 +1328,56 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span><span class="keywordtype">void</span> TimeLineCells::vScrollChange(<span class="keywordtype">int</span> x)</div>
 <div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>{</div>
 <div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>    mLayerOffset = <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#x-prop">x</a>;</div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    updateContent();</div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>}</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span> </div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span><span class="keywordtype">void</span> TimeLineCells::setMouseMoveY(<span class="keywordtype">int</span> x)</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>{</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    mMouseMoveY = <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#x-prop">x</a>;</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    updateContent();</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>    mScrollingVertically = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    updateContent();</div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>}</div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span> </div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span><span class="keywordtype">void</span> TimeLineCells::onScrollingVerticallyStopped()</div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>{</div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>    mScrollingVertically = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>}</div>
 <div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span> </div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span><span class="keywordtype">bool</span> TimeLineCells::trackScrubber()</div>
+<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span><span class="keywordtype">void</span> TimeLineCells::setMouseMoveY(<span class="keywordtype">int</span> x)</div>
 <div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>{</div>
-<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    <span class="keywordflow">if</span> (mType != TIMELINE_CELL_TYPE::Tracks ||</div>
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>        (mPrevFrame == mEditor-&gt;currentFrame() &amp;&amp; !mEditor-&gt;playback()-&gt;isPlaying()))</div>
-<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>    {</div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    }</div>
-<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>    mPrevFrame = mEditor-&gt;currentFrame();</div>
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span> </div>
-<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>    <span class="keywordflow">if</span> (mEditor-&gt;currentFrame() &lt;= mFrameOffset)</div>
+<div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    mMouseMoveY = <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#x-prop">x</a>;</div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    updateContent();</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>}</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span> </div>
+<div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span><span class="keywordtype">bool</span> TimeLineCells::trackScrubber()</div>
+<div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>{</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>    <span class="keywordflow">if</span> (mType != TIMELINE_CELL_TYPE::Tracks ||</div>
+<div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>        (mPrevFrame == mEditor-&gt;currentFrame() &amp;&amp; !mEditor-&gt;playback()-&gt;isPlaying()))</div>
 <div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    {</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>        <span class="comment">// Move the timeline back if the scrubber is offscreen to the left</span></div>
-<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>        mFrameOffset = mEditor-&gt;currentFrame() - 1;</div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>        emit offsetChanged(mFrameOffset);</div>
-<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    }</div>
-<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() &lt; (mEditor-&gt;currentFrame() - mFrameOffset + 1) * mFrameSize)</div>
-<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>    {</div>
-<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>        <span class="comment">// Move timeline forward if the scrubber is offscreen to the right</span></div>
-<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>        <span class="keywordflow">if</span> (mEditor-&gt;playback()-&gt;isPlaying())</div>
-<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>            mFrameOffset = mFrameOffset + ((mEditor-&gt;currentFrame() - mFrameOffset) / 2);</div>
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>            mFrameOffset = mEditor-&gt;currentFrame() - <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / mFrameSize;</div>
-<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>        emit offsetChanged(mFrameOffset);</div>
-<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>    }</div>
-<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>}</div>
-<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span> </div>
-<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span><span class="keywordtype">void</span> TimeLineCells::onDidLeaveWidget()</div>
-<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>{</div>
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>    <span class="comment">// Reset last known frame pos to avoid wrong UI states when leaving the widget</span></div>
-<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>    mFramePosMoveX = 0;</div>
-<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>}</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>    }</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>    mPrevFrame = mEditor-&gt;currentFrame();</div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span> </div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>    <span class="keywordflow">if</span> (mEditor-&gt;currentFrame() &lt;= mFrameOffset)</div>
+<div class="line"><a id="l01238" name="l01238"></a><span class="lineno"> 1238</span>    {</div>
+<div class="line"><a id="l01239" name="l01239"></a><span class="lineno"> 1239</span>        <span class="comment">// Move the timeline back if the scrubber is offscreen to the left</span></div>
+<div class="line"><a id="l01240" name="l01240"></a><span class="lineno"> 1240</span>        mFrameOffset = mEditor-&gt;currentFrame() - 1;</div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>        emit offsetChanged(mFrameOffset);</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>    }</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() &lt; (mEditor-&gt;currentFrame() - mFrameOffset + 1) * mFrameSize)</div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>    {</div>
+<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>        <span class="comment">// Move timeline forward if the scrubber is offscreen to the right</span></div>
+<div class="line"><a id="l01247" name="l01247"></a><span class="lineno"> 1247</span>        <span class="keywordflow">if</span> (mEditor-&gt;playback()-&gt;isPlaying())</div>
+<div class="line"><a id="l01248" name="l01248"></a><span class="lineno"> 1248</span>            mFrameOffset = mFrameOffset + ((mEditor-&gt;currentFrame() - mFrameOffset) / 2);</div>
+<div class="line"><a id="l01249" name="l01249"></a><span class="lineno"> 1249</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01250" name="l01250"></a><span class="lineno"> 1250</span>            mFrameOffset = mEditor-&gt;currentFrame() - <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / mFrameSize;</div>
+<div class="line"><a id="l01251" name="l01251"></a><span class="lineno"> 1251</span>        emit offsetChanged(mFrameOffset);</div>
+<div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span>    }</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>}</div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span> </div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span><span class="keywordtype">void</span> TimeLineCells::onDidLeaveWidget()</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>{</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>    <span class="comment">// Reset last known frame pos to avoid wrong UI states when leaving the widget</span></div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>    mFramePosMoveX = 0;</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>}</div>
 <div class="ttc" id="aclass_camera_context_menu_html"><div class="ttname"><a href="class_camera_context_menu.html">CameraContextMenu</a></div><div class="ttdef"><b>Definition:</b> <a href="cameracontextmenu_8h_source.html#l00028">cameracontextmenu.h:29</a></div></div>
 <div class="ttc" id="aclass_camera_properties_dialog_html"><div class="ttname"><a href="class_camera_properties_dialog.html">CameraPropertiesDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="camerapropertiesdialog_8h_source.html#l00027">camerapropertiesdialog.h:28</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00067">editor.h:68</a></div></div>
@@ -1382,7 +1388,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_layer_manager_html_ae648788f4b7559ad43f499381f158659"><div class="ttname"><a href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">LayerManager::notifyAnimationLengthChanged</a></div><div class="ttdeci">void notifyAnimationLengthChanged()</div><div class="ttdoc">This should be emitted whenever the animation length frames, eg.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00398">layermanager.cpp:398</a></div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00041">object.h:42</a></div></div>
-<div class="ttc" id="aclass_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00030">timeline.h:31</a></div></div>
+<div class="ttc" id="aclass_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00031">timeline.h:32</a></div></div>
 <div class="ttc" id="aqbrush_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
 <div class="ttc" id="aqcolor_html_blue"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html#blue">QColor::blue</a></div><div class="ttdeci">int blue() const const</div></div>
@@ -1470,10 +1476,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Jul 28 2024 09:28:28 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Jul 31 2024 16:53:11 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 62a3a0237bc5cdafd6b2f6f193efe8b44473d963
+   based on revision cb7c70f69e64d43cd938f91075c6d4c04fea0248
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

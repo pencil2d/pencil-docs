@@ -1612,6 +1612,6 @@ Patching output file 147/150
 Patching output file 148/150
 Patching output file 149/150
 Patching output file 150/150
-type lookup cache used 17395/65536 hits=124915 misses=18467
-symbol lookup cache used 17837/65536 hits=201402 misses=17837
+type lookup cache used 17413/65536 hits=124970 misses=18486
+symbol lookup cache used 17856/65536 hits=201496 misses=17856
 finished...
