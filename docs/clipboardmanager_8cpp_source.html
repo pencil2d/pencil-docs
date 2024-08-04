@@ -135,98 +135,103 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;clipboardmanager.h&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;QClipboard&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;editor.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>ClipboardManager::ClipboardManager(<a class="code hl_class" href="class_editor.html">Editor</a>* editor) : <a class="code hl_class" href="class_base_manager.html">BaseManager</a>(editor, <span class="stringliteral">&quot;ClipboardManager&quot;</span>)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    resetStates();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>ClipboardManager::~ClipboardManager()</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> ClipboardManager::setFromSystemClipboard(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; pos, <span class="keyword">const</span> <a class="code hl_class" href="class_layer.html">Layer</a>* layer)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// We intentially do not call resetStates here because we can only store image changes to the clipboard</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// otherwise we break pasting for vector.</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// Only bitmap is supported currently...</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// Only update clipboard data if it was stored by other applications</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (layer-&gt;type() != Layer::BITMAP || mClipboard-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#ownsClipboard">ownsClipboard</a>()) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a> image = mClipboard-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#image">image</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qclipboard.html#Mode-enum">QClipboard::Clipboard</a>);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">if</span> (!image.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#isNull">isNull</a>()) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        mBitmapImage = <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>()-<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(image.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#size">size</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>()/2, image.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#size">size</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>()/2), image);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">   49</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a>(<a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> selectionRect)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Q_ASSERT(bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;isLoaded());</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (!selectionRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#isEmpty">isEmpty</a>())</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        mBitmapImage = bitmapImage-&gt;copy(selectionRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#toRect">toRect</a>());</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        mBitmapImage = bitmapImage-&gt;copy();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    mClipboard-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#setImage">setImage</a>(*mBitmapImage.image());</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;QGuiApplication&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;editor.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>ClipboardManager::ClipboardManager(<a class="code hl_class" href="class_editor.html">Editor</a>* editor) : <a class="code hl_class" href="class_base_manager.html">BaseManager</a>(editor, <span class="stringliteral">&quot;ClipboardManager&quot;</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    resetStates();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>ClipboardManager::~ClipboardManager()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> ClipboardManager::setFromSystemClipboard(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; pos, <span class="keyword">const</span> <a class="code hl_class" href="class_layer.html">Layer</a>* layer)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qclipboard.html">QClipboard</a> *clipboard = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qguiapplication.html#clipboard">QGuiApplication::clipboard</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// We intentially do not call resetStates here because we can only store image changes to the clipboard</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// otherwise we break pasting for vector.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Only bitmap is supported currently...</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Only update clipboard data if it was stored by other applications</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (layer-&gt;type() != Layer::BITMAP || clipboard-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#ownsClipboard">ownsClipboard</a>()) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a> image = clipboard-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#image">image</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qclipboard.html#Mode-enum">QClipboard::Clipboard</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (!image.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#isNull">isNull</a>()) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        mBitmapImage = <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>()-<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(image.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#size">size</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#width">width</a>()/2, image.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#size">size</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsize.html#height">height</a>()/2), image);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a>(<a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> selectionRect)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    Q_ASSERT(bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;isLoaded());</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (!selectionRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        mBitmapImage = bitmapImage-&gt;copy(selectionRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#toRect">toRect</a>());</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        mBitmapImage = bitmapImage-&gt;copy();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">   66</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">ClipboardManager::copyVectorImage</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span> || vectorImage-&gt;isEmpty()) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// FIXME: handle vector selections, ie. independent strokes...</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    mVectorImage = *vectorImage-&gt;clone();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">   75</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_layer.html">Layer</a>* currentLayer) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qguiapplication.html#clipboard">QGuiApplication::clipboard</a>()-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#setImage">setImage</a>(*mBitmapImage.image());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">   69</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">ClipboardManager::copyVectorImage</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span> || vectorImage-&gt;isEmpty()) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// FIXME: handle vector selections, ie. independent strokes...</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    mVectorImage = *vectorImage-&gt;clone();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pos : currentLayer-&gt;<a class="code hl_function" href="class_layer.html#a6aad42843245219bcc33f8b5a36d9fe6">selectedKeyFramesPositions</a>()) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* keyframe = currentLayer-&gt;getKeyFrameAt(pos);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">   78</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_layer.html">Layer</a>* currentLayer) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        Q_ASSERT(keyframe != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        keyframe-&gt;loadFile();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        mFrames.insert(std::make_pair(keyframe-&gt;pos(), keyframe-&gt;clone()));</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    mFramesType = currentLayer-&gt;type();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">   90</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">ClipboardManager::resetStates</a>()</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    mFrames.clear();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    mBitmapImage = <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    mVectorImage = <a class="code hl_class" href="class_vector_image.html">VectorImage</a>();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    mFramesType = Layer::LAYER_TYPE::UNDEFINED;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pos : currentLayer-&gt;<a class="code hl_function" href="class_layer.html#a6aad42843245219bcc33f8b5a36d9fe6">selectedKeyFramesPositions</a>()) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* keyframe = currentLayer-&gt;getKeyFrameAt(pos);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        Q_ASSERT(keyframe != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        keyframe-&gt;loadFile();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        mFrames.insert(std::make_pair(keyframe-&gt;pos(), keyframe-&gt;clone()));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    mFramesType = currentLayer-&gt;type();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">   93</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">ClipboardManager::resetStates</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    mFrames.clear();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    mBitmapImage = <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    mVectorImage = <a class="code hl_class" href="class_vector_image.html">VectorImage</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    mFramesType = Layer::LAYER_TYPE::UNDEFINED;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00028">bitmapimage.h:29</a></div></div>
-<div class="ttc" id="aclass_clipboard_manager_html_a2359cfbac2a26c66f1dcd7ab46c74490"><div class="ttname"><a href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a></div><div class="ttdeci">void copySelectedFrames(const Layer *currentLayer)</div><div class="ttdoc">Copy selected keyframes of any given layer and remember its type.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00075">clipboardmanager.cpp:75</a></div></div>
-<div class="ttc" id="aclass_clipboard_manager_html_a246ab78619269a6b36f0eb54e43111ad"><div class="ttname"><a href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">ClipboardManager::copyVectorImage</a></div><div class="ttdeci">void copyVectorImage(const VectorImage *vectorImage)</div><div class="ttdoc">Copy the entire vector image to clipboard, this operation does not yet support partial selections.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00066">clipboardmanager.cpp:66</a></div></div>
-<div class="ttc" id="aclass_clipboard_manager_html_a64301ff651afffa8d830a29440c3717b"><div class="ttname"><a href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">ClipboardManager::resetStates</a></div><div class="ttdeci">void resetStates()</div><div class="ttdoc">This should be called before copying and updating the clipboard to ensure no previous state is saved.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00090">clipboardmanager.cpp:90</a></div></div>
-<div class="ttc" id="aclass_clipboard_manager_html_ad9bd299496b467c084f89d1bff13e2bb"><div class="ttname"><a href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a></div><div class="ttdeci">void copyBitmapImage(BitmapImage *image, QRectF selectionRect)</div><div class="ttdoc">Copy bitmap image to clipboard and save its latest position Additionally only a part of the image wil...</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00049">clipboardmanager.cpp:49</a></div></div>
+<div class="ttc" id="aclass_clipboard_manager_html_a2359cfbac2a26c66f1dcd7ab46c74490"><div class="ttname"><a href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a></div><div class="ttdeci">void copySelectedFrames(const Layer *currentLayer)</div><div class="ttdoc">Copy selected keyframes of any given layer and remember its type.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00078">clipboardmanager.cpp:78</a></div></div>
+<div class="ttc" id="aclass_clipboard_manager_html_a246ab78619269a6b36f0eb54e43111ad"><div class="ttname"><a href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">ClipboardManager::copyVectorImage</a></div><div class="ttdeci">void copyVectorImage(const VectorImage *vectorImage)</div><div class="ttdoc">Copy the entire vector image to clipboard, this operation does not yet support partial selections.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00069">clipboardmanager.cpp:69</a></div></div>
+<div class="ttc" id="aclass_clipboard_manager_html_a64301ff651afffa8d830a29440c3717b"><div class="ttname"><a href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">ClipboardManager::resetStates</a></div><div class="ttdeci">void resetStates()</div><div class="ttdoc">This should be called before copying and updating the clipboard to ensure no previous state is saved.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00093">clipboardmanager.cpp:93</a></div></div>
+<div class="ttc" id="aclass_clipboard_manager_html_ad9bd299496b467c084f89d1bff13e2bb"><div class="ttname"><a href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a></div><div class="ttdeci">void copyBitmapImage(BitmapImage *image, QRectF selectionRect)</div><div class="ttdoc">Copy bitmap image to clipboard and save its latest position Additionally only a part of the image wil...</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00052">clipboardmanager.cpp:52</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00067">editor.h:68</a></div></div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_layer_html_a6aad42843245219bcc33f8b5a36d9fe6"><div class="ttname"><a href="class_layer.html#a6aad42843245219bcc33f8b5a36d9fe6">Layer::selectedKeyFramesPositions</a></div><div class="ttdeci">QList&lt; int &gt; selectedKeyFramesPositions() const</div><div class="ttdoc">Get selected keyframe positions sorted by position.</div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00062">layer.h:62</a></div></div>
 <div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
+<div class="ttc" id="aqclipboard_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qclipboard.html">QClipboard</a></div></div>
 <div class="ttc" id="aqclipboard_html_Mode-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qclipboard.html#Mode-enum">QClipboard::Clipboard</a></div><div class="ttdeci">Clipboard</div></div>
 <div class="ttc" id="aqclipboard_html_image"><div class="ttname"><a href="https://doc.qt.io/qt-5/qclipboard.html#image">QClipboard::image</a></div><div class="ttdeci">QImage image(QClipboard::Mode mode) const const</div></div>
 <div class="ttc" id="aqclipboard_html_ownsClipboard"><div class="ttname"><a href="https://doc.qt.io/qt-5/qclipboard.html#ownsClipboard">QClipboard::ownsClipboard</a></div><div class="ttdeci">bool ownsClipboard() const const</div></div>
 <div class="ttc" id="aqclipboard_html_setImage"><div class="ttname"><a href="https://doc.qt.io/qt-5/qclipboard.html#setImage">QClipboard::setImage</a></div><div class="ttdeci">void setImage(const QImage &amp;image, QClipboard::Mode mode)</div></div>
+<div class="ttc" id="aqguiapplication_html_clipboard"><div class="ttname"><a href="https://doc.qt.io/qt-5/qguiapplication.html#clipboard">QGuiApplication::clipboard</a></div><div class="ttdeci">QClipboard * clipboard()</div></div>
 <div class="ttc" id="aqimage_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html">QImage</a></div></div>
 <div class="ttc" id="aqimage_html_isNull"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#isNull">QImage::isNull</a></div><div class="ttdeci">bool isNull() const const</div></div>
 <div class="ttc" id="aqimage_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#size">QImage::size</a></div><div class="ttdeci">QSize size() const const</div></div>
@@ -244,10 +249,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Jul 31 2024 16:57:56 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Aug 4 2024 14:01:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 7d1847e4a3fc4aefe9efff601d4da085bb84c9f4
+   based on revision 65136180cd72d9b4c624b1047e4d850e04979cf1
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
