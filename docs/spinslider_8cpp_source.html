@@ -211,34 +211,36 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">void</span> SpinSlider::setValue(qreal v)</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">int</span> value2 = 0;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (mGrowthType == LINEAR)</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        value2 =qRound((mSlider-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">maximum</a>() * (v - mMin) / (mMax - mMin)));</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == LOG)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        value2 = qRound(std::log(v / mMin) * mSlider-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">maximum</a>() / std::log(mMax / mMin));</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == EXPONENT)</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        value2 = qRound(std::pow((v - mMin) * std::pow(mSlider-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">maximum</a>(), mExp) / (mMax - mMin), 1 / mExp));</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    changeValue(v);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    mSlider-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#sliderPosition-prop">setSliderPosition</a>(value2);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> SpinSlider::setPixelPos(qreal min, qreal max, <span class="keywordtype">int</span> val, <span class="keywordtype">int</span> space, <span class="keywordtype">bool</span> upsideDown)</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    mSlider-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#sliderPosition-prop">setSliderPosition</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstyle.html#sliderValueFromPosition">QStyle::sliderValueFromPosition</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(min),</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                                                               <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(max), val, space, upsideDown));</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">void</span> SpinSlider::setExponent(<span class="keyword">const</span> qreal exp)</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    mExp = exp;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    Q_ASSERT(mMin &lt;= v &amp;&amp; v &lt;= mMax);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> value2 = 0;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> (mGrowthType == LINEAR)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        value2 =qRound((mSlider-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">maximum</a>() * (v - mMin) / (mMax - mMin)));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == LOG)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        value2 = qRound(std::log(v / mMin) * mSlider-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">maximum</a>() / std::log(mMax / mMin));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mGrowthType == EXPONENT)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        value2 = qRound(std::pow((v - mMin) * std::pow(mSlider-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">maximum</a>(), mExp) / (mMax - mMin), 1 / mExp));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    changeValue(v);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    mSlider-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#sliderPosition-prop">setSliderPosition</a>(value2);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> SpinSlider::setPixelPos(qreal min, qreal max, <span class="keywordtype">int</span> val, <span class="keywordtype">int</span> space, <span class="keywordtype">bool</span> upsideDown)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    mSlider-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractslider.html#sliderPosition-prop">setSliderPosition</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstyle.html#sliderValueFromPosition">QStyle::sliderValueFromPosition</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(min),</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                                                               <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(max), val, space, upsideDown));</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keywordtype">void</span> SpinSlider::setExponent(<span class="keyword">const</span> qreal exp)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    mExp = exp;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
 <div class="ttc" id="aqabstractslider_html_maximum-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractslider.html#maximum-prop">QAbstractSlider::setMaximum</a></div><div class="ttdeci">void setMaximum(int)</div></div>
 <div class="ttc" id="aqabstractslider_html_minimum-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractslider.html#minimum-prop">QAbstractSlider::setMinimum</a></div><div class="ttdeci">void setMinimum(int)</div></div>
 <div class="ttc" id="aqabstractslider_html_sliderPosition-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractslider.html#sliderPosition-prop">QAbstractSlider::setSliderPosition</a></div><div class="ttdeci">void setSliderPosition(int)</div></div>
@@ -266,10 +268,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 4 2024 15:45:12 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Aug 4 2024 22:06:33 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 6a9a3831082c81d806004bdbb7a87c9e2737442f
+   based on revision 5d40d2735d63eb3cd179553ae8f0126c1b717943
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
