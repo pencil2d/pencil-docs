@@ -152,59 +152,25 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                      <span class="stringliteral">&quot;border-width: 1px; }&quot;</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>BaseDockWidget::~BaseDockWidget()</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> BaseDockWidget::resizeEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qresizeevent.html">QResizeEvent</a> *event)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#resizeEvent">QDockWidget::resizeEvent</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Not sure where the -2 comes from, but the event width is always 2 more than what is passed to FlowLayout::setGeometry</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> minHeight = getMinHeightForWidth(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdockwidget.html#event">event</a>-&gt;size().width() - 2);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (minHeight &lt; 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#ifdef __APPLE__</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// For some reason the behavior of minimumSize and the margin changes on mac when floating, so we need to do this</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> top, bottom;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>()-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlayout.html#getContentsMargins">getContentsMargins</a>(<span class="keyword">nullptr</span>, &amp;top, <span class="keyword">nullptr</span>, &amp;bottom);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    minHeight += top + bottom;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">setMinimumSize</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsize.html">QSize</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#layout">layout</a>()-&gt;<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">minimumSize</a>().<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>(), minHeight));</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">int</span> BaseDockWidget::getMinHeightForWidth(<span class="keywordtype">int</span> width)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    Q_UNUSED(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>BaseDockWidget::~BaseDockWidget()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 <div class="ttc" id="aqdockwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdockwidget.html">QDockWidget</a></div></div>
-<div class="ttc" id="aqdockwidget_html_event"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdockwidget.html#event">QDockWidget::event</a></div><div class="ttdeci">virtual bool event(QEvent *event) override</div></div>
-<div class="ttc" id="aqlayout_html_getContentsMargins"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlayout.html#getContentsMargins">QLayout::getContentsMargins</a></div><div class="ttdeci">void getContentsMargins(int *left, int *top, int *right, int *bottom) const const</div></div>
-<div class="ttc" id="aqresizeevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qresizeevent.html">QResizeEvent</a></div></div>
-<div class="ttc" id="aqsize_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html">QSize</a></div></div>
 <div class="ttc" id="aqt_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html">Qt</a></div></div>
 <div class="ttc" id="aqt_html_WindowType-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#WindowType-enum">Qt::Tool</a></div><div class="ttdeci">Tool</div></div>
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
-<div class="ttc" id="aqwidget_html_layout"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#layout">QWidget::layout</a></div><div class="ttdeci">QLayout * layout() const const</div></div>
-<div class="ttc" id="aqwidget_html_minimumSize-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#minimumSize-prop">QWidget::setMinimumSize</a></div><div class="ttdeci">void setMinimumSize(const QSize &amp;)</div></div>
-<div class="ttc" id="aqwidget_html_resizeEvent"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#resizeEvent">QWidget::resizeEvent</a></div><div class="ttdeci">virtual void resizeEvent(QResizeEvent *event)</div></div>
-<div class="ttc" id="aqwidget_html_width-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#width-prop">QWidget::width</a></div><div class="ttdeci">width</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 4 2024 14:01:52 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Aug 4 2024 15:45:12 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 65136180cd72d9b4c624b1047e4d850e04979cf1
+   based on revision 6a9a3831082c81d806004bdbb7a87c9e2737442f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
