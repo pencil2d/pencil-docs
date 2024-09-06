@@ -160,6 +160,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2bb321b6afd84fc5f4de828dc24394af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43c81216d12f4ebed688c2c46f9f34a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#af43c81216d12f4ebed688c2c46f9f34a">removeKeyFrame</a> (int position) override</td></tr>
 <tr class="separator:af43c81216d12f4ebed688c2c46f9f34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c2bedd94661a27cce39ba5948d8eff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#a88c2bedd94661a27cce39ba5948d8eff">replaceKeyFrame</a> (const <a class="el" href="class_key_frame.html">KeyFrame</a> *camera) override</td></tr>
+<tr class="separator:a88c2bedd94661a27cce39ba5948d8eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefd30e7c4af76f35e8d500ae3501e323"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#aefd30e7c4af76f35e8d500ae3501e323">getCameraAtFrame</a> (int frameNumber) const</td></tr>
 <tr class="separator:aefd30e7c4af76f35e8d500ae3501e323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e6f1e7e060f010ca6c80afa5653846"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_camera.html#a52e6f1e7e060f010ca6c80afa5653846">getLastCameraAtFrame</a> (int frameNumber, int increment) const</td></tr>
@@ -275,6 +277,9 @@ virtual <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElem
 <tr class="separator:a8153a09769652bc43159d0cd2cb42759 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ad33e133d9e676b9a352418a93adf2ff1">removeKeyFrame</a> (int position)</td></tr>
 <tr class="separator:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b04fd59dc028cd250d96f6b3f59bd04 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a id="a8b04fd59dc028cd250d96f6b3f59bd04" name="a8b04fd59dc028cd250d96f6b3f59bd04"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>replaceKeyFrame</b> (const <a class="el" href="class_key_frame.html">KeyFrame</a> *pKeyFrame)=0</td></tr>
+<tr class="separator:a8b04fd59dc028cd250d96f6b3f59bd04 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceb3fd644812d704dff820a35ea1357c inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#aceb3fd644812d704dff820a35ea1357c">swapKeyFrames</a> (int position1, int position2)</td></tr>
 <tr class="separator:aceb3fd644812d704dff820a35ea1357c inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae47c1b73e0c04d826001b3aa0e5cd6ef inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ae47c1b73e0c04d826001b3aa0e5cd6ef">moveKeyFrame</a> (int position, int offset)</td></tr>
@@ -525,7 +530,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00552">552</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00557">557</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -555,7 +560,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00542">542</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00547">547</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -605,7 +610,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00247">247</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00252">252</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -625,7 +630,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00466">466</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00471">471</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -645,7 +650,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00059">59</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00064">64</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -665,7 +670,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00486">486</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00491">491</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -692,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00058">58</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00059">59</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -719,7 +724,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00059">59</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00060">60</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -757,7 +762,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00195">195</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00200">200</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -777,7 +782,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00435">435</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00440">440</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -807,7 +812,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00064">64</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00069">69</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -827,7 +832,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00441">441</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00446">446</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +859,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00054">54</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00055">55</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -874,7 +879,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00069">69</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00074">74</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -893,7 +898,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00327">327</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00332">332</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -912,7 +917,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00332">332</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00337">337</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -942,7 +947,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00449">449</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00454">454</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -970,7 +975,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00136">136</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00141">141</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1021,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00590">590</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00595">595</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1087,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00521">521</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00526">526</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1102,7 +1107,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00287">287</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00292">292</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1136,6 +1141,36 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a88c2bedd94661a27cce39ba5948d8eff" name="a88c2bedd94661a27cce39ba5948d8eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c2bedd94661a27cce39ba5948d8eff">&#9670;&#160;</a></span>replaceKeyFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LayerCamera::replaceKeyFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td>
+          <td class="paramname"><em>camera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00059">59</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ade04b0ee15dbb609cdc8b047ff3cd3a2" name="ade04b0ee15dbb609cdc8b047ff3cd3a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade04b0ee15dbb609cdc8b047ff3cd3a2">&#9670;&#160;</a></span>resetCameraAtFrame()</h2>
 
@@ -1162,7 +1197,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00349">349</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00354">354</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1237,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00537">537</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00542">542</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1232,7 +1267,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00342">342</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00347">347</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1297,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00504">504</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00509">509</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1325,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00053">53</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00054">54</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1310,7 +1345,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00337">337</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00342">342</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1330,7 +1365,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00254">254</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00259">259</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1350,7 +1385,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00412">412</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00417">417</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1380,7 +1415,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00512">512</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8cpp_source.html#l00517">517</a> of file <a class="el" href="layercamera_8cpp_source.html">layercamera.cpp</a>.</p>
 
 </div>
 </div>
@@ -1405,7 +1440,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00089">89</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00090">90</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1429,7 +1464,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00086">86</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00087">87</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1453,7 +1488,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00087">87</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00088">88</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1477,7 +1512,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00082">82</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00083">83</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1501,7 +1536,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00081">81</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00082">82</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1560,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00085">85</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00086">86</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1549,7 +1584,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00083">83</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layercamera_8h_source.html#l00084">84</a> of file <a class="el" href="layercamera_8h_source.html">layercamera.h</a>.</p>
 
 </div>
 </div>
@@ -1563,10 +1598,10 @@ Additional Inherited Members</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

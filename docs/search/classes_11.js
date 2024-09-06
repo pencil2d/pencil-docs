@@ -21,5 +21,6 @@ var searchData=
   ['toolspage_18',['ToolsPage',['../class_tools_page.html',1,'']]],
   ['touchpoint_19',['TouchPoint',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html',1,'QTouchEvent']]],
   ['transform_20',['Transform',['../class_transform.html',1,'']]],
-  ['transformparameters_21',['TransformParameters',['../struct_transform_parameters.html',1,'']]]
+  ['transformcommand_21',['TransformCommand',['../class_transform_command.html',1,'']]],
+  ['transformparameters_22',['TransformParameters',['../struct_transform_parameters.html',1,'']]]
 ];

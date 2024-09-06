@@ -149,6 +149,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b6f98c33aa55ad311c9bb0511adbfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4695639fd90b16e0228fcdd28e4ac95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_sound.html#af4695639fd90b16e0228fcdd28e4ac95">loadDomElement</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> &amp;element, <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataDirPath, ProgressCallback progressStep) override</td></tr>
 <tr class="separator:af4695639fd90b16e0228fcdd28e4ac95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93930edf1053b4c4ef4308fc3d4bfe84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_sound.html#a93930edf1053b4c4ef4308fc3d4bfe84">replaceKeyFrame</a> (const <a class="el" href="class_key_frame.html">KeyFrame</a> *soundClip) override</td></tr>
+<tr class="separator:a93930edf1053b4c4ef4308fc3d4bfe84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f24bb9a2a5b0f9b02fbf15d3bd58c7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_sound.html#a1f24bb9a2a5b0f9b02fbf15d3bd58c7e">loadSoundClipAtFrame</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;sSoundClipName, const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;filePathString, int frame)</td></tr>
 <tr class="separator:a1f24bb9a2a5b0f9b02fbf15d3bd58c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac38b9bd3b8e17eb3d86b0d2cd334643b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_sound.html#ac38b9bd3b8e17eb3d86b0d2cd334643b">updateFrameLengths</a> (int fps)</td></tr>
@@ -226,6 +228,9 @@ virtual <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElem
 <tr class="separator:a8153a09769652bc43159d0cd2cb42759 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ad33e133d9e676b9a352418a93adf2ff1">removeKeyFrame</a> (int position)</td></tr>
 <tr class="separator:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b04fd59dc028cd250d96f6b3f59bd04 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a id="a8b04fd59dc028cd250d96f6b3f59bd04" name="a8b04fd59dc028cd250d96f6b3f59bd04"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>replaceKeyFrame</b> (const <a class="el" href="class_key_frame.html">KeyFrame</a> *pKeyFrame)=0</td></tr>
+<tr class="separator:a8b04fd59dc028cd250d96f6b3f59bd04 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceb3fd644812d704dff820a35ea1357c inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#aceb3fd644812d704dff820a35ea1357c">swapKeyFrames</a> (int position1, int position2)</td></tr>
 <tr class="separator:aceb3fd644812d704dff820a35ea1357c inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae47c1b73e0c04d826001b3aa0e5cd6ef inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ae47c1b73e0c04d826001b3aa0e5cd6ef">moveKeyFrame</a> (int position, int offset)</td></tr>
@@ -422,7 +427,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00155">155</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00160">160</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
 
 </div>
 </div>
@@ -442,7 +447,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00162">162</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00167">167</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
 
 </div>
 </div>
@@ -528,6 +533,36 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a93930edf1053b4c4ef4308fc3d4bfe84" name="a93930edf1053b4c4ef4308fc3d4bfe84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93930edf1053b4c4ef4308fc3d4bfe84">&#9670;&#160;</a></span>replaceKeyFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LayerSound::replaceKeyFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td>
+          <td class="paramname"><em>soundClip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00120">120</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a8b7226ed727fd1560e122a6a8ea9bdf5" name="a8b7226ed727fd1560e122a6a8ea9bdf5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b7226ed727fd1560e122a6a8ea9bdf5">&#9670;&#160;</a></span>saveKeyFrameFile()</h2>
 
@@ -564,7 +599,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00120">120</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layersound_8cpp_source.html#l00125">125</a> of file <a class="el" href="layersound_8cpp_source.html">layersound.cpp</a>.</p>
 
 </div>
 </div>
@@ -598,10 +633,10 @@ Additional Inherited Members</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

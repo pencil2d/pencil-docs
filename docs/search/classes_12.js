@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['vectorimage_0',['VectorImage',['../class_vector_image.html',1,'']]],
-  ['vectorselection_1',['VectorSelection',['../class_vector_selection.html',1,'']]],
-  ['vertexref_2',['VertexRef',['../class_vertex_ref.html',1,'']]],
-  ['viewmanager_3',['ViewManager',['../class_view_manager.html',1,'']]]
+  ['undoredocommand_0',['UndoRedoCommand',['../class_undo_redo_command.html',1,'']]],
+  ['undoredomanager_1',['UndoRedoManager',['../class_undo_redo_manager.html',1,'']]],
+  ['undosavestate_2',['UndoSaveState',['../struct_undo_save_state.html',1,'']]]
 ];

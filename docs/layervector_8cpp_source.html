@@ -312,6 +312,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(getLastKeyFrameAtPosition(frameNumber + increment));</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>}</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keywordtype">void</span> LayerVector::replaceKeyFrame(<span class="keyword">const</span> <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* vectorImage)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>{</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    *getVectorImageAtFrame(vectorImage-&gt;pos()) = *<span class="keyword">static_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(vectorImage);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>}</div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
@@ -355,10 +360,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

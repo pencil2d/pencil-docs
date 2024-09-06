@@ -156,6 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a66f9160d43966330eab4c3992ba7913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0b21f252a5109c8868c26058a9c57a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bitmap_image.html">BitmapImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_bitmap.html#ae0b21f252a5109c8868c26058a9c57a8">getLastBitmapImageAtFrame</a> (int frameNumber, int increment=0)</td></tr>
 <tr class="separator:ae0b21f252a5109c8868c26058a9c57a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b58cd903e0d6c9a852aef683284026"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_bitmap.html#a50b58cd903e0d6c9a852aef683284026">replaceKeyFrame</a> (const <a class="el" href="class_key_frame.html">KeyFrame</a> *) override</td></tr>
+<tr class="separator:a50b58cd903e0d6c9a852aef683284026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01ab51b0c747c0926f42ec479e754046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_bitmap.html#a01ab51b0c747c0926f42ec479e754046">repositionFrame</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a> point, int frame)</td></tr>
 <tr class="separator:a01ab51b0c747c0926f42ec479e754046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3c5191d190d5186c098032045ebc6e9"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer_bitmap.html#ac3c5191d190d5186c098032045ebc6e9">getFrameBounds</a> (int frame)</td></tr>
@@ -231,6 +233,9 @@ virtual <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElem
 <tr class="separator:a8153a09769652bc43159d0cd2cb42759 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ad33e133d9e676b9a352418a93adf2ff1">removeKeyFrame</a> (int position)</td></tr>
 <tr class="separator:ad33e133d9e676b9a352418a93adf2ff1 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b04fd59dc028cd250d96f6b3f59bd04 inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top"><a id="a8b04fd59dc028cd250d96f6b3f59bd04" name="a8b04fd59dc028cd250d96f6b3f59bd04"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>replaceKeyFrame</b> (const <a class="el" href="class_key_frame.html">KeyFrame</a> *pKeyFrame)=0</td></tr>
+<tr class="separator:a8b04fd59dc028cd250d96f6b3f59bd04 inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceb3fd644812d704dff820a35ea1357c inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#aceb3fd644812d704dff820a35ea1357c">swapKeyFrames</a> (int position1, int position2)</td></tr>
 <tr class="separator:aceb3fd644812d704dff820a35ea1357c inherit pub_methods_class_layer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae47c1b73e0c04d826001b3aa0e5cd6ef inherit pub_methods_class_layer"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_layer.html#ae47c1b73e0c04d826001b3aa0e5cd6ef">moveKeyFrame</a> (int position, int offset)</td></tr>
@@ -416,7 +421,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00175">175</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00180">180</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +451,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00102">102</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00107">107</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +479,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00159">159</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00164">164</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +517,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00154">154</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00159">159</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -552,7 +557,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00054">54</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00059">59</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +633,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00197">197</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00202">202</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -678,7 +683,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00061">61</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00066">66</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -716,7 +721,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00164">164</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00169">169</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -746,7 +751,37 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00110">110</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00115">115</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a50b58cd903e0d6c9a852aef683284026" name="a50b58cd903e0d6c9a852aef683284026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50b58cd903e0d6c9a852aef683284026">&#9670;&#160;</a></span>replaceKeyFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LayerBitmap::replaceKeyFrame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td>
+          <td class="paramname"><em>bitmapImage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00047">47</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -776,7 +811,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00047">47</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00052">52</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -816,7 +851,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_layer.html">Layer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00070">70</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="layerbitmap_8cpp_source.html#l00075">75</a> of file <a class="el" href="layerbitmap_8cpp_source.html">layerbitmap.cpp</a>.</p>
 
 </div>
 </div>
@@ -830,10 +865,10 @@ Additional Inherited Members</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

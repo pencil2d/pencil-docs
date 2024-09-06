@@ -159,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">class </span><a class="code hl_class" href="class_recent_file_menu.html">RecentFileMenu</a>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">class </span><a class="code hl_class" href="class_action_commands.html">ActionCommands</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">class </span><a class="code hl_class" href="class_import_image_seq_dialog.html">ImportImageSeqDialog</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">class </span><a class="code hl_class" href="class_backup_element.html">BackupElement</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">class </span><a class="code hl_class" href="class_undo_redo_command.html">UndoRedoCommand</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">class </span><a class="code hl_class" href="class_layer_opacity_dialog.html">LayerOpacityDialog</a>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">class </span><a class="code hl_class" href="class_peg_bar_alignment_dialog.html">PegBarAlignmentDialog</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">class </span><a class="code hl_class" href="class_reposition_frames_dialog.html">RepositionFramesDialog</a>;</div>
@@ -183,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_class" href="class_editor.html">Editor</a>* mEditor = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> undoActSetText();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> updateBackupActionState();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> updateSaveState();</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> openPegAlignDialog();</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> openRepositionDialog();</div>
@@ -241,82 +241,79 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">void</span> createDockWidgets();</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> createMenus();</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> setupKeyboardShortcuts();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> clearKeyboardShortcuts();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">bool</span> loadMostRecent();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> tryLoadPreset();</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> openPalette();</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> importPalette();</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> exportPalette();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> readSettings();</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> writeSettings();</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> resetAndDockAllSubWidgets();</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">void</span> changePlayState(<span class="keywordtype">bool</span> isPlaying);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_color_box.html">ColorBox</a>* colorBox);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_color_inspector.html">ColorInspector</a>*);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_scribble_area.html">ScribbleArea</a>*);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_color_palette_widget.html">ColorPaletteWidget</a>*);</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_time_line.html">TimeLine</a>*);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_tool_option_widget.html">ToolOptionWidget</a>*);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_onion_skin_widget.html">OnionSkinWidget</a>*);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_status_bar.html">StatusBar</a>*);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">bool</span> tryRecoverUnsavedProject();</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> startProjectRecovery(<span class="keywordtype">int</span> result);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// UI: Dock widgets</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_class" href="class_color_box.html">ColorBox</a>*             mColorBox = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_class" href="class_color_palette_widget.html">ColorPaletteWidget</a>*   mColorPalette = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_class" href="class_tool_option_widget.html">ToolOptionWidget</a>*     mToolOptions = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_class" href="class_tool_box_widget.html">ToolBoxWidget</a>*        mToolBox = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_class" href="class_recent_file_menu.html">RecentFileMenu</a>*       mRecentFileMenu = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_class" href="class_preferences_dialog.html">PreferencesDialog</a>*    mPrefDialog = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">//PreviewWidget*      mPreview = nullptr;</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_class" href="class_time_line.html">TimeLine</a>*             mTimeLine = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_class" href="class_color_inspector.html">ColorInspector</a>*       mColorInspector = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_class" href="class_onion_skin_widget.html">OnionSkinWidget</a>*      mOnionSkinWidget = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>*             mMainToolbar = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>*             mViewToolbar = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>*             mOverlayToolbar = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">// backup</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_class" href="class_backup_element.html">BackupElement</a>* mBackupAtSave = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_class" href="class_peg_bar_alignment_dialog.html">PegBarAlignmentDialog</a>* mPegAlign = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <a class="code hl_class" href="class_reposition_frames_dialog.html">RepositionFramesDialog</a>* mReposDialog = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <a class="code hl_class" href="class_layer_opacity_dialog.html">LayerOpacityDialog</a>* mLayerOpacityDialog = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">void</span> createToolbars();</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_class" href="class_action_commands.html">ActionCommands</a>* mCommands = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;BaseDockWidget*&gt;</a> mDockWidgets;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QToolBar*&gt;</a> mToolbars;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qicon.html">QIcon</a> mStartIcon;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qicon.html">QIcon</a> mStopIcon;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="comment">// a hack for MacOS because closeEvent fires twice</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">bool</span> m2ndCloseEvent = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="comment">// Whether to suppress the auto save dialog due to internal work</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">bool</span> mSuppressAutoSaveDialog = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    Ui::MainWindow2* ui = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>};</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW2_H</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> replaceUndoRedoActions();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> setupKeyboardShortcuts();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> clearKeyboardShortcuts();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> loadMostRecent();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">bool</span> tryLoadPreset();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> openPalette();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> importPalette();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> exportPalette();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> readSettings();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> writeSettings();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> resetAndDockAllSubWidgets();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">void</span> changePlayState(<span class="keywordtype">bool</span> isPlaying);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_color_box.html">ColorBox</a>* colorBox);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_color_inspector.html">ColorInspector</a>*);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_scribble_area.html">ScribbleArea</a>*);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_color_palette_widget.html">ColorPaletteWidget</a>*);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_time_line.html">TimeLine</a>*);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_tool_option_widget.html">ToolOptionWidget</a>*);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_onion_skin_widget.html">OnionSkinWidget</a>*);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">void</span> makeConnections(<a class="code hl_class" href="class_editor.html">Editor</a>*, <a class="code hl_class" href="class_status_bar.html">StatusBar</a>*);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">bool</span> tryRecoverUnsavedProject();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">void</span> startProjectRecovery(<span class="keywordtype">int</span> result);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="comment">// UI: Dock widgets</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_class" href="class_color_box.html">ColorBox</a>*             mColorBox = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_class" href="class_color_palette_widget.html">ColorPaletteWidget</a>*   mColorPalette = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_class" href="class_tool_option_widget.html">ToolOptionWidget</a>*     mToolOptions = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_class" href="class_tool_box_widget.html">ToolBoxWidget</a>*        mToolBox = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_class" href="class_recent_file_menu.html">RecentFileMenu</a>*       mRecentFileMenu = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_class" href="class_preferences_dialog.html">PreferencesDialog</a>*    mPrefDialog = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">//PreviewWidget*      mPreview = nullptr;</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_class" href="class_time_line.html">TimeLine</a>*             mTimeLine = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_class" href="class_color_inspector.html">ColorInspector</a>*       mColorInspector = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_class" href="class_onion_skin_widget.html">OnionSkinWidget</a>*      mOnionSkinWidget = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>*             mMainToolbar = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>*             mViewToolbar = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtoolbar.html">QToolBar</a>*             mOverlayToolbar = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_class" href="class_peg_bar_alignment_dialog.html">PegBarAlignmentDialog</a>* mPegAlign = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <a class="code hl_class" href="class_reposition_frames_dialog.html">RepositionFramesDialog</a>* mReposDialog = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_class" href="class_layer_opacity_dialog.html">LayerOpacityDialog</a>* mLayerOpacityDialog = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">void</span> createToolbars();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_class" href="class_action_commands.html">ActionCommands</a>* mCommands = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;BaseDockWidget*&gt;</a> mDockWidgets;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QToolBar*&gt;</a> mToolbars;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qicon.html">QIcon</a> mStartIcon;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qicon.html">QIcon</a> mStopIcon;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// a hack for MacOS because closeEvent fires twice</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">bool</span> m2ndCloseEvent = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="comment">// Whether to suppress the auto save dialog due to internal work</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">bool</span> mSuppressAutoSaveDialog = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    Ui::MainWindow2* ui = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>};</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">#endif </span><span class="comment">// MAINWINDOW2_H</span></div>
 <div class="ttc" id="aclass_action_commands_html"><div class="ttname"><a href="class_action_commands.html">ActionCommands</a></div><div class="ttdef"><b>Definition:</b> <a href="actioncommands_8h_source.html#l00029">actioncommands.h:30</a></div></div>
-<div class="ttc" id="aclass_backup_element_html"><div class="ttname"><a href="class_backup_element.html">BackupElement</a></div><div class="ttdef"><b>Definition:</b> <a href="backupelement_8h_source.html#l00028">backupelement.h:29</a></div></div>
 <div class="ttc" id="aclass_base_dock_widget_html"><div class="ttname"><a href="class_base_dock_widget.html">BaseDockWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="basedockwidget_8h_source.html#l00026">basedockwidget.h:27</a></div></div>
 <div class="ttc" id="aclass_color_box_html"><div class="ttname"><a href="class_color_box.html">ColorBox</a></div><div class="ttdef"><b>Definition:</b> <a href="colorbox_8h_source.html#l00023">colorbox.h:24</a></div></div>
 <div class="ttc" id="aclass_color_inspector_html"><div class="ttname"><a href="class_color_inspector.html">ColorInspector</a></div><div class="ttdef"><b>Definition:</b> <a href="colorinspector_8h_source.html#l00026">colorinspector.h:27</a></div></div>
 <div class="ttc" id="aclass_color_palette_widget_html"><div class="ttname"><a href="class_color_palette_widget.html">ColorPaletteWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="colorpalettewidget_8h_source.html#l00038">colorpalettewidget.h:39</a></div></div>
-<div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00067">editor.h:68</a></div></div>
+<div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00069">editor.h:70</a></div></div>
 <div class="ttc" id="aclass_import_image_seq_dialog_html"><div class="ttname"><a href="class_import_image_seq_dialog.html">ImportImageSeqDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="importimageseqdialog_8h_source.html#l00044">importimageseqdialog.h:45</a></div></div>
 <div class="ttc" id="aclass_layer_opacity_dialog_html"><div class="ttname"><a href="class_layer_opacity_dialog.html">LayerOpacityDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="layeropacitydialog_8h_source.html#l00021">layeropacitydialog.h:22</a></div></div>
 <div class="ttc" id="aclass_main_window2_html"><div class="ttname"><a href="class_main_window2.html">MainWindow2</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow2_8h_source.html#l00057">mainwindow2.h:58</a></div></div>
@@ -332,6 +329,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_time_line_html"><div class="ttname"><a href="class_time_line.html">TimeLine</a></div><div class="ttdef"><b>Definition:</b> <a href="timeline_8h_source.html#l00031">timeline.h:32</a></div></div>
 <div class="ttc" id="aclass_tool_box_widget_html"><div class="ttname"><a href="class_tool_box_widget.html">ToolBoxWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="toolbox_8h_source.html#l00035">toolbox.h:36</a></div></div>
 <div class="ttc" id="aclass_tool_option_widget_html"><div class="ttname"><a href="class_tool_option_widget.html">ToolOptionWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="tooloptionwidget_8h_source.html#l00040">tooloptionwidget.h:41</a></div></div>
+<div class="ttc" id="aclass_undo_redo_command_html"><div class="ttname"><a href="class_undo_redo_command.html">UndoRedoCommand</a></div><div class="ttdef"><b>Definition:</b> <a href="undoredocommand_8h_source.html#l00037">undoredocommand.h:38</a></div></div>
 <div class="ttc" id="aqactiongroup_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qactiongroup.html">QActionGroup</a></div></div>
 <div class="ttc" id="aqcloseevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcloseevent.html">QCloseEvent</a></div></div>
 <div class="ttc" id="aqevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qevent.html">QEvent</a></div></div>
@@ -350,10 +348,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

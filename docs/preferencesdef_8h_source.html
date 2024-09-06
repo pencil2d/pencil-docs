@@ -193,42 +193,44 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    TIMECODE_TEXT,</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    TITLE_SAFE_ON,</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    TITLE_SAFE,</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QUICK_SIZING,</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    INVERT_DRAG_ZOOM_DIRECTION,</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    INVERT_SCROLL_ZOOM_DIRECTION,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    MULTILAYER_ONION,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    LANGUAGE,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    LAYOUT_LOCK,</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    DRAW_ON_EMPTY_FRAME_ACTION,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    FRAME_POOL_SIZE,</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    ROTATION_INCREMENT,</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    SHOW_SELECTION_INFO,</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    ASK_FOR_PRESET,</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    LOAD_MOST_RECENT,</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    LOAD_DEFAULT_PRESET,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    DEFAULT_PRESET,</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    COUNT, <span class="comment">// COUNT must always be the last one.</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">// Actions for drawing on an empty frame.</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">enum</span> DrawOnEmptyFrameAction</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    CREATE_NEW_KEY,</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    DUPLICATE_PREVIOUS_KEY,</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    KEEP_DRAWING_ON_PREVIOUS_KEY</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// PREFERENCESDEF_H</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    NEW_UNDO_REDO_SYSTEM_ON,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    QUICK_SIZING,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    INVERT_DRAG_ZOOM_DIRECTION,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    INVERT_SCROLL_ZOOM_DIRECTION,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    MULTILAYER_ONION,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    LANGUAGE,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    LAYOUT_LOCK,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    DRAW_ON_EMPTY_FRAME_ACTION,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    FRAME_POOL_SIZE,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    UNDO_REDO_MAX_STEPS,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    ROTATION_INCREMENT,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    SHOW_SELECTION_INFO,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    ASK_FOR_PRESET,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    LOAD_MOST_RECENT,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    LOAD_DEFAULT_PRESET,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    DEFAULT_PRESET,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    COUNT, <span class="comment">// COUNT must always be the last one.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">// Actions for drawing on an empty frame.</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">enum</span> DrawOnEmptyFrameAction</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    CREATE_NEW_KEY,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    DUPLICATE_PREVIOUS_KEY,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    KEEP_DRAWING_ON_PREVIOUS_KEY</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">// PREFERENCESDEF_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

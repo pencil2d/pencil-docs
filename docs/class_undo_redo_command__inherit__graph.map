@@ -1,0 +1,7 @@
+<map id="UndoRedoCommand" name="UndoRedoCommand">
+<area shape="rect" id="node1" title=" " alt="" coords="259,84,457,115"/>
+<area shape="rect" id="node3" href="$class_bitmap_replace_command.html" title=" " alt="" coords="5,163,236,193"/>
+<area shape="rect" id="node4" href="$class_transform_command.html" title=" " alt="" coords="261,163,455,193"/>
+<area shape="rect" id="node5" href="$class_vector_replace_command.html" title=" " alt="" coords="479,163,703,193"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qundocommand.html" title=" " alt="" coords="274,5,442,36"/>
+</map>

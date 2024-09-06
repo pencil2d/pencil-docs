@@ -150,17 +150,19 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> createDomElement(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a>&amp; doc) <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> loadDomElement(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a>&amp; element, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataDirPath, ProgressCallback progressStep) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_status.html">Status</a> loadSoundClipAtFrame( <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; sSoundClipName, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; filePathString, <span class="keywordtype">int</span> frame );</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> updateFrameLengths(<span class="keywordtype">int</span> fps);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="class_sound_clip.html">SoundClip</a>* getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> replaceKeyFrame(<span class="keyword">const</span> <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* soundClip) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="class_status.html">Status</a> loadSoundClipAtFrame( <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; sSoundClipName, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; filePathString, <span class="keywordtype">int</span> frame );</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> updateFrameLengths(<span class="keywordtype">int</span> fps);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="class_status.html">Status</a> saveKeyFrameFile(<a class="code hl_class" href="class_key_frame.html">KeyFrame</a>*, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> path) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* createKeyFrame(<span class="keywordtype">int</span> position) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="class_sound_clip.html">SoundClip</a>* getSoundClipWhichCovers(<span class="keywordtype">int</span> frameNumber);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="class_status.html">Status</a> saveKeyFrameFile(<a class="code hl_class" href="class_key_frame.html">KeyFrame</a>*, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> path) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* createKeyFrame(<span class="keywordtype">int</span> position) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_layer_sound_html"><div class="ttname"><a href="class_layer_sound.html">LayerSound</a></div><div class="ttdef"><b>Definition:</b> <a href="layersound_8h_source.html#l00025">layersound.h:26</a></div></div>
@@ -175,10 +177,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Aug 18 2024 15:54:37 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Sep 6 2024 13:03:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 09ef78780cf7126aa8099bc98180a8aa701c7c58
+   based on revision 3d0a148ea59395ccd612fc1ee899dfa6f841ca97
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_scope_guard.html" title=" " alt="" coords="5,5,129,36"/>
+<area shape="rect" id="node1" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qundocommand.html" title=" " alt="" coords="5,60,173,91"/>
+<area shape="rect" id="node2" href="$class_undo_redo_command.html" title=" " alt="" coords="221,60,419,91"/>
+<area shape="rect" id="node3" href="$class_bitmap_replace_command.html" title=" " alt="" coords="467,5,697,36"/>
+<area shape="rect" id="node4" href="$class_transform_command.html" title=" " alt="" coords="485,60,679,91"/>
+<area shape="rect" id="node5" href="$class_vector_replace_command.html" title=" " alt="" coords="470,115,694,145"/>
 </map>
