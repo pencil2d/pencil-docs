@@ -135,31 +135,48 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;errordialog.h&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;ui_errordialog.h&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>ErrorDialog::ErrorDialog( <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> title, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> description, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> details, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent ) :</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a>( parent ),</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    ui(new Ui::<a class="code hl_class" href="class_error_dialog.html">ErrorDialog</a>)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    ui-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setupUi">setupUi</a>( <span class="keyword">this</span> );</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    setWindowTitle( title );</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ui-&gt;title-&gt;setText( <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>( <span class="stringliteral">&quot;&lt;h3&gt;%1&lt;/h3&gt;&quot;</span> ).arg( title ) );</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ui-&gt;description-&gt;setText( description );</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">if</span> ( details.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>() )</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        ui-&gt;details-&gt;setVisible( <span class="keyword">false</span> );</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        ui-&gt;details-&gt;setText( <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>( <span class="stringliteral">&quot;&lt;pre&gt;%1&lt;/pre&gt;&quot;</span> ).arg( details ) );</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>ErrorDialog::~ErrorDialog()</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">delete</span> ui;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QClipboard&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>ErrorDialog::ErrorDialog( <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> title, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> description, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> details, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent ) :</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a>( parent ),</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ui(new Ui::<a class="code hl_class" href="class_error_dialog.html">ErrorDialog</a>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ui-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setupUi">setupUi</a>( <span class="keyword">this</span> );</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    setWindowTitle( title );</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    ui-&gt;title-&gt;setText( <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>( <span class="stringliteral">&quot;&lt;h3&gt;%1&lt;/h3&gt;&quot;</span> ).arg( title ) );</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ui-&gt;description-&gt;setText( description );</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> ( details.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>() )</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        ui-&gt;details-&gt;setVisible( <span class="keyword">false</span> );</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        ui-&gt;details-&gt;setText( <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>( <span class="stringliteral">&quot;&lt;pre&gt;%1&lt;/pre&gt;&quot;</span> ).arg( details ) );</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a>* copyToClipboard = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a>(tr(<span class="stringliteral">&quot;Copy to Clipboard&quot;</span>));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    ui-&gt;buttonBox-&gt;addButton(copyToClipboard, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonRole-enum">QDialogButtonBox::ActionRole</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    connect(copyToClipboard, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qabstractbutton.html#clicked">QPushButton::clicked</a>, <span class="keyword">this</span>, &amp;ErrorDialog::onCopyToClipboard);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>ErrorDialog::~ErrorDialog()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">delete</span> ui;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> ErrorDialog::onCopyToClipboard() {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qguiapplication.html#clipboard">QGuiApplication::clipboard</a>()-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qclipboard.html#setText">setText</a>(ui-&gt;details-&gt;toPlainText());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
 <div class="ttc" id="aclass_error_dialog_html"><div class="ttname"><a href="class_error_dialog.html">ErrorDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="errordialog_8h_source.html#l00027">errordialog.h:28</a></div></div>
+<div class="ttc" id="aqabstractbutton_html_clicked"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractbutton.html#clicked">QAbstractButton::clicked</a></div><div class="ttdeci">void clicked(bool checked)</div></div>
+<div class="ttc" id="aqclipboard_html_setText"><div class="ttname"><a href="https://doc.qt.io/qt-5/qclipboard.html#setText">QClipboard::setText</a></div><div class="ttdeci">void setText(const QString &amp;text, QClipboard::Mode mode)</div></div>
 <div class="ttc" id="aqdialog_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a></div></div>
+<div class="ttc" id="aqdialogbuttonbox_html_ButtonRole-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#ButtonRole-enum">QDialogButtonBox::ActionRole</a></div><div class="ttdeci">ActionRole</div></div>
+<div class="ttc" id="aqguiapplication_html_clipboard"><div class="ttname"><a href="https://doc.qt.io/qt-5/qguiapplication.html#clipboard">QGuiApplication::clipboard</a></div><div class="ttdeci">QClipboard * clipboard()</div></div>
+<div class="ttc" id="aqpushbutton_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a></div></div>
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
 <div class="ttc" id="aqstring_html_isEmpty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#isEmpty">QString::isEmpty</a></div><div class="ttdeci">bool isEmpty() const const</div></div>
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
@@ -170,10 +187,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon Nov 4 2024 17:36:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Nov 30 2024 10:00:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 62d0c8f18fc638dd8b6536944aceb7a962933947
+   based on revision fe4f2bc09a88fb2f76a8d589411609fc06d7e7f8
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

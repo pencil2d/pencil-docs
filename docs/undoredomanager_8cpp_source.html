@@ -204,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> (mNewBackupSystemEnabled) {</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        mUndoStack.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qundostack.html#setClean">setClean</a>();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!mLegacyBackupList.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#isEmpty">isEmpty</a>() &amp;&amp; mLegacyBackupIndex &lt; mLegacyBackupList.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#count">count</a>()) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        mLegacyBackupAtSave = mLegacyBackupList[mLegacyBackupIndex];</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">return</span> Status::OK;</div>
@@ -839,6 +839,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqicon_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qicon.html">QIcon</a></div></div>
 <div class="ttc" id="aqlist_html_append"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#append">QList::append</a></div><div class="ttdeci">void append(const T &amp;value)</div></div>
 <div class="ttc" id="aqlist_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#at">QList::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
+<div class="ttc" id="aqlist_html_count"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#count">QList::count</a></div><div class="ttdeci">int count(const T &amp;value) const const</div></div>
 <div class="ttc" id="aqlist_html_empty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#empty">QList::empty</a></div><div class="ttdeci">bool empty() const const</div></div>
 <div class="ttc" id="aqlist_html_isEmpty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#isEmpty">QList::isEmpty</a></div><div class="ttdeci">bool isEmpty() const const</div></div>
 <div class="ttc" id="aqlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const const</div></div>
@@ -868,10 +869,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon Nov 4 2024 17:36:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Nov 30 2024 10:00:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 62d0c8f18fc638dd8b6536944aceb7a962933947
+   based on revision fe4f2bc09a88fb2f76a8d589411609fc06d7e7f8
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
