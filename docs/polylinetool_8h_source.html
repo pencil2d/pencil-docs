@@ -165,22 +165,21 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> setAA(<span class="keyword">const</span> <span class="keywordtype">int</span> AA) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> setClosedPath(<span class="keyword">const</span> <span class="keywordtype">bool</span> closed) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> removeLastPolylineSegment();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">leavingThisTool</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#ad4048304b08aa8204373522fce1bc786">leavingThisTool</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">isActive</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">isActive</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> mPoints;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> mClosedPathOverrideEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> drawPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> endPoint);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> cancelPolyline();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> endPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">// POLYLINETOOL_H</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> mPoints;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> mClosedPathOverrideEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> drawPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> endPoint);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> removeLastPolylineSegment();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> cancelPolyline();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> endPolyline(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QPointF&gt;</a> points);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">// POLYLINETOOL_H</span></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_polyline_tool_html"><div class="ttname"><a href="class_polyline_tool.html">PolylineTool</a></div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8h_source.html#l00025">polylinetool.h:26</a></div></div>
 <div class="ttc" id="aclass_polyline_tool_html_a8b8fc17180b250d723ac9328b27ba0f2"><div class="ttname"><a href="class_polyline_tool.html#a8b8fc17180b250d723ac9328b27ba0f2">PolylineTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="polylinetool_8cpp_source.html#l00121">polylinetool.cpp:121</a></div></div>
@@ -200,10 +199,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon Dec 2 2024 07:08:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Dec 9 2024 07:54:59 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 1a7a7d727c5599a98c6565b8b1677c257bf58a66
+   based on revision c43166759a84ba990c644a200a939b672f98b88b
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

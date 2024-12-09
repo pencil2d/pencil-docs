@@ -1,5 +1,5 @@
 <map id="ExportMovieDialog" name="ExportMovieDialog">
-<area shape="rect" id="node1" title=" " alt="" coords="27,320,206,351"/>
+<area shape="rect" id="node1" title=" " alt="" coords="28,320,205,351"/>
 <area shape="rect" id="node2" href="$class_import_export_dialog.html" title=" " alt="" coords="25,241,209,272"/>
 <area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qdialog.html" title=" " alt="" coords="73,163,161,193"/>
 <area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="70,84,163,115"/>

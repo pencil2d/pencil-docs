@@ -1,7 +1,7 @@
 <map id="Camera" name="Camera">
-<area shape="rect" id="node1" title=" " alt="" coords="151,223,238,253"/>
+<area shape="rect" id="node1" title=" " alt="" coords="150,223,237,253"/>
 <area shape="rect" id="node2" href="$class_key_frame.html" title=" " alt="" coords="5,104,109,135"/>
 <area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="15,5,99,36"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtransform.html" title=" " alt="" coords="133,104,256,135"/>
-<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="280,104,368,135"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtransform.html" title=" " alt="" coords="133,104,253,135"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="277,104,365,135"/>
 </map>

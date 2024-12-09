@@ -1,8 +1,8 @@
 <map id="ImportExportDialog" name="ImportExportDialog">
 <area shape="rect" id="node1" title=" " alt="" coords="205,241,389,272"/>
 <area shape="rect" id="node6" href="$class_export_image_dialog.html" title=" " alt="" coords="5,320,184,351"/>
-<area shape="rect" id="node7" href="$class_export_movie_dialog.html" title=" " alt="" coords="208,320,387,351"/>
-<area shape="rect" id="node8" href="$class_import_image_seq_dialog.html" title=" " alt="" coords="411,320,623,351"/>
+<area shape="rect" id="node7" href="$class_export_movie_dialog.html" title=" " alt="" coords="209,320,386,351"/>
+<area shape="rect" id="node8" href="$class_import_image_seq_dialog.html" title=" " alt="" coords="410,320,622,351"/>
 <area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qdialog.html" title=" " alt="" coords="253,163,341,193"/>
 <area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="251,84,344,115"/>
 <area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="186,5,275,36"/>

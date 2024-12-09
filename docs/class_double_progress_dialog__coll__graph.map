@@ -1,10 +1,10 @@
 <map id="DoubleProgressDialog" name="DoubleProgressDialog">
-<area shape="rect" id="node1" title=" " alt="" coords="85,403,291,433"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qprogressdialog.html" title=" " alt="" coords="5,274,165,305"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qdialog.html" title=" " alt="" coords="95,165,183,196"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="159,85,252,116"/>
-<area shape="rect" id="node8" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qprogressbar.html" title=" " alt="" coords="216,165,352,196"/>
-<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="94,5,183,36"/>
-<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpaintdevice.html" title=" " alt="" coords="207,5,339,36"/>
-<area shape="rect" id="node7" href="$class_double_progress_dialog_1_1_progress_bar_control.html" title=" " alt="" coords="190,264,397,315"/>
+<area shape="rect" id="node1" title=" " alt="" coords="85,403,290,433"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qprogressdialog.html" title=" " alt="" coords="5,274,164,305"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qdialog.html" title=" " alt="" coords="93,165,181,196"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="157,85,250,116"/>
+<area shape="rect" id="node8" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qprogressbar.html" title=" " alt="" coords="215,165,349,196"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="92,5,181,36"/>
+<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpaintdevice.html" title=" " alt="" coords="205,5,337,36"/>
+<area shape="rect" id="node7" href="$class_double_progress_dialog_1_1_progress_bar_control.html" title=" " alt="" coords="189,264,394,315"/>
 </map>
