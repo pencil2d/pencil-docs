@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// Onion Skin</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    set(SETTING::PREV_ONION,               settings.value(SETTING_PREV_ONION,             <span class="keyword">false</span>).toBool());</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    set(SETTING::NEXT_ONION,               settings.value(SETTING_NEXT_ONION,             <span class="keyword">false</span>).toBool());</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    set(SETTING::MULTILAYER_ONION,         settings.value(SETTING_MULTILAYER_ONION,       <span class="keyword">false</span>).toBool());</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    set(SETTING::ONION_MUTLIPLE_LAYERS,    settings.value(SETTING_MULTILAYER_ONION,       <span class="keyword">false</span>).toBool());</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    set(SETTING::ONION_BLUE,               settings.value(SETTING_ONION_BLUE,             <span class="keyword">false</span>).toBool());</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    set(SETTING::ONION_RED,                settings.value(SETTING_ONION_RED,              <span class="keyword">false</span>).toBool());</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
@@ -526,7 +526,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <span class="keywordflow">case</span> SETTING::NEXT_ONION:</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>        settings.setValue(SETTING_NEXT_ONION, value);</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <span class="keywordflow">case</span> SETTING::MULTILAYER_ONION:</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <span class="keywordflow">case</span> SETTING::ONION_MUTLIPLE_LAYERS:</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        settings.setValue(SETTING_MULTILAYER_ONION, value);</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="keywordflow">case</span> SETTING::INVISIBLE_LINES:</div>
@@ -616,10 +616,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Feb 15 2025 01:11:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Feb 15 2025 11:10:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 72cf0280fb82d3d3a385d2808e95e10edb06c61a
+   based on revision f4b53678856432fa1167f76e4e1ba25097e59524
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

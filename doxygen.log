@@ -934,10 +934,10 @@ Generatin/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapbuck
   parameter 'searchBounds'
   parameter 'maxBounds'
   parameter 'expand'
-/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.h:77: warning: argument 'pixmap' of command @param is not found in the argument list of CanvasPainter::initializePainter(QPainter &painter, QPaintDevice &device, const QRect &blitRect)
-/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.h:77: warning: The following parameter of CanvasPainter::initializePainter(QPainter &painter, QPaintDevice &device, const QRect &blitRect) is not documented:
+/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.h:78: warning: argument 'pixmap' of command @param is not found in the argument list of CanvasPainter::initializePainter(QPainter &painter, QPaintDevice &device, const QRect &blitRect)
+/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.h:78: warning: The following parameter of CanvasPainter::initializePainter(QPainter &painter, QPaintDevice &device, const QRect &blitRect) is not documented:
   parameter 'device'
-/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.cpp:395: warning: The following parameter of CanvasPainter::paintCurrentFrame(QPainter &painter, const QRect &blitRect, int startLayer, int endLayer) is not documented:
+/home/runner/work/pencil/pencil/core_lib/src/canvaspainter.cpp:408: warning: The following parameter of CanvasPainter::paintCurrentFrame(QPainter &painter, const QRect &blitRect, int startLayer, int endLayer) is not documented:
   parameter 'blitRect'
 g code for file core_lib/src/util/blitrect.h...
 Generating code for file core_lib/src/util/cameraeasingtype.cpp...
@@ -1647,6 +1647,6 @@ Patching output file 152/155
 Patching output file 153/155
 Patching output file 154/155
 Patching output file 155/155
-type lookup cache used 17961/65536 hits=127355 misses=19057
-symbol lookup cache used 18474/65536 hits=203762 misses=18474
+type lookup cache used 17968/65536 hits=127438 misses=19064
+symbol lookup cache used 18482/65536 hits=203849 misses=18482
 finished...
