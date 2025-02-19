@@ -927,9 +927,9 @@ Generating code for file core_lib/src/tool/stroketool.h...
 Generating code for file core_lib/src/util/blitrect.cpp...
 Generatin/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapbucket.h:52: warning: The following parameter of BitmapBucket::allowFill(const QPoint &checkPoint, const QRgb &checkColor) const is not documented:
   parameter 'checkColor'
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1025: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1025: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1025: warning: The following parameters of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand) are not documented:
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1030: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1030: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1030: warning: The following parameters of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand) are not documented:
   parameter 'fillPixels'
   parameter 'searchBounds'
   parameter 'maxBounds'
@@ -1647,6 +1647,6 @@ Patching output file 152/155
 Patching output file 153/155
 Patching output file 154/155
 Patching output file 155/155
-type lookup cache used 17968/65536 hits=127438 misses=19064
-symbol lookup cache used 18482/65536 hits=203849 misses=18482
+type lookup cache used 17975/65536 hits=127539 misses=19071
+symbol lookup cache used 18489/65536 hits=203957 misses=18489
 finished...

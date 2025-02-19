@@ -381,6 +381,9 @@ T&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="http
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a8347a90b87ccb73e1a1bc633c00c6c06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_manager.html#a8347a90b87ccb73e1a1bc633c00c6c06">copyDir</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> src, const <a class="elRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dst)</td></tr>
+<tr class="memdesc:a8347a90b87ccb73e1a1bc633c00c6c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a directory to another directory recursively (depth-first).  <br /></td></tr>
+<tr class="separator:a8347a90b87ccb73e1a1bc633c00c6c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58fe4cf423a0f63b574d002695fbabb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_status.html">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_manager.html#ac58fe4cf423a0f63b574d002695fbabb">unzip</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;strZipFile, const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> &amp;strUnzipTarget)</td></tr>
 <tr class="separator:ac58fe4cf423a0f63b574d002695fbabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0620bc3da27f6ab23dbe5dae079fb3ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_file_manager.html#a0620bc3da27f6ab23dbe5dae079fb3ec">loadObject</a> (<a class="el" href="class_object.html">Object</a> *, const <a class="elRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> &amp;root)</td></tr>
@@ -514,7 +517,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00035">35</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00036">36</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aed06615dba6e3987ba4f129505e92edc" name="aed06615dba6e3987ba4f129505e92edc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed06615dba6e3987ba4f129505e92edc">&#9670;&#160;</a></span>FileManager()</h2>
@@ -561,7 +564,57 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00602">602</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00606">606</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8347a90b87ccb73e1a1bc633c00c6c06" name="a8347a90b87ccb73e1a1bc633c00c6c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8347a90b87ccb73e1a1bc633c00c6c06">&#9670;&#160;</a></span>copyDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_status.html">Status</a> FileManager::copyDir </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>&#160;</td>
+          <td class="paramname"><em>dst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy a directory to another directory recursively (depth-first). </p>
+<p>If any of the files being copied already exist at the destination, they will not be overwritten and a non-ok status will be returned.</p>
+<p>If any part of the copy fails, this function will still attempt to copy as many files as possible before returning a non-ok status.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>The source directory to copy. </td></tr>
+    <tr><td class="paramname">dst</td><td>The target directory to copy to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Status indicating the success or failure of the copy. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00774">774</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -589,7 +642,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00582">582</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00586">586</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -617,7 +670,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00625">625</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00629">629</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -644,7 +697,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00047">47</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00048">48</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
 
 </div>
 </div>
@@ -682,7 +735,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00494">494</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00498">498</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -710,7 +763,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01034">1034</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01095">1095</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -748,7 +801,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00547">547</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00551">551</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -776,7 +829,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00223">223</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00227">227</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +857,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00825">825</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00886">886</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -832,7 +885,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01024">1024</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01085">1085</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -890,7 +943,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00172">172</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00176">176</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -928,7 +981,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00218">218</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00222">222</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -956,7 +1009,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00639">639</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00643">643</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -976,7 +1029,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00769">769</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00830">830</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1057,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00410">410</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00414">414</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1084,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00633">633</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00637">637</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1086,7 +1139,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <div class="line">  &lt;<span class="keywordtype">image</span> <span class="keyword">src</span>=<span class="stringliteral">&quot;002.001.vec&quot;</span> <span class="keyword">frame</span>=<span class="stringliteral">&quot;1&quot;</span>/&gt;</div>
 <div class="line">&lt;/<span class="keywordtype">layer</span>&gt;</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00971">971</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01032">1032</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1116,7 +1169,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Create a new main.xml based on the png/vec filenames left in the data folder. </p>
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00909">909</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00970">970</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1154,7 +1207,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01008">1008</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l01069">1069</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1235,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00866">866</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00927">927</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1255,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00843">843</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00904">904</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1232,7 +1285,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00231">231</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00235">235</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1270,7 +1323,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00435">435</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00439">439</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1342,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00800">800</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00861">861</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1380,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00757">757</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00818">818</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1347,7 +1400,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00781">781</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00842">842</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1391,7 +1444,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00651">651</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00655">655</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1435,7 +1488,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00694">694</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00698">698</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1532,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00744">744</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00748">748</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1499,7 +1552,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00387">387</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8cpp_source.html#l00391">391</a> of file <a class="el" href="filemanager_8cpp_source.html">filemanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1524,7 +1577,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00094">94</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00096">96</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
 
 </div>
 </div>
@@ -1548,7 +1601,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00091">91</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00093">93</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
 
 </div>
 </div>
@@ -1572,7 +1625,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00095">95</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00097">97</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
 
 </div>
 </div>
@@ -1596,7 +1649,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00092">92</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="filemanager_8h_source.html#l00094">94</a> of file <a class="el" href="filemanager_8h_source.html">filemanager.h</a>.</p>
 
 </div>
 </div>
@@ -1610,10 +1663,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Feb 15 2025 11:10:02 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Feb 19 2025 02:17:00 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision f4b53678856432fa1167f76e4e1ba25097e59524
+   based on revision 202915883da1139b588cfcf588d83f615f8701fb
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
