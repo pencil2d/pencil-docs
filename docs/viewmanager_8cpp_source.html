@@ -226,9 +226,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> mViewCanvasInverse;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>qreal ViewManager::getViewScaleInverse()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="class_view_manager.html#ace413fe0117f6dfbc8b6816435927989">  111</a></span>qreal <a class="code hl_function" href="class_view_manager.html#ace413fe0117f6dfbc8b6816435927989">ViewManager::getScaleInversed</a>()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> mViewCanvasInverse.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#m11">m11</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> 1. / mScaling;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keywordtype">void</span> ViewManager::updateViewTransforms()</div>
@@ -506,6 +506,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_editor_html_ab278e2a655561a23cd1617db3a2e1fc1"><div class="ttname"><a href="class_editor.html#ab278e2a655561a23cd1617db3a2e1fc1">Editor::scrubbed</a></div><div class="ttdeci">void scrubbed(int frameNumber)</div><div class="ttdoc">This should be emitted after scrubbing.</div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00041">object.h:42</a></div></div>
 <div class="ttc" id="aclass_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00039">pencilerror.h:40</a></div></div>
+<div class="ttc" id="aclass_view_manager_html_ace413fe0117f6dfbc8b6816435927989"><div class="ttname"><a href="class_view_manager.html#ace413fe0117f6dfbc8b6816435927989">ViewManager::getScaleInversed</a></div><div class="ttdeci">qreal getScaleInversed() const</div><div class="ttdef"><b>Definition:</b> <a href="viewmanager_8cpp_source.html#l00111">viewmanager.cpp:111</a></div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="aqpainterpath_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainterpath.html">QPainterPath</a></div></div>
 <div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
@@ -520,7 +521,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqtransform_html_fromScale"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#fromScale">QTransform::fromScale</a></div><div class="ttdeci">QTransform fromScale(qreal sx, qreal sy)</div></div>
 <div class="ttc" id="aqtransform_html_fromTranslate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#fromTranslate">QTransform::fromTranslate</a></div><div class="ttdeci">QTransform fromTranslate(qreal dx, qreal dy)</div></div>
 <div class="ttc" id="aqtransform_html_inverted"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#inverted">QTransform::inverted</a></div><div class="ttdeci">QTransform inverted(bool *invertible) const const</div></div>
-<div class="ttc" id="aqtransform_html_m11"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#m11">QTransform::m11</a></div><div class="ttdeci">qreal m11() const const</div></div>
 <div class="ttc" id="aqtransform_html_map-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#map-1">QTransform::map</a></div><div class="ttdeci">QPoint map(const QPoint &amp;point) const const</div></div>
 <div class="ttc" id="aqtransform_html_mapRect-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#mapRect-1">QTransform::mapRect</a></div><div class="ttdeci">QRect mapRect(const QRect &amp;rectangle) const const</div></div>
 <div class="ttc" id="aqtransform_html_rotate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#rotate">QTransform::rotate</a></div><div class="ttdeci">QTransform &amp; rotate(qreal angle, Qt::Axis axis)</div></div>
@@ -532,10 +532,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Feb 19 2025 02:17:00 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Feb 19 2025 06:44:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 202915883da1139b588cfcf588d83f615f8701fb
+   based on revision 0859c3786c4c2d375dc3075b00e4290394321b74
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -213,8 +213,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0b8c8d4787b8aa2fab6d989ba307c99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0405ce5fa5b9941e6d09c38688a2c5d"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_manager.html#aa0405ce5fa5b9941e6d09c38688a2c5d">getViewInverse</a> () const</td></tr>
 <tr class="separator:aa0405ce5fa5b9941e6d09c38688a2c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e7b29b66c2d52dd098f5e0dc7fd7b34"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_manager.html#a6e7b29b66c2d52dd098f5e0dc7fd7b34">getViewScaleInverse</a> () const</td></tr>
-<tr class="separator:a6e7b29b66c2d52dd098f5e0dc7fd7b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace413fe0117f6dfbc8b6816435927989"><td class="memItemLeft" align="right" valign="top">qreal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_manager.html#ace413fe0117f6dfbc8b6816435927989">getScaleInversed</a> () const</td></tr>
+<tr class="separator:ace413fe0117f6dfbc8b6816435927989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a493df7e5708673e9b7bd69d6b6ad0a9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_manager.html#a493df7e5708673e9b7bd69d6b6ad0a9e">resetView</a> ()</td></tr>
 <tr class="separator:a493df7e5708673e9b7bd69d6b6ad0a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63e0a071e77eab96a193a8fd96e74e15"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_manager.html#a63e0a071e77eab96a193a8fd96e74e15">mapCanvasToScreen</a> (<a class="elRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> p) const</td></tr>
@@ -808,7 +808,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00098">98</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00101">101</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -835,7 +835,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00094">94</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00097">97</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +862,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00087">87</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00090">90</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -889,7 +889,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00089">89</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00092">92</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -916,7 +916,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00090">90</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00093">93</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -943,7 +943,27 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00088">88</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00091">91</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+
+</div>
+</div>
+<a id="ace413fe0117f6dfbc8b6816435927989" name="ace413fe0117f6dfbc8b6816435927989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace413fe0117f6dfbc8b6816435927989">&#9670;&#160;</a></span>getScaleInversed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">qreal ViewManager::getScaleInversed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The inverted scale value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="viewmanager_8cpp_source.html#l00111">111</a> of file <a class="el" href="viewmanager_8cpp_source.html">viewmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -982,25 +1002,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="viewmanager_8cpp_source.html#l00106">106</a> of file <a class="el" href="viewmanager_8cpp_source.html">viewmanager.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a6e7b29b66c2d52dd098f5e0dc7fd7b34" name="a6e7b29b66c2d52dd098f5e0dc7fd7b34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e7b29b66c2d52dd098f5e0dc7fd7b34">&#9670;&#160;</a></span>getViewScaleInverse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">qreal ViewManager::getViewScaleInverse </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="viewmanager_8cpp_source.html#l00111">111</a> of file <a class="el" href="viewmanager_8cpp_source.html">viewmanager.cpp</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1057,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00085">85</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00088">88</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1084,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00086">86</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00089">89</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -1715,7 +1716,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00097">97</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00100">100</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -1743,7 +1744,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00095">95</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00098">98</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -1944,7 +1945,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00121">121</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00124">124</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -1968,7 +1969,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00114">114</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00117">117</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -1992,7 +1993,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00130">130</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00133">133</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2016,7 +2017,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00115">115</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00118">118</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2040,7 +2041,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00123">123</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00126">126</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2064,7 +2065,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00124">124</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00127">127</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2088,7 +2089,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00125">125</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00128">128</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2112,7 +2113,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00127">127</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00130">130</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2136,7 +2137,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00128">128</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00131">131</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2160,7 +2161,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00126">126</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00129">129</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2184,7 +2185,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00119">119</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00122">122</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2208,7 +2209,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00118">118</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00121">121</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2232,7 +2233,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00117">117</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00120">120</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2256,7 +2257,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00110">110</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00113">113</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2280,7 +2281,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00112">112</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00115">115</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2304,7 +2305,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00113">113</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00116">116</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2328,7 +2329,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00111">111</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="viewmanager_8h_source.html#l00114">114</a> of file <a class="el" href="viewmanager_8h_source.html">viewmanager.h</a>.</p>
 
 </div>
 </div>
@@ -2342,10 +2343,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Feb 19 2025 02:17:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Feb 19 2025 06:44:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 202915883da1139b588cfcf588d83f615f8701fb
+   based on revision 0859c3786c4c2d375dc3075b00e4290394321b74
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
