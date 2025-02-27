@@ -197,6 +197,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa0f3b4b6f38b9cbcf60370d5ae2b6f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b33ed0d69d4546fa1a76df470742f85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hand_tool.html#a1b33ed0d69d4546fa1a76df470742f85">loadSettings</a> () override</td></tr>
 <tr class="separator:a1b33ed0d69d4546fa1a76df470742f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577e0c349a191a0b691b9deb19911bcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hand_tool.html#a577e0c349a191a0b691b9deb19911bcc">saveSettings</a> () override</td></tr>
+<tr class="separator:a577e0c349a191a0b691b9deb19911bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2998dd321e69c06cdabcfa285946934f"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hand_tool.html#a2998dd321e69c06cdabcfa285946934f">cursor</a> () override</td></tr>
 <tr class="separator:a2998dd321e69c06cdabcfa285946934f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea5adcae2728becdf66fd5cdcf75d0a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hand_tool.html#aea5adcae2728becdf66fd5cdcf75d0a5">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *) override</td></tr>
@@ -217,6 +219,9 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="separator:a8e38868688c01d68fd29d19401c18f78 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adfa6eee5e4aa0b27f569583d1e992323">loadSettings</a> ()=0</td></tr>
 <tr class="separator:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a id="aa493b4007e6ebf8e15f50507c7951c30" name="aa493b4007e6ebf8e15f50507c7951c30"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>saveSettings</b> ()=0</td></tr>
+<tr class="separator:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#abc15ea8b94b4138a7687bfd1a3d761a8">cursor</a> ()</td></tr>
 <tr class="separator:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38470bcc99f28e0dacacce7eaf8305f1 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a38470bcc99f28e0dacacce7eaf8305f1">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *)=0</td></tr>
@@ -674,7 +679,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00062">62</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00066">66</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -733,7 +738,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00094">94</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00098">98</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -763,7 +768,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00076">76</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00080">80</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -793,7 +798,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00067">67</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00071">71</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -823,7 +828,36 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00087">87</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00091">91</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a577e0c349a191a0b691b9deb19911bcc" name="a577e0c349a191a0b691b9deb19911bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577e0c349a191a0b691b9deb19911bcc">&#9670;&#160;</a></span>saveSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HandTool::saveSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00048">48</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +901,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00102">102</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00106">106</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -924,7 +958,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00048">48</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8cpp_source.html#l00052">52</a> of file <a class="el" href="handtool_8cpp_source.html">handtool.cpp</a>.</p>
 
 </div>
 </div>
@@ -949,7 +983,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00046">46</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00047">47</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1007,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00045">45</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00046">46</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
 
 </div>
 </div>
@@ -997,7 +1031,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00043">43</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00044">44</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1055,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00044">44</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handtool_8h_source.html#l00045">45</a> of file <a class="el" href="handtool_8h_source.html">handtool.h</a>.</p>
 
 </div>
 </div>
@@ -1035,10 +1069,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:48:00 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

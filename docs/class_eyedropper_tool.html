@@ -196,6 +196,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a86d7e4ab604c98ca8cf987d0b834e1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3512d5afb2c71e67948b2560e82ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eyedropper_tool.html#a5d3512d5afb2c71e67948b2560e82ad6">loadSettings</a> () override</td></tr>
 <tr class="separator:a5d3512d5afb2c71e67948b2560e82ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2d5d30b21ac2f758a5899b996d9c7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eyedropper_tool.html#aca2d5d30b21ac2f758a5899b996d9c7b">saveSettings</a> () override</td></tr>
+<tr class="separator:aca2d5d30b21ac2f758a5899b996d9c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af041234781dacd73e010e1d875db8025"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eyedropper_tool.html#af041234781dacd73e010e1d875db8025">cursor</a> () override</td></tr>
 <tr class="separator:af041234781dacd73e010e1d875db8025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a4daab064ee5a47c05093f26f4f142"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eyedropper_tool.html#a90a4daab064ee5a47c05093f26f4f142">cursor</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color)</td></tr>
@@ -219,6 +221,9 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="separator:a8e38868688c01d68fd29d19401c18f78 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adfa6eee5e4aa0b27f569583d1e992323">loadSettings</a> ()=0</td></tr>
 <tr class="separator:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a id="aa493b4007e6ebf8e15f50507c7951c30" name="aa493b4007e6ebf8e15f50507c7951c30"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>saveSettings</b> ()=0</td></tr>
+<tr class="separator:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#abc15ea8b94b4138a7687bfd1a3d761a8">cursor</a> ()</td></tr>
 <tr class="separator:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38470bcc99f28e0dacacce7eaf8305f1 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a38470bcc99f28e0dacacce7eaf8305f1">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *)=0</td></tr>
@@ -667,7 +672,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00048">48</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00052">52</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -687,7 +692,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00060">60</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00064">64</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +732,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Retrieves color of the pixel under the cursor for a bitmap layer. </p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00148">148</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00152">152</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -767,7 +772,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Retrieves the color index of the pixel under the cursor for a vector layer. </p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00162">162</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00166">166</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -826,7 +831,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00083">83</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00087">87</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -856,7 +861,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00080">80</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00084">84</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -886,7 +891,36 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00114">114</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00118">118</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aca2d5d30b21ac2f758a5899b996d9c7b" name="aca2d5d30b21ac2f758a5899b996d9c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2d5d30b21ac2f758a5899b996d9c7b">&#9670;&#160;</a></span>saveSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EyedropperTool::saveSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00048">48</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -937,7 +971,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Updates front color for bitmap and color index for vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00125">125</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="eyedroppertool_8cpp_source.html#l00129">129</a> of file <a class="el" href="eyedroppertool_8cpp_source.html">eyedroppertool.cpp</a>.</p>
 
 </div>
 </div>
@@ -951,10 +985,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:48:00 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -226,13 +226,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_class" href="class_stroke_interpolator.html">StrokeInterpolator</a> mInterpolator;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_undo_save_state.html">UndoSaveState</a>* mUndoSaveState = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_stroke_tool.html#adb92dc38418dcd2b0fe45b59b69df395">setTemporaryWidth</a>(qreal width);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_stroke_tool.html#a9b050ce5df766e8cf9e413c3bc57f0f6">setTemporaryFeather</a>(qreal feather);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>};</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#endif </span><span class="comment">// STROKETOOL_H</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>};</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif </span><span class="comment">// STROKETOOL_H</span></div>
 <div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
 <div class="ttc" id="aclass_canvas_cursor_painter_html"><div class="ttname"><a href="class_canvas_cursor_painter.html">CanvasCursorPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="canvascursorpainter_8h_source.html#l00033">canvascursorpainter.h:34</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
@@ -242,9 +238,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_stroke_tool_html_a332add55697041088ff14ce06ce3cd5e"><div class="ttname"><a href="class_stroke_tool.html#a332add55697041088ff14ce06ce3cd5e">StrokeTool::enteringThisTool</a></div><div class="ttdeci">bool enteringThisTool() override</div><div class="ttdoc">Setup active connections here that should only emit while tool is active leavingThisTool will handle ...</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8cpp_source.html#l00068">stroketool.cpp:68</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html_a617934362e350417aba259efd87e07ad"><div class="ttname"><a href="class_stroke_tool.html#a617934362e350417aba259efd87e07ad">StrokeTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00055">stroketool.h:55</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html_a92dfe291f09be113ced6b7a4395bd4dc"><div class="ttname"><a href="class_stroke_tool.html#a92dfe291f09be113ced6b7a4395bd4dc">StrokeTool::loadSettings</a></div><div class="ttdeci">void loadSettings() override</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8cpp_source.html#l00058">stroketool.cpp:58</a></div></div>
-<div class="ttc" id="aclass_stroke_tool_html_a9b050ce5df766e8cf9e413c3bc57f0f6"><div class="ttname"><a href="class_stroke_tool.html#a9b050ce5df766e8cf9e413c3bc57f0f6">StrokeTool::setTemporaryFeather</a></div><div class="ttdeci">void setTemporaryFeather(qreal feather)</div><div class="ttdoc">Sets the feather value, without calling settings to store the state.</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8cpp_source.html#l00393">stroketool.cpp:393</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html_acfc3e37bc18db7898eb5d57f28fff050"><div class="ttname"><a href="class_stroke_tool.html#acfc3e37bc18db7898eb5d57f28fff050">StrokeTool::emptyFrameActionEnabled</a></div><div class="ttdeci">virtual bool emptyFrameActionEnabled()</div><div class="ttdoc">Whether to enable the &quot;drawing on empty frame&quot; preference.</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8cpp_source.html#l00167">stroketool.cpp:167</a></div></div>
-<div class="ttc" id="aclass_stroke_tool_html_adb92dc38418dcd2b0fe45b59b69df395"><div class="ttname"><a href="class_stroke_tool.html#adb92dc38418dcd2b0fe45b59b69df395">StrokeTool::setTemporaryWidth</a></div><div class="ttdeci">void setTemporaryWidth(qreal width)</div><div class="ttdoc">Sets the width value without calling settings to store the state.</div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8cpp_source.html#l00382">stroketool.cpp:382</a></div></div>
 <div class="ttc" id="aqenterevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qenterevent.html">QEnterEvent</a></div></div>
 <div class="ttc" id="aqevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qevent.html">QEvent</a></div></div>
 <div class="ttc" id="aqhash_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qhash.html">QHash</a></div></div>
@@ -265,10 +259,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:47:59 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

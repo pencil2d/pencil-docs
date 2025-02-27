@@ -146,36 +146,37 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ToolType type() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    uint toolMode;  <span class="comment">// 0=normal/smooth 1=smudge - todo: move to basetool? could be useful</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> loadSettings() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> resetToDefault() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a> *) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a> *) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a> *) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">bool</span> keyPressEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> keyReleaseEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> drawStroke();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> setWidth( <span class="keyword">const</span> qreal width ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> setFeather( <span class="keyword">const</span> qreal feather ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> setPressure( <span class="keyword">const</span> <span class="keywordtype">bool</span> pressure ) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_smudge_tool.html#aee5890c75ad73904691f8921f5bbf748">emptyFrameActionEnabled</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> offsetFromPressPos();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mLastBrushPoint;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// SMUDGETOOL_H</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> saveSettings() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> resetToDefault() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a> *) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> pointerReleaseEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a> *) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> pointerMoveEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a> *) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> keyPressEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> keyReleaseEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a> *) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> drawStroke();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> setWidth( <span class="keyword">const</span> qreal width ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> setFeather( <span class="keyword">const</span> qreal feather ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> setPressure( <span class="keyword">const</span> <span class="keywordtype">bool</span> pressure ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_smudge_tool.html#aee5890c75ad73904691f8921f5bbf748">emptyFrameActionEnabled</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> offsetFromPressPos();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> mLastBrushPoint;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">// SMUDGETOOL_H</span></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_smudge_tool_html"><div class="ttname"><a href="class_smudge_tool.html">SmudgeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="smudgetool_8h_source.html#l00023">smudgetool.h:24</a></div></div>
-<div class="ttc" id="aclass_smudge_tool_html_aee5890c75ad73904691f8921f5bbf748"><div class="ttname"><a href="class_smudge_tool.html#aee5890c75ad73904691f8921f5bbf748">SmudgeTool::emptyFrameActionEnabled</a></div><div class="ttdeci">bool emptyFrameActionEnabled() override</div><div class="ttdoc">Whether to enable the &quot;drawing on empty frame&quot; preference.</div><div class="ttdef"><b>Definition:</b> <a href="smudgetool_8cpp_source.html#l00101">smudgetool.cpp:101</a></div></div>
+<div class="ttc" id="aclass_smudge_tool_html_aee5890c75ad73904691f8921f5bbf748"><div class="ttname"><a href="class_smudge_tool.html#aee5890c75ad73904691f8921f5bbf748">SmudgeTool::emptyFrameActionEnabled</a></div><div class="ttdeci">bool emptyFrameActionEnabled() override</div><div class="ttdoc">Whether to enable the &quot;drawing on empty frame&quot; preference.</div><div class="ttdef"><b>Definition:</b> <a href="smudgetool_8cpp_source.html#l00097">smudgetool.cpp:97</a></div></div>
 <div class="ttc" id="aclass_stroke_tool_html"><div class="ttname"><a href="class_stroke_tool.html">StrokeTool</a></div><div class="ttdef"><b>Definition:</b> <a href="stroketool_8h_source.html#l00033">stroketool.h:34</a></div></div>
 <div class="ttc" id="aqcursor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a></div></div>
 <div class="ttc" id="aqkeyevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeyevent.html">QKeyEvent</a></div></div>
@@ -189,10 +190,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:47:59 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

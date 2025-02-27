@@ -189,15 +189,15 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#Q_OBJECT">Q_OBJECT</a></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_base_tool.html">BaseTool</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qobject.html">QObject</a>* <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#parent">parent</a>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> TypeName(ToolType);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> typeName() { <span class="keywordflow">return</span> TypeName(type()); }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> initialize(<a class="code hl_class" href="class_editor.html">Editor</a>* editor);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">virtual</span> ToolType type() = 0;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadSettings() = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">static</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> TypeName(ToolType);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> typeName() { <span class="keywordflow">return</span> TypeName(type()); }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> initialize(<a class="code hl_class" href="class_editor.html">Editor</a>* editor);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">virtual</span> ToolType type() = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadSettings() = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> saveSettings() = 0;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">virtual</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> cursor();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> pointerPressEvent(<a class="code hl_class" href="class_pointer_event.html">PointerEvent</a>*) = 0;</div>
@@ -267,10 +267,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#endif </span><span class="comment">// BASETOOL_H</span></div>
 <div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
-<div class="ttc" id="aclass_base_tool_html_a0234f514f71278e171b7471caaec191b"><div class="ttname"><a href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">BaseTool::isActive</a></div><div class="ttdeci">virtual bool isActive() const</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00122">basetool.cpp:122</a></div></div>
+<div class="ttc" id="aclass_base_tool_html_a0234f514f71278e171b7471caaec191b"><div class="ttname"><a href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">BaseTool::isActive</a></div><div class="ttdeci">virtual bool isActive() const</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00125">basetool.cpp:125</a></div></div>
 <div class="ttc" id="aclass_base_tool_html_a1fa7f072b858ca73cd6515b099830a44"><div class="ttname"><a href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool::leavingThisTool</a></div><div class="ttdeci">virtual bool leavingThisTool()</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00069">basetool.cpp:69</a></div></div>
 <div class="ttc" id="aclass_base_tool_html_a5577b89e6555c3336c57a61922de83c2"><div class="ttname"><a href="class_base_tool.html#a5577b89e6555c3336c57a61922de83c2">BaseTool::enteringThisTool</a></div><div class="ttdeci">virtual bool enteringThisTool()</div><div class="ttdoc">Setup active connections here that should only emit while tool is active leavingThisTool will handle ...</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00140">basetool.h:140</a></div></div>
-<div class="ttc" id="aclass_base_tool_html_a92dd16c12e6b7b5e14cd9cc08af4c637"><div class="ttname"><a href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">BaseTool::isDrawingTool</a></div><div class="ttdeci">bool isDrawingTool()</div><div class="ttdoc">BaseTool::isDrawingTool - A drawing tool is anything that applies something to the canvas.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00113">basetool.cpp:113</a></div></div>
+<div class="ttc" id="aclass_base_tool_html_a92dd16c12e6b7b5e14cd9cc08af4c637"><div class="ttname"><a href="class_base_tool.html#a92dd16c12e6b7b5e14cd9cc08af4c637">BaseTool::isDrawingTool</a></div><div class="ttdeci">bool isDrawingTool()</div><div class="ttdoc">BaseTool::isDrawingTool - A drawing tool is anything that applies something to the canvas.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00116">basetool.cpp:116</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00069">editor.h:70</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_properties_html"><div class="ttname"><a href="class_properties.html">Properties</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00038">basetool.h:39</a></div></div>
@@ -296,10 +296,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:47:59 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

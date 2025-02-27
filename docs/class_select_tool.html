@@ -197,6 +197,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d66c20bc540d3d02c16fd9a4a5a6cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31812882b36c4c092f4d078d32234d8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_select_tool.html#a31812882b36c4c092f4d078d32234d8e">loadSettings</a> () override</td></tr>
 <tr class="separator:a31812882b36c4c092f4d078d32234d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38be0371dca5861b57f104b95ee87365"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_select_tool.html#a38be0371dca5861b57f104b95ee87365">saveSettings</a> () override</td></tr>
+<tr class="separator:a38be0371dca5861b57f104b95ee87365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c03d56dc7947a0a5c38c409692afe1"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_select_tool.html#a84c03d56dc7947a0a5c38c409692afe1">cursor</a> () override</td></tr>
 <tr class="separator:a84c03d56dc7947a0a5c38c409692afe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df49913bfdd1f2b987e7ced09eb7ede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_select_tool.html#a2df49913bfdd1f2b987e7ced09eb7ede">resetToDefault</a> () override</td></tr>
@@ -213,6 +215,9 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="separator:a8e38868688c01d68fd29d19401c18f78 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adfa6eee5e4aa0b27f569583d1e992323">loadSettings</a> ()=0</td></tr>
 <tr class="separator:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a id="aa493b4007e6ebf8e15f50507c7951c30" name="aa493b4007e6ebf8e15f50507c7951c30"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>saveSettings</b> ()=0</td></tr>
+<tr class="separator:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#abc15ea8b94b4138a7687bfd1a3d761a8">cursor</a> ()</td></tr>
 <tr class="separator:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38470bcc99f28e0dacacce7eaf8305f1 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a38470bcc99f28e0dacacce7eaf8305f1">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *)=0</td></tr>
@@ -705,7 +710,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00097">97</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00103">103</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -743,7 +748,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00219">219</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00225">225</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +777,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00044">44</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00053">53</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -800,7 +805,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00059">59</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00060">60</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -830,7 +835,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>SelectTool::keepSelection Keep selection rect and normalize if invalid. </p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00208">208</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00214">214</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -860,7 +865,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00290">290</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00296">296</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -929,7 +934,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>SelectTool::manageSelectionOrigin switches anchor point when crossing threshold. </p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00251">251</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00257">257</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -957,7 +962,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00199">199</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00205">205</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -985,7 +990,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00308">308</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00314">314</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1020,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00139">139</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00145">145</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1050,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00121">121</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00127">127</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1080,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00168">168</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00174">174</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1104,7 +1109,36 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00084">84</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00093">93</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a38be0371dca5861b57f104b95ee87365" name="a38be0371dca5861b57f104b95ee87365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38be0371dca5861b57f104b95ee87365">&#9670;&#160;</a></span>saveSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SelectTool::saveSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00044">44</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1168,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00089">89</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8cpp_source.html#l00098">98</a> of file <a class="el" href="selecttool_8cpp_source.html">selecttool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1222,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00064">64</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00065">65</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1212,7 +1246,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00070">70</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00071">71</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1236,7 +1270,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00066">66</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00067">67</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1260,7 +1294,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00065">65</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00066">66</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1318,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00068">68</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00069">69</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1342,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00067">67</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00068">68</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1366,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00072">72</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="selecttool_8h_source.html#l00073">73</a> of file <a class="el" href="selecttool_8h_source.html">selecttool.h</a>.</p>
 
 </div>
 </div>
@@ -1346,10 +1380,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:48:00 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

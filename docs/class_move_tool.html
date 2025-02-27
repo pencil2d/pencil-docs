@@ -197,6 +197,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5cc0d37e29c5ac6054299cf45c5b072d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73148e63567b13acbffd1ca0fb167839"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a73148e63567b13acbffd1ca0fb167839">loadSettings</a> () override</td></tr>
 <tr class="separator:a73148e63567b13acbffd1ca0fb167839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786fb9ae4eccc08c2b8fcb09e4411921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a786fb9ae4eccc08c2b8fcb09e4411921">saveSettings</a> () override</td></tr>
+<tr class="separator:a786fb9ae4eccc08c2b8fcb09e4411921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf63a3ad76ae0381086e3c5259906ab"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a8cf63a3ad76ae0381086e3c5259906ab">cursor</a> () override</td></tr>
 <tr class="separator:a8cf63a3ad76ae0381086e3c5259906ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a195852a90823a32945069ba181bb8990"><td class="memItemLeft" align="right" valign="top"><a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_tool.html#a195852a90823a32945069ba181bb8990">cursor</a> (MoveMode mode) const</td></tr>
@@ -227,6 +229,9 @@ virtual ToolType&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> 
 <tr class="separator:a8e38868688c01d68fd29d19401c18f78 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#adfa6eee5e4aa0b27f569583d1e992323">loadSettings</a> ()=0</td></tr>
 <tr class="separator:adfa6eee5e4aa0b27f569583d1e992323 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top"><a id="aa493b4007e6ebf8e15f50507c7951c30" name="aa493b4007e6ebf8e15f50507c7951c30"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>saveSettings</b> ()=0</td></tr>
+<tr class="separator:aa493b4007e6ebf8e15f50507c7951c30 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual <a class="elRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#abc15ea8b94b4138a7687bfd1a3d761a8">cursor</a> ()</td></tr>
 <tr class="separator:abc15ea8b94b4138a7687bfd1a3d761a8 inherit pub_methods_class_base_tool"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38470bcc99f28e0dacacce7eaf8305f1 inherit pub_methods_class_base_tool"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_tool.html#a38470bcc99f28e0dacacce7eaf8305f1">pointerPressEvent</a> (<a class="el" href="class_pointer_event.html">PointerEvent</a> *)=0</td></tr>
@@ -702,7 +707,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00313">313</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00322">322</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -746,7 +751,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00209">209</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00218">218</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -792,7 +797,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the curves We can therefore create a selection just by clicking near/on a curve. </p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00255">255</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00264">264</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -819,7 +824,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00354">354</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00363">363</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -848,7 +853,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00062">62</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00071">71</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -868,7 +873,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00364">364</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00373">373</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -901,7 +906,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html#a0234f514f71278e171b7471caaec191b">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00335">335</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00344">344</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -932,7 +937,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00324">324</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00333">333</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -991,7 +996,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00122">122</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00131">131</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1026,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00099">99</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00108">108</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1051,7 +1056,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00163">163</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00172">172</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1080,7 +1085,36 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00340">340</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00349">349</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a786fb9ae4eccc08c2b8fcb09e4411921" name="a786fb9ae4eccc08c2b8fcb09e4411921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786fb9ae4eccc08c2b8fcb09e4411921">&#9670;&#160;</a></span>saveSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MoveTool::saveSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00062">62</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1158,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00286">286</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00295">295</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1162,7 +1196,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00272">272</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00281">281</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1226,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>Reimplemented from <a class="el" href="class_base_tool.html">BaseTool</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00345">345</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00354">354</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1232,7 +1266,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 
 <p>MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves. </p>
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00304">304</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00313">313</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1270,7 +1304,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00181">181</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00190">190</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1361,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00078">78</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8cpp_source.html#l00087">87</a> of file <a class="el" href="movetool_8cpp_source.html">movetool.cpp</a>.</p>
 
 </div>
 </div>
@@ -1352,7 +1386,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00064">64</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00065">65</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1376,7 +1410,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00068">68</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00069">69</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1400,7 +1434,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00067">67</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00068">68</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1424,7 +1458,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00065">65</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00066">66</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1448,7 +1482,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00066">66</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00067">67</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1472,7 +1506,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00070">70</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movetool_8h_source.html#l00071">71</a> of file <a class="el" href="movetool_8h_source.html">movetool.h</a>.</p>
 
 </div>
 </div>
@@ -1486,10 +1520,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef"
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 20 2025 15:48:00 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision fe07f10276252c6baccbbcd52421b9603f51e913
+   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
