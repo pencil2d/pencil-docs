@@ -1,9 +1,9 @@
 var searchData=
 [
   ['importexportdialog_0',['ImportExportDialog',['../class_import_export_dialog.html',1,'']]],
-  ['importimageseqdialog_1',['ImportImageSeqDialog',['../class_import_image_seq_dialog.html',1,'']]],
-  ['importlayersdialog_2',['ImportLayersDialog',['../class_import_layers_dialog.html',1,'']]],
-  ['importposition_3',['ImportPosition',['../struct_import_position_dialog_1_1_import_position.html',1,'ImportPositionDialog']]],
+  ['importimageconfig_1',['ImportImageConfig',['../struct_import_image_config.html',1,'']]],
+  ['importimageseqdialog_2',['ImportImageSeqDialog',['../class_import_image_seq_dialog.html',1,'']]],
+  ['importlayersdialog_3',['ImportLayersDialog',['../class_import_layers_dialog.html',1,'']]],
   ['importpositiondialog_4',['ImportPositionDialog',['../class_import_position_dialog.html',1,'']]],
   ['inflate_5fstate_5',['inflate_state',['../structinflate__state.html',1,'']]],
   ['intersection_6',['Intersection',['../struct_intersection.html',1,'']]],

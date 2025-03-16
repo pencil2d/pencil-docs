@@ -138,104 +138,64 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;QSettings&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QStandardItemModel&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;editor.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;layercamera.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;viewmanager.h&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;layermanager.h&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;scribblearea.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>ImportPositionDialog::ImportPositionDialog(<a class="code hl_class" href="class_editor.html">Editor</a>* editor, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent) :</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a>(parent),</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    ui(new Ui::<a class="code hl_class" href="class_import_position_dialog.html">ImportPositionDialog</a>), mEditor(editor)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ui-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setupUi">setupUi</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of current view&quot;</span>));</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of canvas (0,0)&quot;</span>));</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of camera, current frame&quot;</span>));</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of camera, follow camera&quot;</span>));</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (mEditor-&gt;layers()-&gt;getCameraLayerBelow(mEditor-&gt;currentLayerIndex()) == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">auto</span> model = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a>*<span class="keyword">&gt;</span>(ui-&gt;cbImagePosition-&gt;model());</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        model-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html#item">item</a>(2, 0)-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditem.html#setEnabled">setEnabled</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        model-&gt;item(3, 0)-&gt;setEnabled(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;layermanager.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>ImportPositionDialog::ImportPositionDialog(<a class="code hl_class" href="class_editor.html">Editor</a>* editor, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> *parent) :</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a>(parent),</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ui(new Ui::<a class="code hl_class" href="class_import_position_dialog.html">ImportPositionDialog</a>), mEditor(editor)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    ui-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#setupUi">setupUi</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of current view&quot;</span>));</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of canvas (0,0)&quot;</span>));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of camera, current frame&quot;</span>));</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    ui-&gt;cbImagePosition-&gt;addItem(tr(<span class="stringliteral">&quot;Center of camera, follow camera&quot;</span>));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (mEditor-&gt;layers()-&gt;getCameraLayerBelow(mEditor-&gt;currentLayerIndex()) == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">auto</span> model = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a>*<span class="keyword">&gt;</span>(ui-&gt;cbImagePosition-&gt;model());</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        model-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html#item">item</a>(2, 0)-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditem.html#setEnabled">setEnabled</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        model-&gt;item(3, 0)-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    connect(ui-&gt;cbImagePosition, <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcombobox.html">QComboBox</a>::*)(<span class="keywordtype">int</span>)<span class="keyword">&gt;</span>(&amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcombobox.html#currentIndexChanged">QComboBox::currentIndexChanged</a>), <span class="keyword">this</span>, &amp;ImportPositionDialog::didChangeComboBoxIndex);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    connect(ui-&gt;buttonBox, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#accepted">QDialogButtonBox::accepted</a>, <span class="keyword">this</span>, &amp;ImportPositionDialog::changeImportView);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    connect(ui-&gt;cbImagePosition, <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcombobox.html">QComboBox</a>::*)(<span class="keywordtype">int</span>)<span class="keyword">&gt;</span>(&amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcombobox.html#currentIndexChanged">QComboBox::currentIndexChanged</a>), <span class="keyword">this</span>, &amp;ImportPositionDialog::didChangeComboBoxIndex);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    connect(ui-&gt;buttonBox, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#accepted">QDialogButtonBox::accepted</a>, <span class="keyword">this</span>, &amp;ImportPositionDialog::changeImportView);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">int</span> value = settings.value(IMPORT_REPOSITION_TYPE).toInt();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> value = settings.value(IMPORT_REPOSITION_TYPE).toInt();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ui-&gt;cbImagePosition-&gt;setCurrentIndex(value);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    didChangeComboBoxIndex(value);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>ImportPositionDialog::~ImportPositionDialog()</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">delete</span> ui;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> ImportPositionDialog::didChangeComboBoxIndex(<span class="keyword">const</span> <span class="keywordtype">int</span> index)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    mImportOption = ImportPosition::getTypeFromIndex(index);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> ImportPositionDialog::changeImportView()</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    mEditor-&gt;view()-&gt;setImportFollowsCamera(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> transform;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (mImportOption == ImportPosition::Type::CenterOfView)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> centralPoint = mEditor-&gt;getScribbleArea()-&gt;getCentralPoint();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        transform = transform.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#fromTranslate">fromTranslate</a>(centralPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), centralPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        mEditor-&gt;view()-&gt;setImportView(transform);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        settings.setValue(IMPORT_REPOSITION_TYPE, ui-&gt;cbImagePosition-&gt;currentIndex());</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mImportOption == ImportPosition::Type::CenterOfCanvas)</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        transform = transform.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#fromTranslate">fromTranslate</a>(0, 0);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        mEditor-&gt;view()-&gt;setImportView(transform);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        settings.setValue(IMPORT_REPOSITION_TYPE, ui-&gt;cbImagePosition-&gt;currentIndex());</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mImportOption == ImportPosition::Type::CenterOfCamera)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_class" href="class_layer_camera.html">LayerCamera</a>* layerCam = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_camera.html">LayerCamera</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;getCameraLayerBelow(mEditor-&gt;currentLayerIndex()));</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        Q_ASSERT(layerCam);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> cameraRect = layerCam-&gt;getViewRect();</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        transform = transform.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#fromTranslate">fromTranslate</a>(cameraRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#center">center</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), cameraRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#center">center</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>());</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        mEditor-&gt;view()-&gt;setImportView(transform);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        settings.setValue(IMPORT_REPOSITION_TYPE, ui-&gt;cbImagePosition-&gt;currentIndex());</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    Q_ASSERT(mImportOption == ImportPosition::Type::CenterOfCameraFollowed);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    mEditor-&gt;view()-&gt;setImportFollowsCamera(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    settings.setValue(IMPORT_REPOSITION_TYPE, ui-&gt;cbImagePosition-&gt;currentIndex());</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
-<div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00069">editor.h:70</a></div></div>
-<div class="ttc" id="aclass_import_position_dialog_html"><div class="ttname"><a href="class_import_position_dialog.html">ImportPositionDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="importpositiondialog_8h_source.html#l00028">importpositiondialog.h:29</a></div></div>
-<div class="ttc" id="aclass_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00029">layercamera.h:30</a></div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ui-&gt;cbImagePosition-&gt;setCurrentIndex(value);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    didChangeComboBoxIndex(value);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>ImportPositionDialog::~ImportPositionDialog()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">delete</span> ui;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> ImportPositionDialog::didChangeComboBoxIndex(<span class="keyword">const</span> <span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    mImportConfig.positionType = getTypeFromIndex(index);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> ImportPositionDialog::changeImportView()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> (mImportConfig.positionType == ImportImageConfig::CenterOfCamera) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        mImportConfig.importFrame = mEditor-&gt;currentFrame();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    settings.setValue(IMPORT_REPOSITION_TYPE, ui-&gt;cbImagePosition-&gt;currentIndex());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00070">editor.h:71</a></div></div>
+<div class="ttc" id="aclass_import_position_dialog_html"><div class="ttname"><a href="class_import_position_dialog.html">ImportPositionDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="importpositiondialog_8h_source.html#l00030">importpositiondialog.h:31</a></div></div>
 <div class="ttc" id="aqcombobox_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcombobox.html">QComboBox</a></div></div>
 <div class="ttc" id="aqcombobox_html_currentIndexChanged"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcombobox.html#currentIndexChanged">QComboBox::currentIndexChanged</a></div><div class="ttdeci">void currentIndexChanged(int index)</div></div>
 <div class="ttc" id="aqdialog_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialog.html">QDialog</a></div></div>
 <div class="ttc" id="aqdialogbuttonbox_html_accepted"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdialogbuttonbox.html#accepted">QDialogButtonBox::accepted</a></div><div class="ttdeci">void accepted()</div></div>
-<div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
-<div class="ttc" id="aqpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const const</div></div>
-<div class="ttc" id="aqpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const const</div></div>
-<div class="ttc" id="aqrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
-<div class="ttc" id="aqrectf_html_center"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#center">QRectF::center</a></div><div class="ttdeci">QPointF center() const const</div></div>
 <div class="ttc" id="aqsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
 <div class="ttc" id="aqstandarditem_html_setEnabled"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstandarditem.html#setEnabled">QStandardItem::setEnabled</a></div><div class="ttdeci">void setEnabled(bool enabled)</div></div>
 <div class="ttc" id="aqstandarditemmodel_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstandarditemmodel.html">QStandardItemModel</a></div></div>
 <div class="ttc" id="aqstandarditemmodel_html_item"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstandarditemmodel.html#item">QStandardItemModel::item</a></div><div class="ttdeci">QStandardItem * item(int row, int column) const const</div></div>
-<div class="ttc" id="aqtransform_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a></div></div>
-<div class="ttc" id="aqtransform_html_fromTranslate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#fromTranslate">QTransform::fromTranslate</a></div><div class="ttdeci">QTransform fromTranslate(qreal dx, qreal dy)</div></div>
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
 <div class="ttc" id="aqwidget_html_setupUi"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#setupUi">QWidget::setupUi</a></div><div class="ttdeci">void setupUi(QWidget *widget)</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -244,10 +204,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Feb 27 2025 01:44:36 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Mar 16 2025 21:15:07 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision a87d640baf4ce6a48c0da4fb47adfb8d5814ce3f
+   based on revision 2789e8dcf391cbbded4e396889c1e7365c24a978
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

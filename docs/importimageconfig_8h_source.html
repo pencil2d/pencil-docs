@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>core_lib/src/graphics/vector/vectorselection.cpp Source File | Pencil2D Developer Documentation</title>
+<title>core_lib/src/util/importimageconfig.h Source File | Pencil2D Developer Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,11 +109,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_321953a777feaab6f08e961d5540caec.html">graphics</a></li><li class="navelem"><a class="el" href="dir_3b6b909de9162731e2cbb02e461c9a80.html">vector</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b71f9c233d9519f4af35a38b852209b.html">core_lib</a></li><li class="navelem"><a class="el" href="dir_f830c7608682f699c450179736650af1.html">src</a></li><li class="navelem"><a class="el" href="dir_9d923c11026a4163129e78ef8a57744e.html">util</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">vectorselection.cpp</div></div>
+  <div class="headertitle"><div class="title">importimageconfig.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
@@ -133,42 +133,25 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"></span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;vectorselection.h&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>VectorSelection::VectorSelection()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> VectorSelection::clear()</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    vertex.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#clear">clear</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    curve.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#clear">clear</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> VectorSelection::add(<span class="keywordtype">int</span> curveNumber)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    curve &lt;&lt; curveNumber;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef IMPORTIMAGECONFIG_H</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define IMPORTIMAGECONFIG_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_import_image_config.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_import_image_config.html">ImportImageConfig</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">enum</span> PositionType {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        CenterOfView,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        CenterOfCanvas,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        CenterOfCamera,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        CenterOfCameraFollowed,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        None</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> importFrame = 1;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    PositionType positionType = None;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> VectorSelection::add(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;int&gt;</a> list)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">if</span> (list.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>() &gt; 0) add(list[0]);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> VectorSelection::add(<a class="code hl_class" href="class_vertex_ref.html">VertexRef</a> point)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    vertex &lt;&lt; point;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    add(point.curveNumber);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> VectorSelection::add(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;VertexRef&gt;</a> list)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (list.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>() &gt; 0) add(list[0]);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
-<div class="ttc" id="aclass_vertex_ref_html"><div class="ttname"><a href="class_vertex_ref.html">VertexRef</a></div><div class="ttdef"><b>Definition:</b> <a href="vertexref_8h_source.html#l00021">vertexref.h:22</a></div></div>
-<div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
-<div class="ttc" id="aqlist_html_clear"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#clear">QList::clear</a></div><div class="ttdeci">void clear()</div></div>
-<div class="ttc" id="aqlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const const</div></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">// IMPORTIMAGECONFIG_H</span></div>
+<div class="ttc" id="astruct_import_image_config_html"><div class="ttname"><a href="struct_import_image_config.html">ImportImageConfig</a></div><div class="ttdef"><b>Definition:</b> <a href="importimageconfig_8h_source.html#l00021">importimageconfig.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->

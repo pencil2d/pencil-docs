@@ -1,5 +1,5 @@
 <map id="ScribbleArea" name="ScribbleArea">
-<area shape="rect" id="node1" title=" " alt="" coords="1536,725,1661,755"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1536,726,1661,757"/>
 <area shape="rect" id="node9" href="$class_editor.html" title=" " alt="" coords="1991,673,2062,703"/>
 <area shape="rect" id="node14" href="$class_base_tool.html" title=" " alt="" coords="2319,151,2413,182"/>
 <area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="649,295,742,326"/>
@@ -8,9 +8,9 @@
 <area shape="rect" id="node11" href="$class_base_manager.html" title=" " alt="" coords="2299,661,2433,691"/>
 <area shape="rect" id="node19" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qtimer.html" title=" " alt="" coords="1119,138,1200,169"/>
 <area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpaintdevice.html" title=" " alt="" coords="177,402,309,433"/>
-<area shape="rect" id="node36" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpixmap.html" title=" " alt="" coords="647,479,744,510"/>
+<area shape="rect" id="node36" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpixmap.html" title=" " alt="" coords="647,485,744,515"/>
 <area shape="rect" id="node41" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qimage.html" title=" " alt="" coords="652,402,739,433"/>
-<area shape="rect" id="node37" href="$class_canvas_painter.html" title=" " alt="" coords="1089,659,1229,690"/>
+<area shape="rect" id="node37" href="$class_canvas_painter.html" title=" " alt="" coords="1089,665,1229,695"/>
 <area shape="rect" id="node6" href="$class_blit_rect.html" title=" " alt="" coords="201,741,284,771"/>
 <area shape="rect" id="node7" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qrect.html" title=" " alt="" coords="5,741,76,771"/>
 <area shape="rect" id="node45" href="$class_layer_camera.html" title=" " alt="" coords="630,1258,761,1289"/>
@@ -18,15 +18,15 @@
 <area shape="rect" id="node32" href="$class_overlay_manager.html" title=" " alt="" coords="2773,929,2931,959"/>
 <area shape="rect" id="node10" href="$class_color_manager.html" title=" " alt="" coords="2782,826,2922,857"/>
 <area shape="rect" id="node13" href="$class_tool_manager.html" title=" " alt="" coords="2787,335,2917,366"/>
-<area shape="rect" id="node17" href="$class_layer_manager.html" title=" " alt="" coords="2781,549,2923,579"/>
+<area shape="rect" id="node17" href="$class_layer_manager.html" title=" " alt="" coords="2781,571,2923,602"/>
 <area shape="rect" id="node18" href="$class_playback_manager.html" title=" " alt="" coords="2768,211,2936,242"/>
 <area shape="rect" id="node20" href="$class_view_manager.html" title=" " alt="" coords="2785,1683,2919,1714"/>
 <area shape="rect" id="node23" href="$class_preference_manager.html" title=" " alt="" coords="2759,1221,2945,1251"/>
-<area shape="rect" id="node28" href="$class_sound_manager.html" title=" " alt="" coords="2777,482,2927,513"/>
+<area shape="rect" id="node28" href="$class_sound_manager.html" title=" " alt="" coords="2777,505,2927,535"/>
 <area shape="rect" id="node29" href="$class_selection_manager.html" title=" " alt="" coords="2767,1494,2937,1525"/>
-<area shape="rect" id="node33" href="$class_clipboard_manager.html" title=" " alt="" coords="2764,649,2940,679"/>
-<area shape="rect" id="node34" href="$class_undo_redo_manager.html" title=" " alt="" coords="2759,743,2945,774"/>
-<area shape="rect" id="node12" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qcolor.html" title=" " alt="" coords="203,1361,283,1391"/>
+<area shape="rect" id="node33" href="$class_clipboard_manager.html" title=" " alt="" coords="2764,637,2940,667"/>
+<area shape="rect" id="node34" href="$class_undo_redo_manager.html" title=" " alt="" coords="2759,719,2945,750"/>
+<area shape="rect" id="node12" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qcolor.html" title=" " alt="" coords="203,1359,283,1390"/>
 <area shape="rect" id="node15" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qflags.html" title=" " alt="" coords="2283,399,2449,430"/>
 <area shape="rect" id="node16" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qhash.html" title=" " alt="" coords="2227,275,2505,306"/>
 <area shape="rect" id="node21" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtransform.html" title=" " alt="" coords="635,1437,755,1467"/>
@@ -38,15 +38,15 @@
 <area shape="rect" id="node25" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qhash.html" title=" " alt="" coords="2287,1213,2445,1243"/>
 <area shape="rect" id="node26" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qhash.html" title=" " alt="" coords="2279,1267,2453,1298"/>
 <area shape="rect" id="node27" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qhash.html" title=" " alt="" coords="2279,1322,2453,1353"/>
-<area shape="rect" id="node30" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpolygonf.html" title=" " alt="" coords="1103,1419,1215,1450"/>
+<area shape="rect" id="node30" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpolygonf.html" title=" " alt="" coords="1103,1399,1215,1430"/>
 <area shape="rect" id="node31" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qvector.html" title=" " alt="" coords="651,1543,739,1574"/>
 <area shape="rect" id="node35" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="1481,295,1716,326"/>
 <area shape="rect" id="node38" href="$struct_canvas_painter_options.html" title=" " alt="" coords="593,626,798,657"/>
 <area shape="rect" id="node39" href="$struct_onion_skin_painter_options.html" title=" " alt="" coords="127,602,358,633"/>
-<area shape="rect" id="node40" href="$class_object.html" title=" " alt="" coords="658,898,733,929"/>
-<area shape="rect" id="node42" href="$class_onion_skin_sub_painter.html" title="A Sub Painter class is meant to be used in existing painter classes It does not and should not cary t..." alt="" coords="596,1091,795,1122"/>
+<area shape="rect" id="node40" href="$class_object.html" title=" " alt="" coords="658,886,733,917"/>
+<area shape="rect" id="node42" href="$class_onion_skin_sub_painter.html" title="A Sub Painter class is meant to be used in existing painter classes It does not and should not cary t..." alt="" coords="596,1093,795,1123"/>
 <area shape="rect" id="node46" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpalette.html" title=" " alt="" coords="649,1005,742,1035"/>
-<area shape="rect" id="node47" href="$class_selection_painter.html" title=" " alt="" coords="1082,605,1237,635"/>
-<area shape="rect" id="node49" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qmap.html" title=" " alt="" coords="1056,715,1263,765"/>
-<area shape="rect" id="node50" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qloggingcategory.html" title=" " alt="" coords="1072,790,1247,821"/>
+<area shape="rect" id="node47" href="$class_selection_painter.html" title=" " alt="" coords="1082,610,1237,641"/>
+<area shape="rect" id="node49" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qmap.html" title=" " alt="" coords="1056,720,1263,771"/>
+<area shape="rect" id="node50" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qloggingcategory.html" title=" " alt="" coords="1072,795,1247,826"/>
 </map>
