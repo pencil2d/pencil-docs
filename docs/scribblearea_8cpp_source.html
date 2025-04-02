@@ -1464,188 +1464,191 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>    mCanvasPainter.ignoreTransformedSelection();</div>
 <div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span> </div>
 <div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span> </div>
-<div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
-<div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>    <span class="keywordflow">if</span> (selectMan-&gt;somethingSelected())</div>
-<div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span>    {</div>
-<div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>        <span class="keywordflow">if</span> (selectMan-&gt;mySelectionRect().isEmpty() || selectMan-&gt;selectionTransform().isIdentity()) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span> </div>
-<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
-<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>        {</div>
-<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>            <a class="code hl_function" href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">handleDrawingOnEmptyFrame</a>();</div>
-<div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>            <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = currentBitmapImage(layer);</div>
-<div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>            <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span>            <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> transformedImage = bitmapImage-&gt;transformed(selectMan-&gt;mySelectionRect().toRect(), selectMan-&gt;selectionTransform(), <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span> </div>
-<div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span> </div>
-<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>            bitmapImage-&gt;clear(selectMan-&gt;mySelectionRect());</div>
-<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>            bitmapImage-&gt;paste(&amp;transformedImage, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceOver</a>);</div>
-<div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>        }</div>
-<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>        {</div>
-<div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>            <span class="comment">// Unfortunately this doesn&#39;t work right currently so vector transforms</span></div>
-<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>            <span class="comment">// will always be applied on the previous keyframe when on an empty frame</span></div>
-<div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>            <span class="comment">//handleDrawingOnEmptyFrame();</span></div>
-<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
-<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span>            <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span> </div>
-<div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ad7eb4ae4ebae009d56666e0bf07ffa24">applySelectionTransformation</a>();</div>
-<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span>        }</div>
+<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span> </div>
+<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>    <span class="keywordtype">bool</span> useAA = mEditor-&gt;tools()-&gt;currentTool()-&gt;properties.useAA;</div>
+<div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span> </div>
+<div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span> </div>
+<div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
+<div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span>    <span class="keywordflow">if</span> (selectMan-&gt;somethingSelected())</div>
+<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>    {</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>        <span class="keywordflow">if</span> (selectMan-&gt;mySelectionRect().isEmpty() || selectMan-&gt;selectionTransform().isIdentity()) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span> </div>
+<div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>        {</div>
+<div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span>            <a class="code hl_function" href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">handleDrawingOnEmptyFrame</a>();</div>
+<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span>            <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = currentBitmapImage(layer);</div>
+<div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span>            <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>            <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> transformedImage = bitmapImage-&gt;transformed(selectMan-&gt;mySelectionRect().toRect(), selectMan-&gt;selectionTransform(), useAA);</div>
+<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span> </div>
+<div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span> </div>
+<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>            bitmapImage-&gt;clear(selectMan-&gt;mySelectionRect());</div>
+<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>            bitmapImage-&gt;paste(&amp;transformedImage, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceOver</a>);</div>
+<div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>        }</div>
+<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>        {</div>
+<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>            <span class="comment">// Unfortunately this doesn&#39;t work right currently so vector transforms</span></div>
+<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span>            <span class="comment">// will always be applied on the previous keyframe when on an empty frame</span></div>
+<div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span>            <span class="comment">//handleDrawingOnEmptyFrame();</span></div>
+<div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
+<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span>            <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l01377" name="l01377"></a><span class="lineno"> 1377</span> </div>
-<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>        mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>    }</div>
+<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ad7eb4ae4ebae009d56666e0bf07ffa24">applySelectionTransformation</a>();</div>
+<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>        }</div>
 <div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span> </div>
-<div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>    <a class="code hl_function" href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">updateFrame</a>();</div>
-<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>}</div>
+<div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>        mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>    }</div>
 <div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span> </div>
-<div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span><span class="keywordtype">void</span> ScribbleArea::cancelTransformedSelection()</div>
-<div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span>{</div>
-<div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>    mCanvasPainter.ignoreTransformedSelection();</div>
-<div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span> </div>
-<div class="line"><a id="l01388" name="l01388"></a><span class="lineno"> 1388</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
-<div class="line"><a id="l01389" name="l01389"></a><span class="lineno"> 1389</span>    <span class="keywordflow">if</span> (selectMan-&gt;somethingSelected())</div>
-<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span>    {</div>
-<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>        <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span> </div>
-<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>        {</div>
-<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
-<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>            <span class="keywordflow">if</span> (vectorImage != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>            {</div>
-<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>                vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ada2a3aff947a90cfc53e95ed3e391b5a">setSelectionTransformation</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>());</div>
-<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>            }</div>
-<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>        }</div>
-<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span> </div>
-<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>        mEditor-&gt;select()-&gt;setSelection(selectMan-&gt;mySelectionRect(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span> </div>
-<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span>        selectMan-&gt;resetSelectionProperties();</div>
-<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>        mOriginalPolygonF = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>();</div>
+<div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span>    <a class="code hl_function" href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">updateFrame</a>();</div>
+<div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span>}</div>
+<div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span> </div>
+<div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span><span class="keywordtype">void</span> ScribbleArea::cancelTransformedSelection()</div>
+<div class="line"><a id="l01388" name="l01388"></a><span class="lineno"> 1388</span>{</div>
+<div class="line"><a id="l01389" name="l01389"></a><span class="lineno"> 1389</span>    mCanvasPainter.ignoreTransformedSelection();</div>
+<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span> </div>
+<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
+<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>    <span class="keywordflow">if</span> (selectMan-&gt;somethingSelected())</div>
+<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span>    {</div>
+<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>        <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span> </div>
+<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>        {</div>
+<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
+<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>            <span class="keywordflow">if</span> (vectorImage != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>            {</div>
+<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>                vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ada2a3aff947a90cfc53e95ed3e391b5a">setSelectionTransformation</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>());</div>
+<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>            }</div>
+<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>        }</div>
+<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span> </div>
+<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>        mEditor-&gt;select()-&gt;setSelection(selectMan-&gt;mySelectionRect(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span> </div>
-<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>        mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>        <a class="code hl_function" href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">updateFrame</a>();</div>
-<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>    }</div>
-<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>}</div>
-<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span> </div>
-<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span><span class="keywordtype">void</span> ScribbleArea::toggleThinLines()</div>
-<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>{</div>
-<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>    <span class="keywordtype">bool</span> previousValue = mPrefs-&gt;isOn(SETTING::INVISIBLE_LINES);</div>
-<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>    setEffect(SETTING::INVISIBLE_LINES, !previousValue);</div>
-<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>}</div>
-<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span> </div>
-<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span><span class="keywordtype">void</span> ScribbleArea::setLayerVisibility(LayerVisibility visibility)</div>
-<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>{</div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>    mLayerVisibility = visibility;</div>
-<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>    mPrefs-&gt;set(SETTING::LAYER_VISIBILITY, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mLayerVisibility));</div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span> </div>
-<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
-<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>}</div>
+<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>        selectMan-&gt;resetSelectionProperties();</div>
+<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>        mOriginalPolygonF = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>();</div>
+<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span> </div>
+<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>        mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>        <a class="code hl_function" href="class_scribble_area.html#a3be7383b5ac5a61fd0e7041a31698868">updateFrame</a>();</div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>    }</div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>}</div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span> </div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span><span class="keywordtype">void</span> ScribbleArea::toggleThinLines()</div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>{</div>
+<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>    <span class="keywordtype">bool</span> previousValue = mPrefs-&gt;isOn(SETTING::INVISIBLE_LINES);</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>    setEffect(SETTING::INVISIBLE_LINES, !previousValue);</div>
+<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>}</div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span> </div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span><span class="keywordtype">void</span> ScribbleArea::setLayerVisibility(LayerVisibility visibility)</div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>{</div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>    mLayerVisibility = visibility;</div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>    mPrefs-&gt;set(SETTING::LAYER_VISIBILITY, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mLayerVisibility));</div>
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span> </div>
-<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span><span class="keywordtype">void</span> ScribbleArea::increaseLayerVisibilityIndex()</div>
-<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>{</div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>    ++mLayerVisibility;</div>
-<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>    mPrefs-&gt;set(SETTING::LAYER_VISIBILITY, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mLayerVisibility));</div>
-<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span> </div>
-<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
-<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>}</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>}</div>
+<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span> </div>
+<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span><span class="keywordtype">void</span> ScribbleArea::increaseLayerVisibilityIndex()</div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>{</div>
+<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>    ++mLayerVisibility;</div>
+<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>    mPrefs-&gt;set(SETTING::LAYER_VISIBILITY, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mLayerVisibility));</div>
 <div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span> </div>
-<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span><span class="keywordtype">void</span> ScribbleArea::decreaseLayerVisibilityIndex()</div>
-<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>{</div>
-<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>    --mLayerVisibility;</div>
-<div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>    mPrefs-&gt;set(SETTING::LAYER_VISIBILITY, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mLayerVisibility));</div>
-<div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span> </div>
-<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
-<div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>}</div>
+<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
+<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>}</div>
+<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span> </div>
+<div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span><span class="keywordtype">void</span> ScribbleArea::decreaseLayerVisibilityIndex()</div>
+<div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>{</div>
+<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>    --mLayerVisibility;</div>
+<div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>    mPrefs-&gt;set(SETTING::LAYER_VISIBILITY, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mLayerVisibility));</div>
 <div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span> </div>
-<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span><span class="comment">/************************************************************************************/</span></div>
-<div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span><span class="comment">// tool handling</span></div>
+<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
+<div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span>}</div>
 <div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span> </div>
-<div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span><a class="code hl_class" href="class_base_tool.html">BaseTool</a>* ScribbleArea::currentTool()<span class="keyword"> const</span></div>
-<div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span>    <span class="keywordflow">return</span> editor()-&gt;tools()-&gt;currentTool();</div>
-<div class="line"><a id="l01449" name="l01449"></a><span class="lineno"> 1449</span>}</div>
-<div class="line"><a id="l01450" name="l01450"></a><span class="lineno"> 1450</span> </div>
-<div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span><span class="keywordtype">void</span> ScribbleArea::deleteSelection()</div>
-<div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span>{</div>
-<div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
-<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>    <span class="keywordflow">if</span> (selectMan-&gt;somethingSelected())      <span class="comment">// there is something selected</span></div>
-<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>    {</div>
-<div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span>        <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span> </div>
-<div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span>        <a class="code hl_function" href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">handleDrawingOnEmptyFrame</a>();</div>
-<div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span> </div>
-<div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span>        mEditor-&gt;backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Delete Selection&quot;</span>, <span class="stringliteral">&quot;Undo Step: clear the selection area.&quot;</span>));</div>
-<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span> </div>
-<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>        selectMan-&gt;clearCurves();</div>
-<div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>        {</div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
-<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>            Q_CHECK_PTR(vectorImage);</div>
-<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#af87f94c51521dbc35241c05fefb2c485">deleteSelection</a>();</div>
-<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>        }</div>
-<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
-<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>        {</div>
-<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>            <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = currentBitmapImage(layer);</div>
-<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>            Q_CHECK_PTR(bitmapImage);</div>
-<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>            bitmapImage-&gt;clear(selectMan-&gt;mySelectionRect());</div>
-<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>        }</div>
-<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>        mEditor-&gt;setModified(mEditor-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>    }</div>
-<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>}</div>
-<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span> </div>
-<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span><span class="keywordtype">void</span> ScribbleArea::clearImage()</div>
-<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>{</div>
-<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span> </div>
-<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>    {</div>
-<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>        mEditor-&gt;backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
-<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span> </div>
-<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
-<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>        <span class="keywordflow">if</span> (vectorImage != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>        {</div>
-<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ac8efb5e8213193dec96a903a920dd73d">clear</a>();</div>
-<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>        }</div>
-<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>        mEditor-&gt;select()-&gt;clearCurves();</div>
-<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>        mEditor-&gt;select()-&gt;clearVertices();</div>
-<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>    }</div>
-<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
-<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>    {</div>
-<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>        mEditor-&gt;backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
-<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span> </div>
-<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>        <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = currentBitmapImage(layer);</div>
-<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>        <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>        bitmapImage-&gt;clear();</div>
-<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>    }</div>
-<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>    {</div>
-<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>        <span class="keywordflow">return</span>; <span class="comment">// skip updates when nothing changes</span></div>
-<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>    }</div>
-<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>    mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>}</div>
-<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span> </div>
-<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span><span class="keywordtype">void</span> ScribbleArea::paletteColorChanged(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color)</div>
-<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>{</div>
-<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>    Q_UNUSED(color)</div>
-<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span> </div>
-<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mEditor-&gt;layers()-&gt;count(); i++)</div>
-<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>    {</div>
-<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;getLayer(i);</div>
-<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
-<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>        {</div>
-<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getVectorImageAtFrame(mEditor-&gt;currentFrame());</div>
-<div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span>            <span class="keywordflow">if</span> (vectorImage != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>            {</div>
-<div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>                vectorImage-&gt;modification();</div>
-<div class="line"><a id="l01525" name="l01525"></a><span class="lineno"> 1525</span>            }</div>
-<div class="line"><a id="l01526" name="l01526"></a><span class="lineno"> 1526</span>        }</div>
-<div class="line"><a id="l01527" name="l01527"></a><span class="lineno"> 1527</span>    }</div>
-<div class="line"><a id="l01528" name="l01528"></a><span class="lineno"> 1528</span> </div>
-<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
-<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>}</div>
+<div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span><span class="comment">/************************************************************************************/</span></div>
+<div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span><span class="comment">// tool handling</span></div>
+<div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span> </div>
+<div class="line"><a id="l01449" name="l01449"></a><span class="lineno"> 1449</span><a class="code hl_class" href="class_base_tool.html">BaseTool</a>* ScribbleArea::currentTool()<span class="keyword"> const</span></div>
+<div class="line"><a id="l01450" name="l01450"></a><span class="lineno"> 1450</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>    <span class="keywordflow">return</span> editor()-&gt;tools()-&gt;currentTool();</div>
+<div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span>}</div>
+<div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span> </div>
+<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span><span class="keywordtype">void</span> ScribbleArea::deleteSelection()</div>
+<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>{</div>
+<div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
+<div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span>    <span class="keywordflow">if</span> (selectMan-&gt;somethingSelected())      <span class="comment">// there is something selected</span></div>
+<div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span>    {</div>
+<div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span>        <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span> </div>
+<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>        <a class="code hl_function" href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">handleDrawingOnEmptyFrame</a>();</div>
+<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span> </div>
+<div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>        mEditor-&gt;backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Delete Selection&quot;</span>, <span class="stringliteral">&quot;Undo Step: clear the selection area.&quot;</span>));</div>
+<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span> </div>
+<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>        selectMan-&gt;clearCurves();</div>
+<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>        {</div>
+<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
+<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>            Q_CHECK_PTR(vectorImage);</div>
+<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#af87f94c51521dbc35241c05fefb2c485">deleteSelection</a>();</div>
+<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>        }</div>
+<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>        {</div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>            <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = currentBitmapImage(layer);</div>
+<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>            Q_CHECK_PTR(bitmapImage);</div>
+<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>            bitmapImage-&gt;clear(selectMan-&gt;mySelectionRect());</div>
+<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>        }</div>
+<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span>        mEditor-&gt;setModified(mEditor-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>    }</div>
+<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>}</div>
+<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span> </div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span><span class="keywordtype">void</span> ScribbleArea::clearImage()</div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>{</div>
+<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span> </div>
+<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>    <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>    {</div>
+<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>        mEditor-&gt;backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
+<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span> </div>
+<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = currentVectorImage(layer);</div>
+<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>        <span class="keywordflow">if</span> (vectorImage != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>        {</div>
+<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ac8efb5e8213193dec96a903a920dd73d">clear</a>();</div>
+<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>        }</div>
+<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>        mEditor-&gt;select()-&gt;clearCurves();</div>
+<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>        mEditor-&gt;select()-&gt;clearVertices();</div>
+<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>    }</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::BITMAP)</div>
+<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>    {</div>
+<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>        mEditor-&gt;backup(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Clear Image&quot;</span>, <span class="stringliteral">&quot;Undo step text&quot;</span>));</div>
+<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span> </div>
+<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>        <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = currentBitmapImage(layer);</div>
+<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>        <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>        bitmapImage-&gt;clear();</div>
+<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>    }</div>
+<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>    {</div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>        <span class="keywordflow">return</span>; <span class="comment">// skip updates when nothing changes</span></div>
+<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>    }</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>    mEditor-&gt;setModified(mEditor-&gt;layers()-&gt;currentLayerIndex(), mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>}</div>
+<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span> </div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span><span class="keywordtype">void</span> ScribbleArea::paletteColorChanged(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color)</div>
+<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>{</div>
+<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>    Q_UNUSED(color)</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span> </div>
+<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mEditor-&gt;layers()-&gt;count(); i++)</div>
+<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>    {</div>
+<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>        <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;getLayer(i);</div>
+<div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span>        <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
+<div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>        {</div>
+<div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getVectorImageAtFrame(mEditor-&gt;currentFrame());</div>
+<div class="line"><a id="l01525" name="l01525"></a><span class="lineno"> 1525</span>            <span class="keywordflow">if</span> (vectorImage != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l01526" name="l01526"></a><span class="lineno"> 1526</span>            {</div>
+<div class="line"><a id="l01527" name="l01527"></a><span class="lineno"> 1527</span>                vectorImage-&gt;modification();</div>
+<div class="line"><a id="l01528" name="l01528"></a><span class="lineno"> 1528</span>            }</div>
+<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>        }</div>
+<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>    }</div>
+<div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span> </div>
+<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>    <a class="code hl_function" href="class_scribble_area.html#ada90498d833c5967f91136040c90b6b0">invalidateAllCache</a>();</div>
+<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>}</div>
 <div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00027">bitmapimage.h:28</a></div></div>
 <div class="ttc" id="aclass_blit_rect_html"><div class="ttname"><a href="class_blit_rect.html">BlitRect</a></div><div class="ttdef"><b>Definition:</b> <a href="blitrect_8h_source.html#l00024">blitrect.h:25</a></div></div>
@@ -1825,10 +1828,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sun Mar 16 2025 21:15:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 2 2025 05:56:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 2789e8dcf391cbbded4e396889c1e7365c24a978
+   based on revision b72a67270037b2bbcfc64774a826846d5e5412b9
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
