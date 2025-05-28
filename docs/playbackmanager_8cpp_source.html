@@ -235,7 +235,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// for error correction, please ref skipFrame()</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    mPlayingFrameCounter = 1;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    mElapsedTimer-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qelapsedtimer.html#start">start</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    mElapsedTimer-&gt;start();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    emit playStateChanged(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
@@ -456,7 +456,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="comment">//qDebug(&quot;Actual:    %d   ms&quot;, mElapsedTimer-&gt;elapsed());</span></div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordtype">int</span> t = qRound((mPlayingFrameCounter - 1) * (1000.f / mFps));</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">if</span> (mElapsedTimer-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qelapsedtimer.html#elapsed">elapsed</a>() &lt; t)</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">if</span> (mElapsedTimer-&gt;elapsed() &lt; t)</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    {</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        qDebug() &lt;&lt; <span class="stringliteral">&quot;skip&quot;</span>;</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -613,8 +613,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00026">soundclip.h:27</a></div></div>
 <div class="ttc" id="aclass_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00039">pencilerror.h:40</a></div></div>
 <div class="ttc" id="aqelapsedtimer_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qelapsedtimer.html">QElapsedTimer</a></div></div>
-<div class="ttc" id="aqelapsedtimer_html_elapsed"><div class="ttname"><a href="https://doc.qt.io/qt-5/qelapsedtimer.html#elapsed">QElapsedTimer::elapsed</a></div><div class="ttdeci">qint64 elapsed() const const</div></div>
-<div class="ttc" id="aqelapsedtimer_html_start"><div class="ttname"><a href="https://doc.qt.io/qt-5/qelapsedtimer.html#start">QElapsedTimer::start</a></div><div class="ttdeci">void start()</div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="aqsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
 <div class="ttc" id="aqt_html_TimerType-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#TimerType-enum">Qt::PreciseTimer</a></div><div class="ttdeci">PreciseTimer</div></div>
@@ -641,10 +639,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

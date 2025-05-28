@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (key-&gt;isModified()) <span class="comment">// keyframe was modified</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(strSavePath) == <span class="keyword">false</span>) <span class="comment">// hasn&#39;t been saved before</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (QFile::exists(strSavePath) == <span class="keyword">false</span>) <span class="comment">// hasn&#39;t been saved before</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span> (strSavePath != key-&gt;fileName()) <span class="comment">// key frame moved</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -343,7 +343,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqdomnode_html_isNull"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdomnode.html#isNull">QDomNode::isNull</a></div><div class="ttdeci">bool isNull() const const</div></div>
 <div class="ttc" id="aqdomnode_html_nextSibling"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdomnode.html#nextSibling">QDomNode::nextSibling</a></div><div class="ttdeci">QDomNode nextSibling() const const</div></div>
 <div class="ttc" id="aqdomnode_html_toElement"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdomnode.html#toElement">QDomNode::toElement</a></div><div class="ttdeci">QDomElement toElement() const const</div></div>
-<div class="ttc" id="aqfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
 <div class="ttc" id="aqfileinfo_html_fileName"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#fileName">QFileInfo::fileName</a></div><div class="ttdeci">QString fileName() const const</div></div>
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
@@ -360,10 +359,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

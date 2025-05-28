@@ -1,9 +1,8 @@
 <map id="FileManager" name="FileManager">
-<area shape="rect" id="node1" title=" " alt="" coords="82,401,205,432"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,303,95,333"/>
-<area shape="rect" id="node3" href="$class_status.html" title=" " alt="" coords="341,303,415,333"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="124,184,208,215"/>
-<area shape="rect" id="node5" href="$class_debug_details.html" title=" " alt="" coords="312,184,444,215"/>
-<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstringlist.html" title=" " alt="" coords="323,85,433,116"/>
-<area shape="rect" id="node7" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="327,5,429,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="82,321,205,352"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,223,95,253"/>
+<area shape="rect" id="node3" href="$class_status.html" title=" " alt="" coords="341,223,415,253"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="124,104,208,135"/>
+<area shape="rect" id="node5" href="$class_debug_details.html" title=" " alt="" coords="312,104,444,135"/>
+<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstringlist.html" title=" " alt="" coords="323,5,433,36"/>
 </map>

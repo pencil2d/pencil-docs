@@ -500,7 +500,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keywordflow">if</span> (st.ok())</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    {</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(strMoviePath))</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="keywordflow">if</span> (QFile::exists(strMoviePath))</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        {</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            <span class="keywordflow">if</span> (isGif) {</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                <span class="keyword">auto</span> btn = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmessagebox.html#question">QMessageBox::question</a>(mParent, <span class="stringliteral">&quot;Pencil2D&quot;</span>,</div>
@@ -1182,7 +1182,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqdir_html_filePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#filePath">QDir::filePath</a></div><div class="ttdeci">QString filePath(const QString &amp;fileName) const const</div></div>
 <div class="ttc" id="aqdir_html_temp"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a></div><div class="ttdeci">QDir temp()</div></div>
 <div class="ttc" id="aqfile_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html">QFile</a></div></div>
-<div class="ttc" id="aqfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqinputdialog_html_getText"><div class="ttname"><a href="https://doc.qt.io/qt-5/qinputdialog.html#getText">QInputDialog::getText</a></div><div class="ttdeci">QString getText(QWidget *parent, const QString &amp;title, const QString &amp;label, QLineEdit::EchoMode mode, const QString &amp;text, bool *ok, Qt::WindowFlags flags, Qt::InputMethodHints inputMethodHints)</div></div>
 <div class="ttc" id="aqlineedit_html_EchoMode-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlineedit.html#EchoMode-enum">QLineEdit::Normal</a></div><div class="ttdeci">Normal</div></div>
 <div class="ttc" id="aqmessagebox_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a></div></div>
@@ -1221,10 +1220,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

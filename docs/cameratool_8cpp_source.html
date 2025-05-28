@@ -455,21 +455,21 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a> camPoly =  mCameraPolygon;</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">if</span> (camPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#count">count</a>() &lt;= 0) { <span class="keywordflow">return</span> CameraMoveType::NONE; }</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">if</span> (camPoly.count() &lt;= 0) { <span class="keywordflow">return</span> CameraMoveType::NONE; }</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(0)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.at(0)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    {</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="keywordflow">return</span> CameraMoveType::TOPLEFT;</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    }</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(1)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.at(1)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    {</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">return</span> CameraMoveType::TOPRIGHT;</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    }</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(2)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.at(2)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    {</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <span class="keywordflow">return</span> CameraMoveType::BOTTOMRIGHT;</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    }</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(3)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(point, camPoly.at(3)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#length">length</a>() &lt; tolerance)</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    {</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">return</span> CameraMoveType::BOTTOMLEFT;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    }</div>
@@ -524,7 +524,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="keywordtype">void</span> CameraTool::transformView(<a class="code hl_class" href="class_layer_camera.html">LayerCamera</a>* layerCamera, CameraMoveType mode, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; point, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; offset, qreal angle, <span class="keywordtype">int</span> frameNumber)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a> curPoly = mCameraPolygon;</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> curCenter = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(curPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(0), curPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(2)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#pointAt">pointAt</a>(0.5).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>();</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> curCenter = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(curPoly.at(0), curPoly.at(2)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#pointAt">pointAt</a>(0.5).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#toPoint">toPoint</a>();</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a> lineOld(curCenter, point);</div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a> lineNew(curCenter, point);</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <a class="code hl_class" href="class_camera.html">Camera</a>* curCam = layerCamera-&gt;getCameraAtFrame(frameNumber);</div>
@@ -536,19 +536,19 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    }</div>
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <span class="keywordflow">case</span> CameraMoveType::TOPLEFT:</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        lineOld.setP2(curPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(0));</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        lineOld.setP2(curPoly.at(0));</div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        curCam-&gt;scale(curCam-&gt;scaling() * (lineOld.length() / lineNew.length()));</div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    <span class="keywordflow">case</span> CameraMoveType::TOPRIGHT:</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        lineOld.setP2(curPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(1));</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        lineOld.setP2(curPoly.at(1));</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        curCam-&gt;scale(curCam-&gt;scaling() * (lineOld.length() / lineNew.length()));</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <span class="keywordflow">case</span> CameraMoveType::BOTTOMRIGHT:</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        lineOld.setP2(curPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(2));</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        lineOld.setP2(curPoly.at(2));</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        curCam-&gt;scale(curCam-&gt;scaling() * (lineOld.length() / lineNew.length()));</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <span class="keywordflow">case</span> CameraMoveType::BOTTOMLEFT:</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        lineOld.setP2(curPoly.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(3));</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        lineOld.setP2(curPoly.at(3));</div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        curCam-&gt;scale(curCam-&gt;scaling() * (lineOld.length() / lineNew.length()));</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    <span class="keywordflow">case</span> CameraMoveType::ROTATION:</div>
@@ -627,27 +627,27 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    <span class="keywordtype">int</span> handleW = mHandleWidth;</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <span class="keywordtype">int</span> radius = handleW / 2;</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span> </div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; topRightCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(1).x() - radius,</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>                                            camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(1).y() - radius,</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; topRightCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.at(1).x() - radius,</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>                                            camPolygon.at(1).y() - radius,</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>                                            handleW, handleW);</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawRect">drawRect</a>(topRightCorner);</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; bottomRightCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(2).x() - radius,</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>                                            camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(2).y() - radius,</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; bottomRightCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.at(2).x() - radius,</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>                                            camPolygon.at(2).y() - radius,</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                                            handleW, handleW);</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawRect">drawRect</a>(bottomRightCorner);</div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; topLeftCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(0).x() - radius,</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                                            camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(0).y() - radius,</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; topLeftCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.at(0).x() - radius,</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>                                            camPolygon.at(0).y() - radius,</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                                            handleW, handleW);</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawRect">drawRect</a>(topLeftCorner);</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span> </div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; bottomLeftCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(3).x() - radius,</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                                            camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(3).y() - radius,</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; bottomLeftCorner = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>(camPolygon.at(3).x() - radius,</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                                            camPolygon.at(3).y() - radius,</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                                            handleW, handleW);</div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawRect">drawRect</a>(bottomLeftCorner);</div>
 <div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>    <span class="comment">// Paint rotation handle</span></div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; topCenter = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(0), camPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#at">at</a>(1)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#pointAt">pointAt</a>(.5);</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; topCenter = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>(camPolygon.at(0), camPolygon.at(1)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlinef.html#pointAt">pointAt</a>(.5);</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; rotationHandle = worldRotationHandlePoint(cameraRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#topLeft">topLeft</a>(), camTransform, scale, worldTransform, mEditor-&gt;viewScaleInversed());</div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span> </div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawLine">drawLine</a>(topCenter, rotationHandle);</div>
@@ -824,18 +824,16 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqtransform_html_rotate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#rotate">QTransform::rotate</a></div><div class="ttdeci">QTransform &amp; rotate(qreal angle, Qt::Axis axis)</div></div>
 <div class="ttc" id="aqtransform_html_scale"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#scale">QTransform::scale</a></div><div class="ttdeci">QTransform &amp; scale(qreal sx, qreal sy)</div></div>
 <div class="ttc" id="aqtransform_html_translate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#translate">QTransform::translate</a></div><div class="ttdeci">QTransform &amp; translate(qreal dx, qreal dy)</div></div>
-<div class="ttc" id="aqvector_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvector.html#at">QVector::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
-<div class="ttc" id="aqvector_html_count"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvector.html#count">QVector::count</a></div><div class="ttdeci">int count(const T &amp;value) const const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

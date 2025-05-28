@@ -1021,7 +1021,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> strFilePath = <a class="code hl_function" href="class_file_dialog.html#a7766f7999de42b0681bdea739ab79d42">FileDialog::getOpenFileName</a>(<span class="keyword">this</span>, FileType::IMAGE);</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span> </div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    <span class="keywordflow">if</span> (strFilePath.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>()) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    <span class="keywordflow">if</span> (!<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(strFilePath)) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>    <span class="keywordflow">if</span> (!QFile::exists(strFilePath)) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span> </div>
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    <a class="code hl_class" href="class_import_position_dialog.html">ImportPositionDialog</a>* positionDialog = <span class="keyword">new</span> <a class="code hl_class" href="class_import_position_dialog.html">ImportPositionDialog</a>(mEditor, <span class="keyword">this</span>);</div>
 <div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    OnScopeExit(<span class="keyword">delete</span> positionDialog)</div>
@@ -1248,7 +1248,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span> </div>
 <div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings(PENCIL2D, PENCIL2D);</div>
 <div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> myPath = settings.value(LAST_PCLX_PATH, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qvariant.html">QVariant</a>(<span class="stringliteral">&quot;&quot;</span>)).toString();</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    <span class="keywordflow">if</span> (myPath.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>() || !<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(myPath))</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>    <span class="keywordflow">if</span> (myPath.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>() || !QFile::exists(myPath))</div>
 <div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>    {</div>
 <div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    }</div>
@@ -1711,7 +1711,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>    <a class="code hl_class" href="class_file_manager.html">FileManager</a> fm;</div>
 <div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> recoverables = fm.searchForUnsavedProjects();</div>
 <div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span> </div>
-<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>    <span class="keywordflow">if</span> (recoverables.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#empty">empty</a>())</div>
+<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>    <span class="keywordflow">if</span> (recoverables.empty())</div>
 <div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>    {</div>
 <div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>    }</div>
@@ -1909,7 +1909,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqevent_html_type"><div class="ttname"><a href="https://doc.qt.io/qt-5/qevent.html#type">QEvent::type</a></div><div class="ttdeci">QEvent::Type type() const const</div></div>
 <div class="ttc" id="aqeventloop_html_ProcessEventsFlag-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qeventloop.html#ProcessEventsFlag-enum">QEventLoop::ExcludeUserInputEvents</a></div><div class="ttdeci">ExcludeUserInputEvents</div></div>
 <div class="ttc" id="aqfile_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html">QFile</a></div></div>
-<div class="ttc" id="aqfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
 <div class="ttc" id="aqguiapplication_html_clipboard"><div class="ttname"><a href="https://doc.qt.io/qt-5/qguiapplication.html#clipboard">QGuiApplication::clipboard</a></div><div class="ttdeci">QClipboard * clipboard()</div></div>
 <div class="ttc" id="aqicon_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qicon.html">QIcon</a></div></div>
@@ -1917,7 +1916,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqkeysequence_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></div></div>
 <div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
 <div class="ttc" id="aqlist_html_count"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#count">QList::count</a></div><div class="ttdeci">int count(const T &amp;value) const const</div></div>
-<div class="ttc" id="aqlist_html_empty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#empty">QList::empty</a></div><div class="ttdeci">bool empty() const const</div></div>
 <div class="ttc" id="aqlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const const</div></div>
 <div class="ttc" id="aqmainwindow_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a></div></div>
 <div class="ttc" id="aqmainwindow_html_addDockWidget"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmainwindow.html#addDockWidget">QMainWindow::addDockWidget</a></div><div class="ttdeci">void addDockWidget(Qt::DockWidgetArea area, QDockWidget *dockwidget)</div></div>
@@ -2013,10 +2011,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

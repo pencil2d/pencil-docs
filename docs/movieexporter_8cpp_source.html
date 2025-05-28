@@ -181,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> ffmpegPath = ffmpegLocation();</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    qDebug() &lt;&lt; ffmpegPath;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (!<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(ffmpegPath))</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (!QFile::exists(ffmpegPath))</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#ifdef _WIN32</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        qCritical() &lt;&lt; <span class="stringliteral">&quot;Please place ffmpeg.exe in &quot;</span> &lt;&lt; ffmpegPath &lt;&lt; <span class="stringliteral">&quot; directory&quot;</span>;</div>
@@ -398,7 +398,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    args &lt;&lt; <span class="stringliteral">&quot;-i&quot;</span> &lt;&lt; <span class="stringliteral">&quot;-&quot;</span>;</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    args &lt;&lt; <span class="stringliteral">&quot;-threads&quot;</span> &lt;&lt; (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qthread.html#idealThreadCount">QThread::idealThreadCount</a>() == 1 ? <span class="stringliteral">&quot;0&quot;</span> : <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qthread.html#idealThreadCount">QThread::idealThreadCount</a>()));</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(tempAudioPath))</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">if</span> (QFile::exists(tempAudioPath))</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    {</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        args &lt;&lt; <span class="stringliteral">&quot;-i&quot;</span> &lt;&lt; tempAudioPath;</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
@@ -771,14 +771,13 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqdir_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html">QDir</a></div></div>
 <div class="ttc" id="aqdir_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#exists-1">QDir::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqdir_html_filePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#filePath">QDir::filePath</a></div><div class="ttdeci">QString filePath(const QString &amp;fileName) const const</div></div>
-<div class="ttc" id="aqfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqimage-obsolete_html_byteCount"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage-obsolete.html#byteCount">QImage::byteCount</a></div><div class="ttdeci">int byteCount() const const</div></div>
 <div class="ttc" id="aqimage_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html">QImage</a></div></div>
 <div class="ttc" id="aqimage_html_Format-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#Format-enum">QImage::Format_ARGB32_Premultiplied</a></div><div class="ttdeci">Format_ARGB32_Premultiplied</div></div>
 <div class="ttc" id="aqimage_html_constBits"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#constBits">QImage::constBits</a></div><div class="ttdeci">const uchar * constBits() const const</div></div>
 <div class="ttc" id="aqimage_html_copy"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#copy">QImage::copy</a></div><div class="ttdeci">QImage copy(const QRect &amp;rectangle) const const</div></div>
 <div class="ttc" id="aqimage_html_fill"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#fill">QImage::fill</a></div><div class="ttdeci">void fill(uint pixelValue)</div></div>
-<div class="ttc" id="aqimage_html_sizeInBytes"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#sizeInBytes">QImage::sizeInBytes</a></div><div class="ttdeci">qsizetype sizeInBytes() const const</div></div>
+<div class="ttc" id="aqimage_html_sizeInBytes"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#sizeInBytes">QImage::sizeInBytes</a></div><div class="ttdeci">int sizeInBytes() const const</div></div>
 <div class="ttc" id="aqiodevice_html_isWritable"><div class="ttname"><a href="https://doc.qt.io/qt-5/qiodevice.html#isWritable">QIODevice::isWritable</a></div><div class="ttdeci">bool isWritable() const const</div></div>
 <div class="ttc" id="aqiodevice_html_readAll"><div class="ttname"><a href="https://doc.qt.io/qt-5/qiodevice.html#readAll">QIODevice::readAll</a></div><div class="ttdeci">QByteArray readAll()</div></div>
 <div class="ttc" id="aqiodevice_html_write"><div class="ttname"><a href="https://doc.qt.io/qt-5/qiodevice.html#write">QIODevice::write</a></div><div class="ttdeci">qint64 write(const char *data, qint64 maxSize)</div></div>
@@ -838,10 +837,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

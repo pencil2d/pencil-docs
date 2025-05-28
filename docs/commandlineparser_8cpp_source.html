@@ -202,14 +202,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtextstream.html">QTextStream</a> out(stdout);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtextstream.html">QTextStream</a> err(stderr);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    arguments.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#removeOne">removeOne</a>(<span class="stringliteral">&quot;-NSDocumentRevisionsDebugMode&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    arguments.removeOne(<span class="stringliteral">&quot;-NSDocumentRevisionsDebugMode&quot;</span>);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    mParser.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcommandlineparser.html#process">process</a>(arguments);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> posArgs = mParser.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcommandlineparser.html#positionalArguments">positionalArguments</a>();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (!posArgs.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (!posArgs.isEmpty())</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        mInputPath = posArgs.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#at">at</a>(0);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        mInputPath = posArgs.at(0);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    mOutputPaths &lt;&lt; mParser.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcommandlineparser.html#values">values</a>(<span class="stringliteral">&quot;export&quot;</span>) &lt;&lt; mParser.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcommandlineparser.html#values">values</a>(<span class="stringliteral">&quot;export-sequence&quot;</span>);</div>
@@ -290,9 +290,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqcommandlineparser_html_process"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcommandlineparser.html#process">QCommandLineParser::process</a></div><div class="ttdeci">void process(const QStringList &amp;arguments)</div></div>
 <div class="ttc" id="aqcommandlineparser_html_value"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcommandlineparser.html#value">QCommandLineParser::value</a></div><div class="ttdeci">QString value(const QString &amp;optionName) const const</div></div>
 <div class="ttc" id="aqcommandlineparser_html_values"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcommandlineparser.html#values">QCommandLineParser::values</a></div><div class="ttdeci">QStringList values(const QString &amp;optionName) const const</div></div>
-<div class="ttc" id="aqlist_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#at">QList::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
-<div class="ttc" id="aqlist_html_isEmpty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#isEmpty">QList::isEmpty</a></div><div class="ttdeci">bool isEmpty() const const</div></div>
-<div class="ttc" id="aqlist_html_removeOne"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#removeOne">QList::removeOne</a></div><div class="ttdeci">bool removeOne(const T &amp;value)</div></div>
 <div class="ttc" id="aqobject_html_tr"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a></div><div class="ttdeci">QString tr(const char *sourceText, const char *disambiguation, int n)</div></div>
 <div class="ttc" id="aqstring_html_arg-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#arg-1">QString::arg</a></div><div class="ttdeci">QString arg(qlonglong a, int fieldWidth, int base, QChar fillChar) const const</div></div>
 <div class="ttc" id="aqstring_html_isEmpty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html#isEmpty">QString::isEmpty</a></div><div class="ttdeci">bool isEmpty() const const</div></div>
@@ -306,10 +303,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -146,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; s : d.mDetails)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        mDetails.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#append">append</a>(<span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;&quot;</span> + s);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        mDetails.append(<span class="stringliteral">&quot;&amp;nbsp;&amp;nbsp;&quot;</span> + s);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -164,13 +164,13 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_class" href="class_debug_details.html">DebugDetails</a>&amp; DebugDetails::operator&lt;&lt;(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; s)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    mDetails.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#append">append</a>(s);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    mDetails.append(s);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> DebugDetails::appendSystemInfo()</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (mDetails.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#empty">empty</a>() || mDetails.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#last">last</a>() == <span class="stringliteral">&quot;end&quot;</span>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (mDetails.empty() || mDetails.last() == <span class="stringliteral">&quot;end&quot;</span>)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(5, 4, 0)</span></div>
@@ -250,9 +250,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">return</span> (mCode != code);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
-<div class="ttc" id="aqlist_html_append"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#append">QList::append</a></div><div class="ttdeci">void append(const T &amp;value)</div></div>
-<div class="ttc" id="aqlist_html_empty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#empty">QList::empty</a></div><div class="ttdeci">bool empty() const const</div></div>
-<div class="ttc" id="aqlist_html_last"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#last">QList::last</a></div><div class="ttdeci">T &amp; last()</div></div>
 <div class="ttc" id="aqlocale_html_name"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlocale.html#name">QLocale::name</a></div><div class="ttdeci">QString name() const const</div></div>
 <div class="ttc" id="aqlocale_html_system"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlocale.html#system">QLocale::system</a></div><div class="ttdeci">QLocale system()</div></div>
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
@@ -267,10 +264,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -266,7 +266,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    dd &lt;&lt; <span class="stringliteral">&quot;\n[Miniz EXTRACTION diagnostics]\n&quot;</span>;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    dd &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Unzip file %1 to folder %2&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(zipFilePath, destPath);</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">if</span> (!<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a>(zipFilePath))</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">if</span> (!QFile::exists(zipFilePath))</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    {</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        dd &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Error: Zip file does not exist.&quot;</span>);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">return</span> Status::FILE_NOT_FOUND;</div>
@@ -355,10 +355,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqbytearray_html_constData"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbytearray.html#constData">QByteArray::constData</a></div><div class="ttdeci">const char * constData() const const</div></div>
 <div class="ttc" id="aqbytearray_html_data"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbytearray.html#data">QByteArray::data</a></div><div class="ttdeci">char * data()</div></div>
 <div class="ttc" id="aqbytearray_html_length"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbytearray.html#length">QByteArray::length</a></div><div class="ttdeci">int length() const const</div></div>
-<div class="ttc" id="aqbytearray_html_toStdString"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbytearray.html#toStdString">QByteArray::toStdString</a></div><div class="ttdeci">std::string toStdString() const const</div></div>
+<div class="ttc" id="aqbytearray_html_toStdString"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbytearray.html#toStdString">QByteArray::toStdString</a></div><div class="ttdeci">int toStdString() const const</div></div>
 <div class="ttc" id="aqdir_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html">QDir</a></div></div>
 <div class="ttc" id="aqdir_html_mkpath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdir.html#mkpath">QDir::mkpath</a></div><div class="ttdeci">bool mkpath(const QString &amp;dirPath) const const</div></div>
-<div class="ttc" id="aqfile_html_exists-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#exists-1">QFile::exists</a></div><div class="ttdeci">bool exists() const const</div></div>
 <div class="ttc" id="aqfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
 <div class="ttc" id="aqfileinfo_html_absoluteDir"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#absoluteDir">QFileInfo::absoluteDir</a></div><div class="ttdeci">QDir absoluteDir() const const</div></div>
 <div class="ttc" id="aqfileinfo_html_absolutePath"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#absolutePath">QFileInfo::absolutePath</a></div><div class="ttdeci">QString absolutePath() const const</div></div>
@@ -378,10 +377,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

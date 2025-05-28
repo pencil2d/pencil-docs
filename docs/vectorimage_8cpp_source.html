@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(filePath);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (!file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#open">open</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::ReadOnly</a>))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (!file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qiodevice.html#open">open</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::ReadOnly</a>))</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
@@ -225,7 +225,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    debugInfo &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;format = &quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#append-1">append</a>(format);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(filePath);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">bool</span> result = file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfile.html#open">open</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QIODevice::WriteOnly</a>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">bool</span> result = file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qiodevice.html#open">open</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QIODevice::WriteOnly</a>);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (!result)</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        qDebug() &lt;&lt; <span class="stringliteral">&quot;VectorImage - Cannot write file&quot;</span> &lt;&lt; filePath &lt;&lt; file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qfiledevice.html#error">error</a>();</div>
@@ -2234,12 +2234,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqdomnode_html_nextSibling"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdomnode.html#nextSibling">QDomNode::nextSibling</a></div><div class="ttdeci">QDomNode nextSibling() const const</div></div>
 <div class="ttc" id="aqdomnode_html_toElement"><div class="ttname"><a href="https://doc.qt.io/qt-5/qdomnode.html#toElement">QDomNode::toElement</a></div><div class="ttdeci">QDomElement toElement() const const</div></div>
 <div class="ttc" id="aqfile_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html">QFile</a></div></div>
-<div class="ttc" id="aqfile_html_open"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfile.html#open">QFile::open</a></div><div class="ttdeci">virtual bool open(QIODevice::OpenMode mode) override</div></div>
 <div class="ttc" id="aqfiledevice_html_error"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfiledevice.html#error">QFileDevice::error</a></div><div class="ttdeci">QFileDevice::FileError error() const const</div></div>
 <div class="ttc" id="aqfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
 <div class="ttc" id="aqfileinfo_html_isDir"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#isDir">QFileInfo::isDir</a></div><div class="ttdeci">bool isDir() const const</div></div>
 <div class="ttc" id="aqiodevice_html_OpenModeFlag-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QIODevice::ReadOnly</a></div><div class="ttdeci">ReadOnly</div></div>
 <div class="ttc" id="aqiodevice_html_errorString"><div class="ttname"><a href="https://doc.qt.io/qt-5/qiodevice.html#errorString">QIODevice::errorString</a></div><div class="ttdeci">QString errorString() const const</div></div>
+<div class="ttc" id="aqiodevice_html_open"><div class="ttname"><a href="https://doc.qt.io/qt-5/qiodevice.html#open">QIODevice::open</a></div><div class="ttdeci">virtual bool open(QIODevice::OpenMode mode)</div></div>
 <div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
 <div class="ttc" id="aqlist_html_append"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#append">QList::append</a></div><div class="ttdeci">void append(const T &amp;value)</div></div>
 <div class="ttc" id="aqlist_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#at">QList::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
@@ -2317,10 +2317,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

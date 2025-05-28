@@ -176,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    clearRecentFiles();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Iterate in reverse because items are prepended to the list when first added</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> filename = filenames.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#crbegin">crbegin</a>(); filename != filenames.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#crend">crend</a>(); filename++)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> filename = filenames.crbegin(); filename != filenames.crend(); filename++)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!filename-&gt;isEmpty())</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
@@ -272,8 +272,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqaction_html_data"><div class="ttname"><a href="https://doc.qt.io/qt-5/qaction.html#data">QAction::data</a></div><div class="ttdeci">QVariant data() const const</div></div>
 <div class="ttc" id="aqaction_html_setData"><div class="ttname"><a href="https://doc.qt.io/qt-5/qaction.html#setData">QAction::setData</a></div><div class="ttdeci">void setData(const QVariant &amp;userData)</div></div>
 <div class="ttc" id="aqaction_html_triggered"><div class="ttname"><a href="https://doc.qt.io/qt-5/qaction.html#triggered">QAction::triggered</a></div><div class="ttdeci">void triggered(bool checked)</div></div>
-<div class="ttc" id="aqlist_html_crbegin"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#crbegin">QList::crbegin</a></div><div class="ttdeci">QList::const_reverse_iterator crbegin() const const</div></div>
-<div class="ttc" id="aqlist_html_crend"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#crend">QList::crend</a></div><div class="ttdeci">QList::const_reverse_iterator crend() const const</div></div>
 <div class="ttc" id="aqmenu_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmenu.html">QMenu</a></div></div>
 <div class="ttc" id="aqmenu_html_addAction"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmenu.html#addAction">QMenu::addAction</a></div><div class="ttdeci">QAction * addAction(const QString &amp;text)</div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
@@ -296,10 +294,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -350,7 +350,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a> settings( PENCIL2D, PENCIL2D );</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    settings.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#beginGroup">beginGroup</a>(<span class="stringliteral">&quot;shortcuts&quot;</span>);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    m_treeModel-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html#setRowCount">setRowCount</a>(settings.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#size">size</a>());</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    m_treeModel-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html#setRowCount">setRowCount</a>(settings.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>().size());</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    Q_ASSERT(m_treeModel-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandarditemmodel.html#columnCount">columnCount</a>() == 2);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordtype">int</span> row = 0;</div>
@@ -540,7 +540,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqkeysequence_html_SequenceFormat-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeysequence.html#SequenceFormat-enum">QKeySequence::PortableText</a></div><div class="ttdeci">PortableText</div></div>
 <div class="ttc" id="aqkeysequence_html_toString"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeysequence.html#toString">QKeySequence::toString</a></div><div class="ttdeci">QString toString(QKeySequence::SequenceFormat format) const const</div></div>
 <div class="ttc" id="aqkeysequenceedit_html_editingFinished"><div class="ttname"><a href="https://doc.qt.io/qt-5/qkeysequenceedit.html#editingFinished">QKeySequenceEdit::editingFinished</a></div><div class="ttdeci">void editingFinished()</div></div>
-<div class="ttc" id="aqlist_html_size"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#size">QList::size</a></div><div class="ttdeci">int size() const const</div></div>
 <div class="ttc" id="aqmessagebox_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a></div></div>
 <div class="ttc" id="aqmessagebox_html_Icon-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmessagebox.html#Icon-enum">QMessageBox::Warning</a></div><div class="ttdeci">Warning</div></div>
 <div class="ttc" id="aqmessagebox_html_StandardButton-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmessagebox.html#StandardButton-enum">QMessageBox::Yes</a></div><div class="ttdeci">Yes</div></div>
@@ -580,10 +579,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

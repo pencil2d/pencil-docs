@@ -203,7 +203,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> SelectionManager::getSelectionAnchorPoint()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> anchorPoint;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (mSelectionPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#count">count</a>() &lt; 3) { <span class="keywordflow">return</span> anchorPoint; }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (mSelectionPolygon.count() &lt; 3) { <span class="keywordflow">return</span> anchorPoint; }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (mMoveMode == MoveMode::BOTTOMRIGHT)</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
@@ -229,7 +229,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keywordtype">void</span> SelectionManager::setMoveModeForAnchorInRange(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; point)</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span> (mSelectionPolygon.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvector.html#count">count</a>() &lt; 4)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span> (mSelectionPolygon.count() &lt; 4)</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        mMoveMode = MoveMode::NONE;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span>;</div>
@@ -491,17 +491,16 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqtransform_html_translate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html#translate">QTransform::translate</a></div><div class="ttdeci">QTransform &amp; translate(qreal dx, qreal dy)</div></div>
 <div class="ttc" id="aqvector2d_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvector2d.html">QVector2D</a></div></div>
 <div class="ttc" id="aqvector2d_html_dotProduct"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvector2d.html#dotProduct">QVector2D::dotProduct</a></div><div class="ttdeci">float dotProduct(const QVector2D &amp;v1, const QVector2D &amp;v2)</div></div>
-<div class="ttc" id="aqvector_html_count"><div class="ttname"><a href="https://doc.qt.io/qt-5/qvector.html#count">QVector::count</a></div><div class="ttdeci">int count(const T &amp;value) const const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -179,9 +179,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                                          strInitialFilePath,</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                                          strFilter,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                                          strSelectedFilter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isNull">isNull</a>() ? <span class="keyword">nullptr</span> : &amp;strSelectedFilter);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> (!filePaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#isEmpty">isEmpty</a>() &amp;&amp; !filePaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#first">first</a>().isEmpty())</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">if</span> (!filePaths.isEmpty() &amp;&amp; !filePaths.first().isEmpty())</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_function" href="class_file_dialog.html#ad835d9152dbd1c84e5a7cb00781edbb0">setLastOpenPath</a>(fileType, filePaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#first">first</a>());</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_function" href="class_file_dialog.html#ad835d9152dbd1c84e5a7cb00781edbb0">setLastOpenPath</a>(fileType, filePaths.first());</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> filePaths;</div>
@@ -433,8 +433,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqfileinfo_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a></div></div>
 <div class="ttc" id="aqfileinfo_html_fileName"><div class="ttname"><a href="https://doc.qt.io/qt-5/qfileinfo.html#fileName">QFileInfo::fileName</a></div><div class="ttdeci">QString fileName() const const</div></div>
 <div class="ttc" id="aqlist_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html">QList</a></div></div>
-<div class="ttc" id="aqlist_html_first"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#first">QList::first</a></div><div class="ttdeci">T &amp; first()</div></div>
-<div class="ttc" id="aqlist_html_isEmpty"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#isEmpty">QList::isEmpty</a></div><div class="ttdeci">bool isEmpty() const const</div></div>
 <div class="ttc" id="aqobject_html_parent"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#parent">QObject::parent</a></div><div class="ttdeci">QObject * parent() const const</div></div>
 <div class="ttc" id="aqobject_html_tr"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#tr">QObject::tr</a></div><div class="ttdeci">QString tr(const char *sourceText, const char *disambiguation, int n)</div></div>
 <div class="ttc" id="aqsettings_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a></div></div>
@@ -461,10 +459,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

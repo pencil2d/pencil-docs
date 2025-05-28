@@ -1,7 +1,6 @@
 <map id="Status" name="Status">
-<area shape="rect" id="node1" title=" " alt="" coords="83,303,156,333"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="5,184,89,215"/>
-<area shape="rect" id="node3" href="$class_debug_details.html" title=" " alt="" coords="127,184,259,215"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstringlist.html" title=" " alt="" coords="137,85,248,116"/>
-<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="141,5,244,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="83,223,156,253"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="5,104,89,135"/>
+<area shape="rect" id="node3" href="$class_debug_details.html" title=" " alt="" coords="127,104,259,135"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstringlist.html" title=" " alt="" coords="137,5,248,36"/>
 </map>

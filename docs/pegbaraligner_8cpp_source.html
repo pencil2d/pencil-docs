@@ -167,9 +167,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> pegX = result.point.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> pegY = result.point.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; layers.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#count">count</a>(); i++)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; layers.count(); i++)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        layerBitmap = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;findLayerByName(layers.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#at">at</a>(i)));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        layerBitmap = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(mEditor-&gt;layers()-&gt;findLayerByName(layers.at(i)));</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = layerBitmap-&gt;firstKeyFramePosition(); k &lt;= layerBitmap-&gt;getMaxKeyFramePosition(); k++)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">if</span> (!layerBitmap-&gt;keyExists(k)) { <span class="keywordflow">continue</span>; }</div>
@@ -248,8 +248,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00025">layerbitmap.h:26</a></div></div>
 <div class="ttc" id="aclass_peg_status_html"><div class="ttname"><a href="class_peg_status.html">PegStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="pegbaraligner_8h_source.html#l00028">pegbaraligner.h:29</a></div></div>
 <div class="ttc" id="aclass_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00039">pencilerror.h:40</a></div></div>
-<div class="ttc" id="aqlist_html_at"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#at">QList::at</a></div><div class="ttdeci">const T &amp; at(int i) const const</div></div>
-<div class="ttc" id="aqlist_html_count"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#count">QList::count</a></div><div class="ttdeci">int count(const T &amp;value) const const</div></div>
 <div class="ttc" id="aqpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
 <div class="ttc" id="aqpoint_html_setX"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#setX">QPoint::setX</a></div><div class="ttdeci">void setX(int x)</div></div>
 <div class="ttc" id="aqpoint_html_setY"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html#setY">QPoint::setY</a></div><div class="ttdeci">void setY(int y)</div></div>
@@ -271,10 +269,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

@@ -249,7 +249,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keywordtype">void</span> ExportMovieDialog::onFilePathsChanged(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> filePaths)</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> filePath = filePaths.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlist.html#first">first</a>().toLower();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> filePath = filePaths.first().toLower();</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">bool</span> canLoop = supportsLooping(filePath);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    ui-&gt;loopCheckBox-&gt;setEnabled(canLoop);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span> (!canLoop)</div>
@@ -285,7 +285,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqabstractbutton_html_clicked"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractbutton.html#clicked">QAbstractButton::clicked</a></div><div class="ttdeci">void clicked(bool checked)</div></div>
 <div class="ttc" id="aqcombobox_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcombobox.html">QComboBox</a></div></div>
 <div class="ttc" id="aqcombobox_html_currentIndexChanged"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcombobox.html#currentIndexChanged">QComboBox::currentIndexChanged</a></div><div class="ttdeci">void currentIndexChanged(int index)</div></div>
-<div class="ttc" id="aqlist_html_first"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlist.html#first">QList::first</a></div><div class="ttdeci">T &amp; first()</div></div>
 <div class="ttc" id="aqobject_html_connect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qobject.html#connect">QObject::connect</a></div><div class="ttdeci">QMetaObject::Connection connect(const QObject *sender, const char *signal, const QObject *receiver, const char *method, Qt::ConnectionType type)</div></div>
 <div class="ttc" id="aqsignalblocker_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsignalblocker.html">QSignalBlocker</a></div></div>
 <div class="ttc" id="aqsize_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qsize.html">QSize</a></div></div>
@@ -307,10 +306,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu May 8 2025 04:47:53 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 28 2025 08:41:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 4513250b1d5b1a3676ec0e67b06b7a885ceaae39
+   based on revision a9013b659d3ec6786ea4148c386fe61adad346a2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
