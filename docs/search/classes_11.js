@@ -15,12 +15,14 @@ var searchData=
   ['timerinfo_12',['TimerInfo',['https://doc.qt.io/qt-5/qabstracteventdispatcher-timerinfo.html',1,'QAbstractEventDispatcher']]],
   ['tinfl_5fdecompressor_5ftag_13',['tinfl_decompressor_tag',['../structtinfl__decompressor__tag.html',1,'']]],
   ['tinfl_5fhuff_5ftable_14',['tinfl_huff_table',['../structtinfl__huff__table.html',1,'']]],
-  ['toolboxwidget_15',['ToolBoxWidget',['../class_tool_box_widget.html',1,'']]],
-  ['toolmanager_16',['ToolManager',['../class_tool_manager.html',1,'']]],
-  ['tooloptionwidget_17',['ToolOptionWidget',['../class_tool_option_widget.html',1,'']]],
-  ['toolspage_18',['ToolsPage',['../class_tools_page.html',1,'']]],
-  ['touchpoint_19',['TouchPoint',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html',1,'QTouchEvent']]],
-  ['transform_20',['Transform',['../class_transform.html',1,'']]],
-  ['transformcommand_21',['TransformCommand',['../class_transform_command.html',1,'']]],
-  ['transformparameters_22',['TransformParameters',['../struct_transform_parameters.html',1,'']]]
+  ['toolboxdockwidget_15',['ToolBoxDockWidget',['../class_tool_box_dock_widget.html',1,'']]],
+  ['toolboxlayout_16',['ToolBoxLayout',['../class_tool_box_layout.html',1,'']]],
+  ['toolboxwidget_17',['ToolBoxWidget',['../class_tool_box_widget.html',1,'']]],
+  ['toolmanager_18',['ToolManager',['../class_tool_manager.html',1,'']]],
+  ['tooloptionwidget_19',['ToolOptionWidget',['../class_tool_option_widget.html',1,'']]],
+  ['toolspage_20',['ToolsPage',['../class_tools_page.html',1,'']]],
+  ['touchpoint_21',['TouchPoint',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html',1,'QTouchEvent']]],
+  ['transform_22',['Transform',['../class_transform.html',1,'']]],
+  ['transformcommand_23',['TransformCommand',['../class_transform_command.html',1,'']]],
+  ['transformparameters_24',['TransformParameters',['../struct_transform_parameters.html',1,'']]]
 ];
