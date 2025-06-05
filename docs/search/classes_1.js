@@ -16,5 +16,6 @@ var searchData=
   ['blitrect_13',['BlitRect',['../class_blit_rect.html',1,'']]],
   ['brushtool_14',['BrushTool',['../class_brush_tool.html',1,'']]],
   ['bucketoptionswidget_15',['BucketOptionsWidget',['../class_bucket_options_widget.html',1,'']]],
-  ['buckettool_16',['BucketTool',['../class_bucket_tool.html',1,'']]]
+  ['buckettool_16',['BucketTool',['../class_bucket_tool.html',1,'']]],
+  ['buttonappearancewatcher_17',['ButtonAppearanceWatcher',['../class_button_appearance_watcher.html',1,'']]]
 ];

@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_movie_exporter.html" title=" " alt="" coords="5,5,148,36"/>
+<area shape="rect" id="node1" href="$class_layer.html" title=" " alt="" coords="5,88,72,119"/>
+<area shape="rect" id="node2" href="$class_layer_bitmap.html" title=" " alt="" coords="123,5,248,36"/>
+<area shape="rect" id="node3" href="$class_layer_camera.html" title=" " alt="" coords="120,60,251,91"/>
+<area shape="rect" id="node4" href="$class_layer_sound.html" title=" " alt="" coords="125,115,246,145"/>
+<area shape="rect" id="node5" href="$class_layer_vector.html" title=" " alt="" coords="126,169,245,200"/>
 </map>
