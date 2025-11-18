@@ -1676,10 +1676,12 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a5e8d9ccc48372027dd71173e6024462d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0336bdd4b19640c300aa7e8f7a89083d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#a0336bdd4b19640c300aa7e8f7a89083d">makeConnections</a> (<a class="el" href="class_editor.html">Editor</a> *, <a class="el" href="class_status_bar.html">StatusBar</a> *)</td></tr>
 <tr class="separator:a0336bdd4b19640c300aa7e8f7a89083d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec99e0fd8be98736031e76e96d7302f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#a0ec99e0fd8be98736031e76e96d7302f">tryRecoverUnsavedProject</a> ()</td></tr>
-<tr class="separator:a0ec99e0fd8be98736031e76e96d7302f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade002cb2b62b1a3e71cfbb962c8d7d49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#ade002cb2b62b1a3e71cfbb962c8d7d49">startProjectRecovery</a> (int result)</td></tr>
-<tr class="separator:ade002cb2b62b1a3e71cfbb962c8d7d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af248d956e972619677e13cfefd72584a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#af248d956e972619677e13cfefd72584a">checkForRecoverableProjects</a> ()</td></tr>
+<tr class="separator:af248d956e972619677e13cfefd72584a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ff134073f25780b0ca0feaee866e55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#ad5ff134073f25780b0ca0feaee866e55">tryRecoverProject</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> recoverPath)</td></tr>
+<tr class="separator:ad5ff134073f25780b0ca0feaee866e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbd0aceb4b0f98b4b11cc59484626fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#aadbd0aceb4b0f98b4b11cc59484626fa">startProjectRecovery</a> (const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> recoverPath)</td></tr>
+<tr class="separator:aadbd0aceb4b0f98b4b11cc59484626fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c8608030520585ad580e78dd31eacba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window2.html#a2c8608030520585ad580e78dd31eacba">createToolbars</a> ()</td></tr>
 <tr class="separator:a2c8608030520585ad580e78dd31eacba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -2113,6 +2115,33 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 </div>
 </div>
+<a id="af248d956e972619677e13cfefd72584a" name="af248d956e972619677e13cfefd72584a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af248d956e972619677e13cfefd72584a">&#9670;&#160;</a></span>checkForRecoverableProjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow2::checkForRecoverableProjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01604">1604</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a01025591048fed118d0341351451ed3c" name="a01025591048fed118d0341351451ed3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01025591048fed118d0341351451ed3c">&#9670;&#160;</a></span>clearKeyboardShortcuts()</h2>
 
@@ -2301,7 +2330,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01670">1670</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01683">1683</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
 
 </div>
 </div>
@@ -3533,8 +3562,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 </div>
 </div>
-<a id="ade002cb2b62b1a3e71cfbb962c8d7d49" name="ade002cb2b62b1a3e71cfbb962c8d7d49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade002cb2b62b1a3e71cfbb962c8d7d49">&#9670;&#160;</a></span>startProjectRecovery()</h2>
+<a id="aadbd0aceb4b0f98b4b11cc59484626fa" name="aadbd0aceb4b0f98b4b11cc59484626fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbd0aceb4b0f98b4b11cc59484626fa">&#9670;&#160;</a></span>startProjectRecovery()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3543,10 +3572,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MainWindow2::startProjectRecovery </td>
+          <td class="memname">bool MainWindow2::startProjectRecovery </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>result</em></td><td>)</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&#160;</td>
+          <td class="paramname"><em>recoverPath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3557,7 +3586,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01635">1635</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01658">1658</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
 
 </div>
 </div>
@@ -3618,8 +3647,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 
 </div>
 </div>
-<a id="a0ec99e0fd8be98736031e76e96d7302f" name="a0ec99e0fd8be98736031e76e96d7302f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ec99e0fd8be98736031e76e96d7302f">&#9670;&#160;</a></span>tryRecoverUnsavedProject()</h2>
+<a id="ad5ff134073f25780b0ca0feaee866e55" name="ad5ff134073f25780b0ca0feaee866e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ff134073f25780b0ca0feaee866e55">&#9670;&#160;</a></span>tryRecoverProject()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3628,9 +3657,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool MainWindow2::tryRecoverUnsavedProject </td>
+          <td class="memname">bool MainWindow2::tryRecoverProject </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="elRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&#160;</td>
+          <td class="paramname"><em>recoverPath</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3641,7 +3671,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01604">1604</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8cpp_source.html#l01625">1625</a> of file <a class="el" href="mainwindow2_8cpp_source.html">mainwindow2.cpp</a>.</p>
 
 </div>
 </div>
@@ -3828,7 +3858,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00186">186</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00187">187</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -3852,7 +3882,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00174">174</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00175">175</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -3876,7 +3906,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00157">157</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00158">158</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -3900,7 +3930,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00165">165</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00166">166</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -3924,7 +3954,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00158">158</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00159">159</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -3948,7 +3978,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00178">178</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00179">179</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -3972,7 +4002,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00179">179</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00180">180</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4012,7 +4042,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00173">173</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00174">174</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4036,7 +4066,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00167">167</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00168">168</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4060,7 +4090,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00166">166</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00167">167</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4084,7 +4114,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00169">169</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00170">170</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4108,7 +4138,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00171">171</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00172">172</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4132,7 +4162,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00162">162</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00163">163</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4156,7 +4186,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00161">161</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00162">162</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4180,7 +4210,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00172">172</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00173">173</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4204,7 +4234,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00182">182</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00183">183</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4228,7 +4258,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00183">183</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00184">184</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4252,7 +4282,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00189">189</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00190">190</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4276,7 +4306,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00164">164</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00165">165</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4300,7 +4330,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00180">180</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00181">181</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4324,7 +4354,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00160">160</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00161">161</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4348,7 +4378,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00159">159</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00160">160</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4372,7 +4402,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00168">168</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00169">169</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4396,7 +4426,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00191">191</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow2_8h_source.html#l00192">192</a> of file <a class="el" href="mainwindow2_8h_source.html">mainwindow2.h</a>.</p>
 
 </div>
 </div>
@@ -4410,10 +4440,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="elRef" href="h
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon Nov 17 2025 16:08:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Nov 18 2025 04:52:27 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision ee77ee3131d04c8bcaf6fb9b96b6ff1382eae0bf
+   based on revision 99f6d7ef594ab4118d4ed330941d1fedeadb08dd
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
