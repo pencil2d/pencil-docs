@@ -139,48 +139,52 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qabstractspinbox.html">QAbstractSpinBox</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a> clipLine(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>&amp; line, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; clip, qreal t0, qreal t1);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> clearFocusOnFinished(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qabstractspinbox.html">QAbstractSpinBox</a> *spinBox);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// NOTE: Replace this implementation with QScopeGuard once we drop support for Qt &lt; 5.12</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_scope_guard.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a>(std::function&lt; <span class="keywordtype">void</span>() &gt; onScopeExit) { m_onScopeExit = onScopeExit; }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="class_scope_guard.html">~ScopeGuard</a>() { <span class="keywordflow">if</span>(m_invoke) { m_onScopeExit(); } }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> dismiss() { m_invoke = <span class="keyword">false</span>; };</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::function&lt;void()&gt; m_onScopeExit;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> m_invoke = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define SCOPEGUARD_LINENAME_CAT(name, line) name##line</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define SCOPEGUARD_LINENAME(name, line) SCOPEGUARD_LINENAME_CAT(name, line)</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define OnScopeExit( callback ) ScopeGuard SCOPEGUARD_LINENAME( myScopeGuard, __LINE__ ) ( [&amp;] { callback; } );</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container, <span class="keyword">typename</span> Pred&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>Container filter(<span class="keyword">const</span> Container&amp; container, Pred predicate) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    Container result;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::copy_if(container.begin(), container.end(), std::back_inserter(result), predicate);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> ffprobeLocation();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> ffmpegLocation();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>quint64 imageSize(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>&amp;);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> uniqueString(<span class="keywordtype">int</span> len);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> closestCanonicalPath(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> path);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> validateDataPath(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> filePath, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataDirPath);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif </span><span class="comment">// UTIL_H</span></div>
-<div class="ttc" id="aclass_scope_guard_html"><div class="ttname"><a href="class_scope_guard.html">ScopeGuard</a></div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00040">util.h:41</a></div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a> clipLine(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a>&amp; line, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; clip, qreal t0, qreal t1);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> clearFocusOnFinished(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qabstractspinbox.html">QAbstractSpinBox</a> *spinBox);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// NOTE: Replace this implementation with QScopeGuard once we drop support for Qt &lt; 5.12</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_scope_guard.html">   44</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a>(std::function&lt; <span class="keywordtype">void</span>() &gt; onScopeExit) { m_onScopeExit = onScopeExit; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_scope_guard.html">ScopeGuard</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="class_scope_guard.html">~ScopeGuard</a>() { <span class="keywordflow">if</span>(m_invoke) { m_onScopeExit(); } }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> dismiss() { m_invoke = <span class="keyword">false</span>; };</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::function&lt;void()&gt; m_onScopeExit;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> m_invoke = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define SCOPEGUARD_LINENAME_CAT(name, line) name##line</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define SCOPEGUARD_LINENAME(name, line) SCOPEGUARD_LINENAME_CAT(name, line)</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define OnScopeExit( callback ) ScopeGuard SCOPEGUARD_LINENAME( myScopeGuard, __LINE__ ) ( [&amp;] { callback; } );</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Container, <span class="keyword">typename</span> Pred&gt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>Container filter(<span class="keyword">const</span> Container&amp; container, Pred predicate) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    Container result;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::copy_if(container.begin(), container.end(), std::back_inserter(result), predicate);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> ffprobeLocation();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> ffmpegLocation();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>quint64 imageSize(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>&amp;);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> uniqueString(<span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> closestCanonicalPath(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> path);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> validateDataPath(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> filePath, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataDirPath);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif </span><span class="comment">// UTIL_H</span></div>
+<div class="ttc" id="aclass_scope_guard_html"><div class="ttname"><a href="class_scope_guard.html">ScopeGuard</a></div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00044">util.h:45</a></div></div>
 <div class="ttc" id="aqabstractspinbox_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qabstractspinbox.html">QAbstractSpinBox</a></div></div>
 <div class="ttc" id="aqimage_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html">QImage</a></div></div>
 <div class="ttc" id="aqlinef_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlinef.html">QLineF</a></div></div>
@@ -192,10 +196,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Nov 18 2025 07:45:10 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon Dec 1 2025 02:51:48 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision d32017e1e1c82fd8b2e48782fe8069d83af428e2
+   based on revision 27654db410ba241ffe8e5e72d546e14471da55d0
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
