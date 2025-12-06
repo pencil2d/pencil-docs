@@ -612,7 +612,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    }</div>
 <div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>    <span class="keywordflow">if</span> (!fileInfo.isReadable())</div>
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>    {</div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>        dd &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Permissions: 0x%1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(fileInfo.permissions(), 0, 16);</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>        dd &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Permissions: 0x%1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(fileInfo.permissions()), 0, 16);</div>
 <div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="class_status.html">Status</a>(Status::ERROR_FILE_CANNOT_OPEN,</div>
 <div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>                      dd,</div>
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>                      <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Could not open file&quot;</span>),</div>
@@ -1293,10 +1293,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Sat Dec 6 2025 09:41:32 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sat Dec 6 2025 14:23:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision b53ba1e082dec080819e7e4a25d559233e44e3ad
+   based on revision 1e07d8f23b2cf1fd59561d387686f7767a6f464e
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
