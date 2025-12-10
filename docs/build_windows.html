@@ -105,63 +105,77 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_docs_build_win"></a></p>
 <p>These are instructions for building Pencil2D on a Windows PC. If you are using Mac go <a class="el" href="build_macos.html">here</a>, and Linux please go <a class="el" href="build_linux.html">here</a>.</p>
-<p>This guide is primarily targeted towards developers. If you just want to use the latest version, download it from our <a href="https://www.pencil2d.org/download/#nightlybuild">nightly builds</a>. This tutorial was made with Windows 10 in mind, however this will work with Windows 7 and up.</p>
+<p>This guide is primarily targeted towards developers. If you just want to use the latest version, download it from our <a href="https://www.pencil2d.org/download/#nightlybuild">nightly builds</a>. This tutorial was made with Windows 11 in mind, however it will likely work with Windows 7 and up.</p>
 <p>There are 3 steps in total:</p>
 <ol type="1">
-<li>Install Qt SDK</li>
+<li>Install dependencies</li>
 <li>Get the source code</li>
 <li>Configure and compile Pencil2D</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md28"></a>
 TL;DR</h1>
-<p>If you are an <em>experienced Qt developer</em>, compiling Pencil2D would be extremely easy for you. Just open up <code>pencil2d.pro</code> in Qt Creator and compile, that's it.</p>
+<p>If you are an <em>experienced Qt developer</em>, compiling Pencil2D will be extremely easy for you. Just open up <code>pencil2d.pro</code> in Qt Creator and compile, that's it.</p>
 <h1><a class="anchor" id="autotoc_md29"></a>
-Install Qt SDK</h1>
-<p>Pencil2D is built upon Qt, you need to install it before you can compile the program.</p>
+Install Dependencies</h1>
+<p>Pencil2D is built upon Qt. In order to compile Pencil2D, you need to install Qt and a C++ toolchain.</p>
+<p>On Windows, two C++ toolchains are available: Microsoft Visual C++ (MSVC) and Minimalist GNU for Windows (MinGW). MSVC is the toolchain maintained by Microsoft and arguably more well-tested because it is used by official Pencil2D builds, however MinGW doesn't require as much disk space and is more convenient to install. Generally, both can be used to build Pencil2D.</p>
 <h2><a class="anchor" id="autotoc_md30"></a>
-Official Qt Installer (Recommended)</h2>
-<ul>
-<li>Download the <b>Qt Online Installer</b> from <a href="https://www.qt.io/download-qt-installer-oss">Qt Downloads</a></li>
-<li>Open up the installer, click next.</li>
-<li>You have to create a free Qt account if you don't have one. Don't worry, it won't cost you a penny.</li>
-<li>In the next step, choose the Qt version that matches your C++ compiler.<ul>
-<li>For example, select <code>MSVC 2019 64-bit</code> if you have Visual C++ 2019 installed.</li>
-<li>If you are using Qt 6, make sure to also select its Multimedia module in the Additional Libraries section.</li>
-<li>If you have no idea what to do, select the latest <code>Qt 5.15.x -&gt; MinGW 8.x</code> and <code>Developer and Design Tools -&gt; MinGW 8.x 64-bit</code>.</li>
+Install MSVC (Optional)</h2>
+<p>This step is only needed if you want to use MSVC and have not installed it yet. If you want to use MinGW or if you have built C++ applications using Visual Studio before, you can skip this step and jump ahead to the next section (<b>Install Qt</b>).</p>
+<ol type="1">
+<li>Go to the <a href="https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2026">Visual Studio download page</a> and download the <b>Build Tools for Visual Studio 2026</b> from the <b>Tools for Visual Studio</b> section near the bottom of the page.</li>
+<li>Run the installer, click continue. The installer might take a few moments to get everything ready.</li>
+<li>For building Pencil2D, you'll need to select at least <code>Individual components → Compilers, build tools, and runtimes → MSVC Build Tools for x64/x86 (Latest)</code> and <code>Individual components → SDKs, libraries, and frameworks → Windows 11 SDK (10.#.#####)</code>.<ul>
+<li>For a more complete installation, you can also select <code>Workloads → Desktop &amp; Mobile → C++ build tools</code> instead, but this is not strictly necessary to build Pencil2D.</li>
 </ul>
 </li>
-<li>Agree to the license and start the installation. It will take a long time to download all of the files, so be patient. When the installation is complete, press <code>Done</code> and it will launch Qt Creator for you.</li>
+<li>Click Install and wait for the installation to complete. This might take a moment, so be patient.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md31"></a>
+Install Qt</h2>
+<ol type="1">
+<li>Download the <b>Qt Online Installer</b> from <a href="https://www.qt.io/download-qt-installer-oss">Qt Downloads</a></li>
+<li>Run the installer, click next.</li>
+<li>Log in to your Qt Account, or create a new account if you don't have one yet. Don't worry, creating a Qt account won't cost you a penny.</li>
+<li>Continue through the next few steps until you are asked for the installation folder. Make sure to select <b>Custom installation</b> and click next.</li>
+<li>In the next step, choose the latest version of Qt according to the toolchain you plan to use:<ul>
+<li>If you plan to use MSVC, select <code>Qt → Qt #.##.# → MSVC 2022 64-bit</code>.</li>
+<li>If you plan to use MinGW, select <code>Qt → Qt #.##.# → MinGW ##.#.# 64-bit</code> and a matching MinGW version from the <code>Qt → Build Tools</code> section.</li>
+<li>Additionally, select <code>Qt Multimedia</code> in the <code>Additional Libraries</code> subsection of your Qt version.</li>
+<li>Unless you're already accustomed to working with C++ in another IDE/Editor, you should also select the latest version of Qt Creator.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md31"></a>
+</li>
+<li>Agree to the license(s) and start the installation. It may take some time to download all of the files, so be patient. When the installation is complete, decide whether you want it to launch Qt creator for you and press <code>Finish</code>.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md32"></a>
 Get Source Code</h1>
 <ul>
 <li>Simply download the <a href="https://github.com/pencil2d/pencil/archive/master.zip">source code archive</a>.</li>
-<li>Or using <a href="https://github.com/pencil2d/pencil.git">Git</a> if you know Git. (better if you plan to contribute to Pencil2D)</li>
+<li>Or using <a href="https://github.com/pencil2d/pencil.git">Git</a> if you know Git. (Better if you plan to contribute to Pencil2D)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md32"></a>
+<h1><a class="anchor" id="autotoc_md33"></a>
 Building the application</h1>
 <p>Now it's time to build the application.</p>
-<h2><a class="anchor" id="autotoc_md33"></a>
-With Qt Creator (recommended)</h2>
-<ul>
-<li>Open up the Qt Creator.</li>
-<li>From the menu bar select <b>File</b> and then <b>Open File or Project</b>. Navigate to Pencil2D's root source folder and open <code>pencil2d.pro</code>.</li>
-<li>Next, you'll be asked to configure your <code>kits</code> for the project. Kits determine compilers, target environment, and various build settings among other things. The Desktop option should be the only one checked. Click Configure Project to complete the kit selection.</li>
-<li>Now all you have to do is clicking the <b>green arrow</b> in the bottom left corner (or <code>Ctrl+R</code> keyboard shortcut). A small progress bar will show up on the bottom right and you will see console outputs.</li>
-<li>If everything goes well, Qt Creator will launch the Pencil2D application automatically and you're done!</li>
-</ul>
-<p>If you see any errors, the issues tab at the bottom will display error messages. Please search the <a href="https://github.com/pencil2d/pencil/issues">Pencil2D Issue tracker</a> or create an issue if you can't find anything. Be sure to include as much detail as you can in your report!</p>
 <h2><a class="anchor" id="autotoc_md34"></a>
+With Qt Creator (recommended)</h2>
+<ol type="1">
+<li>Open Qt Creator.</li>
+<li>From the menu bar, select <b>File</b> and then <b>Open File or Project</b>. Navigate to Pencil2D's root source folder and open <code>pencil2d.pro</code>.</li>
+<li>Next, you'll be asked to configure your <code>kits</code> for the project. Kits determine compilers, target environment, and various build settings, among other things. The Desktop option should be the only one selected. Click Configure Project to complete the kit selection.</li>
+<li>Now all you have to do is clicking the <b>green arrow</b> in the bottom left corner (or pressing the <code>Ctrl+R</code> keyboard shortcut). A small progress bar will show up on the bottom right and you will see some console output.</li>
+<li>If everything goes well, Qt Creator will launch the Pencil2D application automatically and you're done!</li>
+</ol>
+<p>If you see any errors, the issues tab at the bottom will display error messages. Please search the <a href="https://github.com/pencil2d/pencil/issues">Pencil2D Issue tracker</a> or create an issue if you can't find anything. Be sure to include as much detail as you can in your report!</p>
+<h2><a class="anchor" id="autotoc_md35"></a>
 With Visual Studio</h2>
 <p>Follow these steps if you prefer Visual Studio:</p>
 <ol type="1">
-<li>Have a Visual Studio with C++ compiler installed. (VS2015 or later)</li>
-<li>Install Qt SDK that matches your VS version (e.g. Qt 5.15.x msvc2019 64bit if you use VS2019).</li>
-<li>Download and install the <a href="http://doc.qt.io/archives/vs-addin/index.html">Qt Visual Studio Add-in</a>.</li>
-<li>Open Visual Studio, from the Menu bar <b>Extension</b> -&gt; <b>Qt VS Tools</b> -&gt; <b>Open Qt Project File (.pro)</b>, navigate to the Pencil2D source folder and select <code>pencil2d.pro</code>.</li>
+<li>Have Visual Studio with a C++ compiler installed, as well as a version of Qt that is compatible with it (see above).</li>
+<li>Download and install the <a href="https://doc.qt.io/qtvstools/">Qt Visual Studio Tools Add-in</a> from the menu bar → <b>Extensions</b> → <b>Manage Extensions</b> → <b>Online</b>.</li>
+<li>Open Visual Studio, from the menu bar → <b>Extensions</b> → <b>Qt VS Tools</b> -&gt; <b>Open Qt Project File (.pro)</b>, navigate to the Pencil2D source folder and select <code>pencil2d.pro</code>.</li>
 <li>Build &amp; run the project.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md35"></a>
+<h1><a class="anchor" id="autotoc_md36"></a>
 Next steps</h1>
 <p>Now that you can build Pencil2D, the next step is to learn about <a class="el" href="code_overview.html">navigating the source code</a>. </p>
 </div></div><!-- contents -->
@@ -171,10 +185,10 @@ Next steps</h1>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Dec 10 2025 11:18:26 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Dec 10 2025 15:49:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision a3b702bce9b7a962a649726ca3c4dd7807ace1de
+   based on revision 2f1faca8980be426b79568f2176d84cca2ab1e85
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

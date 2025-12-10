@@ -104,25 +104,25 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md36">Projects</a></li>
-<li class="level1"><a href="#autotoc_md37">Where to start with?</a><ul><li class="level2"><a href="#autotoc_md38">The entry point</a></li>
-<li class="level2"><a href="#autotoc_md39">MainWindow</a><ul><li class="level3"><a href="#autotoc_md40">Menus</a></li>
-<li class="level3"><a href="#autotoc_md41">Subpanels</a></li>
+<ul><li class="level1"><a href="#autotoc_md37">Projects</a></li>
+<li class="level1"><a href="#autotoc_md38">Where to start with?</a><ul><li class="level2"><a href="#autotoc_md39">The entry point</a></li>
+<li class="level2"><a href="#autotoc_md40">MainWindow</a><ul><li class="level3"><a href="#autotoc_md41">Menus</a></li>
+<li class="level3"><a href="#autotoc_md42">Subpanels</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md42">Object</a></li>
-<li class="level2"><a href="#autotoc_md43">ActionCommands</a></li>
-<li class="level2"><a href="#autotoc_md44">Editor</a></li>
-<li class="level2"><a href="#autotoc_md45">Manager classes</a></li>
-<li class="level2"><a href="#autotoc_md46">ScribbleArea</a></li>
-<li class="level2"><a href="#autotoc_md47">Timeline</a></li>
+<li class="level2"><a href="#autotoc_md43">Object</a></li>
+<li class="level2"><a href="#autotoc_md44">ActionCommands</a></li>
+<li class="level2"><a href="#autotoc_md45">Editor</a></li>
+<li class="level2"><a href="#autotoc_md46">Manager classes</a></li>
+<li class="level2"><a href="#autotoc_md47">ScribbleArea</a></li>
+<li class="level2"><a href="#autotoc_md48">Timeline</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="textblock"><p><a class="anchor" id="md_docs_dive_into_code"></a></p>
 <p>This is an overview of Pencil2D code base.</p>
-<h1><a class="anchor" id="autotoc_md36"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 Projects</h1>
 <p>The pencil2d project is organized into 3 sub-projects:</p>
 <ul>
@@ -131,17 +131,17 @@ Projects</h1>
 <li><code>tests</code>: a collection of unit tests.</li>
 </ul>
 <p>You can see these 3 subprojects in QtCreator when you open the Pencil2D project and find identical folder names in the repository.</p>
-<h1><a class="anchor" id="autotoc_md37"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 Where to start with?</h1>
 <p>At the time of writing, there are nearly 200 source files in the Pencil2D repository. But you only need to focus on a few of them to start with, the most important classes which form the backbone of Pencil2D. They are <code>MainWindow2</code>, <code>Editor</code>, <code>Object</code> and <code>ScribbleArea</code>. Once you get the idea of how these classes work, you will be able to pick up Pencil2D codebase very quickly.</p>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 The entry point</h2>
 <p>Let's start with <code>app/src/main.cpp</code>, the entry point of Pencil2D (and most of C++ programs as well). Skip the command-line handling code at the moment and go to the line <code>MainWindow2 mainWindow;</code> (it's at line 220 at the time of writing). The Pencil2D application starts here.</p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 MainWindow</h2>
 <p><b>MainWindow2</b>, as the name said, is the main window you will see when launching Pencil2D. Have a look at the constructor in <code>mainwindow2.cpp</code>, you will find the initialization process of Pencil2D. In the constructor, it creates an <code>Object</code> (An animation project which holds layers &amp; frames), <code>Editor</code> (the central part of the animation engine), <code>ScribbleArea</code> (where you draw things) and all subpanels including tools, colour wheel, timeline etc.</p>
 <p>MainWindow acts as a bridge between the GUI widgets and the core engine.</p>
-<h3><a class="anchor" id="autotoc_md40"></a>
+<h3><a class="anchor" id="autotoc_md41"></a>
 Menus</h3>
 <p>It's good to pick a menu action, for example: <b>Open a Project</b> to start your journey in Pencil2D codebase.</p>
 <p>Firstly, go to <code>MainWindow2::createMenus()</code>, where all the menu actions are connected.</p>
@@ -151,22 +151,22 @@ Menus</h3>
 <p>Reference: <a href="http://doc.qt.io/qt-5/signalsandslots.html">Qt signal &amp; slot</a></p>
 <p>And then you are able to figure out what actually happens when opening a file by seeing the function <code>MainWindow2::openDocument()</code>. (Tip: jump to the function by Ctrl + clicking the function name in QtCreator)</p>
 <p>Similarly, you can do this with all other menu actions. It will give you a good start point to learn the codebase.</p>
-<h3><a class="anchor" id="autotoc_md41"></a>
+<h3><a class="anchor" id="autotoc_md42"></a>
 Subpanels</h3>
 <p>MainWindow holds all the subpanels (which are called <b>Widgets</b> in Qt's way). <code>MainWindow2::createDockWidgets()</code> creats and initialises subpanels. All subpanels have straight forward C++ class names like <code>Timeline</code> or <code>ToolBox</code>. Simply go to the corresponding cpp file for further details.</p>
 <p><img src="https://i.imgur.com/ck4aIpA.png" alt="Imgur" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Object</h2>
 <p><b>Object</b> keeps your animation assets. Go to <code>object.h</code>, you can see that a <code>Object</code> object holds a list of Layers (<code>QList&lt;Layer*&gt; mLayers;</code>). And a layer holds keyframes. Opening a project is the process of converting a pclx file into a <code>Object</code> structure. Similarly, saving a project is a process of converting the Object structure back into a pclx file.</p>
 <p>Currently, there are 4 types of Layer: Bitmap, Vector, Sound and Camera layer. And 4 types of KeyFrames: BitmapImage, VectorImage, Soundclip and Camera. When a user adds a new bitmap key, it literally creates a BitmapImage, and then insert it into a Bitmap Layer.</p>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 ActionCommands</h2>
 <p>Every method in action commands is bound to an action in the menu/top bar. Use this method to trigger a behaviour or widget. As long the behaviour is directly bound to the action, it should be implemented here.</p>
 <p><b>Example1</b>: You implement a new widget and bind the action to ActionCommands::foo()</p>
 <p>Foo opens a widget that does x instantly. This is fine. Another outcome: Foo adds a new keyframe, this is also fine.</p>
 <p><b>Example2</b>: You implement a new widget and bind the action to ActionsCommands::foo(), You trigger some behaviour via a button or other UI related command, now foo() calls ActionCommands::bah().</p>
 <p>This is wrong since bah() is not directly triggered by a command. bah() should instead be implement somewhere else where appropriate.</p>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 Editor</h2>
 <p>The class that keeps the bridge between the UI/Widget related code and the core engine, as well as where all managers are handled.</p>
 <p>As of writing this the editor holds a property for</p><ul>
@@ -178,14 +178,14 @@ Editor</h2>
 <li>PreferenceManager</li>
 <li>SoundManager</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 Manager classes</h2>
 <p>All manager classes are required to derive from BaseManager, a class which contains two core members and some virtual methods.</p><ul>
 <li>Editor</li>
 <li>Object</li>
 </ul>
 <p>The manager classes are to be independent of each other and should be treated as such. Their objective is to decouple logic from Editor and make it easier to organise and write tests.</p>
-<h2><a class="anchor" id="autotoc_md46"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 ScribbleArea</h2>
 <p>The ScribbleArea is currently a collection point where preparations are made before content is being applied to the canvas. All widgets that interacts with the canvas in one with or another, goes through this class.</p>
 <p>Some things that are handled here:</p><ul>
@@ -195,7 +195,7 @@ ScribbleArea</h2>
 <li>Bitmap buffer painting</li>
 <li>Stroke dab making ie. all "drawFoo related methods"</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 Timeline</h2>
 <p>This class is only interesting if you wish to make changes to the top row, ie. the buttons or anything related to the widget itself. This class is not where you make modifications to the cells.</p>
 <p><img src="https://user-images.githubusercontent.com/1045397/51429110-a336b400-1c0b-11e9-9bcc-ad33d0ff2689.png" alt="image" class="inline"/></p>
@@ -208,10 +208,10 @@ Timeline</h2>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Dec 10 2025 11:18:26 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Dec 10 2025 15:49:30 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision a3b702bce9b7a962a649726ca3c4dd7807ace1de
+   based on revision 2f1faca8980be426b79568f2176d84cca2ab1e85
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
