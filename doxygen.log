@@ -985,9 +985,9 @@ Generating code for file core_lib/src/util/pencilsettings.h...
 Generating code for file core_lib/src/util/pointerevent.cpp...
 Generating code for file core_lib/src/util/pointereve/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapbucket.h:52: warning: The following parameter of BitmapBucket::allowFill(const QPoint &checkPoint, const QRgb &checkColor) const is not documented:
   parameter 'checkColor'
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1033: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1033: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1033: warning: The following parameters of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand) are not documented:
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1012: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1012: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1012: warning: The following parameters of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand) are not documented:
   parameter 'fillPixels'
   parameter 'searchBounds'
   parameter 'maxBounds'
@@ -1704,6 +1704,6 @@ Patching output file 157/160
 Patching output file 158/160
 Patching output file 159/160
 Patching output file 160/160
-type lookup cache used 18320/65536 hits=130628 misses=19424
-symbol lookup cache used 18909/65536 hits=209414 misses=18909
+type lookup cache used 18326/65536 hits=130700 misses=19430
+symbol lookup cache used 18914/65536 hits=209483 misses=18914
 finished...
