@@ -1,0 +1,10 @@
+<map id="PolylineToolProperties" name="PolylineToolProperties">
+<area shape="rect" id="node1" title="This struct is an example of how we can share properties among tools rather than duplicating logic,..." alt="" coords="1216,61,1420,91"/>
+<area shape="rect" id="node2" href="$struct_tool_properties_base.html" title=" " alt="" coords="417,43,596,74"/>
+<area shape="rect" id="node3" href="$struct_stroke_tool_properties.html" title=" " alt="" coords="784,87,976,118"/>
+<area shape="rect" id="node4" href="$struct_tool_properties.html" title=" " alt="" coords="437,107,577,138"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qvector.html" title=" " alt="" coords="32,5,221,56"/>
+<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qhash.html" title=" " alt="" coords="27,81,227,111"/>
+<area shape="rect" id="node7" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qhash.html" title=" " alt="" coords="5,135,248,166"/>
+<area shape="rect" id="node8" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="85,203,169,234"/>
+</map>

@@ -20,9 +20,14 @@ var searchData=
   ['toolboxwidget_17',['ToolBoxWidget',['../class_tool_box_widget.html',1,'']]],
   ['toolmanager_18',['ToolManager',['../class_tool_manager.html',1,'']]],
   ['tooloptionwidget_19',['ToolOptionWidget',['../class_tool_option_widget.html',1,'']]],
-  ['toolspage_20',['ToolsPage',['../class_tools_page.html',1,'']]],
-  ['touchpoint_21',['TouchPoint',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html',1,'QTouchEvent']]],
-  ['transform_22',['Transform',['../class_transform.html',1,'']]],
-  ['transformcommand_23',['TransformCommand',['../class_transform_command.html',1,'']]],
-  ['transformparameters_24',['TransformParameters',['../struct_transform_parameters.html',1,'']]]
+  ['toolproperties_20',['ToolProperties',['../struct_tool_properties.html',1,'']]],
+  ['toolpropertiesbase_21',['ToolPropertiesBase',['../struct_tool_properties_base.html',1,'']]],
+  ['toolspage_22',['ToolsPage',['../class_tools_page.html',1,'']]],
+  ['touchpoint_23',['TouchPoint',['https://doc.qt.io/qt-5/qtouchevent-touchpoint.html',1,'QTouchEvent']]],
+  ['transform_24',['Transform',['../class_transform.html',1,'']]],
+  ['transformcommand_25',['TransformCommand',['../class_transform_command.html',1,'']]],
+  ['transformoptionswidget_26',['TransformOptionsWidget',['../class_transform_options_widget.html',1,'']]],
+  ['transformparameters_27',['TransformParameters',['../struct_transform_parameters.html',1,'']]],
+  ['transformtool_28',['TransformTool',['../class_transform_tool.html',1,'']]],
+  ['transformtoolproperties_29',['TransformToolProperties',['../struct_transform_tool_properties.html',1,'']]]
 ];

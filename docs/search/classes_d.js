@@ -11,13 +11,14 @@ var searchData=
   ['playbackmanager_8',['PlaybackManager',['../class_playback_manager.html',1,'']]],
   ['pointerevent_9',['PointerEvent',['../class_pointer_event.html',1,'']]],
   ['polylinetool_10',['PolylineTool',['../class_polyline_tool.html',1,'']]],
-  ['popupcolorpalettewidget_11',['PopupColorPaletteWidget',['../class_popup_color_palette_widget.html',1,'']]],
-  ['predefinedkeyset_12',['PredefinedKeySet',['../struct_predefined_key_set.html',1,'']]],
-  ['predefinedkeysetparams_13',['PredefinedKeySetParams',['../struct_predefined_key_set_params.html',1,'']]],
-  ['predefinedsetmodel_14',['PredefinedSetModel',['../class_predefined_set_model.html',1,'']]],
-  ['preferencemanager_15',['PreferenceManager',['../class_preference_manager.html',1,'']]],
-  ['preferencesdialog_16',['PreferencesDialog',['../class_preferences_dialog.html',1,'']]],
-  ['presetdialog_17',['PresetDialog',['../class_preset_dialog.html',1,'']]],
-  ['progressbarcontrol_18',['ProgressBarControl',['../class_double_progress_dialog_1_1_progress_bar_control.html',1,'DoubleProgressDialog']]],
-  ['properties_19',['Properties',['../class_properties.html',1,'']]]
+  ['polylinetoolproperties_11',['PolylineToolProperties',['../struct_polyline_tool_properties.html',1,'']]],
+  ['popupcolorpalettewidget_12',['PopupColorPaletteWidget',['../class_popup_color_palette_widget.html',1,'']]],
+  ['predefinedkeyset_13',['PredefinedKeySet',['../struct_predefined_key_set.html',1,'']]],
+  ['predefinedkeysetparams_14',['PredefinedKeySetParams',['../struct_predefined_key_set_params.html',1,'']]],
+  ['predefinedsetmodel_15',['PredefinedSetModel',['../class_predefined_set_model.html',1,'']]],
+  ['preferencemanager_16',['PreferenceManager',['../class_preference_manager.html',1,'']]],
+  ['preferencesdialog_17',['PreferencesDialog',['../class_preferences_dialog.html',1,'']]],
+  ['presetdialog_18',['PresetDialog',['../class_preset_dialog.html',1,'']]],
+  ['progressbarcontrol_19',['ProgressBarControl',['../class_double_progress_dialog_1_1_progress_bar_control.html',1,'DoubleProgressDialog']]],
+  ['propertyinfo_20',['PropertyInfo',['../struct_property_info.html',1,'']]]
 ];

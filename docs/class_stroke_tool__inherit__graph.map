@@ -1,12 +1,11 @@
 <map id="StrokeTool" name="StrokeTool">
-<area shape="rect" id="node1" title=" " alt="" coords="391,163,499,193"/>
+<area shape="rect" id="node1" title=" " alt="" coords="317,163,425,193"/>
 <area shape="rect" id="node4" href="$class_brush_tool.html" title=" " alt="" coords="5,241,109,272"/>
-<area shape="rect" id="node5" href="$class_bucket_tool.html" title=" " alt="" coords="134,241,245,272"/>
-<area shape="rect" id="node6" href="$class_eraser_tool.html" title=" " alt="" coords="269,241,377,272"/>
-<area shape="rect" id="node7" href="$class_pen_tool.html" title=" " alt="" coords="401,241,489,272"/>
-<area shape="rect" id="node8" href="$class_pencil_tool.html" title=" " alt="" coords="513,241,617,272"/>
-<area shape="rect" id="node9" href="$class_polyline_tool.html" title=" " alt="" coords="641,241,761,272"/>
-<area shape="rect" id="node10" href="$class_smudge_tool.html" title=" " alt="" coords="786,241,910,272"/>
-<area shape="rect" id="node2" href="$class_base_tool.html" title=" " alt="" coords="398,84,493,115"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="401,5,490,36"/>
+<area shape="rect" id="node5" href="$class_eraser_tool.html" title=" " alt="" coords="134,241,242,272"/>
+<area shape="rect" id="node6" href="$class_pen_tool.html" title=" " alt="" coords="267,241,355,272"/>
+<area shape="rect" id="node7" href="$class_pencil_tool.html" title=" " alt="" coords="379,241,483,272"/>
+<area shape="rect" id="node8" href="$class_polyline_tool.html" title=" " alt="" coords="507,241,627,272"/>
+<area shape="rect" id="node9" href="$class_smudge_tool.html" title=" " alt="" coords="651,241,775,272"/>
+<area shape="rect" id="node2" href="$class_base_tool.html" title=" " alt="" coords="323,84,418,115"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="326,5,415,36"/>
 </map>

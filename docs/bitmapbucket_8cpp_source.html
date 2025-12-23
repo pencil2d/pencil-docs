@@ -150,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                           <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color,</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                           <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> maxFillRegion,</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                           <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> fillPoint,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                           <a class="code hl_class" href="class_properties.html">Properties</a> properties):</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                           <a class="code hl_struct" href="struct_bucket_tool_properties.html">BucketToolProperties</a> properties):</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    mEditor(editor),</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    mMaxFillRegion(maxFillRegion),</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    mProperties(properties)</div>
@@ -165,13 +165,13 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    mTargetFillToLayer = initialLayer;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    mTargetFillToLayerIndex = initialLayerIndex;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    mTolerance = mProperties.toleranceEnabled ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mProperties.tolerance) : 0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    mTolerance = mProperties.colorToleranceEnabled() ? mProperties.tolerance() : 0;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>&amp; point = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(qFloor(fillPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>()), qFloor(fillPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>()));</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Q_ASSERT(mTargetFillToLayer);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> singleLayerImage = *<span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>*<span class="keyword">&gt;</span>(initialLayer-&gt;getLastKeyFrameAtPosition(frameIndex));</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (properties.bucketFillReferenceMode == 1) <span class="comment">// All layers</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (properties.fillReferenceMode() == 1) <span class="comment">// All layers</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        mReferenceImage = flattenBitmapLayersToImage();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    } <span class="keywordflow">else</span> {</div>
@@ -188,11 +188,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    QRgb pressReferenceColorSingleLayer = referenceImage.constScanLine(fillPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>(), fillPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>());</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    QRgb startRef = qUnpremultiply(pressReferenceColorSingleLayer);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">if</span> (mProperties.fillMode == 0 &amp;&amp; ((<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(qRed(startRef), qGreen(startRef), qBlue(startRef)) == bucketColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>() &amp;&amp; qAlpha(startRef) == 255) || bucketColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>() == 0)) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">if</span> (mProperties.fillMode() == 0 &amp;&amp; ((<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(qRed(startRef), qGreen(startRef), qBlue(startRef)) == bucketColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#rgb">rgb</a>() &amp;&amp; qAlpha(startRef) == 255) || bucketColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>() == 0)) {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// In overlay mode: When the reference pixel matches the bucket color and the reference is fully opaque</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// Otherwise when the bucket alpha is zero.</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mProperties.fillMode == 2 &amp;&amp; qAlpha(startRef) == 255) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mProperties.fillMode() == 2 &amp;&amp; qAlpha(startRef) == 255) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="comment">// In behind mode: When the reference pixel is already fully opaque, the output will be invisible.</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
@@ -218,7 +218,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">const</span> QRgb&amp; colorOfReferenceImage = mReferenceImage.constScanLine(checkPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#x">x</a>(), checkPoint.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpoint.html#y">y</a>());</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (checkColor == mBucketColor &amp;&amp; (mProperties.fillMode == 1 || qAlpha(checkColor) == 255))</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (checkColor == mBucketColor &amp;&amp; (mProperties.fillMode() == 1 || qAlpha(checkColor) == 255))</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="comment">// Avoid filling if target pixel color matches fill color</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="comment">// to avoid creating numerous seemingly useless undo operations</span></div>
@@ -250,7 +250,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    QRgb fillColor = mBucketColor;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">if</span> (mProperties.fillMode == 1)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">if</span> (mProperties.fillMode() == 1)</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="comment">// Pass a fully opaque version of the new color to floodFill</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="comment">// This is required so we can fully mask out the existing data before</span></div>
@@ -263,7 +263,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* replaceImage = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">int</span> expandValue = mProperties.bucketFillExpandEnabled ? mProperties.bucketFillExpand : 0;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">int</span> expandValue = mProperties.fillExpandEnabled() ? mProperties.fillExpandAmount() : 0;</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">bool</span> didFloodFill = BitmapImage::floodFill(&amp;replaceImage,</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                           &amp;mReferenceImage,</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                           mMaxFillRegion,</div>
@@ -280,11 +280,11 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    state(BucketState::WillFillTarget, mTargetFillToLayerIndex, currentFrameIndex);</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">if</span> (mProperties.fillMode == 0)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">if</span> (mProperties.fillMode() == 0)</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    {</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        targetImage-&gt;paste(replaceImage);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mProperties.fillMode == 2)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mProperties.fillMode() == 2)</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    {</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        targetImage-&gt;paste(replaceImage, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_DestinationOver</a>);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
@@ -333,7 +333,6 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00070">editor.h:71</a></div></div>
 <div class="ttc" id="aclass_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00025">layerbitmap.h:26</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
-<div class="ttc" id="aclass_properties_html"><div class="ttname"><a href="class_properties.html">Properties</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00038">basetool.h:39</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
 <div class="ttc" id="aqcolor_html_alpha"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html#alpha">QColor::alpha</a></div><div class="ttdeci">int alpha() const const</div></div>
 <div class="ttc" id="aqcolor_html_fromRgba"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html#fromRgba">QColor::fromRgba</a></div><div class="ttdeci">QColor fromRgba(QRgb rgba)</div></div>
@@ -350,16 +349,17 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const const</div></div>
 <div class="ttc" id="aqpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const const</div></div>
 <div class="ttc" id="aqrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
+<div class="ttc" id="astruct_bucket_tool_properties_html"><div class="ttname"><a href="struct_bucket_tool_properties.html">BucketToolProperties</a></div><div class="ttdef"><b>Definition:</b> <a href="toolproperties_8h_source.html#l00489">toolproperties.h:490</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Fri Dec 19 2025 07:54:21 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Dec 23 2025 02:59:17 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 7fd8cd9e03f2d31750e199ecec202e5c0f30e532
+   based on revision ba57a3de29b42de06bbb5b1757aa7f34e6bc4514
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

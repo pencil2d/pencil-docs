@@ -1,0 +1,4 @@
+<map id="PolylineToolProperties" name="PolylineToolProperties">
+<area shape="rect" id="node1" title="This struct is an example of how we can share properties among tools rather than duplicating logic,..." alt="" coords="5,84,209,115"/>
+<area shape="rect" id="node2" href="$struct_tool_properties_base.html" title=" " alt="" coords="18,5,197,36"/>
+</map>

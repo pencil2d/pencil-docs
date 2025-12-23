@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Member List | Pencil2D Developer Documentation</title>
+<title>ToolPropertiesBase Struct Reference | Pencil2D Developer Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,43 +109,81 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Properties Member List</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="struct_tool_properties_base-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ToolPropertiesBase Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for ToolPropertiesBase:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="struct_tool_properties_base__inherit__graph.png" border="0" usemap="#a_tool_properties_base_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_tool_properties_base_inherit__map" id="a_tool_properties_base_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,115,184,145"/>
+<area shape="rect" href="struct_bucket_tool_properties.html" title=" " alt="" coords="247,5,442,36"/>
+<area shape="rect" href="struct_camera_tool_properties.html" title=" " alt="" coords="243,60,447,91"/>
+<area shape="rect" href="struct_polyline_tool_properties.html" title="This struct is an example of how we can share properties among tools rather than duplicating logic,..." alt="" coords="243,115,447,145"/>
+<area shape="rect" href="struct_stroke_tool_properties.html" title=" " alt="" coords="249,169,441,200"/>
+<area shape="rect" href="struct_transform_tool_properties.html" title=" " alt="" coords="232,224,457,255"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a55aa58613a85bc95955e2ee6c4ca3608"><td class="memItemLeft" align="right" valign="top"><a id="a55aa58613a85bc95955e2ee6c4ca3608" name="a55aa58613a85bc95955e2ee6c4ca3608"></a>
+virtual <a class="el" href="struct_tool_properties.html">ToolProperties</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>toolProperties</b> ()=0</td></tr>
+<tr class="separator:a55aa58613a85bc95955e2ee6c4ca3608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6fdebca1ce102eeb49969fd9a10856"><td class="memItemLeft" align="right" valign="top"><a id="a1c6fdebca1ce102eeb49969fd9a10856" name="a1c6fdebca1ce102eeb49969fd9a10856"></a>
+virtual <a class="el" href="struct_property_info.html">PropertyInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getInfo</b> (int rawPropertyType) const =0</td></tr>
+<tr class="separator:a1c6fdebca1ce102eeb49969fd9a10856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="toolproperties_8h_source.html#l00386">386</a> of file <a class="el" href="toolproperties_8h_source.html">toolproperties.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a83fe80781687c911bea6f4f779e56a34" name="a83fe80781687c911bea6f4f779e56a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fe80781687c911bea6f4f779e56a34">&#9670;&#160;</a></span>~ToolPropertiesBase()</h2>
 
-<p>This is the complete list of members for <a class="el" href="class_properties.html">Properties</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>bezier_state</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>bucketFillExpand</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>bucketFillExpandEnabled</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>bucketFillReferenceMode</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>cameraPathDotColorType</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>cameraShowPath</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>closedPolylinePath</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>feather</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>fillMode</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>invisibility</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>preserveAlpha</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>pressure</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>showSelectionInfo</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>stabilizerLevel</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>tolerance</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>toleranceEnabled</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>useAA</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>useFeather</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>useFillContour</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>vectorMergeEnabled</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>width</b> (defined in <a class="el" href="class_properties.html">Properties</a>)</td><td class="entry"><a class="el" href="class_properties.html">Properties</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ToolPropertiesBase::~ToolPropertiesBase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="toolproperties_8h_source.html#l00388">388</a> of file <a class="el" href="toolproperties_8h_source.html">toolproperties.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>core_lib/src/tool/<a class="el" href="toolproperties_8h_source.html">toolproperties.h</a></li>
+</ul>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Fri Dec 19 2025 07:54:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Dec 23 2025 02:59:18 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 7fd8cd9e03f2d31750e199ecec202e5c0f30e532
+   based on revision ba57a3de29b42de06bbb5b1757aa7f34e6bc4514
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

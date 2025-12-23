@@ -1,0 +1,10 @@
+<map id="BaseWidget" name="BaseWidget">
+<area shape="rect" id="node1" title=" " alt="" coords="387,163,505,193"/>
+<area shape="rect" id="node5" href="$class_bucket_options_widget.html" title=" " alt="" coords="5,241,204,272"/>
+<area shape="rect" id="node6" href="$class_camera_options_widget.html" title=" " alt="" coords="229,241,437,272"/>
+<area shape="rect" id="node7" href="$class_stroke_options_widget.html" title=" " alt="" coords="461,241,657,272"/>
+<area shape="rect" id="node8" href="$class_transform_options_widget.html" title=" " alt="" coords="682,241,911,272"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="399,84,493,115"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="335,5,424,36"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpaintdevice.html" title=" " alt="" coords="448,5,580,36"/>
+</map>

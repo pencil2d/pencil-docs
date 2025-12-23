@@ -139,50 +139,51 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;QPolygonF&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;QTransform&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">class </span><a class="code hl_class" href="class_object.html">Object</a>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">class </span><a class="code hl_class" href="class_base_tool.html">BaseTool</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_transform_parameters.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_transform_parameters.html">TransformParameters</a></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> originalSelectionRectF;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> viewTransform;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> selectionTransform;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_selection_painter.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="class_selection_painter.html">SelectionPainter</a></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="class_selection_painter.html">SelectionPainter</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> paint(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">int</span> layerIndex, <a class="code hl_class" href="class_base_tool.html">BaseTool</a>* tool, <a class="code hl_struct" href="struct_transform_parameters.html">TransformParameters</a>&amp; transformParameters);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> paintSelectionInfo(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&amp; mergedTransform, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&amp; viewTransform, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; selectionRect, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>&amp; projectedPolygonF);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> HANDLE_WIDTH = 6;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span><span class="comment">// SelectionPainter_H</span></div>
-<div class="ttc" id="aclass_base_tool_html"><div class="ttname"><a href="class_base_tool.html">BaseTool</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00069">basetool.h:70</a></div></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;toolproperties.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">class </span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span><a class="code hl_class" href="class_object.html">Object</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_transform_parameters.html">   29</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_transform_parameters.html">TransformParameters</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> originalSelectionRectF;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> viewTransform;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a> selectionTransform;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_selection_painter.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="class_selection_painter.html">SelectionPainter</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="class_selection_painter.html">SelectionPainter</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> paint(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>, <span class="keywordtype">int</span> layerIndex, <span class="keyword">const</span> <a class="code hl_struct" href="struct_transform_tool_properties.html">TransformToolProperties</a>&amp; toolProperties, <a class="code hl_struct" href="struct_transform_parameters.html">TransformParameters</a>&amp; transformParameters);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> paintSelectionInfo(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a>&amp; painter, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&amp; mergedTransform, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a>&amp; viewTransform, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a>&amp; selectionRect, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>&amp; projectedPolygonF);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> HANDLE_WIDTH = 6;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// SelectionPainter_H</span></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00041">object.h:42</a></div></div>
-<div class="ttc" id="aclass_selection_painter_html"><div class="ttname"><a href="class_selection_painter.html">SelectionPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionpainter_8h_source.html#l00036">selectionpainter.h:37</a></div></div>
+<div class="ttc" id="aclass_selection_painter_html"><div class="ttname"><a href="class_selection_painter.html">SelectionPainter</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionpainter_8h_source.html#l00037">selectionpainter.h:38</a></div></div>
 <div class="ttc" id="aqpainter_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a></div></div>
 <div class="ttc" id="aqpolygonf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a></div></div>
 <div class="ttc" id="aqrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
 <div class="ttc" id="aqtransform_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qtransform.html">QTransform</a></div></div>
-<div class="ttc" id="astruct_transform_parameters_html"><div class="ttname"><a href="struct_transform_parameters.html">TransformParameters</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionpainter_8h_source.html#l00028">selectionpainter.h:29</a></div></div>
+<div class="ttc" id="astruct_transform_parameters_html"><div class="ttname"><a href="struct_transform_parameters.html">TransformParameters</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionpainter_8h_source.html#l00029">selectionpainter.h:30</a></div></div>
+<div class="ttc" id="astruct_transform_tool_properties_html"><div class="ttname"><a href="struct_transform_tool_properties.html">TransformToolProperties</a></div><div class="ttdef"><b>Definition:</b> <a href="toolproperties_8h_source.html#l00572">toolproperties.h:573</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Fri Dec 19 2025 07:54:21 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Dec 23 2025 02:59:17 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 7fd8cd9e03f2d31750e199ecec202e5c0f30e532
+   based on revision ba57a3de29b42de06bbb5b1757aa7f34e6bc4514
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

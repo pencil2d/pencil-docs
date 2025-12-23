@@ -1,5 +1,6 @@
 <map id="SelectTool" name="SelectTool">
-<area shape="rect" id="node1" title=" " alt="" coords="5,163,109,193"/>
-<area shape="rect" id="node2" href="$class_base_tool.html" title=" " alt="" coords="10,84,105,115"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="13,5,102,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="24,241,128,272"/>
+<area shape="rect" id="node2" href="$class_transform_tool.html" title=" " alt="" coords="5,163,147,193"/>
+<area shape="rect" id="node3" href="$class_base_tool.html" title=" " alt="" coords="29,84,123,115"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="31,5,121,36"/>
 </map>

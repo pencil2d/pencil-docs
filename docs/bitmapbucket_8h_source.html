@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_bitmap_bucket.html">BitmapBucket</a>();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_bitmap_bucket.html">BitmapBucket</a>(<a class="code hl_class" href="class_editor.html">Editor</a>* editor, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> maxFillRegion, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> fillPoint, <a class="code hl_class" href="class_properties.html">Properties</a> properties);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="class_bitmap_bucket.html">BitmapBucket</a>(<a class="code hl_class" href="class_editor.html">Editor</a>* editor, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a> color, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> maxFillRegion, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a> fillPoint, <a class="code hl_struct" href="struct_bucket_tool_properties.html">BucketToolProperties</a> properties);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bitmap_bucket.html#abe04fa4075bae1c2f6b7b599cff0ab86">paint</a>(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; updatedPoint, std::function&lt;<span class="keywordtype">void</span>(BucketState, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>)&gt; progress);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">bool</span> mFilledOnce = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">bool</span> mUseDragToFill = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_class" href="class_properties.html">Properties</a> mProperties;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_struct" href="struct_bucket_tool_properties.html">BucketToolProperties</a> mProperties;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">// BITMAPBUCKET_H</span></div>
@@ -195,22 +195,22 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00027">bitmapimage.h:28</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00070">editor.h:71</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
-<div class="ttc" id="aclass_properties_html"><div class="ttname"><a href="class_properties.html">Properties</a></div><div class="ttdef"><b>Definition:</b> <a href="basetool_8h_source.html#l00038">basetool.h:39</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
 <div class="ttc" id="aqhash_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qhash.html">QHash</a></div></div>
 <div class="ttc" id="aqpoint_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a></div></div>
 <div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="aqrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
+<div class="ttc" id="astruct_bucket_tool_properties_html"><div class="ttname"><a href="struct_bucket_tool_properties.html">BucketToolProperties</a></div><div class="ttdef"><b>Definition:</b> <a href="toolproperties_8h_source.html#l00489">toolproperties.h:490</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Fri Dec 19 2025 07:54:21 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Dec 23 2025 02:59:17 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 7fd8cd9e03f2d31750e199ecec202e5c0f30e532
+   based on revision ba57a3de29b42de06bbb5b1757aa7f34e6bc4514
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
