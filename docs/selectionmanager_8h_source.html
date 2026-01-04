@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    MoveMode getMoveMode()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMoveMode; }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> setMoveMode(<span class="keyword">const</span> MoveMode moveMode) { mMoveMode = moveMode; }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> somethingSelected()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mOriginalRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#isValid">isValid</a>(); }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> somethingSelected()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mOriginalRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#isValid">isValid</a>() || mMoveMode != MoveMode::NONE; }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> adjustSelection(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; currentPoint, <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; offset, qreal rotationOffset, <span class="keywordtype">int</span> rotationIncrement = 0);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
@@ -292,10 +292,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Jan 1 2026 14:13:43 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Jan 4 2026 06:39:21 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 2cc4be8ca7576517342fecef4be3f251dca33595
+   based on revision f960686b9664502345cde3fe2ff693b0a779c087
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

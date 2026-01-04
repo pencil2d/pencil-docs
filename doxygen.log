@@ -1777,6 +1777,6 @@ Patching output file 169/172
 Patching output file 170/172
 Patching output file 171/172
 Patching output file 172/172
-type lookup cache used 18650/65536 hits=133811 misses=19799
-symbol lookup cache used 19032/65536 hits=215111 misses=19032
+type lookup cache used 18645/65536 hits=133759 misses=19794
+symbol lookup cache used 19027/65536 hits=215050 misses=19027
 finished...
