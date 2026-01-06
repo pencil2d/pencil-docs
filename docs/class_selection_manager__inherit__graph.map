@@ -1,5 +1,5 @@
 <map id="SelectionManager" name="SelectionManager">
-<area shape="rect" id="node1" title=" " alt="" coords="5,163,176,193"/>
+<area shape="rect" id="node1" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="5,163,176,193"/>
 <area shape="rect" id="node2" href="$class_base_manager.html" title=" " alt="" coords="23,84,158,115"/>
 <area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="46,5,135,36"/>
 </map>

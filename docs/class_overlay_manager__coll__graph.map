@@ -9,7 +9,7 @@
 <area shape="rect" id="node31" href="$class_playback_manager.html" title=" " alt="" coords="1741,2332,1909,2363"/>
 <area shape="rect" id="node35" href="$class_view_manager.html" title=" " alt="" coords="1757,1029,1892,1060"/>
 <area shape="rect" id="node37" href="$class_sound_manager.html" title=" " alt="" coords="1749,573,1900,604"/>
-<area shape="rect" id="node38" href="$class_selection_manager.html" title=" " alt="" coords="1739,1984,1910,2015"/>
+<area shape="rect" id="node38" href="$class_selection_manager.html" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="1739,1984,1910,2015"/>
 <area shape="rect" id="node43" href="$class_clipboard_manager.html" title=" " alt="" coords="2147,547,2323,577"/>
 <area shape="rect" id="node46" href="$class_undo_redo_manager.html" title=" " alt="" coords="1732,112,1917,143"/>
 <area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="423,348,513,379"/>

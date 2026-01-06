@@ -20,7 +20,7 @@
 <area shape="rect" id="node31" href="$class_playback_manager.html" title=" " alt="" coords="2456,2123,2624,2154"/>
 <area shape="rect" id="node35" href="$class_view_manager.html" title=" " alt="" coords="2473,1397,2607,1427"/>
 <area shape="rect" id="node37" href="$class_sound_manager.html" title=" " alt="" coords="2465,843,2615,874"/>
-<area shape="rect" id="node38" href="$class_selection_manager.html" title=" " alt="" coords="2455,1727,2625,1758"/>
+<area shape="rect" id="node38" href="$class_selection_manager.html" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="2455,1727,2625,1758"/>
 <area shape="rect" id="node43" href="$class_overlay_manager.html" title=" " alt="" coords="2461,1181,2619,1211"/>
 <area shape="rect" id="node44" href="$class_clipboard_manager.html" title=" " alt="" coords="2452,989,2628,1019"/>
 <area shape="rect" id="node45" href="$class_undo_redo_manager.html" title=" " alt="" coords="2447,913,2633,943"/>

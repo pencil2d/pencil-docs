@@ -1510,7 +1510,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>            }</div>
 <div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span>        }</div>
 <div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span> </div>
-<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>        mEditor-&gt;select()-&gt;setSelection(selectMan-&gt;mySelectionRect(), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>        mEditor-&gt;select()-&gt;<a class="code hl_function" href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">setSelection</a>(selectMan-&gt;mySelectionRect(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span> </div>
 <div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>        selectMan-&gt;resetSelectionProperties();</div>
 <div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>        mOriginalPolygonF = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpolygonf.html">QPolygonF</a>();</div>
@@ -1671,8 +1671,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_scribble_area_html_add4d41c7cb94b4feb8bac12700a26112"><div class="ttname"><a href="class_scribble_area.html#add4d41c7cb94b4feb8bac12700a26112">ScribbleArea::invalidateCacheForFrame</a></div><div class="ttdeci">void invalidateCacheForFrame(int frameNumber)</div><div class="ttdoc">Invalidate cache for the given frame.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00273">scribblearea.cpp:273</a></div></div>
 <div class="ttc" id="aclass_scribble_area_html_af048d68a1e65cad60aac63d1a79a374f"><div class="ttname"><a href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">ScribbleArea::onLayerChanged</a></div><div class="ttdeci">void onLayerChanged()</div><div class="ttdoc">Layer changed, invalidate relevant cache.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00346">scribblearea.cpp:346</a></div></div>
 <div class="ttc" id="aclass_scribble_area_html_afb209db328a8fc763c26a36db98ce8f3"><div class="ttname"><a href="class_scribble_area.html#afb209db328a8fc763c26a36db98ce8f3">ScribbleArea::onFrameModified</a></div><div class="ttdeci">void onFrameModified(int frameNumber)</div><div class="ttdoc">Frame modified, invalidate cache for frame if any.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00331">scribblearea.cpp:331</a></div></div>
-<div class="ttc" id="aclass_selection_manager_html"><div class="ttname"><a href="class_selection_manager.html">SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00032">selectionmanager.h:33</a></div></div>
+<div class="ttc" id="aclass_selection_manager_html"><div class="ttname"><a href="class_selection_manager.html">SelectionManager</a></div><div class="ttdoc">The SelectionManager class acts as the &quot;Brain&quot; of the selection system.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00050">selectionmanager.h:51</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html_a31ce57909625651ef1909c2714f3cfca"><div class="ttname"><a href="class_selection_manager.html#a31ce57909625651ef1909c2714f3cfca">SelectionManager::flipSelection</a></div><div class="ttdeci">void flipSelection(bool flipVertical)</div><div class="ttdoc">ScribbleArea::flipSelection flip selection along the X or Y axis.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00328">selectionmanager.cpp:328</a></div></div>
+<div class="ttc" id="aclass_selection_manager_html_a6f9420128513e0c8044ab10373224b5f"><div class="ttname"><a href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">SelectionManager::setSelection</a></div><div class="ttdeci">void setSelection(QRectF rect, bool roundPixels=false)</div><div class="ttdoc">Defines the selection area.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00273">selectionmanager.cpp:273</a></div></div>
 <div class="ttc" id="aclass_tile_html"><div class="ttname"><a href="class_tile.html">Tile</a></div><div class="ttdef"><b>Definition:</b> <a href="tile_8h_source.html#l00023">tile.h:24</a></div></div>
 <div class="ttc" id="aclass_tiled_buffer_html"><div class="ttname"><a href="class_tiled_buffer.html">TiledBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="tiledbuffer_8h_source.html#l00049">tiledbuffer.h:50</a></div></div>
 <div class="ttc" id="aclass_tiled_buffer_html_a2be9722ffba64b2727ffbdd15a3a795d"><div class="ttname"><a href="class_tiled_buffer.html#a2be9722ffba64b2727ffbdd15a3a795d">TiledBuffer::drawPath</a></div><div class="ttdeci">void drawPath(QPainterPath path, QPen pen, QBrush brush, QPainter::CompositionMode cm, bool antialiasing)</div><div class="ttdoc">Draws a path with the specified parameters to the tiled buffer.</div><div class="ttdef"><b>Definition:</b> <a href="tiledbuffer_8cpp_source.html#l00128">tiledbuffer.cpp:128</a></div></div>
@@ -1816,10 +1817,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Jan 6 2026 06:54:58 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Jan 6 2026 11:38:51 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 585185db6a358b560123f993ec718dccfc6de3da
+   based on revision f91a96748ec6712509b9b0ff47979db9c34d556f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

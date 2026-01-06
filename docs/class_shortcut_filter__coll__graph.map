@@ -24,7 +24,7 @@
 <area shape="rect" id="node21" href="$class_view_manager.html" title=" " alt="" coords="2785,1517,2919,1548"/>
 <area shape="rect" id="node24" href="$class_preference_manager.html" title=" " alt="" coords="2759,1853,2945,1884"/>
 <area shape="rect" id="node29" href="$class_sound_manager.html" title=" " alt="" coords="2777,873,2927,904"/>
-<area shape="rect" id="node30" href="$class_selection_manager.html" title=" " alt="" coords="2767,1319,2937,1349"/>
+<area shape="rect" id="node30" href="$class_selection_manager.html" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="2767,1319,2937,1349"/>
 <area shape="rect" id="node33" href="$class_clipboard_manager.html" title=" " alt="" coords="2764,791,2940,821"/>
 <area shape="rect" id="node34" href="$class_undo_redo_manager.html" title=" " alt="" coords="2759,709,2945,740"/>
 <area shape="rect" id="node13" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qcolor.html" title=" " alt="" coords="203,1067,283,1097"/>

@@ -409,7 +409,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="comment">// TODO: currently we don&#39;t support placing an image without already pasting it on an already existing</span></div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="comment">// image, this should be reworked such that a hovering selection could be shown, before applying it...</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    select()-&gt;setSelection(bitmapImage-&gt;bounds());</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    select()-&gt;<a class="code hl_function" href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">setSelection</a>(bitmapImage-&gt;bounds());</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    emit <a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">frameModified</a>(frameNumber);</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
@@ -423,7 +423,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    mScribbleArea-&gt;<a class="code hl_function" href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">handleDrawingOnEmptyFrame</a>();</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* canvasImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(currentLayer-&gt;getLastKeyFrameAtPosition(frameNumber));</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    canvasImage-&gt;<a class="code hl_function" href="class_vector_image.html#a42cf025ff76cd7756b0c327e41a8624c">paste</a>(*vectorImage);</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    select()-&gt;setSelection(vectorImage-&gt;getSelectionRect());</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    select()-&gt;<a class="code hl_function" href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">setSelection</a>(vectorImage-&gt;getSelectionRect());</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    emit <a class="code hl_signal" href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">frameModified</a>(frameNumber);</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>}</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
@@ -513,7 +513,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        scrubTo(frame);</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        <a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>* layer = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layers()-&gt;currentLayer());</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> reposRect = layer-&gt;getFrameBounds(frame);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        select()-&gt;setSelection(reposRect);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        select()-&gt;<a class="code hl_function" href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">setSelection</a>(reposRect);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a> point = reposRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#topLeft">topLeft</a>();</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        point += transform;</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        layer-&gt;repositionFrame(point, frame);</div>
@@ -942,7 +942,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>            rect = vectorImage-&gt;getSelectionRect();</div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>        }</div>
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    }</div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    select()-&gt;setSelection(rect, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    select()-&gt;<a class="code hl_function" href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">setSelection</a>(rect, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>}</div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span> </div>
 <div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span><span class="keywordtype">void</span> Editor::deselectAll()<span class="keyword"> const</span></div>
@@ -1241,7 +1241,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_scribble_area_html_a41ea0506fe49be145fe7f32a2c8ae579"><div class="ttname"><a href="class_scribble_area.html#a41ea0506fe49be145fe7f32a2c8ae579">ScribbleArea::handleDrawingOnEmptyFrame</a></div><div class="ttdeci">void handleDrawingOnEmptyFrame()</div><div class="ttdoc">Call this when starting to use a paint tool.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00812">scribblearea.cpp:812</a></div></div>
 <div class="ttc" id="aclass_scribble_area_html_a9842fc4d6a239391c0524de13d1b05a1"><div class="ttname"><a href="class_scribble_area.html#a9842fc4d6a239391c0524de13d1b05a1">ScribbleArea::onOnionSkinTypeChanged</a></div><div class="ttdeci">void onOnionSkinTypeChanged()</div><div class="ttdoc">Onion skin type changed, all frames will be affected.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00358">scribblearea.cpp:358</a></div></div>
 <div class="ttc" id="aclass_scribble_area_html_af048d68a1e65cad60aac63d1a79a374f"><div class="ttname"><a href="class_scribble_area.html#af048d68a1e65cad60aac63d1a79a374f">ScribbleArea::onLayerChanged</a></div><div class="ttdeci">void onLayerChanged()</div><div class="ttdoc">Layer changed, invalidate relevant cache.</div><div class="ttdef"><b>Definition:</b> <a href="scribblearea_8cpp_source.html#l00346">scribblearea.cpp:346</a></div></div>
-<div class="ttc" id="aclass_selection_manager_html"><div class="ttname"><a href="class_selection_manager.html">SelectionManager</a></div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00032">selectionmanager.h:33</a></div></div>
+<div class="ttc" id="aclass_selection_manager_html"><div class="ttname"><a href="class_selection_manager.html">SelectionManager</a></div><div class="ttdoc">The SelectionManager class acts as the &quot;Brain&quot; of the selection system.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00050">selectionmanager.h:51</a></div></div>
+<div class="ttc" id="aclass_selection_manager_html_a6f9420128513e0c8044ab10373224b5f"><div class="ttname"><a href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">SelectionManager::setSelection</a></div><div class="ttdeci">void setSelection(QRectF rect, bool roundPixels=false)</div><div class="ttdoc">Defines the selection area.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00273">selectionmanager.cpp:273</a></div></div>
 <div class="ttc" id="aclass_sound_clip_html"><div class="ttname"><a href="class_sound_clip.html">SoundClip</a></div><div class="ttdef"><b>Definition:</b> <a href="soundclip_8h_source.html#l00026">soundclip.h:27</a></div></div>
 <div class="ttc" id="aclass_sound_manager_html"><div class="ttname"><a href="class_sound_manager.html">SoundManager</a></div><div class="ttdef"><b>Definition:</b> <a href="soundmanager_8h_source.html#l00029">soundmanager.h:30</a></div></div>
 <div class="ttc" id="aclass_status_html"><div class="ttname"><a href="class_status.html">Status</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00039">pencilerror.h:40</a></div></div>
@@ -1295,10 +1296,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Jan 6 2026 06:54:58 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Tue Jan 6 2026 11:38:51 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 585185db6a358b560123f993ec718dccfc6de3da
+   based on revision f91a96748ec6712509b9b0ff47979db9c34d556f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

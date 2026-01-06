@@ -8,7 +8,7 @@
 <area shape="rect" id="node30" href="$class_layer_manager.html" title=" " alt="" coords="2016,629,2157,660"/>
 <area shape="rect" id="node31" href="$class_view_manager.html" title=" " alt="" coords="2019,1081,2154,1112"/>
 <area shape="rect" id="node33" href="$class_sound_manager.html" title=" " alt="" coords="2011,192,2162,222"/>
-<area shape="rect" id="node34" href="$class_selection_manager.html" title=" " alt="" coords="2001,2377,2172,2408"/>
+<area shape="rect" id="node34" href="$class_selection_manager.html" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="2001,2377,2172,2408"/>
 <area shape="rect" id="node39" href="$class_overlay_manager.html" title=" " alt="" coords="2007,753,2166,784"/>
 <area shape="rect" id="node40" href="$class_clipboard_manager.html" title=" " alt="" coords="2478,970,2654,1001"/>
 <area shape="rect" id="node43" href="$class_undo_redo_manager.html" title=" " alt="" coords="2473,298,2659,329"/>
