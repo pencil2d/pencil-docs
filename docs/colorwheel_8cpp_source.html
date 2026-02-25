@@ -288,14 +288,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keywordtype">void</span> ColorWheel::resizeEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qresizeevent.html">QResizeEvent</a>* event)</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>{</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    mWheelPixmap = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#event">event</a>-&gt;size());</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    mWheelPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#palette-prop">palette</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#window">window</a>().color());</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    mWheelPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    drawWheelImage(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#event">event</a>-&gt;size());</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    drawSquareImage(mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hue">hue</a>());</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">void</span> ColorWheel::paintEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpaintevent.html">QPaintEvent</a>*)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">void</span> ColorWheel::paintEvent(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpaintevent.html">QPaintEvent</a>* event)</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>{</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> painter;</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
@@ -303,7 +303,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstyleoption.html">QStyleOption</a> opt;</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    opt.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstyleoption.html#initFrom">initFrom</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    composeWheel(mWheelPixmap);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    composeWheel(mWheelPixmap, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#event">event</a>-&gt;rect());</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#translate">translate</a>(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / 2, <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#height-prop">height</a>() / 2);</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#translate">translate</a>(-mWheelPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#width">width</a>() / 2, -mWheelPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#height">height</a>() / 2);</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawPixmap">drawPixmap</a>(0, 0, mWheelPixmap);</div>
@@ -321,31 +321,31 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> backgroundBrush = option.palette.window();</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    mWheelImage = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(newSize, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qimage.html#Format-enum">QImage::Format_ARGB32_Premultiplied</a>);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> painter(&amp;mWheelImage);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setRenderHint">setRenderHint</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a>);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#fillRect">fillRect</a>(mWheelImage.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#rect">rect</a>(), backgroundBrush);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qconicalgradient.html">QConicalGradient</a> conicalGradient(0, 0, 0);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> hue = 0; hue &lt; 360; hue += 1)</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        conicalGradient.setColorAt(hue / 360.0, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#fromHsv">QColor::fromHsv</a>(hue, 255, 255));</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    qreal ir = r - mWheelThickness;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">/* outer circle */</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#translate">translate</a>(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / 2, <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#height-prop">height</a>() / 2);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> brush(conicalGradient);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setPen-1">setPen</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenStyle-enum">Qt::NoPen</a>);</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setBrush">setBrush</a>(brush);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    mWheelImage.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qimage.html#fill">fill</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> painter(&amp;mWheelImage);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setRenderHint">setRenderHint</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a>);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qconicalgradient.html">QConicalGradient</a> conicalGradient(0, 0, 0);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> hue = 0; hue &lt; 360; hue += 1)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        conicalGradient.setColorAt(hue / 360.0, <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#fromHsv">QColor::fromHsv</a>(hue, 255, 255));</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    qreal ir = r - mWheelThickness;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="comment">/* outer circle */</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#translate">translate</a>(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#width-prop">width</a>() / 2, <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#height-prop">height</a>() / 2);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> brush(conicalGradient);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setPen-1">setPen</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#PenStyle-enum">Qt::NoPen</a>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setBrush">setBrush</a>(brush);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceOver</a>);</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawEllipse">drawEllipse</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(0, 0), r / 2, r / 2);</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">/* inner circle */</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setBrush">setBrush</a>(backgroundBrush);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_DestinationOut</a>);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawEllipse">drawEllipse</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(0, 0), r / 2 - mWheelThickness, r / 2 - mWheelThickness);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="comment">// Center of wheel</span></div>
@@ -450,61 +450,65 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawEllipse">drawEllipse</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(S), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(V), ellipseSize, ellipseSize);</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>}</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keywordtype">void</span> ColorWheel::composeWheel(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&amp; pixmap)</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keywordtype">void</span> ColorWheel::composeWheel(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>&amp; pixmap, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a> blitRect)</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>{</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> composePainter(&amp;pixmap);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    composePainter.drawImage(0, 0, mWheelImage);</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    composePainter.drawImage(mSquareRect, mSquareImage);</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    composePainter.end();</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    drawHueIndicator(mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvHue">hsvHue</a>());</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    drawPicker(mCurrentColor);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>}</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="keywordtype">void</span> ColorWheel::hueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue)</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>{</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">if</span> (hue &lt; 0 || hue &gt; 359)</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    {</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    }</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keywordtype">int</span> s = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvSaturation">hsvSaturation</a>();</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordtype">int</span> v = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#value">value</a>();</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keywordtype">int</span> a = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>();</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#setHsv">setHsv</a>(hue, s, v, a);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keywordflow">if</span> (!<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#visible-prop">isVisible</a>())</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    {</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    }</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    drawSquareImage(hue);</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    emit colorChanged(mCurrentColor);</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    composePainter.setCompositionMode(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_Clear</a>);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    composePainter.setClipRect(blitRect);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    composePainter.fillRect(blitRect, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a>);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    composePainter.setCompositionMode(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceOver</a>);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    composePainter.drawImage(0, 0, mWheelImage);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    composePainter.drawImage(mSquareRect, mSquareImage);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    composePainter.end();</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    drawHueIndicator(mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvHue">hsvHue</a>());</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    drawPicker(mCurrentColor);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>}</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="keywordtype">void</span> ColorWheel::hueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;hue)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>{</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keywordflow">if</span> (hue &lt; 0 || hue &gt; 359)</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    {</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keywordtype">int</span> s = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvSaturation">hsvSaturation</a>();</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordtype">int</span> v = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#value">value</a>();</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keywordtype">int</span> a = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>();</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#setHsv">setHsv</a>(hue, s, v, a);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keywordflow">if</span> (!<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#visible-prop">isVisible</a>())</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    {</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    drawSquareImage(hue);</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="keywordtype">void</span> ColorWheel::saturationChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;sat)</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>{</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordtype">int</span> hue = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvHue">hsvHue</a>();</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordtype">int</span> value = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#value">value</a>();</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordtype">int</span> alpha = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>();</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#setHsv">setHsv</a>(hue, sat, value, alpha);</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    emit colorChanged(mCurrentColor);</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>}</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    emit colorChanged(mCurrentColor);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>}</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="keywordtype">void</span> ColorWheel::saturationChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;sat)</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>{</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordtype">int</span> hue = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvHue">hsvHue</a>();</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="keywordtype">int</span> value = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#value">value</a>();</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    <span class="keywordtype">int</span> alpha = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>();</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#setHsv">setHsv</a>(hue, sat, value, alpha);</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keywordtype">void</span> ColorWheel::valueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;value)</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>{</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <span class="keywordtype">int</span> hue = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvHue">hsvHue</a>();</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keywordtype">int</span> sat = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvSaturation">hsvSaturation</a>();</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keywordtype">int</span> alpha = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>();</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#setHsv">setHsv</a>(hue, sat, value, alpha);</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    emit colorChanged(mCurrentColor);</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>}</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    emit colorChanged(mCurrentColor);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>}</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="keywordtype">void</span> ColorWheel::valueChanged(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;value)</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>{</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keywordtype">int</span> hue = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvHue">hsvHue</a>();</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keywordtype">int</span> sat = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#hsvSaturation">hsvSaturation</a>();</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordtype">int</span> alpha = mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#alpha">alpha</a>();</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    mCurrentColor.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcolor.html#setHsv">setHsv</a>(hue, sat, value, alpha);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>();</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    emit colorChanged(mCurrentColor);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>}</div>
 <div class="ttc" id="aqbrush_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
 <div class="ttc" id="aqcolor_html_alpha"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html#alpha">QColor::alpha</a></div><div class="ttdeci">int alpha() const const</div></div>
@@ -524,11 +528,12 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqgradient_html_setColorAt"><div class="ttname"><a href="https://doc.qt.io/qt-5/qgradient.html#setColorAt">QGradient::setColorAt</a></div><div class="ttdeci">void setColorAt(qreal position, const QColor &amp;color)</div></div>
 <div class="ttc" id="aqimage_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html">QImage</a></div></div>
 <div class="ttc" id="aqimage_html_Format-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#Format-enum">QImage::Format_ARGB32_Premultiplied</a></div><div class="ttdeci">Format_ARGB32_Premultiplied</div></div>
-<div class="ttc" id="aqimage_html_rect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#rect">QImage::rect</a></div><div class="ttdeci">QRect rect() const const</div></div>
+<div class="ttc" id="aqimage_html_fill"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#fill">QImage::fill</a></div><div class="ttdeci">void fill(uint pixelValue)</div></div>
 <div class="ttc" id="aqimage_html_scaled-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qimage.html#scaled-1">QImage::scaled</a></div><div class="ttdeci">QImage scaled(int width, int height, Qt::AspectRatioMode aspectRatioMode, Qt::TransformationMode transformMode) const const</div></div>
 <div class="ttc" id="aqlineargradient_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qlineargradient.html">QLinearGradient</a></div></div>
 <div class="ttc" id="aqmouseevent_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qmouseevent.html">QMouseEvent</a></div></div>
 <div class="ttc" id="aqpainter_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a></div></div>
+<div class="ttc" id="aqpainter_html_CompositionMode-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::CompositionMode_SourceOver</a></div><div class="ttdeci">CompositionMode_SourceOver</div></div>
 <div class="ttc" id="aqpainter_html_RenderHint-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a></div><div class="ttdeci">Antialiasing</div></div>
 <div class="ttc" id="aqpainter_html_begin"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#begin">QPainter::begin</a></div><div class="ttdeci">bool begin(QPaintDevice *device)</div></div>
 <div class="ttc" id="aqpainter_html_drawEllipse"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#drawEllipse">QPainter::drawEllipse</a></div><div class="ttdeci">void drawEllipse(const QRectF &amp;rectangle)</div></div>
@@ -537,6 +542,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqpainter_html_pen"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#pen">QPainter::pen</a></div><div class="ttdeci">const QPen &amp; pen() const const</div></div>
 <div class="ttc" id="aqpainter_html_rotate"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#rotate">QPainter::rotate</a></div><div class="ttdeci">void rotate(qreal angle)</div></div>
 <div class="ttc" id="aqpainter_html_setBrush"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#setBrush">QPainter::setBrush</a></div><div class="ttdeci">void setBrush(const QBrush &amp;brush)</div></div>
+<div class="ttc" id="aqpainter_html_setCompositionMode"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">QPainter::setCompositionMode</a></div><div class="ttdeci">void setCompositionMode(QPainter::CompositionMode mode)</div></div>
 <div class="ttc" id="aqpainter_html_setPen-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#setPen-1">QPainter::setPen</a></div><div class="ttdeci">void setPen(const QColor &amp;color)</div></div>
 <div class="ttc" id="aqpainter_html_setRenderHint"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#setRenderHint">QPainter::setRenderHint</a></div><div class="ttdeci">void setRenderHint(QPainter::RenderHint hint, bool on)</div></div>
 <div class="ttc" id="aqpainter_html_setTransform"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#setTransform">QPainter::setTransform</a></div><div class="ttdeci">void setTransform(const QTransform &amp;transform, bool combine)</div></div>
@@ -558,6 +564,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqpointf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a></div></div>
 <div class="ttc" id="aqpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const const</div></div>
 <div class="ttc" id="aqpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const const</div></div>
+<div class="ttc" id="aqrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
 <div class="ttc" id="aqrect_html_bottomRight"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#bottomRight">QRect::bottomRight</a></div><div class="ttdeci">QPoint bottomRight() const const</div></div>
 <div class="ttc" id="aqrect_html_contains-1"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#contains-1">QRect::contains</a></div><div class="ttdeci">bool contains(const QRect &amp;rectangle, bool proper) const const</div></div>
 <div class="ttc" id="aqrect_html_height"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#height">QRect::height</a></div><div class="ttdeci">int height() const const</div></div>
@@ -575,7 +582,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqstyleoption_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyleoption.html">QStyleOption</a></div></div>
 <div class="ttc" id="aqstyleoption_html_initFrom"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstyleoption.html#initFrom">QStyleOption::initFrom</a></div><div class="ttdeci">void initFrom(const QWidget *widget)</div></div>
 <div class="ttc" id="aqt_html_BrushStyle-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#BrushStyle-enum">Qt::NoBrush</a></div><div class="ttdeci">NoBrush</div></div>
-<div class="ttc" id="aqt_html_GlobalColor-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::black</a></div><div class="ttdeci">black</div></div>
+<div class="ttc" id="aqt_html_GlobalColor-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::transparent</a></div><div class="ttdeci">transparent</div></div>
 <div class="ttc" id="aqt_html_MouseButton-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::NoButton</a></div><div class="ttdeci">NoButton</div></div>
 <div class="ttc" id="aqt_html_PenStyle-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#PenStyle-enum">Qt::NoPen</a></div><div class="ttdeci">NoPen</div></div>
 <div class="ttc" id="aqt_html_center"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#center">Qt::center</a></div><div class="ttdeci">QTextStream &amp; center(QTextStream &amp;stream)</div></div>
@@ -584,22 +591,20 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqwidget_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a></div></div>
 <div class="ttc" id="aqwidget_html_event"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#event">QWidget::event</a></div><div class="ttdeci">virtual bool event(QEvent *event) override</div></div>
 <div class="ttc" id="aqwidget_html_height-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#height-prop">QWidget::height</a></div><div class="ttdeci">height</div></div>
-<div class="ttc" id="aqwidget_html_palette-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#palette-prop">QWidget::palette</a></div><div class="ttdeci">palette</div></div>
 <div class="ttc" id="aqwidget_html_style"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#style">QWidget::style</a></div><div class="ttdeci">QStyle * style() const const</div></div>
 <div class="ttc" id="aqwidget_html_update"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#update">QWidget::update</a></div><div class="ttdeci">void update()</div></div>
 <div class="ttc" id="aqwidget_html_visible-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#visible-prop">QWidget::isVisible</a></div><div class="ttdeci">bool isVisible() const const</div></div>
 <div class="ttc" id="aqwidget_html_width-prop"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#width-prop">QWidget::width</a></div><div class="ttdeci">width</div></div>
-<div class="ttc" id="aqwidget_html_window"><div class="ttname"><a href="https://doc.qt.io/qt-5/qwidget.html#window">QWidget::window</a></div><div class="ttdeci">QWidget * window() const const</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Feb 25 2026 16:24:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Feb 25 2026 16:27:31 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 357763c083ae21dfe2351be579a03d273207b04e
+   based on revision cbe3a821cc85b84e61e6aec3d401148d9c1da29f
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
