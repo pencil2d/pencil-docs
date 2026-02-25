@@ -172,28 +172,29 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#setCompositionMode">setCompositionMode</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::RasterOp_SourceXorDestination</a>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Only draw the cross when the width is bigger than the cross itself</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (widthCircleBounds.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#width">width</a>() &gt; 8 &amp;&amp; mOptions.showCross) {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#save">save</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; pos = painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#transform">transform</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#mapRect-1">mapRect</a>(widthCircleBounds).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#center">center</a>();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#resetTransform">resetTransform</a>();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawLine">drawLine</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() - 2, pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>()), <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() + 2, pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>()));</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawLine">drawLine</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() - 2), <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() + 2));</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawEllipse">drawEllipse</a>(widthCircleBounds);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    mDirtyRect = widthCircleBounds.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#toAlignedRect">toAlignedRect</a>();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> mappedRect = painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#transform">transform</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#mapRect-1">mapRect</a>(widthCircleBounds);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (mappedRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#width">width</a>() &gt; 8 &amp;&amp; mOptions.showCross) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#save">save</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>&amp; pos = mappedRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#center">center</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#resetTransform">resetTransform</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawLine">drawLine</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() - 2, pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>()), <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>() + 2, pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>()));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawLine">drawLine</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() - 2), <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpointf.html">QPointF</a>(pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#x">x</a>(), pos.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpointf.html#y">y</a>() + 2));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#drawEllipse">drawEllipse</a>(widthCircleBounds);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    painter.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpainter.html#restore">restore</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    mDirtyRect = widthCircleBounds.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#toAlignedRect">toAlignedRect</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> CanvasCursorPainter::clearDirty()</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    mDirtyRect = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    mIsDirty = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">void</span> CanvasCursorPainter::clearDirty()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    mDirtyRect = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    mIsDirty = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 <div class="ttc" id="aclass_canvas_cursor_painter_html_a9af0cdb34e086c1b4276b57f2ae7be4c"><div class="ttname"><a href="class_canvas_cursor_painter.html#a9af0cdb34e086c1b4276b57f2ae7be4c">CanvasCursorPainter::paintWidthCursor</a></div><div class="ttdeci">void paintWidthCursor(QPainter &amp;painter, const QRect &amp;blitRect, const QRectF &amp;widthCircleBounds)</div><div class="ttdoc">precision circular cursor: used for drawing a cursor on the canvas.</div><div class="ttdef"><b>Definition:</b> <a href="canvascursorpainter_8cpp_source.html#l00047">canvascursorpainter.cpp:47</a></div></div>
 <div class="ttc" id="aqpainter_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a></div></div>
 <div class="ttc" id="aqpainter_html_CompositionMode-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpainter.html#CompositionMode-enum">QPainter::RasterOp_SourceXorDestination</a></div><div class="ttdeci">RasterOp_SourceXorDestination</div></div>
@@ -213,8 +214,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aqpointf_html_x"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#x">QPointF::x</a></div><div class="ttdeci">qreal x() const const</div></div>
 <div class="ttc" id="aqpointf_html_y"><div class="ttname"><a href="https://doc.qt.io/qt-5/qpointf.html#y">QPointF::y</a></div><div class="ttdeci">qreal y() const const</div></div>
 <div class="ttc" id="aqrect_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html">QRect</a></div></div>
-<div class="ttc" id="aqrect_html_center"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrect.html#center">QRect::center</a></div><div class="ttdeci">QPoint center() const const</div></div>
 <div class="ttc" id="aqrectf_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a></div></div>
+<div class="ttc" id="aqrectf_html_center"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#center">QRectF::center</a></div><div class="ttdeci">QPointF center() const const</div></div>
 <div class="ttc" id="aqrectf_html_toAlignedRect"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#toAlignedRect">QRectF::toAlignedRect</a></div><div class="ttdeci">QRect toAlignedRect() const const</div></div>
 <div class="ttc" id="aqrectf_html_width"><div class="ttname"><a href="https://doc.qt.io/qt-5/qrectf.html#width">QRectF::width</a></div><div class="ttdeci">qreal width() const const</div></div>
 <div class="ttc" id="aqt_html_GlobalColor-enum"><div class="ttname"><a href="https://doc.qt.io/qt-5/qt.html#GlobalColor-enum">Qt::gray</a></div><div class="ttdeci">gray</div></div>
@@ -227,10 +228,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Feb 25 2026 08:29:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Feb 25 2026 16:24:22 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 185eef16525ac87b1e4365ee20e9d7f7ac067c6d
+   based on revision 357763c083ae21dfe2351be579a03d273207b04e
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

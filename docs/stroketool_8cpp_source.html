@@ -486,7 +486,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrect.html">QRect</a>&amp; updateRect = widthOptions.circleRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#toAlignedRect">toAlignedRect</a>();</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="comment">// Adjusted to account for some pixel bleeding outside the update rect</span></div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    mScribbleArea-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>(mEditor-&gt;view()-&gt;getView().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#mapRect-1">mapRect</a>(updateRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#united">united</a>(dirtyRect).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#adjusted">adjusted</a>(-2, -2, 2, 2)));</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    mScribbleArea-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qwidget.html#update">update</a>(mEditor-&gt;view()-&gt;getView().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtransform.html#mapRect-1">mapRect</a>(updateRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#united">united</a>(dirtyRect).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#adjusted">adjusted</a>(-2, -2, 2, 2)).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#adjusted">adjusted</a>(-2, -2, 2, 2));</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    mWidthCursorPainter.clearDirty();</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>}</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
@@ -599,10 +599,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Feb 25 2026 08:29:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Feb 25 2026 16:24:23 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 185eef16525ac87b1e4365ee20e9d7f7ac067c6d
+   based on revision 357763c083ae21dfe2351be579a03d273207b04e
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
