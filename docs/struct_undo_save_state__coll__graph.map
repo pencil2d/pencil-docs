@@ -1,0 +1,9 @@
+<map id="UndoSaveState" name="UndoSaveState">
+<area shape="rect" id="node1" title="This is the main undo/redo state structure which is meant to populate whatever states that needs to b..." alt="" coords="163,321,312,352"/>
+<area shape="rect" id="node2" href="$struct_selection_save_state.html" title=" " alt="" coords="58,223,235,253"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qrectf.html" title=" " alt="" coords="5,104,85,135"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="109,104,197,135"/>
+<area shape="rect" id="node5" href="$struct_user_save_state.html" title="Use this struct to store user related data that will later be added to the backup This struct is mean..." alt="" coords="260,223,401,253"/>
+<area shape="rect" id="node6" href="$struct_move_frames_save_state.html" title=" " alt="" coords="227,104,435,135"/>
+<area shape="rect" id="node7" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="273,5,388,36"/>
+</map>

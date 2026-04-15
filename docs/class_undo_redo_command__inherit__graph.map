@@ -1,7 +1,10 @@
 <map id="UndoRedoCommand" name="UndoRedoCommand">
-<area shape="rect" id="node1" title=" " alt="" coords="258,84,455,115"/>
-<area shape="rect" id="node3" href="$class_bitmap_replace_command.html" title=" " alt="" coords="5,163,236,193"/>
-<area shape="rect" id="node4" href="$class_transform_command.html" title=" " alt="" coords="260,163,453,193"/>
-<area shape="rect" id="node5" href="$class_vector_replace_command.html" title=" " alt="" coords="478,163,702,193"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qundocommand.html" title=" " alt="" coords="273,5,441,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="221,143,419,173"/>
+<area shape="rect" id="node3" href="$class_bitmap_replace_command.html" title=" " alt="" coords="479,5,710,36"/>
+<area shape="rect" id="node4" href="$class_key_frame_add_command.html" title=" " alt="" coords="483,60,706,91"/>
+<area shape="rect" id="node5" href="$class_key_frame_remove_command.html" title=" " alt="" coords="467,115,723,145"/>
+<area shape="rect" id="node6" href="$class_move_key_frames_command.html" title=" " alt="" coords="473,169,716,200"/>
+<area shape="rect" id="node7" href="$class_transform_command.html" title=" " alt="" coords="498,224,691,255"/>
+<area shape="rect" id="node8" href="$class_vector_replace_command.html" title=" " alt="" coords="483,279,707,309"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qundocommand.html" title=" " alt="" coords="5,143,173,173"/>
 </map>

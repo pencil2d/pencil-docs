@@ -124,11 +124,14 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="class_undo_redo_command__inherit__graph.png" border="0" usemap="#a_undo_redo_command_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_undo_redo_command_inherit__map" id="a_undo_redo_command_inherit__map">
-<area shape="rect" title=" " alt="" coords="258,84,455,115"/>
-<area shape="rect" href="class_bitmap_replace_command.html" title=" " alt="" coords="5,163,236,193"/>
-<area shape="rect" href="class_transform_command.html" title=" " alt="" coords="260,163,453,193"/>
-<area shape="rect" href="class_vector_replace_command.html" title=" " alt="" coords="478,163,702,193"/>
-<area shape="rect" target="_parent" href="https://doc.qt.io/qt-5/qundocommand.html" title=" " alt="" coords="273,5,441,36"/>
+<area shape="rect" title=" " alt="" coords="221,143,419,173"/>
+<area shape="rect" href="class_bitmap_replace_command.html" title=" " alt="" coords="479,5,710,36"/>
+<area shape="rect" href="class_key_frame_add_command.html" title=" " alt="" coords="483,60,706,91"/>
+<area shape="rect" href="class_key_frame_remove_command.html" title=" " alt="" coords="467,115,723,145"/>
+<area shape="rect" href="class_move_key_frames_command.html" title=" " alt="" coords="473,169,716,200"/>
+<area shape="rect" href="class_transform_command.html" title=" " alt="" coords="498,224,691,255"/>
+<area shape="rect" href="class_vector_replace_command.html" title=" " alt="" coords="483,279,707,309"/>
+<area shape="rect" target="_parent" href="https://doc.qt.io/qt-5/qundocommand.html" title=" " alt="" coords="5,143,173,173"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -238,8 +241,8 @@ const <a class="elRef" href="https://doc.qt.io/qt-5/qundocommand.html">QUndoComm
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac6248a58a69d65ae6b638fe39b004195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_editor.html">Editor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_redo_command.html#ac6248a58a69d65ae6b638fe39b004195">editor</a> ()</td></tr>
-<tr class="separator:ac6248a58a69d65ae6b638fe39b004195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b9597be7531761a2ace8f7dcb4a85e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_editor.html">Editor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_redo_command.html#a28b9597be7531761a2ace8f7dcb4a85e">editor</a> () const</td></tr>
+<tr class="separator:a28b9597be7531761a2ace8f7dcb4a85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b0713b95ad548b22e96369eca4f6d2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_redo_command.html#a0b0713b95ad548b22e96369eca4f6d2e">isFirstRedo</a> () const</td></tr>
 <tr class="separator:a0b0713b95ad548b22e96369eca4f6d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1048d5dab1997a9444536b9738d6478d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_undo_redo_command.html#a1048d5dab1997a9444536b9738d6478d">setFirstRedo</a> (const bool state)</td></tr>
@@ -254,7 +257,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00037">37</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00039">39</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a05c3432a55c48882b958865dc0c42e06" name="a05c3432a55c48882b958865dc0c42e06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05c3432a55c48882b958865dc0c42e06">&#9670;&#160;</a></span>UndoRedoCommand()</h2>
@@ -290,40 +293,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8cpp_source.html#l00031">31</a> of file <a class="el" href="undoredocommand_8cpp_source.html">undoredocommand.cpp</a>.</p>
-
-</div>
-</div>
-<a id="adf2ac3477382fd0d7d92bc0db7d35434" name="adf2ac3477382fd0d7d92bc0db7d35434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf2ac3477382fd0d7d92bc0db7d35434">&#9670;&#160;</a></span>~UndoRedoCommand()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UndoRedoCommand::~UndoRedoCommand </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8cpp_source.html#l00037">37</a> of file <a class="el" href="undoredocommand_8cpp_source.html">undoredocommand.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8cpp_source.html#l00032">32</a> of file <a class="el" href="undoredocommand_8cpp_source.html">undoredocommand.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac6248a58a69d65ae6b638fe39b004195" name="ac6248a58a69d65ae6b638fe39b004195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6248a58a69d65ae6b638fe39b004195">&#9670;&#160;</a></span>editor()</h2>
+<a id="a28b9597be7531761a2ace8f7dcb4a85e" name="a28b9597be7531761a2ace8f7dcb4a85e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b9597be7531761a2ace8f7dcb4a85e">&#9670;&#160;</a></span>editor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,7 +311,7 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="class_editor.html">Editor</a> * UndoRedoCommand::editor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -345,7 +321,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00044">44</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00046">46</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
 
 </div>
 </div>
@@ -372,7 +348,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00046">46</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00048">48</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
 
 </div>
 </div>
@@ -400,7 +376,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00047">47</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00049">49</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +401,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00050">50</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00052">52</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
 
 </div>
 </div>
@@ -449,7 +425,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00051">51</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredocommand_8h_source.html#l00053">53</a> of file <a class="el" href="undoredocommand_8h_source.html">undoredocommand.h</a>.</p>
 
 </div>
 </div>
@@ -463,10 +439,10 @@ Private Attributes</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Apr 14 2026 15:49:41 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 15 2026 23:58:28 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision cf1da1544b2a2dda358f746ba0e7000f89da16f3
+   based on revision b27610723f07841436b924774d54cc141356c5f2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

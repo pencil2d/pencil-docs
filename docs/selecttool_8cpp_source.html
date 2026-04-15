@@ -237,7 +237,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;button() != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#MouseButton-enum">Qt::LeftButton</a>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">auto</span> selectMan = mEditor-&gt;select();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    mUndoState = mEditor-&gt;undoRedo()-&gt;<a class="code hl_function" href="class_undo_redo_manager.html#afcc9d45f54759bc32a72b7c7c2e85a93">state</a>(UndoRedoRecordType::KEYFRAME_MODIFY);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    mUndoStateId = mEditor-&gt;undoRedo()-&gt;<a class="code hl_function" href="class_undo_redo_manager.html#ad6966e550f2f1a9daf43b74fdf164cef">createState</a>(UndoRedoRecordType::KEYFRAME_MODIFY);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    mPressPoint = <span class="keyword">event</span>-&gt;canvasPos();</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
@@ -313,7 +313,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <a class="code hl_function" href="class_select_tool.html#a2064c7d379655bd22ec191cd560a6a3e">keepSelection</a>(currentLayer);</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    mEditor-&gt;undoRedo()-&gt;<a class="code hl_function" href="class_undo_redo_manager.html#a619ef96883de5ac7cf4e5ca2e53af236">record</a>(mUndoState, typeName());</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    mEditor-&gt;undoRedo()-&gt;<a class="code hl_function" href="class_undo_redo_manager.html#ac4da84bf1fb2e7de08323aca6cf8bd9d">record</a>(mUndoStateId, typeName());</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    mStartMoveMode = MoveMode::NONE;</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    mMoveMode = MoveMode::NONE;</div>
@@ -395,8 +395,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_selection_manager_html_a63b61dfdc85936424004d73ab4218e4a"><div class="ttname"><a href="class_selection_manager.html#a63b61dfdc85936424004d73ab4218e4a">SelectionManager::mapToSelection</a></div><div class="ttdeci">QPointF mapToSelection(const QPointF &amp;point) const</div><div class="ttdoc">Maps a point from Canvas/Layer space INTO the Selection's transformed space.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00130">selectionmanager.h:130</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html_a6f9420128513e0c8044ab10373224b5f"><div class="ttname"><a href="class_selection_manager.html#a6f9420128513e0c8044ab10373224b5f">SelectionManager::setSelection</a></div><div class="ttdeci">void setSelection(QRectF rect, bool roundPixels=false)</div><div class="ttdoc">Defines the selection area.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8cpp_source.html#l00273">selectionmanager.cpp:273</a></div></div>
 <div class="ttc" id="aclass_transform_tool_html"><div class="ttname"><a href="class_transform_tool.html">TransformTool</a></div><div class="ttdef"><b>Definition:</b> <a href="transformtool_8h_source.html#l00022">transformtool.h:23</a></div></div>
-<div class="ttc" id="aclass_undo_redo_manager_html_a619ef96883de5ac7cf4e5ca2e53af236"><div class="ttname"><a href="class_undo_redo_manager.html#a619ef96883de5ac7cf4e5ca2e53af236">UndoRedoManager::record</a></div><div class="ttdeci">void record(const UndoSaveState *&amp;undoState, const QString &amp;description)</div><div class="ttdoc">Records the given save state.</div><div class="ttdef"><b>Definition:</b> <a href="undoredomanager_8cpp_source.html#l00095">undoredomanager.cpp:95</a></div></div>
-<div class="ttc" id="aclass_undo_redo_manager_html_afcc9d45f54759bc32a72b7c7c2e85a93"><div class="ttname"><a href="class_undo_redo_manager.html#afcc9d45f54759bc32a72b7c7c2e85a93">UndoRedoManager::state</a></div><div class="ttdeci">const UndoSaveState * state(UndoRedoRecordType recordType) const</div><div class="ttdoc">Prepares and returns a save state with the given scope.</div><div class="ttdef"><b>Definition:</b> <a href="undoredomanager_8cpp_source.html#l00199">undoredomanager.cpp:199</a></div></div>
+<div class="ttc" id="aclass_undo_redo_manager_html_ac4da84bf1fb2e7de08323aca6cf8bd9d"><div class="ttname"><a href="class_undo_redo_manager.html#ac4da84bf1fb2e7de08323aca6cf8bd9d">UndoRedoManager::record</a></div><div class="ttdeci">void record(SAVESTATE_ID SaveStateId, const QString &amp;description)</div><div class="ttdoc">Records the given save state.</div><div class="ttdef"><b>Definition:</b> <a href="undoredomanager_8cpp_source.html#l00096">undoredomanager.cpp:96</a></div></div>
+<div class="ttc" id="aclass_undo_redo_manager_html_ad6966e550f2f1a9daf43b74fdf164cef"><div class="ttname"><a href="class_undo_redo_manager.html#ad6966e550f2f1a9daf43b74fdf164cef">UndoRedoManager::createState</a></div><div class="ttdeci">SAVESTATE_ID createState(UndoRedoRecordType recordType)</div><div class="ttdoc">Prepares and returns an save state with common data.</div><div class="ttdef"><b>Definition:</b> <a href="undoredomanager_8cpp_source.html#l00261">undoredomanager.cpp:261</a></div></div>
 <div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
 <div class="ttc" id="aclass_vector_image_html_a3155f5e0c0d597682f2fcea41cc1e5e2"><div class="ttname"><a href="class_vector_image.html#a3155f5e0c0d597682f2fcea41cc1e5e2">VectorImage::deselectAll</a></div><div class="ttdeci">void deselectAll()</div><div class="ttdoc">VectorImage::deselectAll.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00839">vectorimage.cpp:839</a></div></div>
 <div class="ttc" id="aqcolor_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qcolor.html">QColor</a></div></div>
@@ -433,10 +433,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Apr 14 2026 15:49:40 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 15 2026 23:58:27 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision cf1da1544b2a2dda358f746ba0e7000f89da16f3
+   based on revision b27610723f07841436b924774d54cc141356c5f2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

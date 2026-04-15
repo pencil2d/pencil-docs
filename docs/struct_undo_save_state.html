@@ -120,25 +120,61 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
  <a href="struct_undo_save_state.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for UndoSaveState:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="struct_undo_save_state__coll__graph.png" border="0" usemap="#a_undo_save_state_coll__map" alt="Collaboration graph"/></div>
+<map name="a_undo_save_state_coll__map" id="a_undo_save_state_coll__map">
+<area shape="rect" title="This is the main undo/redo state structure which is meant to populate whatever states that needs to b..." alt="" coords="163,321,312,352"/>
+<area shape="rect" href="struct_selection_save_state.html" title=" " alt="" coords="58,223,235,253"/>
+<area shape="rect" target="_parent" href="https://doc.qt.io/qt-5/qrectf.html" title=" " alt="" coords="5,104,85,135"/>
+<area shape="rect" target="_parent" href="https://doc.qt.io/qt-5/qpointf.html" title=" " alt="" coords="109,104,197,135"/>
+<area shape="rect" href="struct_user_save_state.html" title="Use this struct to store user related data that will later be added to the backup This struct is mean..." alt="" coords="260,223,401,253"/>
+<area shape="rect" href="struct_move_frames_save_state.html" title=" " alt="" coords="227,104,435,135"/>
+<area shape="rect" target="_parent" href="https://doc.qt.io/qt-5/qlist.html" title=" " alt="" coords="273,5,388,36"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a1dc4932c8ee69a50e9cbffae262891de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a1dc4932c8ee69a50e9cbffae262891de">layerId</a> = 0</td></tr>
-<tr class="separator:a1dc4932c8ee69a50e9cbffae262891de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7f9c1348b8e4c9208e2e8aeeb6f077b"><td class="memItemLeft" align="right" valign="top">Layer::LAYER_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#ac7f9c1348b8e4c9208e2e8aeeb6f077b">layerType</a> = Layer::UNDEFINED</td></tr>
-<tr class="separator:ac7f9c1348b8e4c9208e2e8aeeb6f077b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f5c4d945a1dfa69c6bbeec724391ee1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_key_frame.html">KeyFrame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a8f5c4d945a1dfa69c6bbeec724391ee1">keyframe</a> = nullptr</td></tr>
-<tr class="separator:a8f5c4d945a1dfa69c6bbeec724391ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c8ce56d1ee93a3853ba6348a4f4e434"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="struct_selection_save_state.html">SelectionSaveState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a7c8ce56d1ee93a3853ba6348a4f4e434">selectionState</a> = nullptr</td></tr>
-<tr class="separator:a7c8ce56d1ee93a3853ba6348a4f4e434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd603ad1bfb0dfdb7fb450d94715bb6"><td class="memItemLeft" align="right" valign="top">UndoRedoRecordType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#aadd603ad1bfb0dfdb7fb450d94715bb6">recordType</a> = UndoRedoRecordType::INVALID</td></tr>
 <tr class="separator:aadd603ad1bfb0dfdb7fb450d94715bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc4932c8ee69a50e9cbffae262891de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a1dc4932c8ee69a50e9cbffae262891de">layerId</a> = 0</td></tr>
+<tr class="separator:a1dc4932c8ee69a50e9cbffae262891de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0d758688fc58d846f1eb0e646c2e7f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#af0d758688fc58d846f1eb0e646c2e7f1">currentFrameIndex</a> = 0</td></tr>
+<tr class="separator:af0d758688fc58d846f1eb0e646c2e7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f9c1348b8e4c9208e2e8aeeb6f077b"><td class="memItemLeft" align="right" valign="top">Layer::LAYER_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#ac7f9c1348b8e4c9208e2e8aeeb6f077b">layerType</a> = Layer::UNDEFINED</td></tr>
+<tr class="separator:ac7f9c1348b8e4c9208e2e8aeeb6f077b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5c4d945a1dfa69c6bbeec724391ee1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_key_frame.html">KeyFrame</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a8f5c4d945a1dfa69c6bbeec724391ee1">keyframe</a></td></tr>
+<tr class="separator:a8f5c4d945a1dfa69c6bbeec724391ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19846525d5fb1a21535cc6a7a544382a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_selection_save_state.html">SelectionSaveState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a19846525d5fb1a21535cc6a7a544382a">selectionState</a> = {}</td></tr>
+<tr class="separator:a19846525d5fb1a21535cc6a7a544382a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0598bb797af11b0d50d2a7b91e1ce06d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_user_save_state.html">UserSaveState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_undo_save_state.html#a0598bb797af11b0d50d2a7b91e1ce06d">userState</a> = {}</td></tr>
+<tr class="separator:a0598bb797af11b0d50d2a7b91e1ce06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is the main undo/redo state structure which is meant to populate whatever states that needs to be stored temporarily. </p>
 
-<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00080">80</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00106">106</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="af0d758688fc58d846f1eb0e646c2e7f1" name="af0d758688fc58d846f1eb0e646c2e7f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d758688fc58d846f1eb0e646c2e7f1">&#9670;&#160;</a></span>currentFrameIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UndoSaveState::currentFrameIndex = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00110">110</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+
+</div>
+</div>
 <a id="a8f5c4d945a1dfa69c6bbeec724391ee1" name="a8f5c4d945a1dfa69c6bbeec724391ee1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f5c4d945a1dfa69c6bbeec724391ee1">&#9670;&#160;</a></span>keyframe</h2>
 
@@ -146,12 +182,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_key_frame.html">KeyFrame</a>&gt; UndoSaveState::keyframe = nullptr</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_key_frame.html">KeyFrame</a>&gt; UndoSaveState::keyframe</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00084">84</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00112">112</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
 
 </div>
 </div>
@@ -167,7 +203,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00081">81</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00109">109</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
 
 </div>
 </div>
@@ -183,7 +219,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00082">82</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00111">111</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
 
 </div>
 </div>
@@ -199,23 +235,39 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00087">87</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00108">108</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
 
 </div>
 </div>
-<a id="a7c8ce56d1ee93a3853ba6348a4f4e434" name="a7c8ce56d1ee93a3853ba6348a4f4e434"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c8ce56d1ee93a3853ba6348a4f4e434">&#9670;&#160;</a></span>selectionState</h2>
+<a id="a19846525d5fb1a21535cc6a7a544382a" name="a19846525d5fb1a21535cc6a7a544382a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19846525d5fb1a21535cc6a7a544382a">&#9670;&#160;</a></span>selectionState</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="struct_selection_save_state.html">SelectionSaveState</a>&gt; UndoSaveState::selectionState = nullptr</td>
+          <td class="memname"><a class="el" href="struct_selection_save_state.html">SelectionSaveState</a> UndoSaveState::selectionState = {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00085">85</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00113">113</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
+
+</div>
+</div>
+<a id="a0598bb797af11b0d50d2a7b91e1ce06d" name="a0598bb797af11b0d50d2a7b91e1ce06d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0598bb797af11b0d50d2a7b91e1ce06d">&#9670;&#160;</a></span>userState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_user_save_state.html">UserSaveState</a> UndoSaveState::userState = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="undoredomanager_8h_source.html#l00115">115</a> of file <a class="el" href="undoredomanager_8h_source.html">undoredomanager.h</a>.</p>
 
 </div>
 </div>
@@ -228,10 +280,10 @@ Public Attributes</h2></td></tr>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Tue Apr 14 2026 15:49:41 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 15 2026 23:58:28 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision cf1da1544b2a2dda358f746ba0e7000f89da16f3
+   based on revision b27610723f07841436b924774d54cc141356c5f2
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
