@@ -163,199 +163,213 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">auto</span> spinBoxValueChange = <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qspinbox.html">QSpinBox</a>::*)(<span class="keywordtype">int</span>)<span class="keyword">&gt;</span>(&amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qspinbox.html#valueChanged">QSpinBox::valueChanged</a>);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    connect(ui-&gt;autosaveCheckBox, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcheckbox.html#stateChanged">QCheckBox::stateChanged</a>, <span class="keyword">this</span>, &amp;FilesPage::autoSaveChange);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    connect(ui-&gt;autosaveNumberBox, spinBoxValueChange, <span class="keyword">this</span>, &amp;FilesPage::autoSaveNumberChange);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>FilesPage::~FilesPage()</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">delete</span> ui;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> FilesPage::initPreset()</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    mPresetDir = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#writableLocation">QStandardPaths::writableLocation</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum">QStandardPaths::AppDataLocation</a>));</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#mkpath">mkpath</a>(<span class="stringliteral">&quot;presets&quot;</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#cd">cd</a>(<span class="stringliteral">&quot;presets&quot;</span>);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    mPresetSettings = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a>(mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(<span class="stringliteral">&quot;presets.ini&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qsettings.html#Format-enum">QSettings::IniFormat</a>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    connect(ui-&gt;autosaveByTimeCheckBox, &amp;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qcheckbox.html#stateChanged">QCheckBox::stateChanged</a>, <span class="keyword">this</span>, &amp;FilesPage::autoSaveByTimeChange);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    connect(ui-&gt;autosaveByTimeNumberBox, spinBoxValueChange, <span class="keyword">this</span>, &amp;FilesPage::autoSaveByTimeTimerChange);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>FilesPage::~FilesPage()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">delete</span> ui;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> FilesPage::initPreset()</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    mPresetDir = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#writableLocation">QStandardPaths::writableLocation</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qstandardpaths.html#StandardLocation-enum">QStandardPaths::AppDataLocation</a>));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#mkpath">mkpath</a>(<span class="stringliteral">&quot;presets&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#cd">cd</a>(<span class="stringliteral">&quot;presets&quot;</span>);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* defaultItem = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>(<span class="stringliteral">&quot;Blank&quot;</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    defaultItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setData">setData</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>, 0);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    ui-&gt;presetListWidget-&gt;addItem(defaultItem);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; key : mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>())</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">int</span> index = key.toInt(&amp;ok);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">if</span> (!ok || index == 0 || !mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#exists-1">exists</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;%1.pclx&quot;</span>).arg(index))) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        mMaxPresetIndex = qMax(index, mMaxPresetIndex);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    mPresetSettings = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qsettings.html">QSettings</a>(mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(<span class="stringliteral">&quot;presets.ini&quot;</span>), <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qsettings.html#Format-enum">QSettings::IniFormat</a>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* defaultItem = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>(<span class="stringliteral">&quot;Blank&quot;</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    defaultItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setData">setData</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>, 0);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    ui-&gt;presetListWidget-&gt;addItem(defaultItem);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; key : mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#allKeys">allKeys</a>())</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">int</span> index = key.toInt(&amp;ok);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (!ok || index == 0 || !mPresetDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#exists-1">exists</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;%1.pclx&quot;</span>).arg(index))) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> name = mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#value">value</a>(key).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toString">toString</a>();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span> (name.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>(name);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setFlags">setFlags</a>(item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#flags">flags</a>() | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemFlag-enum">Qt::ItemIsEditable</a>);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setData">setData</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>, index);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        ui-&gt;presetListWidget-&gt;addItem(item);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">void</span> FilesPage::addPreset()</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>{</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">int</span> newPresetIndex = mMaxPresetIndex + 1;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// 1. save the current object to the preset folder</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_class" href="class_file_manager.html">FileManager</a> fm(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_class" href="class_status.html">Status</a> st = fm.save(mManager-&gt;object(), PresetDialog::getPresetPath(newPresetIndex));</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (!st.ok())</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_class" href="class_error_dialog.html">ErrorDialog</a> errorDialog(st.title(),</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                st.description().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#append-1">append</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;&lt;br&gt;&lt;br&gt;Error: your preset may not have saved successfully. &quot;</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                                           <span class="stringliteral">&quot;If you believe that this error is an issue with Pencil2D, please create a new issue at:&quot;</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                                           <span class="stringliteral">&quot;&lt;br&gt;&lt;a href=&#39;https://github.com/pencil2d/pencil/issues&#39;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;&quot;</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                                           <span class="stringliteral">&quot;Please include the following details in your issue:&quot;</span>)), st.details().html());</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        errorDialog.exec();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// 2. update the preset ini</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> presetName = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Preset %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(newPresetIndex);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#setValue">setValue</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(newPresetIndex), presetName);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    mMaxPresetIndex = newPresetIndex;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// 3. update the list widget</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* newItem = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>(presetName);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    newItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setFlags">setFlags</a>(newItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#flags">flags</a>() | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemFlag-enum">Qt::ItemIsEditable</a>);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    newItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setData">setData</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>, newPresetIndex);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    ui-&gt;presetListWidget-&gt;addItem(newItem);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    ui-&gt;presetListWidget-&gt;scrollToBottom();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    ui-&gt;presetListWidget-&gt;editItem(newItem);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">void</span> FilesPage::removePreset()</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (ui-&gt;presetListWidget-&gt;count() &lt;= 1) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (ui-&gt;presetListWidget-&gt;selectedItems().empty()) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// 1. Remove the items from list widget</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QListWidgetItem*&gt;</a> itemsToRemove = ui-&gt;presetListWidget-&gt;selectedItems();</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        ui-&gt;presetListWidget-&gt;removeItemWidget(item);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// 2. Delete preset pclx files</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> presetFile(PresetDialog::getPresetPath(index));</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        presetFile.remove();</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// 3. Delete items from the ini settings</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>();</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#remove">remove</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(index));</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// 4. check if the default preset has been deleted</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">int</span> prevDefaultIndex = mManager-&gt;getInt(SETTING::DEFAULT_PRESET);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>();</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">if</span> (index == prevDefaultIndex)</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            mManager-&gt;set(SETTING::DEFAULT_PRESET, 0);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="comment">// 5. delete items</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keyword">delete</span> item;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    updateValues();</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keywordtype">void</span> FilesPage::setDefaultPreset()</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>{</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* newDefaultPresetItem = ui-&gt;presetListWidget-&gt;currentItem();</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">if</span> (newDefaultPresetItem)</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordtype">int</span> newDefaultIndex = newDefaultPresetItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>(&amp;ok);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        Q_ASSERT(ok);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        mManager-&gt;set(SETTING::DEFAULT_PRESET, newDefaultIndex);</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        updateValues();</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">void</span> FilesPage::presetNameChanged(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>{</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">// Remove characters that may be problematic for ini files</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setText">setText</a>(item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#text">text</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#remove">remove</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qchar.html">QChar</a>(<span class="charliteral">&#39;@&#39;</span>)).remove(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qchar.html">QChar</a>(<span class="charliteral">&#39;/&#39;</span>)).remove(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qchar.html">QChar</a>(<span class="charliteral">&#39;\\&#39;</span>)));</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>(&amp;ok);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    Q_ASSERT(ok);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#setValue">setValue</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(index), item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#text">text</a>());</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="keywordtype">void</span> FilesPage::updateValues()</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>{</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">int</span> defaultPresetIndex = mManager-&gt;getInt(SETTING::DEFAULT_PRESET);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ui-&gt;presetListWidget-&gt;count(); i++)</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item = ui-&gt;presetListWidget-&gt;item(i);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordtype">int</span> presetIndex = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>(&amp;ok);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">bool</span> isDefault = presetIndex == defaultPresetIndex;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        mMaxPresetIndex = qMax(index, mMaxPresetIndex);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> name = mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#value">value</a>(key).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toString">toString</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (name.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#isEmpty">isEmpty</a>())</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>(name);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setFlags">setFlags</a>(item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#flags">flags</a>() | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemFlag-enum">Qt::ItemIsEditable</a>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setData">setData</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>, index);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        ui-&gt;presetListWidget-&gt;addItem(item);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> FilesPage::addPreset()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">int</span> newPresetIndex = mMaxPresetIndex + 1;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// 1. save the current object to the preset folder</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_class" href="class_file_manager.html">FileManager</a> fm(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_class" href="class_status.html">Status</a> st = fm.save(mManager-&gt;object(), PresetDialog::getPresetPath(newPresetIndex));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">if</span> (!st.ok())</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_class" href="class_error_dialog.html">ErrorDialog</a> errorDialog(st.title(),</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                st.description().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#append-1">append</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;&lt;br&gt;&lt;br&gt;Error: your preset may not have saved successfully. &quot;</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                                           <span class="stringliteral">&quot;If you believe that this error is an issue with Pencil2D, please create a new issue at:&quot;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                                           <span class="stringliteral">&quot;&lt;br&gt;&lt;a href=&#39;https://github.com/pencil2d/pencil/issues&#39;&gt;https://github.com/pencil2d/pencil/issues&lt;/a&gt;&lt;br&gt;&quot;</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                                           <span class="stringliteral">&quot;Please include the following details in your issue:&quot;</span>)), st.details().html());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        errorDialog.exec();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// 2. update the preset ini</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> presetName = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Preset %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(newPresetIndex);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#setValue">setValue</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(newPresetIndex), presetName);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    mMaxPresetIndex = newPresetIndex;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// 3. update the list widget</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* newItem = <span class="keyword">new</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>(presetName);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    newItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setFlags">setFlags</a>(newItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#flags">flags</a>() | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemFlag-enum">Qt::ItemIsEditable</a>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    newItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setData">setData</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>, newPresetIndex);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    ui-&gt;presetListWidget-&gt;addItem(newItem);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    ui-&gt;presetListWidget-&gt;scrollToBottom();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    ui-&gt;presetListWidget-&gt;editItem(newItem);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> FilesPage::removePreset()</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">if</span> (ui-&gt;presetListWidget-&gt;count() &lt;= 1) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (ui-&gt;presetListWidget-&gt;selectedItems().empty()) { <span class="keywordflow">return</span>; }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="comment">// 1. Remove the items from list widget</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlist.html">QList&lt;QListWidgetItem*&gt;</a> itemsToRemove = ui-&gt;presetListWidget-&gt;selectedItems();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        ui-&gt;presetListWidget-&gt;removeItemWidget(item);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// 2. Delete preset pclx files</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> presetFile(PresetDialog::getPresetPath(index));</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        presetFile.remove();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">// 3. Delete items from the ini settings</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#remove">remove</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(index));</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">// 4. check if the default preset has been deleted</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">int</span> prevDefaultIndex = mManager-&gt;getInt(SETTING::DEFAULT_PRESET);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">if</span> (index == prevDefaultIndex)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            mManager-&gt;set(SETTING::DEFAULT_PRESET, 0);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// 5. delete items</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">for</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item : itemsToRemove)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keyword">delete</span> item;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    updateValues();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>}</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keywordtype">void</span> FilesPage::setDefaultPreset()</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>{</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* newDefaultPresetItem = ui-&gt;presetListWidget-&gt;currentItem();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span> (newDefaultPresetItem)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordtype">int</span> newDefaultIndex = newDefaultPresetItem-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>(&amp;ok);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        Q_ASSERT(ok);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        mManager-&gt;set(SETTING::DEFAULT_PRESET, newDefaultIndex);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        updateValues();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keywordtype">void</span> FilesPage::presetNameChanged(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>{</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// Remove characters that may be problematic for ini files</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setText">setText</a>(item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#text">text</a>().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#remove">remove</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qchar.html">QChar</a>(<span class="charliteral">&#39;@&#39;</span>)).remove(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qchar.html">QChar</a>(<span class="charliteral">&#39;/&#39;</span>)).remove(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qchar.html">QChar</a>(<span class="charliteral">&#39;\\&#39;</span>)));</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">int</span> index = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>(&amp;ok);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    Q_ASSERT(ok);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    mPresetSettings-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qsettings.html#setValue">setValue</a>(<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(index), item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#text">text</a>());</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keywordtype">void</span> FilesPage::updateValues()</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>{</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">int</span> defaultPresetIndex = mManager-&gt;getInt(SETTING::DEFAULT_PRESET);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ui-&gt;presetListWidget-&gt;count(); i++)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html">QListWidgetItem</a>* item = ui-&gt;presetListWidget-&gt;item(i);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">int</span> presetIndex = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#data">data</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#ItemDataRole-enum">Qt::UserRole</a>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qvariant.html#toInt">toInt</a>(&amp;ok);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfont.html">QFont</a> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#font-prop">font</a> = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#font">font</a>();</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#font-prop">font</a>.setBold(isDefault); <span class="comment">// Bold text for the default item</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setFont">setFont</a>(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#font-prop">font</a>);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> backgroundBrush = (isDefault) ? <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#palette-prop">palette</a>().light() : <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#palette-prop">palette</a>().window();</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setBackground">setBackground</a>(backgroundBrush);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    ui-&gt;autosaveCheckBox-&gt;setChecked(mManager-&gt;isOn(SETTING::AUTO_SAVE));</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    ui-&gt;autosaveNumberBox-&gt;setValue(mManager-&gt;getInt(SETTING::AUTO_SAVE_NUMBER));</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    ui-&gt;askPresetRbtn-&gt;setChecked(mManager-&gt;isOn(SETTING::ASK_FOR_PRESET));</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    ui-&gt;loadDefaultPresetRbtn-&gt;setChecked(mManager-&gt;isOn(SETTING::LOAD_DEFAULT_PRESET));</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    ui-&gt;loadLastActiveRbtn-&gt;setChecked(mManager-&gt;isOn(SETTING::LOAD_MOST_RECENT));</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>}</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keywordtype">void</span> FilesPage::askForPresetChange(<span class="keywordtype">int</span> b)</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>{</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    mManager-&gt;set(SETTING::ASK_FOR_PRESET, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>}</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="keywordtype">void</span> FilesPage::loadMostRecentChange(<span class="keywordtype">int</span> b)</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>{</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    mManager-&gt;set(SETTING::LOAD_MOST_RECENT, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="keywordtype">void</span> FilesPage::loadDefaultPreset(<span class="keywordtype">int</span> b)</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>{</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    mManager-&gt;set(SETTING::LOAD_DEFAULT_PRESET, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>}</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keywordtype">void</span> FilesPage::autoSaveChange(<span class="keywordtype">int</span> b)</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>{</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    mManager-&gt;set(SETTING::AUTO_SAVE, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keywordtype">void</span> FilesPage::autoSaveNumberChange(<span class="keywordtype">int</span> number)</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>{</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    mManager-&gt;set(SETTING::AUTO_SAVE_NUMBER, number);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordtype">bool</span> isDefault = presetIndex == defaultPresetIndex;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfont.html">QFont</a> <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#font-prop">font</a> = item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#font">font</a>();</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#font-prop">font</a>.setBold(isDefault); <span class="comment">// Bold text for the default item</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setFont">setFont</a>(<a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#font-prop">font</a>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qbrush.html">QBrush</a> backgroundBrush = (isDefault) ? <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#palette-prop">palette</a>().light() : <a class="code hl_propertyRef" href="https://doc.qt.io/qt-5/qwidget.html#palette-prop">palette</a>().window();</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        item-&gt;<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qlistwidgetitem.html#setBackground">setBackground</a>(backgroundBrush);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    ui-&gt;autosaveCheckBox-&gt;setChecked(mManager-&gt;isOn(SETTING::AUTO_SAVE));</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    ui-&gt;autosaveNumberBox-&gt;setValue(mManager-&gt;getInt(SETTING::AUTO_SAVE_NUMBER));</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    ui-&gt;autosaveByTimeCheckBox-&gt;setChecked(mManager-&gt;isOn(SETTING::AUTO_SAVE_BY_TIME));</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    ui-&gt;autosaveByTimeNumberBox-&gt;setValue(mManager-&gt;getInt(SETTING::AUTO_SAVE_BY_TIME_TIMER));</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    ui-&gt;askPresetRbtn-&gt;setChecked(mManager-&gt;isOn(SETTING::ASK_FOR_PRESET));</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    ui-&gt;loadDefaultPresetRbtn-&gt;setChecked(mManager-&gt;isOn(SETTING::LOAD_DEFAULT_PRESET));</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    ui-&gt;loadLastActiveRbtn-&gt;setChecked(mManager-&gt;isOn(SETTING::LOAD_MOST_RECENT));</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="keywordtype">void</span> FilesPage::askForPresetChange(<span class="keywordtype">int</span> b)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>{</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    mManager-&gt;set(SETTING::ASK_FOR_PRESET, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keywordtype">void</span> FilesPage::loadMostRecentChange(<span class="keywordtype">int</span> b)</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>{</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    mManager-&gt;set(SETTING::LOAD_MOST_RECENT, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>}</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keywordtype">void</span> FilesPage::loadDefaultPreset(<span class="keywordtype">int</span> b)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>{</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    mManager-&gt;set(SETTING::LOAD_DEFAULT_PRESET, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="keywordtype">void</span> FilesPage::autoSaveChange(<span class="keywordtype">int</span> b)</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>{</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    mManager-&gt;set(SETTING::AUTO_SAVE, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>}</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keywordtype">void</span> FilesPage::autoSaveNumberChange(<span class="keywordtype">int</span> number)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>{</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    mManager-&gt;set(SETTING::AUTO_SAVE_NUMBER, number);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>}</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="keywordtype">void</span> FilesPage::autoSaveByTimeChange(<span class="keywordtype">int</span> b)</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>{</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    mManager-&gt;set(SETTING::AUTO_SAVE_BY_TIME, b != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CheckState-enum">Qt::Unchecked</a>);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="keywordtype">void</span> FilesPage::autoSaveByTimeTimerChange(<span class="keywordtype">int</span> number)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>{</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    mManager-&gt;set(SETTING::AUTO_SAVE_BY_TIME_TIMER, number);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>}</div>
 <div class="ttc" id="aclass_error_dialog_html"><div class="ttname"><a href="class_error_dialog.html">ErrorDialog</a></div><div class="ttdef"><b>Definition:</b> <a href="errordialog_8h_source.html#l00027">errordialog.h:28</a></div></div>
 <div class="ttc" id="aclass_file_manager_html"><div class="ttname"><a href="class_file_manager.html">FileManager</a></div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8h_source.html#l00036">filemanager.h:37</a></div></div>
 <div class="ttc" id="aclass_files_page_html"><div class="ttname"><a href="class_files_page.html">FilesPage</a></div><div class="ttdef"><b>Definition:</b> <a href="filespage_8h_source.html#l00031">filespage.h:32</a></div></div>
@@ -414,10 +428,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Apr 22 2026 02:10:34 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 22 2026 02:32:44 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 0410579c79e3afd8935923dea5d397b253ebb31b
+   based on revision 6d98160d16b86198033c1f52fb1f2be066a05c5c
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

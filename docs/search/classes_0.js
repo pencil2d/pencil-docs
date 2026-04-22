@@ -5,5 +5,6 @@ var searchData=
   ['activeframepool_2',['ActiveFramePool',['../class_active_frame_pool.html',1,'']]],
   ['addtransparencytopaperdialog_3',['AddTransparencyToPaperDialog',['../class_add_transparency_to_paper_dialog.html',1,'']]],
   ['attribute_4',['Attribute',['https://doc.qt.io/qt-5/qinputmethodevent-attribute.html',1,'QInputMethodEvent']]],
-  ['availablesizesargument_5',['AvailableSizesArgument',['https://doc.qt.io/qt-5/qiconengine-availablesizesargument.html',1,'QIconEngine']]]
+  ['autosaverbytime_5',['AutosaverByTime',['../class_autosaver_by_time.html',1,'']]],
+  ['availablesizesargument_6',['AvailableSizesArgument',['https://doc.qt.io/qt-5/qiconengine-availablesizesargument.html',1,'QIconEngine']]]
 ];
