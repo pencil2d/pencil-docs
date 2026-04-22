@@ -156,10 +156,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>*<span class="keyword">&gt;</span>(getKeyFrameAt(frameNumber));</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* LayerBitmap::getLastBitmapImageAtFrame(<span class="keywordtype">int</span> frameNumber, <span class="keywordtype">int</span> increment)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* LayerBitmap::getLastBitmapImageAtFrame(<span class="keywordtype">int</span> frameNumber)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    Q_ASSERT(frameNumber &gt;= 1);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>*<span class="keyword">&gt;</span>(getLastKeyFrameAtPosition(frameNumber + increment));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>*<span class="keyword">&gt;</span>(getLastKeyFrameAtPosition(frameNumber));</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> LayerBitmap::replaceKeyFrame(<span class="keyword">const</span> <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* bitmapImage)</div>
@@ -380,10 +380,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Apr 22 2026 06:34:38 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 22 2026 10:46:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision d9ceb6c11fb599364305052b2ec3ba4898277c91
+   based on revision 4ec20b203f975d0b0988323847e8bd8d8d8ff31c
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

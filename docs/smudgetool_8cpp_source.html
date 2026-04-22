@@ -248,7 +248,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        {</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> currentFrame = mEditor-&gt;currentFrame();</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keyword">const</span> <span class="keywordtype">float</span> distanceFrom = selectMan-&gt;selectionTolerance();</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(currentFrame, 0);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(currentFrame);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            selectMan-&gt;setCurves(vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#aebfcbc2524dc8a02451a31b282f41f45">getCurvesCloseTo</a>(getCurrentPoint(), distanceFrom));</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            selectMan-&gt;setVertices(vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a">getVerticesCloseTo</a>(getCurrentPoint(), distanceFrom));</div>
@@ -312,7 +312,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                <span class="keywordflow">if</span> (<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#event">event</a>-&gt;modifiers() != <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#KeyboardModifier-enum">Qt::ShiftModifier</a>)    <span class="comment">// (and the user doesn&#39;t press shift)</span></div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                    <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame());</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                    <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                    <span class="comment">// transforms the selection</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
@@ -334,7 +334,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_vector.html">LayerVector</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame());</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                selectMan-&gt;setVertices(vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ae60e9bc5c6ca0cce8d31543ba9588f0a">getVerticesCloseTo</a>(getCurrentPoint(), selectMan-&gt;selectionTolerance()));</div>
@@ -371,7 +371,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (layer-&gt;type() == Layer::VECTOR)</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a> *vectorImage = ((<a class="code hl_class" href="class_layer_vector.html">LayerVector</a> *)layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <a class="code hl_class" href="class_vector_image.html">VectorImage</a> *vectorImage = ((<a class="code hl_class" href="class_layer_vector.html">LayerVector</a> *)layer)-&gt;getLastVectorImageAtFrame(mEditor-&gt;currentFrame());</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            <span class="keywordflow">if</span> (vectorImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            vectorImage-&gt;<a class="code hl_function" href="class_vector_image.html#ad7eb4ae4ebae009d56666e0bf07ffa24">applySelectionTransformation</a>();</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
@@ -394,7 +394,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span> || !layer-&gt;isPaintable()) { <span class="keywordflow">return</span>; }</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> *sourceImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastBitmapImageAtFrame(mEditor-&gt;currentFrame(), 0);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> *sourceImage = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_layer_bitmap.html">LayerBitmap</a>*<span class="keyword">&gt;</span>(layer)-&gt;getLastBitmapImageAtFrame(mEditor-&gt;currentFrame());</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">if</span> (sourceImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; } <span class="comment">// Can happen if the first frame is deleted while drawing</span></div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> targetImage = sourceImage-&gt;copy();</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    StrokeTool::drawStroke();</div>
@@ -520,10 +520,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Apr 22 2026 06:34:38 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 22 2026 10:46:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision d9ceb6c11fb599364305052b2ec3ba4898277c91
+   based on revision 4ec20b203f975d0b0988323847e8bd8d8d8ff31c
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
