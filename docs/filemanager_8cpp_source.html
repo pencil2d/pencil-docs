@@ -947,261 +947,262 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span> </div>
 <div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span><a class="code hl_class" href="class_status.html">Status</a> FileManager::verifyObject(<a class="code hl_class" href="class_object.html">Object</a>* obj)</div>
 <div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>{</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    <span class="comment">// check current layer.</span></div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>    <span class="keywordtype">int</span> curLayer = obj-&gt;data()-&gt;getCurrentLayer();</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    <span class="keywordtype">int</span> maxLayer = obj-&gt;getLayerCount();</div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    <span class="keywordflow">if</span> (curLayer &gt;= maxLayer)</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    {</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>        obj-&gt;data()-&gt;setCurrentLayer(maxLayer - 1);</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    }</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span> </div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>    <span class="comment">// Must have at least 1 camera layer</span></div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    std::vector&lt;LayerCamera*&gt; camLayers = obj-&gt;getLayersByType&lt;<a class="code hl_class" href="class_layer_camera.html">LayerCamera</a>&gt;();</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>    <span class="keywordflow">if</span> (camLayers.empty())</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    {</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>        obj-&gt;addNewCameraLayer();</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    }</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>}</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span> </div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> FileManager::searchForUnsavedProjects()</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>{</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> pencil2DTempDir = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a>();</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    <span class="keywordtype">bool</span> folderExists = pencil2DTempDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#cd">cd</a>(<span class="stringliteral">&quot;Pencil2D&quot;</span>);</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <span class="keywordflow">if</span> (!folderExists)</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    {</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a>();</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    }</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span> </div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilter(<span class="stringliteral">&quot;*_&quot;</span> PFF_TMP_DECOMPRESS_EXT <span class="stringliteral">&quot;_*&quot;</span>); <span class="comment">// match name pattern like &quot;Default_Y2xD_0a4e44e9&quot;</span></div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = pencil2DTempDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#entryList-1">entryList</a>(nameFilter, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Dirs</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Readable</a>);</div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span> </div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> recoverables;</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; path : entries)</div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>    {</div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> fullPath = pencil2DTempDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(path);</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>        <span class="keywordflow">if</span> (isProjectRecoverable(fullPath))</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>        {</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>            qDebug() &lt;&lt; <span class="stringliteral">&quot;Found debris at&quot;</span> &lt;&lt; fullPath;</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>            recoverables.append(fullPath);</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>        }</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>    }</div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    <span class="keywordflow">return</span> recoverables;</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>}</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span> </div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span><span class="keywordtype">bool</span> FileManager::isProjectRecoverable(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; projectFolder)</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>{</div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dir(projectFolder);</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="keywordflow">if</span> (!dir.exists()) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span> </div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>    <span class="comment">// There must be a subfolder called &quot;data&quot;</span></div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    <span class="keywordflow">if</span> (!dir.exists(<span class="stringliteral">&quot;data&quot;</span>)) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span> </div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    <span class="keywordtype">bool</span> ok = dir.cd(<span class="stringliteral">&quot;data&quot;</span>);</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>    Q_ASSERT(ok);</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span> </div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFiler;</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    nameFiler &lt;&lt; <span class="stringliteral">&quot;*.png&quot;</span> &lt;&lt; <span class="stringliteral">&quot;*.vec&quot;</span> &lt;&lt; <span class="stringliteral">&quot;*.xml&quot;</span>;</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = dir.entryList(nameFiler, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Files</a>);</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>    <span class="keywordflow">return</span> (entries.size() &gt; 0);</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>}</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span> </div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span><a class="code hl_class" href="class_object.html">Object</a>* FileManager::recoverUnsavedProject(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> intermeidatePath)</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>{</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;TODO: recover project&quot;</span> &lt;&lt; intermeidatePath;</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span> </div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> projectDir(intermeidatePath);</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> mainXMLPath = projectDir.filePath(PFF_XML_FILE_NAME);</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataFolder = projectDir.filePath(PFF_DATA_DIR);</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span> </div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    std::unique_ptr&lt;Object&gt; object(<span class="keyword">new</span> <a class="code hl_class" href="class_object.html">Object</a>);</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <span class="keywordtype">object</span>-&gt;setWorkingDir(intermeidatePath);</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    <span class="keywordtype">object</span>-&gt;setMainXMLFile(mainXMLPath);</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordtype">object</span>-&gt;setDataDir(dataFolder);</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span> </div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    <a class="code hl_class" href="class_status.html">Status</a> st = recoverObject(<span class="keywordtype">object</span>.get());</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <span class="keywordflow">if</span> (!st.ok())</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    {</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>        mError = st;</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    }</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>    <span class="comment">// Transfer ownership to the caller</span></div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    <span class="keywordflow">return</span> <span class="keywordtype">object</span>.release();</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>}</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span><a class="code hl_class" href="class_status.html">Status</a> FileManager::recoverObject(<a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>)</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>{</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>    <span class="comment">// Check whether the main.xml is fine, if not we should make a valid one.</span></div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    <span class="keywordtype">bool</span> mainXmlOK = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span> </div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(object-&gt;mainXMLFile());</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    mainXmlOK &amp;= file.exists();</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    mainXmlOK &amp;= file.open(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::ReadOnly</a>);</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    file.close();</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a> xmlDoc;</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    mainXmlOK &amp;= !!xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#setContent">setContent</a>(&amp;file);</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span> </div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocumenttype.html">QDomDocumentType</a> type = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#doctype">doctype</a>();</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    mainXmlOK &amp;= (type.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocumenttype.html#name">name</a>() == <span class="stringliteral">&quot;PencilDocument&quot;</span> || type.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocumenttype.html#name">name</a>() == <span class="stringliteral">&quot;MyObject&quot;</span>);</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span> </div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> root = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#documentElement">documentElement</a>();</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    mainXmlOK &amp;= (!root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#isNull">isNull</a>());</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span> </div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> objectTag = root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#firstChildElement">firstChildElement</a>(<span class="stringliteral">&quot;object&quot;</span>);</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    mainXmlOK &amp;= (!objectTag.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#isNull">isNull</a>());</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span> </div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    <span class="keywordflow">if</span> (mainXmlOK == <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    {</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>        <span class="comment">// the main.xml is broken, try to rebuild one</span></div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        <a class="code hl_function" href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">rebuildMainXML</a>(<span class="keywordtype">object</span>);</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span> </div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>        <span class="comment">// Load the newly built main.xml</span></div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(object-&gt;mainXMLFile());</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        file.open(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::ReadOnly</a>);</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#setContent">setContent</a>(&amp;file);</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>        root = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#documentElement">documentElement</a>();</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>        objectTag = root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#firstChildElement">firstChildElement</a>(<span class="stringliteral">&quot;object&quot;</span>);</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    }</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    loadPalette(<span class="keywordtype">object</span>);</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span> </div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>    <span class="keywordtype">bool</span> ok = loadObject(<span class="keywordtype">object</span>, root);</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    verifyObject(<span class="keywordtype">object</span>);</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span> </div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>    <span class="keywordflow">return</span> ok ? Status::OK : Status::FAIL;</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>}</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span> </div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno"><a class="line" href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">  971</a></span><a class="code hl_class" href="class_status.html">Status</a> <a class="code hl_function" href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">FileManager::rebuildMainXML</a>(<a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>)</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>{</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dataDir(object-&gt;dataDir());</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFiler;</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    nameFiler &lt;&lt; <span class="stringliteral">&quot;*.png&quot;</span> &lt;&lt; <span class="stringliteral">&quot;*.vec&quot;</span>;</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = dataDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#entryList-1">entryList</a>(nameFiler, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Files</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Readable</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#SortFlag-enum">QDir::Name</a>);</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span> </div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qmap.html">QMap&lt;int, QStringList&gt;</a> keyFrameGroups;</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>    <span class="comment">// grouping keyframe files by layers</span></div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; s : entries)</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>    {</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>        <span class="keywordtype">int</span> layerIndex = layerIndexFromFilename(s);</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        <span class="keywordflow">if</span> (layerIndex &gt; 0)</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>        {</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>            keyFrameGroups[layerIndex].append(s);</div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>        }</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>    }</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span> </div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>    <span class="comment">// build the new main XML file</span></div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> mainXMLPath = <span class="keywordtype">object</span>-&gt;mainXMLFile();</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(mainXMLPath);</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    <span class="keywordflow">if</span> (!file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qiodevice.html#open">open</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::WriteOnly</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::Text</a>))</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    {</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>        <span class="keywordflow">return</span> Status::ERROR_FILE_CANNOT_OPEN;</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>    }</div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span> </div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a> xmlDoc(<span class="stringliteral">&quot;PencilDocument&quot;</span>);</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> root = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;document&quot;</span>);</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomprocessinginstruction.html">QDomProcessingInstruction</a> encoding = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createProcessingInstruction">createProcessingInstruction</a>(<span class="stringliteral">&quot;xml&quot;</span>, <span class="stringliteral">&quot;version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;&quot;</span>);</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>    xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(encoding);</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(root);</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span> </div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <span class="comment">// save editor information</span></div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> projDataXml = saveProjectData(object-&gt;data(), xmlDoc);</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(projDataXml);</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span> </div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>    <span class="comment">// save object</span></div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> elemObject = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;object&quot;</span>);</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>    root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(elemObject);</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span> </div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> layerIndex : keyFrameGroups.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmap.html#keys">keys</a>())</div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>    {</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>        <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a>&amp; frames = keyFrameGroups.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmap.html#value">value</a>(layerIndex);</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>        <a class="code hl_class" href="class_status.html">Status</a> st = <a class="code hl_function" href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f">rebuildLayerXmlTag</a>(xmlDoc, elemObject, layerIndex, frames);</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    }</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span> </div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtextstream.html">QTextStream</a> fout(&amp;file);</div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#save">save</a>(fout, 2);</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    fout.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtextstream.html#flush">flush</a>();</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span> </div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>}</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"><a class="line" href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f"> 1033</a></span><a class="code hl_class" href="class_status.html">Status</a> <a class="code hl_function" href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f">FileManager::rebuildLayerXmlTag</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a>&amp; doc,</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>                                       <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a>&amp; elemObject,</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>                                       <span class="keyword">const</span> <span class="keywordtype">int</span> layerIndex,</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>                                       <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a>&amp; frames)</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>{</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    Q_ASSERT(frames.length() &gt; 0);</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span> </div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>    Layer::LAYER_TYPE type = frames[0].endsWith(<span class="stringliteral">&quot;.png&quot;</span>) ? Layer::BITMAP : Layer::VECTOR;</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span> </div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> elemLayer = doc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;layer&quot;</span>);</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;id&quot;</span>, layerIndex + 1); <span class="comment">// starts from 1, not 0.</span></div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;name&quot;</span>, recoverLayerName(type, layerIndex));</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;visibility&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;type&quot;</span>, type);</div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    elemObject.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(elemLayer);</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span> </div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; s : frames)</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>    {</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> framePos = framePosFromFilename(s);</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>        <span class="keywordflow">if</span> (framePos &lt; 0) { <span class="keywordflow">continue</span>; }</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span> </div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> elemFrame = doc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;image&quot;</span>);</div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>        elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;frame&quot;</span>, framePos);</div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;src&quot;</span>, s);</div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span> </div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        <span class="keywordflow">if</span> (type == Layer::BITMAP)</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        {</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>            <span class="comment">// Since we have no way to know the original img position</span></div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>            <span class="comment">// Put it at the top left corner of the default camera</span></div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>            elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;topLeftX&quot;</span>, -800);</div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>            elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;topLeftY&quot;</span>, -600);</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        }</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(elemFrame);</div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>    }</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    <span class="keywordflow">return</span> Status::OK;</div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>}</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span> </div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> FileManager::recoverLayerName(Layer::LAYER_TYPE type, <span class="keywordtype">int</span> index)</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>{</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>    <span class="keywordflow">switch</span> (type)</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    {</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>    <span class="keywordflow">case</span> Layer::BITMAP:</div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>        <span class="keywordflow">return</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Bitmap Layer %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(index);</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>    <span class="keywordflow">case</span> Layer::VECTOR:</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>        <span class="keywordflow">return</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Vector Layer %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(index);</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    <span class="keywordflow">case</span> Layer::SOUND:</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>        <span class="keywordflow">return</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Sound Layer %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(index);</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>        Q_ASSERT(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>    }</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>}</div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span><span class="keywordtype">int</span> FileManager::layerIndexFromFilename(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; filename)</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>{</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> tokens = filename.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring-obsolete.html#split-1">split</a>(<span class="stringliteral">&quot;.&quot;</span>); <span class="comment">// e.g., 001.019.png or 012.132.vec</span></div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>    <span class="keywordflow">if</span> (tokens.length() &gt;= 3) <span class="comment">// a correct file name must have 3 tokens</span></div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    {</div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>        <span class="keywordflow">return</span> tokens[0].toInt();</div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>    }</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>}</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span> </div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span><span class="keywordtype">int</span> FileManager::framePosFromFilename(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; filename)</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>{</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> tokens = filename.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring-obsolete.html#split-1">split</a>(<span class="stringliteral">&quot;.&quot;</span>); <span class="comment">// e.g., 001.019.png or 012.132.vec</span></div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    <span class="keywordflow">if</span> (tokens.length() &gt;= 3) <span class="comment">// a correct file name must have 3 tokens</span></div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    {</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>        <span class="keywordflow">return</span> tokens[1].toInt();</div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    }</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>}</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    <span class="keywordflow">if</span> (obj-&gt;getLayerCount() == 0) {</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>        obj-&gt;addNewBitmapLayer(); <span class="comment">// Must have at least 1 layer</span></div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>    }</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    </div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <span class="comment">// Current layer index</span></div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>    <span class="keywordtype">int</span> curLayer = obj-&gt;data()-&gt;getCurrentLayer();</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    curLayer = std::max(std::min(curLayer, obj-&gt;getLayerCount() - 1), 0); <span class="comment">// clamp to valid range</span></div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    obj-&gt;data()-&gt;setCurrentLayer(curLayer);</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span> </div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    <span class="comment">// Must have at least 1 camera layer</span></div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>    std::vector&lt;LayerCamera*&gt; camLayers = obj-&gt;getLayersByType&lt;<a class="code hl_class" href="class_layer_camera.html">LayerCamera</a>&gt;();</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>    <span class="keywordflow">if</span> (camLayers.empty())</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>    {</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>        obj-&gt;addNewCameraLayer();</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    }</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>}</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span> </div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> FileManager::searchForUnsavedProjects()</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>{</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> pencil2DTempDir = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#temp">QDir::temp</a>();</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <span class="keywordtype">bool</span> folderExists = pencil2DTempDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#cd">cd</a>(<span class="stringliteral">&quot;Pencil2D&quot;</span>);</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    <span class="keywordflow">if</span> (!folderExists)</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    {</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>        <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a>();</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>    }</div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span> </div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFilter(<span class="stringliteral">&quot;*_&quot;</span> PFF_TMP_DECOMPRESS_EXT <span class="stringliteral">&quot;_*&quot;</span>); <span class="comment">// match name pattern like &quot;Default_Y2xD_0a4e44e9&quot;</span></div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = pencil2DTempDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#entryList-1">entryList</a>(nameFilter, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Dirs</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Readable</a>);</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span> </div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> recoverables;</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; path : entries)</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>    {</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> fullPath = pencil2DTempDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(path);</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>        <span class="keywordflow">if</span> (isProjectRecoverable(fullPath))</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>        {</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>            qDebug() &lt;&lt; <span class="stringliteral">&quot;Found debris at&quot;</span> &lt;&lt; fullPath;</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>            recoverables.append(fullPath);</div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>        }</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    }</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>    <span class="keywordflow">return</span> recoverables;</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>}</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span><span class="keywordtype">bool</span> FileManager::isProjectRecoverable(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; projectFolder)</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>{</div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dir(projectFolder);</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>    <span class="keywordflow">if</span> (!dir.exists()) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span> </div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    <span class="comment">// There must be a subfolder called &quot;data&quot;</span></div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    <span class="keywordflow">if</span> (!dir.exists(<span class="stringliteral">&quot;data&quot;</span>)) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span> </div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>    <span class="keywordtype">bool</span> ok = dir.cd(<span class="stringliteral">&quot;data&quot;</span>);</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    Q_ASSERT(ok);</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span> </div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFiler;</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>    nameFiler &lt;&lt; <span class="stringliteral">&quot;*.png&quot;</span> &lt;&lt; <span class="stringliteral">&quot;*.vec&quot;</span> &lt;&lt; <span class="stringliteral">&quot;*.xml&quot;</span>;</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = dir.entryList(nameFiler, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Files</a>);</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span> </div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>    <span class="keywordflow">return</span> (entries.size() &gt; 0);</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>}</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span> </div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span><a class="code hl_class" href="class_object.html">Object</a>* FileManager::recoverUnsavedProject(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> intermeidatePath)</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>{</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;TODO: recover project&quot;</span> &lt;&lt; intermeidatePath;</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span> </div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> projectDir(intermeidatePath);</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> mainXMLPath = projectDir.filePath(PFF_XML_FILE_NAME);</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> dataFolder = projectDir.filePath(PFF_DATA_DIR);</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    std::unique_ptr&lt;Object&gt; object(<span class="keyword">new</span> <a class="code hl_class" href="class_object.html">Object</a>);</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    <span class="keywordtype">object</span>-&gt;setWorkingDir(intermeidatePath);</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordtype">object</span>-&gt;setMainXMLFile(mainXMLPath);</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    <span class="keywordtype">object</span>-&gt;setDataDir(dataFolder);</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <a class="code hl_class" href="class_status.html">Status</a> st = recoverObject(<span class="keywordtype">object</span>.get());</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    <span class="keywordflow">if</span> (!st.ok())</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    {</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>        mError = st;</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>    }</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    <span class="comment">// Transfer ownership to the caller</span></div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    <span class="keywordflow">return</span> <span class="keywordtype">object</span>.release();</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>}</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span> </div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><a class="code hl_class" href="class_status.html">Status</a> FileManager::recoverObject(<a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>)</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>{</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    <span class="comment">// Check whether the main.xml is fine, if not we should make a valid one.</span></div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>    <span class="keywordtype">bool</span> mainXmlOK = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span> </div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(object-&gt;mainXMLFile());</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    mainXmlOK &amp;= file.exists();</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    mainXmlOK &amp;= file.open(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::ReadOnly</a>);</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    file.close();</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span> </div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a> xmlDoc;</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>    mainXmlOK &amp;= !!xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#setContent">setContent</a>(&amp;file);</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span> </div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocumenttype.html">QDomDocumentType</a> type = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#doctype">doctype</a>();</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    mainXmlOK &amp;= (type.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocumenttype.html#name">name</a>() == <span class="stringliteral">&quot;PencilDocument&quot;</span> || type.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocumenttype.html#name">name</a>() == <span class="stringliteral">&quot;MyObject&quot;</span>);</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span> </div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> root = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#documentElement">documentElement</a>();</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    mainXmlOK &amp;= (!root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#isNull">isNull</a>());</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> objectTag = root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#firstChildElement">firstChildElement</a>(<span class="stringliteral">&quot;object&quot;</span>);</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    mainXmlOK &amp;= (!objectTag.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#isNull">isNull</a>());</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span> </div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    <span class="keywordflow">if</span> (mainXmlOK == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    {</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        <span class="comment">// the main.xml is broken, try to rebuild one</span></div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>        <a class="code hl_function" href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">rebuildMainXML</a>(<span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span> </div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        <span class="comment">// Load the newly built main.xml</span></div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(object-&gt;mainXMLFile());</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        file.open(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::ReadOnly</a>);</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>        xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#setContent">setContent</a>(&amp;file);</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>        root = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#documentElement">documentElement</a>();</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>        objectTag = root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#firstChildElement">firstChildElement</a>(<span class="stringliteral">&quot;object&quot;</span>);</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>    }</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>    loadPalette(<span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span> </div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    <span class="keywordtype">bool</span> ok = loadObject(<span class="keywordtype">object</span>, root);</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>    verifyObject(<span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    <span class="keywordflow">return</span> ok ? Status::OK : Status::FAIL;</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>}</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno"><a class="line" href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">  972</a></span><a class="code hl_class" href="class_status.html">Status</a> <a class="code hl_function" href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">FileManager::rebuildMainXML</a>(<a class="code hl_class" href="class_object.html">Object</a>* <span class="keywordtype">object</span>)</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>{</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a> dataDir(object-&gt;dataDir());</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> nameFiler;</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    nameFiler &lt;&lt; <span class="stringliteral">&quot;*.png&quot;</span> &lt;&lt; <span class="stringliteral">&quot;*.vec&quot;</span>;</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> entries = dataDir.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#entryList-1">entryList</a>(nameFiler, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Files</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#Filter-enum">QDir::Readable</a>, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qdir.html#SortFlag-enum">QDir::Name</a>);</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span> </div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qmap.html">QMap&lt;int, QStringList&gt;</a> keyFrameGroups;</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span> </div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>    <span class="comment">// grouping keyframe files by layers</span></div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; s : entries)</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>    {</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        <span class="keywordtype">int</span> layerIndex = layerIndexFromFilename(s);</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>        <span class="keywordflow">if</span> (layerIndex &gt; 0)</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>        {</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>            keyFrameGroups[layerIndex].append(s);</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>        }</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    }</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span> </div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    <span class="comment">// build the new main XML file</span></div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> mainXMLPath = <span class="keywordtype">object</span>-&gt;mainXMLFile();</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfile.html">QFile</a> file(mainXMLPath);</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <span class="keywordflow">if</span> (!file.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qiodevice.html#open">open</a>(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::WriteOnly</a> | <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qiodevice.html#OpenModeFlag-enum">QFile::Text</a>))</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>    {</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>        <span class="keywordflow">return</span> Status::ERROR_FILE_CANNOT_OPEN;</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>    }</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span> </div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a> xmlDoc(<span class="stringliteral">&quot;PencilDocument&quot;</span>);</div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> root = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;document&quot;</span>);</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomprocessinginstruction.html">QDomProcessingInstruction</a> encoding = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createProcessingInstruction">createProcessingInstruction</a>(<span class="stringliteral">&quot;xml&quot;</span>, <span class="stringliteral">&quot;version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;&quot;</span>);</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(encoding);</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>    xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(root);</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span> </div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>    <span class="comment">// save editor information</span></div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> projDataXml = saveProjectData(object-&gt;data(), xmlDoc);</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>    root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(projDataXml);</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span> </div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>    <span class="comment">// save object</span></div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> elemObject = xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;object&quot;</span>);</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>    root.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(elemObject);</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span> </div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">int</span> layerIndex : keyFrameGroups.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmap.html#keys">keys</a>())</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>    {</div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>        <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a>&amp; frames = keyFrameGroups.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qmap.html#value">value</a>(layerIndex);</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        <a class="code hl_class" href="class_status.html">Status</a> st = <a class="code hl_function" href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f">rebuildLayerXmlTag</a>(xmlDoc, elemObject, layerIndex, frames);</div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    }</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span> </div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qtextstream.html">QTextStream</a> fout(&amp;file);</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    xmlDoc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#save">save</a>(fout, 2);</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    fout.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qtextstream.html#flush">flush</a>();</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span> </div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>}</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"><a class="line" href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f"> 1034</a></span><a class="code hl_class" href="class_status.html">Status</a> <a class="code hl_function" href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f">FileManager::rebuildLayerXmlTag</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomdocument.html">QDomDocument</a>&amp; doc,</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>                                       <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a>&amp; elemObject,</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>                                       <span class="keyword">const</span> <span class="keywordtype">int</span> layerIndex,</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>                                       <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a>&amp; frames)</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>{</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    Q_ASSERT(frames.length() &gt; 0);</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span> </div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    Layer::LAYER_TYPE type = frames[0].endsWith(<span class="stringliteral">&quot;.png&quot;</span>) ? Layer::BITMAP : Layer::VECTOR;</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span> </div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> elemLayer = doc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;layer&quot;</span>);</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;id&quot;</span>, layerIndex + 1); <span class="comment">// starts from 1, not 0.</span></div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;name&quot;</span>, recoverLayerName(type, layerIndex));</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;visibility&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;type&quot;</span>, type);</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    elemObject.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(elemLayer);</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; s : frames)</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    {</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> framePos = framePosFromFilename(s);</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>        <span class="keywordflow">if</span> (framePos &lt; 0) { <span class="keywordflow">continue</span>; }</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span> </div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdomelement.html">QDomElement</a> elemFrame = doc.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomdocument.html#createElement">createElement</a>(<span class="stringliteral">&quot;image&quot;</span>);</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;frame&quot;</span>, framePos);</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>        elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;src&quot;</span>, s);</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span> </div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        <span class="keywordflow">if</span> (type == Layer::BITMAP)</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>        {</div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>            <span class="comment">// Since we have no way to know the original img position</span></div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>            <span class="comment">// Put it at the top left corner of the default camera</span></div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>            elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;topLeftX&quot;</span>, -800);</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>            elemFrame.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomelement.html#setAttribute">setAttribute</a>(<span class="stringliteral">&quot;topLeftY&quot;</span>, -600);</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        }</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>        elemLayer.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdomnode.html#appendChild">appendChild</a>(elemFrame);</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    }</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    <span class="keywordflow">return</span> Status::OK;</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>}</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span> </div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> FileManager::recoverLayerName(Layer::LAYER_TYPE type, <span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>{</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    <span class="keywordflow">switch</span> (type)</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>    {</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>    <span class="keywordflow">case</span> Layer::BITMAP:</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>        <span class="keywordflow">return</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Bitmap Layer %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(index);</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>    <span class="keywordflow">case</span> Layer::VECTOR:</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>        <span class="keywordflow">return</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Vector Layer %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(index);</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <span class="keywordflow">case</span> Layer::SOUND:</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>        <span class="keywordflow">return</span> <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qobject.html#tr">tr</a>(<span class="stringliteral">&quot;Sound Layer %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(index);</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>        Q_ASSERT(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    }</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>}</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span><span class="keywordtype">int</span> FileManager::layerIndexFromFilename(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; filename)</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>{</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> tokens = filename.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring-obsolete.html#split-1">split</a>(<span class="stringliteral">&quot;.&quot;</span>); <span class="comment">// e.g., 001.019.png or 012.132.vec</span></div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    <span class="keywordflow">if</span> (tokens.length() &gt;= 3) <span class="comment">// a correct file name must have 3 tokens</span></div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>    {</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>        <span class="keywordflow">return</span> tokens[0].toInt();</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>    }</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>}</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span> </div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span><span class="keywordtype">int</span> FileManager::framePosFromFilename(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; filename)</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>{</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>    <span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstringlist.html">QStringList</a> tokens = filename.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring-obsolete.html#split-1">split</a>(<span class="stringliteral">&quot;.&quot;</span>); <span class="comment">// e.g., 001.019.png or 012.132.vec</span></div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>    <span class="keywordflow">if</span> (tokens.length() &gt;= 3) <span class="comment">// a correct file name must have 3 tokens</span></div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>    {</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>        <span class="keywordflow">return</span> tokens[1].toInt();</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>    }</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>}</div>
 <div class="ttc" id="aclass_debug_details_html"><div class="ttname"><a href="class_debug_details.html">DebugDetails</a></div><div class="ttdef"><b>Definition:</b> <a href="pencilerror_8h_source.html#l00024">pencilerror.h:25</a></div></div>
-<div class="ttc" id="aclass_file_manager_html_a6fe0b2b9ef0a685d86ec8b89b280136d"><div class="ttname"><a href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">FileManager::rebuildMainXML</a></div><div class="ttdeci">Status rebuildMainXML(Object *object)</div><div class="ttdoc">Create a new main.xml based on the png/vec filenames left in the data folder.</div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8cpp_source.html#l00971">filemanager.cpp:971</a></div></div>
+<div class="ttc" id="aclass_file_manager_html_a6fe0b2b9ef0a685d86ec8b89b280136d"><div class="ttname"><a href="class_file_manager.html#a6fe0b2b9ef0a685d86ec8b89b280136d">FileManager::rebuildMainXML</a></div><div class="ttdeci">Status rebuildMainXML(Object *object)</div><div class="ttdoc">Create a new main.xml based on the png/vec filenames left in the data folder.</div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8cpp_source.html#l00972">filemanager.cpp:972</a></div></div>
 <div class="ttc" id="aclass_file_manager_html_a8347a90b87ccb73e1a1bc633c00c6c06"><div class="ttname"><a href="class_file_manager.html#a8347a90b87ccb73e1a1bc633c00c6c06">FileManager::copyDir</a></div><div class="ttdeci">Status copyDir(const QDir src, const QDir dst)</div><div class="ttdoc">Copy a directory to another directory recursively (depth-first).</div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8cpp_source.html#l00775">filemanager.cpp:775</a></div></div>
-<div class="ttc" id="aclass_file_manager_html_abbc4892c05647dbdbae932ec009cae1f"><div class="ttname"><a href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f">FileManager::rebuildLayerXmlTag</a></div><div class="ttdeci">Status rebuildLayerXmlTag(QDomDocument &amp;doc, QDomElement &amp;elemObject, const int layerIndex, const QStringList &amp;frames)</div><div class="ttdoc">Rebuild a layer xml tag.</div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8cpp_source.html#l01033">filemanager.cpp:1033</a></div></div>
+<div class="ttc" id="aclass_file_manager_html_abbc4892c05647dbdbae932ec009cae1f"><div class="ttname"><a href="class_file_manager.html#abbc4892c05647dbdbae932ec009cae1f">FileManager::rebuildLayerXmlTag</a></div><div class="ttdeci">Status rebuildLayerXmlTag(QDomDocument &amp;doc, QDomElement &amp;elemObject, const int layerIndex, const QStringList &amp;frames)</div><div class="ttdoc">Rebuild a layer xml tag.</div><div class="ttdef"><b>Definition:</b> <a href="filemanager_8cpp_source.html#l01034">filemanager.cpp:1034</a></div></div>
 <div class="ttc" id="aclass_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00029">layercamera.h:30</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_object_data_html"><div class="ttname"><a href="class_object_data.html">ObjectData</a></div><div class="ttdef"><b>Definition:</b> <a href="objectdata_8h_source.html#l00026">objectdata.h:27</a></div></div>
@@ -1286,10 +1287,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Apr 22 2026 02:32:45 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed Apr 22 2026 06:34:38 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 6d98160d16b86198033c1f52fb1f2be066a05c5c
+   based on revision d9ceb6c11fb599364305052b2ec3ba4898277c91
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
