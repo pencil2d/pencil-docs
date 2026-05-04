@@ -438,92 +438,110 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    mRotatedAngle = 0;</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">  332</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool::leavingThisTool</a>()</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="keywordtype">void</span> MoveTool::applyTransformationAndDeselect()</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>{</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <a class="code hl_function" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">TransformTool::leavingThisTool</a>();</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="keywordflow">if</span> (currentPaintableLayer())</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    {</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        applyTransformation();</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>}</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">  344</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">MoveTool::isActive</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordflow">return</span> mScribbleArea-&gt;isPointerInUse() &amp;&amp;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>           (mEditor-&gt;select()-&gt;somethingSelected() || mEditor-&gt;overlays()-&gt;getMoveMode() != MoveMode::NONE);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>}</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><a class="code hl_class" href="class_layer.html">Layer</a>* MoveTool::currentPaintableLayer()</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>{</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">if</span> (!layer-&gt;isPaintable())</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordflow">return</span> layer;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>}</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="comment">// We apply transform changes upon leaving a layer and deselect all</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    mScribbleArea-&gt;applyTransformedSelection();</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* currentLayer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keywordflow">if</span> (currentLayer-&gt;type() == Layer::VECTOR) {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keyword">auto</span> keyFrame = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_vector_image.html">VectorImage</a>*<span class="keyword">&gt;</span>(currentLayer-&gt;getLastKeyFrameAtPosition(mEditor-&gt;currentFrame()));</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        <span class="keywordflow">if</span> (keyFrame)</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            keyFrame-&gt;<a class="code hl_function" href="class_vector_image.html#a3155f5e0c0d597682f2fcea41cc1e5e2">deselectAll</a>();</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    mEditor-&gt;select()-&gt;resetSelectionProperties();</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    mRotatedAngle = 0;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>}</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">  350</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool::leavingThisTool</a>()</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>{</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <a class="code hl_function" href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">TransformTool::leavingThisTool</a>();</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keywordflow">if</span> (currentPaintableLayer())</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    {</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        applyTransformation();</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    }</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> MoveTool::cursor(MoveMode mode)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> cursorPixmap = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>(24, 24);</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    cursorPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255, 255, 255, 0));</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> cursorPainter(&amp;cursorPixmap);</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    cursorPainter.setRenderHint(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a>);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>}</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">  362</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">MoveTool::isActive</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keywordflow">return</span> mScribbleArea-&gt;isPointerInUse() &amp;&amp;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>           (mEditor-&gt;select()-&gt;somethingSelected() || mEditor-&gt;overlays()-&gt;getMoveMode() != MoveMode::NONE);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>}</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <span class="keywordflow">switch</span>(mode)</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    {</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">case</span> MoveMode::PERSP_LEFT:</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordflow">case</span> MoveMode::PERSP_RIGHT:</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">case</span> MoveMode::PERSP_MIDDLE:</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordflow">case</span> MoveMode::PERSP_SINGLE:</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    {</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-move.svg&quot;</span>));</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    }</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <span class="keywordflow">case</span> MoveMode::TOPLEFT:</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordflow">case</span> MoveMode::BOTTOMRIGHT:</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    {</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-diagonal-left.svg&quot;</span>));</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    }</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keywordflow">case</span> MoveMode::TOPRIGHT:</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keywordflow">case</span> MoveMode::BOTTOMLEFT:</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    {</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-diagonal-right.svg&quot;</span>));</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    }</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keywordflow">case</span> MoveMode::ROTATIONLEFT:</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <span class="keywordflow">case</span> MoveMode::ROTATIONRIGHT:</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <span class="keywordflow">case</span> MoveMode::ROTATION:</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-rotate.svg&quot;</span>));</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    }</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keywordflow">case</span> MoveMode::MIDDLE:</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="keywordflow">case</span> MoveMode::CENTER:</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    {</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-move.svg&quot;</span>));</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        <span class="keywordflow">return</span> <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CursorShape-enum">Qt::ArrowCursor</a>;</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    }</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    cursorPainter.end();</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>(cursorPixmap);</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>}</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><a class="code hl_class" href="class_layer.html">Layer</a>* MoveTool::currentPaintableLayer()</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>{</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <a class="code hl_class" href="class_layer.html">Layer</a>* layer = mEditor-&gt;layers()-&gt;currentLayer();</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordflow">if</span> (layer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordflow">if</span> (!layer-&gt;isPaintable())</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordflow">return</span> layer;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>}</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a> MoveTool::cursor(MoveMode mode)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a> cursorPixmap = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpixmap.html">QPixmap</a>(24, 24);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    cursorPixmap.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qpixmap.html#fill">fill</a>(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcolor.html">QColor</a>(255, 255, 255, 0));</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> cursorPainter(&amp;cursorPixmap);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    cursorPainter.setRenderHint(<a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qpainter.html#RenderHint-enum">QPainter::Antialiasing</a>);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <span class="keywordflow">switch</span>(mode)</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    {</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keywordflow">case</span> MoveMode::PERSP_LEFT:</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="keywordflow">case</span> MoveMode::PERSP_RIGHT:</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keywordflow">case</span> MoveMode::PERSP_MIDDLE:</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <span class="keywordflow">case</span> MoveMode::PERSP_SINGLE:</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-move.svg&quot;</span>));</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    }</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="keywordflow">case</span> MoveMode::TOPLEFT:</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keywordflow">case</span> MoveMode::BOTTOMRIGHT:</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    {</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-diagonal-left.svg&quot;</span>));</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    }</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    <span class="keywordflow">case</span> MoveMode::TOPRIGHT:</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <span class="keywordflow">case</span> MoveMode::BOTTOMLEFT:</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    {</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-diagonal-right.svg&quot;</span>));</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    }</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keywordflow">case</span> MoveMode::ROTATIONLEFT:</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <span class="keywordflow">case</span> MoveMode::ROTATIONRIGHT:</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordflow">case</span> MoveMode::ROTATION:</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    {</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-rotate.svg&quot;</span>));</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    }</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="keywordflow">case</span> MoveMode::MIDDLE:</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    <span class="keywordflow">case</span> MoveMode::CENTER:</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    {</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        cursorPainter.drawImage(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpoint.html">QPoint</a>(6,6),<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qimage.html">QImage</a>(<span class="stringliteral">&quot;://icons/general/cursor-move.svg&quot;</span>));</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    }</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <span class="keywordflow">return</span> <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CursorShape-enum">Qt::ArrowCursor</a>;</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    }</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    cursorPainter.end();</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    <span class="keywordflow">return</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qcursor.html">QCursor</a>(cursorPixmap);</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>}</div>
 <div class="ttc" id="aclass_base_tool_html_a1fa7f072b858ca73cd6515b099830a44"><div class="ttname"><a href="class_base_tool.html#a1fa7f072b858ca73cd6515b099830a44">BaseTool::leavingThisTool</a></div><div class="ttdeci">virtual bool leavingThisTool()</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="basetool_8cpp_source.html#l00091">basetool.cpp:91</a></div></div>
 <div class="ttc" id="aclass_editor_html_a95f7fac452454a5842d42c73df37d0f7"><div class="ttname"><a href="class_editor.html#a95f7fac452454a5842d42c73df37d0f7">Editor::frameModified</a></div><div class="ttdeci">void frameModified(int frameNumber)</div><div class="ttdoc">This should be emitted after modifying the frame content.</div></div>
-<div class="ttc" id="aclass_editor_html_a967de652d00ed7465dd02940f79dbf52"><div class="ttname"><a href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">Editor::updateFrame</a></div><div class="ttdeci">void updateFrame()</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l00852">editor.cpp:852</a></div></div>
+<div class="ttc" id="aclass_editor_html_a967de652d00ed7465dd02940f79dbf52"><div class="ttname"><a href="class_editor.html#a967de652d00ed7465dd02940f79dbf52">Editor::updateFrame</a></div><div class="ttdeci">void updateFrame()</div><div class="ttdoc">Will call update() and update the canvas Only call this directly If you need the cache to be intact a...</div><div class="ttdef"><b>Definition:</b> <a href="editor_8cpp_source.html#l00842">editor.cpp:842</a></div></div>
 <div class="ttc" id="aclass_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00029">layercamera.h:30</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:26</a></div></div>
 <div class="ttc" id="aclass_move_tool_html_a84466382ae84e8a6ad6efb411f255dbe"><div class="ttname"><a href="class_move_tool.html#a84466382ae84e8a6ad6efb411f255dbe">MoveTool::createVectorSelection</a></div><div class="ttdeci">void createVectorSelection(const QPointF &amp;pos, Qt::KeyboardModifiers keyMod, Layer *layer)</div><div class="ttdoc">MoveTool::createVectorSelection In vector the selection rectangle is based on the bounding box of the...</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00263">movetool.cpp:263</a></div></div>
-<div class="ttc" id="aclass_move_tool_html_a9111e41c91c9e11a5fbc658f0eb54893"><div class="ttname"><a href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">MoveTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00344">movetool.cpp:344</a></div></div>
-<div class="ttc" id="aclass_move_tool_html_aa5f590d9cc9f2de1dcd9f43cc6667b4a"><div class="ttname"><a href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool::leavingThisTool</a></div><div class="ttdeci">bool leavingThisTool() override</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00332">movetool.cpp:332</a></div></div>
+<div class="ttc" id="aclass_move_tool_html_a9111e41c91c9e11a5fbc658f0eb54893"><div class="ttname"><a href="class_move_tool.html#a9111e41c91c9e11a5fbc658f0eb54893">MoveTool::isActive</a></div><div class="ttdeci">bool isActive() const override</div><div class="ttdoc">Check if the tool is active.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00362">movetool.cpp:362</a></div></div>
+<div class="ttc" id="aclass_move_tool_html_aa5f590d9cc9f2de1dcd9f43cc6667b4a"><div class="ttname"><a href="class_move_tool.html#aa5f590d9cc9f2de1dcd9f43cc6667b4a">MoveTool::leavingThisTool</a></div><div class="ttdeci">bool leavingThisTool() override</div><div class="ttdoc">Will clean up active connections.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00350">movetool.cpp:350</a></div></div>
 <div class="ttc" id="aclass_move_tool_html_ab707da7eaa805f40803cdd307d82ca86"><div class="ttname"><a href="class_move_tool.html#ab707da7eaa805f40803cdd307d82ca86">MoveTool::storeClosestVectorCurve</a></div><div class="ttdeci">void storeClosestVectorCurve(const QPointF &amp;pos, Layer *layer)</div><div class="ttdoc">MoveTool::storeClosestVectorCurve stores the curves closest to the mouse position in mClosestCurves.</div><div class="ttdef"><b>Definition:</b> <a href="movetool_8cpp_source.html#l00312">movetool.cpp:312</a></div></div>
 <div class="ttc" id="aclass_pointer_event_html"><div class="ttname"><a href="class_pointer_event.html">PointerEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="pointerevent_8h_source.html#l00007">pointerevent.h:8</a></div></div>
 <div class="ttc" id="aclass_selection_manager_html"><div class="ttname"><a href="class_selection_manager.html">SelectionManager</a></div><div class="ttdoc">The SelectionManager class acts as the &quot;Brain&quot; of the selection system.</div><div class="ttdef"><b>Definition:</b> <a href="selectionmanager_8h_source.html#l00050">selectionmanager.h:51</a></div></div>
@@ -537,6 +555,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_undo_redo_manager_html_ac4da84bf1fb2e7de08323aca6cf8bd9d"><div class="ttname"><a href="class_undo_redo_manager.html#ac4da84bf1fb2e7de08323aca6cf8bd9d">UndoRedoManager::record</a></div><div class="ttdeci">void record(SAVESTATE_ID SaveStateId, const QString &amp;description)</div><div class="ttdoc">Records the given save state.</div><div class="ttdef"><b>Definition:</b> <a href="undoredomanager_8cpp_source.html#l00096">undoredomanager.cpp:96</a></div></div>
 <div class="ttc" id="aclass_undo_redo_manager_html_ad6966e550f2f1a9daf43b74fdf164cef"><div class="ttname"><a href="class_undo_redo_manager.html#ad6966e550f2f1a9daf43b74fdf164cef">UndoRedoManager::createState</a></div><div class="ttdeci">SAVESTATE_ID createState(UndoRedoRecordType recordType)</div><div class="ttdoc">Prepares and returns an save state with common data.</div><div class="ttdef"><b>Definition:</b> <a href="undoredomanager_8cpp_source.html#l00261">undoredomanager.cpp:261</a></div></div>
 <div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
+<div class="ttc" id="aclass_vector_image_html_a3155f5e0c0d597682f2fcea41cc1e5e2"><div class="ttname"><a href="class_vector_image.html#a3155f5e0c0d597682f2fcea41cc1e5e2">VectorImage::deselectAll</a></div><div class="ttdeci">void deselectAll()</div><div class="ttdoc">VectorImage::deselectAll.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00839">vectorimage.cpp:839</a></div></div>
 <div class="ttc" id="aclass_vector_image_html_a41fee4af53e153e13f37379665ac4b66"><div class="ttname"><a href="class_vector_image.html#a41fee4af53e153e13f37379665ac4b66">VectorImage::isAreaSelected</a></div><div class="ttdeci">bool isAreaSelected(int areaNumber)</div><div class="ttdoc">VectorImage::isAreaSelected.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00696">vectorimage.cpp:696</a></div></div>
 <div class="ttc" id="aclass_vector_image_html_a5046ddaeae625dd40dab3d4dc861b09c"><div class="ttname"><a href="class_vector_image.html#a5046ddaeae625dd40dab3d4dc861b09c">VectorImage::setSelected</a></div><div class="ttdeci">void setSelected(int curveNumber, bool YesOrNo)</div><div class="ttdoc">VectorImage::setSelected.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l00616">vectorimage.cpp:616</a></div></div>
 <div class="ttc" id="aclass_vector_image_html_aa754323c968e45f332d1d726e685a890"><div class="ttname"><a href="class_vector_image.html#aa754323c968e45f332d1d726e685a890">VectorImage::getLastAreaNumber</a></div><div class="ttdeci">int getLastAreaNumber(QPointF point)</div><div class="ttdoc">VectorImage::getLastAreaNumber.</div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8cpp_source.html#l02256">vectorimage.cpp:2256</a></div></div>
@@ -572,10 +591,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Wed Apr 29 2026 06:05:08 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Mon May 4 2026 07:30:03 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 5841f625b8680b86111af64be6a1235440cd8ff2
+   based on revision dc41b893e7823e667051285f0a820f45eb66b7ef
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
