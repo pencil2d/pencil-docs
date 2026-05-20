@@ -473,7 +473,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a> clipboardImage = clipboards()-&gt;getBitmapClipboard();</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <a class="code hl_class" href="class_vector_image.html">VectorImage</a> clipboardVectorImage = clipboards()-&gt;getVectorClipboard();</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        <span class="keywordflow">if</span> (currentLayer-&gt;type() == Layer::BITMAP &amp;&amp; clipboardImage.isLoaded()) {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        <span class="keywordflow">if</span> (currentLayer-&gt;type() == Layer::BITMAP &amp;&amp; clipboardImage.<a class="code hl_function" href="class_bitmap_image.html#a6660ace6b189ad88568825174dae1a32">isLoaded</a>()) {</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            pasteToCanvas(&amp;clipboardImage, mFrame);</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (currentLayer-&gt;type() == Layer::VECTOR &amp;&amp; !clipboardVectorImage.isEmpty()) {</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            pasteToCanvas(&amp;clipboardVectorImage, mFrame);</div>
@@ -1188,7 +1188,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span> </div>
 <div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span><span class="keywordtype">bool</span> Editor::canCopyBitmapImage(<a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage)<span class="keyword"> const</span></div>
 <div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    <span class="keywordflow">return</span> bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;isLoaded() &amp;&amp; !bitmapImage-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    <span class="keywordflow">return</span> bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;<a class="code hl_function" href="class_bitmap_image.html#a6660ace6b189ad88568825174dae1a32">isLoaded</a>() &amp;&amp; !bitmapImage-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
 <div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>}</div>
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span> </div>
 <div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span><span class="keywordtype">bool</span> Editor::canCopyVectorImage(<span class="keyword">const</span> <a class="code hl_class" href="class_vector_image.html">VectorImage</a>* vectorImage)<span class="keyword"> const</span></div>
@@ -1211,6 +1211,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>}</div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00027">bitmapimage.h:28</a></div></div>
+<div class="ttc" id="aclass_bitmap_image_html_a6660ace6b189ad88568825174dae1a32"><div class="ttname"><a href="class_bitmap_image.html#a6660ace6b189ad88568825174dae1a32">BitmapImage::isLoaded</a></div><div class="ttdeci">bool isLoaded() const override</div><div class="ttdoc">Checks whether the keyframe holds valid image data.</div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8cpp_source.html#l00148">bitmapimage.cpp:148</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html"><div class="ttname"><a href="class_clipboard_manager.html">ClipboardManager</a></div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8h_source.html#l00030">clipboardmanager.h:31</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a052dba92c152f75210a2ad4458a2dc84"><div class="ttname"><a href="class_clipboard_manager.html#a052dba92c152f75210a2ad4458a2dc84">ClipboardManager::getClipboardFrames</a></div><div class="ttdeci">std::map&lt; int, KeyFrame * &gt; getClipboardFrames()</div><div class="ttdoc">Return a copy of all clipboard frames keyed by their position.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00100">clipboardmanager.cpp:100</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a2359cfbac2a26c66f1dcd7ab46c74490"><div class="ttname"><a href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a></div><div class="ttdeci">void copySelectedFrames(const Layer *currentLayer)</div><div class="ttdoc">Copy selected keyframes of any given layer and remember its type.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00082">clipboardmanager.cpp:82</a></div></div>
@@ -1302,10 +1303,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon May 4 2026 07:50:47 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 20 2026 06:16:32 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3ed50cdd696e72315cedf30508d3572536c3876e
+   based on revision b8a30d7dfe4ff276bcca8087d5396d1507ed94fa
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

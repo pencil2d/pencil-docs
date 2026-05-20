@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Q_ASSERT(key-&gt;pos() &gt; 0);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    key-&gt;loadFile();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    key-&gt;<a class="code hl_function" href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">loadFile</a>();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">auto</span> it = mCacheFramesMap.find(key);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> keyExistsInPool = (it != mCacheFramesMap.end());</div>
@@ -239,7 +239,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> ActiveFramePool::unloadFrame(<a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* key)</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>{</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    mTotalUsedMemory -= key-&gt;memoryUsage();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    key-&gt;unloadFile();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    key-&gt;<a class="code hl_function" href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">unloadFile</a>();</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>}</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keywordtype">void</span> ActiveFramePool::recalcuateTotalUsedMemory()</div>
@@ -251,16 +251,18 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
+<div class="ttc" id="aclass_key_frame_html_a7fbb3bb8256c8ab33a18e6116d740519"><div class="ttname"><a href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">KeyFrame::unloadFile</a></div><div class="ttdeci">virtual void unloadFile()</div><div class="ttdoc">Unloads the data from memory in order to save memory.</div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00060">keyframe.h:60</a></div></div>
+<div class="ttc" id="aclass_key_frame_html_a90278ba98a02002d5b38a29f4fc71263"><div class="ttname"><a href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">KeyFrame::loadFile</a></div><div class="ttdeci">virtual void loadFile()</div><div class="ttdoc">Loads the backing file into memory if it exists, otherwise it does nothing.</div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00056">keyframe.h:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
 <!-- start footer part -->
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon May 4 2026 07:50:47 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 20 2026 06:16:31 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3ed50cdd696e72315cedf30508d3572536c3876e
+   based on revision b8a30d7dfe4ff276bcca8087d5396d1507ed94fa
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

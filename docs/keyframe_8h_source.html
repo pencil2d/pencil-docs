@@ -170,30 +170,35 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> removeEventListner(<a class="code hl_class" href="class_key_frame_event_listener.html">KeyFrameEventListener</a>*);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* clone()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadFile() {}</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> unloadFile() {}</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isLoaded()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">virtual</span> quint64 memoryUsage() { <span class="keywordflow">return</span> 0; }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">int</span> mFrame = -1;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">int</span> mLength = 1;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> mIsModified = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> mAttachedFileName;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::vector&lt;KeyFrameEventListener*&gt; mEventListeners;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_key_frame_event_listener.html">   70</a></span><span class="keyword">class </span><a class="code hl_class" href="class_key_frame_event_listener.html">KeyFrameEventListener</a></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onKeyFrameDestroy(<a class="code hl_class" href="class_key_frame.html">KeyFrame</a>*) = 0;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// KeyFrame_H</span></div>
-<div class="ttc" id="aclass_key_frame_event_listener_html"><div class="ttname"><a href="class_key_frame_event_listener.html">KeyFrameEventListener</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00070">keyframe.h:71</a></div></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">   56</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">loadFile</a>() {}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">   60</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">unloadFile</a>() {}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_key_frame.html#a43e5dd3fe81411c33df3e6d216946b1b">   64</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_key_frame.html#a43e5dd3fe81411c33df3e6d216946b1b">isLoaded</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">virtual</span> quint64 memoryUsage() { <span class="keywordflow">return</span> 0; }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> mFrame = -1;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> mLength = 1;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> mIsModified = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> mAttachedFileName;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::vector&lt;KeyFrameEventListener*&gt; mEventListeners;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_key_frame_event_listener.html">   77</a></span><span class="keyword">class </span><a class="code hl_class" href="class_key_frame_event_listener.html">KeyFrameEventListener</a></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onKeyFrameDestroy(<a class="code hl_class" href="class_key_frame.html">KeyFrame</a>*) = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">// KeyFrame_H</span></div>
+<div class="ttc" id="aclass_key_frame_event_listener_html"><div class="ttname"><a href="class_key_frame_event_listener.html">KeyFrameEventListener</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00077">keyframe.h:78</a></div></div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
+<div class="ttc" id="aclass_key_frame_html_a43e5dd3fe81411c33df3e6d216946b1b"><div class="ttname"><a href="class_key_frame.html#a43e5dd3fe81411c33df3e6d216946b1b">KeyFrame::isLoaded</a></div><div class="ttdeci">virtual bool isLoaded() const</div><div class="ttdoc">A check to ensure that the keyframe holds valid data.</div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00064">keyframe.h:64</a></div></div>
+<div class="ttc" id="aclass_key_frame_html_a7fbb3bb8256c8ab33a18e6116d740519"><div class="ttname"><a href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">KeyFrame::unloadFile</a></div><div class="ttdeci">virtual void unloadFile()</div><div class="ttdoc">Unloads the data from memory in order to save memory.</div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00060">keyframe.h:60</a></div></div>
+<div class="ttc" id="aclass_key_frame_html_a90278ba98a02002d5b38a29f4fc71263"><div class="ttname"><a href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">KeyFrame::loadFile</a></div><div class="ttdeci">virtual void loadFile()</div><div class="ttdoc">Loads the backing file into memory if it exists, otherwise it does nothing.</div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00056">keyframe.h:56</a></div></div>
 <div class="ttc" id="aqstring_html"><div class="ttname"><a href="https://doc.qt.io/qt-5/qstring.html">QString</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.6-->
@@ -201,10 +206,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon May 4 2026 07:50:47 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 20 2026 06:16:32 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3ed50cdd696e72315cedf30508d3572536c3876e
+   based on revision b8a30d7dfe4ff276bcca8087d5396d1507ed94fa
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

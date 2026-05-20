@@ -161,10 +161,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f202900e30a1fba37142b313717c0c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bitmap_image.html">BitmapImage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap_image.html#a2f202900e30a1fba37142b313717c0c2">clone</a> () const override</td></tr>
 <tr class="separator:a2f202900e30a1fba37142b313717c0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ae7e4419dc0b993946310add776b65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap_image.html#a45ae7e4419dc0b993946310add776b65">loadFile</a> () override</td></tr>
+<tr class="memdesc:a45ae7e4419dc0b993946310add776b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the backing image data from disk and into memory if it exists but hasn't been loaded yet.  <br /></td></tr>
 <tr class="separator:a45ae7e4419dc0b993946310add776b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5c63bb4ccefaea739646ee42da4ce8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap_image.html#ae5c63bb4ccefaea739646ee42da4ce8d">unloadFile</a> () override</td></tr>
+<tr class="memdesc:ae5c63bb4ccefaea739646ee42da4ce8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads the image data from memory if there's valid backing data on disk and the latest state has been stored.  <br /></td></tr>
 <tr class="separator:ae5c63bb4ccefaea739646ee42da4ce8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6660ace6b189ad88568825174dae1a32"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap_image.html#a6660ace6b189ad88568825174dae1a32">isLoaded</a> () const override</td></tr>
+<tr class="memdesc:a6660ace6b189ad88568825174dae1a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the keyframe holds valid image data.  <br /></td></tr>
 <tr class="separator:a6660ace6b189ad88568825174dae1a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0077e1a7b6eabc6aed7d38cefc1dfd0"><td class="memItemLeft" align="right" valign="top">quint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bitmap_image.html#af0077e1a7b6eabc6aed7d38cefc1dfd0">memoryUsage</a> () override</td></tr>
 <tr class="separator:af0077e1a7b6eabc6aed7d38cefc1dfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,10 +303,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e126d8ff6fceb2a8e7f17796368f970 inherit pub_methods_class_key_frame"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_key_frame.html">KeyFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_key_frame.html#a0e126d8ff6fceb2a8e7f17796368f970">clone</a> () const</td></tr>
 <tr class="separator:a0e126d8ff6fceb2a8e7f17796368f970 inherit pub_methods_class_key_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90278ba98a02002d5b38a29f4fc71263 inherit pub_methods_class_key_frame"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">loadFile</a> ()</td></tr>
+<tr class="memdesc:a90278ba98a02002d5b38a29f4fc71263 inherit pub_methods_class_key_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the backing file into memory if it exists, otherwise it does nothing.  <br /></td></tr>
 <tr class="separator:a90278ba98a02002d5b38a29f4fc71263 inherit pub_methods_class_key_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fbb3bb8256c8ab33a18e6116d740519 inherit pub_methods_class_key_frame"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">unloadFile</a> ()</td></tr>
+<tr class="memdesc:a7fbb3bb8256c8ab33a18e6116d740519 inherit pub_methods_class_key_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads the data from memory in order to save memory.  <br /></td></tr>
 <tr class="separator:a7fbb3bb8256c8ab33a18e6116d740519 inherit pub_methods_class_key_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e5dd3fe81411c33df3e6d216946b1b inherit pub_methods_class_key_frame"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_key_frame.html#a43e5dd3fe81411c33df3e6d216946b1b">isLoaded</a> () const</td></tr>
+<tr class="memdesc:a43e5dd3fe81411c33df3e6d216946b1b inherit pub_methods_class_key_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">A check to ensure that the keyframe holds valid data.  <br /></td></tr>
 <tr class="separator:a43e5dd3fe81411c33df3e6d216946b1b inherit pub_methods_class_key_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d9f8561559b8311dd26af6cbb358670 inherit pub_methods_class_key_frame"><td class="memItemLeft" align="right" valign="top">virtual quint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_key_frame.html#a7d9f8561559b8311dd26af6cbb358670">memoryUsage</a> ()</td></tr>
 <tr class="separator:a7d9f8561559b8311dd26af6cbb358670 inherit pub_methods_class_key_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -552,7 +558,7 @@ Private Attributes</h2></td></tr>
 <dd>
 isMinimallyBounded() == true </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00431">431</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00433">433</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -579,7 +585,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00106">106</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00116">116</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -606,7 +612,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00101">101</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00111">111</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -633,7 +639,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00102">102</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00112">112</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -660,7 +666,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00113">113</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00123">123</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -679,7 +685,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00826">826</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00828">828</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -699,7 +705,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00852">852</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00854">854</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +733,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00084">84</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00094">94</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -819,7 +825,7 @@ isMinimallyBounded() == true </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns true if the colors have a similarity below the tolerance level (i.e. if Eulcidian distance squared is &lt;= tolerance) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00146">146</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00156">156</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -849,7 +855,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00834">834</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00836">836</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -877,7 +883,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00070">70</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00080">80</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -905,7 +911,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00071">71</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00081">81</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +930,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00180">180</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00182">182</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -944,7 +950,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00185">185</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00187">187</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -992,7 +998,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00636">636</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00638">638</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1046,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00594">594</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00596">596</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1088,7 +1094,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00660">660</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00662">662</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1136,7 +1142,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00610">610</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00612">612</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1164,7 +1170,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00126">126</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00136">136</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1232,7 @@ isMinimallyBounded() == true </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l01027">1027</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l01029">1029</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1260,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00318">318</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00320">320</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1282,7 +1288,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00326">326</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00328">328</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1308,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00586">586</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00588">588</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1370,7 +1376,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00867">867</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00869">869</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1426,7 +1432,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00925">925</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00927">927</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1453,7 +1459,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00128">128</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00138">138</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1480,7 +1486,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00108">108</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00118">118</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1499,7 +1505,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00174">174</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00176">176</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1526,7 +1532,11 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_key_frame.html">KeyFrame</a>.</p>
+<p>Checks whether the keyframe holds valid image data. </p>
+<dl class="section note"><dt>Note</dt><dd>This does not verify that the data is loaded from a backing file. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the keyframe holds a valid image, otherwise returns <code>false</code> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_key_frame.html#a43e5dd3fe81411c33df3e6d216946b1b">KeyFrame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00148">148</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
@@ -1559,7 +1569,7 @@ isMinimallyBounded() == true </dd></dl>
 <p>A BitmapImage is minimally bounded if all edges contain at least 1 non-transparent pixel (alpha &gt; 0). In other words, the size of the image cannot be decreased without cropping visible data.</p>
 <dl class="section return"><dt>Returns</dt><dd>True only if bounds() is the minimal bounding box for the contained image. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00125">125</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00135">135</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1586,7 +1596,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00103">103</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00113">113</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1623,9 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_key_frame.html">KeyFrame</a>.</p>
+<p>Loads the backing image data from disk and into memory if it exists but hasn't been loaded yet. </p>
+
+<p>Reimplemented from <a class="el" href="class_key_frame.html#a90278ba98a02002d5b38a29f4fc71263">KeyFrame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00130">130</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
@@ -1644,7 +1656,7 @@ isMinimallyBounded() == true </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_key_frame.html">KeyFrame</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00153">153</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00155">155</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1676,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00236">236</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00238">238</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1692,7 +1704,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00063">63</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00073">73</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1732,7 +1744,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00162">162</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00164">164</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1774,7 +1786,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00167">167</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00169">169</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1804,7 +1816,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00195">195</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00197">197</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +1846,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00214">214</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00216">216</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1864,7 +1876,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00558">558</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00560">560</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +1896,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00563">563</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00565">565</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1911,7 +1923,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00104">104</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00114">114</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -1947,7 +1959,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00843">843</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00845">845</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -1995,7 +2007,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00707">707</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00709">709</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2043,7 +2055,7 @@ isMinimallyBounded() == true </dd></dl>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>BitmapImage::setCompositionModeBounds(BitmapImage, QPainter::CompositionMode) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00359">359</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00361">361</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2100,7 +2112,7 @@ isMinimallyBounded() == true </dd></dl>
 <p>This works baed on the principle that some minimal bounds can be determined solely by the minimal bounds of this and source, depending on the value of cm. Some composition modes only expand, or have no affect on the bounds.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The draw operation described by the arguments of this function needs to be called after this function is run, or the bounds will be out of sync. If mBounds is null, no draw operation needs to be performed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00386">386</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00388">388</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2148,7 +2160,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00127">127</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00137">137</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2184,7 +2196,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00571">571</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00573">573</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2214,7 +2226,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00576">576</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00578">578</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2241,7 +2253,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00109">109</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00119">119</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2268,7 +2280,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00105">105</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00115">115</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2295,7 +2307,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00099">99</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00109">109</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2322,7 +2334,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00100">100</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00110">110</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2352,7 +2364,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00243">243</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00245">245</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2390,7 +2402,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00065">65</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00075">75</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2420,7 +2432,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00280">280</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00282">282</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2456,7 +2468,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00261">261</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00263">263</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2494,7 +2506,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00068">68</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00078">78</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2521,7 +2533,9 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="class_key_frame.html">KeyFrame</a>.</p>
+<p>Unloads the image data from memory if there's valid backing data on disk and the latest state has been stored. </p>
+
+<p>Reimplemented from <a class="el" href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">KeyFrame</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00140">140</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
@@ -2560,7 +2574,7 @@ isMinimallyBounded() == true </dd></dl>
 </dl>
 <p>Sets this image's bounds to rectangle. Modifies mBounds and crops mImage. </p>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00298">298</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00300">300</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2587,7 +2601,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00107">107</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00117">117</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2607,7 +2621,7 @@ isMinimallyBounded() == true </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00789">789</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8cpp_source.html#l00791">791</a> of file <a class="el" href="bitmapimage_8cpp_source.html">bitmapimage.cpp</a>.</p>
 
 </div>
 </div>
@@ -2664,7 +2678,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00191">191</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00201">201</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2688,7 +2702,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00192">192</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00202">202</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2728,7 +2742,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00190">190</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00200">200</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2752,7 +2766,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00184">184</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00194">194</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2776,7 +2790,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00188">188</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00198">198</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2800,7 +2814,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00183">183</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00193">193</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2825,7 +2839,7 @@ isMinimallyBounded() == true </dd></dl>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd>isMinimallyBounded() </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00187">187</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00197">197</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2849,7 +2863,7 @@ isMinimallyBounded() == true </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00194">194</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bitmapimage_8h_source.html#l00204">204</a> of file <a class="el" href="bitmapimage_8h_source.html">bitmapimage.h</a>.</p>
 
 </div>
 </div>
@@ -2895,10 +2909,10 @@ isMinimallyBounded() == true </dd></dl>
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon May 4 2026 07:50:47 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 20 2026 06:16:32 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3ed50cdd696e72315cedf30508d3572536c3876e
+   based on revision b8a30d7dfe4ff276bcca8087d5396d1507ed94fa
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

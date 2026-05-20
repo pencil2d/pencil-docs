@@ -364,7 +364,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage = bitmapLayer-&gt;getBitmapImageAtFrame(nFrame);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (bitmapImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    bitmapImage-&gt;loadFile(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    bitmapImage-&gt;<a class="code hl_function" href="class_bitmap_image.html#a45ae7e4419dc0b993946310add776b65">loadFile</a>(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qpainter.html">QPainter</a> onionSkinPainter;</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_function" href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">initializePainter</a>(onionSkinPainter, mOnionSkinPixmap, blitRect);</div>
@@ -421,7 +421,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* paintedImage = bitmapLayer-&gt;getLastBitmapImageAtFrame(mFrameNumber);</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordflow">if</span> (paintedImage == <span class="keyword">nullptr</span>) { <span class="keywordflow">return</span>; }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    paintedImage-&gt;loadFile(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    paintedImage-&gt;<a class="code hl_function" href="class_bitmap_image.html#a45ae7e4419dc0b993946310add776b65">loadFile</a>(); <span class="comment">// Critical! force the BitmapImage to load the image</span></div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> isDrawing = mTiledBuffer &amp;&amp; !mTiledBuffer-&gt;bounds().<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrect.html#isEmpty">isEmpty</a>();</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
@@ -552,6 +552,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    }</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>}</div>
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00027">bitmapimage.h:28</a></div></div>
+<div class="ttc" id="aclass_bitmap_image_html_a45ae7e4419dc0b993946310add776b65"><div class="ttname"><a href="class_bitmap_image.html#a45ae7e4419dc0b993946310add776b65">BitmapImage::loadFile</a></div><div class="ttdeci">void loadFile() override</div><div class="ttdoc">Loads the backing image data from disk and into memory if it exists but hasn't been loaded yet.</div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8cpp_source.html#l00130">bitmapimage.cpp:130</a></div></div>
 <div class="ttc" id="aclass_canvas_painter_html_a394a53b7766671386ec3af87358a07f9"><div class="ttname"><a href="class_canvas_painter.html#a394a53b7766671386ec3af87358a07f9">CanvasPainter::initializePainter</a></div><div class="ttdeci">void initializePainter(QPainter &amp;painter, QPaintDevice &amp;device, const QRect &amp;blitRect)</div><div class="ttdoc">CanvasPainter::initializePainter Enriches the painter with a context and sets it's initial matrix.</div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8cpp_source.html#l00127">canvaspainter.cpp:127</a></div></div>
 <div class="ttc" id="aclass_canvas_painter_html_ae2ab50dda3f9ad9b8f0f5cd8790a062f"><div class="ttname"><a href="class_canvas_painter.html#ae2ab50dda3f9ad9b8f0f5cd8790a062f">CanvasPainter::paintCurrentFrame</a></div><div class="ttdeci">void paintCurrentFrame(QPainter &amp;painter, const QRect &amp;blitRect, int startLayer, int endLayer)</div><div class="ttdoc">Paints layers within the specified range for the current frame.</div><div class="ttdef"><b>Definition:</b> <a href="canvaspainter_8cpp_source.html#l00414">canvaspainter.cpp:414</a></div></div>
 <div class="ttc" id="aclass_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00025">layerbitmap.h:26</a></div></div>
@@ -607,10 +608,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon May 4 2026 07:50:47 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 20 2026 06:16:31 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3ed50cdd696e72315cedf30508d3572536c3876e
+   based on revision b8a30d7dfe4ff276bcca8087d5396d1507ed94fa
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->

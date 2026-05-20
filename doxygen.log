@@ -9,39 +9,39 @@ Searching for dia files...
 Searching for files to exclude
 Searching INPUT for files to process...
 Searching for files in directory /home/runner/work/pencil/pencil/app
-Searching for files in directory /home/runner/work/pencil/pencil/app/src
 Searching for files in directory /home/runner/work/pencil/pencil/app/translations
+Searching for files in directory /home/runner/work/pencil/pencil/app/src
 Searching for files in directory /home/runner/work/pencil/pencil/app/ui
 Searching for files in directory /home/runner/work/pencil/pencil/app/data
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/resources
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/background
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/tools
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/timeline
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/controls
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/misc
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/onion
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/window
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/preferences
-Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/menubar
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/display
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/misc
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/timeline
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/preferences
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/window
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/menubar
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/onion
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/controls
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/themes/playful/tools
 Searching for files in directory /home/runner/work/pencil/pencil/app/data/icons/general
+Searching for files in directory /home/runner/work/pencil/pencil/app/data/background
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/structure
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/util
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/win32
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/macosx
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/linux
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/macosx
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/external/win32
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/vector
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/structure
+Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/managers
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/interface
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/tool
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/util
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/managers
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap
-Searching for files in directory /home/runner/work/pencil/pencil/core_lib/src/graphics/vector
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/resources
 Searching for files in directory /home/runner/work/pencil/pencil/core_lib/data/icons
@@ -979,9 +979,9 @@ Generating code for file core_lib/src/tool/pentool.h...
 Generating code for file core_lib/src/tool/polylinetool.cpp...
 Generating code for file core_lib/src/too/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapbucket.h:52: warning: The following parameter of BitmapBucket::allowFill(const QPoint &checkPoint, const QRgb &checkColor) const is not documented:
   parameter 'checkColor'
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1012: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1012: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
-/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1012: warning: The following parameters of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand) are not documented:
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1014: warning: argument 'bitmapImage' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1014: warning: argument 'searchColor' of command @param is not found in the argument list of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand)
+/home/runner/work/pencil/pencil/core_lib/src/graphics/bitmap/bitmapimage.cpp:1014: warning: The following parameters of BitmapImage::expandFill(bool *fillPixels, const QRect &searchBounds, const QRect &maxBounds, int expand) are not documented:
   parameter 'fillPixels'
   parameter 'searchBounds'
   parameter 'maxBounds'
@@ -1811,6 +1811,6 @@ Patching output file 176/179
 Patching output file 177/179
 Patching output file 178/179
 Patching output file 179/179
-type lookup cache used 18891/65536 hits=135047 misses=20054
-symbol lookup cache used 19304/65536 hits=216870 misses=19304
+type lookup cache used 18881/65536 hits=135053 misses=20044
+symbol lookup cache used 19301/65536 hits=216858 misses=19301
 finished...

@@ -174,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">   56</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a>(<a class="code hl_class" href="class_bitmap_image.html">BitmapImage</a>* bitmapImage, <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qrectf.html">QRectF</a> selectionRect)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_function" href="class_clipboard_manager.html#a64301ff651afffa8d830a29440c3717b">resetStates</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    Q_ASSERT(bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;isLoaded());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    Q_ASSERT(bitmapImage != <span class="keyword">nullptr</span> &amp;&amp; bitmapImage-&gt;<a class="code hl_function" href="class_bitmap_image.html#a6660ace6b189ad88568825174dae1a32">isLoaded</a>());</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (!selectionRect.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qrectf.html#isEmpty">isEmpty</a>())</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
@@ -208,7 +208,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_class" href="class_key_frame.html">KeyFrame</a>* newKeyframe = keyframe-&gt;clone();</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">// Unload unmodified keyframes now as they won&#39;t ever get unloaded</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="comment">// by activeframepool while in clipboard manager.</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        newKeyframe-&gt;unloadFile();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        newKeyframe-&gt;<a class="code hl_function" href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">unloadFile</a>();</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        mFrames.insert(std::make_pair(keyframe-&gt;pos(), newKeyframe));</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
@@ -240,6 +240,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
 <div class="ttc" id="aclass_bitmap_image_html"><div class="ttname"><a href="class_bitmap_image.html">BitmapImage</a></div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8h_source.html#l00027">bitmapimage.h:28</a></div></div>
+<div class="ttc" id="aclass_bitmap_image_html_a6660ace6b189ad88568825174dae1a32"><div class="ttname"><a href="class_bitmap_image.html#a6660ace6b189ad88568825174dae1a32">BitmapImage::isLoaded</a></div><div class="ttdeci">bool isLoaded() const override</div><div class="ttdoc">Checks whether the keyframe holds valid image data.</div><div class="ttdef"><b>Definition:</b> <a href="bitmapimage_8cpp_source.html#l00148">bitmapimage.cpp:148</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a052dba92c152f75210a2ad4458a2dc84"><div class="ttname"><a href="class_clipboard_manager.html#a052dba92c152f75210a2ad4458a2dc84">ClipboardManager::getClipboardFrames</a></div><div class="ttdeci">std::map&lt; int, KeyFrame * &gt; getClipboardFrames()</div><div class="ttdoc">Return a copy of all clipboard frames keyed by their position.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00100">clipboardmanager.cpp:100</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a2359cfbac2a26c66f1dcd7ab46c74490"><div class="ttname"><a href="class_clipboard_manager.html#a2359cfbac2a26c66f1dcd7ab46c74490">ClipboardManager::copySelectedFrames</a></div><div class="ttdeci">void copySelectedFrames(const Layer *currentLayer)</div><div class="ttdoc">Copy selected keyframes of any given layer and remember its type.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00082">clipboardmanager.cpp:82</a></div></div>
 <div class="ttc" id="aclass_clipboard_manager_html_a246ab78619269a6b36f0eb54e43111ad"><div class="ttname"><a href="class_clipboard_manager.html#a246ab78619269a6b36f0eb54e43111ad">ClipboardManager::copyVectorImage</a></div><div class="ttdeci">void copyVectorImage(const VectorImage *vectorImage)</div><div class="ttdoc">Copy the entire vector image to clipboard, this operation does not yet support partial selections.</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00073">clipboardmanager.cpp:73</a></div></div>
@@ -247,6 +248,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="ttc" id="aclass_clipboard_manager_html_ad9bd299496b467c084f89d1bff13e2bb"><div class="ttname"><a href="class_clipboard_manager.html#ad9bd299496b467c084f89d1bff13e2bb">ClipboardManager::copyBitmapImage</a></div><div class="ttdeci">void copyBitmapImage(BitmapImage *image, QRectF selectionRect)</div><div class="ttdoc">Copy bitmap image to clipboard and save its latest position Additionally only a part of the image wil...</div><div class="ttdef"><b>Definition:</b> <a href="clipboardmanager_8cpp_source.html#l00056">clipboardmanager.cpp:56</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00070">editor.h:71</a></div></div>
 <div class="ttc" id="aclass_key_frame_html"><div class="ttname"><a href="class_key_frame.html">KeyFrame</a></div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00029">keyframe.h:30</a></div></div>
+<div class="ttc" id="aclass_key_frame_html_a7fbb3bb8256c8ab33a18e6116d740519"><div class="ttname"><a href="class_key_frame.html#a7fbb3bb8256c8ab33a18e6116d740519">KeyFrame::unloadFile</a></div><div class="ttdeci">virtual void unloadFile()</div><div class="ttdoc">Unloads the data from memory in order to save memory.</div><div class="ttdef"><b>Definition:</b> <a href="keyframe_8h_source.html#l00060">keyframe.h:60</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_layer_html_a6aad42843245219bcc33f8b5a36d9fe6"><div class="ttname"><a href="class_layer.html#a6aad42843245219bcc33f8b5a36d9fe6">Layer::selectedKeyFramesPositions</a></div><div class="ttdeci">QList&lt; int &gt; selectedKeyFramesPositions() const</div><div class="ttdoc">Get selected keyframe positions sorted by position.</div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00062">layer.h:62</a></div></div>
 <div class="ttc" id="aclass_vector_image_html"><div class="ttname"><a href="class_vector_image.html">VectorImage</a></div><div class="ttdef"><b>Definition:</b> <a href="vectorimage_8h_source.html#l00031">vectorimage.h:32</a></div></div>
@@ -273,10 +275,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Mon May 4 2026 07:50:47 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Wed May 20 2026 06:16:32 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 3ed50cdd696e72315cedf30508d3572536c3876e
+   based on revision b8a30d7dfe4ff276bcca8087d5396d1507ed94fa
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
