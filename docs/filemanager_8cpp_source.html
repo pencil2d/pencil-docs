@@ -176,13 +176,13 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> fileFormat = <span class="stringliteral">&quot;Project format: %1&quot;</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (!isArchive)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.pcl&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.&quot;</span> PFF_OLD_EXTENSION);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> (!QFile::copy(sFileName, strMainXMLFile))</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            dd &lt;&lt; <span class="stringliteral">&quot;Failed to copy main xml file&quot;</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_class" href="class_status.html">Status</a> st = <a class="code hl_function" href="class_file_manager.html#a8347a90b87ccb73e1a1bc633c00c6c06">copyDir</a>(sFileName + <span class="stringliteral">&quot;.&quot;</span> + PFF_OLD_DATA_DIR, strDataFolder);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_class" href="class_status.html">Status</a> st = <a class="code hl_function" href="class_file_manager.html#a8347a90b87ccb73e1a1bc633c00c6c06">copyDir</a>(sFileName + <span class="stringliteral">&quot;.&quot;</span> PFF_OLD_DATA_DIR, strDataFolder);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (!st.ok())</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            dd.collect(st.details());</div>
@@ -193,7 +193,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> workingDirPath = obj-&gt;workingDir();</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        dd &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Working dir: %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(workingDirPath);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.pclx&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.&quot;</span> PFF_EXTENSION);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_class" href="class_status.html">Status</a> sanityCheck = MiniZ::sanityCheck(sFileName);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
@@ -345,7 +345,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">bool</span> FileManager::isArchiveFormat(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; fileName)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a>(fileName).suffix().compare(PFF_BIG_LETTER_EXTENSION, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CaseSensitivity-enum">Qt::CaseInsensitive</a>) != 0) {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qfileinfo.html">QFileInfo</a>(fileName).suffix().compare(PFF_EXTENSION, <a class="code hl_variableRef" href="https://doc.qt.io/qt-5/qt.html#CaseSensitivity-enum">Qt::CaseInsensitive</a>) != 0) {</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -407,17 +407,17 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordtype">bool</span> isArchive = isArchiveFormat(sFileName);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">if</span> (!isArchive)</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.pcl&quot;</span>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.&quot;</span> PFF_OLD_EXTENSION);</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        sMainXMLFile = sFileName;</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        sDataFolder = sMainXMLFile + <span class="stringliteral">&quot;.&quot;</span> + PFF_OLD_DATA_DIR;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        sDataFolder = sMainXMLFile + <span class="stringliteral">&quot;.&quot;</span> PFF_OLD_DATA_DIR;</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    }</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    {</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        sTempWorkingFolder = <span class="keywordtype">object</span>-&gt;workingDir();</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        dd &lt;&lt; <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>(<span class="stringliteral">&quot;Working dir: %1&quot;</span>).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(sTempWorkingFolder);</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.pclx&quot;</span>);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        dd &lt;&lt; fileFormat.<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#arg-1">arg</a>(<span class="stringliteral">&quot;.&quot;</span> PFF_EXTENSION);</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        Q_ASSERT(<a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(sTempWorkingFolder).exists());</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
@@ -733,7 +733,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    <span class="keywordtype">int</span> backupCount = countExistingBackups(fileName) + 1; <span class="comment">// start index 1</span></div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> countStr = <a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qstring.html#number-1">QString::number</a>(backupCount);</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sBackupFile = baseName + <span class="stringliteral">&quot;.&quot;</span> + PFF_BACKUP_IDENTIFIER + countStr + <span class="stringliteral">&quot;.&quot;</span> + fileInfo.suffix();</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sBackupFile = baseName + <span class="stringliteral">&quot;.&quot;</span> PFF_BACKUP_IDENTIFIER + countStr + <span class="stringliteral">&quot;.&quot;</span> + fileInfo.suffix();</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> sBackupFileFullPath = <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qdir.html">QDir</a>(fileInfo.absolutePath()).<a class="code hl_functionRef" href="https://doc.qt.io/qt-5/qdir.html#filePath">filePath</a>(sBackupFile);</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>    <span class="keywordtype">bool</span> ok = QFile::copy(fileInfo.absoluteFilePath(), sBackupFileFullPath);</div>
@@ -1287,10 +1287,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Fri Oct 2 2026 21:26:09 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Fri Oct 16 2026 20:19:01 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 9ee4e1c87bf8f75913c684b083e8ff1317941b60
+   based on revision 0ceb25465c5dce776d3a9d37be787354dadc218d
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
