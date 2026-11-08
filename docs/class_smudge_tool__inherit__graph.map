@@ -1,6 +1,6 @@
 <map id="SmudgeTool" name="SmudgeTool">
-<area shape="rect" id="node1" title=" " alt="" coords="5,241,129,272"/>
-<area shape="rect" id="node2" href="$class_stroke_tool.html" title=" " alt="" coords="13,163,121,193"/>
-<area shape="rect" id="node3" href="$class_base_tool.html" title=" " alt="" coords="20,84,115,115"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="23,5,112,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,256,129,292"/>
+<area shape="rect" id="node2" href="$class_stroke_tool.html" title=" " alt="" coords="13,173,121,208"/>
+<area shape="rect" id="node3" href="$class_base_tool.html" title=" " alt="" coords="20,89,114,125"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="23,5,111,41"/>
 </map>

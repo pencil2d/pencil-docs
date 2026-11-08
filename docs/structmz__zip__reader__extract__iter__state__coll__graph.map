@@ -1,8 +1,8 @@
 <map id="mz_zip_reader_extract_iter_state" name="mz_zip_reader_extract_iter_state">
-<area shape="rect" id="node1" title=" " alt="" coords="223,361,427,412"/>
-<area shape="rect" id="node2" href="$structmz__zip__archive.html" title=" " alt="" coords="49,263,193,293"/>
-<area shape="rect" id="node3" href="$structmz__zip__internal__state__tag.html" title=" " alt="" coords="5,164,236,195"/>
-<area shape="rect" id="node4" href="$structmz__zip__array.html" title=" " alt="" coords="57,5,185,36"/>
-<area shape="rect" id="node5" href="$structmz__zip__archive__file__stat.html" title=" " alt="" coords="217,263,432,293"/>
-<area shape="rect" id="node6" href="$structtinfl__decompressor__tag.html" title=" " alt="" coords="457,263,670,293"/>
+<area shape="rect" id="node1" title=" " alt="" coords="221,406,424,467"/>
+<area shape="rect" id="node2" href="$structmz__zip__archive.html" title=" " alt="" coords="48,298,192,333"/>
+<area shape="rect" id="node3" href="$structmz__zip__internal__state__tag.html" title=" " alt="" coords="5,189,235,225"/>
+<area shape="rect" id="node4" href="$structmz__zip__array.html" title=" " alt="" coords="56,5,184,41"/>
+<area shape="rect" id="node5" href="$structmz__zip__archive__file__stat.html" title=" " alt="" coords="216,298,429,333"/>
+<area shape="rect" id="node6" href="$structtinfl__decompressor__tag.html" title=" " alt="" coords="454,298,666,333"/>
 </map>

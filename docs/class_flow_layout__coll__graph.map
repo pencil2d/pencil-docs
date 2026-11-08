@@ -1,7 +1,7 @@
 <map id="FlowLayout" name="FlowLayout">
-<area shape="rect" id="node1" title=" " alt="" coords="191,184,306,215"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qlayout.html" title=" " alt="" coords="71,85,163,116"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,5,95,36"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qlayoutitem.html" title=" " alt="" coords="119,5,248,36"/>
-<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="187,85,401,116"/>
+<area shape="rect" id="node1" title=" " alt="" coords="146,199,260,235"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qlayout.html" title=" " alt="" coords="69,90,160,126"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,5,94,41"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qlayoutitem.html" title=" " alt="" coords="117,5,246,41"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="185,90,399,126"/>
 </map>

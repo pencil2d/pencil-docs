@@ -1,13 +1,13 @@
 <map id="OverlayPainter" name="OverlayPainter">
-<area shape="rect" id="node1" title=" " alt="" coords="315,401,459,432"/>
-<area shape="rect" id="node2" href="$struct_overlay_painter_options.html" title=" " alt="" coords="5,303,215,333"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="66,144,154,175"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtransform.html" title=" " alt="" coords="239,303,359,333"/>
-<area shape="rect" id="node5" href="$class_layer_camera.html" title=" " alt="" coords="410,303,541,333"/>
-<area shape="rect" id="node6" href="$class_layer.html" title=" " alt="" coords="349,144,415,175"/>
-<area shape="rect" id="node7" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="277,5,361,36"/>
-<area shape="rect" id="node8" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="386,5,501,36"/>
-<area shape="rect" id="node9" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qrect.html" title=" " alt="" coords="440,144,511,175"/>
-<area shape="rect" id="node10" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qcolor.html" title=" " alt="" coords="543,144,623,175"/>
-<area shape="rect" id="node11" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpalette.html" title=" " alt="" coords="590,303,683,333"/>
+<area shape="rect" id="node1" title=" " alt="" coords="312,456,456,492"/>
+<area shape="rect" id="node2" href="$struct_overlay_painter_options.html" title=" " alt="" coords="5,348,214,383"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="66,164,153,200"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtransform.html" title=" " alt="" coords="238,348,357,383"/>
+<area shape="rect" id="node5" href="$class_layer_camera.html" title=" " alt="" coords="407,348,537,383"/>
+<area shape="rect" id="node6" href="$class_layer.html" title=" " alt="" coords="347,164,413,200"/>
+<area shape="rect" id="node7" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qstring.html" title=" " alt="" coords="277,5,360,41"/>
+<area shape="rect" id="node8" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qlist.html" title=" " alt="" coords="385,5,498,41"/>
+<area shape="rect" id="node9" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qrect.html" title=" " alt="" coords="437,164,507,200"/>
+<area shape="rect" id="node10" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qcolor.html" title=" " alt="" coords="540,164,620,200"/>
+<area shape="rect" id="node11" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpalette.html" title=" " alt="" coords="587,348,680,383"/>
 </map>

@@ -1,15 +1,15 @@
 <map id="BaseManager" name="BaseManager">
-<area shape="rect" id="node1" title=" " alt="" coords="143,279,277,309"/>
-<area shape="rect" id="node3" href="$class_clipboard_manager.html" title=" " alt="" coords="331,5,507,36"/>
-<area shape="rect" id="node4" href="$class_color_manager.html" title=" " alt="" coords="349,60,489,91"/>
-<area shape="rect" id="node5" href="$class_layer_manager.html" title=" " alt="" coords="348,115,489,145"/>
-<area shape="rect" id="node6" href="$class_overlay_manager.html" title=" " alt="" coords="339,169,498,200"/>
-<area shape="rect" id="node7" href="$class_playback_manager.html" title=" " alt="" coords="335,224,503,255"/>
-<area shape="rect" id="node8" href="$class_preference_manager.html" title=" " alt="" coords="325,279,512,309"/>
-<area shape="rect" id="node9" href="$class_selection_manager.html" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="333,333,504,364"/>
-<area shape="rect" id="node10" href="$class_sound_manager.html" title=" " alt="" coords="343,388,494,419"/>
-<area shape="rect" id="node11" href="$class_tool_manager.html" title=" " alt="" coords="353,443,484,473"/>
-<area shape="rect" id="node12" href="$class_undo_redo_manager.html" title=" " alt="" coords="326,497,511,528"/>
-<area shape="rect" id="node13" href="$class_view_manager.html" title=" " alt="" coords="351,552,486,583"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,279,95,309"/>
+<area shape="rect" id="node1" title=" " alt="" coords="142,305,276,341"/>
+<area shape="rect" id="node3" href="$class_clipboard_manager.html" title=" " alt="" coords="329,5,504,41"/>
+<area shape="rect" id="node4" href="$class_color_manager.html" title=" " alt="" coords="347,65,486,101"/>
+<area shape="rect" id="node5" href="$class_layer_manager.html" title=" " alt="" coords="346,125,487,161"/>
+<area shape="rect" id="node6" href="$class_overlay_manager.html" title=" " alt="" coords="338,185,496,221"/>
+<area shape="rect" id="node7" href="$class_playback_manager.html" title=" " alt="" coords="333,245,500,281"/>
+<area shape="rect" id="node8" href="$class_preference_manager.html" title=" " alt="" coords="324,305,509,341"/>
+<area shape="rect" id="node9" href="$class_selection_manager.html" title="The SelectionManager class acts as the &quot;Brain&quot; of the selection system." alt="" coords="332,365,501,401"/>
+<area shape="rect" id="node10" href="$class_sound_manager.html" title=" " alt="" coords="342,425,491,461"/>
+<area shape="rect" id="node11" href="$class_tool_manager.html" title=" " alt="" coords="352,485,481,521"/>
+<area shape="rect" id="node12" href="$class_undo_redo_manager.html" title=" " alt="" coords="324,545,509,581"/>
+<area shape="rect" id="node13" href="$class_view_manager.html" title=" " alt="" coords="350,605,483,641"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,305,94,341"/>
 </map>

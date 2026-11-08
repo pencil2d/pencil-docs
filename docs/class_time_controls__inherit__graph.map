@@ -1,7 +1,7 @@
 <map id="TimeControls" name="TimeControls">
-<area shape="rect" id="node1" title=" " alt="" coords="51,241,182,272"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qtoolbar.html" title=" " alt="" coords="68,163,165,193"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="70,84,163,115"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,5,95,36"/>
-<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpaintdevice.html" title=" " alt="" coords="119,5,251,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="52,256,181,292"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qtoolbar.html" title=" " alt="" coords="68,173,164,208"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtwidgets.tags$qwidget.html" title=" " alt="" coords="70,89,162,125"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="5,5,94,41"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qpaintdevice.html" title=" " alt="" coords="117,5,248,41"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="TransformTool" name="TransformTool">
-<area shape="rect" id="node1" title=" " alt="" coords="48,163,189,193"/>
-<area shape="rect" id="node4" href="$class_move_tool.html" title=" " alt="" coords="5,241,107,272"/>
-<area shape="rect" id="node5" href="$class_select_tool.html" title=" " alt="" coords="131,241,235,272"/>
-<area shape="rect" id="node2" href="$class_base_tool.html" title=" " alt="" coords="71,84,166,115"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="74,5,163,36"/>
+<area shape="rect" id="node1" title=" " alt="" coords="48,173,188,208"/>
+<area shape="rect" id="node4" href="$class_move_tool.html" title=" " alt="" coords="5,256,106,292"/>
+<area shape="rect" id="node5" href="$class_select_tool.html" title=" " alt="" coords="129,256,232,292"/>
+<area shape="rect" id="node2" href="$class_base_tool.html" title=" " alt="" coords="71,89,165,125"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qobject.html" title=" " alt="" coords="74,5,162,41"/>
 </map>

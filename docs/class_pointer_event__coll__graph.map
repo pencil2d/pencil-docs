@@ -1,8 +1,8 @@
 <map id="PointerEvent" name="PointerEvent">
-<area shape="rect" id="node1" title=" " alt="" coords="163,264,291,295"/>
-<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtabletevent.html" title=" " alt="" coords="5,165,136,196"/>
-<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qinputevent.html" title=" " alt="" coords="86,85,213,116"/>
-<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qmouseevent.html" title=" " alt="" coords="160,165,299,196"/>
-<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qevent.html" title=" " alt="" coords="108,5,191,36"/>
-<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="337,165,425,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="161,284,288,320"/>
+<area shape="rect" id="node2" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qtabletevent.html" title=" " alt="" coords="5,175,135,211"/>
+<area shape="rect" id="node3" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qinputevent.html" title=" " alt="" coords="85,90,210,126"/>
+<area shape="rect" id="node5" href="/home/runner/work/pencil/pencil/util/docs/qtgui.tags$qmouseevent.html" title=" " alt="" coords="159,175,296,211"/>
+<area shape="rect" id="node4" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qevent.html" title=" " alt="" coords="107,5,188,41"/>
+<area shape="rect" id="node6" href="/home/runner/work/pencil/pencil/util/docs/qtcore.tags$qpointf.html" title=" " alt="" coords="334,175,422,211"/>
 </map>

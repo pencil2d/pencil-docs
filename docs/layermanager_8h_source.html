@@ -186,38 +186,37 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// KeyFrame Management</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> lastFrameAtFrame(<span class="keywordtype">int</span> frameIndex);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">int</span> firstKeyFrameIndex();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> lastKeyFrameIndex();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a>(<span class="keywordtype">bool</span> includeSounds = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> nameSuggestLayer(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; name);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span> getLastLayerIndex() { <span class="keywordflow">return</span> count() - 1; }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>signals:</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> currentLayerWillChange(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> currentLayerChanged(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> layerCountChanged(<span class="keywordtype">int</span> count);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> animationLengthChanged(<span class="keywordtype">int</span> length);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> layerDeleted(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">int</span> getIndex(<a class="code hl_class" href="class_layer.html">Layer</a>*) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">int</span> mLastCameraLayerIdx = 0;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">animationLength</a>(<span class="keywordtype">bool</span> includeSounds = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">notifyAnimationLengthChanged</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a> nameSuggestLayer(<span class="keyword">const</span> <a class="code hl_classRef" href="https://doc.qt.io/qt-5/qstring.html">QString</a>&amp; name);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">int</span> getLastLayerIndex() { <span class="keywordflow">return</span> count() - 1; }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>signals:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> currentLayerWillChange(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> currentLayerChanged(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> layerCountChanged(<span class="keywordtype">int</span> count);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> animationLengthChanged(<span class="keywordtype">int</span> length);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> layerDeleted(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">int</span> getIndex(<a class="code hl_class" href="class_layer.html">Layer</a>*) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">int</span> mLastCameraLayerIdx = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_base_manager_html"><div class="ttname"><a href="class_base_manager.html">BaseManager</a></div><div class="ttdef"><b>Definition:</b> <a href="basemanager_8h_source.html#l00028">basemanager.h:29</a></div></div>
 <div class="ttc" id="aclass_editor_html"><div class="ttname"><a href="class_editor.html">Editor</a></div><div class="ttdef"><b>Definition:</b> <a href="editor_8h_source.html#l00070">editor.h:71</a></div></div>
 <div class="ttc" id="aclass_layer_bitmap_html"><div class="ttname"><a href="class_layer_bitmap.html">LayerBitmap</a></div><div class="ttdef"><b>Definition:</b> <a href="layerbitmap_8h_source.html#l00025">layerbitmap.h:26</a></div></div>
 <div class="ttc" id="aclass_layer_camera_html"><div class="ttname"><a href="class_layer_camera.html">LayerCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="layercamera_8h_source.html#l00029">layercamera.h:30</a></div></div>
 <div class="ttc" id="aclass_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="layer_8h_source.html#l00032">layer.h:33</a></div></div>
 <div class="ttc" id="aclass_layer_manager_html"><div class="ttname"><a href="class_layer_manager.html">LayerManager</a></div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8h_source.html#l00030">layermanager.h:31</a></div></div>
-<div class="ttc" id="aclass_layer_manager_html_a321c9a8ed55ce6d150b748164f29e605"><div class="ttname"><a href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">LayerManager::animationLength</a></div><div class="ttdeci">int animationLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00369">layermanager.cpp:369</a></div></div>
+<div class="ttc" id="aclass_layer_manager_html_a321c9a8ed55ce6d150b748164f29e605"><div class="ttname"><a href="class_layer_manager.html#a321c9a8ed55ce6d150b748164f29e605">LayerManager::animationLength</a></div><div class="ttdeci">int animationLength(bool includeSounds=true)</div><div class="ttdoc">Get the length of current project.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00352">layermanager.cpp:352</a></div></div>
 <div class="ttc" id="aclass_layer_manager_html_a678c0a59073198bfb26d0b46194d3ea4"><div class="ttname"><a href="class_layer_manager.html#a678c0a59073198bfb26d0b46194d3ea4">LayerManager::createLayer</a></div><div class="ttdeci">Layer * createLayer(Layer::LAYER_TYPE type, const QString &amp;strLayerName)</div><div class="ttdoc">Returns a new Layer with the given LAYER_TYPE.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00187">layermanager.cpp:187</a></div></div>
-<div class="ttc" id="aclass_layer_manager_html_ae648788f4b7559ad43f499381f158659"><div class="ttname"><a href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">LayerManager::notifyAnimationLengthChanged</a></div><div class="ttdeci">void notifyAnimationLengthChanged()</div><div class="ttdoc">This should be emitted whenever the animation length frames, eg.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00403">layermanager.cpp:403</a></div></div>
+<div class="ttc" id="aclass_layer_manager_html_ae648788f4b7559ad43f499381f158659"><div class="ttname"><a href="class_layer_manager.html#ae648788f4b7559ad43f499381f158659">LayerManager::notifyAnimationLengthChanged</a></div><div class="ttdeci">void notifyAnimationLengthChanged()</div><div class="ttdoc">This should be emitted whenever the animation length frames, eg.</div><div class="ttdef"><b>Definition:</b> <a href="layermanager_8cpp_source.html#l00386">layermanager.cpp:386</a></div></div>
 <div class="ttc" id="aclass_layer_sound_html"><div class="ttname"><a href="class_layer_sound.html">LayerSound</a></div><div class="ttdef"><b>Definition:</b> <a href="layersound_8h_source.html#l00025">layersound.h:26</a></div></div>
 <div class="ttc" id="aclass_layer_vector_html"><div class="ttname"><a href="class_layer_vector.html">LayerVector</a></div><div class="ttdef"><b>Definition:</b> <a href="layervector_8h_source.html#l00025">layervector.h:26</a></div></div>
 <div class="ttc" id="aclass_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="object_8h_source.html#l00041">object.h:42</a></div></div>
@@ -230,10 +229,10 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <section class="main-content">
  <footer class="site-footer">
   <span class="site-footer-owner">
-   Generated on Thu Nov 5 2026 18:31:49 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
+   Generated on Sun Nov 8 2026 17:19:28 for Pencil2D by&#160;<a href="https://www.doxygen.org/index.html">doxygen</a> 1.9.6
   </span>
   <span class="site-footer-credits">
-   based on revision 6860a3f56087e23e97c6fd870b7a7ac6b5d3a4b2
+   based on revision b7f26188cb24ce000ce974b6a07521fafbeb203d
   </span>
   <!-- SVG icons from https://iconmonstr.com -->
   <!-- Github icon -->
